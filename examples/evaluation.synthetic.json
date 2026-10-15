@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic_fixture",
+  "cases": [
+    {
+      "id": "engine-smoke",
+      "episode_id": "engine-fixture",
+      "context_scope": "complete",
+      "context": [
+        {
+          "id": "engine-context",
+          "role": "assistant",
+          "text": "Engine smoke test. Reply with the word ready.",
+          "timestamp": 1
+        }
+      ],
+      "target": {
+        "id": "engine-target",
+        "role": "user",
+        "text": "ready",
+        "timestamp": 2
+      }
+    }
+  ]
+}

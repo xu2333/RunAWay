@@ -16,6 +16,7 @@ from .sources import load_sources, plan
 from .revision import checkout, revise, changes
 from .demo import demo_bundle
 from .compression import compress, compression_plan, audit_prompt
+from .evaluation import freeze, validate_dataset
 
 
 def read(path):
@@ -131,6 +132,22 @@ def parser():
     commands = p.add_subparsers(dest="command", required=True)
     demo = commands.add_parser("demo", help="Offline fictional example; no login or model calls")
     demo.add_argument("--out", required=True, help="New output directory")
+    evaluation = commands.add_parser("eval", help="Freeze and score actual follow-up messages locally")
+    evaluation_actions = evaluation.add_subparsers(dest="eval_command", required=True)
+    frozen = evaluation_actions.add_parser("freeze", help="Freeze representations and existing GGUF model hashes before labels")
+    frozen.add_argument("profile")
+    frozen.add_argument("--compact", required=True, help="Portable expression from the same profile")
+    frozen.add_argument("--model", action="append", required=True, help="Local Qwen3 GGUF path; repeat for multiple models")
+    frozen.add_argument("--mode", choices=["prospective", "development"], default="prospective")
+    frozen.add_argument("--n-ctx", type=int, default=8192)
+    frozen.add_argument("--gpu-layers", type=int, default=0, help="Local GPU layers; -1 uses all supported layers")
+    frozen.add_argument("--out", required=True)
+    for name in ("check", "run"):
+        evaluation_command = evaluation_actions.add_parser(name, help="Validate recorded data" if name == "check" else "Local teacher-forced scoring; no network")
+        evaluation_command.add_argument("snapshot")
+        evaluation_command.add_argument("--episodes", required=True)
+        if name == "run":
+            evaluation_command.add_argument("--out", required=True)
     for name in ("plan", "build"):
         cmd = commands.add_parser(name, help="Preview calls offline" if name == "plan" else "Complete evidence-first pipeline")
         cmd.add_argument("--input", required=True, help="UTF-8 personal narrative, or role-labelled source JSON for conversations")
@@ -227,6 +244,21 @@ def main(argv=None):
             bundle, summary = demo_bundle()
             directory = save_private_bundle(args.out, bundle)
             output({**summary, "directory": directory})
+        elif args.command == "eval":
+            if args.eval_command == "freeze":
+                snapshot = freeze(json.loads(read(args.profile)), json.loads(read(args.compact)), args.model,
+                                  args.mode, args.n_ctx, args.gpu_layers)
+                directory = save_private_bundle(args.out, {"snapshot.private.json": snapshot})
+                output({"status": "evaluation_frozen", "id": snapshot["id"], "mode": snapshot["mode"],
+                        "directory": directory, "model_count": len(snapshot["models"]), "model_calls": 0})
+            else:
+                snapshot, episodes = json.loads(read(args.snapshot)), json.loads(read(args.episodes))
+                if args.eval_command == "check":
+                    output(validate_dataset(episodes, snapshot))
+                else:
+                    from .local_scoring import run
+                    output(run(snapshot, episodes, args.out,
+                               progress=lambda message: print("runaway: " + message, file=sys.stderr)))
         elif args.command in ("plan", "build"):
             sources = load_sources(args.input)
             if args.command == "plan":
