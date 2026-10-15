@@ -6,6 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>RunAWay · 带走你的判断</title><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./identity.css">
 <script type="module" src="./app.mjs"></script>
 </head>
 <body>
@@ -24,6 +25,18 @@
 <p id="source-hint" class="small">请写自己的经历。对话记录请切换类型，保留谁说了什么。</p>
 <div class="row"><label class="file-button">读入文本文件<input id="source-file" type="file" accept=".txt,.md,.json"></label><span id="source-count" class="small">0 字符</span></div>
 <label for="budget">随身 prompt 的长度上限</label><select id="budget"><option value="1000">1,000 字符 · 更轻巧</option><option value="1600" selected>1,600 字符 · 多留些细节</option><option value="2400">2,400 字符 · 更充分</option></select>
+<details id="holdout-input" class="identity-block"><summary>可选：留一段真实经历，看看分身能否猜中</summary>
+<p class="small">先从上方材料中移除完整的一段相关经历，再放到这里。它不会进入提炼请求。只想生成 prompt，可以跳过。</p>
+<label class="check"><input id="holdout-enabled" type="checkbox">这次也做一次真实选择回测</label>
+<div id="holdout-fields">
+<label for="holdout-source">独立留出的经历（本页私有）</label><textarea id="holdout-source" rows="3" maxlength="12000"></textarea>
+<label for="holdout-quote">记录实际选择的连续原句（至少 12 字）</label><textarea id="holdout-quote" rows="2" maxlength="1000"></textarea>
+<label for="holdout-question">做决定之前的情境（不要透露结果）</label><textarea id="holdout-question" rows="3" maxlength="600"></textarea>
+<div class="split"><div><label for="holdout-a">当时真实存在的选项 A</label><textarea id="holdout-a" rows="2" maxlength="160"></textarea></div><div><label for="holdout-b">当时真实存在的选项 B</label><textarea id="holdout-b" rows="2" maxlength="160"></textarea></div></div>
+<label for="holdout-actual">你实际选了</label><select id="holdout-actual"><option value="A">A</option><option value="B">B</option></select>
+<label for="holdout-reason">你当时的理由（揭晓时可自行分享）</label><textarea id="holdout-reason" rows="2" maxlength="400"></textarea>
+<label class="check"><input id="holdout-confirmed" type="checkbox">这是我的真实经历；整段相关经历已从上方提炼材料中移除。题面没有暗示答案，两项都是当时实际存在的选择。</label>
+<p class="small">只能检查原句重复，无法自动识别改写泄漏或题目偏向。这个轻量回测依赖你的如实填写，不是独立实验。</p></div></details>
 <button id="prepare" class="primary wide">整理好，去提炼 <span>→</span></button>
 <p class="privacy">材料只留在当前标签页。网站不自动上传、不自动保存；关页前可下载私有档案。</p>
 </section>
@@ -39,6 +52,13 @@
 </section>
 <section id="result-panel" class="panel" hidden>
 <div class="eyebrow" id="result-kind">可编辑的初稿</div><h2 id="name">你的随身分身</h2><p id="tagline"></p>
+<section id="manual-panel" class="identity-block"><div class="eyebrow">给熟人看的这一面</div><h3>我的使用说明书</h3><p class="small">怎么说服我，哪里容易卡住，什么时候我会改主意。写得具体，也给例外留位置。</p>
+<p id="manual-missing" class="small">这份旧格式结果没有说明书，prompt 仍可使用。使用第 2 步的新请求重新提炼即可生成。</p>
+<div id="manual-content" hidden><canvas id="manual-canvas" aria-label="我的使用说明书图片预览"></canvas><p id="manual-error" class="small error" role="status"></p>
+<details><summary>改改措辞，对照依据</summary><label for="manual-headline">一句话</label><input id="manual-headline" maxlength="60"><div id="manual-items"></div><p class="small">关联引文存在不表示解释正确。没有材料支持的条目应省略；此处的文字修改只影响分享表达。</p></details>
+<label class="check"><input id="manual-reviewed" type="checkbox">我已核对文案与适用条件，确认没有不想公开的信息，可以分享。</label>
+<div class="actions"><a id="download-manual" role="button" class="primary download-button" download="runaway-manual.png">下载我的说明书</a><button id="copy-manual">复制说明书文字</button></div></div></section>
+<details class="alternative-card"><summary>还有一张一句话卡片</summary>
 <section id="share-panel" class="share-panel" hidden>
 <h3>这一面，给朋友看</h3><p class="small">从真实做法里长出的梗。分享卡不会改写你的随身 prompt。</p>
 <canvas id="share-canvas" width="960" height="1080" role="img" aria-label="当前分享卡预览"></canvas><p id="share-error" class="small" role="status"></p>
@@ -54,10 +74,23 @@
 <div id="sample-draft" hidden><p class="small">下面是将要发送到 GitHub Issue 草稿的全部内容，含卡片文字和评分，不含原始材料、引文或随身 prompt。点击后仍需你在 GitHub 手动提交。</p><textarea id="sample-preview" rows="8" readonly aria-label="公开投稿预览"></textarea><label class="check"><input id="sample-public" type="checkbox">我同意将预览中的卡片文字和评分放进公开 Issue 草稿。</label><button id="open-sample-issue">打开 GitHub 草稿 ↗</button></div>
 </details></section>
 <p id="share-legacy" class="small" hidden>这份旧格式结果仍可使用。重新复制第 2 步的请求提炼后，即可生成带依据的分享卡。</p>
+</details>
 <label for="prompt">真正带走的是这段完整 prompt</label><p class="small">固定的适用边界会随正文一起复制。名字只是外衣。</p><textarea id="prompt" rows="9"></textarea>
 <div id="size" class="small"></div><div class="actions"><button id="copy-prompt" class="primary">复制完整 prompt</button><button id="download-prompt">下载文本</button></div>
 <div class="actions secondary"><button id="download-portable">下载 Harness 文件</button><button id="download-private">下载私有档案</button></div>
 <p class="small">Harness 文件按<a href="https://github.com/xu2333/RunAWay/blob/main/QUICKSTART.md" target="_blank" rel="noopener noreferrer">接入指南</a>导入。私有档案含原文和引文，请自己保管。</p>
+<section id="trial-panel" class="identity-block"><div class="eyebrow">从“像我”走向一次实际核对</div><h3>这次，我会怎么选？</h3>
+<p id="trial-missing" class="small">在第 1 步展开“留一段真实经历”，提炼前留出一次选择，就能把普通 AI 和你的分身放在同一道真实情境里核对。已经参与提炼的经历不能用于这次回测。</p>
+<div id="trial-ready" hidden><p id="trial-origin" class="small"></p><p id="trial-question" class="choice-question"></p>
+<details><summary>先让朋友猜：题面分享预览</summary><textarea id="puzzle-preview" rows="7" readonly aria-label="题面分享预览"></textarea><label class="check"><input id="puzzle-reviewed" type="checkbox">这段题面与选项可以公开，没有我不想分享的细节。</label><button id="copy-puzzle">复制题面给朋友</button></details>
+<button id="trial-start">锁定当前 prompt，生成两组请求</button>
+<div id="trial-requests" hidden><p id="trial-version" class="small"></p><p class="small">分别使用两个全新对话，同一模型、同样设置。不要发真实答案。修改 prompt 会清空本轮判断；揭晓后重做会标记为复测。</p>
+<div class="trial-pair"><section><h4>① 普通 AI</h4><details><summary>查看普通 AI 请求</summary><textarea id="baseline-request" readonly rows="5" aria-label="普通 AI 请求"></textarea></details><button id="copy-baseline">复制普通 AI 请求</button><label for="baseline-prediction">粘贴普通 AI 的 JSON</label><textarea id="baseline-prediction" rows="5"></textarea></section>
+<section><h4>② 带着我的 prompt</h4><details><summary>查看分身请求</summary><textarea id="personalized-request" readonly rows="5" aria-label="分身请求"></textarea></details><button id="copy-personalized">复制分身请求</button><label for="personalized-prediction">粘贴分身的 JSON</label><textarea id="personalized-prediction" rows="5"></textarea></section></div>
+<button id="trial-demo-predictions" class="quiet" hidden>载入预写预测（仅演示，无模型调用）</button>
+<button id="trial-lock" class="primary wide">锁定两份判断，揭晓答案</button>
+<div id="trial-reveal" hidden><h4 id="trial-outcome"></h4><p id="trial-note" class="small"></p><details><summary>核对事先留出的证据（仅在本页）</summary><blockquote id="trial-proof"></blockquote></details><label for="reveal-preview">揭晓分享预览</label><textarea id="reveal-preview" rows="10" readonly></textarea><label class="check"><input id="reveal-reviewed" type="checkbox">我已检查题面、答案与理由，确认预览全文可以分享。</label><button id="copy-reveal">复制这次揭晓</button></div>
+</div></div></section>
 <details><summary>看看它根据什么理解你</summary><div id="evidence"></div><p class="small">想改完整判断？回到第 2 步修改 JSON，再检查一次。只改上方正文不会改写详细表征。</p></details>
 <details><summary>还有哪些地方不了解你</summary><ul id="unknowns"></ul></details>
 <p class="callout">引文存在，不代表推断成立。这是待验证的偏好表达；它不能替你作身份声明或行动授权。</p>

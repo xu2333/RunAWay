@@ -8,7 +8,7 @@ Turn resumes, experiences and agent conversations into a portable prompt for how
 
 ## Try it
 
-**Browser app:** paste an experience, bring back a result from an LLM you already use, then take away your prompt and a shareable card. No API key or build step.
+**Browser app:** paste an experience, bring back a result from an LLM you already use, then take away your prompt and a shareable “my operating manual.” Optionally hold out a real choice to compare ordinary AI with your personalized prompt. No API key or build step.
 
 ```sh
 git clone https://github.com/xu2333/RunAWay.git

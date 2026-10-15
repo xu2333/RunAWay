@@ -1,8 +1,11 @@
+import {createIdentity} from './identity-ui.mjs';
+import {lockCase} from './holdout-core.mjs';
 import {VERSION,HEADER,length,sourcesFrom,parseJSON,makeRequest,validateAnswer,makeBundle,feedbackReport} from './core.mjs';
 import {validateCard,renderCard,cardText,makeOutputSample} from './presentation.mjs';
 const $=id=>document.getElementById(id);
 let prepared=null, answer=null, lastExport=null, sampleDraft=null;
 let session=freshSession();
+const identity=createIdentity({copy,notify,guard,currentBundle,record,invalidate});
 function freshSession(){return {id:crypto.randomUUID(),demo:false,events:[{type:'opened',at:new Date().toISOString()}],feedback:[],exports:[],output_samples:[]};}
 function record(type){session.events.push({type,at:new Date().toISOString()});}
 function notify(message,error=false){$('notice').textContent=message;$('notice').classList.toggle('error',error);$('notice').hidden=false;if(error)$('notice').scrollIntoView({behavior:'smooth',block:'center'});}
@@ -22,7 +25,7 @@ function download(name,value,type='application/json'){
   const blob=new Blob([typeof value==='string'||value instanceof Blob?value:JSON.stringify(value,null,2)+'\n'],{type});
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
-function invalidate(){prepared=null;answer=null;lastExport=null;$('answer').value='';$('request').value='';$('show-feedback').disabled=true;$('feedback-panel').hidden=true;show('source');$('source-count').textContent=length($('source').value)+' 字符';}
+function invalidate(){identity.reset();session.demo=false;prepared=null;answer=null;lastExport=null;$('answer').value='';$('request').value='';$('show-feedback').disabled=true;$('feedback-panel').hidden=true;show('source');$('source-count').textContent=length($('source').value)+' 字符';}
 function budget(){return Number($('budget').value);}
 function size(){const n=length(HEADER+$('prompt').value+'\n');$('size').textContent=`完整 prompt ${n} / ${budget()} 字符（含边界；不是 token 数）`;$('size').classList.toggle('error',n>budget());}
 async function currentBundle(){if(!prepared||!answer)throw Error('请先生成并检查分身。');if(length(HEADER+$('prompt').value+'\n')>budget())throw Error('当前 prompt 超过预算，请先缩短或调整长度上限。');return makeBundle(answer,prepared.sources,$('prompt').value);}
@@ -44,7 +47,7 @@ function render(){
   }
   $('unknowns').replaceChildren();for(const v of answer.unknowns)appendText($('unknowns'),'li',v);
   if(!answer.unknowns.length)appendText($('unknowns'),'li','模型未列出未知项；这不表示它了解你的一切。');
-  size();show('result');
+  identity.render(answer,prepared.sources,prepared.holdout??null,session.demo);size();show('result');
 }
 for(const button of document.querySelectorAll('[data-step]'))button.addEventListener('click',()=>show(button.dataset.step));
 $('source').addEventListener('input',invalidate);
@@ -53,8 +56,8 @@ $('kind').addEventListener('change',()=>{
 });
 $('budget').addEventListener('change',()=>{if(prepared){prepared.budget=budget();$('request').value=makeRequest(prepared.sources,budget());}size();});
 $('source-file').addEventListener('change',guard(async e=>{const file=e.target.files[0];if(!file)return;if(file.size>64000)throw Error('文件超过 64 KB，请选取相关片段。');$('source').value=await file.text();invalidate();notify('文件已在本页读入，尚未发送到任何模型。');e.target.value='';}));
-$('prepare').addEventListener('click',guard(()=>{
-  const sources=sourcesFrom($('source').value,$('kind').value);prepared={sources,kind:$('kind').value,budget:budget()};
+$('prepare').addEventListener('click',guard(async()=>{
+  const sources=sourcesFrom($('source').value,$('kind').value);const holdout=await identity.lockInput(sources);prepared={sources,kind:$('kind').value,budget:budget(),holdout};
   $('request').value=makeRequest(sources,budget());record('source_prepared');show('model');
   notify(`整理了 ${sources.sources.length} 段来源，其中 ${sources.sources.filter(s=>s.role==='user').length} 段是用户内容。复制前可以展开检查请求。`);
 }));
@@ -63,20 +66,20 @@ $('import').addEventListener('click',guard(async()=>{
   if(!prepared)throw Error('来源已更改，请重新整理请求。');const value=parseJSON($('answer').value);validateAnswer(value,prepared.sources,budget());
   await makeBundle(value,prepared.sources);answer=value;lastExport=null;$('show-feedback').disabled=true;$('feedback-panel').hidden=true;record('response_imported');render();notify('引文、说话者、字段和长度检查通过。请确认它的解释，再带走使用。');
 }));
-$('prompt').addEventListener('input',size);
+$('prompt').addEventListener('input',()=>{size();identity.clearTrial();});
 $('copy-prompt').addEventListener('click',guard(async()=>{const bundle=await currentBundle();await copy(bundle.portable.text);rememberExport(bundle,'prompt_copied');notify('完整 prompt 已复制。放进真实任务里试一次，用完可以记下反馈。');}));
 $('download-prompt').addEventListener('click',guard(async()=>{const b=await exportVersion('prompt_downloaded');download('runaway-prompt.txt',b.portable.text,'text/plain');notify('完整 prompt 已下载。');}));
 $('download-portable').addEventListener('click',guard(async()=>{const b=await exportVersion('portable_downloaded');download('portable.json',b.portable);notify('已下载兼容 RunAWay CLI 的 portable.json。');}));
 $('download-private').addEventListener('click',guard(async()=>{
-  const b=await currentBundle();record('private_archive_downloaded');download('runaway.private.json',{schema_version:1,artifact_type:'browser_session',app_version:VERSION,prepared,answer,edited_prompt:$('prompt').value,...b,session});
+  const b=await currentBundle();record('private_archive_downloaded');download('runaway.private.json',{schema_version:1,artifact_type:'browser_session',app_version:VERSION,prepared,answer,edited_prompt:$('prompt').value,identity:identity.snapshot(),...b,session});
   notify('私有档案已下载，含原始材料、详细表征和反馈。请勿直接公开。');
 }));
 $('demo').addEventListener('click',guard(async()=>{
   if(($('source').value||answer)&&!window.confirm('载入示例会清空当前标签页的材料和反馈。需要保留时请先下载私有档案。继续吗？'))return;
   const response=await fetch('./demo.json');if(!response.ok)throw Error('示例暂时无法载入。');const d=await response.json();
-  session=freshSession();session.demo=true;record('demo_loaded');lastExport=null;$('feedback-panel').hidden=true;$('feedback-export').hidden=true;$('feedback-form').reset();$('include-content').checked=false;$('show-feedback').disabled=true;
+  identity.clearInput();session=freshSession();session.demo=true;record('demo_loaded');lastExport=null;$('feedback-panel').hidden=true;$('feedback-export').hidden=true;$('feedback-form').reset();$('include-content').checked=false;$('show-feedback').disabled=true;
   $('kind').value='trajectory';$('source').value=JSON.stringify(d.sources,null,2);$('budget').value='1600';
-  prepared={sources:sourcesFrom($('source').value,'trajectory'),kind:'trajectory',budget:1600};answer=validateAnswer(d.answer,prepared.sources,1600);
+  prepared={sources:sourcesFrom($('source').value,'trajectory'),kind:'trajectory',budget:1600};answer=validateAnswer(d.answer,prepared.sources,1600);if(d.holdout_demo)prepared.holdout=await lockCase(d.holdout_demo,prepared.sources,true);
   $('source-count').textContent=length($('source').value)+' 字符';$('answer').value=JSON.stringify(answer,null,2);$('request').value=makeRequest(prepared.sources,1600);
   render();notify('这是预先生成的虚构示例，没有调用模型，也没有推断你的偏好。清空本页后即可开始你自己的。');
 }));
@@ -98,7 +101,7 @@ $('github-feedback').addEventListener('click',()=>{
   window.open('https://github.com/xu2333/RunAWay/issues/new?title='+encodeURIComponent('[Feedback] Browser trial')+'&body='+encodeURIComponent(body),'_blank','noopener,noreferrer');
   notify('已请求打开公开 Issue 草稿；请检查后手动提交。原文和自由文本没有预填。');
 });
-$('clear').addEventListener('click',()=>{if(!window.confirm('清空本页材料、分身和反馈？此操作不能恢复；请先下载需要保留的私有档案。'))return;session=freshSession();$('source').value='';$('feedback-form').reset();$('include-content').checked=false;$('feedback-export').hidden=true;invalidate();notify('本页材料已清空。已下载的文件需要你在设备上自行删除。');});
+$('clear').addEventListener('click',()=>{if(!window.confirm('清空本页材料、分身和反馈？此操作不能恢复；请先下载需要保留的私有档案。'))return;identity.clearInput();session=freshSession();$('source').value='';$('feedback-form').reset();$('include-content').checked=false;$('feedback-export').hidden=true;invalidate();notify('本页材料已清空。已下载的文件需要你在设备上自行删除。');});
 
 function currentCard(){return validateCard({name:$('share-name').value,tagline:$('share-tagline').value,tell:$('share-tell').value,boundary:$('share-boundary').value});}
 function resetCardReview(){sampleDraft=null;$('sample-draft').hidden=true;$('sample-public').checked=false;$('share-reviewed').checked=false;for(const id of ['recognizable','amusing','would-share'])$(id).value='unsure';}
