@@ -16,7 +16,7 @@ cd RunAWay
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open **http://127.0.0.1:8080**. Or visit **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts—no model call. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
+Open **http://127.0.0.1:8080**. Or visit **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts; **/theater.html** pairs them in 8 short scenes. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
 
 ## Make it yours
 

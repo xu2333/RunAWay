@@ -25,6 +25,12 @@ Open `/gallery.html` from the browser entry. Search names, behaviors or stable I
 
 The 700 entries are authored in `catalog/*.txt`, compiled by `python3 scripts/build_catalog.py` into committed static JSON. Run with `--check` to verify reproducibility. Category boundaries are shared editorial cautions. See [catalogue scope](OUTPUTS.md).
 
+## Two-character theater
+
+Open `/theater.html` or invite a resident from a gallery detail. Eight clearly labeled, prewritten fictional scenes work immediately. Pick any two different catalogue residents and one of eight settings, copy a generation request to your own LLM, then import its six-turn JSON story. No automatic model call, backend, account creation, saved history or public chat room is added.
+
+Export the full dialogue as a PNG or text. Preset links reproduce a known scripted scene. Combination invitations include only two public catalogue IDs and a scene ID; they do **not** reproduce imported dialogue. Imported text stays in tab memory and is lost on reload. Changing the cast or scene clears the prior result so the old story cannot be relabeled as a new pairing. Structural validation cannot prove character fidelity, mutual influence or entertainment quality. See [interaction design and evaluation](INTERACTIONS.md).
+
 ## Data and evidence
 
 Materials and feedback stay in tab memory until the user copies, downloads or submits them. Closing or reloading loses this state. The app has no automatic analytics or feedback ingestion endpoint. Hosting providers may retain ordinary HTTP access logs; source text and local feedback are not sent with those requests.

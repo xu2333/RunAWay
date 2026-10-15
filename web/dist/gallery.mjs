@@ -7,6 +7,7 @@ const dialog=$('resident');
 function show(entry){
   if(!entry)return;
   selected=entry;
+  $('meet-resident').href='./theater.html#a='+entry.id;
   $('resident-title').textContent=entry.card.name;
   $('resident-tagline').textContent=entry.card.tagline;
   $('resident-tell').textContent=entry.card.tell;

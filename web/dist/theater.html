@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="两张角色卡，一个小意外。看看你想叫谁来接另一半。RunAWay 原创虚构碰头小剧场。">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RunAWay · 碰头小剧场</title><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./theater.css"><script type="module" src="./theater.mjs"></script>
+</head><body>
+<header><a class="brand" href="./">RunAWay<span>your taste, to go.</span></a><nav><a href="./gallery.html">居民图鉴 ↗</a><a href="./">做我的分身 ↗</a></nav></header>
+<main>
+<section class="theater-intro"><div class="eyebrow">碰头小剧场 / 两位居民，一点意外</div><h1>你俩凑一起，<br>事情就变了。</h1><p>一个说“明天再做”，一个只在倒计时里开机。<br>如果让他们今晚一起摆摊呢？</p><span class="theater-ticket" aria-hidden="true">双人票<br><b>1 + 1 = ?</b><br>欢迎对号笑一下</span></section>
+<section aria-labelledby="episodes-title"><div class="section-head"><h2 id="episodes-title">先看一幕</h2><span class="small">8 幕预写短剧 · 不调用模型</span></div><div id="episodes" class="episodes"></div></section>
+<p id="notice" class="notice" role="status" aria-live="polite">正在请居民入场……</p>
+<div class="theater-layout">
+<section class="casting panel" aria-labelledby="casting-title"><div class="eyebrow">换两位，会怎样？</div><h2 id="casting-title">把他们放在一起</h2>
+<label for="find-a">第一位居民</label><input id="find-a" type="search" placeholder="搜名字 / 做法" maxlength="100" disabled><select id="cast-a" aria-label="选择第一位居民" disabled></select><p id="anchor-a" class="cast-anchor"></p>
+<label for="find-b">第二位居民</label><input id="find-b" type="search" placeholder="搜名字 / 做法" maxlength="100" disabled><select id="cast-b" aria-label="选择第二位居民" disabled></select><p id="anchor-b" class="cast-anchor"></p>
+<label for="scene">在哪里碰头</label><select id="scene" disabled></select><p id="setup" class="small"></p>
+<button id="prepare-scene" class="primary wide" disabled>用常用 AI，开一幕新的 →</button><p class="small">复制请求 → 发给你的 LLM → 带回剧情。网站不自动调用模型。</p>
+<button id="invite-pair" class="quiet" disabled>复制组队邀请 ↗</button><p class="small">邀请只带角色组合和场景；自生成剧情请分享图片或文字。</p>
+</section>
+<section class="stage" aria-labelledby="story-title"><div id="empty-stage" hidden><div class="eyebrow">两位已入场，剧情还没写</div><h2>让他们回应彼此。</h2><p>用左边的请求去生成一幕新的。角色之间的差异，要看他们如何处理同一件小事。</p><p class="small">也可以点上方任意预写短剧，直接看看效果。</p></div>
+<article id="story" hidden><div class="stage-top"><span id="story-origin" class="eyebrow"></span><span id="story-scene" class="small"></span></div><h2 id="story-title"></h2><div id="cast-badges" class="cast-badges"></div><div id="dialogue" class="dialogue"></div><div class="ending"><span class="eyebrow">散场以后</span><p id="outcome"></p></div><p id="invite-line" class="invite-line"></p>
+<div class="actions"><a id="save-scene" role="button" class="primary download-button" download="runaway-scene.png">带走双人剧照</a><button id="copy-story">复制完整剧情</button><button id="copy-episode" hidden>复制这幕链接</button></div>
+<p id="import-note" class="small" hidden>这是你带回的 AI 创作，尚未验证它是否演出了两位的差别。分享前可在下方 JSON 中修改，再重新检查。</p><details><summary>看看完整分享图</summary><canvas id="scene-canvas" width="960" height="1600" role="img" aria-label="双人剧情分享图"></canvas></details></article>
+</section></div>
+<section id="generation" class="panel generation" hidden><div class="eyebrow">给熟悉的 AI 一张双人票</div><h2>让他们做事，不只互报标签。</h2><p class="small">请求只含两张公开虚构卡和场景，不含你的经历。你粘贴并发送时，才会交给所选模型服务。</p><details><summary>查看完整生成请求</summary><textarea id="scene-request" rows="10" readonly aria-label="完整双人剧情请求"></textarea></details><button id="copy-request" class="primary">复制生成请求</button>
+<label for="scene-answer">把完整 JSON 剧情带回来</label><textarea id="scene-answer" rows="7" placeholder="粘贴包含 scene_id、cast、title、turns、outcome、invite 的 JSON。"></textarea><button id="import-scene" class="primary">检查并排成小剧场</button><p class="small">只检查结构、角色顺序和长度；剧情是否贴合角色仍需你判断。刷新前记得复制或下载，自生成内容不会自动保存。</p></section>
+<p id="action-status" class="notice" role="status" aria-live="polite" hidden></p><textarea id="copy-fallback" rows="5" readonly aria-label="请手动复制" hidden></textarea>
+<footer><span>全员虚构 · 允许串门，不替真人算关系。</span><a href="./">想带走真实的你？从经历开始 ↗</a></footer>
+</main></body></html>
