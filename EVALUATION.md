@@ -1,5 +1,7 @@
 # Does a smaller prompt preserve useful information?
 
+For a fully synthetic, code-oracle self-play benchmark and optional closed-choice information gain, see [SELFPLAY.md](SELFPLAY.md). The evaluator below remains the separate real-follow-up text-likelihood path.
+
 A compression audit checks whether a prompt retains its reference profile. It does not establish that the profile predicts a person's later judgments. This evaluator measures a separate signal: the likelihood of **actual later user text**, under four frozen memory conditions.
 
 No reviewer invents answers or assigns probabilities. An optional local model scores every observed target token before seeing that token, using teacher forcing. The base package still has no runtime dependencies; scoring requires the optional `evaluation` dependencies and an existing local Qwen3 GGUF file. Nothing downloads a model or sends records to a service.
