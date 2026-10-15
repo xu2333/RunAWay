@@ -62,6 +62,30 @@ Source chunks default to 16,000 UTF-8 bytes. `--chunk-bytes` accepts 2,000–128
 
 For N chunks, `plan` reports at most 2N + 3 calls (2N + 2 for one chunk). It is a call count, not a price or token estimate. No automatic paid retries. To continue after a failed call, explicitly rerun the identical command with `--resume`; completed calls are reused. The failed call may already have incurred usage. A cached structurally invalid answer fails again rather than silently calling the model again; choose a new run after correcting the input or extraction code. Output/configuration changes are rejected. After a hard process kill, check that it has stopped before removing a stale `.build.lock`. Never edit cached results to hide a failed review.
 
+## Compress without silently dropping conditions
+
+For tighter compression of an existing profile, check every statement, scope, evidence basis, condition, exception and unknown separately:
+
+```sh
+runaway profile compression-plan my-run/profile.private.json --budget-chars 1000
+runaway profile compress my-run/profile.private.json --backend codex \
+  --model YOUR_GENERATOR_MODEL --review-model YOUR_REVIEW_MODEL \
+  --budget-chars 1000 --attempts 2 --out my-compression
+```
+
+This sends the profile's projected constraints and necessary counter-context to Codex, without sending all original supporting source messages. It does not invent questions or hypothetical user choices. A reviewer must cite exact substrings from the compressed prompt for every preserved reference facet and flag unsupported additions. Failed candidates receive bounded repair feedback. Generation and review models are explicit; using the same model is recorded. All verdicts remain model judgments, not independent personal-fidelity validation.
+
+`--attempts` accepts 1–3 and costs at most two calls per attempt; over-budget candidates skip review. The complete prompt, including its fixed header, must fit. If no candidate passes every facet, only the detailed fallback and diagnostic attempts are saved: no compact `portable.json` is silently installed. Completed calls can be reused with identical arguments and `--resume`. There are no automatic transport retries.
+
+To check an existing prompt in one review call:
+
+```sh
+runaway profile compression-audit my-run/profile.private.json --prompt existing-prompt.md \
+  --backend codex --review-model YOUR_REVIEW_MODEL --budget-chars 1000 --out my-audit
+```
+
+The initial `build` compression retains its earlier paragraph-level checker; this explicit second pass provides finer checks without re-extracting your sources. See [compression measurements and limits](COMPRESSION.md) for the fictional development comparison. Reference retention is separate from RIG or prediction of real future choices.
+
 ## Detailed personal representation: manual control
 
 Start with an explicitly selected, role-labelled source file. Source and episode IDs must be unique per source / consistent per episode; use `context` for curator descriptions, not `user`. The source file has this shape:

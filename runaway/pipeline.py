@@ -44,9 +44,10 @@ class Journal:
         write_once(self.path / "plan.private.json", configuration)
         self.model = configuration["model"]
 
-    def call(self, name, prompt, schema):
+    def call(self, name, prompt, schema, model=None):
         path = self.path / (name + ".step.private.json")
-        fingerprint = digest(canonical({"prompt": prompt, "schema": schema, "system": SYSTEM, "model": self.model}))
+        selected_model = model or self.model
+        fingerprint = digest(canonical({"prompt": prompt, "schema": schema, "system": SYSTEM, "model": selected_model}))
         if path.is_symlink():
             raise ValueError("Refusing a symlink checkpoint")
         if path.exists():
@@ -57,7 +58,7 @@ class Journal:
             self.progress(name + ": cached")
         else:
             self.progress(name + ": calling model")
-            answer, provenance = self.generate(prompt, self.model, schema=schema, system=SYSTEM)
+            answer, provenance = self.generate(prompt, selected_model, schema=schema, system=SYSTEM)
             result = {"fingerprint": fingerprint, "answer": answer, "provenance": provenance}
             result["sha256"] = digest(canonical(result))
             write_once(path, result)

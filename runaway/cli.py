@@ -15,6 +15,7 @@ from .pipeline import build
 from .sources import load_sources, plan
 from .revision import checkout, revise, changes
 from .demo import demo_bundle
+from .compression import compress, compression_plan, audit_prompt
 
 
 def read(path):
@@ -56,6 +57,20 @@ def save_private_bundle(destination, files):
 
 
 def profile_command(args):
+    if args.profile_command == "compression-audit":
+        profile = validate_profile(json.loads(read(args.profile)))
+        output(audit_prompt(profile, read(args.prompt), args.out, args.review_model, args.budget_chars,
+                            args.resume, progress=lambda message: print("runaway: " + message, file=sys.stderr)))
+        return
+    if args.profile_command in ("compress", "compression-plan"):
+        profile = validate_profile(json.loads(read(args.profile)))
+        if args.profile_command == "compression-plan":
+            output(compression_plan(profile, args.budget_chars, args.attempts))
+        else:
+            output(compress(profile, args.out, args.model, args.review_model, args.budget_chars,
+                            args.attempts, args.resume,
+                            progress=lambda message: print("runaway: " + message, file=sys.stderr)))
+        return
     if args.profile_command == "checkout":
         profile = validate_profile(json.loads(read(args.profile)))
         directory = save_private_bundle(args.out, checkout(profile))
@@ -129,6 +144,25 @@ def parser():
                              help="Sends the selected input to your logged-in Codex service")
     prof = commands.add_parser("profile", help="Detailed evidence-linked representation; all outputs private")
     actions = prof.add_subparsers(dest="profile_command", required=True)
+    audit = actions.add_parser("compression-audit", help="Compare an existing prompt to every reference facet; one model call")
+    audit.add_argument("profile")
+    audit.add_argument("--prompt", required=True)
+    audit.add_argument("--backend", choices=["codex"], required=True)
+    audit.add_argument("--review-model", required=True)
+    audit.add_argument("--budget-chars", type=int, default=1000)
+    audit.add_argument("--out", required=True)
+    audit.add_argument("--resume", action="store_true")
+    for name in ("compression-plan", "compress"):
+        cmp = actions.add_parser(name, help="Audit every reference facet while compressing an existing profile")
+        cmp.add_argument("profile")
+        cmp.add_argument("--budget-chars", type=int, default=1000)
+        cmp.add_argument("--attempts", type=int, default=2, help="Bounded candidates, 1–3; at most two calls each")
+        if name == "compress":
+            cmp.add_argument("--backend", choices=["codex"], required=True)
+            cmp.add_argument("--model", required=True)
+            cmp.add_argument("--review-model", required=True)
+            cmp.add_argument("--out", required=True)
+            cmp.add_argument("--resume", action="store_true")
     edit = actions.add_parser("checkout", help="Create an editable private copy; no model calls")
     edit.add_argument("profile")
     edit.add_argument("--out", required=True)

@@ -35,3 +35,4 @@ jobs:
           runaway demo --out demo
           runaway profile checkout demo/profile.private.json --out editable
           runaway profile export demo/profile.private.json --out exported
+          runaway profile compression-plan demo/profile.private.json --budget-chars 600

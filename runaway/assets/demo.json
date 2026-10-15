@@ -538,10 +538,10 @@
     "schema_version": 1,
     "artifact_type": "portable_expression",
     "status": "candidate_unvalidated",
-    "text": "RunAWay — tentative personal preferences. Use this as a tentative preference for relevant choices, subject to the current task and explicit user instructions. It is not a factual identity or permission to act.\n\n这些材料是软件演示用的虚构故事，不是对真实人物的档案；以下仅描述故事中的叙述者，不应视为稳定或跨情境的个人特征。\n\n在读书会工具的故事里，叙述者先观察三次活动，再把优先事项从排行榜转向帮助参与者找回上次讨论段落；另一次因组织者每周询问，把藏深的导出功能移回首页。这些例子显示其会回应实际困难并修正设计，但不能据此推断固定决策程序。\n\n对于一张纸就能试的想法，叙述者说会先带纸到现场验证；此做法仅限于这种低成本测试。\n\n涉及成员真实联系方式时，叙述者会先核实可见范围，宁可放慢；不应概括为总是快速上线。在虚构的临时改场地、成员已在路上的情境中，叙述者先确认页面只公开地点、不公开联系方式，再尽快发布仅含地址和路线的版本，接受暂不精致，但不跳过权限检查。这些都是特定情境下的取舍，不能推广为普遍规则。\n\nUnknown / unresolved:\n- 这些故事是否对应任何真实人物或现实经历；来源明确称其为虚构故事。\n- 故事中呈现的做法是否会在其他项目、情境或时期持续出现。\n- 除故事明确列出的功能观察、纸面试验、导出按钮调整及联系方式可见性验证外，叙述者是否还有其他偏好或判断程序。\n- 2 possible evidence omissions remain unresolved; see private report.\n",
+    "text": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n材料是供软件演示的虚构读书会故事，不代表真实经历或稳定特征；以下均为未经独立观察的自述。工具取舍中，叙述者观察三次活动后按实际困难把优先级从排行榜转为找回上次讨论段落；导出按钮曾为简洁而藏深，组织者每周询问后又放回首页，显示这两例愿修正设计，不足以推为通则。仅对一张纸可试的想法，称会带纸到现场测试；该例未说明涉及隐私，也未描述为需快速上线。涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快，也不支持总是快或总是慢上线。另在成员已在路上、场地临时变更的虚构情境，先确认页面只公开地点、不公开联系方式再发布；愿以暂不精致换取尽快提供地址路线，但不省权限检查。能否对应现实、推广到其他情境或时期，以及是否另有偏好或判断程序均未知；另有两项可能的证据遗漏尚未解决。\n",
     "profile_id": "3f2cd1397ec75978a81423dd32ca1b6fba5a5216a7b93e80646a9663afe5d368",
-    "method": "model_paraphrase_with_model_review",
-    "id": "a97a91759b8a24719d72a4fda5f514e77a8e2e6f78afbb1a380f0c6da16dcec3"
+    "method": "facet_audited_compression_v1",
+    "id": "f5199362e45bb045ad5af645128ce5f50f136616e13fc4121572250a0b83e4a9"
   },
   "review": {
     "reviews": [
@@ -624,49 +624,302 @@
     ]
   },
   "compact_manifest": {
-    "method": "model_paraphrase_with_model_review",
-    "budget_characters": 2400,
+    "method": "facet_audited_compression_v1",
+    "profile_id": "3f2cd1397ec75978a81423dd32ca1b6fba5a5216a7b93e80646a9663afe5d368",
+    "budget_characters": 600,
+    "prompt_characters": 446,
+    "prompt_bytes": 1134,
+    "tokens": null,
+    "prompt_sha256": "946c500ccc83d1d30555a108d2a02a7fc672861d4bf5a2ee3b03caee6483b42e",
     "selected_claim_ids": [
       "c0000_0000",
-      "c0001_0000",
       "c0000_0001",
       "c0000_0002",
       "c0000_0003",
       "c0000_0004",
       "c0000_0005",
+      "c0001_0000",
       "c0001_0001",
       "c0001_0002"
     ],
     "omitted_claims": [],
-    "prompt_characters": 775,
-    "prompt_bytes": 1685,
-    "tokens": null,
-    "prompt_sha256": "0d4b38530cfd7490306e1b0df2a8302533693f141b4d766575595279b5a9d377",
-    "profile_id": "3f2cd1397ec75978a81423dd32ca1b6fba5a5216a7b93e80646a9663afe5d368",
-    "compact_failure": null,
-    "model_review": {
-      "reviews": [
+    "generator_model": "gpt-6-luna",
+    "review_model": "gpt-6.1-sol",
+    "reference_audit": {
+      "units": [
         {
-          "paragraph_index": 0,
-          "verdict": "faithful",
-          "reason": "两项主张均有来源支持：材料是软件演示用的虚构故事，且判断仅适用于故事中的叙述者，不应当作稳定的个人特征。"
+          "unit_id": "u00000",
+          "verdict": "retained",
+          "quote": "材料是供软件演示的虚构读书会故事，不代表真实经历或稳定特征；以下均为未经独立观察的自述。",
+          "reason": "明确限定为软件演示用虚构故事，而非真实人物档案；后文以叙述者为判断对象。"
         },
         {
-          "paragraph_index": 1,
-          "verdict": "faithful",
-          "reason": "涵盖了先观察三次活动、因参与者难以找回段落而搁置排行榜，以及因组织者每周询问而将导出功能移回首页；也保留了这些例子不能证明固定决策程序的限定。"
+          "unit_id": "u00001",
+          "verdict": "retained",
+          "quote": "材料是供软件演示的虚构读书会故事",
+          "reason": "虚构性质的限定覆盖整个材料。"
         },
         {
-          "paragraph_index": 2,
-          "verdict": "faithful",
-          "reason": "准确转述了纸面可试的想法会先带到现场验证，并保留其仅适用于低成本测试的范围。"
+          "unit_id": "u00002",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "保留自述、未经独立观察及非稳定特征的证据限定。"
         },
         {
-          "paragraph_index": 3,
-          "verdict": "faithful",
-          "reason": "包含联系方式改动时先核实可见范围、宁可放慢的条件，也完整涵盖临时改场地且成员已在路上的情境中，先做权限检查再发布地址和路线、接受暂不精致的取舍；没有将其泛化为普遍规则。"
+          "unit_id": "u00003",
+          "verdict": "retained",
+          "quote": "工具取舍中，叙述者观察三次活动后按实际困难把优先级从排行榜转为找回上次讨论段落",
+          "reason": "保留观察次数、实际困难及优先级转变；末尾明确跨情境推广未知。"
+        },
+        {
+          "unit_id": "u00004",
+          "verdict": "retained",
+          "quote": "虚构读书会故事",
+          "reason": "结合后文“工具取舍中”，明确限定为读书会工具的功能取舍。"
+        },
+        {
+          "unit_id": "u00005",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖该功能取舍叙述。"
+        },
+        {
+          "unit_id": "u00006",
+          "verdict": "retained",
+          "quote": "工具取舍中，叙述者观察三次活动后按实际困难把优先级从排行榜转为找回上次讨论段落",
+          "reason": "描述的是这次具体的功能优先级判断。"
+        },
+        {
+          "unit_id": "u00007",
+          "verdict": "retained",
+          "quote": "导出按钮曾为简洁而藏深，组织者每周询问后又放回首页，显示这两例愿修正设计，不足以推为通则",
+          "reason": "保留简洁化设计、持续求助、撤回设计及不能普遍化的限制。"
+        },
+        {
+          "unit_id": "u00008",
+          "verdict": "retained",
+          "quote": "导出按钮曾为简洁而藏深，组织者每周询问后又放回首页",
+          "reason": "在读书会工具语境中明确指向导出功能设计。"
+        },
+        {
+          "unit_id": "u00009",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖导出按钮事例。"
+        },
+        {
+          "unit_id": "u00010",
+          "verdict": "retained",
+          "quote": "组织者每周询问后又放回首页",
+          "reason": "明确保留组织者每周询问这一触发条件。"
+        },
+        {
+          "unit_id": "u00011",
+          "verdict": "retained",
+          "quote": "仅对一张纸可试的想法，称会带纸到现场测试",
+          "reason": "保留纸面现场试验及仅限这类低成本想法的条件。"
+        },
+        {
+          "unit_id": "u00012",
+          "verdict": "retained",
+          "quote": "仅对一张纸可试的想法，称会带纸到现场测试",
+          "reason": "明确讨论想法的初步现场验证。"
+        },
+        {
+          "unit_id": "u00013",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖纸面试验的自述。"
+        },
+        {
+          "unit_id": "u00014",
+          "verdict": "retained",
+          "quote": "仅对一张纸可试的想法",
+          "reason": "保留一张纸即可试验的适用条件。"
+        },
+        {
+          "unit_id": "u00015",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快，也不支持总是快或总是慢上线",
+          "reason": "保留隐私敏感条件、可见性核实、接受放慢及反对快慢通则的限制。"
+        },
+        {
+          "unit_id": "u00016",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动",
+          "reason": "明确限定为涉及真实联系方式的产品改动。"
+        },
+        {
+          "unit_id": "u00017",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖联系方式改动的叙述。"
+        },
+        {
+          "unit_id": "u00018",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动",
+          "reason": "保留触发谨慎处理的具体条件。"
+        },
+        {
+          "unit_id": "u00019",
+          "verdict": "retained",
+          "quote": "仅对一张纸可试的想法，称会带纸到现场测试；该例未说明涉及隐私",
+          "reason": "明确保留纸面试验例外，并指出其未说明涉及隐私。"
+        },
+        {
+          "unit_id": "u00020",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快",
+          "reason": "保留对隐私情境中也总求快这一概括的否定，未把被反驳的话当作用户认可。"
+        },
+        {
+          "unit_id": "u00021",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快",
+          "reason": "明确保留反对无条件快速上线的概括及其具体依据。"
+        },
+        {
+          "unit_id": "u00022",
+          "verdict": "retained",
+          "quote": "反对被概括为任何情境都求快，也不支持总是快或总是慢上线",
+          "reason": "明确讨论对故事叙述者行动方式的概括。"
+        },
+        {
+          "unit_id": "u00023",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖叙述者对概括的反对。"
+        },
+        {
+          "unit_id": "u00024",
+          "verdict": "retained",
+          "quote": "仅对一张纸可试的想法，称会带纸到现场测试；该例未说明涉及隐私，也未描述为需快速上线",
+          "reason": "保留纸面试验事例，并明确区分现场试验与快速上线。"
+        },
+        {
+          "unit_id": "u00025",
+          "verdict": "retained",
+          "quote": "涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快",
+          "reason": "保留被反驳概括的限制性区别，未将助手说法视为用户背书。"
+        },
+        {
+          "unit_id": "u00026",
+          "verdict": "retained",
+          "quote": "材料是供软件演示的虚构读书会故事，不代表真实经历或稳定特征",
+          "reason": "保留软件演示、虚构性质以及不能据此认定真实经历或稳定特征的限定。"
+        },
+        {
+          "unit_id": "u00027",
+          "verdict": "retained",
+          "quote": "另在成员已在路上、场地临时变更的虚构情境",
+          "reason": "后续场景也被明确标为虚构。"
+        },
+        {
+          "unit_id": "u00028",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖后续虚构场景。"
+        },
+        {
+          "unit_id": "u00029",
+          "verdict": "retained",
+          "quote": "另在成员已在路上、场地临时变更的虚构情境，先确认页面只公开地点、不公开联系方式再发布",
+          "reason": "保留具体虚构场景及先检查公开内容、后发布的顺序。"
+        },
+        {
+          "unit_id": "u00030",
+          "verdict": "retained",
+          "quote": "虚构情境，先确认页面只公开地点、不公开联系方式再发布",
+          "reason": "明确限定为该虚构场景中的页面发布判断。"
+        },
+        {
+          "unit_id": "u00031",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖页面发布判断。"
+        },
+        {
+          "unit_id": "u00032",
+          "verdict": "retained",
+          "quote": "成员已在路上、场地临时变更",
+          "reason": "两个具体情境条件均保留。"
+        },
+        {
+          "unit_id": "u00033",
+          "verdict": "retained",
+          "quote": "愿以暂不精致换取尽快提供地址路线，但不省权限检查",
+          "reason": "保留精致度与速度的取舍及权限检查底线；同句场景限定和末尾推广未知排除普遍偏好解读。"
+        },
+        {
+          "unit_id": "u00034",
+          "verdict": "retained",
+          "quote": "另在成员已在路上、场地临时变更的虚构情境，先确认页面只公开地点、不公开联系方式再发布；愿以暂不精致换取尽快提供地址路线，但不省权限检查",
+          "reason": "明确将速度、精致度与权限检查的取舍限定于该场景。"
+        },
+        {
+          "unit_id": "u00035",
+          "verdict": "retained",
+          "quote": "不代表真实经历或稳定特征；以下均为未经独立观察的自述",
+          "reason": "共同证据限定明确覆盖该场景中的取舍。"
+        },
+        {
+          "unit_id": "u00036",
+          "verdict": "retained",
+          "quote": "成员已在路上、场地临时变更",
+          "reason": "保留场地临时变化且成员已出发的组合条件。"
+        },
+        {
+          "unit_id": "u00037",
+          "verdict": "retained",
+          "quote": "但不省权限检查",
+          "reason": "明确保留不跳过权限检查的例外。"
+        },
+        {
+          "unit_id": "u00038",
+          "verdict": "retained",
+          "quote": "能否对应现实、推广到其他情境或时期，以及是否另有偏好或判断程序均未知",
+          "reason": "明确现实对应关系未知；开头同时保留来源称其为虚构的说明。"
+        },
+        {
+          "unit_id": "u00039",
+          "verdict": "retained",
+          "quote": "能否对应现实、推广到其他情境或时期，以及是否另有偏好或判断程序均未知",
+          "reason": "明确跨情境或时期持续出现的可能性未知。"
+        },
+        {
+          "unit_id": "u00040",
+          "verdict": "retained",
+          "quote": "是否另有偏好或判断程序均未知",
+          "reason": "在已列举具体做法之后，明确其他偏好或判断程序未知。"
+        },
+        {
+          "unit_id": "u00041",
+          "verdict": "retained",
+          "quote": "另有两项可能的证据遗漏尚未解决",
+          "reason": "保留两项潜在证据遗漏仍未解决的状态。"
         }
-      ]
-    }
+      ],
+      "unsupported": []
+    },
+    "metrics": {
+      "attempt": 1,
+      "audit_performed": true,
+      "prompt_characters": 446,
+      "prompt_bytes": 1134,
+      "tokens": null,
+      "character_ratio_to_detailed": 0.20126353790613719,
+      "model_judged_retained_units": 42,
+      "reference_units": 42,
+      "model_judged_complete_claims": 9,
+      "reference_claims": 9,
+      "critical_units": 15,
+      "model_judged_retained_critical_units": 15,
+      "unsupported_additions": 0,
+      "within_budget": true,
+      "accepted": true,
+      "failed_unit_ids": []
+    },
+    "warning": "Model-judged preservation of this fictional reference, not validated personal fidelity."
   }
 }
