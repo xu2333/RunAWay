@@ -39,6 +39,21 @@
 </section>
 <section id="result-panel" class="panel" hidden>
 <div class="eyebrow" id="result-kind">可编辑的初稿</div><h2 id="name">你的随身分身</h2><p id="tagline"></p>
+<section id="share-panel" class="share-panel" hidden>
+<h3>这一面，给朋友看</h3><p class="small">从真实做法里长出的梗。分享卡不会改写你的随身 prompt。</p>
+<canvas id="share-canvas" width="960" height="1080" role="img" aria-label="当前分享卡预览"></canvas><p id="share-error" class="small" role="status"></p>
+<details><summary>改改卡片文字</summary><label for="share-name">卡片名字</label><input id="share-name" type="text" maxlength="40"><label for="share-tagline">一句能接上的梗</label><input id="share-tagline" type="text" maxlength="160"><label for="share-tell">具体是什么做法</label><input id="share-tell" type="text" maxlength="100"><label for="share-boundary">也要带上的边界</label><input id="share-boundary" type="text" maxlength="100"></details>
+<p id="share-evidence" class="small"></p><p class="small">对照下方完整证据检查。关联 id 只说明模型引用了哪条判断，不证明梗一定贴切；修改文字后请重新核对。</p>
+<label class="check"><input id="share-reviewed" type="checkbox">我已检查这四段文字，确认可以分享；没有不想公开的信息。</label>
+<div class="actions"><a id="download-card" role="button" class="primary download-button" download="runaway-card.png">下载分享图片</a><button id="copy-card">复制卡片文字</button></div>
+<details><summary>帮我们找到真正值得转发的结果</summary><p class="small">三件事分开判断。不好笑也可以说；修改卡片后会清空评分。导出不等于上传。</p>
+<label for="recognizable">这份表达像我吗？</label><select id="recognizable"><option value="unsure">还不能判断</option><option value="yes">像，能认出我的做法</option><option value="no">不像</option></select>
+<label for="amusing">这份表达有趣吗？</label><select id="amusing"><option value="unsure">还不能判断</option><option value="yes">有趣，梗能接上</option><option value="no">一般或不好笑</option></select>
+<label for="would-share">我愿意转发这张卡吗？</label><select id="would-share"><option value="unsure">还不能判断</option><option value="yes">愿意</option><option value="no">不愿意</option></select>
+<div class="actions"><button id="download-sample">下载这张卡与评分</button><button id="submit-sample">预览公开投稿</button></div>
+<div id="sample-draft" hidden><p class="small">下面是将要发送到 GitHub Issue 草稿的全部内容，含卡片文字和评分，不含原始材料、引文或随身 prompt。点击后仍需你在 GitHub 手动提交。</p><textarea id="sample-preview" rows="8" readonly aria-label="公开投稿预览"></textarea><label class="check"><input id="sample-public" type="checkbox">我同意将预览中的卡片文字和评分放进公开 Issue 草稿。</label><button id="open-sample-issue">打开 GitHub 草稿 ↗</button></div>
+</details></section>
+<p id="share-legacy" class="small" hidden>这份旧格式结果仍可使用。重新复制第 2 步的请求提炼后，即可生成带依据的分享卡。</p>
 <label for="prompt">真正带走的是这段完整 prompt</label><p class="small">固定的适用边界会随正文一起复制。名字只是外衣。</p><textarea id="prompt" rows="9"></textarea>
 <div id="size" class="small"></div><div class="actions"><button id="copy-prompt" class="primary">复制完整 prompt</button><button id="download-prompt">下载文本</button></div>
 <div class="actions secondary"><button id="download-portable">下载 Harness 文件</button><button id="download-private">下载私有档案</button></div>

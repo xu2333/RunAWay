@@ -17,6 +17,8 @@ Open http://127.0.0.1:8080. Use localhost or HTTPS; hashing and copying need a s
 
 The fictional frog example is ready immediately and makes no model call. It remains tagged as a demo in usage reports. Clear the page before starting a real submission.
 
+New model results include an editable share card: a short name, a joke, one concrete behavior and its boundary. Preview and download the exact PNG locally, or copy its text. Card changes never change the portable prompt. Optional card feedback separates recognition, humor and willingness to share. Download a card sample or inspect the full sample before explicitly opening a public Issue draft; a manual GitHub submission is still required. This card submission path intentionally includes approved card text, unlike the older usage-statistics draft. See [the 700-output target and audit](OUTPUTS.md).
+
 ## Data and evidence
 
 Materials and feedback stay in tab memory until the user copies, downloads or submits them. Closing or reloading loses this state. The app has no automatic analytics or feedback ingestion endpoint. Hosting providers may retain ordinary HTTP access logs; source text and local feedback are not sent with those requests.

@@ -8,7 +8,7 @@ Turn resumes, experiences and agent conversations into a portable prompt for how
 
 ## Try it
 
-**Browser app:** paste an experience, bring back a result from an LLM you already use, then copy your prompt and record real-use feedback. No API key or build step.
+**Browser app:** paste an experience, bring back a result from an LLM you already use, then take away your prompt and a shareable card. No API key or build step.
 
 ```sh
 git clone https://github.com/xu2333/RunAWay.git
@@ -16,7 +16,7 @@ cd RunAWay
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open **http://127.0.0.1:8080**. The fictional frog example works immediately, with no model call. [Browser guide & data handling](WEB.md).
+Open **http://127.0.0.1:8080**. The fictional frog example works immediately, with no model call. [Browser guide & data handling](WEB.md) · [700-output target](OUTPUTS.md).
 
 ## Make it yours
 

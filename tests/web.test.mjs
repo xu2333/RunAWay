@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {sourcesFrom,validateAnswer,parseJSON,makeBundle,feedbackReport,makeRequest,HEADER,length} from '../web/dist/core.mjs';
+import {validateCard,cardText,makeOutputSample,validateSample,auditSamples} from '../web/dist/presentation.mjs';
 const demo=JSON.parse(await readFile(new URL('../web/dist/demo.json',import.meta.url),'utf8'));
 const clone=x=>structuredClone(x);
 
@@ -74,4 +75,54 @@ test('model request includes source data and explicit scope and budget boundarie
   assert.ok(request.includes(JSON.stringify(demo.sources)));
   assert.ok(request.includes('不是用户背书'));
   assert.ok(request.includes(String(1000-length(HEADER)-1)));
+});
+
+test('presentation must reference existing evidence-linked claims, old answers still work',()=>{
+  const old=clone(demo.answer);delete old.presentation;validateAnswer(old,demo.sources,1600);
+  const a=clone(demo.answer);a.presentation.claim_ids=['invented'];
+  assert.throws(()=>validateAnswer(a,demo.sources,1600),/关联已有判断/);
+  a.presentation.claim_ids=[];assert.throws(()=>validateAnswer(a,demo.sources,1600));
+  a.presentation={...demo.answer.presentation,secret:'not a permitted field'};
+  assert.throws(()=>validateAnswer(a,demo.sources,1600));
+});
+const card={name:'纸上谈兵行动派',tagline:'先画出来，再说行不行。',tell:'纸能验证的想法，就拿到现场试。',boundary:'涉及真实联系方式时，先查可见范围。'};
+const ratings={recognizable:'yes',amusing:'yes',would_share:'yes'};
+test('share text includes boundaries and demo status but cannot contain hidden fields',()=>{
+  assert.ok(cardText(card,true).includes('虚构故事示例'));
+  assert.ok(cardText(card).includes(card.boundary));
+  assert.throws(()=>validateCard({...card,raw_source:'private'}));
+  assert.throws(()=>validateCard({...card,name:'\n'}));
+  assert.throws(()=>validateCard({...card,tell:'你'.repeat(101)}));
+});
+test('presentation edits never change a detailed profile or portable prompt',async()=>{
+  const original=await makeBundle(demo.answer,demo.sources);
+  const a=clone(demo.answer);a.name='换一个名字';a.presentation.tell='换一种说法';
+  assert.deepEqual(await makeBundle(a,demo.sources),original);
+});
+test('opted-in samples contain only card text, self-ratings and provenance identifiers',async()=>{
+  const s=await makeOutputSample(card,ratings,'a'.repeat(64),'user_submitted');
+  await validateSample(s);
+  assert.equal(s.source_history_included,false);
+  for(const key of ['sources','prompt','claims','evidence'])assert.equal(s[key],undefined);
+  await assert.rejects(()=>makeOutputSample(card,{...ratings,secret:'private'},'a'.repeat(64),'user_submitted'));
+  await assert.rejects(()=>validateSample({...s,card:{...card,name:'tampered'}}),/被更改/);
+  await assert.rejects(()=>validateSample({...s,source_text:'private'}));
+});
+test('700 target excludes demos, duplicate files, renames and unapproved outputs',async()=>{
+  const real=await makeOutputSample(card,ratings,'a'.repeat(64),'user_submitted');
+  const renamed=await makeOutputSample({...card,name:'另一个梗'},ratings,'a'.repeat(64),'user_submitted');
+  const demo=await makeOutputSample(card,ratings,'b'.repeat(64),'fictional_demo');
+  const notFunny=await makeOutputSample({...card,tell:'先完整规划再开始。'},{...ratings,amusing:'no'},'c'.repeat(64),'user_submitted');
+  const report=await auditSamples([real,real,renamed,demo,notFunny]);
+  assert.equal(report.duplicate_files,1);assert.equal(report.fictional_samples_excluded,1);
+  assert.equal(report.all_three_self_ratings_yes,2);assert.equal(report.unique_exact_behavior_texts,1);
+  assert.equal(report.remaining_to_target,699);assert.equal(report.near_duplicate_pair_count,1);
+  assert.equal(report.near_duplicate_pairs[0].exact_behavior,true);
+  assert.ok(report.conclusion.includes('not unique people'));
+});
+test('similar wording is surfaced for review without claiming semantic diversity',async()=>{
+  const a=await makeOutputSample(card,ratings,'a'.repeat(64),'user_submitted');
+  const b=await makeOutputSample({...card,tell:card.tell+'再做。'},ratings,'b'.repeat(64),'user_submitted');
+  const r=await auditSamples([a,b]);assert.equal(r.near_duplicate_pair_count,1);
+  assert.equal(r.near_duplicate_pairs[0].exact_behavior,false);
 });

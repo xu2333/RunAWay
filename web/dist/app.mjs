@@ -1,8 +1,9 @@
 import {VERSION,HEADER,length,sourcesFrom,parseJSON,makeRequest,validateAnswer,makeBundle,feedbackReport} from './core.mjs';
+import {validateCard,renderCard,cardText,makeOutputSample} from './presentation.mjs';
 const $=id=>document.getElementById(id);
-let prepared=null, answer=null, lastExport=null;
+let prepared=null, answer=null, lastExport=null, sampleDraft=null;
 let session=freshSession();
-function freshSession(){return {id:crypto.randomUUID(),demo:false,events:[{type:'opened',at:new Date().toISOString()}],feedback:[],exports:[]};}
+function freshSession(){return {id:crypto.randomUUID(),demo:false,events:[{type:'opened',at:new Date().toISOString()}],feedback:[],exports:[],output_samples:[]};}
 function record(type){session.events.push({type,at:new Date().toISOString()});}
 function notify(message,error=false){$('notice').textContent=message;$('notice').classList.toggle('error',error);$('notice').hidden=false;if(error)$('notice').scrollIntoView({behavior:'smooth',block:'center'});}
 function show(step){
@@ -18,7 +19,7 @@ async function copy(value){
   }
 }
 function download(name,value,type='application/json'){
-  const blob=new Blob([typeof value==='string'?value:JSON.stringify(value,null,2)+'\n'],{type});
+  const blob=new Blob([typeof value==='string'||value instanceof Blob?value:JSON.stringify(value,null,2)+'\n'],{type});
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 function invalidate(){prepared=null;answer=null;lastExport=null;$('answer').value='';$('request').value='';$('show-feedback').disabled=true;$('feedback-panel').hidden=true;show('source');$('source-count').textContent=length($('source').value)+' 字符';}
@@ -31,10 +32,13 @@ function appendText(parent,tag,value,cls=''){const n=document.createElement(tag)
 function render(){
   $('name').textContent=answer.name;$('tagline').textContent=answer.tagline;$('prompt').value=answer.prompt;
   $('result-kind').textContent=session.demo?'虚构示例 · 不是对你的判断':'引文已核对 · 等你确认的初稿';
+  $('share-panel').hidden=!answer.presentation;$('share-legacy').hidden=!!answer.presentation;
+  if(answer.presentation){$('share-name').value=answer.name;$('share-tagline').value=answer.tagline;$('share-tell').value=answer.presentation.tell;$('share-boundary').value=answer.presentation.boundary;
+    $('share-evidence').textContent=answer.presentation.claim_ids.length?'模型为分享表达关联的判断：'+answer.presentation.claim_ids.join('、'):'目前没有足够判断依据。';resetCardReview();paintCard();}
   const evidence=$('evidence');evidence.replaceChildren();
   const bases={self_report:'自述',observed_choice:'记录中的选择',inference:'待确认的推断',task_requirement:'局部任务要求'};
   for(const c of answer.claims){
-    const box=appendText(evidence,'section','','claim');appendText(box,'strong',c.statement);appendText(box,'p',`${bases[c.basis]} · ${c.scope}`,'small');
+    const box=appendText(evidence,'section','','claim');appendText(box,'strong',c.statement);appendText(box,'p',`${c.id} · ${bases[c.basis]} · ${c.scope}`,'small');
     for(const v of c.conditions)appendText(box,'p','条件：'+v,'small');for(const v of c.exceptions)appendText(box,'p','例外：'+v,'small');
     for(const e of c.evidence){const src=prepared.sources.sources.find(s=>s.id===e.source_id);appendText(box,'blockquote',`${src.role} · ${e.relation}\n${e.quote}`);}
   }
@@ -95,3 +99,25 @@ $('github-feedback').addEventListener('click',()=>{
   notify('已请求打开公开 Issue 草稿；请检查后手动提交。原文和自由文本没有预填。');
 });
 $('clear').addEventListener('click',()=>{if(!window.confirm('清空本页材料、分身和反馈？此操作不能恢复；请先下载需要保留的私有档案。'))return;session=freshSession();$('source').value='';$('feedback-form').reset();$('include-content').checked=false;$('feedback-export').hidden=true;invalidate();notify('本页材料已清空。已下载的文件需要你在设备上自行删除。');});
+
+function currentCard(){return validateCard({name:$('share-name').value,tagline:$('share-tagline').value,tell:$('share-tell').value,boundary:$('share-boundary').value});}
+function resetCardReview(){sampleDraft=null;$('sample-draft').hidden=true;$('sample-public').checked=false;$('share-reviewed').checked=false;for(const id of ['recognizable','amusing','would-share'])$(id).value='unsure';}
+function paintCard(){try{renderCard($('share-canvas'),currentCard(),session.demo);$('download-card').href=$('share-canvas').toDataURL('image/png');$('share-canvas').hidden=false;$('share-error').textContent='';}catch(e){$('download-card').removeAttribute('href');$('share-canvas').hidden=true;$('share-error').textContent=e.message;}}
+function checkedCard(){if(!answer?.presentation)throw Error('先生成分享卡。');const card=currentCard();if(!$('share-reviewed').checked)throw Error('请先核对卡片上的四段文字并勾选分享确认。');return card;}
+for(const id of ['share-name','share-tagline','share-tell','share-boundary'])$(id).addEventListener('input',()=>{resetCardReview();paintCard();});
+for(const id of ['recognizable','amusing','would-share'])$(id).addEventListener('change',()=>{sampleDraft=null;$('sample-draft').hidden=true;$('sample-public').checked=false;});
+$('copy-card').addEventListener('click',guard(async()=>{await copy(cardText(checkedCard(),session.demo));record('card_copied');notify('卡片文字已复制；随身 prompt 没有改变。');}));
+$('download-card').addEventListener('click',event=>{
+  try{checkedCard();record('card_download_requested');notify('已请求下载预览中的分享图片，没有上传。');}
+  catch(e){event.preventDefault();notify(e.message,true);}
+});
+async function outputSample(){const card=checkedCard();const bundle=await makeBundle(answer,prepared.sources);return makeOutputSample(card,{recognizable:$('recognizable').value,amusing:$('amusing').value,would_share:$('would-share').value},bundle.profile.id,session.demo?'fictional_demo':'user_submitted');}
+$('download-sample').addEventListener('click',guard(async()=>{const sample=await outputSample();session.output_samples.push(sample);download('runaway-output.json',sample);record('output_sample_downloaded');notify('卡片与评分已下载，尚未提交。虚构示例会单独标记。');}));
+$('submit-sample').addEventListener('click',guard(async()=>{sampleDraft=await outputSample();$('sample-preview').value=JSON.stringify(sampleDraft,null,2);$('sample-public').checked=false;$('sample-draft').hidden=false;}));
+$('open-sample-issue').addEventListener('click',guard(async()=>{
+  if(!sampleDraft||!$('sample-public').checked)throw Error('请先预览投稿内容并勾选公开草稿确认。');
+  const current=await outputSample();if(current.id!==sampleDraft.id)throw Error('卡片或评分已经改变，请重新预览。');
+  const body='我愿意公开以下卡片文字与自评。它不是独立的真实性或传播效果验证。\n\n```json\n'+JSON.stringify(sampleDraft,null,2)+'\n```\n';
+  window.open('https://github.com/xu2333/RunAWay/issues/new?title='+encodeURIComponent('[Output] '+sampleDraft.card.name)+'&body='+encodeURIComponent(body),'_blank','noopener,noreferrer');
+  record('output_issue_draft_opened');notify('已请求打开 GitHub 公开草稿，请检查后手动提交。打开草稿不计作成功投稿。');
+}));
