@@ -53,6 +53,34 @@ Default `prospective` mode rejects records at or before the snapshot time, recor
 
 `--mode development` must be selected when freezing a retrospective or software-test run. It permits old/source-overlapping records, labels the report accordingly and retains chronology, target-identity and score-completeness checks. The [synthetic fixture](examples/evaluation.synthetic.json) is only an engine smoke test; use it with `runaway demo` and development mode. Its output is not evidence about a person.
 
+## Import existing Codex trajectory pages
+
+`eval import` converts explicitly supplied `read_thread` pages to the observed-record format. It does not scan conversations, contact a model service or change the frozen snapshot.
+
+Save the selected tool results in a JSON object with `schema_version: 1` and `pages: [...]`, preserving each page's `schemaVersion`, `thread`, `page` and `turns` fields. Obtain sufficiently complete text; truncated message bodies are not evaluation targets. The importer ignores command, tool and reasoning payloads.
+
+```sh
+runaway eval import frozen-evaluation/snapshot.private.json \
+  --input selected-thread-pages.private.json \
+  --episode-map episode-map.private.json --out imported-followups
+
+runaway eval check frozen-evaluation/snapshot.private.json \
+  --episodes imported-followups/episodes.private.json
+```
+
+The optional episode map is an object from original thread IDs to the episode IDs used in the profile. Supply it whenever those names differ; for example `{"original-thread-id": "research_episode"}`. A different spelling must not disguise source overlap. Unmapped threads retain their original ID. These aliases and the selected pages are recorded in the audit.
+
+Selection is deterministic and does not use scores:
+
+- Exclude known heartbeat/automation wrappers. A `userMessage` item alone does not establish human authorship. Structured reply wrappers, attachments, multiple text blocks and multiple user messages in one turn require review and are conservatively excluded.
+- Preserve the single target's text exactly. Use its turn start as its declared timestamp; do not estimate timestamps for steered messages.
+- Use the immediately preceding supplied turn's single completed final response as an **excerpt**, with completion time as an upper bound on response time. Both turns must be adjacent within a supplied page. Do not bridge gaps between unrelated pages or skip failed/incomplete turns.
+- Exclude known truncation markers, overlapping turn times and cases that fail the frozen evaluator's existing checks. Deduplicate exact target text in chronological order before scoring.
+
+`import-audit.private.json` records every supplied turn's inclusion or exclusion, page hashes and reason counts. If none qualify, the command returns `no_eligible_observed_targets` and creates **no** `episodes.private.json`. It does not move the cutoff, invent labels or silently switch to development mode.
+
+The importer cannot authenticate metadata, detect unmarked automation, infer omitted page content or guarantee unbiased selection. Tool outputs and images are not reconstructed; selected context remains an excerpt. Overlapping pages that disagree are rejected. Check the audit before interpreting a resulting score.
+
 ## Read the paired results
 
 Every model scores identical target tokens under all four conditions. Original target whitespace is preserved; EOS and prompt tokens are not scored. Context overflow fails explicitly instead of truncating. Recorded conversation and memory text use ordinary tokens, so embedded chat delimiters do not become special control tokens.

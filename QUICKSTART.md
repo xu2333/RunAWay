@@ -86,7 +86,7 @@ runaway profile compression-audit my-run/profile.private.json --prompt existing-
 
 The initial `build` compression retains its earlier paragraph-level checker; this explicit second pass provides finer checks without re-extracting your sources. See [compression measurements and limits](COMPRESSION.md) for the fictional development comparison. Reference retention is separate from RIG or prediction of real future choices.
 
-To test prediction of actual later messages, use `runaway eval freeze`, `eval check`, and `eval run`. They freeze the detailed/compact representations and local model hashes, validate recorded follow-ups, and compare four conditions using actual token probabilities. See [the evaluation guide](EVALUATION.md) for the data format, optional local scoring dependencies and limits. Previously used development episodes do not become independent evidence merely by being scored again.
+To test prediction of actual later messages, use `runaway eval freeze`, `eval check`, and `eval run`. They freeze the detailed/compact representations and local model hashes, validate recorded follow-ups, and compare four conditions using actual token probabilities. `eval import` converts explicitly supplied Codex thread pages, excluding known automation and recording selection reasons. See [the evaluation guide](EVALUATION.md) for the data format, optional local scoring dependencies and limits. Previously used development episodes do not become independent evidence merely by being scored again.
 
 ## Detailed personal representation: manual control
 

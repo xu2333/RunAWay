@@ -17,6 +17,7 @@ from .revision import checkout, revise, changes
 from .demo import demo_bundle
 from .compression import compress, compression_plan, audit_prompt
 from .evaluation import freeze, validate_dataset
+from .trajectory_import import import_pages
 
 
 def read(path):
@@ -142,6 +143,11 @@ def parser():
     frozen.add_argument("--n-ctx", type=int, default=8192)
     frozen.add_argument("--gpu-layers", type=int, default=0, help="Local GPU layers; -1 uses all supported layers")
     frozen.add_argument("--out", required=True)
+    importer = evaluation_actions.add_parser("import", help="Import explicitly exported Codex thread pages; exclude automation")
+    importer.add_argument("snapshot")
+    importer.add_argument("--input", required=True, help="JSON with schema_version: 1 and a pages array of read_thread results")
+    importer.add_argument("--episode-map", help="JSON mapping thread IDs to the original profile's episode IDs")
+    importer.add_argument("--out", required=True)
     for name in ("check", "run"):
         evaluation_command = evaluation_actions.add_parser(name, help="Validate recorded data" if name == "check" else "Local teacher-forced scoring; no network")
         evaluation_command.add_argument("snapshot")
@@ -251,6 +257,12 @@ def main(argv=None):
                 directory = save_private_bundle(args.out, {"snapshot.private.json": snapshot})
                 output({"status": "evaluation_frozen", "id": snapshot["id"], "mode": snapshot["mode"],
                         "directory": directory, "model_count": len(snapshot["models"]), "model_calls": 0})
+            elif args.eval_command == "import":
+                files, report = import_pages(json.loads(read(args.snapshot)), json.loads(read(args.input)),
+                                             json.loads(read(args.episode_map)) if args.episode_map else None)
+                directory = save_private_bundle(args.out, files)
+                output({"status": report["status"], "directory": directory,
+                        "selected_cases": report["selected_cases"], "reason_counts": report["reason_counts"]})
             else:
                 snapshot, episodes = json.loads(read(args.snapshot)), json.loads(read(args.episodes))
                 if args.eval_command == "check":

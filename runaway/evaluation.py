@@ -19,6 +19,16 @@ SYSTEM = ("Predict the next user message in this historical conversation. Write 
 TEMPLATE = "qwen3_chat_no_think_v1"
 
 
+def target_origin_issue(text):
+    """Conservative exclusions, not proof that unmarked text was human-authored."""
+    stripped = text.lstrip().lower()
+    if stripped.startswith(("<heartbeat>", "<automation", "<subagent_notification>", "<goal_continuation>")):
+        return "automated_target"
+    if stripped.startswith("<"):
+        return "structured_target_requires_review"
+    return None
+
+
 def file_digest(path):
     h = hashlib.sha256()
     with Path(path).open("rb") as stream:
@@ -118,6 +128,8 @@ def validate_dataset(data, snapshot):
                 if mid in snapshot["source_ids"] or digest(message["text"]) in snapshot["source_text_hashes"]:
                     raise ValueError("Prospective record overlaps a profile source")
         target = case["target"]
+        if data["origin"] == "observed" and target_origin_issue(target["text"]) == "automated_target":
+            raise ValueError("Automated messages are not observed human targets")
         if target["role"] != "user" or case["context"][-1]["role"] != "assistant":
             raise ValueError("Require the actual preceding assistant response and observed user target")
         if any(m["timestamp"] >= target["timestamp"] for m in case["context"]):
