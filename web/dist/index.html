@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="把你的经历和真实选择，变成可编辑、带得走的个人判断 prompt。浏览器内处理，自选模型。">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RunAWay · 带走你的判断</title><link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<header><a class="brand" href="./">RunAWay<span>your taste, to go.</span></a><nav><button id="demo" class="quiet">试试虚构示例 ↗</button><a href="https://github.com/xu2333/RunAWay" target="_blank" rel="noopener noreferrer">开源 ↗</a></nav></header>
+<main>
+<section class="intro"><div><div class="eyebrow">一只可以随身带走的「你」</div><h1>把你的判断，<br>装进口袋。</h1><p>从经历里找出你如何选择、什么不能妥协。<br>变成一段 prompt，带去你常用的 AI。</p><div class="pills"><span>不必给自己打分</span><span>保留条件与例外</span><span>随时可以改</span></div></div>
+<div class="mascot" aria-hidden="true"><svg viewBox="0 0 300 220"><ellipse cx="150" cy="191" rx="104" ry="15" fill="#dce5d1"/><path d="M83 162 Q48 174 71 183 L116 181 M188 180 L231 183 Q252 168 214 159" fill="#97af7a" stroke="#28483c" stroke-width="3"/><path d="M73 116 Q59 51 110 55 Q143 23 168 55 Q226 42 227 118 L217 161 Q204 186 150 185 Q89 188 79 160Z" fill="#b6cb93" stroke="#28483c" stroke-width="3"/><circle cx="110" cy="84" r="25" fill="#d7e4b8"/><circle cx="188" cy="84" r="25" fill="#d7e4b8"/><circle cx="116" cy="84" r="5" fill="#28483c"/><circle cx="182" cy="84" r="5" fill="#28483c"/><path d="M139 101 Q150 111 162 101" fill="none" stroke="#28483c" stroke-width="3" stroke-linecap="round"/><ellipse cx="105" cy="111" rx="12" ry="5" fill="#e6b0a1"/><ellipse cx="194" cy="111" rx="12" ry="5" fill="#e6b0a1"/><path d="M87 129 L208 166" stroke="#936c45" stroke-width="12"/><rect x="142" y="129" width="55" height="43" rx="10" fill="#efd8a4" stroke="#816646" stroke-width="3"/><path d="M143 138 L169 151 L196 138" fill="none" stroke="#816646" stroke-width="2"/><rect x="61" y="137" width="73" height="39" rx="8" fill="#fbf8ed" stroke="#28483c" stroke-width="2" transform="rotate(-10 61 137)"/><path d="M75 150 L112 144 M77 159 L103 154" stroke="#9cac8d" stroke-width="3" stroke-linecap="round"/></svg><span class="stamp">轻装出发，细节随身。</span></div></section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<section class="workspace">
+<div class="workbench">
+<div class="tabs" aria-label="制作步骤"><button data-step="source" aria-current="step"><b>1</b> 放入经历</button><button data-step="model"><b>2</b> 借个脑袋</button><button data-step="result"><b>3</b> 带走分身</button></div>
+<section id="source-panel" class="panel">
+<h2>从一次真实选择开始</h2><p class="muted">一次纠正、一次取舍，比十个形容词更有用。</p>
+<label for="kind">这次带来了什么</label><select id="kind"><option value="experience">经历 / 做事时的取舍</option><option value="resume">简历 / 自我介绍</option><option value="trajectory">与 Agent 的真实对话</option></select>
+<label for="source">你的材料</label><textarea id="source" rows="9" placeholder="例如：一次项目里，我原先想……后来选择了……因为……但如果……我会换一种做法。"></textarea>
+<p id="source-hint" class="small">请写自己的经历。对话记录请切换类型，保留谁说了什么。</p>
+<div class="row"><label class="file-button">读入文本文件<input id="source-file" type="file" accept=".txt,.md,.json"></label><span id="source-count" class="small">0 字符</span></div>
+<label for="budget">随身 prompt 的长度上限</label><select id="budget"><option value="1000">1,000 字符 · 更轻巧</option><option value="1600" selected>1,600 字符 · 多留些细节</option><option value="2400">2,400 字符 · 更充分</option></select>
+<button id="prepare" class="primary wide">整理好，去提炼 <span>→</span></button>
+<p class="privacy">材料只留在当前标签页。网站不自动上传、不自动保存；关页前可下载私有档案。</p>
+</section>
+<section id="model-panel" class="panel" hidden>
+<h2>让你常用的 AI 帮忙</h2><p>复制下面的请求，发到你选择的 LLM。它会同时返回完整判断和紧凑表达。</p>
+<p class="callout">复制的请求含你选中的材料。只有你粘贴并发送时，材料才会交给所选模型服务；费用由该服务决定。</p>
+<details><summary>看看要发送什么</summary><textarea id="request" rows="8" readonly aria-label="完整提炼请求"></textarea></details>
+<button id="copy-request" class="primary wide">复制提炼请求</button>
+<label for="answer">把 AI 返回的完整 JSON 粘贴到这里</label><textarea id="answer" rows="8" placeholder="粘贴整个 JSON 对象，包括 name、claims、prompt 等字段。"></textarea>
+<p class="small">我们会核对引文、说话者、字段和长度。模型的解释仍需要你确认。</p>
+<button id="import" class="primary wide">检查并查看我的分身 <span>→</span></button>
+<p class="small">如果报错，可把错误和原请求发回同一个模型修复，再粘贴结果。</p>
+</section>
+<section id="result-panel" class="panel" hidden>
+<div class="eyebrow" id="result-kind">可编辑的初稿</div><h2 id="name">你的随身分身</h2><p id="tagline"></p>
+<label for="prompt">真正带走的是这段完整 prompt</label><p class="small">固定的适用边界会随正文一起复制。名字只是外衣。</p><textarea id="prompt" rows="9"></textarea>
+<div id="size" class="small"></div><div class="actions"><button id="copy-prompt" class="primary">复制完整 prompt</button><button id="download-prompt">下载文本</button></div>
+<div class="actions secondary"><button id="download-portable">下载 Harness 文件</button><button id="download-private">下载私有档案</button></div>
+<p class="small">Harness 文件按<a href="https://github.com/xu2333/RunAWay/blob/main/QUICKSTART.md" target="_blank" rel="noopener noreferrer">接入指南</a>导入。私有档案含原文和引文，请自己保管。</p>
+<details><summary>看看它根据什么理解你</summary><div id="evidence"></div><p class="small">想改完整判断？回到第 2 步修改 JSON，再检查一次。只改上方正文不会改写详细表征。</p></details>
+<details><summary>还有哪些地方不了解你</summary><ul id="unknowns"></ul></details>
+<p class="callout">引文存在，不代表推断成立。这是待验证的偏好表达；它不能替你作身份声明或行动授权。</p>
+</section>
+</div>
+<aside><div class="side-card"><div class="eyebrow">一份小小的使用指南</div><h3>让它做一次<br>你熟悉的选择。</h3><p>把完整 prompt 放进 AI 对话的开头，再交给它一个真实任务。</p><div class="example">“请按这些偏好，帮我比较眼前的两种方案。信息不够时，先问我。”</div><p>看它在哪里懂你，又在哪里需要纠正。把这次差异带回来。</p><button id="show-feedback" class="quiet" disabled>我用过了，记下一次反馈 ↗</button></div><div class="aside-note"><span>↳</span><p>你的来源、引文和反馈都在本页内处理。分享只发生在你主动复制、下载或提交的时候。</p></div></aside>
+</section>
+<section id="feedback-panel" class="feedback panel" hidden><div class="eyebrow">用过之后，再多认识一点</div><h2>这次，它像你吗？</h2><p id="feedback-version" class="small"></p>
+<form id="feedback-form"><div class="split"><div><label for="harness">带去了哪里</label><select id="harness"><option>ChatGPT</option><option>Claude</option><option>Gemini</option><option>DeepSeek</option><option>Codex</option><option>Claude Code</option><option>OpenCode</option><option>其他</option></select></div><div><label for="rating">你的判断</label><select id="rating"><option value="partial">有些像，有些要改</option><option value="fits">这次的判断像我</option><option value="misses">这次没理解我</option></select></div></div>
+<label for="task">刚才的真实任务（可选）</label><textarea id="task" rows="2" maxlength="12000"></textarea><label for="response">AI 的实际回复（可选）</label><textarea id="response" rows="3" maxlength="20000"></textarea><label for="correction">你实际怎么纠正 / 希望它怎么做（可选）</label><textarea id="correction" rows="3" maxlength="12000"></textarea>
+<label class="check"><input id="used" type="checkbox" required>我已经在实际任务中使用过这份 prompt</label><button class="primary" type="submit">把这次反馈记在本页</button></form>
+<div id="feedback-export" hidden><p id="feedback-count"></p><label class="check"><input id="include-content" type="checkbox">在反馈导出中附上本次 prompt、任务、回复和纠正。可能含私人信息，请先检查。</label><p class="small">默认只导出操作时间、使用平台、评分和版本标识。原始经历和证据永不包含在反馈导出中。</p><details><summary>预览将要导出的内容</summary><textarea id="feedback-preview" readonly rows="8" aria-label="反馈导出预览"></textarea></details><div class="actions"><button id="download-feedback">下载反馈 JSON</button><button id="github-feedback">去 GitHub 提交反馈 ↗</button></div><p class="small">GitHub Issue 是公开的。点击只会打开草稿，你检查后再手动提交。文本内容不会预填到公开 Issue。</p></div>
+</section>
+<footer><span>RunAWay · 实验中的小分身，不是人格鉴定。</span><button id="clear" class="quiet">清空本页材料</button></footer>
+</main></body></html>

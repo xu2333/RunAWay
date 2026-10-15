@@ -1,0 +1,267 @@
+{
+  "sources": {
+    "schema_version": 1,
+    "sources": [
+      {
+        "id": "fictional_user",
+        "episode_id": "fictional_book_club",
+        "role": "user",
+        "text": "This is a fictional product-builder story for a software demonstration, not a real person's profile.\n\n我做过一个给小型读书会用的工具。有人提议加排行榜，我先坐在旁边看了三次活动，发现大家真正卡在找不到上次讨论的段落。我把那一步缩短了，排行榜先放下。\n\n另一次我为了追求简洁，把导出功能藏得很深，结果组织者每周都要问。我把导出按钮放回首页。少一个按钮不值得多一次求助。\n\n如果一个想法只需要一张纸就能试，我会先拿纸去现场。但涉及成员真实联系方式的改动，我会先验证谁能看见，宁可慢一点。\n\n朋友说我像个随身带橡皮的修路工：愿意修路，也愿意承认路修错了。这个比喻可以用，不能把我写成什么都敢快速上线的人。\n"
+      },
+      {
+        "id": "fictional_assistant",
+        "episode_id": "fictional_book_club",
+        "role": "assistant",
+        "text": "Fictional assistant overgeneralization, not endorsed by the user: You always prioritize shipping quickly, even when sharing private contacts."
+      },
+      {
+        "id": "fictional_followup",
+        "episode_id": "fictional_event_day",
+        "role": "user",
+        "text": "以下仍然是虚构故事，用于软件演示。另一次读书会临时改场地，成员已经在路上。我没有等所有页面都打磨完：先确认页面只公开活动地点、不公开成员联系方式，然后马上发出只有地址和路线的版本。这种情况下，我接受暂时不够精致，但不会跳过权限检查。"
+      }
+    ]
+  },
+  "answer": {
+    "name": "纸上先试蛙",
+    "tagline": "点子先上纸，联系人先上锁。",
+    "claims": [
+      {
+        "id": "c0000_0000",
+        "statement": "这些材料明确描述的是供软件演示使用的虚构产品构建者故事，不是对真实人物的个人档案；以下判断只适用于故事中的叙述者。",
+        "basis": "self_report",
+        "scope": "整个来源材料",
+        "conditions": [],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "This is a fictional product-builder story for a software demonstration, not a real person's profile.",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0001_0000"
+        ]
+      },
+      {
+        "id": "c0000_0001",
+        "statement": "在故事中的读书会工具情境里，叙述者先观察三次活动，再根据参与者实际遇到的困难，把优先事项从排行榜转向更容易找到上次讨论段落。材料支持这一具体做法，但不足以断言这是跨情境的固定决策程序。",
+        "basis": "self_report",
+        "scope": "读书会工具的功能取舍",
+        "conditions": [
+          "叙述者讲述的这次功能优先级判断"
+        ],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "我做过一个给小型读书会用的工具。有人提议加排行榜，我先坐在旁边看了三次活动，发现大家真正卡在找不到上次讨论的段落。我把那一步缩短了，排行榜先放下。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0000_0002",
+          "c0000_0005"
+        ]
+      },
+      {
+        "id": "c0000_0002",
+        "statement": "故事叙述者讲述了根据使用者持续求助而撤回一次简洁化设计：先把导出功能藏深，后来因组织者每周都询问而把按钮放回首页。这个例子呈现出愿意修正设计的做法，不足以证明其在所有情境中都如此。",
+        "basis": "self_report",
+        "scope": "读书会工具的导出功能设计",
+        "conditions": [
+          "组织者每周都要询问导出功能"
+        ],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "另一次我为了追求简洁，把导出功能藏得很深，结果组织者每周都要问。我把导出按钮放回首页。少一个按钮不值得多一次求助。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0000_0001",
+          "c0000_0005"
+        ]
+      },
+      {
+        "id": "c0000_0003",
+        "statement": "对于一张纸就能测试的想法，故事叙述者表示会先带纸到现场试验。该偏好仅由这一类低成本、纸面可试的想法限定。",
+        "basis": "self_report",
+        "scope": "想法的初步现场验证",
+        "conditions": [
+          "想法只需要一张纸就能试"
+        ],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "如果一个想法只需要一张纸就能试，我会先拿纸去现场。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0000_0004"
+        ]
+      },
+      {
+        "id": "c0000_0004",
+        "statement": "涉及成员真实联系方式的改动时，故事叙述者表示会先验证哪些人能够看见，并接受因此放慢进度。材料支持的是这个隐私敏感情境中的谨慎处理，不支持把叙述者概括为总是快速上线或总是缓慢行动。",
+        "basis": "self_report",
+        "scope": "涉及成员真实联系方式的产品改动",
+        "conditions": [
+          "改动涉及成员真实联系方式"
+        ],
+        "exceptions": [
+          "对于只需一张纸即可测试的想法，叙述者说会先到现场试验；材料未说明此例涉及隐私改动。"
+        ],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "但涉及成员真实联系方式的改动，我会先验证谁能看见，宁可慢一点。",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_assistant",
+            "quote": "You always prioritize shipping quickly, even when sharing private contacts.",
+            "relation": "contradicts"
+          }
+        ],
+        "related_claim_ids": [
+          "c0000_0003",
+          "c0000_0005"
+        ]
+      },
+      {
+        "id": "c0000_0005",
+        "statement": "叙述者明确反对被概括为无论何种情境都敢快速上线；这与其针对真实联系方式先确认可见范围、宁可放慢的说法相符。",
+        "basis": "self_report",
+        "scope": "对故事中叙述者行动方式的概括",
+        "conditions": [],
+        "exceptions": [
+          "针对可用一张纸试验的想法，叙述者说会先拿纸到现场；材料并未将其描述为需要快速上线。"
+        ],
+        "evidence": [
+          {
+            "source_id": "fictional_user",
+            "quote": "这个比喻可以用，不能把我写成什么都敢快速上线的人。",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_user",
+            "quote": "但涉及成员真实联系方式的改动，我会先验证谁能看见，宁可慢一点。",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_assistant",
+            "quote": "You always prioritize shipping quickly, even when sharing private contacts.",
+            "relation": "contradicts"
+          }
+        ],
+        "related_claim_ids": [
+          "c0000_0001",
+          "c0000_0002",
+          "c0000_0004"
+        ]
+      },
+      {
+        "id": "c0001_0000",
+        "statement": "用户说明这段读书会经历仍是虚构故事，用于软件演示；不应据此认定为其真实经历或稳定的个人特征。",
+        "basis": "self_report",
+        "scope": "该虚构读书会场景",
+        "conditions": [],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_followup",
+            "quote": "以下仍然是虚构故事，用于软件演示。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0001_0001",
+          "c0001_0002"
+        ]
+      },
+      {
+        "id": "c0001_0001",
+        "statement": "在这个虚构的临时改场地场景中，用户描述先确认页面仅公开活动地点、不公开成员联系方式，再发布页面。",
+        "basis": "self_report",
+        "scope": "该虚构场景中的页面发布判断",
+        "conditions": [
+          "成员已在路上，场地临时变更"
+        ],
+        "exceptions": [],
+        "evidence": [
+          {
+            "source_id": "fictional_followup",
+            "quote": "先确认页面只公开活动地点、不公开成员联系方式，然后马上发出只有地址和路线的版本。",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_followup",
+            "quote": "这种情况下，我接受暂时不够精致，但不会跳过权限检查。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0001_0000",
+          "c0001_0002"
+        ]
+      },
+      {
+        "id": "c0001_0002",
+        "statement": "在该虚构场景中，用户表示愿意接受暂时不够精致的版本以便尽快提供地址和路线，但不会因此省略权限检查；这只是特定情境下的取舍，不足以证明普遍偏好。",
+        "basis": "self_report",
+        "scope": "该虚构场景中的速度、精致度与权限检查取舍",
+        "conditions": [
+          "场地临时变更且成员已经在路上"
+        ],
+        "exceptions": [
+          "不跳过权限检查"
+        ],
+        "evidence": [
+          {
+            "source_id": "fictional_followup",
+            "quote": "我没有等所有页面都打磨完",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_followup",
+            "quote": "这种情况下，我接受暂时不够精致，但不会跳过权限检查。",
+            "relation": "supports"
+          },
+          {
+            "source_id": "fictional_followup",
+            "quote": "先确认页面只公开活动地点、不公开成员联系方式，然后马上发出只有地址和路线的版本。",
+            "relation": "supports"
+          }
+        ],
+        "related_claim_ids": [
+          "c0001_0000",
+          "c0001_0001"
+        ]
+      }
+    ],
+    "unknowns": [
+      "这些故事是否对应任何真实人物或现实经历；来源明确称其为虚构故事。",
+      "故事中呈现的做法是否会在其他项目、情境或时期持续出现。",
+      "除故事明确列出的功能观察、纸面试验、导出按钮调整及联系方式可见性验证外，叙述者是否还有其他偏好或判断程序。",
+      "2 possible evidence omissions remain unresolved; see private report."
+    ],
+    "prompt": "材料是供软件演示的虚构读书会故事，不代表真实经历或稳定特征；以下均为未经独立观察的自述。工具取舍中，叙述者观察三次活动后按实际困难把优先级从排行榜转为找回上次讨论段落；导出按钮曾为简洁而藏深，组织者每周询问后又放回首页，显示这两例愿修正设计，不足以推为通则。仅对一张纸可试的想法，称会带纸到现场测试；该例未说明涉及隐私，也未描述为需快速上线。涉及成员真实联系方式的改动，先核实谁能看见，愿放慢；反对被概括为任何情境都求快，也不支持总是快或总是慢上线。另在成员已在路上、场地临时变更的虚构情境，先确认页面只公开地点、不公开联系方式再发布；愿以暂不精致换取尽快提供地址路线，但不省权限检查。能否对应现实、推广到其他情境或时期，以及是否另有偏好或判断程序均未知；另有两项可能的证据遗漏尚未解决。",
+    "covered_claim_ids": [
+      "c0000_0000",
+      "c0000_0001",
+      "c0000_0002",
+      "c0000_0003",
+      "c0000_0004",
+      "c0000_0005",
+      "c0001_0000",
+      "c0001_0001",
+      "c0001_0002"
+    ]
+  }
+}

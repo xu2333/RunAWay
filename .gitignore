@@ -3,7 +3,7 @@ __pycache__/
 .venv/
 *.egg-info/
 build/
-dist/
+/dist/
 .runaway/
 my-run/
 *.private.*
