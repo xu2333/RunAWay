@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="700 个有点合理、又有点离谱的原创合成角色。搜一个自己会笑的梗，带走卡片与角色 prompt。">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RunAWay · 脑洞居民图鉴</title>
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./gallery.css">
+<script type="module" src="./gallery.mjs"></script>
+</head>
+<body>
+<header><a class="brand" href="./">RunAWay<span>your taste, to go.</span></a><nav><a href="./">做我的分身 ↗</a><a href="https://github.com/xu2333/RunAWay" target="_blank" rel="noopener noreferrer">开源 ↗</a></nav></header>
+<main>
+<section class="gallery-intro"><div><div class="eyebrow">脑洞居民图鉴 / VOL. 01</div><h1>总有一只，<br>替你离谱。</h1><p>有点合理，有点胡来。<br>700 个原创角色，看看哪句让你想起自己或朋友。</p><button id="random" class="primary" disabled>随便遇见一只 ↗</button><span class="random-note">随便逛逛，不给你测命。</span></div><div class="catalog-stamp" aria-hidden="true"><span>常住脑洞</span><strong>700</strong><span>居民 · 全员虚构</span><i>欢迎串门</i></div></section>
+<section aria-labelledby="browse-title">
+<div class="browse-heading"><h2 id="browse-title">今天想逛哪条街？</h2><p class="small">28 个街区，每区 25 位居民。</p></div>
+<div class="catalog-controls"><div><label for="search">找个熟悉的毛病，或搜名字 / 编号</label><input id="search" type="search" placeholder="试试：拖延、拒绝、社交、RW-0001" maxlength="100" disabled></div><div><label for="category">街区</label><select id="category" disabled><option value="">全部街区</option></select></div><button id="clear" disabled>重逛全部</button></div>
+<p id="catalog-status" class="small" role="status" aria-live="polite">居民们正在开门……</p>
+<div id="catalog-grid" class="catalog-grid"></div>
+<div class="pagination"><button id="prev" disabled>← 上一页</button><span id="page-status"></span><button id="next" disabled>下一页 →</button></div>
+</section>
+<section class="catalog-bridge"><div><h2>梗可以撞，经历只有你的。</h2><p>图鉴是 AI 创作的虚构角色，可以认领一句，也可以只笑一下。<br>想让 AI 理解你真实的选择？从自己的经历开始。</p></div><a class="download-button primary" href="./">做我的随身分身 →</a></section>
+<footer><span>RunAWay · 原创合成角色，不是人格测评。</span><span>浏览、导出都不需要模型调用。</span></footer>
+</main>
+<dialog id="resident" aria-labelledby="resident-title"><div class="dialog-top"><span id="resident-meta" class="small"></span><button id="close" aria-label="关闭角色详情">关闭 ×</button></div><div class="resident-layout"><div><h2 id="resident-title"></h2><p id="resident-tagline" class="resident-tagline"></p><p id="resident-tell"></p><details><summary>这位居民也有边界</summary><p id="resident-boundary" class="small"></p></details><div class="actions"><a id="save-image" role="button" class="primary download-button" download="runaway-resident.png">带走图片</a><button id="copy-text">复制这张嘴</button><button id="copy-link">复制角色链接</button></div><details><summary>把这位居民放进一个 AI 场景</summary><p class="small">复制设定到任意 LLM，再写一个场景。这是虚构角色扮演，不能当作从你的经历提炼出的偏好。</p><textarea id="role-prompt" rows="7" readonly aria-label="虚构角色 prompt"></textarea><button id="copy-role">复制角色 prompt</button></details><p id="action-status" class="small" role="status" aria-live="polite"></p><textarea id="copy-fallback" rows="5" readonly aria-label="请手动复制" hidden></textarea><button id="another" class="quiet">再串个门 ↗</button></div><canvas id="resident-canvas" width="960" height="1080" role="img" aria-label="角色分享卡预览"></canvas></div></dialog>
+</body></html>

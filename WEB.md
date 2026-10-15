@@ -17,7 +17,13 @@ Open http://127.0.0.1:8080. Use localhost or HTTPS; hashing and copying need a s
 
 The fictional frog example is ready immediately and makes no model call. It remains tagged as a demo in usage reports. Clear the page before starting a real submission.
 
-New model results include an editable share card: a short name, a joke, one concrete behavior and its boundary. Preview and download the exact PNG locally, or copy its text. Card changes never change the portable prompt. Optional card feedback separates recognition, humor and willingness to share. Download a card sample or inspect the full sample before explicitly opening a public Issue draft; a manual GitHub submission is still required. This card submission path intentionally includes approved card text, unlike the older usage-statistics draft. See [the 700-output target and audit](OUTPUTS.md).
+New model results include an editable share card: a short name, a joke, one concrete behavior and its boundary. Preview and download the exact PNG locally, or copy its text. Card changes never change the portable prompt. Optional card feedback separates recognition, humor and willingness to share. Download a card sample or inspect the full sample before explicitly opening a public Issue draft; a manual GitHub submission is still required. This card submission path intentionally includes approved card text, unlike the older usage-statistics draft. See [the synthetic catalogue and separate feedback audit](OUTPUTS.md).
+
+## 700 fictional residents
+
+Open `/gallery.html` from the browser entry. Search names, behaviors or stable IDs, filter 28 editorial categories, browse pages or meet a random character. Each detail view exports a local PNG, card text, deep link and a clearly fictional role-play prompt. No model call or source history is needed. This catalogue is AI-authored original fiction, not 700 real people or evidence of personal fidelity. It does not assign a type to the visitor or alter the evidence-based profile.
+
+The 700 entries are authored in `catalog/*.txt`, compiled by `python3 scripts/build_catalog.py` into committed static JSON. Run with `--check` to verify reproducibility. Category boundaries are shared editorial cautions. See [catalogue scope](OUTPUTS.md).
 
 ## Data and evidence
 
@@ -32,7 +38,7 @@ Local validation checks exact quotes, speaker attribution, schema, declared clai
 ## Development
 
 ```sh
-node --test tests/web.test.mjs
+node --test tests/*.test.mjs
 python3 -m unittest discover -s tests -p test_web.py -q
 ```
 

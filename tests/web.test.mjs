@@ -108,12 +108,12 @@ test('opted-in samples contain only card text, self-ratings and provenance ident
   await assert.rejects(()=>validateSample({...s,card:{...card,name:'tampered'}}),/被更改/);
   await assert.rejects(()=>validateSample({...s,source_text:'private'}));
 });
-test('700 target excludes demos, duplicate files, renames and unapproved outputs',async()=>{
+test('optional sample target excludes demos, duplicate files, renames and unapproved outputs',async()=>{
   const real=await makeOutputSample(card,ratings,'a'.repeat(64),'user_submitted');
   const renamed=await makeOutputSample({...card,name:'另一个梗'},ratings,'a'.repeat(64),'user_submitted');
   const demo=await makeOutputSample(card,ratings,'b'.repeat(64),'fictional_demo');
   const notFunny=await makeOutputSample({...card,tell:'先完整规划再开始。'},{...ratings,amusing:'no'},'c'.repeat(64),'user_submitted');
-  const report=await auditSamples([real,real,renamed,demo,notFunny]);
+  const report=await auditSamples([real,real,renamed,demo,notFunny],700);
   assert.equal(report.duplicate_files,1);assert.equal(report.fictional_samples_excluded,1);
   assert.equal(report.all_three_self_ratings_yes,2);assert.equal(report.unique_exact_behavior_texts,1);
   assert.equal(report.remaining_to_target,699);assert.equal(report.near_duplicate_pair_count,1);

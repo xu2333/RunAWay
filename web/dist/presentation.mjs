@@ -10,7 +10,7 @@ export function validateCard(card) {
 export const normalize = value => value.normalize('NFKC').toLowerCase().replace(/[\p{P}\p{Z}\p{S}\s]/gu,'');
 export function cardText(card,demo=false) {
   validateCard(card);
-  return `${card.name}\n${card.tagline}\n\n${card.tell}\n边界：${card.boundary}\n\nRunAWay · ${demo?'虚构故事示例':'个人表达，待验证'}\nhttps://github.com/xu2333/RunAWay`;
+  return `${card.name}\n${card.tagline}\n\n${card.tell}\n边界：${card.boundary}\n\nRunAWay · ${demo==='catalog'?'原创合成角色 · 娱乐创作':demo?'虚构故事示例':'个人表达，待验证'}\nhttps://github.com/xu2333/RunAWay`;
 }
 export async function makeOutputSample(card,ratings,profileId,origin) {
   validateCard(card);
@@ -31,8 +31,8 @@ export async function validateSample(sample) {
 const behavior = s=>normalize(s.card.tell)+'|'+normalize(s.card.boundary);
 function bigrams(text){const a=[...text],b=new Set();for(let i=0;i<a.length-1;i++)b.add(a[i]+a[i+1]);return b;}
 function similarity(a,b){const x=bigrams(a),y=bigrams(b);const common=[...x].filter(v=>y.has(v)).length;return x.size+y.size-common?common/(x.size+y.size-common):1;}
-export async function auditSamples(samples,target=700) {
-  if(!Number.isInteger(target)||target<1)throw Error('target must be a positive integer');
+export async function auditSamples(samples,target=null) {
+  if(target!==null&&(!Number.isInteger(target)||target<1))throw Error('target must be a positive integer');
   for(const s of samples)await validateSample(s);
   const unique=[...new Map(samples.map(s=>[s.id,s])).values()];
   const real=unique.filter(s=>s.origin==='user_submitted');
@@ -47,7 +47,7 @@ export async function auditSamples(samples,target=700) {
     fictional_samples_excluded:unique.length-real.length,user_declared_samples:real.length,
     distinct_profile_ids:new Set(real.map(s=>s.profile_id)).size,
     all_three_self_ratings_yes:approved.length,unique_normalized_names:new Set(approved.map(s=>normalize(s.card.name))).size,
-    unique_exact_behavior_texts:behaviorCount,remaining_to_target:Math.max(0,target-behaviorCount),
+    unique_exact_behavior_texts:behaviorCount,remaining_to_target:target===null?null:Math.max(0,target-behaviorCount),
     near_duplicate_pair_count:pairCount,near_duplicate_pairs:pairs,near_duplicate_pairs_truncated:pairCount>pairs.length,
     conclusion:'Counts describe volunteered text samples and self-ratings, not unique people, independent quality, semantic diversity, fidelity or viral reach. Similarity is a review cue, not a semantic verdict. No automatic interesting-output pass.'};
 }
@@ -58,12 +58,12 @@ export function renderCard(canvas,card,demo=false) {
   const ctx=canvas.getContext('2d');if(!ctx)throw Error('浏览器无法生成图片，请复制卡片文字。');
   const wrap=(text,size,width)=>{
     ctx.font=`${size}px "PingFang SC", "Microsoft YaHei", sans-serif`;
-    const lines=[];let line='';for(const char of text){if(line&&ctx.measureText(line+char).width>width){lines.push(line);line=char;}else line+=char;}if(line)lines.push(line);return lines;
+    const lines=[];let line='';for(const char of text){if(line&&ctx.measureText(line+char).width>width&&!/[，。！？；：、）】》」』]/u.test(char)){lines.push(line);line=char;}else line+=char;}if(line)lines.push(line);return lines;
   };
   const sections=[{lines:wrap(card.name,68,800),size:68,gap:86,color:'#254438'},
     {lines:wrap(card.tagline,34,800),size:34,gap:51,color:'#53684e'},
-    {label:'一眼认出我的做法',lines:wrap(card.tell,32,750),size:32,gap:49,color:'#254438'},
-    {label:'但也有我的边界',lines:wrap(card.boundary,30,750),size:30,gap:46,color:'#53684e'}];
+    {label:demo==='catalog'?'这位居民的做法':'一眼认出我的做法',lines:wrap(card.tell,32,750),size:32,gap:49,color:'#254438'},
+    ...(demo==='catalog'?[]:[{label:'但也有我的边界',lines:wrap(card.boundary,30,750),size:30,gap:46,color:'#53684e'}])];
   const contentHeight=sections.reduce((n,s)=>n+s.lines.length*s.gap+48+(s.label?52:0),0);
   canvas.width=960;canvas.height=Math.max(1080,contentHeight+350);
   ctx.fillStyle='#f8f7ef';ctx.fillRect(0,0,960,canvas.height);ctx.strokeStyle='#d8dfcc';ctx.lineWidth=2;ctx.strokeRect(36,36,888,canvas.height-72);
@@ -78,7 +78,7 @@ export function renderCard(canvas,card,demo=false) {
     ctx.fillStyle=s.color;ctx.font=`${s.size}px "PingFang SC", "Microsoft YaHei", sans-serif`;
     for(const line of s.lines){ctx.fillText(line,80,y);y+=s.gap;}y+=48;
   }
-  ctx.fillStyle='#697569';ctx.font='22px sans-serif';ctx.fillText(demo?'虚构故事示例 · 不是对你的判断':'个人表达 · 待验证，不是人格鉴定',80,canvas.height-125);
+  ctx.fillStyle='#697569';ctx.font='22px sans-serif';ctx.fillText(demo==='catalog'?'原创合成角色 · 娱乐创作':demo?'虚构故事示例 · 不是对你的判断':'个人表达 · 待验证，不是人格鉴定',80,canvas.height-125);
   ctx.font='20px sans-serif';ctx.fillText('github.com/xu2333/RunAWay',80,canvas.height-82);
   return canvas;
 }

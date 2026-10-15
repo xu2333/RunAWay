@@ -1,4 +1,4 @@
-export const VERSION = '0.8.0';
+export const VERSION = '0.9.0';
 export const HEADER = 'Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n';
 export const VALIDATION = 'Source attribution and exact quote existence checked; semantic support, completeness and fidelity not verified.';
 const fields = ['id','statement','basis','scope','conditions','exceptions','evidence','related_claim_ids'];

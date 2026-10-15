@@ -1,57 +1,48 @@
-# Toward 700 interesting outputs
+# 700 fictional residents
 
-The target is a body of distinctive, recognizable and shareable expressions grounded in people's experiences. There is no fixed 700-type personality taxonomy, no random assignment, and no claim that 700 good outputs already exist. Generated names remain open-ended.
+RunAWay ships **700 AI-authored original synthetic characters**, grouped into 28 everyday settings with 25 entries each. They are written ahead of user submissions. Familiar behaviors provide the anchor; absurd names and jokes provide the expression. The source is creative world knowledge, not private trajectories, psychological measurements or a celebrity imitation library.
 
-Keep two artifacts: the detailed evidence-linked profile and portable prompt for decisions, and a small presentation card for people. A joke can change the wording; it must not add a trait or erase the condition that made a choice reasonable. Editing a presentation card never rewrites the portable prompt or its profile identity.
+Open `gallery.html` in the [browser app](WEB.md). Search, filter, browse, meet a random resident, download a card or copy a fictional role-play prompt to any LLM. A stable link such as `gallery.html#RW-0101` opens one resident directly. Random browsing is entertainment, not a personality assignment. The browser needs no model service to use the catalogue.
 
-## What a result contains
-
-- A short, accessible original name, preferably 4–12 Chinese characters.
-- A one-line joke or contrast a friend can understand without a glossary.
-- One specific recognizable way of choosing or acting.
-- One boundary, exception or context that prevents overgeneralization.
-
-The optional `presentation` field in model answers contains `tell`, `boundary` and `claim_ids`. Local validation checks that these IDs exist, but cannot establish semantic support or that the joke is good. A result without evidence says what is still unknown. Old model answers continue working without a share card.
-
-No fixed animal suffix, celebrity label, hidden rarity, diagnosis, or random type code. Prefer familiar everyday language over obscure fandom references. The user can edit all four card fields, preview the exact PNG, then explicitly choose to copy or download it. Sharing uses no image-generation service.
-
-## Original tone examples — fictional, not a type library
-
-These editorial examples illustrate possible expressions. They are not real user outputs, are not counted toward 700, and are not embedded as names for the model to imitate. Their behavior and boundaries would require evidence in an actual person's history.
-
-| Expression | Recognizable behavior | Necessary boundary |
+| Resident | Line | Behavioral anchor |
 | --- | --- | --- |
-| 气氛组质检员 | 可以一起起哄，方案还得经得起追问。 | 支持气氛不等于为结论背书。 |
-| 纸上谈兵行动派 | 能在纸上先试的，绝不只在嘴上开会。 | 纸面可试才先试；涉及隐私仍检查权限。 |
-| 松弛感监工 | 过程可以松弛，交付不能随缘。 | 放松节奏，不降低已约定的验收要求。 |
-| 人间补丁包 | 不抢开场，擅长把最后一公里补上。 | 补缺口不等于无限替别人兜底。 |
-| 懂了但没全信 | 能复述你的道理，也会追问证据。 | 有新证据会改判断，不为反对而反对。 |
-| 主打一个可撤销 | 可以试，先给我一个撤回键。 | 不可逆的决定不会沿用相同速度。 |
-| 边界感糯米糍 | 靠近很软，越界不行。 | 亲近与同意是两件分别确认的事。 |
-| 快乐扫兴员 | 点子不错，我们顺便想想失败怎么办。 | 讨论风险之后仍能支持有边界的尝试。 |
-| 不鸽但会砍 | 约好的会交，没必要的会砍。 | 调整范围需沟通，不能偷偷减掉承诺。 |
-| 嘴替售后部 | 话可以直说，后续怎么做也得说清。 | 直接针对问题，不替别人揣测动机。 |
-| 省流但不省事 | 说明写短，关键步骤一个不少。 | 新手缺上下文时会补解释。 |
-| 反向画饼师 | 愿景先放一边，今天先做成一小块。 | 已确认方向的长期投入也有位置。 |
+| 未来的我外包公司 | 本公司的唯一员工暂时还没上班。 | 把麻烦留给之后的自己。 |
+| 后悔药分装师 | 人生没有撤销键？我先焊一个。 | 做决定前先设计退出方式。 |
+| 满减数学教授 | 为了省二十，我正在花两百。 | 为优惠门槛增加购买。 |
+| 临时气氛代理人 | 本来想安静，怎么又归我热场。 | 冷场时主动活跃气氛。 |
+| 规则内跑酷者 | 栏杆不翻，但这条路可以跳着走。 | 在允许范围内寻找更高效做法。 |
 
-## Count evidence, not just strings
+## What the 700 count means
 
-Card feedback separates **recognizable**, **amusing**, and **would share**; each starts as `unsure`. Editing card text clears its ratings and sharing confirmation. The exported sample contains only the approved card, self-ratings and provenance identifiers. It omits raw source, evidence and portable prompt fields. Users must still inspect card text for identifying details.
+Each source row explicitly supplies an original name, tagline and behavioral anchor. Names, taglines and anchors are unique after punctuation/spacing normalization. There is no prefix/suffix cross-product or fabricated user record. Categories are editorial shelves, not mutually exclusive personality types. Behaviors can overlap and the same person can recognize several, or none.
 
-The browser can download a sample, or show the full sample before opening a GitHub Issue draft. Posting requires a separate explicit checkbox and a manual submit on GitHub. The application does not automatically collect or publish anything, and opening a draft is not a submitted sample. Actual usage feedback remains separate from share-card feedback.
+Category-level boundaries are **shared editorial cautions**, not 700 separately inferred personal exceptions. Cards and role prompts retain their synthetic origin. Shared category cautions appear in details, copied text and role prompts; catalogue PNGs focus on the name, joke and behavioral anchor. Evidence-based personal cards retain their own boundary on the PNG. Being readable, funny, identifiable and worth sharing are separate judgments; a count and a duplicate scan do not prove those qualities, virality, behavioral diversity or fidelity.
 
-Run the local audit on explicitly collected exports:
+## Keep expression separate from personal memory
+
+The detailed evidence-linked profile and compressed prompt remain RunAWay's core. The catalogue does not automatically classify users, inject fictional traits into a profile or provide evidence for a claim. A fictional role prompt is explicitly marked as fiction and is not a harness-installable personal profile.
+
+The real-experience path still creates an open-ended, editable expression from the user's sources. Editing that card never rewrites the portable prompt or profile identity. Its optional `presentation.claim_ids` are checked for existing IDs; this is a structural check, not proof that the joke faithfully summarizes the evidence. Future matching should retrieve a few relevant expressions only after grounded extraction, retaining conditions and uncertainty. Never send the whole catalogue as someone's memory.
+
+## Edit and verify
+
+Source: seven explicit UTF-8 files under `catalog/`. Headers use `@category_id|label|shared_boundary`; entries use `name|tagline|tell`. IDs are assigned in fixed source order (`RW-0001`–`RW-0700`). Preserve row order when editing published entries; additions or taxonomy changes require an explicit version/migration plan so shared links keep their meaning.
+
+```sh
+python3 scripts/build_catalog.py
+python3 scripts/build_catalog.py --check
+node --test tests/*.test.mjs
+python3 -m unittest discover -s tests -p test_catalog.py -q
+```
+
+The compiler checks 28 × 25, field limits, exact normalized duplicates and source reproducibility. It prints character-bigram similarity candidates for editorial review (name ≥ 0.55; tagline/anchor ≥ 0.65). These heuristics can miss semantic overlap and weak jokes. They are review aids, not a humor score. The build uses only the seven named creative source files and has no network calls.
+
+## Real usage is a separate evaluation
+
+Voluntary share-card feedback still separates **recognizable**, **amusing** and **would share**, all initially `unsure`. The app does not collect automatically. Exporting is not uploading; opening a GitHub Issue draft still requires manual submission. Original histories and portable prompts are excluded from card samples, though users should inspect card wording before sharing.
 
 ```sh
 node scripts/audit-output-samples.mjs sample1.json sample2.json
 ```
 
-The report excludes fictional demos, deduplicates identical files, separates the three positive self-ratings, and counts distinct normalized behavior + boundary text. Renaming the same behavior does not add another behavior. Near-duplicate pairs are flagged for editorial review with character-bigram Jaccard similarity (0.65 threshold); this is a heuristic, not a semantic equivalence test. Only the first 50 pairs are displayed, with a truncation indicator and full pair count.
-
-`remaining_to_target` is a **text-count planning aid**, not a quality pass. Self-report is not independent evidence. A profile ID is not a unique person. Multiple revisions, punctuation changes, near duplicates, exaggerated jokes and subtly unsupported claims still require review. We must evaluate actual decision fidelity separately using held-out real choices; entertaining wording cannot substitute for that.
-
-First pilot: review the earliest 20–30 voluntary real outputs for missing evidence, generic praise and naming collisions before expanding toward 700. Track completed generation, exported prompt, actual use, card self-ratings and voluntary submission as distinct events. There is no automatic funnel telemetry in this prototype; data is biased toward users who choose to share.
-
-## Reference
-
-[SBTI's open-source secondary implementation](https://github.com/pingfanfan/SBTI) explicitly describes itself as a derivative entertainment test with 27 predefined outcomes. Its [type presentation on another SBTI site](https://www.sbti.ai/types) illustrates short names paired with recognizable lines. Neither is asserted here to be the original creator's authoritative site, nor evidence of what caused the original to spread. RunAWay borrows the general presentation idea and uses original wording; its core representation remains grounded in selected experiences.
+This audit excludes demos and deduplicates files/behavior text. It no longer defaults to a 700-user target. Synthetic catalogue entries cannot enter the real-sample schema. Self-reports, profile IDs and exports are not unique people or controlled fidelity evidence. Evaluate compression against held-out real choices separately; grow the fictional library through editorial revision rather than waiting for real submissions.

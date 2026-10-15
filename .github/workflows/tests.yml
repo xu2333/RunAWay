@@ -28,7 +28,9 @@ jobs:
       - name: Unit and CLI checks (no model service)
         run: python -m unittest discover -s tests -q
       - name: Browser logic and Python artifact interoperability
-        run: node --test tests/web.test.mjs
+        run: node --test tests/*.test.mjs
+      - name: Verify synthetic catalogue source
+        run: python scripts/build_catalog.py --check
       - name: Build and install wheel
         run: |
           python -m pip wheel . --no-deps --wheel-dir dist

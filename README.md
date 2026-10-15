@@ -16,7 +16,7 @@ cd RunAWay
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open **http://127.0.0.1:8080**. The fictional frog example works immediately, with no model call. [Browser guide & data handling](WEB.md) · [700-output target](OUTPUTS.md).
+Open **http://127.0.0.1:8080**. Or visit **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts—no model call. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
 
 ## Make it yours
 
