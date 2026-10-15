@@ -1,0 +1,13 @@
+include QUICKSTART.md
+include pyproject.toml
+include LICENSE
+recursive-include runaway *.py
+include runaway/assets/demo.json
+exclude README.md
+prune data
+prune runs
+prune docs
+prune tests
+prune .venv-rig
+global-exclude *.pyc
+global-exclude __pycache__

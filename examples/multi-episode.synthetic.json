@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "fictional_user",
+      "episode_id": "fictional_book_club",
+      "role": "user",
+      "text": "This is a fictional product-builder story for a software demonstration, not a real person's profile.\n\n我做过一个给小型读书会用的工具。有人提议加排行榜，我先坐在旁边看了三次活动，发现大家真正卡在找不到上次讨论的段落。我把那一步缩短了，排行榜先放下。\n\n另一次我为了追求简洁，把导出功能藏得很深，结果组织者每周都要问。我把导出按钮放回首页。少一个按钮不值得多一次求助。\n\n如果一个想法只需要一张纸就能试，我会先拿纸去现场。但涉及成员真实联系方式的改动，我会先验证谁能看见，宁可慢一点。\n\n朋友说我像个随身带橡皮的修路工：愿意修路，也愿意承认路修错了。这个比喻可以用，不能把我写成什么都敢快速上线的人。\n"
+    },
+    {
+      "id": "fictional_assistant",
+      "episode_id": "fictional_book_club",
+      "role": "assistant",
+      "text": "Fictional assistant overgeneralization, not endorsed by the user: You always prioritize shipping quickly, even when sharing private contacts."
+    },
+    {
+      "id": "fictional_followup",
+      "episode_id": "fictional_event_day",
+      "role": "user",
+      "text": "以下仍然是虚构故事，用于软件演示。另一次读书会临时改场地，成员已经在路上。我没有等所有页面都打磨完：先确认页面只公开活动地点、不公开成员联系方式，然后马上发出只有地址和路线的版本。这种情况下，我接受暂时不够精致，但不会跳过权限检查。"
+    }
+  ]
+}

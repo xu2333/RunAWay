@@ -1,0 +1,37 @@
+name: Offline checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.9'
+          - os: ubuntu-latest
+            python: '3.13'
+          - os: macos-latest
+            python: '3.13'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Unit and CLI checks (no model service)
+        run: python -m unittest discover -s tests -q
+      - name: Build and install wheel
+        run: |
+          python -m pip wheel . --no-deps --wheel-dir dist
+          python -m pip install --no-deps dist/*.whl
+      - name: Installed demo outside the source checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          runaway --version
+          runaway demo --out demo
+          runaway profile checkout demo/profile.private.json --out editable
+          runaway profile export demo/profile.private.json --out exported
