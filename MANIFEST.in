@@ -3,6 +3,7 @@ include COMPRESSION.md
 include EVALUATION.md
 include DECISION-MEMORY.md
 include BOUND-MEMORY.md
+include SYNTHETIC-METRIC.md
 include USAGE-ACCOUNTING.md
 include pyproject.toml
 include LICENSE
