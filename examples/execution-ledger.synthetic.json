@@ -1,0 +1,1620 @@
+{
+  "schema_version": 1,
+  "origin": "fully_synthetic",
+  "identity_interpretation": "Retrospective IDs identify distinct full persisted response records including usage and elapsed, not upstream service responses. Identical legacy records are conservatively deduplicated. Future local attempt IDs persist before invocation, survive copying and caching, and block silent retry after ambiguous interruption.",
+  "original_model_records_unchanged": true,
+  "model_calls_added": 0,
+  "summary": {
+    "execution_records": 38,
+    "unique_request_fingerprints": 36,
+    "copied_artifacts_excluded": 0,
+    "executions_with_usage": 38,
+    "executions_missing_usage": 0,
+    "outcomes": {
+      "completed": 38
+    },
+    "known_usage": {
+      "input_tokens": 348867,
+      "cached_input_tokens": 20352,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 47006,
+      "reasoning_output_tokens": 3805,
+      "total_tokens": 395873
+    },
+    "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+  },
+  "duplicate_request_audit": {
+    "6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860": [
+      {
+        "execution_id": "legacy-response-sha256:0b1e69fc0071e1be559794134a112b4d5d13525c8ab4b066905f352158bc2947",
+        "result_checkpoint_sha256": "0b1e69fc0071e1be559794134a112b4d5d13525c8ab4b066905f352158bc2947",
+        "provenance": {
+          "backend": "codex",
+          "model_requested": "gpt-6-luna",
+          "resolved_model": null,
+          "usage": [
+            {
+              "input_tokens": 9072,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 450,
+              "reasoning_output_tokens": 0
+            }
+          ],
+          "elapsed_seconds": 5.17,
+          "cli_version": "codex-cli 0.162.0-alpha.17.2"
+        },
+        "artifacts": [
+          {
+            "path": "development-audited/calls/6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860.response.json",
+            "bytes_sha256": "559694a7cb6a68ad3233a4df5bc197fadd8e3492ac69dd8678b8e1a8a14d73a4"
+          }
+        ]
+      },
+      {
+        "execution_id": "legacy-response-sha256:8cf4f37c5c4b5296367787f5d94d098b029a3ffb53cff8b511f1207a5570bbd7",
+        "result_checkpoint_sha256": "8cf4f37c5c4b5296367787f5d94d098b029a3ffb53cff8b511f1207a5570bbd7",
+        "provenance": {
+          "backend": "codex",
+          "model_requested": "gpt-6-luna",
+          "resolved_model": null,
+          "usage": [
+            {
+              "input_tokens": 9074,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 450,
+              "reasoning_output_tokens": 0
+            }
+          ],
+          "elapsed_seconds": 5.519,
+          "cli_version": "codex-cli 0.162.0-alpha.17.2"
+        },
+        "artifacts": [
+          {
+            "path": "development/calls/6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860.response.json",
+            "bytes_sha256": "4a257e03870ed972f91b49fb7b3fe24fa723e0d267bc23999226d8c33b01d548"
+          }
+        ]
+      }
+    ],
+    "bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa": [
+      {
+        "execution_id": "legacy-response-sha256:107d2fef85c051cde6bf2ee07c802ef5e463081221ecdbc21ae87d76c9546880",
+        "result_checkpoint_sha256": "107d2fef85c051cde6bf2ee07c802ef5e463081221ecdbc21ae87d76c9546880",
+        "provenance": {
+          "backend": "codex",
+          "model_requested": "gpt-6-luna",
+          "resolved_model": null,
+          "usage": [
+            {
+              "input_tokens": 9066,
+              "cached_input_tokens": 4224,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 450,
+              "reasoning_output_tokens": 0
+            }
+          ],
+          "elapsed_seconds": 7.44,
+          "cli_version": "codex-cli 0.162.0-alpha.17.2"
+        },
+        "artifacts": [
+          {
+            "path": "development-audited/calls/bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa.response.json",
+            "bytes_sha256": "8183cdff4d2ad0f3f44a2dd0c19a13e9d62990b8d12c5ae0da86f3ea393e06a7"
+          }
+        ]
+      },
+      {
+        "execution_id": "legacy-response-sha256:20aa3a3542d081b659acf1bacbfaef52625de7fd1b88f4ec046fd335f46c5e34",
+        "result_checkpoint_sha256": "20aa3a3542d081b659acf1bacbfaef52625de7fd1b88f4ec046fd335f46c5e34",
+        "provenance": {
+          "backend": "codex",
+          "model_requested": "gpt-6-luna",
+          "resolved_model": null,
+          "usage": [
+            {
+              "input_tokens": 9062,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 450,
+              "reasoning_output_tokens": 0
+            }
+          ],
+          "elapsed_seconds": 6.568,
+          "cli_version": "codex-cli 0.162.0-alpha.17.2"
+        },
+        "artifacts": [
+          {
+            "path": "development/calls/bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa.response.json",
+            "bytes_sha256": "b346d36037a0404da92e37e1f9cb35b1704bbc540185f19f1e08a646a1773569"
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:036fd0050e9b8a7d6f2649a50c742566fbdf012e34d4f3e05f51802f545b86f1",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "bc3ab49facf070967811bd66d7c76bd3ba6d26a0935a7382ba8807a32bc51f1d",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "036fd0050e9b8a7d6f2649a50c742566fbdf012e34d4f3e05f51802f545b86f1",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 8588,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2485,
+            "reasoning_output_tokens": 140
+          }
+        ],
+        "elapsed_seconds": 21.893,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 8588,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2485,
+        "reasoning_output_tokens": 140,
+        "total_tokens": 11073
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/bc3ab49facf070967811bd66d7c76bd3ba6d26a0935a7382ba8807a32bc51f1d.response.json",
+          "bytes_sha256": "702aee36a88a86fec65e4144bf41912aad65a0f81de67b4e45bff294bcfb6130"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:0755ca8c426a5fdf8a64e733cdd41b4e4be9ed52edb74893e39ccf5cedcc03f0",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "524e32f4b875623cdd9393970103a92fb46789010708ef55dca9a01220e0821e",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "0755ca8c426a5fdf8a64e733cdd41b4e4be9ed52edb74893e39ccf5cedcc03f0",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9358,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 883,
+            "reasoning_output_tokens": 333
+          }
+        ],
+        "elapsed_seconds": 9.356,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9358,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 883,
+        "reasoning_output_tokens": 333,
+        "total_tokens": 10241
+      },
+      "artifacts": [
+        {
+          "path": "validation/calls/524e32f4b875623cdd9393970103a92fb46789010708ef55dca9a01220e0821e.response.json",
+          "bytes_sha256": "42f4e988b27fc936ae7ce63d9253ba0e37424a3fdd6137a7de48754e681b0325"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:0b1e69fc0071e1be559794134a112b4d5d13525c8ab4b066905f352158bc2947",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "0b1e69fc0071e1be559794134a112b4d5d13525c8ab4b066905f352158bc2947",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9072,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 5.17,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9072,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9522
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860.response.json",
+          "bytes_sha256": "559694a7cb6a68ad3233a4df5bc197fadd8e3492ac69dd8678b8e1a8a14d73a4"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:107d2fef85c051cde6bf2ee07c802ef5e463081221ecdbc21ae87d76c9546880",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "107d2fef85c051cde6bf2ee07c802ef5e463081221ecdbc21ae87d76c9546880",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9066,
+            "cached_input_tokens": 4224,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 7.44,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9066,
+        "cached_input_tokens": 4224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9516
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa.response.json",
+          "bytes_sha256": "8183cdff4d2ad0f3f44a2dd0c19a13e9d62990b8d12c5ae0da86f3ea393e06a7"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:10b24d9cbc1389559ea1140796f8ded5f6ed9c7a5ec57c048ccf7faa396701de",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "d69beeb641c81a5b7e14a7aea6c72fcaaefffe952715032fbdba11362d4ffe66",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "10b24d9cbc1389559ea1140796f8ded5f6ed9c7a5ec57c048ccf7faa396701de",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9350,
+            "cached_input_tokens": 3840,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 960,
+            "reasoning_output_tokens": 410
+          }
+        ],
+        "elapsed_seconds": 12.055,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9350,
+        "cached_input_tokens": 3840,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 960,
+        "reasoning_output_tokens": 410,
+        "total_tokens": 10310
+      },
+      "artifacts": [
+        {
+          "path": "validation/calls/d69beeb641c81a5b7e14a7aea6c72fcaaefffe952715032fbdba11362d4ffe66.response.json",
+          "bytes_sha256": "621120d23c162096817f46f54837e7cd19a6ad6ae6d4086cb2bffd201d37f2ad"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:13028028ceb652cc819b7ff400012cfa1fb8c07626da71f4872f816c90dbed41",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "1171e7e2b394bd69feba29fcca3a0e2da8cd87c14e5a8ac734ee24d4d657f04e",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "13028028ceb652cc819b7ff400012cfa1fb8c07626da71f4872f816c90dbed41",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7681,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 355,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 4.78,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7681,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 355,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 8036
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/1171e7e2b394bd69feba29fcca3a0e2da8cd87c14e5a8ac734ee24d4d657f04e.response.json",
+          "bytes_sha256": "65eddfe49e7c5cf8b8898b4621c295540a594a717a030e2fe2e283b82241c9d4"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:1baa70f73783a2c2ea6cbf05ac3542af7c2213d9657fe2973f423e107fbed15b",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "2fc1aa543fbb3b2c61899ce2ed16fd7c4be46b102d43d1848974237ec4fc359c",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "1baa70f73783a2c2ea6cbf05ac3542af7c2213d9657fe2973f423e107fbed15b",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7397,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 969,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 10.305,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7397,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 969,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 8366
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/2fc1aa543fbb3b2c61899ce2ed16fd7c4be46b102d43d1848974237ec4fc359c.response.json",
+          "bytes_sha256": "1d5244910bd945f747c866d177c251347e137b6195b5053babacbcba3a519081"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:20aa3a3542d081b659acf1bacbfaef52625de7fd1b88f4ec046fd335f46c5e34",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "20aa3a3542d081b659acf1bacbfaef52625de7fd1b88f4ec046fd335f46c5e34",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9062,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 6.568,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9062,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9512
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/bc0f10c7b09a79f225c75e76166c50d1cb5899d9e0ddf2238017ed0ec88bf6aa.response.json",
+          "bytes_sha256": "b346d36037a0404da92e37e1f9cb35b1704bbc540185f19f1e08a646a1773569"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:20b07748707131f3a866731a95bf9a0d78b135fc69aa2007b87f5cdfc6706a2a",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "84ef485011334de715b2b02ebebf4430e9dfefaad6477fb88217ad93bed6c3b3",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "20b07748707131f3a866731a95bf9a0d78b135fc69aa2007b87f5cdfc6706a2a",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9391,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1577,
+            "reasoning_output_tokens": 153
+          }
+        ],
+        "elapsed_seconds": 12.325,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9391,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1577,
+        "reasoning_output_tokens": 153,
+        "total_tokens": 10968
+      },
+      "artifacts": [
+        {
+          "path": "action-control-development/calls/84ef485011334de715b2b02ebebf4430e9dfefaad6477fb88217ad93bed6c3b3.response.json",
+          "bytes_sha256": "59c4a53510fa8d787616b78db6a1b318ba31aa82a2ab97c797298614735bedbb"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:25e6170937dbe4021edf29823115a921cd2bb9b37fa825065905117f69b60515",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "68e83901d777383347c442996fdb3de97bb63481a7ff4cf4660862b6575c465f",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "25e6170937dbe4021edf29823115a921cd2bb9b37fa825065905117f69b60515",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7220,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 612,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 8.92,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7220,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 612,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 7832
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/68e83901d777383347c442996fdb3de97bb63481a7ff4cf4660862b6575c465f.response.json",
+          "bytes_sha256": "a0a97d4324a5a5f9b9d3914f5c1924aa536e4fdfdf1d585af7d47ff3c770153d"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:2fada57be21e7a9b5665c63ee57a638919200181555c3bde7f0077b594c50c6c",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "3bd3e60f973705cf85bd3bfdfd1e0baf07da00612a1bdf1d4b8fcedd42558560",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "2fada57be21e7a9b5665c63ee57a638919200181555c3bde7f0077b594c50c6c",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9454,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1537,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 27.053,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9454,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1537,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 10991
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/3bd3e60f973705cf85bd3bfdfd1e0baf07da00612a1bdf1d4b8fcedd42558560.response.json",
+          "bytes_sha256": "e293563f049d490e322fba9cdb79e43a378acfd1a724b946bc918242abdc3cce"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:332c18c97c41c1ba6a9e5ad788f7134cddbfb9efec3e131dd6c1d9ef940d76fd",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "6a95eaa65d7ee365a27ca65b66bfc17753642929d9f8253322117b98bb9cd507",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "332c18c97c41c1ba6a9e5ad788f7134cddbfb9efec3e131dd6c1d9ef940d76fd",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9351,
+            "cached_input_tokens": 3840,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 820,
+            "reasoning_output_tokens": 270
+          }
+        ],
+        "elapsed_seconds": 9.289,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9351,
+        "cached_input_tokens": 3840,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 820,
+        "reasoning_output_tokens": 270,
+        "total_tokens": 10171
+      },
+      "artifacts": [
+        {
+          "path": "validation/calls/6a95eaa65d7ee365a27ca65b66bfc17753642929d9f8253322117b98bb9cd507.response.json",
+          "bytes_sha256": "25b352e8c88202c8e5aab9d954abffaf99c7f7d70d113435560754f419e4adb5"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:3571a712fd36708cb7cf5c6dfe183e2a9cc1d3add1a3564a290e8ea82beb4303",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "eee7f7a5409c5cfc51d468fe93f8087ecfa4e22e09bd546a00f8a2204fb60816",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "3571a712fd36708cb7cf5c6dfe183e2a9cc1d3add1a3564a290e8ea82beb4303",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 10162,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2060,
+            "reasoning_output_tokens": 132
+          }
+        ],
+        "elapsed_seconds": 37.202,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 10162,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2060,
+        "reasoning_output_tokens": 132,
+        "total_tokens": 12222
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/eee7f7a5409c5cfc51d468fe93f8087ecfa4e22e09bd546a00f8a2204fb60816.response.json",
+          "bytes_sha256": "718ae9b5615b45b83d2dc6e94edb90d2bf1e63a3696ab673548dc632114895c8"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:38b1398db303b636e26e80f148bb5c7a9d0fa33161645d519313839512b40790",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "383f36679625047b48180c338ae5a0689c86005ba393afdf8d52a3dc585bdc1b",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "38b1398db303b636e26e80f148bb5c7a9d0fa33161645d519313839512b40790",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 926,
+            "reasoning_output_tokens": 147
+          }
+        ],
+        "elapsed_seconds": 11.114,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7371,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 926,
+        "reasoning_output_tokens": 147,
+        "total_tokens": 8297
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/383f36679625047b48180c338ae5a0689c86005ba393afdf8d52a3dc585bdc1b.response.json",
+          "bytes_sha256": "7832d8c10a7e243dc9bc0ac1172b61e533e80f225b027e47eb9f563c21a0cf26"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:45d778c398ca6895683985349dde37a0e7b7f422eca41cde2deddfcd7480af5a",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "c5da28bde265f44d4f2d13751f68c39814ecd90830174d5ca48790e3c61be94a",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "45d778c398ca6895683985349dde37a0e7b7f422eca41cde2deddfcd7480af5a",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 8514,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2306,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 17.778,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 8514,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2306,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 10820
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/c5da28bde265f44d4f2d13751f68c39814ecd90830174d5ca48790e3c61be94a.response.json",
+          "bytes_sha256": "7f4063ee84f90c0ec7b416ca5585923c01bc8b7f4068dd2213747a1322e4744b"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:47c51315084e98a5a46db22065912ccb2ef796499185fc47e5c5191ceaa164b6",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "83563bc81de29affee2afc200c7e624a8e4af32c64769e6e99eecd2ba3b9d501",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "47c51315084e98a5a46db22065912ccb2ef796499185fc47e5c5191ceaa164b6",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9280,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 10.103,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9280,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9730
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/83563bc81de29affee2afc200c7e624a8e4af32c64769e6e99eecd2ba3b9d501.response.json",
+          "bytes_sha256": "f5f39d61c265514f5b1c12cf3843031a76017797d02f230b99947c73dd9fd9e8"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:48391d64e576dc67a1b3f0fd57866bb36db44a553d6875c1ab77dc9965a69098",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "4f279ca35f17641acc5de616558afae93007eaf1ff76e07069d20ebc32027d8e",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "48391d64e576dc67a1b3f0fd57866bb36db44a553d6875c1ab77dc9965a69098",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7202,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 813,
+            "reasoning_output_tokens": 205
+          }
+        ],
+        "elapsed_seconds": 9.06,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7202,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 813,
+        "reasoning_output_tokens": 205,
+        "total_tokens": 8015
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/4f279ca35f17641acc5de616558afae93007eaf1ff76e07069d20ebc32027d8e.response.json",
+          "bytes_sha256": "840993714d8344162b7698ef22a39ea5b39bf69acf2a434d73a4d35ba1c69be0"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:4f79212383548da8b6287f019fae761a84df9416268d7e6f366031713a3d9a0e",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "434a7cdec599aafc33fb8531f831095d3fb18f46bb1f676f1b17d75c3a4703c6",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "4f79212383548da8b6287f019fae761a84df9416268d7e6f366031713a3d9a0e",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9348,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 846,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 16.529,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9348,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 846,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 10194
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/434a7cdec599aafc33fb8531f831095d3fb18f46bb1f676f1b17d75c3a4703c6.response.json",
+          "bytes_sha256": "70f193eedb5ec966c418c18dd7a0a4427a1e6f65e53aae7e207cad378e358868"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:58f9a14e085f75a9ccc565fc60a319b88b0ebcf548a9fd298f20eb1b7359a50b",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "b07b129d62238eed2f1b5d50265a832427adc6019208536570b210ec4fccb208",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "58f9a14e085f75a9ccc565fc60a319b88b0ebcf548a9fd298f20eb1b7359a50b",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 13212,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1607,
+            "reasoning_output_tokens": 52
+          }
+        ],
+        "elapsed_seconds": 29.669,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 13212,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1607,
+        "reasoning_output_tokens": 52,
+        "total_tokens": 14819
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/b07b129d62238eed2f1b5d50265a832427adc6019208536570b210ec4fccb208.response.json",
+          "bytes_sha256": "0fa3994e7796f69c8ecf0b7ff428d63d2710112b0dc173d7ee9d838b7c7dd2ba"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:5d0573d9f326a17e9c7e2a24bef68017a07f2693c7432791dbea47f068d47eff",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "65f46aa72bc2168df4acd1395587bb1dd1af54b664848bc41ec739332c6fa9f8",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "5d0573d9f326a17e9c7e2a24bef68017a07f2693c7432791dbea47f068d47eff",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9998,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1966,
+            "reasoning_output_tokens": 86
+          }
+        ],
+        "elapsed_seconds": 35.664,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9998,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1966,
+        "reasoning_output_tokens": 86,
+        "total_tokens": 11964
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/65f46aa72bc2168df4acd1395587bb1dd1af54b664848bc41ec739332c6fa9f8.response.json",
+          "bytes_sha256": "d6c847050ef85df500f5bf78be3386f5d9d83d9dcb33c7f85f5ab0bbe2664052"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:6059f3f6d30b3520501b03ea87051ed6412da9482fe6bd3fb981304be8c73b40",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "d98742494cea787186695927b8265980e6b41aa88d152de8aa7417e13c302af4",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "6059f3f6d30b3520501b03ea87051ed6412da9482fe6bd3fb981304be8c73b40",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7561,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1856,
+            "reasoning_output_tokens": 450
+          }
+        ],
+        "elapsed_seconds": 14.999,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7561,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1856,
+        "reasoning_output_tokens": 450,
+        "total_tokens": 9417
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/d98742494cea787186695927b8265980e6b41aa88d152de8aa7417e13c302af4.response.json",
+          "bytes_sha256": "47db263d438c3a0466958d1a867c170178286b0b8da81b55032607a632de8e74"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:7d66f0b51bcdc058ffccd49fa57deba7424f5870dcf81c5e485650238e2949a5",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "9c3b97ac6da799fa7e906dfe23ccf00d441c9aa7f8235c501e6a3e8f1e2bc21f",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "7d66f0b51bcdc058ffccd49fa57deba7424f5870dcf81c5e485650238e2949a5",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9447,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1542,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 27.066,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9447,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1542,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 10989
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/9c3b97ac6da799fa7e906dfe23ccf00d441c9aa7f8235c501e6a3e8f1e2bc21f.response.json",
+          "bytes_sha256": "0aff6127d4d7c65a647fd46da72fa1d429018f1437ad6569c2f92824fe3f15f5"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:8a3b24b0d405a6c0bbceda53a4b80306ff4d2a1c62efb3e55c9f51656cfb83ab",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "b495b2e0927c8e155b2e275673537a0ab0f274f926abac7585d1509858b0c800",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "8a3b24b0d405a6c0bbceda53a4b80306ff4d2a1c62efb3e55c9f51656cfb83ab",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9564,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1997,
+            "reasoning_output_tokens": 25
+          }
+        ],
+        "elapsed_seconds": 34.293,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9564,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1997,
+        "reasoning_output_tokens": 25,
+        "total_tokens": 11561
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/b495b2e0927c8e155b2e275673537a0ab0f274f926abac7585d1509858b0c800.response.json",
+          "bytes_sha256": "700d32597756f4921ff4424ec891cbf383c09043da2f4fb54f8471b7bd3a8a30"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:8cf4f37c5c4b5296367787f5d94d098b029a3ffb53cff8b511f1207a5570bbd7",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "8cf4f37c5c4b5296367787f5d94d098b029a3ffb53cff8b511f1207a5570bbd7",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9074,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 5.519,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9074,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9524
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/6b7dfe568a4b6fe47309f3578aeef74bf168f159e41174522808c70bdf197860.response.json",
+          "bytes_sha256": "4a257e03870ed972f91b49fb7b3fe24fa723e0d267bc23999226d8c33b01d548"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:917dc90a8b1a21ba9f36de60b552bc3143fd7915ffbf65d839ee2f0779b5cc93",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "3e588aa3726f90cb0f21f7b83ca45c50da10c1983ad318924846729a55f35158",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "917dc90a8b1a21ba9f36de60b552bc3143fd7915ffbf65d839ee2f0779b5cc93",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9351,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 879,
+            "reasoning_output_tokens": 329
+          }
+        ],
+        "elapsed_seconds": 10.44,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9351,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 879,
+        "reasoning_output_tokens": 329,
+        "total_tokens": 10230
+      },
+      "artifacts": [
+        {
+          "path": "validation/calls/3e588aa3726f90cb0f21f7b83ca45c50da10c1983ad318924846729a55f35158.response.json",
+          "bytes_sha256": "40342bbc8ba574391ac8bc663b58c4e9594e4f6d9ffbf1057d361f05b06113b1"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:93291f35fcf5c028c870fab601213bfad3e2a11b89bfedc866ff3fcb3c4a76c4",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "0064c98914328094b25f1feed0a50e2086f44e6a1f5dfbf3b4f65911e9ed17ed",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "93291f35fcf5c028c870fab601213bfad3e2a11b89bfedc866ff3fcb3c4a76c4",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9115,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 7.41,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9115,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9565
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/0064c98914328094b25f1feed0a50e2086f44e6a1f5dfbf3b4f65911e9ed17ed.response.json",
+          "bytes_sha256": "b1e0b02ff4be26a2caad480ce541c6303a013cfacd081413a7247c239fabb5a4"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:aa4ff93ec1153cf4646d155295a2112293b2d0be797ca399b143c6c11dd349f1",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "a4fa546703e3ff430a9d214ec69f38544d869b97a41223ddc61cc7301f7bf539",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "aa4ff93ec1153cf4646d155295a2112293b2d0be797ca399b143c6c11dd349f1",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9449,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1805,
+            "reasoning_output_tokens": 241
+          }
+        ],
+        "elapsed_seconds": 14.923,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9449,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1805,
+        "reasoning_output_tokens": 241,
+        "total_tokens": 11254
+      },
+      "artifacts": [
+        {
+          "path": "action-control-development/calls/a4fa546703e3ff430a9d214ec69f38544d869b97a41223ddc61cc7301f7bf539.response.json",
+          "bytes_sha256": "9b64f4d052d847503f47326118a7b843540825770a6117336d813d2dfc24f3c5"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:abc2c79fa0ad6597f1b7a2aa81b3c64f083334509aadc2c10fc9743ddf49cb59",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "3d64a71eecb008d938eac914735655bb5699faf3b7d935f85ebd69868c91c013",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "abc2c79fa0ad6597f1b7a2aa81b3c64f083334509aadc2c10fc9743ddf49cb59",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 10725,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2691,
+            "reasoning_output_tokens": 375
+          }
+        ],
+        "elapsed_seconds": 25.683,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 10725,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2691,
+        "reasoning_output_tokens": 375,
+        "total_tokens": 13416
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/3d64a71eecb008d938eac914735655bb5699faf3b7d935f85ebd69868c91c013.response.json",
+          "bytes_sha256": "f878a392f27599ece4f4e5bc4b80f7cb4e408976d763264f7f8d1e50ef3bc5dd"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:aec45de0adbb9a1af3e6e54d338d38630023d47cbd726aa0dc1eec950066d84e",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "73fe2c13f7dc28e6ed5c90d721931d1c52d01dd2431f53f45568295adc8fcf4a",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "aec45de0adbb9a1af3e6e54d338d38630023d47cbd726aa0dc1eec950066d84e",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 7242,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 956,
+            "reasoning_output_tokens": 245
+          }
+        ],
+        "elapsed_seconds": 11.811,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 7242,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 956,
+        "reasoning_output_tokens": 245,
+        "total_tokens": 8198
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/73fe2c13f7dc28e6ed5c90d721931d1c52d01dd2431f53f45568295adc8fcf4a.response.json",
+          "bytes_sha256": "349f2cac281569c11dc67419b02b18db8b8e27a5044d9998ab719d476c8a180f"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:c3276e4f4f51d9841bca22e9becdeec52dabdec64fb662cb36e0782dfd21f8ca",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "36434b518c3e3de500adbb3ff6c35f36b24767b5f32c788f7a5767876187baca",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "c3276e4f4f51d9841bca22e9becdeec52dabdec64fb662cb36e0782dfd21f8ca",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9390,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1671,
+            "reasoning_output_tokens": 107
+          }
+        ],
+        "elapsed_seconds": 15.373,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9390,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1671,
+        "reasoning_output_tokens": 107,
+        "total_tokens": 11061
+      },
+      "artifacts": [
+        {
+          "path": "action-control-development/calls/36434b518c3e3de500adbb3ff6c35f36b24767b5f32c788f7a5767876187baca.response.json",
+          "bytes_sha256": "0640ece23c7ef9aa7e04fedfee39a4f65818a21f372283662c3bf5db8f7e420c"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:c8ced6e8d018e85171c70d999cc5bf8320a21d3b7ef1afcf9e46e1c6c48d09f0",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "43b235510def9433763ce2386e466806c8556a0a7ce699bb43179c3b7fe2cfd7",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "c8ced6e8d018e85171c70d999cc5bf8320a21d3b7ef1afcf9e46e1c6c48d09f0",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9569,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1945,
+            "reasoning_output_tokens": 51
+          }
+        ],
+        "elapsed_seconds": 34.057,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9569,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1945,
+        "reasoning_output_tokens": 51,
+        "total_tokens": 11514
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/43b235510def9433763ce2386e466806c8556a0a7ce699bb43179c3b7fe2cfd7.response.json",
+          "bytes_sha256": "034d41d96a3f4416092aeba51440452137f6ca6229c9ad72cd2225b1040fd6d5"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:e177df38edc4d2faf34cd101c17d6018e53689cd14073f06a77d936d57344761",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "13e5500acdb52a757844ff8186d6835d0411c87db9f72ab05ae8941912d49e24",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "e177df38edc4d2faf34cd101c17d6018e53689cd14073f06a77d936d57344761",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 10733,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1810,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 15.855,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 10733,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1810,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 12543
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/13e5500acdb52a757844ff8186d6835d0411c87db9f72ab05ae8941912d49e24.response.json",
+          "bytes_sha256": "71bc93b1a70ab593e779c04eb55abb06ecbb8047f8c668e646e7359e144f88e8"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:e75a6c33be74dde15ecc5949f6854719f2f7fe93ac66cef96a83658c2f85174a",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "bbdf877b688414dd84d39f34addca727cd47d3cffce0120b8bc77bac2d5553f5",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "e75a6c33be74dde15ecc5949f6854719f2f7fe93ac66cef96a83658c2f85174a",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9141,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 5.836,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9141,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9591
+      },
+      "artifacts": [
+        {
+          "path": "development/calls/bbdf877b688414dd84d39f34addca727cd47d3cffce0120b8bc77bac2d5553f5.response.json",
+          "bytes_sha256": "e58e1b2a309dc5b8a11c1dda488d22530aaa3e250d4810b4ca4c7535b984ab5e"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:eee6062832fcc119598586f9737c76c62209ead9b11a8feab064da24ff9852a3",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "cee7085feada1654daf5cb4380f5fa027360de80f13f447e87345a332456d218",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "eee6062832fcc119598586f9737c76c62209ead9b11a8feab064da24ff9852a3",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9611,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1884,
+            "reasoning_output_tokens": 14
+          }
+        ],
+        "elapsed_seconds": 32.52,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9611,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1884,
+        "reasoning_output_tokens": 14,
+        "total_tokens": 11495
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/cee7085feada1654daf5cb4380f5fa027360de80f13f447e87345a332456d218.response.json",
+          "bytes_sha256": "6ec9d4ef53870b46c189c9c1243fb429c5a7e0dd251456ad417f021dd257f33c"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:f31d5837a0844172a0c7113b2e9ccfcda111216aff211bf0877461f8d464c7c5",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "ca5d380591b2ec47505b518d306d72bf4e43f464b5d680c271442b0a462def16",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "f31d5837a0844172a0c7113b2e9ccfcda111216aff211bf0877461f8d464c7c5",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9184,
+            "cached_input_tokens": 4224,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 450,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 9.351,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9184,
+        "cached_input_tokens": 4224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 9634
+      },
+      "artifacts": [
+        {
+          "path": "development-audited/calls/ca5d380591b2ec47505b518d306d72bf4e43f464b5d680c271442b0a462def16.response.json",
+          "bytes_sha256": "fa6bb4b5138fc2fe2392956599aede8c21a8fb7ad682cb74a738c4751651a94e"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:f8c09853d73f5c884ec74b82555cc14bbc91d42663c22191073f0b060f912237",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "b1a20da4c0e23d749280b48d89c42b71bd9a7577ac27d1b12b21facf6228b5c8",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "f8c09853d73f5c884ec74b82555cc14bbc91d42663c22191073f0b060f912237",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 9452,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1555,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 11.157,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 9452,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1555,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 11007
+      },
+      "artifacts": [
+        {
+          "path": "action-control-development/calls/b1a20da4c0e23d749280b48d89c42b71bd9a7577ac27d1b12b21facf6228b5c8.response.json",
+          "bytes_sha256": "990a87bffd143f304a48e7b05746259ee5acded833f5cd842f547bb8198b17cc"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:fdf8de06ba72579190c2eb2396ba64e8349d4feb8ec5cecac39c7d4b2e9bcb5f",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "bdbadecc4d28a767bfc9c82d3f4ec33a5a144de3efc1c17437be98b653eb1e23",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "fdf8de06ba72579190c2eb2396ba64e8349d4feb8ec5cecac39c7d4b2e9bcb5f",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6.1-sol",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 13214,
+            "cached_input_tokens": 4224,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1595,
+            "reasoning_output_tokens": 40
+          }
+        ],
+        "elapsed_seconds": 29.329,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 13214,
+        "cached_input_tokens": 4224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1595,
+        "reasoning_output_tokens": 40,
+        "total_tokens": 14809
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/bdbadecc4d28a767bfc9c82d3f4ec33a5a144de3efc1c17437be98b653eb1e23.response.json",
+          "bytes_sha256": "41afdc4435e5d2ac359be697f13cb1de20522e799e86202b8416a635daa44605"
+        }
+      ]
+    },
+    {
+      "schema_version": 1,
+      "execution_id": "legacy-response-sha256:ffefe98445b200889286bf4a9e437d72b559ab52d8d1bba0e019316c5c48ac7a",
+      "identity_basis": "retrospective_full_checkpoint_fingerprint_not_service_id",
+      "request_id": "c5d91c065ab2f4bdec9c1917353895a31925de3a75fa64b39b0bdd5675725cfc",
+      "outcome": "completed",
+      "recorded_at": null,
+      "result_checkpoint_sha256": "ffefe98445b200889286bf4a9e437d72b559ab52d8d1bba0e019316c5c48ac7a",
+      "provenance": {
+        "backend": "codex",
+        "model_requested": "gpt-6-luna",
+        "resolved_model": null,
+        "usage": [
+          {
+            "input_tokens": 6968,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 498,
+            "reasoning_output_tokens": 0
+          }
+        ],
+        "elapsed_seconds": 5.856,
+        "cli_version": "codex-cli 0.162.0-alpha.17.2"
+      },
+      "usage": {
+        "input_tokens": 6968,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 498,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 7466
+      },
+      "artifacts": [
+        {
+          "path": "transfer-validation/calls/c5d91c065ab2f4bdec9c1917353895a31925de3a75fa64b39b0bdd5675725cfc.response.json",
+          "bytes_sha256": "81f302a22281bd69577a2d37ca3f1aac158e68251065f4263eaa966fc48c3f0b"
+        }
+      ]
+    }
+  ]
+}

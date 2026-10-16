@@ -31,6 +31,8 @@ python3 -m runaway.selfplay run selfplay-plan/snapshot.synthetic.json \
 
 The default six-person plan bounds model calls at 84 before exact-request caching. Model identifiers must be explicit and available to your account. A source checkout is required because the benchmark invokes the actual browser modules through `scripts/selfplay-browser.mjs`. Different generator/decoder models can be declared before running.
 
+New calls also persist a local execution ID before invocation; unresolved attempts stop automatic retry and retain unknown cost. See [execution accounting](USAGE-ACCOUNTING.md).
+
 `--resume` reuses identical hashed requests and responses; it does not retry failed calls or alter rejected candidates. A changed model, code, policy, budget or condition requires a new frozen plan. The run lock prevents concurrent duplicate execution. Inspect the plan and outputs before sending anything from a modified fork to a service. Do not resume into unrelated directories.
 
 ## Read the measurements

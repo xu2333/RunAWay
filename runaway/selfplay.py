@@ -17,6 +17,7 @@ import time
 from .card import canonical, digest, parse_answer
 from .compression import HEADER, TEXT_SCHEMA, generation_request, reference
 from .generation import codex_generate
+from .execution_ledger import start_attempt, validate_attempt
 from .pipeline import write_once
 from .profile import PROFILE_SCHEMA, export_profile, object_schema, STR, STRINGS
 from .selfplay_world import build_world, gold, oracle_memory, synthetic_sources, feedback
@@ -24,6 +25,7 @@ from .selfplay_world import build_world, gold, oracle_memory, synthetic_sources,
 ROOT = Path(__file__).resolve().parents[1]
 CONDITIONS = ('none', 'generic', 'trajectory', 'detailed', 'compact', 'tiny', 'wrong_person', 'name_only', 'oracle')
 FILES = ('runaway/selfplay.py', 'runaway/selfplay_world.py', 'runaway/generation.py',
+         'runaway/execution_ledger.py',
          'runaway/profile.py', 'runaway/compression.py', 'web/dist/core.mjs',
          'web/dist/manual-core.mjs', 'scripts/selfplay-browser.mjs')
 PREDICTION_SCHEMA = object_schema({'predictions': {'type': 'array', 'items': object_schema({
@@ -131,21 +133,30 @@ class Calls:
         with lock:
             req, res = self.out/'calls'/(key+'.request.json'), self.out/'calls'/(key+'.response.json')
             failure = self.out/'calls'/(key+'.failure.json')
+            attempt = self.out/'calls'/(key+'.attempt.json')
             write_once(req, request)
             if res.exists():
                 value = read(res)
                 if value.get('sha256') != digest(canonical({k: v for k, v in value.items() if k != 'sha256'})):
                     raise ValueError('Call checkpoint changed')
+                if value.get('execution_id'):
+                    validate_attempt(attempt, value['execution_id'], key)
             elif failure.exists():
                 raise ValueError('Recorded model failure; this request is not retried automatically')
             else:
+                intent = start_attempt(attempt, key)
+                provenance = None
                 try:
                     raw, provenance = self.generate(prompt, model, timeout=240, schema=schema, system=SYSTEM)
-                    value = {'answer': parse_answer(raw), 'provenance': provenance, 'request_id': key}
+                    value = {'answer': parse_answer(raw), 'provenance': provenance, 'request_id': key,
+                             'execution_id': intent['execution_id']}
                     value['sha256'] = digest(canonical(value))
                     write_once(res, value)
                 except Exception as exc:
-                    write_once(failure, {'error_type': type(exc).__name__, 'error': str(exc), 'request_id': key})
+                    failed = {'error_type': type(exc).__name__, 'error': str(exc), 'request_id': key,
+                              'execution_id': intent['execution_id'], 'provenance': provenance or {}}
+                    failed['sha256'] = digest(canonical(failed))
+                    write_once(failure, failed)
                     raise
             if value['request_id'] != key:
                 raise ValueError('Request checkpoint mismatch')

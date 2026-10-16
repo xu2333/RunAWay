@@ -7,12 +7,12 @@ from .card import canonical,digest
 from .decision_memory import SCHEMA,make_request,validate,semantic_audit
 from .generation import codex_generate
 from .pipeline import write_once
-from .selfplay import Calls,PREDICTION_SCHEMA,prediction_request,validate_predictions,read,ROOT
+from .selfplay import Calls,PREDICTION_SCHEMA,prediction_request,validate_predictions,read,ROOT,SYSTEM
 
 MODEL='gpt-6-luna'
 
 def hashes():
-    return {p:digest((ROOT/p).read_text()) for p in ['runaway/decision_memory.py','runaway/decision_experiment.py','runaway/generation.py']}
+    return {p:digest((ROOT/p).read_text()) for p in ['runaway/decision_memory.py','runaway/decision_experiment.py','runaway/generation.py','runaway/selfplay.py','runaway/execution_ledger.py']}
 
 
 def development(out,audited=False):
@@ -41,6 +41,14 @@ class LimitedCalls(Calls):
                 self.backend_failed=True
                 raise
         super().__init__(Path(out),limited)
+
+    def call(self,prompt,schema,model):
+        key=digest(canonical({'prompt':prompt,'schema':schema,'model':model,'system':SYSTEM}))
+        directory=self.out/'calls'
+        if not any((directory/(key+suffix)).exists() for suffix in ('.response.json','.failure.json')):
+            used={p.name.split('.')[0] for p in directory.glob('*.json') if p.name.endswith(('.attempt.json','.response.json','.failure.json'))}
+            if len(used)>=self.limit:raise ValueError('Frozen model call limit reached, including unresolved attempts')
+        return super().call(prompt,schema,model)
 
 
 def run_development(out,generate=codex_generate):
