@@ -2,6 +2,7 @@ include QUICKSTART.md
 include COMPRESSION.md
 include EVALUATION.md
 include DECISION-MEMORY.md
+include BOUND-MEMORY.md
 include USAGE-ACCOUNTING.md
 include pyproject.toml
 include LICENSE

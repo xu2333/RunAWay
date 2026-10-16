@@ -121,6 +121,9 @@ def collect(root):
                 'outcome': outcome, 'recorded_at': recorded_at,
                 'result_checkpoint_sha256': result['sha256'],
                 'provenance': provenance, 'usage': usage(provenance)}
+        if result.get('backend_invoked') is False:
+            body['backend_invoked']=False
+            body['outcome']='locally_blocked_before_backend'
         prior = records.get(execution_id)
         if prior:
             if {k: v for k, v in prior.items() if k != 'artifacts'} != body:
@@ -144,13 +147,15 @@ def summarize(records):
         by_id[key] = row
     rows = list(by_id.values())
     total = Counter()
-    for row in rows:
+    billable_candidates=[row for row in rows if row.get('backend_invoked') is not False]
+    for row in billable_candidates:
         if row['usage'] is not None:
             total.update(row['usage'])
     return {'execution_records': len(rows), 'unique_request_fingerprints': len({r['request_id'] for r in rows}),
             'copied_artifacts_excluded': sum(len(r['artifacts']) - 1 for r in rows) + duplicate_records,
-            'executions_with_usage': sum(r['usage'] is not None for r in rows),
-            'executions_missing_usage': sum(r['usage'] is None for r in rows),
+            'locally_blocked_before_backend':len(rows)-len(billable_candidates),
+            'executions_with_usage': sum(r['usage'] is not None for r in billable_candidates),
+            'executions_missing_usage': sum(r['usage'] is None for r in billable_candidates),
             'outcomes': dict(Counter(r['outcome'] for r in rows)),
             'known_usage': {k: total[k] for k in (*FIELDS, 'total_tokens')},
             'interpretation': 'Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies.'}

@@ -19,6 +19,7 @@ from .compression import compress, compression_plan, audit_prompt
 from .evaluation import freeze, validate_dataset
 from .trajectory_import import import_pages
 from .decision_memory import compress as decision_compress, make_request as decision_request
+from .bound_memory import make_request as bound_request, import_candidate as bound_import
 
 
 def read(path):
@@ -60,6 +61,11 @@ def save_private_bundle(destination, files):
 
 
 def profile_command(args):
+    if args.profile_command in ('bound-plan','bound-import'):
+        profile=validate_profile(json.loads(read(args.profile)))
+        if args.profile_command=='bound-plan':print(bound_request(profile,args.budget_chars))
+        else:output(bound_import(parse_answer(read(args.answer)),profile,args.out,args.budget_chars))
+        return
     if args.profile_command in ("decision-plan", "decision-compress"):
         profile=validate_profile(json.loads(read(args.profile)))
         if args.profile_command=="decision-plan":
@@ -199,6 +205,10 @@ def parser():
         dec.add_argument("profile");dec.add_argument("--budget-chars",type=int,default=1000)
         if name=="decision-compress":
             dec.add_argument("--backend",choices=["codex"],required=True);dec.add_argument("--model",required=True);dec.add_argument("--out",required=True)
+    for name in ('bound-plan','bound-import'):
+        dec=actions.add_parser(name,help='Offline manual candidate with program-bound facets; not a fidelity certificate')
+        dec.add_argument('profile');dec.add_argument('--budget-chars',type=int,default=1000)
+        if name=='bound-import':dec.add_argument('--answer',required=True);dec.add_argument('--out',required=True)
     edit = actions.add_parser("checkout", help="Create an editable private copy; no model calls")
     edit.add_argument("profile")
     edit.add_argument("--out", required=True)

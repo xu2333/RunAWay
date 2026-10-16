@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "origin": "fully_synthetic",
+  "stage": "frozen_run_stopped_then_offline_replay",
+  "new_unit_call_cap": 24,
+  "old_leftover_calls_reused": false,
+  "intent_records": 9,
+  "backend_invocations": 8,
+  "completed_with_usage": 7,
+  "timed_out_backend_invocations": 1,
+  "locally_blocked_before_backend": 1,
+  "unused_budget_not_reused": 15,
+  "original_frozen_report": {
+    "schema_version": 1,
+    "snapshot_id": "90e3037d3b11152fca5437d214f0254ba579e64f4ec0455904ce27df5a013e57",
+    "origin": "fully_synthetic",
+    "stage": "pre_frozen_evaluated",
+    "decoder_gate": {
+      "primary": {
+        "correct": 48,
+        "planned": 48,
+        "available": 48,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "current_instructions": {
+        "correct": 8,
+        "planned": 8,
+        "available": 8,
+        "missing": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0,
+        "observed_violations": 0
+      },
+      "counterfactual_required_flip": {
+        "correct": 9,
+        "planned": 9,
+        "available": 9,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "counterfactual_required_stable": {
+        "correct": 15,
+        "planned": 15,
+        "available": 15,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "twins": {
+        "correct": 3,
+        "planned": 3,
+        "available": 3,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "order": {
+        "correct": 8,
+        "planned": 8,
+        "available": 8,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "unknown": {
+        "correct": 4,
+        "planned": 4,
+        "available": 4,
+        "missing": 0,
+        "observed_incorrect": 0,
+        "end_to_end_rate": 1.0,
+        "available_rate": 1.0
+      },
+      "passed": true
+    },
+    "conditions": {
+      "trajectory": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 0,
+          "missing": 48,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "current_instructions": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "end_to_end_rate": null,
+          "available_rate": null,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 0,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 0,
+          "missing": 15,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "unknown": {
+          "correct": 0,
+          "planned": 4,
+          "available": 0,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        }
+      },
+      "detailed": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 0,
+          "missing": 48,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "current_instructions": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "end_to_end_rate": null,
+          "available_rate": null,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 0,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 0,
+          "missing": 15,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "unknown": {
+          "correct": 0,
+          "planned": 4,
+          "available": 0,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        }
+      },
+      "legacy": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 0,
+          "missing": 48,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "current_instructions": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "end_to_end_rate": null,
+          "available_rate": null,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 0,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 0,
+          "missing": 15,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "unknown": {
+          "correct": 0,
+          "planned": 4,
+          "available": 0,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        }
+      },
+      "compact": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 0,
+          "missing": 48,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "current_instructions": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "end_to_end_rate": null,
+          "available_rate": null,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 0,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 0,
+          "missing": 15,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "unknown": {
+          "correct": 0,
+          "planned": 4,
+          "available": 0,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        }
+      },
+      "wrong_person": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 0,
+          "missing": 48,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "current_instructions": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "end_to_end_rate": null,
+          "available_rate": null,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 0,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 0,
+          "missing": 15,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 0,
+          "missing": 8,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "unknown": {
+          "correct": 0,
+          "planned": 4,
+          "available": 0,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        }
+      },
+      "oracle": {
+        "primary": {
+          "correct": 48,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 9,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 15,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 3,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "order": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      }
+    },
+    "failures": {
+      "b01/extract": "Browser request/validation failed: 0xdfff))throw Error(`${label}含损坏字符（位置 ${index}）。请恢复原文后重新导入，不要猜测替换文字。`);index++;}\n                                                                                                                          ^\n\nError: 提炼结果.claims[2].conditions[2]含损坏字符（位置 8）。请恢复原文后重新导入，不要猜测替换文字。\n    at requireIntact (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:4:123)\n    at requireIntactTree (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:8:29)\n    at file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:9:52\n    at Array.forEach (<anonymous>)\n    at requireIntactTree (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:9:37)\n    at requireIntactTree (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:10:82)\n    at file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:9:52\n    at Array.forEach (<anonymous>)\n    at requireIntactTree (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:9:37)\n    at requireIntactTree (file://<PROJECT_ROOT>/web/dist/text-integrity.mjs:10:82)\n\nNode.js v25.6.0\n",
+      "b02/compress": "Bound memory exceeds budget: 334 > 333; no truncation",
+      "b02/audit-legacy": "Generation timed out; no automatic retry or card produced",
+      "stopped": "Backend previously failed; no further network attempt"
+    },
+    "first_pass_profiles": 1,
+    "final_profiles": 1,
+    "planned_profiles": 2,
+    "completed_model_calls": 7,
+    "calls_limit": 24,
+    "generator_model": "gpt-6-luna",
+    "decoder_model": "gpt-6.1-sol",
+    "extraction_repairs_used": 1,
+    "format_repairs_used": 0,
+    "promotion": "pending_offline_token_and_quality_readout",
+    "real_person_fidelity_verified": false
+  },
+  "transport_diagnosis": {
+    "origin": "fully_synthetic",
+    "observed_problem": "Bridge implicit Buffer.toString() per chunk splits valid multibyte UTF8; original model response has intact text.",
+    "original_rejected_answer_valid_under_buffered_decode": true,
+    "claims": 4,
+    "model_calls": 0,
+    "tests": {
+      "single_byte_boundaries": true,
+      "invalid_utf8_rejected": true
+    },
+    "original_artifacts_unchanged": true,
+    "historical_v1_raw_vs_profile_differences": [
+      {
+        "claim_id": "direct_feedback",
+        "field": "statement",
+        "raw_answer": "指出重要且可修正的问题时，倾向第一句就说明问题，再讨论修改建议；在私聊和群聊情境中均如此。",
+        "stored_profile": "指出重要且可修正的问题时，倾向第一句就说明问题，再讨论修改建���；在私聊和群聊情境中均如此。"
+      }
+    ],
+    "historical_interpretation": "Previously attributed source corruption also occurred between intact raw model answer and browser-derived profile; consistent with confirmed bridge bug. Original source and rejection records remain unchanged.",
+    "historical_anchor_replay": [
+      {
+        "request_id": "4f279ca35f17641acc5de616558afae93007eaf1ff76e07069d20ebc32027d8e",
+        "passes_against_intact_original": true,
+        "characters": 423
+      }
+    ]
+  },
+  "offline_replay": {
+    "origin": "fully_synthetic",
+    "stage": "posthoc_offline_development_replay",
+    "model_calls_added": 0,
+    "structurally_recovered_profiles": 2,
+    "planned_profiles": 2,
+    "recovered_bound_candidates": 1,
+    "planned_candidates": 2,
+    "original_experiment_unchanged": true,
+    "normalization": "None. Original raw model answers validated through corrected UTF8 bridge.",
+    "format_change": "New renderer omits a trailing newline; b02 originally334/333characters now333/333. Development recovery, not a retroactive pass.",
+    "behavioral_fidelity": "unmeasured",
+    "interpretation": "Original oracle control passed; no memory behavior comparison completed. No candidate promotion."
+  },
+  "offline_replay_actual_tokens": {
+    "b01": {
+      "legacy": 193
+    },
+    "b02": {
+      "legacy": 189,
+      "compact": 177
+    }
+  },
+  "tokenizer": {
+    "model_sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa",
+    "model_name": "Qwen3 0.6B",
+    "llama_cpp_python": "0.3.36",
+    "inference_performed": false,
+    "network": false,
+    "token_counts_include_complete_memory_text": true
+  },
+  "execution_accounting": {
+    "execution_records": 9,
+    "unique_request_fingerprints": 9,
+    "copied_artifacts_excluded": 0,
+    "locally_blocked_before_backend": 1,
+    "executions_with_usage": 7,
+    "executions_missing_usage": 1,
+    "outcomes": {
+      "completed": 7,
+      "locally_blocked_before_backend": 1,
+      "failed": 1
+    },
+    "known_usage": {
+      "input_tokens": 67854,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9202,
+      "reasoning_output_tokens": 658,
+      "total_tokens": 77056
+    },
+    "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies.",
+    "records_manifest": {
+      "10c7bc7b19f5e89f15c39e704524e8def53f80fb9cbb5cadce9ae8db5b6cf12d.execution.json": "bd9676220f0f466faea6ba2f1fa1282a994307d64ea3c91d2066779f442e082a",
+      "1b8d393277eddb9ef49e242bed2b0d4ecac6f977f2187355541adfead025968c.execution.json": "2f599a691fc7d87b991214115d1f6adb6973d58972ca99012e11a67b0fb2a120",
+      "294ffea8664ba256a131e477eb247fb825ccf7cc415fda079fc2116c423cc84b.execution.json": "41befe822ab6a3957b7fe2380d51bbbc0a047fb1ed11269adcddc845e8550ea1",
+      "474d718d88f68f3d90778341663db2ea33379ec8f2605dbcb65c09f99bc14018.execution.json": "8528c7aa7ff8fba8db326c2db417a210b415b13eb605013dc2bd1bc789a46fbd",
+      "59dcf7ee518bf5d6ca088011b396ef5c0f1623697a6a0cceef92dd453535fbee.execution.json": "be94df37a57cb97f1b43842417414bdb3368d5c145cb166967847f97d3f5108f",
+      "727ae28bbc9fd1bdbd62a49c124a55844b7a0cb7bd71a4072911012ac37dc760.execution.json": "7d75d2cb353c56af2b4317386e1c1f187433761708dc365d66faf2fe15e6918d",
+      "a320a81c8259a77bc10798ecf583a24f1fa9a5dbba37d903ed4ad5383e8e7780.execution.json": "2ef9d7facffd34ba6f3e8b7487e5084afa505f191296fbe2f26a0b3d468741bf",
+      "a6eb1c521d7872fefd9221f67d85ea0a31da3580fce32985d1efde1c6beaebe6.execution.json": "78eb4a959e208bd157411ac4b78aa34d53a3ff402273046d4743a5eb1fbdb4c4",
+      "f2c41c5c7a9ad2b51cf99b73fcf790ee2199a89243ffc52e1c0fdbb58fc7fc18.execution.json": "8f9f33f1dc4e8e48cbafa41d000e5df695fd72c10e816ce20f2c37e3e3c27f15"
+    }
+  },
+  "promotion": {
+    "promoted": false,
+    "quality_comparison_measured": false,
+    "reason": "Frozen run stopped after model-review timeout; no memory-condition predictions completed.",
+    "decision_summary_zh": "本批服务调用超时后已停止，记忆选择复现未测量。UTF-8桥接修复已离线验证；新候选未晋升。",
+    "offline_replay_candidate_token_ratio": 0.9365079365079365,
+    "offline_replay_reduction": 0.06349206349206349,
+    "offline_replay_interpretation": "One development candidate only;6.3% below same-person old, below10% target and no behavior results."
+  },
+  "real_person_validity_verified": false,
+  "cross_vendor_behavior_verified": false,
+  "probability_metrics": null,
+  "interpretation": "Control decoder passed but no memory-condition predictions completed. No accuracy or fidelity improvement measured. Existing raw outputs replayed offline only; original failure records retained. Known77056tokens exclude unknown timed-out usage. File-adapter integration is not behavioral validation."
+}

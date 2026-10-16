@@ -11,6 +11,10 @@ from .selfplay import Calls,PREDICTION_SCHEMA,prediction_request,validate_predic
 
 MODEL='gpt-6-luna'
 
+
+class BackendStoppedError(ValueError):
+    backend_invoked=False
+
 def hashes():
     return {p:digest((ROOT/p).read_text()) for p in ['runaway/decision_memory.py','runaway/decision_experiment.py','runaway/generation.py','runaway/selfplay.py','runaway/execution_ledger.py']}
 
@@ -34,7 +38,7 @@ class LimitedCalls(Calls):
         def limited(*a,**kw):
             used=list((Path(out)/'calls').glob('*.response.json'))+list((Path(out)/'calls').glob('*.failure.json'))
             if len(used)>=limit:raise ValueError('Frozen model call limit reached')
-            if self.backend_failed:raise ValueError('Backend previously failed; no further network attempt')
+            if self.backend_failed:raise BackendStoppedError('Backend previously failed; no further network attempt')
             self.attempts+=1
             try:return generate(*a,**kw)
             except Exception:

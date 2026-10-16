@@ -16,7 +16,7 @@ from .selfplay_world import synthetic_sources,oracle_memory
 
 CONDITIONS=('none','detailed','legacy','compact','oracle')
 CODE=('runaway/selfplay.py','runaway/execution_ledger.py','runaway/decision_memory.py','runaway/decision_world.py','runaway/decision_validation.py',
-      'runaway/decision_experiment.py','runaway/generation.py','web/dist/core.mjs','scripts/selfplay-browser.mjs')
+      'runaway/decision_experiment.py','runaway/generation.py','web/dist/core.mjs','scripts/read-stdin-json.mjs','scripts/selfplay-browser.mjs')
 
 def code_hashes():return {p:digest((ROOT/p).read_text()) for p in CODE}
 

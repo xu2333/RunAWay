@@ -25,9 +25,9 @@ from .selfplay_world import build_world, gold, oracle_memory, synthetic_sources,
 ROOT = Path(__file__).resolve().parents[1]
 CONDITIONS = ('none', 'generic', 'trajectory', 'detailed', 'compact', 'tiny', 'wrong_person', 'name_only', 'oracle')
 FILES = ('runaway/selfplay.py', 'runaway/selfplay_world.py', 'runaway/generation.py',
-         'runaway/execution_ledger.py',
+         'runaway/execution_ledger.py', 'runaway/text_integrity.py', 'runaway/card.py',
          'runaway/profile.py', 'runaway/compression.py', 'web/dist/core.mjs',
-         'web/dist/manual-core.mjs', 'scripts/selfplay-browser.mjs')
+         'web/dist/manual-core.mjs', 'web/dist/text-integrity.mjs', 'scripts/read-stdin-json.mjs','scripts/selfplay-browser.mjs')
 PREDICTION_SCHEMA = object_schema({'predictions': {'type': 'array', 'items': object_schema({
     'id': STR, 'choice': {'type': 'string', 'enum': ['A', 'B', 'unknown']}})}})
 BROWSER_SCHEMA = object_schema({
@@ -155,6 +155,7 @@ class Calls:
                 except Exception as exc:
                     failed = {'error_type': type(exc).__name__, 'error': str(exc), 'request_id': key,
                               'execution_id': intent['execution_id'], 'provenance': provenance or {}}
+                    if getattr(exc,'backend_invoked',True) is False:failed['backend_invoked']=False
                     failed['sha256'] = digest(canonical(failed))
                     write_once(failure, failed)
                     raise

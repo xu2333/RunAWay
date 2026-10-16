@@ -6,6 +6,11 @@ import {validateCard,cardText,makeOutputSample,validateSample,auditSamples} from
 const demo=JSON.parse(await readFile(new URL('../web/dist/demo.json',import.meta.url),'utf8'));
 const clone=x=>structuredClone(x);
 
+test('damaged characters fail before export without normalization; emoji remain intact',()=>{
+ for(const bad of ['\ufffd','\ud800','\udfff']){const a=clone(demo.answer);a.claims[0].statement+=bad;const before=JSON.stringify(a);assert.throws(()=>validateAnswer(a,demo.sources,1600),/损坏字符/);assert.equal(JSON.stringify(a),before);}
+ const a=clone(demo.answer);a.tagline+=' 🐸 𠮷';validateAnswer(a,demo.sources,1600);
+});
+
 test('labelled conversations preserve speaker boundaries and exact quotes',()=>{
   const s=sourcesFrom('用户：先试一下。\n但别公开。\n助手：你总是冒险。','trajectory');
   assert.equal(s.sources[0].text,'先试一下。\n但别公开。');

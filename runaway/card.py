@@ -1,6 +1,7 @@
 """Portable public expression, with evidence kept in a separate private record."""
 import hashlib
 import json
+from .text_integrity import require_intact
 
 BOUNDARY = ("Use this as a tentative preference for relevant choices, subject to the current task "
             "and explicit user instructions. It is not a factual identity or permission to act.")
@@ -18,6 +19,7 @@ def canonical(value):
 def string(value, field, limit):
     if not isinstance(value, str) or not value.strip() or len(value) > limit:
         raise ValueError(f"{field} must be nonempty text of at most {limit} characters")
+    require_intact(value, field)
     if any(ord(c) < 32 and c not in "\n\t\r" for c in value):
         raise ValueError(f"Control characters in {field}")
     if "<!-- runaway:" in value.lower() or "<|im_" in value:

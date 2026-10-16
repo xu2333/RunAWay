@@ -1,5 +1,6 @@
 import {validateManual} from './manual-core.mjs';
-export const VERSION = '0.11.0';
+import {requireIntact,requireIntactTree} from './text-integrity.mjs';
+export const VERSION = '0.14.0';
 export const HEADER = 'Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n';
 export const VALIDATION = 'Source attribution and exact quote existence checked; semantic support, completeness and fidelity not verified.';
 const fields = ['id','statement','basis','scope','conditions','exceptions','evidence','related_claim_ids'];
@@ -19,7 +20,7 @@ function exact(value, keys, label) {
 }
 function text(value, label, max=16000) {
   if (typeof value !== 'string' || !value.trim() || length(value)>max || /[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(value) || /<!-- runaway:/i.test(value) || value.includes('<|im_')) throw Error(`${label}为空、过长，或含保留控制标记。`);
-  return value;
+  return requireIntact(value,label);
 }
 function identifier(value) { if (typeof value !== 'string' || !idPattern.test(value)) throw Error('来源或判断的 id 格式不正确。'); }
 function strings(value,label) { if(!Array.isArray(value)) throw Error(`${label}必须是数组。`); value.forEach(v=>text(v,label)); }
@@ -59,6 +60,7 @@ export function sourcesFrom(raw,kind) {
   return validateSources({schema_version:1,sources:messages.map((m,i)=>({id:`message-${i+1}`,episode_id:'submitted',...m}))});
 }
 export function validateAnswer(answer,sources,budget) {
+  requireIntactTree(answer,'提炼结果');
   validateSources(sources); exact(answer,['name','tagline','claims','unknowns','prompt','covered_claim_ids',...['presentation','manual'].filter(k=>Object.hasOwn(answer??{},k))],'提炼结果');
   text(answer.name,'名字',40);text(answer.tagline,'短描述',160);text(answer.prompt,'随身 prompt',16000);
   if(length(HEADER+answer.prompt+'\n')>budget) throw Error(`完整 prompt 超过 ${budget} 字符预算。请让模型在保留条件和例外的前提下缩短，不能直接截断。`);

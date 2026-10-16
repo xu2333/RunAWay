@@ -64,6 +64,10 @@ runaway profile decision-compress my-profile/profile.private.json \
 
 This sends only the projected profile to the configured model, then makes one semantic-audit call. Rejected candidates keep their private diagnostics and export no portable prompt. A model auditor can be wrong; passing its audit still does not certify behavioral or human fidelity.
 
+## Follow-up transport diagnosis
+
+The [bound-memory follow-up](BOUND-MEMORY.md) traced the damaged statement to per-chunk UTF-8 decoding in the Python-to-Node bridge. The raw model response was intact. Byte-buffered replay repairs that transport path and the old anchor passes against the intact original profile. Original scores and failures are preserved; no behavioral gain is inferred from this offline replay.
+
 ## Execution accounting correction
 
 The 38 calls are 38 completed execution records, with 36 distinct input fingerprints. Two identical requests were independently executed in separate development runs; their provenance and native launch receipts differ. The original 38-record token sum remains correct. An offline [execution ledger and importer contract](USAGE-ACCOUNTING.md) now distinguish repeated executions from copied artifacts, without changing original records or inventing service response IDs. No new inference was used for this correction.

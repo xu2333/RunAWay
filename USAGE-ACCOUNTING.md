@@ -35,6 +35,8 @@ For the central collector, register **only** the normalized `*.execution.json` d
 # Inside the collector's source dispatch; add/normalize/summed already exist.
 elif kind == 'memory_execution':
     x = self.json(path)
+    if x.get('backend_invoked') is False:
+        continue  # Proven local guard block, not a missing service usage row.
     p = x.get('provenance', {})
     us = [normalize(u) for u in p.get('usage', [])]
     us = [u for u in us if u is not None]
@@ -48,3 +50,5 @@ elif kind == 'memory_execution':
 Validate the importer output and `summary.json` manifest before registration. Keep the original `request_id` as a diagnostic, never overwrite it with an invented response ID. Copies under different paths must have the same execution identity. An identity collision with different usage must produce an explicit conflict, not silently select or invent another ID. The existing older `memory_response` rule can remain for its historical scope; it must not be used to ingest this ledger by request fingerprint.
 
 Minimum collector regression: two independent executions with the same request, a copy of one execution, an unresolved attempt and a conflicting same-ID record. This repository tests those cases offline, plus changed legacy usage, cached reuse, hash tampering, preserving usage after a parse failure and conservative finite-budget handling. The central collector and its source configuration are maintained separately; producing this ledger does not itself assert that central totals have been updated.
+
+New local failures can explicitly record `backend_invoked: false`. Exclude these from remote-call totals, retain them as local guard blocks, and keep them in conservative attempt budgets. Do not infer this flag from arbitrary error text. The D-0011 ledger has one documented retrospective classification tied to the exact guard in its verified frozen wrapper; its original failure checkpoint is unchanged. A separate timed-out invocation still has unknown usage.

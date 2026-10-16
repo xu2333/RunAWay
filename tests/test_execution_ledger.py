@@ -96,5 +96,15 @@ class ExecutionLedgerTests(unittest.TestCase):
             row=collect(root)[0];copy={**row,'artifacts':[{'path':'a-copied-location','bytes_sha256':row['artifacts'][0]['bytes_sha256']}]}
             r=summarize([row,copy]);self.assertEqual(r['execution_records'],1);self.assertEqual(r['known_usage']['total_tokens'],3);self.assertEqual(r['copied_artifacts_excluded'],1)
 
+    def test_local_guard_block_is_not_a_remote_missing_usage_call(self):
+        from runaway.decision_experiment import LimitedCalls
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            def fail(*a,**k):raise ValueError('simulated transport error')
+            calls=LimitedCalls(root,3,fail)
+            with self.assertRaises(ValueError):calls.call('first',{},'offline')
+            with self.assertRaises(ValueError):calls.call('blocked',{},'offline')
+            r=summarize(collect(root));self.assertEqual(r['execution_records'],2);self.assertEqual(r['locally_blocked_before_backend'],1);self.assertEqual(r['executions_missing_usage'],1)
+
 
 if __name__ == '__main__': unittest.main()
