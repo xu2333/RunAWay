@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "origin": "fully_synthetic",
+  "stage": "development_after_inspection",
+  "new_inference_limit": 45,
+  "completed_model_calls": 38,
+  "remaining_unused": 7,
+  "stage_calls": {
+    "development": {
+      "completed": 6,
+      "failed_transport_or_output": 0
+    },
+    "development-audited": {
+      "completed": 8,
+      "failed_transport_or_output": 0
+    },
+    "validation": {
+      "completed": 4,
+      "failed_transport_or_output": 0
+    },
+    "action-control-development": {
+      "completed": 4,
+      "failed_transport_or_output": 0
+    },
+    "transfer-validation": {
+      "completed": 16,
+      "failed_transport_or_output": 0
+    }
+  },
+  "external_model_usage": {
+    "gpt-6-luna": {
+      "calls": 28,
+      "calls_with_usage": 28,
+      "input_tokens": 245288,
+      "cached_input_tokens": 16128,
+      "output_tokens": 30027,
+      "reasoning_output_tokens": 3405
+    },
+    "gpt-6.1-sol": {
+      "calls": 10,
+      "calls_with_usage": 10,
+      "input_tokens": 103579,
+      "cached_input_tokens": 4224,
+      "output_tokens": 16979,
+      "reasoning_output_tokens": 400
+    }
+  },
+  "usage_interpretation": "Input includes cached input; output includes reasoning. Do not add cache/reasoning again. Known service-token counts are not an invoice. Native agent usage is separate.",
+  "development_initial": {
+    "stage": "development",
+    "plan_id": "75ab85e122635d7c011100cb503dba381ca9e4e3b9e3e28288b1de6f335859ae",
+    "scores": {
+      "legacy": {
+        "correct": 39,
+        "planned": 48,
+        "available": 48
+      },
+      "decision": {
+        "correct": 44,
+        "planned": 48,
+        "available": 48
+      }
+    },
+    "failures": {
+      "p02": {},
+      "p05": {}
+    },
+    "completed_calls": 6,
+    "no_heldout_claim": true
+  },
+  "development_audited": {
+    "stage": "development",
+    "plan_id": "7e6d7324b291e0f7ab5fd93d5d601a4ce215891c5d687c97dceec8166f8e0d7b",
+    "scores": {
+      "legacy": {
+        "correct": 39,
+        "planned": 48,
+        "available": 48
+      },
+      "decision": {
+        "correct": 0,
+        "planned": 48,
+        "available": 0
+      }
+    },
+    "failures": {
+      "p02": {
+        "compress": "Semantic audit rejected candidate"
+      },
+      "p05": {
+        "compress": "Semantic audit rejected candidate"
+      }
+    },
+    "completed_calls": 6,
+    "no_heldout_claim": true
+  },
+  "rejected_candidate_diagnostic_readout": {
+    "stage": "development_only",
+    "scores": {
+      "p02": 21,
+      "p05": 18
+    },
+    "calls_in_this_stage_upper_bound": 8,
+    "first_development_upper_bound": 6,
+    "combined_development_limit": 14,
+    "audit_rejections_not_overridden": true
+  },
+  "first_new_decoder_gate": {
+    "correct": 85,
+    "planned": 96,
+    "available": 96,
+    "accuracy": 0.8854166666666666,
+    "constraint_violations": 0,
+    "constraint_cases": 16,
+    "order_consistency": 0.625,
+    "unknown_abstention": 1,
+    "twins_correct": 3,
+    "twins_cases": 6,
+    "per_persona": [
+      {
+        "persona": "n01",
+        "correct": 21,
+        "planned": 24,
+        "available": 24,
+        "constraint_violations": 0,
+        "constraint_cases": 4,
+        "order_consistency": 0.5,
+        "unknown_abstention": 1,
+        "constant_answer": false
+      },
+      {
+        "persona": "n02",
+        "correct": 19,
+        "planned": 24,
+        "available": 24,
+        "constraint_violations": 0,
+        "constraint_cases": 4,
+        "order_consistency": 0.5,
+        "unknown_abstention": 1,
+        "constant_answer": false
+      },
+      {
+        "persona": "n03",
+        "correct": 24,
+        "planned": 24,
+        "available": 24,
+        "constraint_violations": 0,
+        "constraint_cases": 4,
+        "order_consistency": 0.75,
+        "unknown_abstention": 1,
+        "constant_answer": false
+      },
+      {
+        "persona": "n04",
+        "correct": 21,
+        "planned": 24,
+        "available": 24,
+        "constraint_violations": 0,
+        "constraint_cases": 4,
+        "order_consistency": 0.75,
+        "unknown_abstention": 1,
+        "constant_answer": false
+      }
+    ],
+    "passed": false
+  },
+  "action_control_development": {
+    "stage": "decoder_development_only",
+    "scores": {
+      "correct": 45,
+      "planned": 48,
+      "available": 48,
+      "accuracy": 0.9375,
+      "constraint_violations": 0,
+      "constraint_cases": 8,
+      "order_consistency": 1,
+      "unknown_abstention": 1,
+      "twins_correct": 3,
+      "twins_cases": 3,
+      "per_persona": [
+        {
+          "persona": "n01",
+          "correct": 24,
+          "planned": 24,
+          "available": 24,
+          "constraint_violations": 0,
+          "constraint_cases": 4,
+          "order_consistency": 1,
+          "unknown_abstention": 1,
+          "constant_answer": false
+        },
+        {
+          "persona": "n02",
+          "correct": 21,
+          "planned": 24,
+          "available": 24,
+          "constraint_violations": 0,
+          "constraint_cases": 4,
+          "order_consistency": 1,
+          "unknown_abstention": 1,
+          "constant_answer": false
+        }
+      ]
+    },
+    "evidence_issues": {
+      "n01": [],
+      "n02": []
+    },
+    "original_exact_quote_validation_failure_preserved": true,
+    "protocol_change": "Decision selection text checked exactly; supporting quotes become a separate diagnostic. Context facts are not preference evidence."
+  },
+  "fresh_transfer_original": {
+    "schema_version": 1,
+    "snapshot_id": "9a9941cd0d67ac6f21e85e5bfe2e74b6fd560dbd91a370a6374661be88891569",
+    "origin": "fully_synthetic",
+    "stage": "pre_frozen_holdout_evaluated",
+    "conditions": {
+      "none": {
+        "correct": 0,
+        "planned": 48,
+        "available": 48,
+        "accuracy": 0.0,
+        "constraint_violations": 0,
+        "constraint_cases": 8,
+        "order_consistency": 0,
+        "unknown_abstention": 1,
+        "twins_correct": 0,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 0,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 0,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 0,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 0,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      },
+      "trajectory": {
+        "correct": 48,
+        "planned": 48,
+        "available": 48,
+        "accuracy": 1.0,
+        "constraint_violations": 0,
+        "constraint_cases": 8,
+        "order_consistency": 1,
+        "unknown_abstention": 1,
+        "twins_correct": 3,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      },
+      "detailed": {
+        "correct": 48,
+        "planned": 48,
+        "available": 48,
+        "accuracy": 1.0,
+        "constraint_violations": 0,
+        "constraint_cases": 8,
+        "order_consistency": 1,
+        "unknown_abstention": 1,
+        "twins_correct": 3,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      },
+      "legacy": {
+        "correct": 48,
+        "planned": 48,
+        "available": 48,
+        "accuracy": 1.0,
+        "constraint_violations": 0,
+        "constraint_cases": 8,
+        "order_consistency": 1,
+        "unknown_abstention": 1,
+        "twins_correct": 3,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      },
+      "compact": {
+        "correct": 24,
+        "planned": 48,
+        "available": 24,
+        "accuracy": 0.5,
+        "constraint_violations": 4,
+        "constraint_cases": 8,
+        "order_consistency": 0.5,
+        "unknown_abstention": 0.5,
+        "twins_correct": 0,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 0,
+            "planned": 24,
+            "available": 0,
+            "constraint_violations": 4,
+            "constraint_cases": 4,
+            "order_consistency": 0,
+            "unknown_abstention": 0,
+            "constant_answer": null
+          },
+          {
+            "persona": "t02",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      },
+      "wrong_person": {
+        "correct": 21,
+        "planned": 48,
+        "available": 24,
+        "accuracy": 0.4375,
+        "constraint_violations": 4,
+        "constraint_cases": 8,
+        "order_consistency": 0.5,
+        "unknown_abstention": 0.5,
+        "twins_correct": 0,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 21,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 0,
+            "planned": 24,
+            "available": 0,
+            "constraint_violations": 4,
+            "constraint_cases": 4,
+            "order_consistency": 0,
+            "unknown_abstention": 0,
+            "constant_answer": null
+          }
+        ]
+      },
+      "oracle": {
+        "correct": 48,
+        "planned": 48,
+        "available": 48,
+        "accuracy": 1.0,
+        "constraint_violations": 0,
+        "constraint_cases": 8,
+        "order_consistency": 1,
+        "unknown_abstention": 1,
+        "twins_correct": 3,
+        "twins_cases": 3,
+        "per_persona": [
+          {
+            "persona": "t01",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          },
+          {
+            "persona": "t02",
+            "correct": 24,
+            "planned": 24,
+            "available": 24,
+            "constraint_violations": 0,
+            "constraint_cases": 4,
+            "order_consistency": 1,
+            "unknown_abstention": 1,
+            "constant_answer": false
+          }
+        ]
+      }
+    },
+    "decoder_gate": {
+      "correct": 48,
+      "planned": 48,
+      "available": 48,
+      "accuracy": 1.0,
+      "constraint_violations": 0,
+      "constraint_cases": 8,
+      "order_consistency": 1,
+      "unknown_abstention": 1,
+      "twins_correct": 3,
+      "twins_cases": 3,
+      "per_persona": [
+        {
+          "persona": "t01",
+          "correct": 24,
+          "planned": 24,
+          "available": 24,
+          "constraint_violations": 0,
+          "constraint_cases": 4,
+          "order_consistency": 1,
+          "unknown_abstention": 1,
+          "constant_answer": false
+        },
+        {
+          "persona": "t02",
+          "correct": 24,
+          "planned": 24,
+          "available": 24,
+          "constraint_violations": 0,
+          "constraint_cases": 4,
+          "order_consistency": 1,
+          "unknown_abstention": 1,
+          "constant_answer": false
+        }
+      ],
+      "passed": true
+    },
+    "failures": {
+      "t01/compress": "Anchor is not an exact profile substring"
+    },
+    "first_pass_profiles": 2,
+    "final_profiles": 2,
+    "planned_profiles": 2,
+    "decoder_contract": "action_text_exact_option_binding; supporting quotes diagnostic only",
+    "generator_model": "gpt-6-luna",
+    "decoder_model": "gpt-6.1-sol",
+    "completed_model_calls": 16,
+    "calls_limit": 23,
+    "format_repairs_used": 0,
+    "behavioral_fidelity_verified_for_real_people": false,
+    "interpretation": "Paired new-person comparison; authored family only. Results are development data after inspection."
+  },
+  "fresh_transfer_offline_readout": {
+    "schema_version": 1,
+    "snapshot_id": "9a9941cd0d67ac6f21e85e5bfe2e74b6fd560dbd91a370a6374661be88891569",
+    "origin": "fully_synthetic",
+    "posthoc_readout": true,
+    "original_reports_unchanged": true,
+    "conditions": {
+      "none": {
+        "primary": {
+          "correct": 0,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 48,
+          "end_to_end_rate": 0.0,
+          "available_rate": 0.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 0,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 9,
+          "end_to_end_rate": 0.0,
+          "available_rate": 0.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 0,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 15,
+          "end_to_end_rate": 0.0,
+          "available_rate": 0.0
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 3,
+          "end_to_end_rate": 0.0,
+          "available_rate": 0.0
+        },
+        "order": {
+          "correct": 0,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 8,
+          "end_to_end_rate": 0.0,
+          "available_rate": 0.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      },
+      "trajectory": {
+        "primary": {
+          "correct": 48,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 9,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 15,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 3,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "order": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      },
+      "detailed": {
+        "primary": {
+          "correct": 48,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 9,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 15,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 3,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "order": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      },
+      "legacy": {
+        "primary": {
+          "correct": 48,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 9,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 15,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 3,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "order": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      },
+      "compact": {
+        "primary": {
+          "correct": 24,
+          "planned": 48,
+          "available": 24,
+          "missing": 24,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 4,
+          "planned": 8,
+          "available": 4,
+          "missing": 4,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 3,
+          "planned": 9,
+          "available": 3,
+          "missing": 6,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.3333333333333333,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 9,
+          "planned": 15,
+          "available": 9,
+          "missing": 6,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.6,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 4,
+          "planned": 8,
+          "available": 4,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 2,
+          "planned": 4,
+          "available": 2,
+          "missing": 2,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0
+        }
+      },
+      "wrong_person": {
+        "primary": {
+          "correct": 21,
+          "planned": 48,
+          "available": 24,
+          "missing": 24,
+          "observed_incorrect": 3,
+          "end_to_end_rate": 0.4375,
+          "available_rate": 0.875
+        },
+        "current_instructions": {
+          "correct": 4,
+          "planned": 8,
+          "available": 4,
+          "missing": 4,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 3,
+          "planned": 9,
+          "available": 6,
+          "missing": 3,
+          "observed_incorrect": 3,
+          "end_to_end_rate": 0.3333333333333333,
+          "available_rate": 0.5
+        },
+        "counterfactual_required_stable": {
+          "correct": 6,
+          "planned": 15,
+          "available": 6,
+          "missing": 9,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.4,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 0,
+          "planned": 3,
+          "available": 0,
+          "missing": 3,
+          "observed_incorrect": 0,
+          "end_to_end_rate": null,
+          "available_rate": null
+        },
+        "order": {
+          "correct": 4,
+          "planned": 8,
+          "available": 4,
+          "missing": 4,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 2,
+          "planned": 4,
+          "available": 2,
+          "missing": 2,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 0.5,
+          "available_rate": 1.0
+        }
+      },
+      "oracle": {
+        "primary": {
+          "correct": 48,
+          "planned": 48,
+          "available": 48,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "current_instructions": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0,
+          "observed_violations": 0
+        },
+        "counterfactual_required_flip": {
+          "correct": 9,
+          "planned": 9,
+          "available": 9,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "counterfactual_required_stable": {
+          "correct": 15,
+          "planned": 15,
+          "available": 15,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "twins": {
+          "correct": 3,
+          "planned": 3,
+          "available": 3,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "order": {
+          "correct": 8,
+          "planned": 8,
+          "available": 8,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        },
+        "unknown": {
+          "correct": 4,
+          "planned": 4,
+          "available": 4,
+          "missing": 0,
+          "observed_incorrect": 0,
+          "end_to_end_rate": 1.0,
+          "available_rate": 1.0
+        }
+      }
+    },
+    "memory_replacement_characters": {
+      "t01": {
+        "detailed": 3
+      },
+      "t02": {}
+    },
+    "probability_metrics": null,
+    "real_person_fidelity_verified": false,
+    "interpretation": "Missing outputs count as end-to-end misses only when the condition ran at least once. Instruction violations count only observed incorrect outputs. No logits, no RIG."
+  },
+  "actual_memory_tokens": {
+    "t01": {
+      "none": 0,
+      "generic": 26,
+      "trajectory": 3875,
+      "detailed": 718,
+      "legacy": 196,
+      "wrong_person": 232,
+      "oracle": 85
+    },
+    "t02": {
+      "none": 0,
+      "generic": 26,
+      "trajectory": 3869,
+      "detailed": 576,
+      "legacy": 192,
+      "compact": 232,
+      "oracle": 83
+    }
+  },
+  "tokenizer": {
+    "model_sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa",
+    "model_name": "Qwen3 0.6B",
+    "llama_cpp_python": "0.3.36",
+    "inference_performed": false,
+    "network": false,
+    "token_counts_include_complete_memory_text": true
+  },
+  "paired_cost_cohort": [
+    "t02"
+  ],
+  "candidate_token_ratio_to_same_person_old": 1.2083333333333333,
+  "promotion": {
+    "promoted": false,
+    "reason": "No improvement over old prompt; 1/2 structural candidate failures; semantic audit warnings; no complete matched-person comparison for new candidate.",
+    "default_unchanged": true
+  },
+  "real_person_fidelity_verified": false,
+  "cross_vendor_fidelity_verified": false,
+  "probability_metrics": null,
+  "limitations": [
+    "Two new authored policies, correlated variants, same four rule families.",
+    "Training assistant proposals shared in one batch with code-generated feedback; not adaptive multi-round self-play in this stage.",
+    "Original reports retain bookkeeping that counts missing predictions as constraint failures; offline readout separates observed violations and missing.",
+    "No-memory abstention is not a forced-choice random baseline.",
+    "All inspected results are now development data.",
+    "Frozen two-person stopping text says four people in error; actual global extraction repair limit is one."
+  ]
+}

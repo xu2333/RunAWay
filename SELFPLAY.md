@@ -2,6 +2,8 @@
 
 This benchmark tests **behavioral information transfer in a defined synthetic world**. It cannot establish fidelity to actual people. Gold choices come from executable policies, not an LLM grading its own writing. Nothing reads the user's history or imports the 700 fictional entertainment cards.
 
+The [condition/action follow-up](DECISION-MEMORY.md) adds decoder gates, current-instruction controls, a new paired cohort and a failure-aware readout. Its 38-call experiment did not justify replacing the existing prompt.
+
 ## What runs
 
 Six authored policies form three matched pairs. Each pair differs in exactly one rule: whether irreversibility changes planning, whether reversible repetitive work is automated, or whether public feedback changes tone. A fourth preference tests changing a design after repeated complaints. These are narrow decision procedures, not human personality types. Changing `--seed` alone changes IDs and option ordering, not these policies or settings; it is not a new held-out population. The suite does not evaluate the 700 entertainment cards.

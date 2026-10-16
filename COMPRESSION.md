@@ -40,3 +40,7 @@ The current offline demo includes the repaired candidate. The [saved comparison]
 - **The initial `build` path still uses its earlier paragraph-level check.** `profile compress` is the explicit stricter pass; it does not require repeating source extraction.
 
 The objective is to reduce the complete portable representation while retaining distinctions that change judgments. A shorter candidate that drops those distinctions fails even when it sounds convincing.
+
+## Experimental condition/action branches
+
+`profile decision-plan` and `profile decision-compress` provide a separate evidence-linked candidate path, with one branch per claim and a strict semantic-audit export gate. The synthetic follow-up did not beat the old portable prompt and is not promoted. See [results, limitations and commands](DECISION-MEMORY.md).
