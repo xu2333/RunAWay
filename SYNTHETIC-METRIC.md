@@ -77,7 +77,9 @@ It is undefined when the denominator is nonpositive or at most `1e-9`. Negative 
 
 ## Score an actual compressor later
 
-The [actual product adapters](PRODUCTION-ADAPTERS.md) now connect browser extraction and program-bound compression to this metric. Their offline tests verify the integration; actual LLM quality still requires an independently approved service run.
+The [actual product adapters](PRODUCTION-ADAPTERS.md) connect browser extraction and program-bound compression to this metric. Their offline tests verify integration without measuring LLM quality.
+
+That first approved service pilot is now complete: [both actual paths matched the no-memory baseline](PILOT-RESULTS.md). The result exposes missing temporal support and a task mismatch; it is separate from the reference calibration above.
 
 Use the isolated history jobs to generate memories, then the isolated decoder jobs with the actual selected memories. Decode to the categorical IDs in `answer_options`, not arbitrary paraphrases. A prediction file maps `persona_id` to `{query_id: answer_id}`:
 

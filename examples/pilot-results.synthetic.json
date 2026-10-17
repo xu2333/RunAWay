@@ -1,0 +1,512 @@
+{
+  "origin": "fully_synthetic",
+  "decision": "D-0015",
+  "status": "complete",
+  "cli_attempts": 24,
+  "calls_upper_bound": 24,
+  "model_calls_after_batch": 0,
+  "all_calls_have_usage": true,
+  "no_retries": true,
+  "old_batch_unchanged": true,
+  "generation_timeout_seconds": 180,
+  "max_observed_generation_seconds": 15.65,
+  "models_requested": {
+    "generator": "gpt-6-luna",
+    "reader": "gpt-6.1-sol"
+  },
+  "resolved_models": "Not reported by CLI; do not infer identity from requested alias",
+  "tokenizer": {
+    "kind": "existing_local_gguf_tokenizer",
+    "model_sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa"
+  },
+  "people": 2,
+  "queries_per_person": 24,
+  "history_tokens": {
+    "p-ed67b26c4c50": 636,
+    "p-a17ef10951e1": 638
+  },
+  "control_gate_passed": true,
+  "sensitivity_gate_passed": true,
+  "controls": {
+    "full_history": {
+      "correct": 48,
+      "planned": 48,
+      "hard": {
+        "planned": 4,
+        "incorrect": 0,
+        "observed_violations": 0,
+        "abstentions": 0,
+        "missing": 0
+      },
+      "matched": {
+        "planned": 3,
+        "correct": 3,
+        "missing": 0
+      }
+    },
+    "none": {
+      "correct": 4,
+      "planned": 48,
+      "hard": {
+        "planned": 4,
+        "incorrect": 4,
+        "observed_violations": 0,
+        "abstentions": 4,
+        "missing": 0
+      },
+      "matched": {
+        "planned": 3,
+        "correct": 0,
+        "missing": 0
+      }
+    },
+    "wrong_person_history": {
+      "correct": 42,
+      "planned": 48,
+      "hard": {
+        "planned": 4,
+        "incorrect": 0,
+        "observed_violations": 0,
+        "abstentions": 0,
+        "missing": 0
+      },
+      "matched": {
+        "planned": 3,
+        "correct": 0,
+        "missing": 0
+      }
+    },
+    "delete_exception_history": {
+      "correct": 43,
+      "planned": 48,
+      "hard": {
+        "planned": 4,
+        "incorrect": 0,
+        "observed_violations": 0,
+        "abstentions": 0,
+        "missing": 0
+      },
+      "matched": {
+        "planned": 3,
+        "correct": 0,
+        "missing": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "condition": "current_browser",
+      "budget": 128,
+      "mean_memory_units": 81.0,
+      "correct": 4,
+      "planned": 48,
+      "accuracy": 0.08333333333333333,
+      "normalized_accuracy_retention": 0.0,
+      "hard_constraint_errors": 4,
+      "hard_constraint_abstentions": 4,
+      "observed_hard_constraint_violations": 0,
+      "matched_correct": 0,
+      "matched_planned": 3,
+      "missing": 0,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      }
+    },
+    {
+      "condition": "current_browser",
+      "budget": 384,
+      "mean_memory_units": 136.0,
+      "correct": 4,
+      "planned": 48,
+      "accuracy": 0.08333333333333333,
+      "normalized_accuracy_retention": 0.0,
+      "hard_constraint_errors": 4,
+      "hard_constraint_abstentions": 4,
+      "observed_hard_constraint_violations": 0,
+      "matched_correct": 0,
+      "matched_planned": 3,
+      "missing": 0,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      }
+    },
+    {
+      "condition": "new_bound",
+      "budget": 128,
+      "mean_memory_units": 107.5,
+      "correct": 4,
+      "planned": 48,
+      "accuracy": 0.08333333333333333,
+      "normalized_accuracy_retention": 0.0,
+      "hard_constraint_errors": 4,
+      "hard_constraint_abstentions": 4,
+      "observed_hard_constraint_violations": 0,
+      "matched_correct": 0,
+      "matched_planned": 3,
+      "missing": 0,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      }
+    },
+    {
+      "condition": "new_bound",
+      "budget": 384,
+      "mean_memory_units": 157.0,
+      "correct": 4,
+      "planned": 48,
+      "accuracy": 0.08333333333333333,
+      "normalized_accuracy_retention": 0.0,
+      "hard_constraint_errors": 4,
+      "hard_constraint_abstentions": 4,
+      "observed_hard_constraint_violations": 0,
+      "matched_correct": 0,
+      "matched_planned": 3,
+      "missing": 0,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      }
+    }
+  ],
+  "all_memory_reader_answers_unknown": true,
+  "memory_reader_answer_counts": {
+    "U": 192
+  },
+  "dated_anchors_present_in_memory": 0,
+  "costs_by_stage": {
+    "new_compression": {
+      "calls": 4,
+      "input_tokens": 27079,
+      "output_tokens": 1744
+    },
+    "full_history": {
+      "calls": 2,
+      "input_tokens": 19345,
+      "output_tokens": 674
+    },
+    "memory_reader": {
+      "calls": 8,
+      "input_tokens": 73111,
+      "output_tokens": 4221
+    },
+    "delete_exception_history": {
+      "calls": 2,
+      "input_tokens": 19156,
+      "output_tokens": 676
+    },
+    "shared_extraction": {
+      "calls": 4,
+      "input_tokens": 31502,
+      "output_tokens": 5893
+    },
+    "wrong_person_history": {
+      "calls": 2,
+      "input_tokens": 19347,
+      "output_tokens": 674
+    },
+    "none": {
+      "calls": 2,
+      "input_tokens": 17974,
+      "output_tokens": 693
+    }
+  },
+  "known_service_usage": {
+    "input_tokens": 207514,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 14575,
+    "reasoning_output_tokens": 3448,
+    "total_tokens": 222089
+  },
+  "unknown_usage_calls": 0,
+  "ranking_signal": "degenerate_no_winner",
+  "product_llm_quality_measured": true,
+  "real_person_fidelity_verified": false,
+  "interpretation": "Both actual compressors match the no-memory control on this dated-query protocol; all192 memory answers are U. This exposes a temporal representation/protocol mismatch, not evidence that either method reproduces real taste.",
+  "cause_status": "All8 prose memories lack explicit day/record anchors. Source quotations/scopes in shared extraction also omit date prefixes. These observations are consistent with lost temporal support; no causal repair ablation was run.",
+  "task_fit_limit": "The frozen primary includes retrospective state reconstruction, unlike an exclusively current-taste carry-on task. Do not change denominator or claim a winner post hoc.",
+  "next_hypothesis": "Define current-choice versus retrospective-memory requirements explicitly; preserve time/validity anchors where required, then use a separately frozen unseen-choice test. No more service calls in this batch."
+}

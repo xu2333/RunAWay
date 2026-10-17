@@ -58,6 +58,9 @@ test must hold out authentic future choices and compare against full history,
 no memory and similar-but-different people. That test cannot be replaced by a
 model judging its own resemblance to a person.
 
+The first actual service batch is now recorded in [pilot results](PILOT-RESULTS.md),
+including its all-unknown compressed-memory outputs and an offline evidence replay.
+
 ## Timeout evidence
 
 Codex's [documented JSONL interface](https://learn.chatgpt.com/docs/non-interactive-mode)
