@@ -15,7 +15,16 @@ class PublishedDevelopmentTests(unittest.TestCase):
         summary=json.loads((base/'summary.synthetic.json').read_text())
         self.assertEqual(world['purpose'],'development')
         self.assertEqual(world['origin'],'fully_synthetic')
-        self.assertEqual(fs.calibrate(world),stored)
+        computed=fs.calibrate(world)
+        # Summing display ratios differs by a few ULPs across Python versions.
+        # Only this derived mean allows a tiny absolute tolerance. Counts, raw
+        # ratios, errors, contrasts and every other field still compare exactly.
+        for name,tasks in computed['controls'].items():
+            for task,row in tasks.items():
+                wanted=stored['controls'][name][task]['macro_cluster_accuracy']
+                self.assertAlmostEqual(row['macro_cluster_accuracy'],wanted,delta=1e-12)
+                row['macro_cluster_accuracy']=wanted
+        self.assertEqual(computed,stored)
         self.assertEqual(summary['paired_clusters'],6)
         self.assertEqual(summary['people'],12)
         self.assertEqual(summary['external_model_calls'],0)
