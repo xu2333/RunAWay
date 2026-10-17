@@ -1,0 +1,2225 @@
+{
+  "origin": "fully_synthetic",
+  "decision": "D-0016",
+  "status": "complete",
+  "proposal_id": "06b42acb7c6d8d362ce0c8e781d2e13bd30eec7a853c0f6bd2553cf8009af63c",
+  "config_id": "d6ea1a47238659b808b302db365dba54c6d52f6824da3677e0bfb2d328e14a30",
+  "cli_attempts": 24,
+  "calls_cap": 24,
+  "retries": 0,
+  "call_timeout_seconds": 180,
+  "max_generation_seconds": 12.945,
+  "stage_attempts": {
+    "full_history": 2,
+    "wrong_person_history": 2,
+    "current_policy_oracle": 2,
+    "none": 2,
+    "shared_extraction": 2,
+    "new_compression": 2,
+    "actual_memory_reader": 4,
+    "diagnostic": 8
+  },
+  "known_service_usage": {
+    "input_tokens": 209480,
+    "cached_input_tokens": 23680,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10371,
+    "reasoning_output_tokens": 1726,
+    "total_tokens": 219851
+  },
+  "stage_usage": {
+    "current_policy_oracle": {
+      "calls": 2,
+      "input_tokens": 17291,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 640,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 17931
+    },
+    "diagnostic": {
+      "calls": 8,
+      "input_tokens": 74318,
+      "cached_input_tokens": 14208,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3403,
+      "reasoning_output_tokens": 654,
+      "total_tokens": 77721
+    },
+    "actual_memory_reader": {
+      "calls": 4,
+      "input_tokens": 34648,
+      "cached_input_tokens": 9472,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1349,
+      "reasoning_output_tokens": 65,
+      "total_tokens": 35997
+    },
+    "new_compression": {
+      "calls": 2,
+      "input_tokens": 13216,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 502,
+      "reasoning_output_tokens": 191,
+      "total_tokens": 13718
+    },
+    "wrong_person_history": {
+      "calls": 2,
+      "input_tokens": 18543,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 698,
+      "reasoning_output_tokens": 54,
+      "total_tokens": 19241
+    },
+    "full_history": {
+      "calls": 2,
+      "input_tokens": 18539,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 712,
+      "reasoning_output_tokens": 68,
+      "total_tokens": 19251
+    },
+    "shared_extraction": {
+      "calls": 2,
+      "input_tokens": 15825,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2381,
+      "reasoning_output_tokens": 652,
+      "total_tokens": 18206
+    },
+    "none": {
+      "calls": 2,
+      "input_tokens": 17100,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 686,
+      "reasoning_output_tokens": 42,
+      "total_tokens": 17786
+    }
+  },
+  "primary_rows": [
+    {
+      "condition": "current_browser",
+      "current": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 34,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.7083333333333334,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "memory_units": [
+        90,
+        100
+      ],
+      "mean_memory_units": 95.0,
+      "normalized_accuracy_retention": 1.0,
+      "source_units": {
+        "p-acd0e72d0ad6": 672,
+        "p-64861a04ad1b": 674
+      },
+      "pooled_memory_to_source_token_ratio": 0.1411589895988113
+    },
+    {
+      "condition": "new_bound",
+      "current": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 34,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.7083333333333334,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "memory_units": [
+        84,
+        108
+      ],
+      "mean_memory_units": 96.0,
+      "normalized_accuracy_retention": 1.0,
+      "source_units": {
+        "p-acd0e72d0ad6": 672,
+        "p-64861a04ad1b": 674
+      },
+      "pooled_memory_to_source_token_ratio": 0.1426448736998514
+    }
+  ],
+  "fresh_scores": {
+    "full_history": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 16,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "updates": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 48,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 16,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    },
+    "wrong_person_history": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 28,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 0.875,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 20,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 4,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 14,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 16,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "updates": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 44,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.9166666666666666,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 16,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 20,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 4,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 14,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    },
+    "current_policy_oracle": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 34,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.7083333333333334,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    },
+    "none": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 8,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 0.25,
+        "layers": {
+          "strength": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 0,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 0,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 0,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 4,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 4,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 10,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.20833333333333334,
+        "layers": {
+          "strength": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 0,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 0,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 6,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 4,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    },
+    "current_browser": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 34,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.7083333333333334,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    },
+    "new_bound": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 32,
+        "planned": 32,
+        "missing": 0,
+        "accuracy": 1.0,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 0,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 2,
+        "planned": 16,
+        "missing": 0,
+        "accuracy": 0.125,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 4,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 2,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 0,
+          "planned": 0
+        },
+        "option_order_pairs": {
+          "correct": 0,
+          "consistent": 0,
+          "planned": 0,
+          "missing": 0
+        }
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 34,
+        "planned": 48,
+        "missing": 0,
+        "accuracy": 0.7083333333333334,
+        "layers": {
+          "strength": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 8,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 12,
+            "planned": 16,
+            "missing": 0
+          },
+          "conditions": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 8,
+            "planned": 8,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 4,
+            "planned": 6,
+            "missing": 0
+          },
+          "distinctions": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 6,
+            "planned": 6,
+            "missing": 0
+          },
+          "revocation_of_revocation": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraint_errors": 2,
+        "observed_hard_violations": 0,
+        "matched_distinctions": {
+          "correct": 2,
+          "planned": 2
+        },
+        "option_order_pairs": {
+          "correct": 16,
+          "consistent": 16,
+          "planned": 16,
+          "missing": 0
+        }
+      }
+    }
+  },
+  "gates": {
+    "full_history": {
+      "passed": true,
+      "checks": {
+        "current_accuracy": true,
+        "zero_hard_errors": true,
+        "all_matched_distinctions": true,
+        "option_consistency": true,
+        "layer_strength": true,
+        "layer_conditions": true,
+        "layer_exceptions": true,
+        "layer_hard_constraints": true,
+        "layer_updates": true,
+        "layer_revocations": true,
+        "layer_current_instruction": true,
+        "layer_unknowns": true
+      },
+      "criteria": {
+        "current_accuracy_min": 0.9,
+        "hard_constraint_errors_max": 0,
+        "required_layer_accuracy_min": 0.9,
+        "required_layers": [
+          "strength",
+          "conditions",
+          "exceptions",
+          "hard_constraints",
+          "updates",
+          "revocations",
+          "current_instruction",
+          "unknowns"
+        ],
+        "matched_correct_fraction_min": 1.0,
+        "option_consistency_min": 0.9
+      },
+      "on_failure": "Stop all later calls, including compression, actual-memory reads and all8old-data diagnostics."
+    },
+    "wrong_person_history": {
+      "passed": true,
+      "checks": {
+        "positive_matched_denominator": true,
+        "same_matched_denominator_as_full": true,
+        "matched_correct_lower_than_full": true
+      },
+      "criteria": {
+        "matched_planned_positive": true,
+        "matched_planned_equals_full": true,
+        "matched_correct_strictly_less_than_full": true
+      },
+      "on_failure": "Stop all later calls, including compression, actual-memory reads and all8old-data diagnostics."
+    },
+    "current_policy_oracle": {
+      "passed": true,
+      "checks": {
+        "current_accuracy": true,
+        "zero_hard_errors": true,
+        "all_matched_distinctions": true,
+        "option_consistency": true,
+        "layer_strength": true,
+        "layer_conditions": true,
+        "layer_exceptions": true,
+        "layer_hard_constraints": true,
+        "layer_updates": true,
+        "layer_revocations": true,
+        "layer_current_instruction": true,
+        "layer_unknowns": true
+      },
+      "criteria": {
+        "current_accuracy_min": 0.9,
+        "hard_constraint_errors_max": 0,
+        "required_layer_accuracy_min": 0.9,
+        "required_layers": [
+          "strength",
+          "conditions",
+          "exceptions",
+          "hard_constraints",
+          "updates",
+          "revocations",
+          "current_instruction",
+          "unknowns"
+        ],
+        "matched_correct_fraction_min": 1.0,
+        "option_consistency_min": 0.9
+      },
+      "on_failure": "Stop all later calls, including compression, actual-memory reads and all8old-data diagnostics."
+    }
+  },
+  "legacy_diagnostic_scores": {
+    "reader_only": {
+      "correct": 4,
+      "planned": 48,
+      "available": 48,
+      "missing": 0,
+      "accuracy": 0.08333333333333333,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      },
+      "worst_critical_accuracy": 0.0,
+      "hard_constraints": {
+        "planned": 4,
+        "incorrect": 4,
+        "observed_violations": 0,
+        "abstentions": 4,
+        "missing": 0
+      },
+      "matched_person_disagreements": {
+        "planned": 3,
+        "correct": 0,
+        "missing": 0
+      },
+      "per_person": [
+        {
+          "id": "p-ed67b26c4c50",
+          "correct": 2,
+          "planned": 24,
+          "available": 24
+        },
+        {
+          "id": "p-a17ef10951e1",
+          "correct": 2,
+          "planned": 24,
+          "available": 24
+        }
+      ]
+    },
+    "cutoff_only": {
+      "correct": 9,
+      "planned": 48,
+      "available": 48,
+      "missing": 0,
+      "accuracy": 0.1875,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 4,
+          "available": 6,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.6666666666666666
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 1,
+          "available": 6,
+          "abstentions": 5,
+          "missing": 0,
+          "accuracy": 0.16666666666666666
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      },
+      "worst_critical_accuracy": 0.0,
+      "hard_constraints": {
+        "planned": 4,
+        "incorrect": 4,
+        "observed_violations": 0,
+        "abstentions": 4,
+        "missing": 0
+      },
+      "matched_person_disagreements": {
+        "planned": 3,
+        "correct": 2,
+        "missing": 0
+      },
+      "per_person": [
+        {
+          "id": "p-ed67b26c4c50",
+          "correct": 4,
+          "planned": 24,
+          "available": 24
+        },
+        {
+          "id": "p-a17ef10951e1",
+          "correct": 5,
+          "planned": 24,
+          "available": 24
+        }
+      ]
+    },
+    "reader_and_cutoff": {
+      "correct": 4,
+      "planned": 48,
+      "available": 48,
+      "missing": 0,
+      "accuracy": 0.08333333333333333,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 0,
+          "available": 10,
+          "abstentions": 10,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 0,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 0,
+          "available": 6,
+          "abstentions": 6,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 0,
+          "available": 4,
+          "abstentions": 4,
+          "missing": 0,
+          "accuracy": 0.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 2,
+          "available": 8,
+          "abstentions": 8,
+          "missing": 0,
+          "accuracy": 0.25
+        }
+      },
+      "worst_critical_accuracy": 0.0,
+      "hard_constraints": {
+        "planned": 4,
+        "incorrect": 4,
+        "observed_violations": 0,
+        "abstentions": 4,
+        "missing": 0
+      },
+      "matched_person_disagreements": {
+        "planned": 3,
+        "correct": 0,
+        "missing": 0
+      },
+      "per_person": [
+        {
+          "id": "p-ed67b26c4c50",
+          "correct": 2,
+          "planned": 24,
+          "available": 24
+        },
+        {
+          "id": "p-a17ef10951e1",
+          "correct": 2,
+          "planned": 24,
+          "available": 24
+        }
+      ]
+    },
+    "content_complete_prose": {
+      "correct": 44,
+      "planned": 48,
+      "available": 48,
+      "missing": 0,
+      "accuracy": 0.9166666666666666,
+      "strata": {
+        "conditions": {
+          "planned": 10,
+          "correct": 10,
+          "available": 10,
+          "abstentions": 0,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "distinctions": {
+          "planned": 6,
+          "correct": 4,
+          "available": 6,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.6666666666666666
+        },
+        "exceptions": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 0,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "facts": {
+          "planned": 6,
+          "correct": 6,
+          "available": 6,
+          "abstentions": 0,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "hard_constraints": {
+          "planned": 4,
+          "correct": 4,
+          "available": 4,
+          "abstentions": 0,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "revocations": {
+          "planned": 6,
+          "correct": 4,
+          "available": 6,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 0.6666666666666666
+        },
+        "strength": {
+          "planned": 4,
+          "correct": 4,
+          "available": 4,
+          "abstentions": 0,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "unknowns": {
+          "planned": 2,
+          "correct": 2,
+          "available": 2,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        },
+        "updates": {
+          "planned": 8,
+          "correct": 8,
+          "available": 8,
+          "abstentions": 2,
+          "missing": 0,
+          "accuracy": 1.0
+        }
+      },
+      "worst_critical_accuracy": 0.6666666666666666,
+      "hard_constraints": {
+        "planned": 4,
+        "incorrect": 0,
+        "observed_violations": 0,
+        "abstentions": 0,
+        "missing": 0
+      },
+      "matched_person_disagreements": {
+        "planned": 3,
+        "correct": 2,
+        "missing": 0
+      },
+      "per_person": [
+        {
+          "id": "p-ed67b26c4c50",
+          "correct": 22,
+          "planned": 24,
+          "available": 24
+        },
+        {
+          "id": "p-a17ef10951e1",
+          "correct": 22,
+          "planned": 24,
+          "available": 24
+        }
+      ]
+    }
+  },
+  "original_D0015_unchanged": true,
+  "comparison_interpretable": true,
+  "scientific_result": "current_choice_tie_at_ceiling_historical_recovery_failed",
+  "real_person_fidelity_verified": false,
+  "limitations": [
+    "Two synthetic eval people from one near-identical pair; 32 current items are 8 scenarios x 2 orders x 2 people, not 32 independent preferences.",
+    "Two matched items are option orders of one underlying conditional distinction. Wrong-person scores 28/32.",
+    "Same service, independent requested models; resolved model identities unavailable. No cross-provider or human-fidelity validation.",
+    "Current-policy oracle and complete prose are unbudgeted answer-bearing reader controls, never compressor inputs.",
+    "Old-data interventions are consumed-data diagnostics; new primary scores cannot be treated as an improvement over D0015 because cohort, task and reader contract differ.",
+    "Normalized accuracy retention is not log-probability relative information gain.",
+    "No repeated generations, confidence interval or population significance claim."
+  ]
+}

@@ -1,5 +1,8 @@
 # Offline executor acceptance before a new service batch
 
+This is the pre-execution acceptance record. The separately approved one-time
+batch has since completed; see [results and limitations](COMPARISON-RESULTS.md).
+
 The proposed24-call comparison now has a frozen direct runner,
 `runaway.taste_executor.execute`. This preparation makes **zero model calls** and
 does not authorize a new service batch. D-0015's24 calls and negative results

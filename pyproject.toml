@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "runaway-taste"
-version = "0.17.1"
+version = "0.17.2"
 description = "Turn experiences into a portable taste prompt."
 requires-python = ">=3.9"
 readme = "QUICKSTART.md"
