@@ -1,5 +1,7 @@
 # Stress-test the metric before trusting a compression score
 
+D-0018: [Subsequent approved service comparison and retained failure denominators](STRESS-RESULTS.md). This document preserves the earlier offline calibration.
+
 The new suite detects distinct kinds of semantic loss across six preference
 domains. **These are deterministic development controls, not model performance.**
 No new inference was run. The [last actual comparison](COMPARISON-RESULTS.md)
