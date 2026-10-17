@@ -1,6 +1,11 @@
 """One extraction call, or a portable request for any existing chat interface."""
 import json
+from collections import Counter
+import hashlib
+import os
 from pathlib import Path
+import re
+import signal
 import shutil
 import subprocess
 import tempfile
@@ -21,6 +26,75 @@ SCHEMA = {
     },
 }
 SYSTEM = "You are a text-only RunAWay style extractor. Do not use tools or take actions. Return only the requested JSON."
+
+
+class GenerationTimeout(ValueError):
+    """Sanitized, persistable progress; partial content is never a valid answer."""
+    def __init__(self, provenance):
+        super().__init__('Generation timed out; no automatic retry or card produced')
+        self.provenance = provenance
+
+
+def progress_metadata(stdout, stderr):
+    """Do not store messages, reasoning, prompts or arbitrary server error text."""
+    def raw(value):
+        return value if isinstance(value, bytes) else (value or '').encode('utf-8')
+    output, errors = raw(stdout), raw(stderr)
+    types, usage, thread_ids = Counter(), [], []
+    allowed = {'thread.started', 'turn.started', 'turn.completed', 'turn.failed',
+               'item.started', 'item.updated', 'item.completed', 'error'}
+    for line in output.splitlines():
+        try: event = json.loads(line)
+        except (ValueError, UnicodeError): continue
+        if not isinstance(event, dict): continue
+        kind = event.get('type')
+        if isinstance(kind, str) and kind in allowed: types[kind] += 1
+        if kind == 'thread.started' and re.fullmatch(r'[a-fA-F0-9-]{16,80}', str(event.get('thread_id', ''))):
+            thread_ids.append(event['thread_id'])
+        if kind == 'turn.completed' and isinstance(event.get('usage'), dict):
+            value = {k:v for k,v in event['usage'].items()
+                     if k in ('input_tokens','cached_input_tokens','output_tokens') and type(v) is int and v >= 0}
+            if value: usage.append(value)
+    return {'event_counts':dict(types), 'observed_cli_thread_ids':thread_ids,
+            'usage':usage or None, 'usage_status':'observed' if usage else 'unknown',
+            'stdout_bytes':len(output), 'stderr_bytes':len(errors),
+            'stdout_sha256':hashlib.sha256(output).hexdigest(),
+            'stderr_sha256':hashlib.sha256(errors).hexdigest()}
+
+
+def run_bounded(args, prompt, timeout):
+    """Bound collection and cleanup, with an isolated POSIX process group.
+
+    Timeout uses Python's monotonic clock. Wall and monotonic elapsed times are
+    both recorded; neither proves the cause of an upstream stall or host sleep.
+    """
+    start, wall = time.monotonic(), time.time()
+    process = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, text=True, encoding='utf-8',
+                               start_new_session=os.name == 'posix')
+    try:
+        output, errors = process.communicate(prompt, timeout=timeout)
+    except subprocess.TimeoutExpired as exc:
+        cleanup = 'group_kill' if os.name == 'posix' else 'process_kill'
+        try:
+            if os.name == 'posix': os.killpg(process.pid, signal.SIGKILL)
+            else: process.kill()
+        except ProcessLookupError: pass
+        try:
+            output, errors = process.communicate(timeout=2)
+        except subprocess.TimeoutExpired as drain:
+            output, errors = drain.output or exc.output, drain.stderr or exc.stderr
+            cleanup += '_drain_deadline'
+            for pipe in (process.stdin, process.stdout, process.stderr):
+                if pipe is not None: pipe.close()
+            try: process.wait(timeout=2)
+            except subprocess.TimeoutExpired: cleanup += '_parent_unreaped'
+        progress = progress_metadata(output, errors)
+        raise GenerationTimeout({'backend':'codex', 'timeout_seconds':timeout,
+            'elapsed_seconds':round(time.monotonic()-start,3),
+            'wall_elapsed_seconds':round(time.time()-wall,3),
+            'usage':progress['usage'], 'cleanup':cleanup, 'progress':progress}) from None
+    return subprocess.CompletedProcess(args, process.returncode, output, errors)
 
 
 def request(source, kind):
@@ -78,12 +152,19 @@ def codex_generate(prompt, model, timeout=180, schema=None, system=None):
                         "view_image", "memories", "skill_search"]:
             args += ["--disable", feature]
         args += ["-"]
+        # A local version lookup must not erase usage after a completed call.
+        try:
+            cli_version = subprocess.check_output([executable, "--version"], text=True, timeout=5).strip()
+        except (OSError, subprocess.SubprocessError):
+            cli_version = None
         start = time.monotonic()
         try:
-            result = subprocess.run(args, input=prompt, text=True, encoding="utf-8",
-                                    capture_output=True, timeout=timeout)
-        except subprocess.TimeoutExpired as exc:
-            raise ValueError("Generation timed out; no automatic retry or card produced") from exc
+            result = run_bounded(args, prompt, timeout)
+        except GenerationTimeout as exc:
+            exc.provenance['model_requested'] = model
+            exc.provenance['resolved_model'] = None
+            exc.provenance['cli_version'] = cli_version
+            raise
         if result.returncode:
             # Logs may echo input or secrets; do not print them as a generic CLI error.
             raise ValueError("Codex generation failed; check CLI login/version. No card produced.")
@@ -110,4 +191,4 @@ def codex_generate(prompt, model, timeout=180, schema=None, system=None):
         return answers[-1], {"backend": "codex", "model_requested": model,
                              "resolved_model": None, "usage": usage,
                              "elapsed_seconds": round(time.monotonic() - start, 3),
-                             "cli_version": subprocess.check_output([executable, "--version"], text=True).strip()}
+                             "cli_version": cli_version}

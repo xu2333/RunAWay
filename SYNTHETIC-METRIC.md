@@ -77,6 +77,8 @@ It is undefined when the denominator is nonpositive or at most `1e-9`. Negative 
 
 ## Score an actual compressor later
 
+The [actual product adapters](PRODUCTION-ADAPTERS.md) now connect browser extraction and program-bound compression to this metric. Their offline tests verify the integration; actual LLM quality still requires an independently approved service run.
+
 Use the isolated history jobs to generate memories, then the isolated decoder jobs with the actual selected memories. Decode to the categorical IDs in `answer_options`, not arbitrary paraphrases. A prediction file maps `persona_id` to `{query_id: answer_id}`:
 
 ```sh

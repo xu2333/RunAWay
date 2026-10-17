@@ -154,7 +154,7 @@ class Calls:
                     write_once(res, value)
                 except Exception as exc:
                     failed = {'error_type': type(exc).__name__, 'error': str(exc), 'request_id': key,
-                              'execution_id': intent['execution_id'], 'provenance': provenance or {}}
+                              'execution_id': intent['execution_id'], 'provenance': provenance or getattr(exc,'provenance',{})}
                     if getattr(exc,'backend_invoked',True) is False:failed['backend_invoked']=False
                     failed['sha256'] = digest(canonical(failed))
                     write_once(failure, failed)
