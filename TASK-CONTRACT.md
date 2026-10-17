@@ -132,6 +132,9 @@ The proposed generator/reader remain `gpt-6-luna` / `gpt-6.1-sol`, one384-token
 memory budget, maximum180seconds per generation, zero retries/repairs. The old
 24-call allowance is closed. No additional service call occurred in this work.
 
+The [dedicated executor and numeric reader gates](TASK-EXECUTOR.md) are now
+prepared and tested offline. A matching new human approval is still required.
+
 [Frozen specification](examples/taste-contract/contract.json) ·
 [Representative fixtures](examples/taste-contract/fixtures.synthetic.json) ·
 [Code-only controls](examples/taste-contract/calibration.synthetic.json) ·

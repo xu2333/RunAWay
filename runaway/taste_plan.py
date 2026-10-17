@@ -118,6 +118,8 @@ def prepare(out,evidence,seed=None):
         'payload_files':{name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in ('reader-jobs.jsonl','generation-jobs.jsonl','dynamic-job-contracts.json','sealed-baselines.json')},
     }
     assert sum(proposal['matrix'].values())==24
+    from .taste_executor import freeze_config
+    proposal=freeze_config(root,proposal)
     proposal['id']=digest(canonical(proposal));write_once(root/'proposal.json',proposal)
     for name in codes:
         target=root/'frozen-source'/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((ROOT/name).read_bytes())
