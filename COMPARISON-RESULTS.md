@@ -102,3 +102,6 @@ Replay makes zero model calls. A credible next evaluation needs many more
 independent preference differences, richer domains and another provider; real
 fidelity ultimately needs predictions of withheld real user choices. Synthetic
 self-play can expose loss and regressions before that step, not replace it.
+
+The [six-domain development stress suite](FIDELITY-STRESS.md) now audits richer
+damage and paired units offline. Its program controls are not another model run.

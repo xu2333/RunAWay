@@ -31,4 +31,4 @@ Copy the resulting prompt into a chat, or install it as project instructions for
 
 Browser feedback is shared only when you choose to submit it. CLI generation sends selected input to its backend. Fidelity to real personal choices remains unverified.
 
-[Self-play results & limits](COMPARISON-RESULTS.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)
+[Compression fidelity & limits](FIDELITY-STRESS.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)
