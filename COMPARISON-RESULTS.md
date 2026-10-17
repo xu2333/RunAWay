@@ -62,7 +62,10 @@ On the already consumed old cohort, using the old384-token browser memories:
 All four intervention rows retain48 planned answers. None has missing answers
 or observed hard violations; the first three each have4 hard-constraint
 abstentions. Source-complete prose recovers all4 constraint queries, but still
-misses4 other queries. A formatting/cutoff change alone did not reliably fix
+misses4 other queries: all are `U` on day16 questions beyond the supplied day15
+source cutoff (two layout distinctions and two revoked-rule choices). This
+leaves a temporal-contract issue even in the complete-content control.
+A formatting/cutoff change alone did not reliably fix
 the old failure. These one-shot diagnostics do not isolate a complete cause.
 The new cohort also changes task and reader contract, so its current score
 cannot be presented as an improvement over D-0015's historical score.
