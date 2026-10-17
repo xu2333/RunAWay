@@ -63,6 +63,8 @@ class TasteExecutorTests(unittest.TestCase):
             return ex.execute(self.plan,self.root/'output',backend=fake,count=lambda text:len(text.encode()),require_evidence=False)
 
     def test_all_static_and_dynamic_entries_are180_and_matrix_is24(self):
+        _,config,_=ex.preflight(self.plan,False)
+        self.assertTrue({'runaway/synthetic_metric.py','runaway/synthetic_metric_world.py','runaway/taste_contract.py'}.issubset(config['source_hashes']))
         fake=FakeModel(self.plan);report=self.execute(fake)
         self.assertEqual(report['status'],'complete');self.assertEqual(len(fake.calls),24)
         self.assertTrue(all(c['timeout']==180 for c in fake.calls))

@@ -237,6 +237,7 @@ def preflight(root,require_evidence=True,check_runtime=False):
         if hashlib.sha256(snapshot.read_bytes()).hexdigest()!=want:raise ValueError('Frozen source snapshot changed: '+name)
     for name,want in config['input_hashes'].items():
         if hashlib.sha256((root/name).read_bytes()).hexdigest()!=want:raise ValueError('Frozen input changed: '+name)
+    if json.loads((root/'contract.json').read_text())!=tc.contract():raise ValueError('Task contract or its evaluator dependencies changed')
     if require_evidence:
         info=proposal['executor'].get('evidence')
         if not info:raise ValueError('Offline executor acceptance is not bound yet')
@@ -373,7 +374,7 @@ def execute(root,out,backend=None,approval=None,count=None,publish=None,require_
 def freeze_config(root,proposal):
     """Bind the actual runner and fixed gate policy before service approval."""
     root=Path(root)
-    code=tuple(dict.fromkeys(tuple(proposal['source_hashes'])+('runaway/taste_executor.py','tests/test_taste_executor.py','tests/test_taste_contract.py')))
+    code=tuple(dict.fromkeys(tuple(proposal['source_hashes'])+('runaway/taste_executor.py','runaway/synthetic_metric.py','runaway/synthetic_metric_world.py','tests/test_taste_executor.py','tests/test_taste_contract.py')))
     source_hashes={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in code}
     inputs=('contract.json','future-fixtures.private.json','reader-jobs.jsonl','generation-jobs.jsonl','dynamic-job-contracts.json','sealed-baselines.json')
     body={'runner':'runaway.taste_executor.execute','call_implementation':'FrozenCalls.call',
