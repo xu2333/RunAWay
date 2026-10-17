@@ -51,6 +51,11 @@ silently change the questions or denominator after seeing it. A future test must
 specify which task it targets, preserve required scope/validity information and
 freeze new unseen decisions before execution.
 
+The [offline task-contract audit](TASK-CONTRACT.md) now traces all192 answers and
+identifies both actual information losses and erroneous current-state claims
+already present in extraction. It does not establish that a date or reader
+repair works, and it leaves every original score and denominator unchanged.
+
 ## Calls and cost
 
 Exactly24 experiment invocations completed:8 control reads,4 shared extractions,

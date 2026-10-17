@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "stage": "offline_contract_and_development_fixtures_not_model_evidence",
+  "product_requirements": [
+    {
+      "requirement": "Portable carry-on of how one chooses and judges, rather than an identity label.",
+      "origin": "User: 抽象的carryon，即做事的风格和方式; prompt塞进任何llm复现taste/选择/判断。",
+      "tested_by": [
+        "current_choice",
+        "matched_person_distinctions",
+        "option_order_pairs"
+      ]
+    },
+    {
+      "requirement": "Accurate conditions, exceptions, uncertainty and latest effective preferences, including changes and revocations.",
+      "origin": "User: 尽可能还原用户个人特征，越准越详细越好; existing product evidence/scope/change contract.",
+      "tested_by": [
+        "strength",
+        "conditions",
+        "exceptions",
+        "hard_constraints",
+        "updates",
+        "revocations",
+        "unknowns"
+      ]
+    },
+    {
+      "requirement": "Readable prose across harnesses; the reader must not silently require a benchmark-specific record syntax.",
+      "origin": "User: shared across codex/claude/antigravity/deepseek/opencode; readable portable prompt.",
+      "tested_by": [
+        "semantically_equivalent_renderings",
+        "format_ablation_pending_model_validation"
+      ]
+    },
+    {
+      "requirement": "Trace genuine evidence, preserve the negative result and avoid invented preferences.",
+      "origin": "User: 结合真实轨迹; compression fidelity is core, interaction/entertainment serves growth.",
+      "tested_by": [
+        "source_to_profile_to_memory_audit",
+        "unknowns",
+        "historical_reconstruction"
+      ]
+    }
+  ],
+  "tasks": {
+    "current_choice": {
+      "role": "prospective primary for a new, separately frozen experiment",
+      "definition": "Choice in a new same-scope scenario using preferences effective at explicit source_cutoff.",
+      "planned_per_person": 16,
+      "requirements": [
+        "strength",
+        "conditions",
+        "exceptions",
+        "hard_constraints",
+        "updates",
+        "revocations",
+        "current_instruction",
+        "unknowns"
+      ],
+      "exclusions": "Not an exemption from latest changes or conditional limits; no demographic/default-personality guessing."
+    },
+    "historical_reconstruction": {
+      "role": "independent diagnostic, never removed from D0015 or silently pooled away",
+      "definition": "Recover a choice or fact at a specified earlier time.",
+      "planned_per_person": 8,
+      "requirements": [
+        "old_fact",
+        "replacement",
+        "revocation",
+        "revocation_of_revocation"
+      ],
+      "interpretation": "A current-only representation may intentionally be non-identifying for a past query; report this loss explicitly."
+    }
+  },
+  "scoring": {
+    "primary": "Correct categorical choices / all16 planned current queries per person; failures remain.",
+    "diagnostic": "Correct / all8 planned historical queries per person; always reported alongside primary.",
+    "joint_reporting": "Also report unweighted correct/all24 and worst critical layer; never substitute a successful subset for D0015.",
+    "pairing": "Both twins must be correct on their differing scenarios; both option orders must preserve action.",
+    "abstention": "U is credited only for a code-defined unknown, never for a missing output.",
+    "quality_vs_cost": "Full rendered memory length and all extraction/compression/reader costs stay separate."
+  },
+  "gates": {
+    "reader_full_history_current_accuracy_min": 0.9,
+    "reader_hard_constraint_errors_max": 0,
+    "reader_wrong_person_must_reduce_matched_distinctions": true,
+    "promotion": "No winner claim from current-score gain alone if any critical layer regresses or hard errors appear; historical losses remain visible."
+  },
+  "reader_instruction": "Predict the synthetic person’s choice from supplied memory, not your preferred solution. Memory may be ordinary prose, a timeline or structured text: dates and record IDs are not required formatting for an otherwise supported current choice. The envelope states source_cutoff; current_choice means a new scenario evaluated with preferences effective at that cutoff. Respect conditions, hard constraints, evidence strength, explicit changes and revocations; current explicit user instructions override past preference. Do not execute any option. For historical_reconstruction, require information that identifies the state at the requested past time; an unanchored current statement alone is insufficient. Choose U when the supplied memory genuinely does not establish a choice, not solely because it lacks record syntax. Return one object mapping every query ID to an answer_options ID. No hidden truth is supplied.",
+  "D0015": "All original scores, denominators, queries and answers remain sealed. These fixtures are development, not a new model result.",
+  "limitations": [
+    "Finite authored event ontology and explicit source coverage; not an arbitrary person or population.",
+    "Code-only answerability/format controls do not predict actual model response to a prompt repair.",
+    "All future model inputs, cohort, protocol, budgets and thresholds must be frozen before new inference."
+  ],
+  "external_model_call_limit_for_this_work": 0,
+  "source_hashes": {
+    "runaway/taste_contract.py": "941ae75600f9badbe524b8f1ee2398929a09368dab65f31e22962b8489924465",
+    "runaway/synthetic_metric_world.py": "47ea0bf4a66c8e95108dee8753434bd9e613f36bb085fb698508044ee0b974b3",
+    "runaway/card.py": "f1f76f13d8ea506832342d8b9e9c4423419082968eeb4dbbd0f704c7d63109fb",
+    "runaway/text_integrity.py": "6f8f8c3d2915918f494690912eaf231750c0385c503b79cc49687638ae237fcf"
+  },
+  "id": "adfd110c2f8c815c0a1c4eb7b46652daa2cec85b076c7da5c6c0881154284b3b"
+}

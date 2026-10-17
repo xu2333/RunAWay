@@ -1,0 +1,3341 @@
+{
+  "origin": "fully_synthetic",
+  "purpose": "representative_development_fixtures_only",
+  "seed": 91627,
+  "mode": "representative",
+  "people": [
+    {
+      "id": "p-2ea692abf676",
+      "twin": "p-69317a993d9f",
+      "split": "dev",
+      "source_cutoff": 20,
+      "parameters": {
+        "feedback": "direct",
+        "layout": "restore",
+        "hard_restored": false,
+        "exception_bit": 0
+      },
+      "events": [
+        {
+          "id": "r01",
+          "day": 1,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 3
+        },
+        {
+          "id": "r02",
+          "day": 2,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 1
+        },
+        {
+          "id": "r03",
+          "day": 3,
+          "op": "replace",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 2
+        },
+        {
+          "id": "r04",
+          "day": 4,
+          "op": "revoke",
+          "target": "r03"
+        },
+        {
+          "id": "r05",
+          "day": 5,
+          "op": "except",
+          "key": "feedback",
+          "value": "gentle",
+          "when": "public"
+        },
+        {
+          "id": "r06",
+          "day": 6,
+          "op": "prefer",
+          "key": "auto",
+          "value": "auto",
+          "strength": 3
+        },
+        {
+          "id": "r07",
+          "day": 7,
+          "op": "hard",
+          "key": "auto",
+          "value": "ask",
+          "when": "irreversible"
+        },
+        {
+          "id": "r08",
+          "day": 8,
+          "op": "revoke",
+          "target": "r07"
+        },
+        {
+          "id": "r10",
+          "day": 10,
+          "op": "prefer",
+          "key": "layout",
+          "value": "restore",
+          "strength": 2
+        },
+        {
+          "id": "r11",
+          "day": 11,
+          "op": "replace",
+          "key": "layout",
+          "value": "minimal",
+          "strength": 3
+        },
+        {
+          "id": "r12",
+          "day": 12,
+          "op": "revoke",
+          "target": "r11"
+        },
+        {
+          "id": "r13",
+          "day": 13,
+          "op": "except",
+          "key": "layout",
+          "value": "minimal",
+          "when": "repeated"
+        },
+        {
+          "id": "r14",
+          "day": 14,
+          "op": "fact",
+          "key": "mark",
+          "value": "line"
+        },
+        {
+          "id": "r15",
+          "day": 15,
+          "op": "clear",
+          "key": "mark"
+        }
+      ],
+      "history": "合成记录完整覆盖下列领域至第20天；第15天后没有新增更改，未记录领域仍未知。\n第1天（r01）：我记下：偏好【反馈】是「直说」，强度3。这是当时这类任务的记录，不推断其他领域。\n第2天（r02）：我记下：偏好【反馈】是「铺垫」，强度1。这是当时这类任务的记录，不推断其他领域。\n第3天（r03）：我记下：更新替代【反馈】为「铺垫」，强度2，替代之前偏好。这是当时这类任务的记录，不推断其他领域。\n第4天（r04）：我记下：撤销记录r03；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第5天（r05）：我记下：条件例外【反馈】：若公开场合，选「铺垫」。这是当时这类任务的记录，不推断其他领域。\n第6天（r06）：我记下：偏好【整理操作】是「自动」，强度3。这是当时这类任务的记录，不推断其他领域。\n第7天（r07）：我记下：硬约束【整理操作】：若无法撤销，选「逐项确认」。这是当时这类任务的记录，不推断其他领域。\n第8天（r08）：我记下：撤销记录r07；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第10天（r10）：我记下：偏好【入口布局】是「显眼入口」，强度2。这是当时这类任务的记录，不推断其他领域。\n第11天（r11）：我记下：更新替代【入口布局】为「简洁」，强度3，替代之前偏好。这是当时这类任务的记录，不推断其他领域。\n第12天（r12）：我记下：撤销记录r11；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第13天（r13）：我记下：条件例外【入口布局】：若反复求助，选「简洁」。这是当时这类任务的记录，不推断其他领域。\n第14天（r14）：我记下：事实【标记】是「短线」。这是当时这类任务的记录，不推断其他领域。\n第15天（r15）：我记下：清除【标记】；此后暂无这个偏好。这是当时这类任务的记录，不推断其他领域。",
+      "cases": [
+        {
+          "public": {
+            "id": "q-ba9097542f412d",
+            "task": "current_choice",
+            "question": "在私下讨论一份汇报稿时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "0",
+          "order_pair": "0",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-afae34d06cae24",
+            "task": "current_choice",
+            "question": "在私下讨论一份汇报稿时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "1",
+          "order_pair": "0",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-b7687624bd5ed7",
+            "task": "current_choice",
+            "question": "多人同时参与汇报稿评审时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "2",
+          "order_pair": "1",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-1b96028e5f870a",
+            "task": "current_choice",
+            "question": "多人同时参与汇报稿评审时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "3",
+          "order_pair": "1",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-accea860228d01",
+            "task": "current_choice",
+            "question": "整理任务可以完整撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "4",
+          "order_pair": "2",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-ce48a3303e5149",
+            "task": "current_choice",
+            "question": "整理任务可以完整撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "5",
+          "order_pair": "2",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-815489e081b7a5",
+            "task": "current_choice",
+            "question": "整理任务无法撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "6",
+          "order_pair": "3",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-b21e2a15ec1cc8",
+            "task": "current_choice",
+            "question": "整理任务无法撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "7",
+          "order_pair": "3",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-9f041fdfc763c2",
+            "task": "current_choice",
+            "question": "一个工具没有发生反复求助，入口采取哪种方案？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "8",
+          "order_pair": "4",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-181c10984fa998",
+            "task": "current_choice",
+            "question": "一个工具没有发生反复求助，入口采取哪种方案？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "9",
+          "order_pair": "4",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-80d7588128c3c4",
+            "task": "current_choice",
+            "question": "组织者已经反复求助，工具入口采取哪种方案？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "10",
+          "order_pair": "5",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-1d11c0f565f6ea",
+            "task": "current_choice",
+            "question": "组织者已经反复求助，工具入口采取哪种方案？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "11",
+          "order_pair": "5",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-44efa987305c8f",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "12",
+          "order_pair": "6",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-5b3e737225ec7e",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "13",
+          "order_pair": "6",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-9954c0ad4f354c",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "侦探片",
+              "B": "纪录片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "mystery",
+            "B": "documentary",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "14",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-9978d15167091e",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "纪录片",
+              "B": "侦探片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "documentary",
+            "B": "mystery",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "15",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-1631abc1b9ccfd",
+            "task": "historical_reconstruction",
+            "question": "仅问第3天当时的记录：（不在公开场合）【反馈】是什么选择？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            },
+            "at": 3
+          },
+          "key": "feedback",
+          "at": 3,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "16",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-5cee87135d9b6f",
+            "task": "historical_reconstruction",
+            "question": "仅问第7天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 7
+          },
+          "key": "auto",
+          "at": 7,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "17",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-f47c4623b450ee",
+            "task": "historical_reconstruction",
+            "question": "仅问第8天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 8
+          },
+          "key": "auto",
+          "at": 8,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "18",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-9271b557130d66",
+            "task": "historical_reconstruction",
+            "question": "仅问第9天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 9
+          },
+          "key": "auto",
+          "at": 9,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocation_of_revocation"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "19",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-e863186d2580da",
+            "task": "historical_reconstruction",
+            "question": "仅问第11天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 11
+          },
+          "key": "layout",
+          "at": 11,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "20",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-7cfe0a28cdc901",
+            "task": "historical_reconstruction",
+            "question": "仅问第12天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 12
+          },
+          "key": "layout",
+          "at": 12,
+          "context": {},
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "21",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-075a5ec3c16f15",
+            "task": "historical_reconstruction",
+            "question": "仅问第14天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 14
+          },
+          "key": "mark",
+          "at": 14,
+          "context": {},
+          "tags": [
+            "old_fact"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "22",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-60fe7e499db9fc",
+            "task": "historical_reconstruction",
+            "question": "仅问第16天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 16
+          },
+          "key": "mark",
+          "at": 16,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "23",
+          "order_pair": null,
+          "gold": "U"
+        }
+      ]
+    },
+    {
+      "id": "p-69317a993d9f",
+      "twin": "p-2ea692abf676",
+      "split": "dev",
+      "source_cutoff": 20,
+      "parameters": {
+        "feedback": "direct",
+        "layout": "restore",
+        "hard_restored": false,
+        "exception_bit": 1
+      },
+      "events": [
+        {
+          "id": "r01",
+          "day": 1,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 3
+        },
+        {
+          "id": "r02",
+          "day": 2,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 1
+        },
+        {
+          "id": "r03",
+          "day": 3,
+          "op": "replace",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 2
+        },
+        {
+          "id": "r04",
+          "day": 4,
+          "op": "revoke",
+          "target": "r03"
+        },
+        {
+          "id": "r05",
+          "day": 5,
+          "op": "except",
+          "key": "feedback",
+          "value": "gentle",
+          "when": "public"
+        },
+        {
+          "id": "r06",
+          "day": 6,
+          "op": "prefer",
+          "key": "auto",
+          "value": "auto",
+          "strength": 3
+        },
+        {
+          "id": "r07",
+          "day": 7,
+          "op": "hard",
+          "key": "auto",
+          "value": "ask",
+          "when": "irreversible"
+        },
+        {
+          "id": "r08",
+          "day": 8,
+          "op": "revoke",
+          "target": "r07"
+        },
+        {
+          "id": "r10",
+          "day": 10,
+          "op": "prefer",
+          "key": "layout",
+          "value": "restore",
+          "strength": 2
+        },
+        {
+          "id": "r11",
+          "day": 11,
+          "op": "replace",
+          "key": "layout",
+          "value": "minimal",
+          "strength": 3
+        },
+        {
+          "id": "r12",
+          "day": 12,
+          "op": "revoke",
+          "target": "r11"
+        },
+        {
+          "id": "r13",
+          "day": 13,
+          "op": "except",
+          "key": "layout",
+          "value": "restore",
+          "when": "repeated"
+        },
+        {
+          "id": "r14",
+          "day": 14,
+          "op": "fact",
+          "key": "mark",
+          "value": "line"
+        },
+        {
+          "id": "r15",
+          "day": 15,
+          "op": "clear",
+          "key": "mark"
+        }
+      ],
+      "history": "合成记录完整覆盖下列领域至第20天；第15天后没有新增更改，未记录领域仍未知。\n第1天（r01）：我记下：偏好【反馈】是「直说」，强度3。这是当时这类任务的记录，不推断其他领域。\n第2天（r02）：我记下：偏好【反馈】是「铺垫」，强度1。这是当时这类任务的记录，不推断其他领域。\n第3天（r03）：我记下：更新替代【反馈】为「铺垫」，强度2，替代之前偏好。这是当时这类任务的记录，不推断其他领域。\n第4天（r04）：我记下：撤销记录r03；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第5天（r05）：我记下：条件例外【反馈】：若公开场合，选「铺垫」。这是当时这类任务的记录，不推断其他领域。\n第6天（r06）：我记下：偏好【整理操作】是「自动」，强度3。这是当时这类任务的记录，不推断其他领域。\n第7天（r07）：我记下：硬约束【整理操作】：若无法撤销，选「逐项确认」。这是当时这类任务的记录，不推断其他领域。\n第8天（r08）：我记下：撤销记录r07；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第10天（r10）：我记下：偏好【入口布局】是「显眼入口」，强度2。这是当时这类任务的记录，不推断其他领域。\n第11天（r11）：我记下：更新替代【入口布局】为「简洁」，强度3，替代之前偏好。这是当时这类任务的记录，不推断其他领域。\n第12天（r12）：我记下：撤销记录r11；其余记录继续适用。这是当时这类任务的记录，不推断其他领域。\n第13天（r13）：我记下：条件例外【入口布局】：若反复求助，选「显眼入口」。这是当时这类任务的记录，不推断其他领域。\n第14天（r14）：我记下：事实【标记】是「短线」。这是当时这类任务的记录，不推断其他领域。\n第15天（r15）：我记下：清除【标记】；此后暂无这个偏好。这是当时这类任务的记录，不推断其他领域。",
+      "cases": [
+        {
+          "public": {
+            "id": "q-5a9adbaccb6c85",
+            "task": "current_choice",
+            "question": "在私下讨论一份汇报稿时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "0",
+          "order_pair": "0",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-63b2fc4d60dfce",
+            "task": "current_choice",
+            "question": "在私下讨论一份汇报稿时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "1",
+          "order_pair": "0",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-a4e96981dec2f3",
+            "task": "current_choice",
+            "question": "多人同时参与汇报稿评审时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "2",
+          "order_pair": "1",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-f3eb78f4210635",
+            "task": "current_choice",
+            "question": "多人同时参与汇报稿评审时，你会怎样指出其中可修正的问题？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "3",
+          "order_pair": "1",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-83c26dd06125c8",
+            "task": "current_choice",
+            "question": "整理任务可以完整撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "4",
+          "order_pair": "2",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-5919cc96868d82",
+            "task": "current_choice",
+            "question": "整理任务可以完整撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "5",
+          "order_pair": "2",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-ad0fc13c55f29c",
+            "task": "current_choice",
+            "question": "整理任务无法撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "6",
+          "order_pair": "3",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-cc7148d8f53e4f",
+            "task": "current_choice",
+            "question": "整理任务无法撤销，你会选择哪种处理方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "7",
+          "order_pair": "3",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-fffdea608ca69f",
+            "task": "current_choice",
+            "question": "一个工具没有发生反复求助，入口采取哪种方案？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "8",
+          "order_pair": "4",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-10578b8cb2c365",
+            "task": "current_choice",
+            "question": "一个工具没有发生反复求助，入口采取哪种方案？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "9",
+          "order_pair": "4",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-44cf4343e37286",
+            "task": "current_choice",
+            "question": "组织者已经反复求助，工具入口采取哪种方案？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "10",
+          "order_pair": "5",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-992bbc2022acf4",
+            "task": "current_choice",
+            "question": "组织者已经反复求助，工具入口采取哪种方案？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "11",
+          "order_pair": "5",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-0ea10867abfb24",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "12",
+          "order_pair": "6",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-db2eaa321919ef",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "13",
+          "order_pair": "6",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-479dc76e09ed94",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "侦探片",
+              "B": "纪录片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "mystery",
+            "B": "documentary",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "14",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-fd21f8e0d71214",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "纪录片",
+              "B": "侦探片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "documentary",
+            "B": "mystery",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "15",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-11e6d5885501ba",
+            "task": "historical_reconstruction",
+            "question": "仅问第3天当时的记录：（不在公开场合）【反馈】是什么选择？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            },
+            "at": 3
+          },
+          "key": "feedback",
+          "at": 3,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "16",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-d49ef8032cccd2",
+            "task": "historical_reconstruction",
+            "question": "仅问第7天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 7
+          },
+          "key": "auto",
+          "at": 7,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "17",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-bd8fd193de61d7",
+            "task": "historical_reconstruction",
+            "question": "仅问第8天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 8
+          },
+          "key": "auto",
+          "at": 8,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "18",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-1a504050e6f6e2",
+            "task": "historical_reconstruction",
+            "question": "仅问第9天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 9
+          },
+          "key": "auto",
+          "at": 9,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocation_of_revocation"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "19",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-ffa95e9d41ccfc",
+            "task": "historical_reconstruction",
+            "question": "仅问第11天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 11
+          },
+          "key": "layout",
+          "at": 11,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "20",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-ee00c0adf053af",
+            "task": "historical_reconstruction",
+            "question": "仅问第12天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 12
+          },
+          "key": "layout",
+          "at": 12,
+          "context": {},
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "21",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-de580a20ce523e",
+            "task": "historical_reconstruction",
+            "question": "仅问第14天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 14
+          },
+          "key": "mark",
+          "at": 14,
+          "context": {},
+          "tags": [
+            "old_fact"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "22",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-0905ce2dd379ea",
+            "task": "historical_reconstruction",
+            "question": "仅问第16天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 16
+          },
+          "key": "mark",
+          "at": 16,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "23",
+          "order_pair": null,
+          "gold": "U"
+        }
+      ]
+    },
+    {
+      "id": "p-0245bb63adf7",
+      "twin": "p-2a80d2631952",
+      "split": "eval",
+      "source_cutoff": 20,
+      "parameters": {
+        "feedback": "gentle",
+        "layout": "minimal",
+        "hard_restored": true,
+        "exception_bit": 0
+      },
+      "events": [
+        {
+          "id": "r01",
+          "day": 1,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 3
+        },
+        {
+          "id": "r02",
+          "day": 2,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 1
+        },
+        {
+          "id": "r03",
+          "day": 3,
+          "op": "replace",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 2
+        },
+        {
+          "id": "r04",
+          "day": 4,
+          "op": "revoke",
+          "target": "r03"
+        },
+        {
+          "id": "r05",
+          "day": 5,
+          "op": "except",
+          "key": "feedback",
+          "value": "direct",
+          "when": "public"
+        },
+        {
+          "id": "r06",
+          "day": 6,
+          "op": "prefer",
+          "key": "auto",
+          "value": "auto",
+          "strength": 3
+        },
+        {
+          "id": "r07",
+          "day": 7,
+          "op": "hard",
+          "key": "auto",
+          "value": "ask",
+          "when": "irreversible"
+        },
+        {
+          "id": "r08",
+          "day": 8,
+          "op": "revoke",
+          "target": "r07"
+        },
+        {
+          "id": "r09",
+          "day": 9,
+          "op": "revoke",
+          "target": "r08"
+        },
+        {
+          "id": "r10",
+          "day": 10,
+          "op": "prefer",
+          "key": "layout",
+          "value": "minimal",
+          "strength": 2
+        },
+        {
+          "id": "r11",
+          "day": 11,
+          "op": "replace",
+          "key": "layout",
+          "value": "restore",
+          "strength": 3
+        },
+        {
+          "id": "r12",
+          "day": 12,
+          "op": "revoke",
+          "target": "r11"
+        },
+        {
+          "id": "r13",
+          "day": 13,
+          "op": "except",
+          "key": "layout",
+          "value": "minimal",
+          "when": "repeated"
+        },
+        {
+          "id": "r14",
+          "day": 14,
+          "op": "fact",
+          "key": "mark",
+          "value": "line"
+        },
+        {
+          "id": "r15",
+          "day": 15,
+          "op": "clear",
+          "key": "mark"
+        }
+      ],
+      "history": "合成记录完整覆盖下列领域至第20天；第15天后没有新增更改，未记录领域仍未知。\n记录r01 / 第1天：这一天的说明是：偏好【反馈】是「铺垫」，强度3。仅据这段经历，不把局部取舍扩成一般人格。\n记录r02 / 第2天：这一天的说明是：偏好【反馈】是「直说」，强度1。仅据这段经历，不把局部取舍扩成一般人格。\n记录r03 / 第3天：这一天的说明是：更新替代【反馈】为「直说」，强度2，替代之前偏好。仅据这段经历，不把局部取舍扩成一般人格。\n记录r04 / 第4天：这一天的说明是：撤销记录r03；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r05 / 第5天：这一天的说明是：条件例外【反馈】：若公开场合，选「直说」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r06 / 第6天：这一天的说明是：偏好【整理操作】是「自动」，强度3。仅据这段经历，不把局部取舍扩成一般人格。\n记录r07 / 第7天：这一天的说明是：硬约束【整理操作】：若无法撤销，选「逐项确认」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r08 / 第8天：这一天的说明是：撤销记录r07；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r09 / 第9天：这一天的说明是：撤销记录r08；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r10 / 第10天：这一天的说明是：偏好【入口布局】是「简洁」，强度2。仅据这段经历，不把局部取舍扩成一般人格。\n记录r11 / 第11天：这一天的说明是：更新替代【入口布局】为「显眼入口」，强度3，替代之前偏好。仅据这段经历，不把局部取舍扩成一般人格。\n记录r12 / 第12天：这一天的说明是：撤销记录r11；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r13 / 第13天：这一天的说明是：条件例外【入口布局】：若反复求助，选「简洁」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r14 / 第14天：这一天的说明是：事实【标记】是「短线」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r15 / 第15天：这一天的说明是：清除【标记】；此后暂无这个偏好。仅据这段经历，不把局部取舍扩成一般人格。",
+      "cases": [
+        {
+          "public": {
+            "id": "q-b425af8ac95d2a",
+            "task": "current_choice",
+            "question": "你单独给合作者一份计算草稿提修改意见，开头采用哪种方式？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "0",
+          "order_pair": "0",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-3e3be0dfb5a317",
+            "task": "current_choice",
+            "question": "你单独给合作者一份计算草稿提修改意见，开头采用哪种方式？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "1",
+          "order_pair": "0",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-0c70634874b0a7",
+            "task": "current_choice",
+            "question": "草稿的修改意见将在多人评审现场提出，开头采用哪种方式？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "2",
+          "order_pair": "1",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-78331012e8a880",
+            "task": "current_choice",
+            "question": "草稿的修改意见将在多人评审现场提出，开头采用哪种方式？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "3",
+          "order_pair": "1",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-ab4e5dac79907e",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，所有变动都可恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "4",
+          "order_pair": "2",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-6413e410af01cd",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，所有变动都可恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "5",
+          "order_pair": "2",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-b9d3b9ad3a0385",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，变动完成后不能恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "6",
+          "order_pair": "3",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-c6112eb975c21b",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，变动完成后不能恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "7",
+          "order_pair": "3",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-33a52db57c0bfd",
+            "task": "current_choice",
+            "question": "预约工具的组织者没有反复请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "8",
+          "order_pair": "4",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-a54ff1d9c6b9d5",
+            "task": "current_choice",
+            "question": "预约工具的组织者没有反复请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "9",
+          "order_pair": "4",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-8f919b8976fb12",
+            "task": "current_choice",
+            "question": "预约工具的组织者连续多次请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "10",
+          "order_pair": "5",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-1337e8c5fd8a58",
+            "task": "current_choice",
+            "question": "预约工具的组织者连续多次请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "11",
+          "order_pair": "5",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-a77cb2a0a26098",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "12",
+          "order_pair": "6",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-c2a1d234111f8b",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "13",
+          "order_pair": "6",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-baa0c5684913f0",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "侦探片",
+              "B": "纪录片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "mystery",
+            "B": "documentary",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "14",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-464aa7bbfece0d",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "纪录片",
+              "B": "侦探片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "documentary",
+            "B": "mystery",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "15",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-3e67c6bdd27a09",
+            "task": "historical_reconstruction",
+            "question": "仅问第3天当时的记录：（不在公开场合）【反馈】是什么选择？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            },
+            "at": 3
+          },
+          "key": "feedback",
+          "at": 3,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "16",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-def33ec11c3176",
+            "task": "historical_reconstruction",
+            "question": "仅问第7天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 7
+          },
+          "key": "auto",
+          "at": 7,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "17",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-5265033e7c1af9",
+            "task": "historical_reconstruction",
+            "question": "仅问第8天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 8
+          },
+          "key": "auto",
+          "at": 8,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "18",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-b6deb87fca6878",
+            "task": "historical_reconstruction",
+            "question": "仅问第9天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 9
+          },
+          "key": "auto",
+          "at": 9,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocation_of_revocation"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "19",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-d0bdf7d9d3efe5",
+            "task": "historical_reconstruction",
+            "question": "仅问第11天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 11
+          },
+          "key": "layout",
+          "at": 11,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "20",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-86c2e61433a36f",
+            "task": "historical_reconstruction",
+            "question": "仅问第12天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 12
+          },
+          "key": "layout",
+          "at": 12,
+          "context": {},
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "21",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-ef4861fa837860",
+            "task": "historical_reconstruction",
+            "question": "仅问第14天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 14
+          },
+          "key": "mark",
+          "at": 14,
+          "context": {},
+          "tags": [
+            "old_fact"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "22",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-90c1e224a27e27",
+            "task": "historical_reconstruction",
+            "question": "仅问第16天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 16
+          },
+          "key": "mark",
+          "at": 16,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "23",
+          "order_pair": null,
+          "gold": "U"
+        }
+      ]
+    },
+    {
+      "id": "p-2a80d2631952",
+      "twin": "p-0245bb63adf7",
+      "split": "eval",
+      "source_cutoff": 20,
+      "parameters": {
+        "feedback": "gentle",
+        "layout": "minimal",
+        "hard_restored": true,
+        "exception_bit": 1
+      },
+      "events": [
+        {
+          "id": "r01",
+          "day": 1,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "gentle",
+          "strength": 3
+        },
+        {
+          "id": "r02",
+          "day": 2,
+          "op": "prefer",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 1
+        },
+        {
+          "id": "r03",
+          "day": 3,
+          "op": "replace",
+          "key": "feedback",
+          "value": "direct",
+          "strength": 2
+        },
+        {
+          "id": "r04",
+          "day": 4,
+          "op": "revoke",
+          "target": "r03"
+        },
+        {
+          "id": "r05",
+          "day": 5,
+          "op": "except",
+          "key": "feedback",
+          "value": "direct",
+          "when": "public"
+        },
+        {
+          "id": "r06",
+          "day": 6,
+          "op": "prefer",
+          "key": "auto",
+          "value": "auto",
+          "strength": 3
+        },
+        {
+          "id": "r07",
+          "day": 7,
+          "op": "hard",
+          "key": "auto",
+          "value": "ask",
+          "when": "irreversible"
+        },
+        {
+          "id": "r08",
+          "day": 8,
+          "op": "revoke",
+          "target": "r07"
+        },
+        {
+          "id": "r09",
+          "day": 9,
+          "op": "revoke",
+          "target": "r08"
+        },
+        {
+          "id": "r10",
+          "day": 10,
+          "op": "prefer",
+          "key": "layout",
+          "value": "minimal",
+          "strength": 2
+        },
+        {
+          "id": "r11",
+          "day": 11,
+          "op": "replace",
+          "key": "layout",
+          "value": "restore",
+          "strength": 3
+        },
+        {
+          "id": "r12",
+          "day": 12,
+          "op": "revoke",
+          "target": "r11"
+        },
+        {
+          "id": "r13",
+          "day": 13,
+          "op": "except",
+          "key": "layout",
+          "value": "restore",
+          "when": "repeated"
+        },
+        {
+          "id": "r14",
+          "day": 14,
+          "op": "fact",
+          "key": "mark",
+          "value": "line"
+        },
+        {
+          "id": "r15",
+          "day": 15,
+          "op": "clear",
+          "key": "mark"
+        }
+      ],
+      "history": "合成记录完整覆盖下列领域至第20天；第15天后没有新增更改，未记录领域仍未知。\n记录r01 / 第1天：这一天的说明是：偏好【反馈】是「铺垫」，强度3。仅据这段经历，不把局部取舍扩成一般人格。\n记录r02 / 第2天：这一天的说明是：偏好【反馈】是「直说」，强度1。仅据这段经历，不把局部取舍扩成一般人格。\n记录r03 / 第3天：这一天的说明是：更新替代【反馈】为「直说」，强度2，替代之前偏好。仅据这段经历，不把局部取舍扩成一般人格。\n记录r04 / 第4天：这一天的说明是：撤销记录r03；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r05 / 第5天：这一天的说明是：条件例外【反馈】：若公开场合，选「直说」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r06 / 第6天：这一天的说明是：偏好【整理操作】是「自动」，强度3。仅据这段经历，不把局部取舍扩成一般人格。\n记录r07 / 第7天：这一天的说明是：硬约束【整理操作】：若无法撤销，选「逐项确认」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r08 / 第8天：这一天的说明是：撤销记录r07；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r09 / 第9天：这一天的说明是：撤销记录r08；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r10 / 第10天：这一天的说明是：偏好【入口布局】是「简洁」，强度2。仅据这段经历，不把局部取舍扩成一般人格。\n记录r11 / 第11天：这一天的说明是：更新替代【入口布局】为「显眼入口」，强度3，替代之前偏好。仅据这段经历，不把局部取舍扩成一般人格。\n记录r12 / 第12天：这一天的说明是：撤销记录r11；其余记录继续适用。仅据这段经历，不把局部取舍扩成一般人格。\n记录r13 / 第13天：这一天的说明是：条件例外【入口布局】：若反复求助，选「显眼入口」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r14 / 第14天：这一天的说明是：事实【标记】是「短线」。仅据这段经历，不把局部取舍扩成一般人格。\n记录r15 / 第15天：这一天的说明是：清除【标记】；此后暂无这个偏好。仅据这段经历，不把局部取舍扩成一般人格。",
+      "cases": [
+        {
+          "public": {
+            "id": "q-4f16865fb08635",
+            "task": "current_choice",
+            "question": "你单独给合作者一份计算草稿提修改意见，开头采用哪种方式？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "0",
+          "order_pair": "0",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-c60728d3383c10",
+            "task": "current_choice",
+            "question": "你单独给合作者一份计算草稿提修改意见，开头采用哪种方式？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": false
+          },
+          "tags": [
+            "strength",
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "1",
+          "order_pair": "0",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-c9ae5881b3700c",
+            "task": "current_choice",
+            "question": "草稿的修改意见将在多人评审现场提出，开头采用哪种方式？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "2",
+          "order_pair": "1",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-6e0e0cd88bcc80",
+            "task": "current_choice",
+            "question": "草稿的修改意见将在多人评审现场提出，开头采用哪种方式？",
+            "answer_options": {
+              "A": "铺垫",
+              "B": "直说",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "feedback",
+          "at": 20,
+          "context": {
+            "public": true
+          },
+          "tags": [
+            "exceptions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "gentle",
+            "B": "direct",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "3",
+          "order_pair": "1",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-c0a73adc2ee18d",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，所有变动都可恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "4",
+          "order_pair": "2",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-fe4cd891fd93ff",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，所有变动都可恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "5",
+          "order_pair": "2",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-67be381146bc2f",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，变动完成后不能恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "6",
+          "order_pair": "3",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-d1ebef3c3bccde",
+            "task": "current_choice",
+            "question": "助手将归拢一组资料，变动完成后不能恢复原样，你更倾向哪种方式？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "7",
+          "order_pair": "3",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-05b51c67b3dc8d",
+            "task": "current_choice",
+            "question": "预约工具的组织者没有反复请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "8",
+          "order_pair": "4",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-313ba32797aee1",
+            "task": "current_choice",
+            "question": "预约工具的组织者没有反复请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": false
+          },
+          "tags": [
+            "updates",
+            "revocations",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "9",
+          "order_pair": "4",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-27fc11140f9463",
+            "task": "current_choice",
+            "question": "预约工具的组织者连续多次请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "10",
+          "order_pair": "5",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-96b89b314c2354",
+            "task": "current_choice",
+            "question": "预约工具的组织者连续多次请求帮助，首页入口按哪种取舍设计？",
+            "answer_options": {
+              "A": "显眼入口",
+              "B": "简洁",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "layout",
+          "at": 20,
+          "context": {
+            "repeated": true
+          },
+          "tags": [
+            "exceptions",
+            "distinctions",
+            "conditions"
+          ],
+          "canonical_options": {
+            "A": "restore",
+            "B": "minimal",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "11",
+          "order_pair": "5",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-89a3ad8d9c63bb",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "12",
+          "order_pair": "6",
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-12ae23e304f806",
+            "task": "current_choice",
+            "question": "这次整理虽然可撤销，但用户当前明确要求逐项确认，你应遵循哪种选择？",
+            "answer_options": {
+              "A": "逐项确认",
+              "B": "自动",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "auto",
+          "at": 20,
+          "context": {
+            "irreversible": false
+          },
+          "tags": [
+            "current_instruction"
+          ],
+          "canonical_options": {
+            "A": "ask",
+            "B": "auto",
+            "U": "U"
+          },
+          "current_instruction": "ask",
+          "comparison_key": "13",
+          "order_pair": "6",
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-b256a088daa4e3",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "侦探片",
+              "B": "纪录片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "mystery",
+            "B": "documentary",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "14",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-802073e4a26539",
+            "task": "current_choice",
+            "question": "没有更多个人信息，要替此人挑一部影片，哪种偏好有材料支持？",
+            "answer_options": {
+              "A": "纪录片",
+              "B": "侦探片",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "key": "film",
+          "at": 20,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "documentary",
+            "B": "mystery",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "15",
+          "order_pair": "7",
+          "gold": "U"
+        },
+        {
+          "public": {
+            "id": "q-ccb5fb7365c2d3",
+            "task": "historical_reconstruction",
+            "question": "仅问第3天当时的记录：（不在公开场合）【反馈】是什么选择？",
+            "answer_options": {
+              "A": "直说",
+              "B": "铺垫",
+              "U": "材料不足，无法判断"
+            },
+            "at": 3
+          },
+          "key": "feedback",
+          "at": 3,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "direct",
+            "B": "gentle",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "16",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-a7d60063489aaa",
+            "task": "historical_reconstruction",
+            "question": "仅问第7天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 7
+          },
+          "key": "auto",
+          "at": 7,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "hard_constraints"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "17",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-3ae832ed248c68",
+            "task": "historical_reconstruction",
+            "question": "仅问第8天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 8
+          },
+          "key": "auto",
+          "at": 8,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "18",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-2326128d8a5266",
+            "task": "historical_reconstruction",
+            "question": "仅问第9天当时的记录：（整理操作无法撤销）【整理操作】是什么选择？",
+            "answer_options": {
+              "A": "自动",
+              "B": "逐项确认",
+              "U": "材料不足，无法判断"
+            },
+            "at": 9
+          },
+          "key": "auto",
+          "at": 9,
+          "context": {
+            "irreversible": true
+          },
+          "tags": [
+            "revocation_of_revocation"
+          ],
+          "canonical_options": {
+            "A": "auto",
+            "B": "ask",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "19",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-fcffbba0dd572d",
+            "task": "historical_reconstruction",
+            "question": "仅问第11天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 11
+          },
+          "key": "layout",
+          "at": 11,
+          "context": {},
+          "tags": [
+            "updates"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "20",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-eab655a3a524ce",
+            "task": "historical_reconstruction",
+            "question": "仅问第12天当时的记录：（没有反复求助）【入口布局】是什么选择？",
+            "answer_options": {
+              "A": "简洁",
+              "B": "显眼入口",
+              "U": "材料不足，无法判断"
+            },
+            "at": 12
+          },
+          "key": "layout",
+          "at": 12,
+          "context": {},
+          "tags": [
+            "revocations"
+          ],
+          "canonical_options": {
+            "A": "minimal",
+            "B": "restore",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "21",
+          "order_pair": null,
+          "gold": "A"
+        },
+        {
+          "public": {
+            "id": "q-b517f2546acc74",
+            "task": "historical_reconstruction",
+            "question": "仅问第14天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 14
+          },
+          "key": "mark",
+          "at": 14,
+          "context": {},
+          "tags": [
+            "old_fact"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "22",
+          "order_pair": null,
+          "gold": "B"
+        },
+        {
+          "public": {
+            "id": "q-24573ae6e44877",
+            "task": "historical_reconstruction",
+            "question": "仅问第16天当时的记录：【标记】是什么选择？",
+            "answer_options": {
+              "A": "圆点",
+              "B": "短线",
+              "U": "材料不足，无法判断"
+            },
+            "at": 16
+          },
+          "key": "mark",
+          "at": 16,
+          "context": {},
+          "tags": [
+            "unknowns"
+          ],
+          "canonical_options": {
+            "A": "dot",
+            "B": "line",
+            "U": "U"
+          },
+          "current_instruction": null,
+          "comparison_key": "23",
+          "order_pair": null,
+          "gold": "U"
+        }
+      ]
+    }
+  ],
+  "id": "a518366b8238aaf98548868a3035cc812209dab0d5bdf16d6d457a273f74ac84"
+}
