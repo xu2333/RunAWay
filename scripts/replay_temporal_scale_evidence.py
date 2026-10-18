@@ -15,7 +15,8 @@ def replay(base, count=None):
     contract = json.loads((base / 'contract.synthetic.json').read_text())
     profile = contract.get('replay_profile', 'scale')
     profiles = {'scale': ('D-0023', 'runs/temporal-scale-v1/runner.py'),
-                'conflict_repair': ('D-0026', 'runs/temporal-conflict-repair-v1/runner.py')}
+                'conflict_repair': ('D-0026', 'runs/temporal-conflict-repair-v1/runner.py'),
+                'conflict_transfer': ('D-0027', 'runs/temporal-conflict-transfer-v1/runner.py')}
     if profile not in profiles: raise ValueError('Unknown frozen replay profile')
     decision, runner_path = profiles[profile]
     for name, sha in contract['source_hashes'].items():
@@ -55,7 +56,7 @@ def replay(base, count=None):
             artifact = s.t.bind(answer(job['request'], 'shared_extraction'), job['sources'])
             artifacts[pid] = artifact
             check = s.source_checks(person, artifact); checks[pid] = check
-            if not check['event_span_coverage'] or not all(check['retraction_edges']) or not all(check['current_contexts']) or (profile == 'conflict_repair' and not all(check['current_statuses'])):
+            if not check['event_span_coverage'] or not all(check['retraction_edges']) or not all(check['current_contexts']) or (profile != 'scale' and not all(check['current_statuses'])):
                 reproduced_error = 'source_to_event_gate_failed'; break
             memory = s.t.render(artifact, 768, count=count, budget_tokens=384) if count else s.t.render(artifact, 768)
             if count is None:
@@ -84,7 +85,7 @@ def replay(base, count=None):
         assert ledger['executions_missing_usage'] == 0 and all(r['outcome'] == 'completed' for r in records)
         assert set(labels) == {r['request_id'] for r in records}
         assert all(len(c['current_contexts']) == 27 and all(c['current_contexts']) and c['event_span_coverage'] and all(c['retraction_edges']) for c in checks.values())
-        if profile == 'conflict_repair': assert all(len(c['current_statuses']) == 27 and all(c['current_statuses']) for c in checks.values())
+        if profile != 'scale': assert all(len(c['current_statuses']) == 27 and all(c['current_statuses']) for c in checks.values())
     else:
         assert report['status'] == 'stopped' and reproduced_error is not None
     stages = {stage: summarize([r for r in records if labels.get(r['request_id']) == stage]) for stage in s.STAGES}
@@ -99,11 +100,13 @@ def replay(base, count=None):
         'paired_statistical_units': 1, 'new_holdout': False, 'real_person_fidelity_verified': False,
         'external_model_calls_by_replay': 0,
         'interpretation': 'One consumed six-domain paired development diagnostic. Old D18 full-source controls are reused offline, not contemporary controls, new calls, samples or costs. No real-person, population, causal old/new, fresh-holdout or cross-provider claim.'}
-    if profile == 'conflict_repair':
+    if profile != 'scale':
         summary['checks']['actual_tokenizer_recounted'] = count is not None and bool(memories)
         summary['checks']['conflict_states_rebuilt'] = True
         summary['actual_memory_token_recounts'] = len(memories) if count is not None else 0
         summary['interpretation'] = 'One consumed D25 development pair. Explicit-conflict preservation repair only; old D25 full-source controls reused offline, not contemporary controls, new samples, calls or costs. D25 remains stopped. No renewed transfer success, fresh holdout, population, real-person, causal old/new or cross-provider claim.'
+        if profile == 'conflict_transfer':
+            summary['interpretation'] = 'The fixed remaining D25 pair, previously source-read but not extracted/read by D25/D26. Product instruction and rendering unchanged from D26. One consumed paired unit, reported separately from D26; old D25 full-source controls reused offline, not contemporary or new samples/calls/costs. D25 remains stopped. No fresh-holdout, population, real-person, causal old/new or cross-provider claim.'
     return summary
 
 

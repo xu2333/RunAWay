@@ -8,7 +8,9 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 **New lexical transfer did not pass:** [D-0025](TEMPORAL-TRANSFER-RESULTS.md) stopped after5 calls. Full-source controls were300/300, but the first extraction classified two explicit conflicting observations as unmodeled. All27 action checks passed; source-event coverage caught the loss. No compressed memory was read in that batch. The live extraction instruction was corrected afterward; D-0026 tested that repair separately below.
 
-[D-0026 repair diagnostic](TEMPORAL-CONFLICT-REPAIR-RESULTS.md) subsequently passed on its first consumed pair: both conflicts preserved,54state checks passed, memories311/312tokens, current112/112, historical0/38. This supports the consumed-case repair, not D-0025 transfer success or general fidelity; the remaining pair is untested by extraction/readout.
+[D-0026 repair diagnostic](TEMPORAL-CONFLICT-REPAIR-RESULTS.md) subsequently passed on its first consumed pair: both conflicts preserved,54state checks passed, memories311/312tokens, current112/112, historical0/38. This supports the consumed-case repair, not D-0025 transfer success or general fidelity; that batch evaluated only the first pair.
+
+[D-0027](TEMPORAL-CONFLICT-TRANSFER-RESULTS.md) then tested that remaining pair with unchanged instructions/rendering: memories309/308tokens, current112/112, historical0/38. Its histories had already been source-read; this is a separate consumed-data batch, not a fresh holdout or a completed rerun of D-0025.
 
 ## Use it
 

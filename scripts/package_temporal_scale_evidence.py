@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def package(run, proposal, tokenizer, profile='scale'):
-    profiles = {'scale': ('d0023', 'temporal-scale'), 'conflict_repair': ('d0026', 'temporal-conflict-repair')}
+    profiles = {'scale': ('d0023', 'temporal-scale'), 'conflict_repair': ('d0026', 'temporal-conflict-repair'),
+                'conflict_transfer': ('d0027', 'temporal-conflict-transfer')}
     if profile not in profiles: raise ValueError('Unknown frozen packaging profile')
     prefix, bundle = profiles[profile]
     run, proposal = Path(run), Path(proposal)
