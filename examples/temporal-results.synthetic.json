@@ -1,0 +1,197 @@
+{
+  "decision": "D-0021",
+  "origin": "consumed_synthetic_development_only",
+  "status": "complete",
+  "proposal_id": "f9c8bad97a3506f95177e77af31ca9c1643ed75f3611918155196f185632786f",
+  "calls": {
+    "execution_records": 6,
+    "unique_request_fingerprints": 6,
+    "copied_artifacts_excluded": 0,
+    "locally_blocked_before_backend": 0,
+    "executions_with_usage": 6,
+    "executions_missing_usage": 0,
+    "outcomes": {
+      "completed": 6
+    },
+    "known_usage": {
+      "input_tokens": 43425,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2268,
+      "reasoning_output_tokens": 763,
+      "total_tokens": 45693
+    },
+    "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+  },
+  "stage_costs": {
+    "full_history": {
+      "execution_records": 2,
+      "unique_request_fingerprints": 2,
+      "copied_artifacts_excluded": 0,
+      "locally_blocked_before_backend": 0,
+      "executions_with_usage": 2,
+      "executions_missing_usage": 0,
+      "outcomes": {
+        "completed": 2
+      },
+      "known_usage": {
+        "input_tokens": 14508,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 269,
+        "reasoning_output_tokens": 51,
+        "total_tokens": 14777
+      },
+      "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+    },
+    "shared_extraction": {
+      "execution_records": 2,
+      "unique_request_fingerprints": 2,
+      "copied_artifacts_excluded": 0,
+      "locally_blocked_before_backend": 0,
+      "executions_with_usage": 2,
+      "executions_missing_usage": 0,
+      "outcomes": {
+        "completed": 2
+      },
+      "known_usage": {
+        "input_tokens": 14759,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1785,
+        "reasoning_output_tokens": 712,
+        "total_tokens": 16544
+      },
+      "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+    },
+    "actual_memory_reader": {
+      "execution_records": 2,
+      "unique_request_fingerprints": 2,
+      "copied_artifacts_excluded": 0,
+      "locally_blocked_before_backend": 0,
+      "executions_with_usage": 2,
+      "executions_missing_usage": 0,
+      "outcomes": {
+        "completed": 2
+      },
+      "known_usage": {
+        "input_tokens": 14158,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 214,
+        "reasoning_output_tokens": 0,
+        "total_tokens": 14372
+      },
+      "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+    }
+  },
+  "scores": {
+    "full_history": {
+      "current_choice": {
+        "correct": 16,
+        "missing": 0,
+        "unknown_answers": 0,
+        "planned": 16
+      },
+      "historical_reconstruction": {
+        "correct": 4,
+        "missing": 0,
+        "unknown_answers": 0,
+        "planned": 4
+      },
+      "joint": {
+        "correct": 20,
+        "missing": 0,
+        "unknown_answers": 0,
+        "planned": 20
+      },
+      "collapsed_current": {
+        "correct": 8,
+        "planned": 8
+      },
+      "matched_condition_contrasts": {
+        "correct": 2,
+        "planned": 2
+      }
+    },
+    "temporal": {
+      "current_choice": {
+        "correct": 16,
+        "missing": 0,
+        "unknown_answers": 0,
+        "planned": 16
+      },
+      "historical_reconstruction": {
+        "correct": 0,
+        "missing": 0,
+        "unknown_answers": 4,
+        "planned": 4
+      },
+      "joint": {
+        "correct": 16,
+        "missing": 0,
+        "unknown_answers": 4,
+        "planned": 20
+      },
+      "collapsed_current": {
+        "correct": 8,
+        "planned": 8
+      },
+      "matched_condition_contrasts": {
+        "correct": 2,
+        "planned": 2
+      }
+    }
+  },
+  "source_to_event_checks": {
+    "development-0": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "development-1": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "source_graph_checks": {
+    "development-0": {
+      "all7_event_spans_modeled": true,
+      "nested_retraction_edges_preserved": true
+    },
+    "development-1": {
+      "all7_event_spans_modeled": true,
+      "nested_retraction_edges_preserved": true
+    }
+  },
+  "memories": [
+    {
+      "person_id": "development-0",
+      "text": "仅以下领域的当前局部偏好，无历史；当前要求优先，未列未知，不授权行动。\n虚构记录中的产品验证选择，至第12天\n硬约束优先于例外，例外优先于常规；同层冲突或条件不明则不判断。\n另有未建模来源，以下解释可能不完整。\n【产品验证】常规「先完成整体设计」；例外若「方向尚未验证」成立则「先做小实验」；硬约束若「方向尚未验证」成立且「改动不可撤销」成立则「先完成整体设计」。\n",
+      "characters": 183,
+      "actual_tokens": 120
+    },
+    {
+      "person_id": "development-1",
+      "text": "仅以下领域的当前局部偏好，无历史；当前要求优先，未列未知，不授权行动。\n虚构局部选择记录：所列领域至第12天\n硬约束优先于例外，例外优先于常规；同层冲突或条件不明则不判断。\n另有未建模来源，以下解释可能不完整。\n【产品验证】常规「先完成整体设计」；例外若「方向尚未验证」成立则「先完成整体设计」；硬约束若「方向尚未验证」成立且「改动不可撤销」成立则「先做小实验」。\n",
+      "characters": 183,
+      "actual_tokens": 121
+    }
+  ],
+  "checks": {
+    "raw_calls_and_ledger_replayed": true,
+    "predictions_rebuilt": true,
+    "source_artifacts_rebuilt": true,
+    "all_scores_and_graph_checks_replayed": true,
+    "program_rendering_rebuilt": true,
+    "actual_tokenizer_recounted": true
+  },
+  "paired_statistical_units": 1,
+  "new_holdout": false,
+  "real_person_fidelity_verified": false,
+  "external_model_calls_by_replay": 0,
+  "interpretation": "One consumed single-domain paired development diagnostic. Current16/16; historical0/4 remains visible. No fresh old-method comparison, whole-six-domain128-token, population, real-person or cross-provider claim."
+}

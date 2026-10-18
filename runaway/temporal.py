@@ -3,6 +3,7 @@
 This is an optional product route, not a parser for a synthetic world's grammar.
 Models extract events; code follows explicit edges and renders whole rule groups.
 """
+import re
 from .card import canonical, digest, string
 from .profile import exact, object_schema, STR, STRINGS, validate_sources
 from .text_integrity import require_intact
@@ -24,6 +25,8 @@ def spans(sources):
     for source in sources['sources']:
         if source['role'] != 'user':
             continue
+        if re.match(r'^\s*<(heartbeat|automation|subagent_notification)', source['text'], re.I):
+            raise ValueError('Automation content is not user preference evidence; use context/tool role or remove it')
         offset = 0
         for line in source['text'].splitlines(keepends=True):
             end = offset + len(line)

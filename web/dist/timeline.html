@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="把改主意、撤销和条件例外也带进随身记忆。浏览器内检查，自选模型提取。">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RunAWay · 变化记忆</title>
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./temporal.css">
+<script type="module" src="./temporal-app.mjs"></script>
+</head>
+<body>
+<header><a class="brand" href="./">RunAWay<span>your taste, to go.</span></a><nav><a href="./">完整分身 ↗</a><a href="./gallery.html">逛逛脑洞 ↗</a></nav></header>
+<main>
+<section class="intro temporal-intro"><div><div class="eyebrow">变化记忆 · 实验通路</div><h1>改过的主意，<br>也别弄丢。</h1><p>你原先怎么选，后来为什么改。<br>把仍然有效的条件，一起装进口袋。</p><div class="pills"><span>撤销，也能撤销</span><span>多个条件一起保留</span><span>不会为了变短截掉半句</span></div></div><div class="change-note" aria-hidden="true"><span>原先的选择</span><b>↓</b><span>一次改变</span><b>↓</b><span>撤销那次改变</span><strong>带走当前的判断 ↗</strong></div></section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<section class="workspace">
+<div class="workbench">
+<section class="panel" id="source-panel"><div class="eyebrow">1 · 放入变化</div><h2>从一次改主意开始</h2><p class="muted">尽量保留先后顺序、当时的条件，以及你后来撤销了哪次决定。</p>
+<label for="kind">材料类型</label><select id="kind"><option value="experience">经历 / 来源 JSON</option><option value="resume">简历 / 自我介绍</option><option value="trajectory">与 Agent 的真实对话</option></select>
+<label for="source">你的材料</label><textarea id="source" rows="8" placeholder="先前我会……后来明确改为……如果同时遇到……则……之后撤销了那次更改。"></textarea>
+<p class="small">对话请保留「用户：」「助手：」「工具：」分段；工具和助手的话不会被当作你的偏好依据。</p>
+<div class="actions"><button id="demo-a" class="quiet" disabled>试试合成示例 A ↗</button><button id="demo-b" class="quiet" disabled>换一个条件不同的 B ↗</button></div>
+<p id="demo-note" class="small" hidden></p>
+<button id="prepare" class="primary wide" disabled>生成提取请求 <span>→</span></button>
+<label class="file-button restore">或打开自己的私有事件档案<input id="restore" type="file" accept=".json,application/json"></label>
+<p class="privacy">材料只在当前标签页中处理，不自动上传或保存。关页前可下载私有档案。</p>
+</section>
+<section class="panel" id="exchange-panel" hidden><div class="eyebrow">2 · 借个脑袋</div><h2>让常用 AI 找出变化</h2><p>复制请求，发给你选择的 LLM，再把完整 JSON 贴回来。这里检查关系，随后由程序生成记忆。</p>
+<p class="callout">请求包含上方材料；只有你粘贴并发送后，材料才会交给所选服务，费用由该服务决定。</p>
+<details><summary>查看完整提取请求</summary><textarea id="request" rows="7" readonly aria-label="完整提取请求"></textarea></details>
+<button id="copy-request" class="primary wide">复制提取请求</button>
+<label for="answer">粘贴完整 JSON</label><textarea id="answer" rows="8" placeholder="包含 scope、events、unmodeled 的完整对象。"></textarea>
+<button id="import" class="primary wide">检查变化，生成记忆 <span>→</span></button>
+</section>
+<section class="panel" id="delivery-panel" hidden><div class="eyebrow">3 · 带走判断</div><h2 id="result-title">当前判断的初稿</h2>
+<p class="small">这里只导出当前状态；过去的记录仍留在私有档案里。来源中的解释和关系需要你核对。</p>
+<label for="budget">完整 prompt 的字符上限</label><input id="budget" type="number" min="1" max="16000" step="1" value="768">
+<p class="small">字符不是 tokens。本页不估算 token 数；需要严格 token 上限时，用 CLI 和实际分词器检查。</p>
+<details><summary>只保留选中的完整方面</summary><div id="domains"></div><p id="omissions" class="small"></p></details>
+<p id="delivery-status" class="delivery-status" role="status"></p>
+<label for="prompt">完整随身 prompt</label><textarea id="prompt" rows="9" readonly></textarea>
+<div class="actions"><button id="copy-prompt" class="primary" disabled>复制完整 prompt</button><button id="download-prompt" disabled>下载文本</button><button id="download-portable" disabled>下载 Harness 文件</button></div>
+<div class="actions secondary"><button id="download-private" disabled>下载私有事件档案</button></div>
+<p class="small">Harness 文件可按<a href="https://github.com/xu2333/RunAWay/blob/main/QUICKSTART.md" target="_blank" rel="noopener noreferrer">接入指南</a>安装。私有档案包含原文，请自己保管。超预算也能保留完整私有档案。</p>
+<details><summary>逐项核对变化与原文</summary><div id="evidence"></div></details>
+<details><summary>哪些片段还没有解释</summary><div id="unmodeled"></div></details>
+</section>
+</div>
+<aside><div class="side-card"><div class="eyebrow">怎么用这份记忆</div><h3>条件改变，<br>选择也可能变。</h3><p>把完整 prompt 放到新对话开头，再交给它一次真实任务。</p><div class="example">“请按这些局部偏好比较方案；缺少关键条件时先问我，不要替我补全。”</div><p>想纠正它？修改提取结果，重新检查。程序不会擅自改写原句来凑长度。</p></div><div class="aside-note"><span>↳</span><p>合成示例来自一次已公开的开发诊断，不代表真人准确率，也不代表所有领域都能压进同样的长度。</p></div></aside>
+</section>
+<footer><span>RunAWay · 当前偏好是初稿，不是身份或行动授权。</span><a href="https://github.com/xu2333/RunAWay/blob/main/TEMPORAL-MEMORY.md" target="_blank" rel="noopener noreferrer">通路说明与边界 ↗</a></footer>
+</main>
+</body></html>

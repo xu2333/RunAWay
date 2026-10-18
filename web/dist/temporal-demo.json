@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "origin": "consumed_synthetic_development_actual_D0021",
+  "diagnostic": {
+    "calls": 6,
+    "current_correct": 16,
+    "current_planned": 16,
+    "historical_correct": 0,
+    "historical_planned": 4,
+    "matched_correct": 2,
+    "matched_planned": 2,
+    "paired_statistical_units": 1,
+    "report_url": "https://github.com/xu2333/RunAWay/blob/main/TEMPORAL-RESULTS.md"
+  },
+  "cases": [
+    {
+      "id": "development-0",
+      "sources": {
+        "schema_version": 1,
+        "sources": [
+          {
+            "id": "history",
+            "episode_id": "consumed-development",
+            "role": "user",
+            "text": "以下是完全虚构的局部选择记录，完整覆盖所列领域至第12天；最后记录后没有新增变化。\n强度数字越大证据越强；同等有效、同等强度且相反的记录没有确定结论。\n“替代”只重设该领域的常规偏好，条件例外和硬约束另算；硬约束优先于条件例外。条件中“同时”表示必须全部满足。撤销一条撤销记录，会恢复原记录；清除会清除该领域此前记录。\n记录r11（第1天）：观察到【产品验证】选择「先做小实验」，强度3。\n记录r12（第2天）：观察到【产品验证】选择「先完成整体设计」，强度1。\n记录r13（第3天）：明确更新：用「先完成整体设计」替代【产品验证】此前常规偏好，强度2。\n记录r15（第5天）：条件例外【产品验证】：若方向尚未验证，选「先做小实验」。\n记录r16（第6天）：硬约束【产品验证】：若方向尚未验证且同时改动不可撤销，选「先完成整体设计」。\n记录r17（第7天）：撤销记录r16，其他记录继续适用。\n记录r18（第8天）：撤销记录r17，其他记录继续适用。"
+          }
+        ]
+      },
+      "answer": {
+        "scope": "虚构记录中的产品验证选择，至第12天",
+        "events": [
+          {
+            "id": "r11",
+            "kind": "regular",
+            "domain": "产品验证",
+            "action": "先做小实验",
+            "strength": 3,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-dee79a4f8a5140ed6547"
+            ]
+          },
+          {
+            "id": "r12",
+            "kind": "regular",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 1,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-d29a40a11dad52a2dbb7"
+            ]
+          },
+          {
+            "id": "r13",
+            "kind": "replace",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 2,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-dee79a4f8a5140ed6547",
+              "s-d29a40a11dad52a2dbb7",
+              "s-4e67f5faaf249600a5e6"
+            ]
+          },
+          {
+            "id": "r15",
+            "kind": "exception",
+            "domain": "产品验证",
+            "action": "先做小实验",
+            "strength": 0,
+            "when_all": [
+              {
+                "predicate": "方向尚未验证",
+                "equals": true
+              }
+            ],
+            "target": "",
+            "span_ids": [
+              "s-337048456222233d0a57"
+            ]
+          },
+          {
+            "id": "r16",
+            "kind": "constraint",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 0,
+            "when_all": [
+              {
+                "predicate": "方向尚未验证",
+                "equals": true
+              },
+              {
+                "predicate": "改动不可撤销",
+                "equals": true
+              }
+            ],
+            "target": "",
+            "span_ids": [
+              "s-ca437dbd0ff329e21a6c"
+            ]
+          },
+          {
+            "id": "r17",
+            "kind": "retract",
+            "domain": "",
+            "action": "",
+            "strength": 0,
+            "when_all": [],
+            "target": "r16",
+            "span_ids": [
+              "s-c2f3c8c4c585d67e5c4f"
+            ]
+          },
+          {
+            "id": "r18",
+            "kind": "retract",
+            "domain": "",
+            "action": "",
+            "strength": 0,
+            "when_all": [],
+            "target": "r17",
+            "span_ids": [
+              "s-784963c477aa2559f009"
+            ]
+          }
+        ],
+        "unmodeled": [
+          {
+            "span_id": "s-13b7d7feed98a76535c2",
+            "reason": "仅为记录范围和背景说明，不是选择事件。"
+          },
+          {
+            "span_id": "s-afea9b9f9656841d01ac",
+            "reason": "仅定义证据强度及冲突处理规则，不是选择事件。"
+          },
+          {
+            "span_id": "s-d1bec63693c7ce527e86",
+            "reason": "仅定义替代、条件、约束、撤销和清除规则，不是选择事件。"
+          }
+        ]
+      },
+      "prompt": "仅以下领域的当前局部偏好，无历史；当前要求优先，未列未知，不授权行动。\n虚构记录中的产品验证选择，至第12天\n硬约束优先于例外，例外优先于常规；同层冲突或条件不明则不判断。\n另有未建模来源，以下解释可能不完整。\n【产品验证】常规「先完成整体设计」；例外若「方向尚未验证」成立则「先做小实验」；硬约束若「方向尚未验证」成立且「改动不可撤销」成立则「先完成整体设计」。\n",
+      "actual_diagnostic_tokens": 120
+    },
+    {
+      "id": "development-1",
+      "sources": {
+        "schema_version": 1,
+        "sources": [
+          {
+            "id": "history",
+            "episode_id": "consumed-development",
+            "role": "user",
+            "text": "以下是完全虚构的局部选择记录，完整覆盖所列领域至第12天；最后记录后没有新增变化。\n强度数字越大证据越强；同等有效、同等强度且相反的记录没有确定结论。\n“替代”只重设该领域的常规偏好，条件例外和硬约束另算；硬约束优先于条件例外。条件中“同时”表示必须全部满足。撤销一条撤销记录，会恢复原记录；清除会清除该领域此前记录。\n记录r11（第1天）：观察到【产品验证】选择「先做小实验」，强度3。\n记录r12（第2天）：观察到【产品验证】选择「先完成整体设计」，强度1。\n记录r13（第3天）：明确更新：用「先完成整体设计」替代【产品验证】此前常规偏好，强度2。\n记录r15（第5天）：条件例外【产品验证】：若方向尚未验证，选「先完成整体设计」。\n记录r16（第6天）：硬约束【产品验证】：若方向尚未验证且同时改动不可撤销，选「先做小实验」。\n记录r17（第7天）：撤销记录r16，其他记录继续适用。\n记录r18（第8天）：撤销记录r17，其他记录继续适用。"
+          }
+        ]
+      },
+      "answer": {
+        "scope": "虚构局部选择记录：所列领域至第12天",
+        "events": [
+          {
+            "id": "r11",
+            "kind": "regular",
+            "domain": "产品验证",
+            "action": "先做小实验",
+            "strength": 3,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-dee79a4f8a5140ed6547"
+            ]
+          },
+          {
+            "id": "r12",
+            "kind": "regular",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 1,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-d29a40a11dad52a2dbb7"
+            ]
+          },
+          {
+            "id": "r13",
+            "kind": "replace",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 2,
+            "when_all": [],
+            "target": "",
+            "span_ids": [
+              "s-4e67f5faaf249600a5e6"
+            ]
+          },
+          {
+            "id": "r15",
+            "kind": "exception",
+            "domain": "产品验证",
+            "action": "先完成整体设计",
+            "strength": 0,
+            "when_all": [
+              {
+                "predicate": "方向尚未验证",
+                "equals": true
+              }
+            ],
+            "target": "",
+            "span_ids": [
+              "s-434c9857e4e415c029ae"
+            ]
+          },
+          {
+            "id": "r16",
+            "kind": "constraint",
+            "domain": "产品验证",
+            "action": "先做小实验",
+            "strength": 0,
+            "when_all": [
+              {
+                "predicate": "方向尚未验证",
+                "equals": true
+              },
+              {
+                "predicate": "改动不可撤销",
+                "equals": true
+              }
+            ],
+            "target": "",
+            "span_ids": [
+              "s-d9b37e861f00df94dc3b"
+            ]
+          },
+          {
+            "id": "r17",
+            "kind": "retract",
+            "domain": "",
+            "action": "",
+            "strength": 0,
+            "when_all": [],
+            "target": "r16",
+            "span_ids": [
+              "s-c2f3c8c4c585d67e5c4f"
+            ]
+          },
+          {
+            "id": "r18",
+            "kind": "retract",
+            "domain": "",
+            "action": "",
+            "strength": 0,
+            "when_all": [],
+            "target": "r17",
+            "span_ids": [
+              "s-784963c477aa2559f009"
+            ]
+          }
+        ],
+        "unmodeled": [
+          {
+            "span_id": "s-13b7d7feed98a76535c2",
+            "reason": "记录范围与覆盖说明，不是选择事件。"
+          },
+          {
+            "span_id": "s-afea9b9f9656841d01ac",
+            "reason": "证据强度和冲突判定规则，不是选择事件。"
+          },
+          {
+            "span_id": "s-d1bec63693c7ce527e86",
+            "reason": "事件类型、条件及撤销规则说明，不是选择事件。"
+          }
+        ]
+      },
+      "prompt": "仅以下领域的当前局部偏好，无历史；当前要求优先，未列未知，不授权行动。\n虚构局部选择记录：所列领域至第12天\n硬约束优先于例外，例外优先于常规；同层冲突或条件不明则不判断。\n另有未建模来源，以下解释可能不完整。\n【产品验证】常规「先完成整体设计」；例外若「方向尚未验证」成立则「先完成整体设计」；硬约束若「方向尚未验证」成立且「改动不可撤销」成立则「先做小实验」。\n",
+      "actual_diagnostic_tokens": 121
+    }
+  ]
+}

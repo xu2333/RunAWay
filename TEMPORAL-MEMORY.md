@@ -2,7 +2,7 @@
 
 D-0018 lost a restored constraint in the **extracted profile**, before the extra compressor ran. The new optional `timeline` route preserves individual observations, changes and retraction edges. Code computes the effective rules and renders whole domain groups into a portable prompt. It does not ask a second model to paraphrase those rules.
 
-**Current status:** usable manual CLI path, offline mechanism checks passed, no new service quality result. The browser's original extraction flow remains available. The next proposed six-call diagnostic is unapproved; D-0018 is sealed.
+**Current status:** usable [browser route](web/dist/timeline.html) and manual CLI. The approved D-0021 six-call diagnostic recovered16/16 current choices on one consumed single-domain synthetic development pair; historical recovery stayed0/4. [Actual results and limits](TEMPORAL-RESULTS.md). This does not verify general or real-person fidelity. D-0018 remains sealed.
 
 ## Use it
 
@@ -63,7 +63,7 @@ python3 -m runaway timeline resolve my-timeline/timeline.private.json \
 
 The known error chain is source record r18 → retract r17 → retract r16, while the old extracted profile asserted the constraint was withdrawn. The new graph representation can express that chain directly; graph execution restores r16 without another free-form compression step. A model can still extract the wrong edge, action, chronology or conjunction, so real extraction and independent reading remain necessary.
 
-The proposed diagnostic is **at most six new generations**: two full-source readers, two source-to-event extractions, two actual portable-memory readers. One consumed paired development unit; 16 current +4 historical queries per reader condition, all denominators retained. Four conjunction cases and both option orders remain. It is a mechanism diagnostic, not a fresh holdout, comparison winner or real-person fidelity claim. The 384-token/768-character cap isolates semantic extraction before another short-budget experiment. No D-0018 remainder is reused.
+The diagnostic used **six generations**: two full-source readers, two source-to-event extractions, two actual portable-memory readers. One consumed paired development unit; 16 current +4 historical queries per reader condition, all denominators retained. Four conjunction cases and both option orders remain. The 384-token/768-character cap isolated semantic extraction; actual complete memories were120/121 tokens. No D-0018 remainder was reused. These are not fresh holdout or population results.
 
 ```sh
 python3 -m unittest discover -s tests -p 'test_temporal*.py' -v
