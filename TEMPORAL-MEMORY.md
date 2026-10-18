@@ -6,6 +6,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [D-0024 negative controls](TEMPORAL-DISCRIMINATION-RESULTS.md) then measured actual reading of swapped-person and hard-constraint-deleted memories: current88/112 and100/112, with150/150 concordance to each fixed manipulation. This supports sensitivity to those two specific corruptions on the same consumed pair, not new-domain or real-person fidelity.
 
+**New lexical transfer did not pass:** [D-0025](TEMPORAL-TRANSFER-RESULTS.md) stopped after5 calls. Full-source controls were300/300, but the first extraction classified two explicit conflicting observations as unmodeled. All27 action checks passed; source-event coverage caught the loss. No compressed memory was read. The live extraction instruction now distinguishes conflicting observations from ambiguous source meaning; model success after that correction is untested.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:

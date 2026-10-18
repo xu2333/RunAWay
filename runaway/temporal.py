@@ -65,6 +65,10 @@ def make_request(sources):
         'and the later change; this lexical check is not proof of semantic support. '
         'For regular/replace use strength 0 unless numeric evidence strength is explicitly supplied (0–10); '
         'exception/constraint always use strength 0. Conflicting actions at a conditional tier stay unresolved. '
+        'Explicit opposing observations are still modeled events: preserve BOTH with their stated '
+        'strengths, even when equally strong evidence leaves the choice unresolved. Ambiguity of the '
+        'result is not ambiguity of the observation. Never move an explicit observation to unmodeled '
+        'merely because it conflicts with another; code must distinguish observed conflict from no evidence. '
         'For retract use target only: domain/action empty, when_all empty, strength 0. '
         'For clear use domain only: action/target empty, when_all empty, strength 0. '
         'For other events use domain/action, target empty; regular/replace have no when_all, '
@@ -72,7 +76,8 @@ def make_request(sources):
         'span_ids are supplied source-span IDs, not rewritten quotes; code attaches exact text. '
         'Every span must be referenced by events or in unmodeled, never both. A span may '
         'support multiple events. Unmodeled includes irrelevant, insufficient or ambiguous '
-        'material with specific reasons. Do not fabricate an event to force coverage. '
+        'material with specific reasons. Here ambiguous means the event meaning or chronology is unsupported, '
+        'not that clearly stated events disagree. Do not fabricate an event to force coverage. '
         'Scope is a short bound on these observations. Return ONLY JSON matching schema.\n'
         'INPUT_JSON:\n' + canonical({'spans': units, 'schema': SCHEMA}))
 
