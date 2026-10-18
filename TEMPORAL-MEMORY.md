@@ -2,7 +2,7 @@
 
 D-0018 lost a restored constraint in the **extracted profile**, before the extra compressor ran. The new optional `timeline` route preserves individual observations, changes and retraction edges. Code computes the effective rules and renders whole domain groups into a portable prompt. It does not ask a second model to paraphrase those rules.
 
-**Current status:** usable [browser route](web/dist/timeline.html) and manual CLI. The approved D-0021 six-call diagnostic recovered16/16 current choices on one consumed single-domain synthetic development pair; historical recovery stayed0/4. [Actual results and limits](TEMPORAL-RESULTS.md). This does not verify general or real-person fidelity. D-0018 remains sealed.
+**Current status:** usable [browser route](web/dist/timeline.html) and manual CLI. D-0023 extended the route to complete six-domain synthetic histories: actual memories346/336 tokens, current112/112, historical0/38. [Actual results, costs and limits](TEMPORAL-SCALE-RESULTS.md). Only one consumed development pair; general and real-person fidelity remain unverified. The earlier [D-0021 single-domain diagnostic](TEMPORAL-RESULTS.md) and D-0018 remain sealed.
 
 ## Use it
 
