@@ -1,0 +1,117 @@
+{
+  "scope": "合成开发记录，仅产品验证。",
+  "events": [
+    {
+      "id": "r11",
+      "kind": "regular",
+      "domain": "产品验证",
+      "action": "先做小实验",
+      "strength": 3,
+      "when_all": [],
+      "target": "",
+      "span_ids": [
+        "s-dee79a4f8a5140ed6547"
+      ]
+    },
+    {
+      "id": "r12",
+      "kind": "regular",
+      "domain": "产品验证",
+      "action": "先完成整体设计",
+      "strength": 1,
+      "when_all": [],
+      "target": "",
+      "span_ids": [
+        "s-d29a40a11dad52a2dbb7"
+      ]
+    },
+    {
+      "id": "r13",
+      "kind": "replace",
+      "domain": "产品验证",
+      "action": "先完成整体设计",
+      "strength": 2,
+      "when_all": [],
+      "target": "",
+      "span_ids": [
+        "s-4e67f5faaf249600a5e6"
+      ]
+    },
+    {
+      "id": "r15",
+      "kind": "exception",
+      "domain": "产品验证",
+      "action": "先做小实验",
+      "strength": 0,
+      "when_all": [
+        {
+          "predicate": "方向尚未验证",
+          "equals": true
+        }
+      ],
+      "target": "",
+      "span_ids": [
+        "s-337048456222233d0a57"
+      ]
+    },
+    {
+      "id": "r16",
+      "kind": "constraint",
+      "domain": "产品验证",
+      "action": "先完成整体设计",
+      "strength": 0,
+      "when_all": [
+        {
+          "predicate": "方向尚未验证",
+          "equals": true
+        },
+        {
+          "predicate": "改动不可撤销",
+          "equals": true
+        }
+      ],
+      "target": "",
+      "span_ids": [
+        "s-ca437dbd0ff329e21a6c"
+      ]
+    },
+    {
+      "id": "r17",
+      "kind": "retract",
+      "domain": "",
+      "action": "",
+      "strength": 0,
+      "when_all": [],
+      "target": "r16",
+      "span_ids": [
+        "s-c2f3c8c4c585d67e5c4f"
+      ]
+    },
+    {
+      "id": "r18",
+      "kind": "retract",
+      "domain": "",
+      "action": "",
+      "strength": 0,
+      "when_all": [],
+      "target": "r17",
+      "span_ids": [
+        "s-784963c477aa2559f009"
+      ]
+    }
+  ],
+  "unmodeled": [
+    {
+      "span_id": "s-13b7d7feed98a76535c2",
+      "reason": "该段解释来源契约，不是个人选择事件。"
+    },
+    {
+      "span_id": "s-afea9b9f9656841d01ac",
+      "reason": "该段解释来源契约，不是个人选择事件。"
+    },
+    {
+      "span_id": "s-d1bec63693c7ce527e86",
+      "reason": "该段解释来源契约，不是个人选择事件。"
+    }
+  ]
+}

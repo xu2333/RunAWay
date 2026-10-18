@@ -20,6 +20,7 @@ from .evaluation import freeze, validate_dataset
 from .trajectory_import import import_pages
 from .decision_memory import compress as decision_compress, make_request as decision_request
 from .bound_memory import make_request as bound_request, import_candidate as bound_import
+from . import temporal
 
 
 def read(path):
@@ -58,6 +59,40 @@ def save_private_bundle(destination, files):
         with os.fdopen(fd, "w", encoding="utf-8") as stream:
             stream.write(value if isinstance(value, str) else json.dumps(value, ensure_ascii=False, indent=2) + "\n")
     return str(path.resolve())
+
+
+def temporal_command(args):
+    if args.temporal_command == 'prepare':
+        print(temporal.make_request(load_sources(args.input)))
+        return
+    if args.temporal_command == 'import':
+        artifact = temporal.bind(parse_answer(read(args.answer)), load_sources(args.input))
+    else:
+        artifact = temporal.validate(json.loads(read(args.artifact)))
+    if args.temporal_command == 'resolve':
+        output(temporal.resolve(artifact, args.domain, json.loads(args.context), args.through))
+        return
+    tokenizer = None
+    if args.budget_tokens is not None and not args.tokenizer:
+        raise ValueError('--budget-tokens requires --tokenizer; no character-to-token estimate')
+    if args.tokenizer:
+        try:
+            import llama_cpp
+        except ImportError as exc:
+            raise ValueError('Install the evaluation extra to count with a GGUF vocabulary') from exc
+        tokenizer = llama_cpp.Llama(model_path=args.tokenizer, vocab_only=True, n_gpu_layers=0, verbose=False)
+    try:
+        counter = (lambda text: len(tokenizer.tokenize(text.encode(), add_bos=False, special=False))) if tokenizer else None
+        result = temporal.render(artifact, args.budget_chars, args.domain, counter, args.budget_tokens)
+    finally:
+        if tokenizer is not None:
+            tokenizer.close()
+    files = {'timeline.private.json': artifact, 'delivery.private.json': result}
+    if result['text'] is not None:
+        files['prompt.md'] = result['text']
+        files['portable.json'] = make_expression(result['text'], artifact['id'], 'program_rendered_temporal_candidate_v1')
+    directory = save_private_bundle(args.out, files)
+    output({k: v for k, v in result.items() if k != 'text'} | {'directory': directory, 'model_calls': 0})
 
 
 def profile_command(args):
@@ -145,6 +180,27 @@ def parser():
     p = argparse.ArgumentParser(description="RunAWay — your taste, to go.")
     p.add_argument("--version", action="version", version=__version__)
     commands = p.add_subparsers(dest="command", required=True)
+    timeline = commands.add_parser('timeline', help='Optional event-graph extraction/import/export; no automatic model calls')
+    timeline_actions = timeline.add_subparsers(dest='temporal_command', required=True)
+    prepare_timeline = timeline_actions.add_parser('prepare', help='Print a source-span extraction request for your chosen LLM')
+    prepare_timeline.add_argument('--input', required=True)
+    for action in ('import', 'export'):
+        cmd = timeline_actions.add_parser(action, help='Bind source spans and render complete domain rules locally')
+        if action == 'import':
+            cmd.add_argument('--input', required=True)
+            cmd.add_argument('--answer', required=True)
+        else:
+            cmd.add_argument('artifact')
+        cmd.add_argument('--out', required=True)
+        cmd.add_argument('--budget-chars', type=int, default=768, help='Whole prompt; over-budget output is withheld, never truncated')
+        cmd.add_argument('--budget-tokens', type=int)
+        cmd.add_argument('--tokenizer', help='GGUF vocabulary; required for actual token-budget checks')
+        cmd.add_argument('--domain', action='append', help='Explicitly select whole domain groups; omitted domains are reported')
+    resolver = timeline_actions.add_parser('resolve', help='Inspect an event graph with explicit boolean context')
+    resolver.add_argument('artifact')
+    resolver.add_argument('--domain', required=True)
+    resolver.add_argument('--context', required=True, help='JSON mapping exact predicate phrases to booleans')
+    resolver.add_argument('--through', help='Earlier event ID as an inclusive historical diagnostic cutoff')
     demo = commands.add_parser("demo", help="Offline fictional example; no login or model calls")
     demo.add_argument("--out", required=True, help="New output directory")
     evaluation = commands.add_parser("eval", help="Freeze and score actual follow-up messages locally")
@@ -269,7 +325,9 @@ def parser():
 def main(argv=None):
     args = parser().parse_args(argv)
     try:
-        if args.command == "demo":
+        if args.command == 'timeline':
+            temporal_command(args)
+        elif args.command == "demo":
             bundle, summary = demo_bundle()
             directory = save_private_bundle(args.out, bundle)
             output({**summary, "directory": directory})
