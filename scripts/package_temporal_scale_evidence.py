@@ -12,7 +12,10 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def package(run, proposal, tokenizer):
+def package(run, proposal, tokenizer, profile='scale'):
+    profiles = {'scale': ('d0023', 'temporal-scale'), 'conflict_repair': ('d0026', 'temporal-conflict-repair')}
+    if profile not in profiles: raise ValueError('Unknown frozen packaging profile')
+    prefix, bundle = profiles[profile]
     run, proposal = Path(run), Path(proposal)
     files = {'raw-report.synthetic.json': run / 'service/report.json',
         'answers.synthetic.json': run / 'service/answers.json',
@@ -29,6 +32,7 @@ def package(run, proposal, tokenizer):
     contract['original_proposal_sha256'] = hashlib.sha256((proposal / 'proposal.json').read_bytes()).hexdigest()
     contract['input_aliases'] = {'world.private.json': 'world.synthetic.json', 'jobs.json': 'jobs.json', 'prior-controls.private.json': 'prior-controls.synthetic.json'}
     contract['tokenizer_sha256'] = config['tokenizer']['model_sha256']
+    if profile != 'scale': contract['replay_profile'] = profile
     with tempfile.TemporaryDirectory() as temporary:
         base = Path(temporary)
         for name, source in files.items():
@@ -47,11 +51,11 @@ def package(run, proposal, tokenizer):
             if not name.startswith('frozen-source/') and any(x in data.decode() for x in ('/Users/', 'human_source', 'access_token', 'refresh_token')):
                 raise ValueError('Private metadata in evidence data')
             manifest[name] = hashlib.sha256(data).hexdigest()
-        archive = ROOT / 'examples/temporal-scale-evidence.synthetic.zip'
+        archive = ROOT / ('examples/' + bundle + '-evidence.synthetic.zip')
         with zipfile.ZipFile(archive, 'x', zipfile.ZIP_DEFLATED) as output:
-            for name in manifest: output.writestr('d0023/' + name, (base / name).read_bytes())
-            output.writestr('d0023/manifest.json', json.dumps(manifest, indent=2) + '\n')
-        (ROOT / 'examples/temporal-scale-results.synthetic.json').write_bytes(encoded)
+            for name in manifest: output.writestr(prefix + '/' + name, (base / name).read_bytes())
+            output.writestr(prefix + '/manifest.json', json.dumps(manifest, indent=2) + '\n')
+        (ROOT / ('examples/' + bundle + '-results.synthetic.json')).write_bytes(encoded)
         (run / 'audit-summary.json').write_bytes(encoded)
     return {'files': len(manifest), 'sha256': hashlib.sha256(archive.read_bytes()).hexdigest(), 'external_model_calls_by_packager': 0, 'private_approval_or_intent_exported': False}
 

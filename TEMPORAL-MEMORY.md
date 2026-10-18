@@ -6,7 +6,9 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [D-0024 negative controls](TEMPORAL-DISCRIMINATION-RESULTS.md) then measured actual reading of swapped-person and hard-constraint-deleted memories: current88/112 and100/112, with150/150 concordance to each fixed manipulation. This supports sensitivity to those two specific corruptions on the same consumed pair, not new-domain or real-person fidelity.
 
-**New lexical transfer did not pass:** [D-0025](TEMPORAL-TRANSFER-RESULTS.md) stopped after5 calls. Full-source controls were300/300, but the first extraction classified two explicit conflicting observations as unmodeled. All27 action checks passed; source-event coverage caught the loss. No compressed memory was read. The live extraction instruction now distinguishes conflicting observations from ambiguous source meaning; model success after that correction is untested.
+**New lexical transfer did not pass:** [D-0025](TEMPORAL-TRANSFER-RESULTS.md) stopped after5 calls. Full-source controls were300/300, but the first extraction classified two explicit conflicting observations as unmodeled. All27 action checks passed; source-event coverage caught the loss. No compressed memory was read in that batch. The live extraction instruction was corrected afterward; D-0026 tested that repair separately below.
+
+[D-0026 repair diagnostic](TEMPORAL-CONFLICT-REPAIR-RESULTS.md) subsequently passed on its first consumed pair: both conflicts preserved,54state checks passed, memories311/312tokens, current112/112, historical0/38. This supports the consumed-case repair, not D-0025 transfer success or general fidelity; the remaining pair is untested by extraction/readout.
 
 ## Use it
 

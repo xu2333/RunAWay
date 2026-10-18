@@ -1,4 +1,4 @@
-"""Offline D-0023 replay against the exact frozen package, with no model calls."""
+"""Offline four-call scale/repair replay against the exact frozen package."""
 import argparse
 import hashlib
 import importlib.util
@@ -13,6 +13,11 @@ def replay(base, count=None):
     base = Path(base).resolve()
     frozen = base / 'frozen-source'
     contract = json.loads((base / 'contract.synthetic.json').read_text())
+    profile = contract.get('replay_profile', 'scale')
+    profiles = {'scale': ('D-0023', 'runs/temporal-scale-v1/runner.py'),
+                'conflict_repair': ('D-0026', 'runs/temporal-conflict-repair-v1/runner.py')}
+    if profile not in profiles: raise ValueError('Unknown frozen replay profile')
+    decision, runner_path = profiles[profile]
     for name, sha in contract['source_hashes'].items():
         assert hashlib.sha256((frozen / name).read_bytes()).hexdigest() == sha
     for name, sha in contract['input_hashes'].items():
@@ -21,7 +26,7 @@ def replay(base, count=None):
     from runaway import generation
     from runaway.card import canonical, digest
     from runaway.execution_ledger import collect, summarize, checked
-    spec = importlib.util.spec_from_file_location('frozen_scale', frozen / 'runs/temporal-scale-v1/runner.py')
+    spec = importlib.util.spec_from_file_location('frozen_scale', frozen / runner_path)
     s = importlib.util.module_from_spec(spec); spec.loader.exec_module(s)
     def forbidden(*args, **kwargs):
         raise AssertionError('Offline replay must never invoke a model')
@@ -50,12 +55,14 @@ def replay(base, count=None):
             artifact = s.t.bind(answer(job['request'], 'shared_extraction'), job['sources'])
             artifacts[pid] = artifact
             check = s.source_checks(person, artifact); checks[pid] = check
-            if not check['event_span_coverage'] or not all(check['retraction_edges']) or not all(check['current_contexts']):
+            if not check['event_span_coverage'] or not all(check['retraction_edges']) or not all(check['current_contexts']) or (profile == 'conflict_repair' and not all(check['current_statuses'])):
                 reproduced_error = 'source_to_event_gate_failed'; break
             memory = s.t.render(artifact, 768, count=count, budget_tokens=384) if count else s.t.render(artifact, 768)
             if count is None:
                 memory['budget_tokens'] = report['memories'][pid]['budget_tokens']
                 memory['required_tokens'] = report['memories'][pid]['required_tokens']
+                if memory['required_tokens'] > 384:
+                    memory['status'] = 'budget_blocked'; memory['text'] = None
             memories[pid] = memory
             if memory['status'] != 'candidate_unvalidated':
                 reproduced_error = 'whole_prompt_budget_failed'; break
@@ -77,11 +84,12 @@ def replay(base, count=None):
         assert ledger['executions_missing_usage'] == 0 and all(r['outcome'] == 'completed' for r in records)
         assert set(labels) == {r['request_id'] for r in records}
         assert all(len(c['current_contexts']) == 27 and all(c['current_contexts']) and c['event_span_coverage'] and all(c['retraction_edges']) for c in checks.values())
+        if profile == 'conflict_repair': assert all(len(c['current_statuses']) == 27 and all(c['current_statuses']) for c in checks.values())
     else:
         assert report['status'] == 'stopped' and reproduced_error is not None
     stages = {stage: summarize([r for r in records if labels.get(r['request_id']) == stage]) for stage in s.STAGES}
     assert {stage: cost['execution_records'] for stage, cost in stages.items() if cost['execution_records']} == report['stage_attempts']
-    return {'decision': 'D-0023', 'status': report['status'], 'proposal_id': report['proposal_id'],
+    summary = {'decision': decision, 'status': report['status'], 'proposal_id': report['proposal_id'],
         'calls': ledger, 'stage_costs': stages, 'scores': scores, 'stop_reason': report['stop_reason'],
         'prior_controls_reused_offline_not_new': controls, 'source_to_event_checks': checks,
         'memories': [{'person_id': pid, 'text': m['text'], 'characters': m['required_characters'], 'actual_tokens': m['required_tokens']} for pid, m in memories.items()],
@@ -91,6 +99,12 @@ def replay(base, count=None):
         'paired_statistical_units': 1, 'new_holdout': False, 'real_person_fidelity_verified': False,
         'external_model_calls_by_replay': 0,
         'interpretation': 'One consumed six-domain paired development diagnostic. Old D18 full-source controls are reused offline, not contemporary controls, new calls, samples or costs. No real-person, population, causal old/new, fresh-holdout or cross-provider claim.'}
+    if profile == 'conflict_repair':
+        summary['checks']['actual_tokenizer_recounted'] = count is not None and bool(memories)
+        summary['checks']['conflict_states_rebuilt'] = True
+        summary['actual_memory_token_recounts'] = len(memories) if count is not None else 0
+        summary['interpretation'] = 'One consumed D25 development pair. Explicit-conflict preservation repair only; old D25 full-source controls reused offline, not contemporary controls, new samples, calls or costs. D25 remains stopped. No renewed transfer success, fresh holdout, population, real-person, causal old/new or cross-provider claim.'
+    return summary
 
 
 if __name__ == '__main__':
