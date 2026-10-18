@@ -45,6 +45,8 @@ usage5/5、未知0、缓存输入0；推理输出427已包含在output中，不�
 
 复算使用50份冻结源码和4个输入，重建新领域协议、请求、事件图、覆盖/条件门槛、全部分数、停止位置和逐阶段成本，并验证停止后没有调用。现在的产品指令修正不影响封存复算。审批、人类消息、执行意图、鉴权与本地路径不公开。
 
+封存汇总中的`actual_tokenizer_recounted: true`沿用了“已提供实际词表计数器”的标记；本批没有记忆产物，实际重计的记忆数为0。该标记不构成任何短记忆token预算通过的证据。
+
 ```sh
 python3 -m unittest discover -s tests -p test_temporal_transfer_evidence.py -v
 ```
