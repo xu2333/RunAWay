@@ -73,6 +73,11 @@ class TemporalEvidenceTests(unittest.TestCase):
     def test_browser_protocol_is_generated_from_current_product(self):
         self.assertEqual(json.loads((ROOT / 'web/dist/temporal-protocol.json').read_text()), protocol())
 
+    def test_optimized_mode_cannot_skip_replay_checks(self):
+        result = subprocess.run([sys.executable, '-O', '-B', str(ROOT / 'scripts/replay_temporal_evidence.py'), '--base', str(self.base)], text=True, capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Evidence replay requires assertions enabled', result.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()

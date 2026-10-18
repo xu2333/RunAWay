@@ -6,6 +6,8 @@ import sys
 
 
 def replay(base, tokenizer=None):
+    if sys.flags.optimize:
+        raise ValueError('Evidence replay requires assertions enabled; do not use -O or PYTHONOPTIMIZE')
     base = Path(base).resolve()
     sys.path.insert(0, str(base / 'runtime-source'))
     from runaway import temporal as t, temporal_diagnostic as td, generation
