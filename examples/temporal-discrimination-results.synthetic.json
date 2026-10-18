@@ -1,0 +1,1109 @@
+{
+  "decision": "D-0024",
+  "proposal_id": "a8dcef0b95fa30ffdcde7bf03c7b8e2c93ae5f69585e50cd991abf227d814335",
+  "status": "complete",
+  "diagnostic_success": true,
+  "stop_reason": null,
+  "calls": {
+    "execution_records": 4,
+    "unique_request_fingerprints": 4,
+    "copied_artifacts_excluded": 0,
+    "locally_blocked_before_backend": 0,
+    "executions_with_usage": 4,
+    "executions_missing_usage": 0,
+    "outcomes": {
+      "completed": 4
+    },
+    "known_usage": {
+      "input_tokens": 60904,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 5022,
+      "reasoning_output_tokens": 150,
+      "total_tokens": 65926
+    },
+    "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+  },
+  "stage_costs": {
+    "wrong_person_reader": {
+      "execution_records": 2,
+      "unique_request_fingerprints": 2,
+      "copied_artifacts_excluded": 0,
+      "locally_blocked_before_backend": 0,
+      "executions_with_usage": 2,
+      "executions_missing_usage": 0,
+      "outcomes": {
+        "completed": 2
+      },
+      "known_usage": {
+        "input_tokens": 30529,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2498,
+        "reasoning_output_tokens": 62,
+        "total_tokens": 33027
+      },
+      "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+    },
+    "drop_hard_reader": {
+      "execution_records": 2,
+      "unique_request_fingerprints": 2,
+      "copied_artifacts_excluded": 0,
+      "locally_blocked_before_backend": 0,
+      "executions_with_usage": 2,
+      "executions_missing_usage": 0,
+      "outcomes": {
+        "completed": 2
+      },
+      "known_usage": {
+        "input_tokens": 30375,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2524,
+        "reasoning_output_tokens": 88,
+        "total_tokens": 32899
+      },
+      "interpretation": "Known local records, not an invoice. Cache is within input; reasoning is within output. Unresolved attempts and missing usage are not zero. Identical legacy executions may be indistinguishable from copies."
+    }
+  },
+  "scores": {
+    "wrong_person_reader": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 88,
+        "planned": 112,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 12,
+        "accuracy": 0.7857142857142857,
+        "layers": {
+          "strength": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 28,
+            "planned": 28,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 12,
+            "planned": 24,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conflicts": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 24,
+          "errors": 12,
+          "abstentions": 0,
+          "missing": 0,
+          "active_hard_queries": 12,
+          "observed_violations": 4
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 44,
+          "planned": 56,
+          "consistent": 56,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 0,
+          "planned": 3,
+          "details": [
+            {
+              "pair_id": "pair-0",
+              "domain": "feedback",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "planning",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "autonomy",
+              "correct": false,
+              "planned_action_checks": 8
+            }
+          ]
+        },
+        "paired_clusters": [
+          {
+            "correct": 88,
+            "planned": 112,
+            "pair_id": "pair-0",
+            "accuracy": 0.7857142857142857
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 44,
+            "planned": 56,
+            "accuracy": 0.7857142857142857
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 44,
+            "planned": 56,
+            "accuracy": 0.7857142857142857
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.7857142857142857,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 0,
+        "planned": 38,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 38,
+        "accuracy": 0.0,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 12,
+          "errors": 12,
+          "abstentions": 12,
+          "missing": 0,
+          "active_hard_queries": 12,
+          "observed_violations": 0
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 0,
+          "planned": 0,
+          "consistent": 0,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 0,
+          "planned": 0,
+          "details": []
+        },
+        "paired_clusters": [
+          {
+            "correct": 0,
+            "planned": 38,
+            "pair_id": "pair-0",
+            "accuracy": 0.0
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 0,
+            "planned": 19,
+            "accuracy": 0.0
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 0,
+            "planned": 19,
+            "accuracy": 0.0
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.0,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 88,
+        "planned": 150,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 50,
+        "accuracy": 0.5866666666666667,
+        "layers": {
+          "strength": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 28,
+            "planned": 40,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 36,
+            "planned": 60,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 36,
+            "planned": 60,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 12,
+            "planned": 36,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conflicts": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 36,
+          "errors": 24,
+          "abstentions": 12,
+          "missing": 0,
+          "active_hard_queries": 24,
+          "observed_violations": 4
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 44,
+          "planned": 56,
+          "consistent": 56,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 0,
+          "planned": 3,
+          "details": [
+            {
+              "pair_id": "pair-0",
+              "domain": "feedback",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "planning",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "autonomy",
+              "correct": false,
+              "planned_action_checks": 8
+            }
+          ]
+        },
+        "paired_clusters": [
+          {
+            "correct": 88,
+            "planned": 150,
+            "pair_id": "pair-0",
+            "accuracy": 0.5866666666666667
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 44,
+            "planned": 75,
+            "accuracy": 0.5866666666666667
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 44,
+            "planned": 75,
+            "accuracy": 0.5866666666666667
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.5866666666666667,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      }
+    },
+    "drop_hard_reader": {
+      "current_choice": {
+        "task": "current_choice",
+        "correct": 100,
+        "planned": 112,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 12,
+        "accuracy": 0.8928571428571429,
+        "layers": {
+          "strength": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 28,
+            "planned": 28,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 48,
+            "planned": 48,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 36,
+            "planned": 48,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 12,
+            "planned": 24,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conflicts": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 24,
+          "errors": 12,
+          "abstentions": 0,
+          "missing": 0,
+          "active_hard_queries": 12,
+          "observed_violations": 12
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 50,
+          "planned": 56,
+          "consistent": 56,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 2,
+          "planned": 3,
+          "details": [
+            {
+              "pair_id": "pair-0",
+              "domain": "feedback",
+              "correct": true,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "planning",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "autonomy",
+              "correct": true,
+              "planned_action_checks": 8
+            }
+          ]
+        },
+        "paired_clusters": [
+          {
+            "correct": 100,
+            "planned": 112,
+            "pair_id": "pair-0",
+            "accuracy": 0.8928571428571429
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 50,
+            "planned": 56,
+            "accuracy": 0.8928571428571429
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 50,
+            "planned": 56,
+            "accuracy": 0.8928571428571429
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.8928571428571429,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      },
+      "historical_reconstruction": {
+        "task": "historical_reconstruction",
+        "correct": 0,
+        "planned": 38,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 38,
+        "accuracy": 0.0,
+        "layers": {
+          "updates": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 0,
+            "planned": 12,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 12,
+          "errors": 12,
+          "abstentions": 12,
+          "missing": 0,
+          "active_hard_queries": 12,
+          "observed_violations": 0
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 0,
+          "planned": 0,
+          "consistent": 0,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 0,
+          "planned": 0,
+          "details": []
+        },
+        "paired_clusters": [
+          {
+            "correct": 0,
+            "planned": 38,
+            "pair_id": "pair-0",
+            "accuracy": 0.0
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 0,
+            "planned": 19,
+            "accuracy": 0.0
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 0,
+            "planned": 19,
+            "accuracy": 0.0
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.0,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      },
+      "joint": {
+        "task": "joint",
+        "correct": 100,
+        "planned": 150,
+        "missing": 0,
+        "invalid_answers": 0,
+        "unknown_answers": 50,
+        "accuracy": 0.6666666666666666,
+        "layers": {
+          "strength": {
+            "correct": 24,
+            "planned": 24,
+            "missing": 0
+          },
+          "updates": {
+            "correct": 28,
+            "planned": 40,
+            "missing": 0
+          },
+          "revocations": {
+            "correct": 36,
+            "planned": 60,
+            "missing": 0
+          },
+          "exceptions": {
+            "correct": 48,
+            "planned": 48,
+            "missing": 0
+          },
+          "conjunctions": {
+            "correct": 36,
+            "planned": 60,
+            "missing": 0
+          },
+          "hard_constraints": {
+            "correct": 12,
+            "planned": 36,
+            "missing": 0
+          },
+          "unknowns": {
+            "correct": 12,
+            "planned": 12,
+            "missing": 0
+          },
+          "conflicts": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "current_instruction": {
+            "correct": 4,
+            "planned": 4,
+            "missing": 0
+          },
+          "old_fact": {
+            "correct": 0,
+            "planned": 2,
+            "missing": 0
+          }
+        },
+        "hard_constraints": {
+          "planned": 36,
+          "errors": 24,
+          "abstentions": 12,
+          "missing": 0,
+          "active_hard_queries": 24,
+          "observed_violations": 12
+        },
+        "current_scenarios_option_orders_collapsed": {
+          "correct": 50,
+          "planned": 56,
+          "consistent": 56,
+          "missing": 0
+        },
+        "matched_domain_contrasts": {
+          "correct": 2,
+          "planned": 3,
+          "details": [
+            {
+              "pair_id": "pair-0",
+              "domain": "feedback",
+              "correct": true,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "planning",
+              "correct": false,
+              "planned_action_checks": 8
+            },
+            {
+              "pair_id": "pair-0",
+              "domain": "autonomy",
+              "correct": true,
+              "planned_action_checks": 8
+            }
+          ]
+        },
+        "paired_clusters": [
+          {
+            "correct": 100,
+            "planned": 150,
+            "pair_id": "pair-0",
+            "accuracy": 0.6666666666666666
+          }
+        ],
+        "per_person": [
+          {
+            "person_id": "p-dc7746c231bc",
+            "pair_id": "pair-0",
+            "correct": 50,
+            "planned": 75,
+            "accuracy": 0.6666666666666666
+          },
+          {
+            "person_id": "p-5fb7b0b5d1cc",
+            "pair_id": "pair-0",
+            "correct": 50,
+            "planned": 75,
+            "accuracy": 0.6666666666666666
+          }
+        ],
+        "independent_cluster_count": 1,
+        "macro_cluster_accuracy": 0.6666666666666666,
+        "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+      }
+    }
+  },
+  "manipulation_semantics_concordance": {
+    "wrong_person_reader": {
+      "correct": 150,
+      "planned": 150
+    },
+    "drop_hard_reader": {
+      "correct": 150,
+      "planned": 150
+    }
+  },
+  "budgets": [
+    {
+      "request_id": "c2362f4b2cf337fab7c4a3645d9947b84977475ee5e53599cf6d82b7e3797cbd",
+      "characters": 488,
+      "tokens": 336
+    },
+    {
+      "request_id": "645f91505bbc7b5d5edbcb15935f3ff6f3537564612432569a024456e3019288",
+      "characters": 503,
+      "tokens": 346
+    },
+    {
+      "request_id": "ecfb6213da8f57c2f41b6c87c53c3b602aa394903b9c2bc43ce835e26a7e01c8",
+      "characters": 402,
+      "tokens": 274
+    },
+    {
+      "request_id": "cc356ff18840cb77b5e8c090ca08eb8be5e659bbc527c435d777b6176254585d",
+      "characters": 389,
+      "tokens": 264
+    }
+  ],
+  "prior_intact_controls_offline_not_new": {
+    "current_choice": {
+      "task": "current_choice",
+      "correct": 112,
+      "planned": 112,
+      "missing": 0,
+      "invalid_answers": 0,
+      "unknown_answers": 12,
+      "accuracy": 1.0,
+      "layers": {
+        "strength": {
+          "correct": 24,
+          "planned": 24,
+          "missing": 0
+        },
+        "updates": {
+          "correct": 28,
+          "planned": 28,
+          "missing": 0
+        },
+        "revocations": {
+          "correct": 48,
+          "planned": 48,
+          "missing": 0
+        },
+        "exceptions": {
+          "correct": 48,
+          "planned": 48,
+          "missing": 0
+        },
+        "conjunctions": {
+          "correct": 48,
+          "planned": 48,
+          "missing": 0
+        },
+        "hard_constraints": {
+          "correct": 24,
+          "planned": 24,
+          "missing": 0
+        },
+        "unknowns": {
+          "correct": 12,
+          "planned": 12,
+          "missing": 0
+        },
+        "conflicts": {
+          "correct": 4,
+          "planned": 4,
+          "missing": 0
+        },
+        "current_instruction": {
+          "correct": 4,
+          "planned": 4,
+          "missing": 0
+        }
+      },
+      "hard_constraints": {
+        "planned": 24,
+        "errors": 0,
+        "abstentions": 0,
+        "missing": 0,
+        "active_hard_queries": 12,
+        "observed_violations": 0
+      },
+      "current_scenarios_option_orders_collapsed": {
+        "correct": 56,
+        "planned": 56,
+        "consistent": 56,
+        "missing": 0
+      },
+      "matched_domain_contrasts": {
+        "correct": 3,
+        "planned": 3,
+        "details": [
+          {
+            "pair_id": "pair-0",
+            "domain": "feedback",
+            "correct": true,
+            "planned_action_checks": 8
+          },
+          {
+            "pair_id": "pair-0",
+            "domain": "planning",
+            "correct": true,
+            "planned_action_checks": 8
+          },
+          {
+            "pair_id": "pair-0",
+            "domain": "autonomy",
+            "correct": true,
+            "planned_action_checks": 8
+          }
+        ]
+      },
+      "paired_clusters": [
+        {
+          "correct": 112,
+          "planned": 112,
+          "pair_id": "pair-0",
+          "accuracy": 1.0
+        }
+      ],
+      "per_person": [
+        {
+          "person_id": "p-dc7746c231bc",
+          "pair_id": "pair-0",
+          "correct": 56,
+          "planned": 56,
+          "accuracy": 1.0
+        },
+        {
+          "person_id": "p-5fb7b0b5d1cc",
+          "pair_id": "pair-0",
+          "correct": 56,
+          "planned": 56,
+          "accuracy": 1.0
+        }
+      ],
+      "independent_cluster_count": 1,
+      "macro_cluster_accuracy": 1.0,
+      "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+    },
+    "historical_reconstruction": {
+      "task": "historical_reconstruction",
+      "correct": 0,
+      "planned": 38,
+      "missing": 0,
+      "invalid_answers": 0,
+      "unknown_answers": 38,
+      "accuracy": 0.0,
+      "layers": {
+        "updates": {
+          "correct": 0,
+          "planned": 12,
+          "missing": 0
+        },
+        "conjunctions": {
+          "correct": 0,
+          "planned": 12,
+          "missing": 0
+        },
+        "hard_constraints": {
+          "correct": 0,
+          "planned": 12,
+          "missing": 0
+        },
+        "revocations": {
+          "correct": 0,
+          "planned": 12,
+          "missing": 0
+        },
+        "old_fact": {
+          "correct": 0,
+          "planned": 2,
+          "missing": 0
+        }
+      },
+      "hard_constraints": {
+        "planned": 12,
+        "errors": 12,
+        "abstentions": 12,
+        "missing": 0,
+        "active_hard_queries": 12,
+        "observed_violations": 0
+      },
+      "current_scenarios_option_orders_collapsed": {
+        "correct": 0,
+        "planned": 0,
+        "consistent": 0,
+        "missing": 0
+      },
+      "matched_domain_contrasts": {
+        "correct": 0,
+        "planned": 0,
+        "details": []
+      },
+      "paired_clusters": [
+        {
+          "correct": 0,
+          "planned": 38,
+          "pair_id": "pair-0",
+          "accuracy": 0.0
+        }
+      ],
+      "per_person": [
+        {
+          "person_id": "p-dc7746c231bc",
+          "pair_id": "pair-0",
+          "correct": 0,
+          "planned": 19,
+          "accuracy": 0.0
+        },
+        {
+          "person_id": "p-5fb7b0b5d1cc",
+          "pair_id": "pair-0",
+          "correct": 0,
+          "planned": 19,
+          "accuracy": 0.0
+        }
+      ],
+      "independent_cluster_count": 1,
+      "macro_cluster_accuracy": 0.0,
+      "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+    },
+    "joint": {
+      "task": "joint",
+      "correct": 112,
+      "planned": 150,
+      "missing": 0,
+      "invalid_answers": 0,
+      "unknown_answers": 50,
+      "accuracy": 0.7466666666666667,
+      "layers": {
+        "strength": {
+          "correct": 24,
+          "planned": 24,
+          "missing": 0
+        },
+        "updates": {
+          "correct": 28,
+          "planned": 40,
+          "missing": 0
+        },
+        "revocations": {
+          "correct": 48,
+          "planned": 60,
+          "missing": 0
+        },
+        "exceptions": {
+          "correct": 48,
+          "planned": 48,
+          "missing": 0
+        },
+        "conjunctions": {
+          "correct": 48,
+          "planned": 60,
+          "missing": 0
+        },
+        "hard_constraints": {
+          "correct": 24,
+          "planned": 36,
+          "missing": 0
+        },
+        "unknowns": {
+          "correct": 12,
+          "planned": 12,
+          "missing": 0
+        },
+        "conflicts": {
+          "correct": 4,
+          "planned": 4,
+          "missing": 0
+        },
+        "current_instruction": {
+          "correct": 4,
+          "planned": 4,
+          "missing": 0
+        },
+        "old_fact": {
+          "correct": 0,
+          "planned": 2,
+          "missing": 0
+        }
+      },
+      "hard_constraints": {
+        "planned": 36,
+        "errors": 12,
+        "abstentions": 12,
+        "missing": 0,
+        "active_hard_queries": 24,
+        "observed_violations": 0
+      },
+      "current_scenarios_option_orders_collapsed": {
+        "correct": 56,
+        "planned": 56,
+        "consistent": 56,
+        "missing": 0
+      },
+      "matched_domain_contrasts": {
+        "correct": 3,
+        "planned": 3,
+        "details": [
+          {
+            "pair_id": "pair-0",
+            "domain": "feedback",
+            "correct": true,
+            "planned_action_checks": 8
+          },
+          {
+            "pair_id": "pair-0",
+            "domain": "planning",
+            "correct": true,
+            "planned_action_checks": 8
+          },
+          {
+            "pair_id": "pair-0",
+            "domain": "autonomy",
+            "correct": true,
+            "planned_action_checks": 8
+          }
+        ]
+      },
+      "paired_clusters": [
+        {
+          "correct": 112,
+          "planned": 150,
+          "pair_id": "pair-0",
+          "accuracy": 0.7466666666666667
+        }
+      ],
+      "per_person": [
+        {
+          "person_id": "p-dc7746c231bc",
+          "pair_id": "pair-0",
+          "correct": 56,
+          "planned": 75,
+          "accuracy": 0.7466666666666667
+        },
+        {
+          "person_id": "p-5fb7b0b5d1cc",
+          "pair_id": "pair-0",
+          "correct": 56,
+          "planned": 75,
+          "accuracy": 0.7466666666666667
+        }
+      ],
+      "independent_cluster_count": 1,
+      "macro_cluster_accuracy": 0.7466666666666667,
+      "statistical_warning": "Raw queries, option orders, domains and paired people are not independent samples; no population CI or significance claim."
+    }
+  },
+  "checks": {
+    "raw_calls_and_ledger_replayed": true,
+    "manipulations_rebuilt_byte_exactly": true,
+    "fixed_semantics_rebuilt": true,
+    "old_controls_replayed_offline_only": true,
+    "predictions_scores_and_success_rebuilt": true,
+    "actual_tokenizer_recounted": true
+  },
+  "paired_statistical_units": 1,
+  "new_holdout": false,
+  "real_person_fidelity_verified": false,
+  "external_model_calls_by_replay": 0,
+  "interpretation": "Fixed consumed development pair. Negative-control model reading is measured separately from program calibration. Old intact controls are reused offline, not contemporary controls, independent samples, new calls or costs. No population, real-person, fresh-holdout, causal-old-new or cross-provider claim."
+}

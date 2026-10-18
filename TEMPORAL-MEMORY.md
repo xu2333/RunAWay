@@ -4,6 +4,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 **Current status:** usable [browser route](web/dist/timeline.html) and manual CLI. D-0023 extended the route to complete six-domain synthetic histories: actual memories346/336 tokens, current112/112, historical0/38. [Actual results, costs and limits](TEMPORAL-SCALE-RESULTS.md). Only one consumed development pair; general and real-person fidelity remain unverified. The earlier [D-0021 single-domain diagnostic](TEMPORAL-RESULTS.md) and D-0018 remain sealed.
 
+[D-0024 negative controls](TEMPORAL-DISCRIMINATION-RESULTS.md) then measured actual reading of swapped-person and hard-constraint-deleted memories: current88/112 and100/112, with150/150 concordance to each fixed manipulation. This supports sensitivity to those two specific corruptions on the same consumed pair, not new-domain or real-person fidelity.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:
