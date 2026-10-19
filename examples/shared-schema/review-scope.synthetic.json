@@ -1,0 +1,144 @@
+{
+  "kind": "review_scope_only_not_executable",
+  "origin": "fully_synthetic",
+  "approved": false,
+  "calls_max": 16,
+  "stage_caps": {
+    "development_intact": 6,
+    "development_wrong_person": 2,
+    "holdout_intact": 8
+  },
+  "first_compatibility_probe_request_id": "36f7e0cdc2c8108648df65dec3d85fc1970193c021a001a83e3b557ecb023519",
+  "compatibility_probe": "The first planned actual development reader doubles as the reference-support probe; no extra generation. Any unsupported reference/parse error stops all subsequent calls. No inline fallback.",
+  "requested_backend": "existing_user_configured_OpenAI_Codex_service",
+  "requested_model": "gpt-6.1-sol",
+  "reasoning": "CLI default,no override",
+  "local_versions_observed": {
+    "codex": "codex-cli 0.162.0-alpha.17.2",
+    "node": "v25.6.0",
+    "python": "3.9.6",
+    "llama_cpp": "0.3.36"
+  },
+  "model_availability_and_backend_ref_support": "Not revalidated by service; unmeasured.",
+  "timeout_seconds": 180,
+  "cleanup_waits_seconds": [
+    2,
+    2
+  ],
+  "data_scope": "Only full concise synthetic current memories,public queries,unchangedSYSTEM/contract and shared-reference schema. No realperson data,workspace chats,original trajectory,gold,latent policy object,split,family,seed,program predictions or oldanswers in request. Credentials only authenticate.",
+  "request_file_sha256": "64cf5812aff37865e2c89c663f116d06483ece1cbbd426e79d7f26a593b589db",
+  "source_v1_archive_sha256": "48330c90142f297bcd9d12dde3d6d4f25fe1e582ad9e34610a795e5d36881cc7",
+  "request_matrix": {
+    "development_jobs": [
+      {
+        "person_id": "s-05408a056eae",
+        "source_request_id": "b7fcfda3cd9a7c5efb2d35642a63877e6fdc86aca7ae7a41c83df707ab7f5d45",
+        "request_id": "36f7e0cdc2c8108648df65dec3d85fc1970193c021a001a83e3b557ecb023519"
+      },
+      {
+        "person_id": "s-8b3b8dc0b238",
+        "source_request_id": "13d4a6fb720bee322369cff551646f2b68aa96aff1277727f0557b220b3bccf4",
+        "request_id": "00e6bc069b0e4f96fc9f955afeaa022a4fd3f641110e29e53d87411ae497229c"
+      },
+      {
+        "person_id": "s-fc95f8466028",
+        "source_request_id": "7994cefa1d01dba2b5e5c7dcfafa161dab627a075d67555f8c18ef5ee541d347",
+        "request_id": "ceb97ad69cd1de3ae991a97c9d078faf8e2bf2ed6082eee9fd1c7a9bc9fd84f2"
+      },
+      {
+        "person_id": "s-3016c373eb43",
+        "source_request_id": "972c85bba7dfa6f30fd026218f3f0214d27997a458fb00dd073f6ed91672bc5b",
+        "request_id": "76af99652c6db6e272a7554ae19c6ba7f1cb49d673d28687fc74cfa0d7983e7e"
+      },
+      {
+        "person_id": "s-e8d93b21b38d",
+        "source_request_id": "43f389dec47abc21f56b76deaa7a8f6eb91fe27978918112c64d43610d611b56",
+        "request_id": "f0e2b934e0842659ce1f2bf81c254a214343b9b689ef9cb60d086f8ac1005fe5"
+      },
+      {
+        "person_id": "s-c352cc903a2f",
+        "source_request_id": "fa408d1d3ee42715f918c364b307d905c70a375995d111c2d3610e5a18cc606e",
+        "request_id": "f9b23bfc398933c4df18b8f5e8acdd88f55622ada1f55e3fd9de53d4b66cbeb8"
+      }
+    ],
+    "wrong_person_jobs": [
+      {
+        "person_id": "s-e8d93b21b38d",
+        "source_request_id": "3fcda0343d776f360c167f8bb7cedebc9be3d27430f1293ad7c2927c0c1b6fb7",
+        "request_id": "ced06d96da7d9abfb57ddc225c2be29b8771a994126eeae843defd32dea5e39b"
+      },
+      {
+        "person_id": "s-c352cc903a2f",
+        "source_request_id": "e4eaf77d61b08d7698deaa92f5b5cdcf583a3b7b032cb2ff93f2904f3fdd95aa",
+        "request_id": "42c0228a748b3ff3b7af491b1e5451b527ba6be8e0cdda1faafedf31aa78e627"
+      }
+    ],
+    "holdout_jobs": [
+      {
+        "person_id": "s-af8850901229",
+        "source_request_id": "f59de990fb52358ed8b553e5e82b8473cb257695bd9840eee3ca89d3147f574a",
+        "request_id": "3f6bb5a4223fcecb03e0330123cb6ecf6ab5ff176ff84d6aaedec2554b5ad82f"
+      },
+      {
+        "person_id": "s-1c87f1901ff4",
+        "source_request_id": "e6efdbe8828590d6dfce678af243d36b63b218cac3912b2ba9c909e70bc991d5",
+        "request_id": "f42f1b43d44cd899a740746d6bb07ca7508ea6ac07ace27d999a097d71274499"
+      },
+      {
+        "person_id": "s-a97a77bec8f9",
+        "source_request_id": "dbe7082fa6c05e58f3861529a1d532abbe3ec9898fdf00fb9f5163185e5dff21",
+        "request_id": "39ad3d822d97325af5afa490aeb312bdd2212c1253ee090e69b63e041f1f6a47"
+      },
+      {
+        "person_id": "s-284766c7ac4b",
+        "source_request_id": "a4ea5d82d370c46d10a7f8aa62ffd92d5b24c194d4106183b4638d64983d85f7",
+        "request_id": "5fe40d5a6b6f5a07f067ae8df5ca5465aadc064b00f6ddb34e731d6be5b4fd03"
+      },
+      {
+        "person_id": "s-67ee28a29731",
+        "source_request_id": "85230ddfa1345f0df9669d80434cb67c6df61c53eada2a3ccebeb61414cc640a",
+        "request_id": "f71dc76c41d1c95c4c177f0c83f37a9ac26e6ef98eeae17651650dc540ab85db"
+      },
+      {
+        "person_id": "s-15486d73e988",
+        "source_request_id": "9add936aa1e468c56862ed84ea104f454a092b5bc46bf674b45bb41ef1ffc1dc",
+        "request_id": "9e10de03c291612a06c39e10b9feeaee74d24e427125786258f3fb45e87322c3"
+      },
+      {
+        "person_id": "s-feb43bb9af53",
+        "source_request_id": "325990b156449abbf6f8e3e91514d5bb1e33d49e449d58e1e9873e00f43191f0",
+        "request_id": "84b2b38cacfebe085773aa7b6c6e798d81a9b6e4d0a3278f823ebf96149b9018"
+      },
+      {
+        "person_id": "s-ba93d04b20ab",
+        "source_request_id": "1c7a5f418151553a2b9946b7d465b52d90334b0a191bacf41dc69e908102b73e",
+        "request_id": "58839ce7af56f9e3cf77995a701878a1ad5ec6c4be2e797596c161e1d62a8a56"
+      }
+    ]
+  },
+  "whole_request_lengths": {
+    "characters": 192843,
+    "utf8_bytes": 263013,
+    "actual_local_vocabulary_tokens": 77035
+  },
+  "cost_boundary": "Canonical complete system/prompt/schema lengths,not billing/price/totalHTTP/token/money/time caps. FutureCLI/API-added metadata not frozen here. Native development chat separate,not0.",
+  "isolation": "Reuse existing generation.codex_generate and FrozenCalls observed-runner pattern: empty temporary directory contains onlysystem.txt/schema.json; ignore-user-config,ephemeral,read-only,skip project docs/hostskills; shell/tools/apps/plugins/hooks/browser/web/MCP/memory disabled. Keep default reasoning.",
+  "isolation_source_hashes": {
+    "runaway/generation.py": "b413487c52eed45897ceeb65031adeddc651d6cdd551b2570204b6536043da9b",
+    "runaway/taste_executor.py": "57b7165a596cc731547a804b7b81f2a2c22feaa14b44182f478f222acdebb041",
+    "runaway/fidelity_runner.py": "040e7c97f6e5d834a54af691ef7a485eeccadd0fa4df6da9cb41cb5f51069c52",
+    "runaway/execution_ledger.py": "0f0a3d96cb25f1c5d496a1aad72e5fb399fb22ac5bab4e126bd43da321ef1c1c",
+    "runaway/shared_schema.py": "d7c5f0e85f709762b708ba9e5c30dcd5537222b2df537b49fb94446d7f4fbdc5"
+  },
+  "gates": "All6dev intact all4fields exact,matched contrasts andoption consistency exact.2fixed swapped-person responses all4fields match source-v1 manipulated-policy reference andlose original targetcontrast. Only then8heldout requests. Holdout reported by4consumed structural families; no selecting successful answers.",
+  "stop": "Any reference rejection,transport,timeout,invalid output,duplicate/extra/missing ID/field,unknown usage,identity/freeze/budget/runtime error stops remaining calls.0retry/repair/resample,0oldbudget reuse,0purchases. Single-use intent required by future executor.",
+  "output_contract": "Same4fields,IDs,requiredcoverage,enum/types/arraybounds andotherconstraints. Expansion is exact; strict wire rejects malformed outputs; offline scoring preserves missing/invalid counts. Do not infer hidden model state from self-report.",
+  "statistics": "Same3dev/4consumed heldout structural strata,14policies,96/376current queries; wrong-person reads are controls,not extra people. Historicalplanned0. No population CI,newholdout,realperson,compressor quality,causal orcrossprovider claim.",
+  "pending_before_service_execution": [
+    "Bind and fake-test a dedicated16call single-use executor to these exact requests,source/runtime/isolation/oldIDs/usage/stop guards.",
+    "Then obtain separate direct human approval of complete final runnable scope; this review file grants no budget."
+  ],
+  "execution_entry_point": null,
+  "external_model_calls": 0,
+  "id": "6250c557d7e03be6336f7dc974f5d5e6b675be34cc125ff6ae98fefd23b00582"
+}

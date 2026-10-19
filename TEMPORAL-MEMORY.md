@@ -20,6 +20,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [Structural microbenchmark](STRUCTURAL-DUAL-BENCHMARK.md) freezes three development and four disjoint heldout rule structures before generation:96/376 current queries,14synthetic policies. Independent truth-region gold and nine damaged controls pass the offline sensitivity audit; heldout material is now consumed. No new model calls or compression improvement is claimed.
 
+[Shared-schema variant](SHARED-SCHEMA.md) removes duplicated per-query definitions from all16prospective requests:142,763→77,035 actual local vocabulary tokens for complete request objects (46.04% fewer). All16schemas expand exactly to their originals;590acceptance/parse/scoring pairs agree. Memory and output contract are unchanged; backend compatibility and model effects remain unmeasured. No service calls were added.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:

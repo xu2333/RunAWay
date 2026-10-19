@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "method": "Hoist one byte-identical per-query answer schema to root $defs.answer; replace each per-ID property with sole {$ref:#/$defs/answer}. No ID,prompt,query,option or record schema changes. No candidate search or query selection.",
+  "created_at": "2026-10-19T19:20:06.574166+00:00",
+  "source_archive_sha256": "48330c90142f297bcd9d12dde3d6d4f25fe1e582ad9e34610a795e5d36881cc7",
+  "source_design": "frozen-source/examples/structural-dual/service-design.synthetic.json",
+  "stages": {
+    "development_jobs": 6,
+    "wrong_person_jobs": 2,
+    "holdout_jobs": 8
+  },
+  "proof": "Exact local reference expansion equals complete original schema; all non-schema request members equal. All16requests must satisfy proof before count. Reject nonidentical per-ID schemas,unexpected defs,external refs,ref siblings,cycles and unbound IDs.",
+  "local_validation": "Dependency-free checker covers only keyword subset present in these frozen schemas; not a general JSON Schema implementation or backend validation. Test both direct inline schema and reference resolution on all140original program outputs plus2fixed swapped-person outputs and deterministic malformed variants of each16baseline outputs.",
+  "corruption_selection": "Use lexicographically smallest query ID in each job; no score-based cases. Missing/extra/renamed IDs,missing each4fields,extra fields,invalid enum/types,array bounds,noncanonical/duplicate outcomes,semantic status/action mismatch,duplicate JSON keys,invalid UTF8/NaN and output wrapping.",
+  "semantics": "Schema validation and existing offline scoring are separate. Same decoded responses must yield identical original scorer results or errors,with missing/invalid counts retained. No normalization,completion,deduplication or conversion of missing toU.",
+  "cost": "Recount all16old and16new canonical system/prompt/schema request objects with exact frozen GGUF vocab; measure characters andUTF8bytes too. Memory/output unchanged by construction; not model behavior or service-usage/price guarantee. Future CLI/API metadata not frozen yet.",
+  "tokenizer_sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa",
+  "gates": "All16proofs and identity uniqueness pass;old recount matches frozen142763tokens;all validation decisions equal;all scoring signatures equal;new total request bytes and local tokens strictly lower;all prior archives/data/defaults unchanged. Any failure retained,do not repair source v1 or fallback silently.",
+  "future_minimum": "Same16ceiling:6dev intact+2fixed wrong-person,then8consumed holdout if all dev gates pass. First planned dev request doubles as backend $ref compatibility check;no extra paid probe. Unsupported reference/format/transport/identity/usage/freeze/budget error stops all remaining calls,no inline fallback,retry,repair,resample or old budget. Model/runtime not approved or chosen; no service execution entry.",
+  "new_model_calls_authorized": 0,
+  "archive_hashes_before": {
+    "examples/bound-memory-evidence.synthetic.zip": "c01f7662a6e8c28a00e62e8f5d2dc571cf2f38b7f83d32df39c86997c57a44ec",
+    "examples/comparison-evidence.synthetic.zip": "85234b1f61295c967c08d689c5593915e60c44323526846d3a0ca8300c25f4e1",
+    "examples/decision-memory-evidence.synthetic.zip": "51f6493bd8543d0f1c032a18e65e84e514fdfe1a43751e9d4c595e5ce5ba60e1",
+    "examples/partial-reader-evidence.synthetic.zip": "69f3f9657c61d4aa60d78f2cf41abdaec88c977a159f09b58ca3149f9c8977c8",
+    "examples/pilot-evidence.synthetic.zip": "f4cfef8019bbbe8b7877d730f1c40594a54e921dc3bc40ebdb22f828600ceb73",
+    "examples/selfplay-evidence.synthetic.zip": "d0f949561b737991bf1d35371aa7c3055d4ff056857bed8166fecadc23581f4d",
+    "examples/stress-service-evidence.synthetic.zip": "1d5ec4b01f0961d6440fcd6130f4e388ad9a9c623c745603ecf811321138d633",
+    "examples/structural-dual-evidence.synthetic.zip": "48330c90142f297bcd9d12dde3d6d4f25fe1e582ad9e34610a795e5d36881cc7",
+    "examples/synthetic-metric-evidence.synthetic.zip": "f5d8c7f4c669b5d48f25f1f8502236456e221088e0707802877631c5c19a9aa0",
+    "examples/temporal-concise-evidence.synthetic.zip": "e704842c138cf61a5c97ea2349752afdf4b33cad24f3af1f3d279e315443efbf",
+    "examples/temporal-conflict-repair-evidence.synthetic.zip": "b534dc460efd3dcc82c57d1939c25bddea2e39701835a859702ddc9727ed7eb0",
+    "examples/temporal-conflict-transfer-evidence.synthetic.zip": "95a5eb1f7396dbf9177eb040b64b98b07c20521264d615e026479634bc9784c9",
+    "examples/temporal-discrimination-evidence.synthetic.zip": "1637432801fb249016ef81c7999387364ddde9c5d03da17a1237c22c700cd543",
+    "examples/temporal-evidence.synthetic.zip": "4c13a5d387071a431083732fc86b4c1016dd538f7543d79a72dbe945f3d1f275",
+    "examples/temporal-scale-evidence.synthetic.zip": "3e9a88b4fb699697d1190ef7d8da756d3d2bc0bef827d915284b715bf1719bba",
+    "examples/temporal-transfer-evidence.synthetic.zip": "fa6ccfa65243f6b1dbfca649ad4078e63c17682637c7e0e1f069ed5fc3cdc8ec"
+  }
+}

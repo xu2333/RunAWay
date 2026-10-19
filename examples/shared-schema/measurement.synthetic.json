@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-19T19:32:36.936216+00:00",
+  "original_measurement": "runs/shared-schema-v1/generated/report.synthetic.json",
+  "actual_whole_request_token_recounts": 32,
+  "subsequent_actual_recounts": 0,
+  "subsequent_replay": "Exact archived counts,not estimates.",
+  "request_variants_unchanged": true,
+  "repair": "Malformed-UTF8 audit fixture hash now binds original bytes rather than UTF8-of-latin1 representation. No request,response-validation,score,cost or sample change. Initial report/implementation receipt retained.",
+  "source_hashes": {
+    "runaway/shared_schema.py": "d7c5f0e85f709762b708ba9e5c30dcd5537222b2df537b49fb94446d7f4fbdc5",
+    "tests/test_shared_schema.py": "eea8c060d4d3eeb1a6ebca5808c8634695925528d5a41e42433284155a6a3563"
+  },
+  "new_external_model_calls": 0,
+  "portable_score_fingerprint": "All integer fields preserved; derived macro represented by exact rational counts,not runtime rounding. Actual scorer unmodified."
+}

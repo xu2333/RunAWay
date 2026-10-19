@@ -1,0 +1,97 @@
+{
+  "totals": {
+    "before": {
+      "characters": 490715,
+      "utf8_bytes": 560885,
+      "actual_local_vocabulary_tokens": 142763
+    },
+    "after": {
+      "characters": 192843,
+      "utf8_bytes": 263013,
+      "actual_local_vocabulary_tokens": 77035
+    }
+  },
+  "savings": {
+    "characters": {
+      "absolute": 297872,
+      "fraction": 0.6070162925527037
+    },
+    "utf8_bytes": {
+      "absolute": 297872,
+      "fraction": 0.5310749975485171
+    },
+    "actual_local_vocabulary_tokens": {
+      "absolute": 65728,
+      "fraction": 0.46039940320671324
+    }
+  },
+  "request_count": 16,
+  "source_archive_sha256": "48330c90142f297bcd9d12dde3d6d4f25fe1e582ad9e34610a795e5d36881cc7",
+  "backend_compatibility": "unmeasured",
+  "model_output_equivalence": "unmeasured; same formal output language does not imply same sampled model behavior",
+  "token_scope": "Whole canonical system/prompt/schema object; not billing tokens. Future unfrozen CLI/API metadata not included. Memory and output contract unchanged.",
+  "native_development_usage": "Separate host accounting,not0.",
+  "kind": "offline_shared_schema_request_variant",
+  "proof_count": 16,
+  "corpus_cases": 590,
+  "wire_accepted": 224,
+  "score_rejected": 256,
+  "stages": {
+    "development_jobs": {
+      "before": {
+        "characters": 95404,
+        "utf8_bytes": 107728,
+        "actual_local_vocabulary_tokens": 27331
+      },
+      "after": {
+        "characters": 41494,
+        "utf8_bytes": 53818,
+        "actual_local_vocabulary_tokens": 15451
+      }
+    },
+    "wrong_person_jobs": {
+      "before": {
+        "characters": 39158,
+        "utf8_bytes": 44442,
+        "actual_local_vocabulary_tokens": 11267
+      },
+      "after": {
+        "characters": 16372,
+        "utf8_bytes": 21656,
+        "actual_local_vocabulary_tokens": 6243
+      }
+    },
+    "holdout_jobs": {
+      "before": {
+        "characters": 356153,
+        "utf8_bytes": 408715,
+        "actual_local_vocabulary_tokens": 104165
+      },
+      "after": {
+        "characters": 134977,
+        "utf8_bytes": 187539,
+        "actual_local_vocabulary_tokens": 55341
+      }
+    }
+  },
+  "archive_sha256": "434bb5c21b25d49169a357d485a62402a95f27e0604946aebecbcb7f48163acb",
+  "replay": {
+    "frozen_tests_passed": 8,
+    "manifest_files": 59,
+    "all16exact_expansion_proofs": true,
+    "all590acceptance_and_score_pairs_equal": true,
+    "actual_token_recounts": 0,
+    "external_model_calls": 0
+  },
+  "source_files": 53,
+  "unchanged_prior_archives": 16,
+  "actual_initial_request_recounts": 32,
+  "subsequent_actual_recounts": 0,
+  "request_file_sha256": "64cf5812aff37865e2c89c663f116d06483ece1cbbd426e79d7f26a593b589db",
+  "review_scope_id": "6250c557d7e03be6336f7dc974f5d5e6b675be34cc125ff6ae98fefd23b00582",
+  "review_status": "data_and_protocol_review_only; dedicated executor binding/fake acceptance and direct human approval still required",
+  "prospective_calls_max": 16,
+  "prospective_approval": false,
+  "new_external_model_calls": 0,
+  "experimental_service_tokens": 0
+}
