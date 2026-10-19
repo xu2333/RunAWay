@@ -16,6 +16,20 @@ from runaway.execution_ledger import collect, summarize
 class ExecutorTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.base = Path(self.temp.name)
+        # These mocks replay the pre-pilot, unconsumed16 design. The new real
+        # pilot archive correctly forbids its2 IDs in today's live preflight.
+        # Use an isolated historical artifact inventory for these old fixtures;
+        # never weaken the live forbidden-ID function.
+        original_root = s.ROOT
+        historical = self.base / 'pre-pilot-source'
+        paths = s.source_names() + [str(p.relative_to(original_root)) for p in (original_root / 'examples').glob('*evidence*.zip')
+                                    if p.name != 'shared-schema-pilot-evidence.synthetic.zip']
+        paths += ['examples/shared-schema/' + name for name in ('requests.synthetic.json', 'review-scope.synthetic.json', 'measurement.synthetic.json')]
+        for name in paths:
+            target = historical / name; target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(original_root / name, target)
+        self.root_patch = patch.object(s, 'ROOT', historical); self.root_patch.start()
+        self.addCleanup(self.root_patch.stop)
         self.plan = self.base / 'plan'; self.out = self.base / 'out'; self.seen = []
         self.runtime = dict(python_executable='/fixture/python', python_version='fixture', external_model_calls=0,
                             tools={k: dict(executable='/fixture/' + k, version='v25.6.0' if k == 'node' else 'fixture-codex') for k in ('node', 'codex')})

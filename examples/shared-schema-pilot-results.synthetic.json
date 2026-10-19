@@ -1,0 +1,163 @@
+{
+  "kind": "two_real_shared_schema_reader_pilot",
+  "status": "complete_2call_pilot",
+  "model_requested": "gpt-6.1-sol",
+  "resolved_model": null,
+  "service": "existing_logged_in_OpenAI_Codex",
+  "actual_service_calls": 2,
+  "local_pre_backend_blocks": 1,
+  "scope_id": "b9e0867a1f3d84974215fe0501ba120188010c8c3b62cc4691fea47d6adeddc5",
+  "calls_max": 2,
+  "request_ids": [
+    "36f7e0cdc2c8108648df65dec3d85fc1970193c021a001a83e3b557ecb023519",
+    "00e6bc069b0e4f96fc9f955afeaa022a4fd3f641110e29e53d87411ae497229c"
+  ],
+  "selected_score_fingerprint": "d25d45da6b8e592a967948a99f7e7fb43014c2a534d68c28edac7a9303c6c1b8",
+  "scores": {
+    "strict_choice": {
+      "correct": 16,
+      "planned": 16,
+      "missing": 0,
+      "invalid_answers": 0
+    },
+    "reported_rule_status": {
+      "correct": 16,
+      "planned": 16,
+      "missing": 0
+    },
+    "completion_choice": {
+      "correct": 16,
+      "planned": 16,
+      "missing": 0,
+      "invalid_answers": 0
+    },
+    "possible_outcomes": {
+      "correct": 16,
+      "planned": 16,
+      "missing": 0
+    }
+  },
+  "contrast": {
+    "correct": 1,
+    "planned": 1
+  },
+  "option_order_pairs": {
+    "consistent": 8,
+    "planned": 8
+  },
+  "usage": {
+    "input_tokens": 14146,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 830,
+    "reasoning_output_tokens": 70,
+    "total_tokens": 14976
+  },
+  "usage_records": 2,
+  "unknown_usage_records": 0,
+  "elapsed_seconds": [
+    7.396,
+    8.837
+  ],
+  "examples": [
+    {
+      "person_id": "s-05408a056eae",
+      "question": {
+        "id": "q-3c10f785b5f35b",
+        "task": "current_choice",
+        "domain": "学习安排",
+        "context": {},
+        "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+        "answer_options": {
+          "A": "先做练习",
+          "B": "先读原理",
+          "U": "材料不足，无法判断"
+        }
+      },
+      "actual": {
+        "strict_answer": "U",
+        "reported_status": "context_unknown",
+        "completion_answer": "U",
+        "possible_outcomes": [
+          {
+            "status": "chosen",
+            "action": "先做练习"
+          },
+          {
+            "status": "chosen",
+            "action": "先读原理"
+          }
+        ]
+      },
+      "expected": {
+        "strict_answer": "U",
+        "reported_status": "context_unknown",
+        "completion_answer": "U",
+        "completion_action": "U",
+        "possible_outcomes": [
+          {
+            "status": "chosen",
+            "action": "先做练习"
+          },
+          {
+            "status": "chosen",
+            "action": "先读原理"
+          }
+        ]
+      }
+    },
+    {
+      "person_id": "s-8b3b8dc0b238",
+      "question": {
+        "id": "q-17ec6c7e428ef5",
+        "task": "current_choice",
+        "domain": "学习安排",
+        "context": {},
+        "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+        "answer_options": {
+          "A": "先做练习",
+          "B": "先读原理",
+          "U": "材料不足，无法判断"
+        }
+      },
+      "actual": {
+        "strict_answer": "U",
+        "reported_status": "context_unknown",
+        "completion_answer": "A",
+        "possible_outcomes": [
+          {
+            "status": "chosen",
+            "action": "先做练习"
+          }
+        ]
+      },
+      "expected": {
+        "strict_answer": "U",
+        "reported_status": "context_unknown",
+        "completion_answer": "A",
+        "completion_action": "0",
+        "possible_outcomes": [
+          {
+            "status": "chosen",
+            "action": "先做练习"
+          }
+        ]
+      }
+    }
+  ],
+  "remaining_budget": 0,
+  "other14": "not_authorized_not_run_no_resume",
+  "historical_planned": 0,
+  "independent_units": 1,
+  "selected_queries": 16,
+  "limitations": [
+    "One consumed synthetic single_exception mirrored pair;16queries are correlated.",
+    "No inline-schema service baseline;cannot claim billed savings or equivalent performance across schema forms.",
+    "No real person,extraction,compressor comparison,newholdout orcrossprovider conclusion.",
+    "Requested model is bound;resolved model identity not reported byCLI."
+  ],
+  "native_development_usage": "Separate host accounting,not0.",
+  "observed_at": "2026-10-19T22:15:09.242416+00:00",
+  "archive_sha256": "21a444b03fda96893ec736fb4bd9cb8b41b3e50591b92ac18004009f38b4170a",
+  "archive_files": 64
+}
