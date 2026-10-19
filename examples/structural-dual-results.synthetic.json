@@ -935,5 +935,12 @@
   "external_model_calls": 0,
   "experimental_service_tokens": 0,
   "native_development_usage": "Separate host accounting,not0.",
-  "interpretation": "7authored family-pair descriptive strata,not7independent human samples.3development and4structurally disjoint heldout families,now program-audited and consumed. No CI/significance,real-person,cross-provider or compression-win claim."
+  "interpretation": "7authored family-pair descriptive strata,not7independent human samples.3development and4structurally disjoint heldout families,now program-audited and consumed. No CI/significance,real-person,cross-provider or compression-win claim.",
+  "delivery_portability": {
+    "original_3_9_audit": "pass",
+    "original_3_13_CI": "derived macro float equality failed",
+    "original_CI_url": "https://github.com/xu2333/RunAWay/actions/runs/39308498740",
+    "sealed_v1_archive_unchanged": true,
+    "new_external_replay": "5 unchanged frozen tests plus full exact data audit; derived macro separately verified against rational integer-count mean within2ULPs. All other values exact; no new samples or scoring gates."
+  }
 }

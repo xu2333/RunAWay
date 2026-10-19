@@ -19,9 +19,10 @@ def replay(base):
     for name,sha in receipt['implementation_hashes'].items():
         if hashlib.sha256((source/name).read_bytes()).hexdigest()!=sha:raise ValueError('Frozen implementation mismatch')
     if hashlib.sha256((data/'plan.synthetic.json').read_bytes()).hexdigest()!=receipt['design_sha256']:raise ValueError('Original design bytes changed')
-    proc=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tests','-p','test_structural_dual.py','-q'],cwd=source,capture_output=True,text=True,timeout=60)
+    verifier=Path(__file__).with_name('verify_structural_dual_portability.py')
+    proc=subprocess.run([sys.executable,'-B',str(verifier),'--source',str(source)],cwd=source,capture_output=True,text=True,timeout=60)
     if proc.returncode:raise ValueError('Frozen test replay failed: '+proc.stdout[-1000:]+proc.stderr[-3000:])
-    return dict(frozen_tests_passed=6,frozen_source_files=len(receipt['implementation_hashes']),manifest_files=len(manifest),
+    return dict(frozen_tests_passed=5,portable_complete_data_audit=True,macro_rounding='Both values checked against exact rational cluster mean within2ULPs; all other data exact.',frozen_source_files=len(receipt['implementation_hashes']),manifest_files=len(manifest),
                 exact_world_gold_program_scores_requests_rebuilt=True,actual_token_recounts=0,
                 token_interpretation='Archived exact lengths retained; replay does not estimate or recount tokens.',external_model_calls=0)
 

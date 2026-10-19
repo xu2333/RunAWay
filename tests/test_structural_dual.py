@@ -3,11 +3,14 @@ import json
 from pathlib import Path
 import unittest
 from unittest.mock import patch
+import importlib.util
 
 from runaway import generation, structural_dual as bench, temporal_concise as codec, temporal_determinacy as dual
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/'examples/structural-dual'
+compare_spec=importlib.util.spec_from_file_location('structural_compare',ROOT/'scripts/structural_report_compare.py')
+comparison=importlib.util.module_from_spec(compare_spec);compare_spec.loader.exec_module(comparison)
 
 
 class OracleTests(unittest.TestCase):
@@ -57,7 +60,7 @@ class FrozenBenchmarkTests(unittest.TestCase):
                     job['whole_memory_lengths']['actual_local_vocabulary_tokens']=None;job['canonical_request_lengths']['actual_local_vocabulary_tokens']=None
                 for rows in report['complete_program_output_lengths'].values():
                     for row in rows.values():row['actual_local_vocabulary_tokens']=None
-            self.assertEqual(stored,actual);self.assertTrue(actual['passed'])
+            comparison.compare(stored,actual);self.assertTrue(actual['passed'])
             self.assertEqual(records,json.loads((BASE/(split+'-program-records.synthetic.json')).read_text()))
 
     def test_reader_payload_contains_only_memory_public_queries_schema_and_contract(self):
