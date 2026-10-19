@@ -1,0 +1,29 @@
+{
+  "people": {
+    "p-eb31": {
+      "role_labelled_history_characters": 1289,
+      "source_text_only_characters": 844,
+      "user_text_only_characters": 760,
+      "complete_export_characters": 584,
+      "complete_export_ratio_to_text_only": 0.6919431279620853,
+      "complete_export_ratio_to_user_text_only": 0.7684210526315789
+    },
+    "p-7a96": {
+      "role_labelled_history_characters": 1238,
+      "source_text_only_characters": 793,
+      "user_text_only_characters": 712,
+      "complete_export_characters": 607,
+      "complete_export_ratio_to_text_only": 0.7654476670870114,
+      "complete_export_ratio_to_user_text_only": 0.8525280898876404
+    }
+  },
+  "aggregate": {
+    "complete_export_characters": 1191,
+    "role_labelled_history_characters": 2527,
+    "source_text_only_characters": 1637,
+    "user_text_only_characters": 1472,
+    "complete_export_ratio_to_text_only": 0.727550397067807,
+    "complete_export_ratio_to_role_labelled_history": 0.4713098535813217
+  },
+  "interpretation": "Byte/character transport compression is separate from semantic compression. JSON envelope removal and non-user context removal must not be credited as preserved personal information. No tokenization or service call."
+}

@@ -1,0 +1,11 @@
+{
+  "origin": "author_defined_latent_policy_not_model_judgement",
+  "people": {
+    "p-eb31": {"automation": "reversible_auto", "building": "validate_first", "learning": "practice_first", "sharing": "sanitized_public"},
+    "p-7a96": {"automation": "manual", "building": "durable_first", "learning": "concept_first", "sharing": "small_circle"}
+  },
+  "hand_expected_semantics": {
+    "p-eb31": ["auto", "manual", "prototype", "durable", "practice", "concept", "practice", "public", "private", "U", "U", "U"],
+    "p-7a96": ["manual", "manual", "durable", "durable", "concept", "concept", "practice", "circle", "private", "U", "manual", "U"]
+  }
+}
