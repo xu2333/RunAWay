@@ -1,2 +1,2 @@
 """RunAWay: a small, portable, evidence-linked taste prompt."""
-__version__ = "0.22.2"
+__version__ = "0.23.0"

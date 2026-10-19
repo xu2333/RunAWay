@@ -16,6 +16,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [D-0031](PARTIAL-READER-RESULTS.md) then tested absent conditions on one already public authored pair: current34/36, complete-context16/16, partial-context18/20. The strict unknown contract did not fully transfer. Both deviations share one scenario where every completion permits the same action; this post-hoc fact does not change the original failure or reveal whether the model assumed a missing condition false. Historical and state fidelity were not measured; defaults remain unchanged.
 
+[Offline follow-up](TEMPORAL-DETERMINACY.md) now scores strict answers, reported rule status, completion-invariant actions and possible outcome sets separately. Program controls expose failures hidden by either answer-only or status-only scores. This adds no model evidence and does not rescore D-0031 or change the default unknown contract.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:
