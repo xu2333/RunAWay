@@ -1,0 +1,3742 @@
+{
+  "origin": "fully_synthetic",
+  "purpose": "frozen_structural_dual_development",
+  "people": [
+    {
+      "id": "s-05408a056eae",
+      "pair_id": "single_exception",
+      "twin": "s-8b3b8dc0b238",
+      "target_axes": [
+        "single_exception"
+      ],
+      "family": "single_exception",
+      "member": 0,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-3c10f785b5f35b",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {},
+            "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:0",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-802afe4d4dbf1e",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {},
+            "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:0",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-e7ad3dbe38a332",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": false
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：否。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:1",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "B",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-34897be9741a37",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": false
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：否。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:1",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "A",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-e5858288421067",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": true
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：是。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:2",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-5bdf9c1e2d4a68",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": true
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：是。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:2",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-84890c5187014c",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:3",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-61c92814aa62f6",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:3",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    },
+    {
+      "id": "s-8b3b8dc0b238",
+      "pair_id": "single_exception",
+      "twin": "s-05408a056eae",
+      "target_axes": [
+        "single_exception"
+      ],
+      "family": "single_exception",
+      "member": 1,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-17ec6c7e428ef5",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {},
+            "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:0",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-d526a2e6032beb",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {},
+            "question": "仅按当前记录比较【学习安排】。可以撤销：未提供。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:0",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-f131ab28ccdb25",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": false
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：否。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:1",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-0785878ba4e082",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": false
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：否。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:1",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-c0257c8188f638",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": true
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：是。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:2",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-a75ec48783969d",
+            "task": "current_choice",
+            "domain": "学习安排",
+            "context": {
+              "可以撤销": true
+            },
+            "question": "仅按当前记录比较【学习安排】。可以撤销：是。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:2",
+          "key": "single_exception",
+          "at": 1,
+          "context": {
+            "可以撤销": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-f1f8a9fcc18682",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "先做练习",
+              "B": "先读原理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:3",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-4baeabec0cc5aa",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "先读原理",
+              "B": "先做练习",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "single_exception:3",
+          "key": "single_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    },
+    {
+      "id": "s-fc95f8466028",
+      "pair_id": "and_exception",
+      "twin": "s-3016c373eb43",
+      "target_axes": [
+        "and_exception"
+      ],
+      "family": "and_exception",
+      "member": 0,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-f549eabed8a00f",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {},
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:0",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-ce2df44c1e0890",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {},
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:0",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-3ac9c16d2a76a3",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:1",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-99c9fbc661823a",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:1",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-6770ab49b8f3ea",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:2",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-61ad6833e6c9f5",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:2",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-6a7eada100d753",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:3",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-caea36a9cf4e8b",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:3",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-036b0b91fd89da",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:4",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-784ba42d3e3e53",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:4",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-80a802bd4c851a",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:5",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-75946dac6f8d10",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:5",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-9dcc090ab56a4d",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:6",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-4c63853ab37781",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:6",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-e167c4b100a032",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:7",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "B",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-452520f44eed50",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:7",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "A",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-5e42d702bef08a",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:8",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-4a7cd8976ecb13",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:8",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-d23a84cb9f5e8e",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:9",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-b02d9772a2fb3a",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:9",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    },
+    {
+      "id": "s-3016c373eb43",
+      "pair_id": "and_exception",
+      "twin": "s-fc95f8466028",
+      "target_axes": [
+        "and_exception"
+      ],
+      "family": "and_exception",
+      "member": 1,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-ab05690dbda844",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {},
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:0",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-057c6b2493cc6e",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {},
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:0",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-8dad5a830c942f",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:1",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-52b3a578e3a9ad",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:1",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-ae2287d37b26a7",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:2",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-b5ac9e305086f2",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：未提供；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:2",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "时间紧迫": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-fa416b3a1c0e0a",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:3",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-879ec6445945f1",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:3",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-99420298488a26",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:4",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-c64de6d23560d6",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:4",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-3c299310d8a991",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:5",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-d01dde38d42be4",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": false,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：否；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:5",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": false,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-5502c9e5b37e7e",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:6",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-b4fe82ae4e388a",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：未提供。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:6",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-3edc2b4919c1ab",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：否。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:7",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-9628c8f6c79dbe",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": false
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：否。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:7",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-97d6aeb0d65847",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：是。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:8",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-5058e42a8e0a61",
+            "task": "current_choice",
+            "domain": "协作沟通",
+            "context": {
+              "已有反馈": true,
+              "时间紧迫": true
+            },
+            "question": "仅按当前记录比较【协作沟通】。已有反馈：是；时间紧迫：是。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:8",
+          "key": "and_exception",
+          "at": 1,
+          "context": {
+            "已有反馈": true,
+            "时间紧迫": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-70c85b1483dd3e",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "当面讨论",
+              "B": "异步留言",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:9",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-890211f34b435c",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "异步留言",
+              "B": "当面讨论",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "and_exception:9",
+          "key": "and_exception",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    },
+    {
+      "id": "s-e8d93b21b38d",
+      "pair_id": "overlap_exception_conflict",
+      "twin": "s-c352cc903a2f",
+      "target_axes": [
+        "overlap_exception_conflict"
+      ],
+      "family": "overlap_exception_conflict",
+      "member": 0,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-3a65d01dcc9487",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {},
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:0",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-5c1fb1137097d1",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {},
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:0",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-a939efcf50f0d2",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:1",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-5f9d117b445808",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:1",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-abca61c5ef637d",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:2",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-af99472c278523",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:2",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-c7d7330caf232c",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:3",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-302fa6ffa24ffe",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:3",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-a91d2b8eb9c551",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:4",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-cb20bb4c37532a",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:4",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-36b201759be1ae",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:5",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints",
+            "conflicts"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "conflict",
+          "active_hard": false,
+          "completion_kind": "conflict"
+        },
+        {
+          "public": {
+            "id": "q-ea892af0db8f5a",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:5",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints",
+            "conflicts"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "conflict",
+          "active_hard": false,
+          "completion_kind": "conflict"
+        },
+        {
+          "public": {
+            "id": "q-32092c33e5dd58",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:6",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-d04f93f77bfff7",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:6",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-4eb1c2622de388",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:7",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-43329a4fb09664",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:7",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-79beb5b2dfe574",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:8",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "B",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-9c9ab3be64ab03",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:8",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "A",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-318f5f9092f007",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:9",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-4e91ee43a07a81",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:9",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    },
+    {
+      "id": "s-c352cc903a2f",
+      "pair_id": "overlap_exception_conflict",
+      "twin": "s-e8d93b21b38d",
+      "target_axes": [
+        "overlap_exception_conflict"
+      ],
+      "family": "overlap_exception_conflict",
+      "member": 1,
+      "source_cutoff": 1,
+      "cases": [
+        {
+          "public": {
+            "id": "q-ef01505722e285",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {},
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:0",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-cceea361c2c0e3",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {},
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:0",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-45f3b5edf15fb9",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:1",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-fb9db8747ae1ba",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:1",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-bdaf7aa3a21886",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:2",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-0643f2a391a9b2",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：未提供；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:2",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "方案已验证": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-153ad54492a301",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:3",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-efb57b7d0cfb3a",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:3",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_and_indeterminate"
+        },
+        {
+          "public": {
+            "id": "q-f9c6396006df1b",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:4",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "B",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-8ad59b1698ff8a",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:4",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "A",
+          "action": "1",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-8de631fbf0202d",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:5",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints",
+            "conflicts"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "conflict",
+          "active_hard": false,
+          "completion_kind": "conflict"
+        },
+        {
+          "public": {
+            "id": "q-27fa6fc5177270",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": false,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：否；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:5",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": false,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints",
+            "conflicts"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "conflict",
+          "active_hard": false,
+          "completion_kind": "conflict"
+        },
+        {
+          "public": {
+            "id": "q-e530121546ec61",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：未提供。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:6",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-32423c79be78df",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：未提供。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:6",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true
+          },
+          "tags": [
+            "partial_context",
+            "hard_constraints",
+            "unknowns"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "context_unknown",
+          "active_hard": false,
+          "completion_kind": "unknown_but_determinate"
+        },
+        {
+          "public": {
+            "id": "q-bbe8ee4dc98f1f",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：否。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:7",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-c86d67d740c161",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": false
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：否。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:7",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": false
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-a56fd499c980c3",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：是。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:8",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "A",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-01385069497725",
+            "task": "current_choice",
+            "domain": "资料整理",
+            "context": {
+              "参与者熟悉": true,
+              "方案已验证": true
+            },
+            "question": "仅按当前记录比较【资料整理】。参与者熟悉：是；方案已验证：是。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:8",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {
+            "参与者熟悉": true,
+            "方案已验证": true
+          },
+          "tags": [
+            "complete_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "B",
+          "action": "0",
+          "expected_status": "chosen",
+          "active_hard": false,
+          "completion_kind": "chosen"
+        },
+        {
+          "public": {
+            "id": "q-135ec1011b780b",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "分批归档",
+              "B": "一次整理",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:9",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "0",
+            "B": "1",
+            "U": "U"
+          },
+          "order": 0,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        },
+        {
+          "public": {
+            "id": "q-01927078088b2d",
+            "task": "current_choice",
+            "domain": "未观察的领域",
+            "context": {},
+            "question": "仅按当前记录比较【未观察的领域】。材料没有这个领域的记录。",
+            "answer_options": {
+              "A": "一次整理",
+              "B": "分批归档",
+              "U": "材料不足，无法判断"
+            }
+          },
+          "scenario": "overlap_exception_conflict:9",
+          "key": "overlap_exception_conflict",
+          "at": 1,
+          "context": {},
+          "tags": [
+            "partial_context",
+            "hard_constraints"
+          ],
+          "options": {
+            "A": "1",
+            "B": "0",
+            "U": "U"
+          },
+          "order": 1,
+          "instruction": null,
+          "gold": "U",
+          "action": "U",
+          "expected_status": "unobserved",
+          "active_hard": false,
+          "completion_kind": "unobserved"
+        }
+      ]
+    }
+  ],
+  "historical_planned": 0,
+  "id": "2b9c01dc360b7561e604c759af4d7aafe0c332bd0937697c4c27f8affa6441f9"
+}

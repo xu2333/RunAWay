@@ -18,6 +18,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [Offline follow-up](TEMPORAL-DETERMINACY.md) now scores strict answers, reported rule status, completion-invariant actions and possible outcome sets separately. Program controls expose failures hidden by either answer-only or status-only scores. This adds no model evidence and does not rescore D-0031 or change the default unknown contract.
 
+[Structural microbenchmark](STRUCTURAL-DUAL-BENCHMARK.md) freezes three development and four disjoint heldout rule structures before generation:96/376 current queries,14synthetic policies. Independent truth-region gold and nine damaged controls pass the offline sensitivity audit; heldout material is now consumed. No new model calls or compression improvement is claimed.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:

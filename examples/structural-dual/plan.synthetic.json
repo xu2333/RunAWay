@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "name": "RunAWay structural dual-task microbenchmark v1",
+  "stage": "design_frozen_before_generation",
+  "created_at": "2026-10-19T18:58:27.003291+00:00",
+  "seed": "runaway-structural-dual-v1-20261019",
+  "motifs": [
+    {
+      "id": "single_exception",
+      "split": "development",
+      "n": 1,
+      "regular": [
+        "0"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        }
+      ],
+      "constraint": []
+    },
+    {
+      "id": "and_exception",
+      "split": "development",
+      "n": 2,
+      "regular": [
+        "0"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ],
+            [
+              "q",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        }
+      ],
+      "constraint": []
+    },
+    {
+      "id": "overlap_exception_conflict",
+      "split": "development",
+      "n": 2,
+      "regular": [
+        "0"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        },
+        {
+          "when": [
+            [
+              "q",
+              true
+            ]
+          ],
+          "action": "member"
+        }
+      ],
+      "constraint": []
+    },
+    {
+      "id": "three_literal_exception",
+      "split": "holdout",
+      "n": 3,
+      "regular": [
+        "0"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ],
+            [
+              "q",
+              false
+            ],
+            [
+              "r",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        }
+      ],
+      "constraint": []
+    },
+    {
+      "id": "opposed_priority",
+      "split": "holdout",
+      "n": 2,
+      "regular": [
+        "0"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        }
+      ],
+      "constraint": [
+        {
+          "when": [
+            [
+              "p",
+              false
+            ],
+            [
+              "q",
+              true
+            ]
+          ],
+          "action": "member"
+        }
+      ]
+    },
+    {
+      "id": "overlap_hard_conflict",
+      "split": "holdout",
+      "n": 3,
+      "regular": [
+        "0"
+      ],
+      "exception": [],
+      "constraint": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ],
+            [
+              "q",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        },
+        {
+          "when": [
+            [
+              "q",
+              true
+            ],
+            [
+              "r",
+              true
+            ]
+          ],
+          "action": "member"
+        }
+      ]
+    },
+    {
+      "id": "conflicting_default_disjoint_rescue",
+      "split": "holdout",
+      "n": 3,
+      "regular": [
+        "0",
+        "1"
+      ],
+      "exception": [
+        {
+          "when": [
+            [
+              "p",
+              true
+            ]
+          ],
+          "action": "inverse_member"
+        }
+      ],
+      "constraint": [
+        {
+          "when": [
+            [
+              "q",
+              true
+            ],
+            [
+              "r",
+              false
+            ]
+          ],
+          "action": "member"
+        }
+      ]
+    }
+  ],
+  "sampling": {
+    "algorithm": "SHA256(seed+colon+family_id+colon+label), lowercase hexdigest. Permutations by ascending (digest,original-index); polarity flips use low bit of integer digest per abstract variable. No RNG-dependent selection.",
+    "lexical_pool": [
+      {
+        "domain": "协作沟通",
+        "actions": [
+          "异步留言",
+          "当面讨论"
+        ]
+      },
+      {
+        "domain": "资料整理",
+        "actions": [
+          "分批归档",
+          "一次整理"
+        ]
+      },
+      {
+        "domain": "研究验证",
+        "actions": [
+          "先做小样",
+          "先搭全套"
+        ]
+      },
+      {
+        "domain": "旅行安排",
+        "actions": [
+          "临时决定",
+          "提前预订"
+        ]
+      },
+      {
+        "domain": "作品发布",
+        "actions": [
+          "先发草稿",
+          "完成后发布"
+        ]
+      },
+      {
+        "domain": "学习安排",
+        "actions": [
+          "先做练习",
+          "先读原理"
+        ]
+      },
+      {
+        "domain": "活动组织",
+        "actions": [
+          "小范围试办",
+          "正式筹备"
+        ]
+      }
+    ],
+    "predicates": [
+      "可以撤销",
+      "已有反馈",
+      "时间紧迫",
+      "参与者熟悉",
+      "成本可控",
+      "方案已验证"
+    ],
+    "lexical_assignment": "Assign distinct lexical rows to families using seed:lexicon:index hash order. Per family choose first n predicates by seed:family:predicate:index hash order; display names not structural evidence. Two members fixed; base action0, symbolic member=m/inverse_member=1-m. Action labels permuted by hash parity. All family members retained.",
+    "contexts": "Complete census of3^n ternary contexts, values missing,false,true in fixed order, each two A/B option orders. Plus one unlisted-domain probe per person in two orders. No score-based filtering or redraw.",
+    "denominators": {
+      "development": 96,
+      "holdout": 376,
+      "total": 472,
+      "people": 14,
+      "family_pairs": 7,
+      "current_only": true,
+      "historical_planned": 0
+    }
+  },
+  "structural_isolation": {
+    "signature": "Canonical tier/regular-count/signed rule-incidence under ALL predicate permutations AND global per-predicate truth flips; rules sorted within tiers, action identities omitted. Preserve relative polarity incidence, tier, arity, sharing and default conflict.",
+    "rules": "Development3motifs and holdout4motifs disjoint under canonical signature; reject overlap rather than resample. Also exclude heldout signature of D0031 regular+positive exception+same-polarity shared AND-hard. Development contains familiar primitives; holdout introduces larger arity, opposed sharing, overlapping hard conflict, conflicting default with disjoint rescue.",
+    "holdout_lifecycle": "Freeze generator/oracle/scorer/request/contract/source hashes and development audit before generating or scoring holdout. Inspect frozen holdout once for program audit, no repairs from its results. Once inspected/published it is a consumed structural audit, not a reusable fresh holdout. Any implementation issue stops this version and is reported, not silently regenerated."
+  },
+  "oracle": "Independent Boolean truth regions: enumerate all full valuations; each rule denotes a set of matching full valuations. For partial compatible set C, tier any nonempty nonuniversal intersection ->context_unknown; otherwise universal matches choose unique action or conflict; absent matches fall through. Complete outcomes computed from region truth table. No production resolver or old authored table in gold. Expected outcomes are the canonical unique union over all compatible full valuations; unique chosen action ->completion choice else U.",
+  "reader_contract": {
+    "fields": [
+      "strict_answer",
+      "reported_status",
+      "completion_answer",
+      "possible_outcomes"
+    ],
+    "strict_task": "Original conservative unknown contract, including possible same-tier unknown rules.",
+    "completion_task": "Unique chosen action common to ALL compatible complete contexts; else U. Distinguish conflict and unobserved in possible outcomes.",
+    "input": "Only full concise current memory, public queries with explicit domain/boolean context/options, system instructions and four-field JSON schema. No gold, family labels, split, seed, latent rule object, source code, program predictions, prior outputs or private files in request.",
+    "schema": "Exact query-id coverage; per query exactly four fields. Canonical unique outcome sets sorted by(status,action). Action uses exact option text, not A/B labels. A/B/U fields follow each order. No repairs or silently dropped rows.",
+    "budgets": {
+      "whole_memory_characters_max": 1536,
+      "whole_memory_local_vocabulary_tokens_max": 768,
+      "canonical_request_utf8_bytes_max": 65536,
+      "max_missing_predicates": 8,
+      "max_completions": 256
+    },
+    "tokenizer_sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa"
+  },
+  "scoring": "Reuse v0.23.0 score_records via optional supplied exact expected mapping and current-only task list; preserve default API output. Reuse original fidelity_stress and state_score. Per split and family report strict answer,status,completion choice,outcome set; paired contrast, collapsed option orders, hard violations and missing fixed. No average metric. Historical planned0/unmeasured.",
+  "controls": [
+    "intact_dual_program",
+    "assume_missing_false",
+    "assume_missing_true",
+    "invariant_action_loses_unknown",
+    "conflict_reported_unobserved",
+    "wrong_person",
+    "drop_completion_branch",
+    "default_only",
+    "flip_first_literal",
+    "missing_first_query"
+  ],
+  "control_rules": "Each control fixed; no gold-driven selection. Wrong person swaps matched policy only. Flip first literal in first constraint else first exception in declared order. Missing deletes lexicographically smallest query-id per person. Conflict report changes conflict status to unobserved in strict status and completion outcome set, actions stay U. Invariant shortcut changes only original strict unknown to chosen when all completions agree. Drop-branch retains only first canonical outcome, strict fields unchanged. False/true fills all absent declared predicates before both resolutions. Default-only supplies no conditional rules. All controls use product decoder, not gold.",
+  "gates": {
+    "intact": "All four fields exact per split; no missing or invalid; all paired contrasts and order consistency exact.",
+    "damage": "Per split each designated control must cause an error on at least one of the four fields or explicitly missing; false/true and branch-drop must fail on decision-changing-missing subset; invariant shortcut must preserve completion score and lose strict state on invariant-unknown subset; conflict report must keep both choice scores while losing status/outcome on split with conflict support. A nonapplicable control is explicitly not applicable, never counted as a pass.",
+    "structure": "All fixed signatures disjoint across splits and heldout vs D0031.",
+    "no_selection": "Failure is retained with exact denominators; no redraw, query removal or retuning on heldout."
+  },
+  "statistics": "7authored family-level matched pairs,3development/4holdout,14synthetic policies. Families share one rule language/oracle and are not random independent humans. Queries, option orders and paired people are correlated. Descriptive per-family results only; no population CI/significance/real-person or cross-provider claim.",
+  "costs": "Whole memory,current request canonical JSON and complete four-field synthetic output per job: characters,UTF8bytes and actual existing local GGUF vocab tokens. Also all-control output lengths separately. No service usage estimate or claimed rate improvement. Experimental calls/tokens0; native development-chat usage separate unknown,not0.",
+  "future_minimal_evidence_design": "Design only,not executable or authorized.6intact dev readers+2wrong-person readers on fixed dev overlap_exception_conflict pair; only if predeclared dev gates pass,8intact heldout readers.16max prospective calls,0retry/repair/resample; freeze exact model/runtime/requests/isolation/usage/stop/proposal/approval before any service execution. No extractor or compressor comparison yet. Preserve original strict tasks and new completion tasks separately. Existing approvals/budgets cannot be reused.",
+  "sealed_archives": {
+    "examples/bound-memory-evidence.synthetic.zip": "c01f7662a6e8c28a00e62e8f5d2dc571cf2f38b7f83d32df39c86997c57a44ec",
+    "examples/comparison-evidence.synthetic.zip": "85234b1f61295c967c08d689c5593915e60c44323526846d3a0ca8300c25f4e1",
+    "examples/decision-memory-evidence.synthetic.zip": "51f6493bd8543d0f1c032a18e65e84e514fdfe1a43751e9d4c595e5ce5ba60e1",
+    "examples/partial-reader-evidence.synthetic.zip": "69f3f9657c61d4aa60d78f2cf41abdaec88c977a159f09b58ca3149f9c8977c8",
+    "examples/pilot-evidence.synthetic.zip": "f4cfef8019bbbe8b7877d730f1c40594a54e921dc3bc40ebdb22f828600ceb73",
+    "examples/selfplay-evidence.synthetic.zip": "d0f949561b737991bf1d35371aa7c3055d4ff056857bed8166fecadc23581f4d",
+    "examples/stress-service-evidence.synthetic.zip": "1d5ec4b01f0961d6440fcd6130f4e388ad9a9c623c745603ecf811321138d633",
+    "examples/synthetic-metric-evidence.synthetic.zip": "f5d8c7f4c669b5d48f25f1f8502236456e221088e0707802877631c5c19a9aa0",
+    "examples/temporal-concise-evidence.synthetic.zip": "e704842c138cf61a5c97ea2349752afdf4b33cad24f3af1f3d279e315443efbf",
+    "examples/temporal-conflict-repair-evidence.synthetic.zip": "b534dc460efd3dcc82c57d1939c25bddea2e39701835a859702ddc9727ed7eb0",
+    "examples/temporal-conflict-transfer-evidence.synthetic.zip": "95a5eb1f7396dbf9177eb040b64b98b07c20521264d615e026479634bc9784c9",
+    "examples/temporal-discrimination-evidence.synthetic.zip": "1637432801fb249016ef81c7999387364ddde9c5d03da17a1237c22c700cd543",
+    "examples/temporal-evidence.synthetic.zip": "4c13a5d387071a431083732fc86b4c1016dd538f7543d79a72dbe945f3d1f275",
+    "examples/temporal-scale-evidence.synthetic.zip": "3e9a88b4fb699697d1190ef7d8da756d3d2bc0bef827d915284b715bf1719bba",
+    "examples/temporal-transfer-evidence.synthetic.zip": "fa6ccfa65243f6b1dbfca649ad4078e63c17682637c7e0e1f069ed5fc3cdc8ec"
+  },
+  "external_model_calls_authorized": 0
+}

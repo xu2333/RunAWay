@@ -1,0 +1,37 @@
+{
+  "families": {
+    "single_exception": {
+      "split": "development",
+      "signature": "[1,[[],[[[0,false]]]]]"
+    },
+    "and_exception": {
+      "split": "development",
+      "signature": "[1,[[],[[[0,false],[1,false]]]]]"
+    },
+    "overlap_exception_conflict": {
+      "split": "development",
+      "signature": "[1,[[],[[[0,false]],[[1,false]]]]]"
+    },
+    "three_literal_exception": {
+      "split": "holdout",
+      "signature": "[1,[[],[[[0,false],[1,false],[2,false]]]]]"
+    },
+    "opposed_priority": {
+      "split": "holdout",
+      "signature": "[1,[[[[0,false],[1,false]]],[[[0,true]]]]]"
+    },
+    "overlap_hard_conflict": {
+      "split": "holdout",
+      "signature": "[1,[[[[0,false],[1,false]],[[0,false],[2,false]]],[]]]"
+    },
+    "conflicting_default_disjoint_rescue": {
+      "split": "holdout",
+      "signature": "[2,[[[[0,false],[1,false]]],[[[2,false]]]]]"
+    }
+  },
+  "development_classes": 3,
+  "holdout_classes": 4,
+  "disjoint": true,
+  "heldout_disjoint_from_D0031": true,
+  "transformations": "all predicate permutations and global per-predicate polarity flips; tier,arity,sharing,relative polarity,regular multiplicity preserved"
+}

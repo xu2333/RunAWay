@@ -1,0 +1,939 @@
+{
+  "kind": "offline_structural_dual_audit_not_model_quality",
+  "splits": {
+    "development": {
+      "planned": 96,
+      "people": 6,
+      "family_pairs": 3,
+      "groups": {
+        "unknown_and_indeterminate": 24,
+        "chosen": 44,
+        "unobserved": 12,
+        "unknown_but_determinate": 12,
+        "conflict": 4
+      },
+      "checks": {
+        "intact_all_fields": true,
+        "every_control_detected": true,
+        "invariant_action_preserved_status_lost": true,
+        "conflict_hidden_in_both_choices": true,
+        "missing_denominator_fixed": true,
+        "assume_missing_false_changing_subset_detected": true,
+        "assume_missing_true_changing_subset_detected": true,
+        "drop_completion_branch_changing_subset_detected": true
+      },
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 96,
+          "reported_rule_status": 96,
+          "completion_choice": 96,
+          "possible_outcomes": 96
+        },
+        "assume_missing_false": {
+          "strict_choice": 64,
+          "reported_rule_status": 60,
+          "completion_choice": 76,
+          "possible_outcomes": 72
+        },
+        "assume_missing_true": {
+          "strict_choice": 64,
+          "reported_rule_status": 60,
+          "completion_choice": 76,
+          "possible_outcomes": 72
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 84,
+          "reported_rule_status": 84,
+          "completion_choice": 96,
+          "possible_outcomes": 96
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 96,
+          "reported_rule_status": 92,
+          "completion_choice": 96,
+          "possible_outcomes": 80
+        },
+        "wrong_person": {
+          "strict_choice": 80,
+          "reported_rule_status": 96,
+          "completion_choice": 56,
+          "possible_outcomes": 48
+        },
+        "drop_completion_branch": {
+          "strict_choice": 96,
+          "reported_rule_status": 96,
+          "completion_choice": 72,
+          "possible_outcomes": 72
+        },
+        "default_only": {
+          "strict_choice": 48,
+          "reported_rule_status": 56,
+          "completion_choice": 60,
+          "possible_outcomes": 60
+        },
+        "flip_first_literal": {
+          "strict_choice": 68,
+          "reported_rule_status": 80,
+          "completion_choice": 68,
+          "possible_outcomes": 64
+        },
+        "missing_first_query": {
+          "strict_choice": 90,
+          "reported_rule_status": 90,
+          "completion_choice": 90,
+          "possible_outcomes": 90
+        }
+      },
+      "changing_missing_sensitivity": {
+        "assume_missing_false": {
+          "errors": 24,
+          "planned": 24
+        },
+        "assume_missing_true": {
+          "errors": 24,
+          "planned": 24
+        },
+        "drop_completion_branch": {
+          "errors": 24,
+          "planned": 24
+        }
+      }
+    },
+    "holdout": {
+      "planned": 376,
+      "people": 8,
+      "family_pairs": 4,
+      "groups": {
+        "unknown_and_indeterminate": 122,
+        "chosen": 184,
+        "unobserved": 16,
+        "unknown_but_determinate": 30,
+        "conflict": 24
+      },
+      "checks": {
+        "intact_all_fields": true,
+        "every_control_detected": true,
+        "invariant_action_preserved_status_lost": true,
+        "conflict_hidden_in_both_choices": true,
+        "missing_denominator_fixed": true,
+        "assume_missing_false_changing_subset_detected": true,
+        "assume_missing_true_changing_subset_detected": true,
+        "drop_completion_branch_changing_subset_detected": true
+      },
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 376,
+          "reported_rule_status": 376,
+          "completion_choice": 376,
+          "possible_outcomes": 376
+        },
+        "assume_missing_false": {
+          "strict_choice": 260,
+          "reported_rule_status": 224,
+          "completion_choice": 290,
+          "possible_outcomes": 254
+        },
+        "assume_missing_true": {
+          "strict_choice": 260,
+          "reported_rule_status": 224,
+          "completion_choice": 290,
+          "possible_outcomes": 254
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 346,
+          "reported_rule_status": 346,
+          "completion_choice": 376,
+          "possible_outcomes": 376
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 376,
+          "reported_rule_status": 352,
+          "completion_choice": 376,
+          "possible_outcomes": 280
+        },
+        "wrong_person": {
+          "strict_choice": 316,
+          "reported_rule_status": 376,
+          "completion_choice": 256,
+          "possible_outcomes": 208
+        },
+        "drop_completion_branch": {
+          "strict_choice": 376,
+          "reported_rule_status": 376,
+          "completion_choice": 254,
+          "possible_outcomes": 254
+        },
+        "default_only": {
+          "strict_choice": 230,
+          "reported_rule_status": 188,
+          "completion_choice": 260,
+          "possible_outcomes": 204
+        },
+        "flip_first_literal": {
+          "strict_choice": 282,
+          "reported_rule_status": 296,
+          "completion_choice": 286,
+          "possible_outcomes": 258
+        },
+        "missing_first_query": {
+          "strict_choice": 368,
+          "reported_rule_status": 368,
+          "completion_choice": 368,
+          "possible_outcomes": 368
+        }
+      },
+      "changing_missing_sensitivity": {
+        "assume_missing_false": {
+          "errors": 122,
+          "planned": 122
+        },
+        "assume_missing_true": {
+          "errors": 122,
+          "planned": 122
+        },
+        "drop_completion_branch": {
+          "errors": 122,
+          "planned": 122
+        }
+      }
+    }
+  },
+  "design_sha256": "220e973bdad425f6a099f1711042d09f792a9d2aa177e81a4b723578492406bc",
+  "structural_audit": {
+    "families": {
+      "single_exception": {
+        "split": "development",
+        "signature": "[1,[[],[[[0,false]]]]]"
+      },
+      "and_exception": {
+        "split": "development",
+        "signature": "[1,[[],[[[0,false],[1,false]]]]]"
+      },
+      "overlap_exception_conflict": {
+        "split": "development",
+        "signature": "[1,[[],[[[0,false]],[[1,false]]]]]"
+      },
+      "three_literal_exception": {
+        "split": "holdout",
+        "signature": "[1,[[],[[[0,false],[1,false],[2,false]]]]]"
+      },
+      "opposed_priority": {
+        "split": "holdout",
+        "signature": "[1,[[[[0,false],[1,false]]],[[[0,true]]]]]"
+      },
+      "overlap_hard_conflict": {
+        "split": "holdout",
+        "signature": "[1,[[[[0,false],[1,false]],[[0,false],[2,false]]],[]]]"
+      },
+      "conflicting_default_disjoint_rescue": {
+        "split": "holdout",
+        "signature": "[2,[[[[0,false],[1,false]]],[[[2,false]]]]]"
+      }
+    },
+    "development_classes": 3,
+    "holdout_classes": 4,
+    "disjoint": true,
+    "heldout_disjoint_from_D0031": true,
+    "transformations": "all predicate permutations and global per-predicate polarity flips; tier,arity,sharing,relative polarity,regular multiplicity preserved"
+  },
+  "family_annotation": {
+    "single_exception": {
+      "split": "development",
+      "planned": 16,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 16,
+          "reported_rule_status": 16,
+          "completion_choice": 16,
+          "possible_outcomes": 16
+        },
+        "assume_missing_false": {
+          "strict_choice": 12,
+          "reported_rule_status": 12,
+          "completion_choice": 14,
+          "possible_outcomes": 14
+        },
+        "assume_missing_true": {
+          "strict_choice": 12,
+          "reported_rule_status": 12,
+          "completion_choice": 14,
+          "possible_outcomes": 14
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 14,
+          "reported_rule_status": 14,
+          "completion_choice": 16,
+          "possible_outcomes": 16
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 16,
+          "reported_rule_status": 16,
+          "completion_choice": 16,
+          "possible_outcomes": 16
+        },
+        "wrong_person": {
+          "strict_choice": 12,
+          "reported_rule_status": 16,
+          "completion_choice": 8,
+          "possible_outcomes": 8
+        },
+        "drop_completion_branch": {
+          "strict_choice": 16,
+          "reported_rule_status": 16,
+          "completion_choice": 14,
+          "possible_outcomes": 14
+        },
+        "default_only": {
+          "strict_choice": 10,
+          "reported_rule_status": 12,
+          "completion_choice": 12,
+          "possible_outcomes": 12
+        },
+        "flip_first_literal": {
+          "strict_choice": 12,
+          "reported_rule_status": 16,
+          "completion_choice": 12,
+          "possible_outcomes": 12
+        },
+        "missing_first_query": {
+          "strict_choice": 14,
+          "reported_rule_status": 14,
+          "completion_choice": 14,
+          "possible_outcomes": 14
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "not_applicable_no_target_structure",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "and_exception": {
+      "split": "development",
+      "planned": 40,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "assume_missing_false": {
+          "strict_choice": 28,
+          "reported_rule_status": 28,
+          "completion_choice": 34,
+          "possible_outcomes": 34
+        },
+        "assume_missing_true": {
+          "strict_choice": 28,
+          "reported_rule_status": 28,
+          "completion_choice": 34,
+          "possible_outcomes": 34
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 34,
+          "reported_rule_status": 34,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "wrong_person": {
+          "strict_choice": 36,
+          "reported_rule_status": 40,
+          "completion_choice": 24,
+          "possible_outcomes": 24
+        },
+        "drop_completion_branch": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 34,
+          "possible_outcomes": 34
+        },
+        "default_only": {
+          "strict_choice": 26,
+          "reported_rule_status": 28,
+          "completion_choice": 32,
+          "possible_outcomes": 32
+        },
+        "flip_first_literal": {
+          "strict_choice": 28,
+          "reported_rule_status": 32,
+          "completion_choice": 32,
+          "possible_outcomes": 32
+        },
+        "missing_first_query": {
+          "strict_choice": 38,
+          "reported_rule_status": 38,
+          "completion_choice": 38,
+          "possible_outcomes": 38
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "not_applicable_no_target_structure",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "overlap_exception_conflict": {
+      "split": "development",
+      "planned": 40,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "assume_missing_false": {
+          "strict_choice": 24,
+          "reported_rule_status": 20,
+          "completion_choice": 28,
+          "possible_outcomes": 24
+        },
+        "assume_missing_true": {
+          "strict_choice": 24,
+          "reported_rule_status": 20,
+          "completion_choice": 28,
+          "possible_outcomes": 24
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 36,
+          "reported_rule_status": 36,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 40,
+          "reported_rule_status": 36,
+          "completion_choice": 40,
+          "possible_outcomes": 24
+        },
+        "wrong_person": {
+          "strict_choice": 32,
+          "reported_rule_status": 40,
+          "completion_choice": 24,
+          "possible_outcomes": 16
+        },
+        "drop_completion_branch": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 24,
+          "possible_outcomes": 24
+        },
+        "default_only": {
+          "strict_choice": 12,
+          "reported_rule_status": 16,
+          "completion_choice": 16,
+          "possible_outcomes": 16
+        },
+        "flip_first_literal": {
+          "strict_choice": 28,
+          "reported_rule_status": 32,
+          "completion_choice": 24,
+          "possible_outcomes": 20
+        },
+        "missing_first_query": {
+          "strict_choice": 38,
+          "reported_rule_status": 38,
+          "completion_choice": 38,
+          "possible_outcomes": 38
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "applicable",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "three_literal_exception": {
+      "split": "holdout",
+      "planned": 112,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "assume_missing_false": {
+          "strict_choice": 84,
+          "reported_rule_status": 84,
+          "completion_choice": 98,
+          "possible_outcomes": 98
+        },
+        "assume_missing_true": {
+          "strict_choice": 84,
+          "reported_rule_status": 84,
+          "completion_choice": 98,
+          "possible_outcomes": 98
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 98,
+          "reported_rule_status": 98,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "wrong_person": {
+          "strict_choice": 108,
+          "reported_rule_status": 112,
+          "completion_choice": 80,
+          "possible_outcomes": 80
+        },
+        "drop_completion_branch": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 98,
+          "possible_outcomes": 98
+        },
+        "default_only": {
+          "strict_choice": 82,
+          "reported_rule_status": 84,
+          "completion_choice": 96,
+          "possible_outcomes": 96
+        },
+        "flip_first_literal": {
+          "strict_choice": 84,
+          "reported_rule_status": 88,
+          "completion_choice": 96,
+          "possible_outcomes": 96
+        },
+        "missing_first_query": {
+          "strict_choice": 110,
+          "reported_rule_status": 110,
+          "completion_choice": 110,
+          "possible_outcomes": 110
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "not_applicable_no_target_structure",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "opposed_priority": {
+      "split": "holdout",
+      "planned": 40,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "assume_missing_false": {
+          "strict_choice": 24,
+          "reported_rule_status": 24,
+          "completion_choice": 28,
+          "possible_outcomes": 28
+        },
+        "assume_missing_true": {
+          "strict_choice": 24,
+          "reported_rule_status": 24,
+          "completion_choice": 28,
+          "possible_outcomes": 28
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 36,
+          "reported_rule_status": 36,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 40,
+          "possible_outcomes": 40
+        },
+        "wrong_person": {
+          "strict_choice": 24,
+          "reported_rule_status": 40,
+          "completion_choice": 16,
+          "possible_outcomes": 16
+        },
+        "drop_completion_branch": {
+          "strict_choice": 40,
+          "reported_rule_status": 40,
+          "completion_choice": 28,
+          "possible_outcomes": 28
+        },
+        "default_only": {
+          "strict_choice": 16,
+          "reported_rule_status": 24,
+          "completion_choice": 20,
+          "possible_outcomes": 20
+        },
+        "flip_first_literal": {
+          "strict_choice": 26,
+          "reported_rule_status": 32,
+          "completion_choice": 26,
+          "possible_outcomes": 26
+        },
+        "missing_first_query": {
+          "strict_choice": 38,
+          "reported_rule_status": 38,
+          "completion_choice": 38,
+          "possible_outcomes": 38
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "not_applicable_no_target_structure",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "overlap_hard_conflict": {
+      "split": "holdout",
+      "planned": 112,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "assume_missing_false": {
+          "strict_choice": 88,
+          "reported_rule_status": 60,
+          "completion_choice": 100,
+          "possible_outcomes": 72
+        },
+        "assume_missing_true": {
+          "strict_choice": 60,
+          "reported_rule_status": 60,
+          "completion_choice": 72,
+          "possible_outcomes": 72
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 100,
+          "reported_rule_status": 100,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 112,
+          "reported_rule_status": 108,
+          "completion_choice": 112,
+          "possible_outcomes": 80
+        },
+        "wrong_person": {
+          "strict_choice": 104,
+          "reported_rule_status": 112,
+          "completion_choice": 80,
+          "possible_outcomes": 64
+        },
+        "drop_completion_branch": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 72,
+          "possible_outcomes": 72
+        },
+        "default_only": {
+          "strict_choice": 52,
+          "reported_rule_status": 56,
+          "completion_choice": 64,
+          "possible_outcomes": 64
+        },
+        "flip_first_literal": {
+          "strict_choice": 92,
+          "reported_rule_status": 96,
+          "completion_choice": 84,
+          "possible_outcomes": 72
+        },
+        "missing_first_query": {
+          "strict_choice": 110,
+          "reported_rule_status": 110,
+          "completion_choice": 110,
+          "possible_outcomes": 110
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "applicable",
+        "conflict_reported_unobserved": "applicable",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    },
+    "conflicting_default_disjoint_rescue": {
+      "split": "holdout",
+      "planned": 112,
+      "controls": {
+        "intact_dual_program": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "assume_missing_false": {
+          "strict_choice": 64,
+          "reported_rule_status": 56,
+          "completion_choice": 64,
+          "possible_outcomes": 56
+        },
+        "assume_missing_true": {
+          "strict_choice": 92,
+          "reported_rule_status": 56,
+          "completion_choice": 92,
+          "possible_outcomes": 56
+        },
+        "invariant_action_loses_unknown": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 112,
+          "possible_outcomes": 112
+        },
+        "conflict_reported_unobserved": {
+          "strict_choice": 112,
+          "reported_rule_status": 92,
+          "completion_choice": 112,
+          "possible_outcomes": 48
+        },
+        "wrong_person": {
+          "strict_choice": 80,
+          "reported_rule_status": 112,
+          "completion_choice": 80,
+          "possible_outcomes": 48
+        },
+        "drop_completion_branch": {
+          "strict_choice": 112,
+          "reported_rule_status": 112,
+          "completion_choice": 56,
+          "possible_outcomes": 56
+        },
+        "default_only": {
+          "strict_choice": 80,
+          "reported_rule_status": 24,
+          "completion_choice": 80,
+          "possible_outcomes": 24
+        },
+        "flip_first_literal": {
+          "strict_choice": 80,
+          "reported_rule_status": 80,
+          "completion_choice": 80,
+          "possible_outcomes": 64
+        },
+        "missing_first_query": {
+          "strict_choice": 110,
+          "reported_rule_status": 110,
+          "completion_choice": 110,
+          "possible_outcomes": 110
+        }
+      },
+      "applicability": {
+        "intact_dual_program": "applicable",
+        "assume_missing_false": "applicable",
+        "assume_missing_true": "applicable",
+        "invariant_action_loses_unknown": "not_applicable_no_target_structure",
+        "conflict_reported_unobserved": "applicable",
+        "wrong_person": "applicable",
+        "drop_completion_branch": "applicable",
+        "default_only": "applicable",
+        "flip_first_literal": "applicable",
+        "missing_first_query": "applicable"
+      }
+    }
+  },
+  "complete_lengths": {
+    "development": {
+      "whole_memories": {
+        "characters": 1014,
+        "utf8_bytes": 2578,
+        "actual_local_vocabulary_tokens": 696
+      },
+      "canonical_requests": {
+        "characters": 95404,
+        "utf8_bytes": 107728,
+        "actual_local_vocabulary_tokens": 27331
+      },
+      "program_outputs": {
+        "intact_dual_program": {
+          "characters": 15890,
+          "utf8_bytes": 16658,
+          "actual_local_vocabulary_tokens": 4695
+        },
+        "assume_missing_false": {
+          "characters": 14566,
+          "utf8_bytes": 15174,
+          "actual_local_vocabulary_tokens": 4391
+        },
+        "assume_missing_true": {
+          "characters": 14566,
+          "utf8_bytes": 15174,
+          "actual_local_vocabulary_tokens": 4391
+        },
+        "invariant_action_loses_unknown": {
+          "characters": 15782,
+          "utf8_bytes": 16550,
+          "actual_local_vocabulary_tokens": 4683
+        },
+        "conflict_reported_unobserved": {
+          "characters": 15930,
+          "utf8_bytes": 16698,
+          "actual_local_vocabulary_tokens": 4715
+        },
+        "wrong_person": {
+          "characters": 15890,
+          "utf8_bytes": 16658,
+          "actual_local_vocabulary_tokens": 4695
+        },
+        "drop_completion_branch": {
+          "characters": 14882,
+          "utf8_bytes": 15522,
+          "actual_local_vocabulary_tokens": 4419
+        },
+        "default_only": {
+          "characters": 14550,
+          "utf8_bytes": 15222,
+          "actual_local_vocabulary_tokens": 4419
+        },
+        "flip_first_literal": {
+          "characters": 15890,
+          "utf8_bytes": 16658,
+          "actual_local_vocabulary_tokens": 4695
+        },
+        "missing_first_query": {
+          "characters": 14936,
+          "utf8_bytes": 15656,
+          "actual_local_vocabulary_tokens": 4410
+        }
+      }
+    },
+    "holdout": {
+      "whole_memories": {
+        "characters": 1501,
+        "utf8_bytes": 3735,
+        "actual_local_vocabulary_tokens": 1000
+      },
+      "canonical_requests": {
+        "characters": 356153,
+        "utf8_bytes": 408715,
+        "actual_local_vocabulary_tokens": 104165
+      },
+      "program_outputs": {
+        "intact_dual_program": {
+          "characters": 63344,
+          "utf8_bytes": 66768,
+          "actual_local_vocabulary_tokens": 18505
+        },
+        "assume_missing_false": {
+          "characters": 56776,
+          "utf8_bytes": 59288,
+          "actual_local_vocabulary_tokens": 16955
+        },
+        "assume_missing_true": {
+          "characters": 56748,
+          "utf8_bytes": 59204,
+          "actual_local_vocabulary_tokens": 16963
+        },
+        "invariant_action_loses_unknown": {
+          "characters": 63074,
+          "utf8_bytes": 66498,
+          "actual_local_vocabulary_tokens": 18475
+        },
+        "conflict_reported_unobserved": {
+          "characters": 63584,
+          "utf8_bytes": 67008,
+          "actual_local_vocabulary_tokens": 18625
+        },
+        "wrong_person": {
+          "characters": 63344,
+          "utf8_bytes": 66768,
+          "actual_local_vocabulary_tokens": 18505
+        },
+        "drop_completion_branch": {
+          "characters": 58064,
+          "utf8_bytes": 60848,
+          "actual_local_vocabulary_tokens": 17167
+        },
+        "default_only": {
+          "characters": 56816,
+          "utf8_bytes": 58832,
+          "actual_local_vocabulary_tokens": 16971
+        },
+        "flip_first_literal": {
+          "characters": 63344,
+          "utf8_bytes": 66768,
+          "actual_local_vocabulary_tokens": 18505
+        },
+        "missing_first_query": {
+          "characters": 62079,
+          "utf8_bytes": 65453,
+          "actual_local_vocabulary_tokens": 18126
+        }
+      }
+    }
+  },
+  "prospective16canonical_request_lengths": {
+    "characters": 490715,
+    "utf8_bytes": 560885,
+    "actual_local_vocabulary_tokens": 142763
+  },
+  "archive_sha256": "48330c90142f297bcd9d12dde3d6d4f25fe1e582ad9e34610a795e5d36881cc7",
+  "replay": {
+    "frozen_tests_passed": 6,
+    "frozen_source_files": 52,
+    "manifest_files": 72,
+    "exact_world_gold_program_scores_requests_rebuilt": true,
+    "actual_token_recounts": 0,
+    "token_interpretation": "Archived exact lengths retained; replay does not estimate or recount tokens.",
+    "external_model_calls": 0
+  },
+  "prospective_calls_max": 16,
+  "prospective_approval": false,
+  "holdout_status": "consumed_program_audit_not_fresh_reusable_holdout",
+  "external_model_calls": 0,
+  "experimental_service_tokens": 0,
+  "native_development_usage": "Separate host accounting,not0.",
+  "interpretation": "7authored family-pair descriptive strata,not7independent human samples.3development and4structurally disjoint heldout families,now program-audited and consumed. No CI/significance,real-person,cross-provider or compression-win claim."
+}

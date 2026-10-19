@@ -1,0 +1,302 @@
+{
+  "s-af8850901229": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "正式筹备"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "方案已验证",
+                false
+              ],
+              [
+                "已有反馈",
+                false
+              ],
+              [
+                "时间紧迫",
+                false
+              ]
+            ],
+            "action": "小范围试办"
+          }
+        ],
+        "constraint": [],
+        "domain": "活动组织"
+      }
+    ]
+  },
+  "s-1c87f1901ff4": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "正式筹备"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "方案已验证",
+                false
+              ],
+              [
+                "已有反馈",
+                false
+              ],
+              [
+                "时间紧迫",
+                false
+              ]
+            ],
+            "action": "正式筹备"
+          }
+        ],
+        "constraint": [],
+        "domain": "活动组织"
+      }
+    ]
+  },
+  "s-a97a77bec8f9": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "临时决定"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "提前预订"
+          }
+        ],
+        "constraint": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                true
+              ],
+              [
+                "成本可控",
+                false
+              ]
+            ],
+            "action": "临时决定"
+          }
+        ],
+        "domain": "旅行安排"
+      }
+    ]
+  },
+  "s-284766c7ac4b": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "临时决定"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "临时决定"
+          }
+        ],
+        "constraint": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                true
+              ],
+              [
+                "成本可控",
+                false
+              ]
+            ],
+            "action": "提前预订"
+          }
+        ],
+        "domain": "旅行安排"
+      }
+    ]
+  },
+  "s-67ee28a29731": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "先做小样"
+        ],
+        "exception": [],
+        "constraint": [
+          {
+            "when": [
+              [
+                "时间紧迫",
+                false
+              ],
+              [
+                "可以撤销",
+                false
+              ]
+            ],
+            "action": "先搭全套"
+          },
+          {
+            "when": [
+              [
+                "可以撤销",
+                false
+              ],
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "先做小样"
+          }
+        ],
+        "domain": "研究验证"
+      }
+    ]
+  },
+  "s-15486d73e988": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "先做小样"
+        ],
+        "exception": [],
+        "constraint": [
+          {
+            "when": [
+              [
+                "时间紧迫",
+                false
+              ],
+              [
+                "可以撤销",
+                false
+              ]
+            ],
+            "action": "先做小样"
+          },
+          {
+            "when": [
+              [
+                "可以撤销",
+                false
+              ],
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "先搭全套"
+          }
+        ],
+        "domain": "研究验证"
+      }
+    ]
+  },
+  "s-feb43bb9af53": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "完成后发布",
+          "先发草稿"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "先发草稿"
+          }
+        ],
+        "constraint": [
+          {
+            "when": [
+              [
+                "成本可控",
+                true
+              ],
+              [
+                "方案已验证",
+                false
+              ]
+            ],
+            "action": "完成后发布"
+          }
+        ],
+        "domain": "作品发布"
+      }
+    ]
+  },
+  "s-ba93d04b20ab": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "完成后发布",
+          "先发草稿"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "已有反馈",
+                false
+              ]
+            ],
+            "action": "完成后发布"
+          }
+        ],
+        "constraint": [
+          {
+            "when": [
+              [
+                "成本可控",
+                true
+              ],
+              [
+                "方案已验证",
+                false
+              ]
+            ],
+            "action": "先发草稿"
+          }
+        ],
+        "domain": "作品发布"
+      }
+    ]
+  }
+}

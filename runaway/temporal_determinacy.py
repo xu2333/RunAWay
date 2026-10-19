@@ -62,12 +62,12 @@ def authored_expected(person, case):
                 completion_action=label, possible_outcomes=outcomes)
 
 
-def completion_world(world):
+def completion_world(world, expected_records=None):
     """Separate, explicit task projection; original world and gold stay intact."""
     result = copy.deepcopy(world)
     for p in result['people']:
         for c in p['cases']:
-            expected = authored_expected(p, c)
+            expected = authored_expected(p, c) if expected_records is None else expected_records[p['id']][c['public']['id']]
             c['gold'] = expected['completion_answer']; c['action'] = expected['completion_action']
     result['purpose'] = 'offline_completion_action_task_not_original_strict_task'
     return result
@@ -101,7 +101,17 @@ def program_records(world, condition, snaps):
     return output
 
 
-def score_records(world, records):
+def score_records(world, records, expected_records=None, tasks=TASKS):
+    if not tasks or any(task not in TASKS for task in tasks) or len(set(tasks)) != len(tasks):
+        raise ValueError('Unique supported tasks required')
+    if expected_records is not None:
+        if set(expected_records) != {p['id'] for p in world['people']}: raise ValueError('Gold person coverage changed')
+        for p in world['people']:
+            if set(expected_records[p['id']]) != {c['public']['id'] for c in p['cases']}: raise ValueError('Gold query coverage changed')
+            for c in p['cases']:
+                e = expected_records[p['id']][c['public']['id']]
+                if e['strict_answer'] != c['gold'] or e['reported_status'] != c['expected_status'] or c['options'].get(e['completion_answer']) != e['completion_action']:
+                    raise ValueError('Supplied gold disagrees with task binding')
     if not isinstance(records, dict): raise ValueError('Records must be a person-keyed object')
     allowed = {p['id']: {c['public']['id'] for c in p['cases']} for p in world['people']}
     if set(records) - set(allowed): raise ValueError('Unexpected person in records')
@@ -127,11 +137,12 @@ def score_records(world, records):
     for p in world['people']:
         pid = p['id']; strict[pid] = {}; robust[pid] = {}; states[pid] = {}
         for c in p['cases']:
-            key = c['public']['id']; row = records.get(pid, {}).get(key); expected = authored_expected(p, c)
+            key = c['public']['id']; row = records.get(pid, {}).get(key)
+            expected = authored_expected(p, c) if expected_records is None else expected_records[pid][key]
             if row is not None:
                 strict[pid][key] = row.get('strict_answer'); robust[pid][key] = row.get('completion_answer')
                 states[pid][key] = row.get('reported_status')
-            for task in TASKS:
+            for task in tasks:
                 if task != 'joint' and c['public']['task'] != task: continue
                 score = outcomes.setdefault(task, dict(correct=0, planned=0, missing=0))
                 score['planned'] += 1
@@ -140,10 +151,10 @@ def score_records(world, records):
             if row != {k: expected[k] for k in ('strict_answer', 'reported_status', 'completion_answer', 'possible_outcomes')} and len(witnesses) < 2:
                 witnesses.append(dict(person_id=pid, day=c['at'], question=c['public'],
                                       expected=expected, actual=row, scenario=c['scenario']))
-    projected = completion_world(world)
-    return dict(strict_choice={task: fs.score(world, strict, task) for task in TASKS},
-                reported_rule_status={task: stress.state_score(world, states, task) for task in TASKS},
-                completion_choice={task: fs.score(projected, robust, task) for task in TASKS},
+    projected = completion_world(world, expected_records)
+    return dict(strict_choice={task: fs.score(world, strict, task) for task in tasks},
+                reported_rule_status={task: stress.state_score(world, states, task) for task in tasks},
+                completion_choice={task: fs.score(projected, robust, task) for task in tasks},
                 possible_outcomes=outcomes, counterexamples=witnesses)
 
 

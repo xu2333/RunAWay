@@ -1,0 +1,172 @@
+{
+  "s-05408a056eae": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "先做练习"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "可以撤销",
+                false
+              ]
+            ],
+            "action": "先读原理"
+          }
+        ],
+        "constraint": [],
+        "domain": "学习安排"
+      }
+    ]
+  },
+  "s-8b3b8dc0b238": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "先做练习"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "可以撤销",
+                false
+              ]
+            ],
+            "action": "先做练习"
+          }
+        ],
+        "constraint": [],
+        "domain": "学习安排"
+      }
+    ]
+  },
+  "s-fc95f8466028": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "当面讨论"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "时间紧迫",
+                false
+              ],
+              [
+                "已有反馈",
+                true
+              ]
+            ],
+            "action": "异步留言"
+          }
+        ],
+        "constraint": [],
+        "domain": "协作沟通"
+      }
+    ]
+  },
+  "s-3016c373eb43": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "当面讨论"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "时间紧迫",
+                false
+              ],
+              [
+                "已有反馈",
+                true
+              ]
+            ],
+            "action": "当面讨论"
+          }
+        ],
+        "constraint": [],
+        "domain": "协作沟通"
+      }
+    ]
+  },
+  "s-e8d93b21b38d": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "分批归档"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "方案已验证",
+                true
+              ]
+            ],
+            "action": "一次整理"
+          },
+          {
+            "when": [
+              [
+                "参与者熟悉",
+                false
+              ]
+            ],
+            "action": "分批归档"
+          }
+        ],
+        "constraint": [],
+        "domain": "资料整理"
+      }
+    ]
+  },
+  "s-c352cc903a2f": {
+    "scope": "仅本份合成记录中的当前局部选择，不代表真人。",
+    "unmodeled": 0,
+    "domains": [
+      {
+        "regular": [
+          "分批归档"
+        ],
+        "exception": [
+          {
+            "when": [
+              [
+                "方案已验证",
+                true
+              ]
+            ],
+            "action": "分批归档"
+          },
+          {
+            "when": [
+              [
+                "参与者熟悉",
+                false
+              ]
+            ],
+            "action": "一次整理"
+          }
+        ],
+        "constraint": [],
+        "domain": "资料整理"
+      }
+    ]
+  }
+}

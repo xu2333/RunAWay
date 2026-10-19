@@ -1,0 +1,13 @@
+{
+  "status": "complete_offline_structural_audit",
+  "holdout_status": "consumed_program_audit_not_fresh_reusable_holdout",
+  "tokenizer": {
+    "kind": "existing_local_vocabulary_only",
+    "sha256": "7f4030143c1c477224c5434f8272c662a8b042079a0a584f0a27a1684fe2e1fa",
+    "model_inference": false
+  },
+  "external_model_calls": 0,
+  "experimental_service_tokens": 0,
+  "native_chat_usage": "Separate host development accounting; not0.",
+  "model_quality_measured": false
+}

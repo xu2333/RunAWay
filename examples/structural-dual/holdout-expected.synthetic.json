@@ -1,0 +1,5114 @@
+{
+  "s-af8850901229": {
+    "q-b77f892bd0251f": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-6bd09eda91be1f": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-6e5a667318c910": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-0f3dbb4cc31c8d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-bddede84f51344": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-567de73bf82048": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-92bb920e042f68": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-8dee5a57001bb0": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-73b44199be4466": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-164bf0f4b0d1cc": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-8f58e79f9739fe": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-1bcfc2fa86b32d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b46075109e806a": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-2cf996c8fc0960": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-31b5da824ee61c": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-963a85d51e4b9c": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-1d044448fcc83d": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b774ab2ac120a7": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-d42648043a8df9": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b9b534c45fc59f": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-5b91ff462c3755": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c650abab185535": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c5206c5582ff6e": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-a88c56b17ed3e1": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-6c9e642c059e00": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-cf8626fa02fd3a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        },
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-47013e3ddff481": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        }
+      ]
+    },
+    "q-2223fb91f476bb": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "小范围试办"
+        }
+      ]
+    },
+    "q-3c6409e71b341d": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-caf35012bc01e7": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-877cf657d0ea8b": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-db0da587572a69": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ac9e6467b6f6db": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ceb878e2790e51": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-f3f1dc91ab72dd": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-d020dd3bfed02f": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c8381de626d7ee": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-e4759bd327e481": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-aae1bcb71f4c42": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-f32d3fba876de7": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-134eab9387c3d2": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-a0ccad68c110e2": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-18321ca6961620": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-17b6454dd8531d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-f609de7013ec39": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-65ceb58986ed72": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-cd81a2b845614d": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-9ae9cedfbc9031": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-5e41103e6431f7": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-5a082ca6750416": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-0857659385dffc": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-9291a0ad5619fa": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c54c0449675487": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c5714219c08303": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-df90b139ff898e": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-0222c4270ad08a": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-1c87f1901ff4": {
+    "q-841da834ca8275": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-fb0a277bdd67b3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-4a3983d50e850f": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-56f9affcfa4bbe": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-a0a41c4de3d9bf": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-c09f73539b9f5f": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-3aaf1210fac4ec": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-94101bc5b5c1ea": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-126b51451e2a52": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-679d27b59e4282": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-16f898d326f2f9": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-0617bcbfa408df": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b5edb8b6ed1896": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-f69a405e4b0dec": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-a08e38d40af378": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-cbd0b699af7f83": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ca7512c71519a0": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ca697963002af3": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-35028c37dc67d5": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-00d38d1c8fa69e": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-4d30522601f769": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-5dd62fedf0bb14": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-6de94a0c780bc5": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ccc88184bf09b6": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-55549f9d411dbd": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-cf449818eb5b83": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ecfbb57fad3a74": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-559beb2820939a": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-ab240a2893b78b": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-cc626c867a376b": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-2f778ec3668aa0": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-56cf7d5e6218a4": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-bdb4bfb7cce715": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-42281d8b74ccf2": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-aad186a1e927ef": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-f03c38f4b0b761": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-546e78bd587e98": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-a2aef82069fa5d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-7c946a94e51d8f": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-77fb67b26feca0": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-6d9e32ba3695ea": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-8a9ce8c8edd773": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-2a63cd681473ba": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b45683fa8ce016": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-99cb163cbe1c0e": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-e2c1e685b05ad4": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-bb46ddf541c065": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-936043f4296396": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-9b53f1d48d6e41": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-60d4c4d71582d0": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-b95516f75635a4": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-738e7a702e8f29": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-e513b1ff5d2fe0": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-562ccad0cb40fd": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "正式筹备"
+        }
+      ]
+    },
+    "q-318793fd3aa1ad": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-8d21490e9e0b07": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-a97a77bec8f9": {
+    "q-396d41b2cccf1a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-040b13b9f2208b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-52e7a2ad83b535": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-3ac7db9814910a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-dda409bacc7ff6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-0847c91e2a4416": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-282ca1cdd7e68c": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-7965b34b5b71eb": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-e069747c23037b": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-64ba36334aa8c4": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-e06d455388fbce": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-19e82edb74900a": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-cc7a1daf4b8bda": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-5a0cd70d405ab0": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-7d08d619f847be": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-0c03e9ec29a320": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-108888062dced5": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-50bdb29b2795cf": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-979dfce3b74a7a": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-f2551146745670": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-284766c7ac4b": {
+    "q-37e9d0cf5168b7": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-9ef2ad5c5fd30d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-ee1b6c50f80b81": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-ffdc76fca7586d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-76db88b3cca70a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-26725fefc3b59d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-479d7ec44a87d6": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-1187f558e1c848": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-3c3a67f175899e": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-fa14f7ed82e315": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-691c6ab466564e": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-683c1350d35828": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-7322b139086db6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-a39df1ea500268": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        },
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-06474eda743bc8": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-b5f84cd8def57a": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "提前预订"
+        }
+      ]
+    },
+    "q-9ba591dee5a7f9": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-fd6df4fa7a375d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "临时决定"
+        }
+      ]
+    },
+    "q-4d83ef8a619c5d": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-6734d8be5363ed": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-67ee28a29731": {
+    "q-0c71d1e9a1639e": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-82eabfa6d14cff": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-c916a6bf642801": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-0cfb7f9375df02": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-dce5962173dda3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-925017820615a6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-5c3fa07e3c28e4": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-cbb7e5b772fe91": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-2c9eb07dfb45d3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-e86a1409e40af1": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-540a3d1ebea4f9": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-0da2c21789bb6b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-ed1d2a72ddc73b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-06b359ae1025fa": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-4cecbe190d2f45": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-4ae45e7b7fce3b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-040a8d10b744e0": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-4c65ddbbcb0fc8": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-81c6cfccd85517": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-823c1a2e5103d6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-a28d1eeb8cde60": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-26b80e61762a1b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-8ef857f21984be": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-237057fae0094c": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-48fb33a1a24806": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-c65cafd3fe8e63": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-74e230c2c69d60": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-eaaced0a3de519": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-77a6c134f659ff": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-3db1c8146b5262": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-2d2a626018160c": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-ab81d7fa1bf7f1": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-b7bdf05f678748": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-542a14b9f7fecb": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-367c7f2062a81b": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-17fb822a32929f": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-977f97789324ef": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-85e40ef260439b": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-bd289e483d00d4": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-2cbf9da60bf3cd": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-b9736d5c3d8a95": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-e0f8ee611a62f7": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-266a98e6a94007": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-c8f30acc9c1eec": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-fe32de2e0556e1": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-4570a0a902e5d4": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-b7c0119c3991f8": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-f9cbf4df3e52fb": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-d5742d671b5327": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-bbcdd5bf873f69": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-f902093c307e24": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-6dcfee973e0b35": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-f6a1ff4fe492fd": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-6eb603b1e6a199": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-580ac6ec7dc4ec": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-eaa47974c1b459": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-15486d73e988": {
+    "q-9111fd8db3d936": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-b4b977b25d94d8": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-0bd395986c9106": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-6bb6f667dc5009": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-49d2e50d422674": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-74ee89c44cd650": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-c638aeb72e2501": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-476e4dd93b96c9": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-80f425c502d8b6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-fddbef95721ef6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-b1b0cb5ea02649": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-d082fbafe11c90": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-18b9eae5577247": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-b8f641f79ccfa0": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-f8b05f84a34cbf": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-514e16be52520e": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-5692fece7ba5fd": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-ad8a413d4bde76": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-def8ef853488b3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-94db3b54fde3f8": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-dfb1397cc1c165": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-af696fc4cbc07f": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-7a6e6059952d5a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-7722ec6366b8b1": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        },
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-4a15fd20884485": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-82ee4f3348208c": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-0474de860c0b4c": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-eb6d12cf11c9c3": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-c1321b2698f9bd": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-45d3a8e6045b48": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先搭全套"
+        }
+      ]
+    },
+    "q-dee6045f7bee77": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-40a55fbbf853f0": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-1427bc61f4b2ea": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-4c121606ccc46d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-61e1dac6c5a67d": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-faed77295f1ec0": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-3ade3a72ecf8d5": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-8f238b0aeea726": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-5e6f450f34783c": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-4163ce16fb03c6": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-c95c6c931884d9": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-24b765556e5523": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-e532e6d992a8a1": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-6c06e425516630": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-c2d8a8953155a3": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-d51213d9ec7690": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-aa316e8b9392db": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-be1c2fbb5776ea": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-16309089b8c579": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-6e12c1cef79f91": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-71a9e558d6c265": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-ed93558cd14b94": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-20e24bbbf41a19": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-c0207d43ab66ea": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先做小样"
+        }
+      ]
+    },
+    "q-190a82aaa551ef": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-64f98f27f3d1f0": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-feb43bb9af53": {
+    "q-38aa6ca9b8e872": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-e6b86495b4cd63": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-3aacf27e1ad719": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-49a7295a010e0a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-52f2b319e080b6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-fa3459e7fa1710": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-2247f1092377fb": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-e4b50a4e0bfa31": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-715fe2a41bec1b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-15fb1eec77666c": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-c6fe0e39ba8835": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-ec08d04f8ee0c9": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-e9ab58ac52c1bb": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-5c98934c7a15ab": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-0e56076edb5451": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-0c1196dac36dc7": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-20d02e14d2521b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-8fe492e2445be9": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-6e3274187509a1": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-ab0f25bfa105aa": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-d7c40021a508d8": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-a1845a79d33941": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-a8cf5594cff250": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-0c78e158fe30ba": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-0a29be650958d9": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-04eb7e2dce8620": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-5995d95b48a822": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-b04fe48e5d30fe": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-17eea24b0f862b": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-a45fc01dd6a661": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-27722e241a9dcf": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-884fefee24a220": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-84821d5e9a1410": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-99ca7585e3464d": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-9a4cc1b43ed4cc": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-40fddfe00c7174": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-4b0668ff339647": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-38cfc54424335e": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-06ee05690a013a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-40f1eb12e91bab": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-58b6260758e4ad": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-9ff55a081dc612": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-7f8dee001c4359": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-4112b6bc56ae5e": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-018b9b579f27e0": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-07b207e8f1fcb9": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-5f28661d117b2e": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-7c6aaefea437e0": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-204491defb96e3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-7a156bacd2e475": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-f7f9e3f00bfca7": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-a06d18a879555e": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-b6ad6b7606c163": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-77f94e2a310aa6": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-126f0a07a79504": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-0fd743bf3982fa": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  },
+  "s-ba93d04b20ab": {
+    "q-94b738ef47fcf6": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-69d1ab1a1eecda": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-61ee84584c1018": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-347f48b170929b": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-c9941f68bc03f4": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-28b2af9eafe28d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-2b7e4e181b2604": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-24a7d6f557a6b3": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-0784b8e6e7d32d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-f5f1abcfefc97d": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-32c146c69a3791": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-8e6f155715ac04": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-6dc312b6117995": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-089210a8382f19": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-4dbdc10cc04cf0": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-4f1e3f7679e0c1": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-bdde6f39fb5d3a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-1cb423896dae62": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-1c225cc92521da": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-ebc1b8182fc653": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-a71c726b7ada50": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-86fb89fa426fc0": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-9869c208bd0934": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-cf403b499f885b": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-b08869bdf594ee": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-3dfa3b258d4436": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-75794953757fb2": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-005833284ba569": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-f22024aa8124b8": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-e01813164bb0c1": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-71ea72ac111141": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-ec871343ead84e": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-9e69b5d828a5ea": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-14a4d45fa9cb9a": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-825be084b41eb6": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-ebdc99554a9fd4": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "0",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "完成后发布"
+        }
+      ]
+    },
+    "q-344d3da02cf6bc": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-2dff564e124ff4": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-5d97be28947cd8": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-a9c344f29de9dd": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-4dbda22859e03c": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-3fe7dabc4addc7": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-d0048d76a41922": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-23eb4980d5afdb": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-2f9f92453d3af1": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-047aca8d54eab0": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-12cf96660aaddd": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-86ec43dc22667a": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-ecab184db9514c": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-fe17325558006a": {
+      "strict_answer": "U",
+      "reported_status": "context_unknown",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        },
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-6be90edd0aadc2": {
+      "strict_answer": "B",
+      "reported_status": "chosen",
+      "completion_answer": "B",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-edaf37e0c1d3fc": {
+      "strict_answer": "A",
+      "reported_status": "chosen",
+      "completion_answer": "A",
+      "completion_action": "1",
+      "possible_outcomes": [
+        {
+          "status": "chosen",
+          "action": "先发草稿"
+        }
+      ]
+    },
+    "q-971851a9e8dce1": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-ddccbd56477366": {
+      "strict_answer": "U",
+      "reported_status": "conflict",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "conflict",
+          "action": null
+        }
+      ]
+    },
+    "q-fb0d38254142c5": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    },
+    "q-590e4df22ba0b9": {
+      "strict_answer": "U",
+      "reported_status": "unobserved",
+      "completion_answer": "U",
+      "completion_action": "U",
+      "possible_outcomes": [
+        {
+          "status": "unobserved",
+          "action": null
+        }
+      ]
+    }
+  }
+}
