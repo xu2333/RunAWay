@@ -1,5 +1,7 @@
 # A runnable synthetic metric for compression quality
 
+New opt-in [temporal partial-context calibration](TEMPORAL-PARTIAL-CONTEXT.md) exposes two false passes: treating missing conditions as false passes every complete-context question; deleting conflicting observations preserves U answers while losing conflict state. It reuses the existing fidelity scorer and product codec, keeps historical denominators and complete input lengths, and makes zero model calls. Existing calibration and sealed service results remain unchanged.
+
 The main quality measure is **query recovery over every planned query**:
 
 ```text

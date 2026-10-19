@@ -49,6 +49,18 @@ def validate(p):
     return p
 
 
+def serialize(p):
+    """Serialize a policy without claiming source grounding; export uses encode()."""
+    validate(p)
+    text = HEADER + '范围:' + J(p['scope']) + '\n未建模:' + str(p['unmodeled']) + '\n'
+    for d in p['domains']:
+        line = J(d['domain']) + '=' + J(d['regular'])
+        for tag, tier in (('例外', 'exception'), ('硬', 'constraint')):
+            for e in d[tier]: line += ';' + tag + '[' + '&'.join(('' if v else '!') + J(k) for k, v in e['when']) + ']=' + J(e['action'])
+        text += line + '\n'
+    return text
+
+
 def encode(artifact, budget_chars=768, count=None, budget_tokens=None, domains=None):
     if type(budget_chars) is not int or budget_chars < 1: raise ValueError('Positive whole character budget required')
     if budget_tokens is not None and (count is None or type(budget_tokens) is not int or budget_tokens < 1): raise ValueError('Actual tokenizer required')
@@ -59,12 +71,7 @@ def encode(artifact, budget_chars=768, count=None, budget_tokens=None, domains=N
             raise ValueError('Select unique observed domains explicitly')
         by_domain = {d['domain']: d for d in p['domains']}
         p['domains'] = [by_domain[d] for d in domains]
-    text = HEADER + '范围:' + J(p['scope']) + '\n未建模:' + str(p['unmodeled']) + '\n'
-    for d in p['domains']:
-        line = J(d['domain']) + '=' + J(d['regular'])
-        for tag, tier in (('例外', 'exception'), ('硬', 'constraint')):
-            for e in d[tier]: line += ';' + tag + '[' + '&'.join(('' if v else '!') + J(k) for k, v in e['when']) + ']=' + J(e['action'])
-        text += line + '\n'
+    text = serialize(p)
     units = count(text) if count else None
     if units is not None and (type(units) is not int or units < 0): raise ValueError('Invalid tokenizer count')
     ok = len(text) <= budget_chars and (budget_tokens is None or units <= budget_tokens)
