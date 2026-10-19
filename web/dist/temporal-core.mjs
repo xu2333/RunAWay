@@ -20,6 +20,7 @@ function lines(value){
 }
 const KINDS=['regular','replace','exception','constraint','clear','retract'];
 const EVENT_KEYS=['id','kind','domain','action','strength','when_all','target','span_ids'];
+const CONCISE_HEADER='仅所列当前偏好，无历史；当前要求优先，不授权行动。硬>例外>常规；同层冲突或条件未明则未知。未列/空=无证据；首组=常规，多项=等强冲突；&须全满足，!为否定。未建模>0可能不全。\n';
 
 export function createTemporal(protocol){
  if(protocol.version!==1||typeof protocol.instruction_prefix!=='string'||!protocol.schema)throw Error('时序协议版本无效。');
@@ -136,5 +137,21 @@ export function createTemporal(protocol){
   const accepted=length(output)<=budgetChars&&(budgetTokens===null||units<=budgetTokens);
   return {status:accepted?'candidate_unvalidated':'budget_blocked',text:accepted?output:null,required_characters:length(output),required_tokens:units,budget_characters:budgetChars,budget_tokens:budgetTokens,included_domains:wanted,omitted_domains:domainOrder.filter(d=>!wanted.includes(d)),source_unmodeled_spans:artifact.extraction.unmodeled.length,historical_reconstruction_supported:false,source_semantic_fidelity_verified:false,model_quality_measured:false,interpretation:protocol.interpretation};
  }
- return {spans,makeRequest,bind,validate,effective,resolve,render};
+ async function renderConcise(artifact,budgetChars,domains=null,count=null,budgetTokens=null){
+  if(!Number.isInteger(budgetChars)||budgetChars<1)throw Error('需要正整数的完整字符预算。');
+  if(budgetTokens!==null&&(typeof count!=='function'||!Number.isInteger(budgetTokens)||budgetTokens<1))throw Error('Token预算须提供实际分词器，不能按字符估计。');
+  const rules=await effective(artifact),order=[...new Set(artifact.extraction.events.filter(e=>e.domain).map(e=>e.domain))],wanted=domains??order;
+  if(!Array.isArray(wanted)||wanted.some(d=>typeof d!=='string'||!Object.hasOwn(rules,d))||new Set(wanted).size!==wanted.length)throw Error('请选择不重复的已有领域。');
+  const j=JSON.stringify;
+  let output=CONCISE_HEADER+'范围:'+j(artifact.extraction.scope)+'\n未建模:'+artifact.extraction.unmodeled.length+'\n';
+  for(const domain of wanted){
+   const rule=rules[domain];let line=j(domain)+'='+j([...new Set(rule.regular.map(e=>e.action))]);
+   for(const [tag,tier] of [['例外','exception'],['硬','constraint']])for(const e of rule[tier])line+=';'+tag+'['+e.when_all.map(l=>(l.equals?'':'!')+j(l.predicate)).join('&')+']='+j(e.action);
+   output+=line+'\n';
+  }
+  const units=count?count(output):null;if(units!==null&&(!Number.isInteger(units)||units<0))throw Error('分词器返回了无效计数。');
+  const accepted=length(output)<=budgetChars&&(budgetTokens===null||units<=budgetTokens);
+  return {status:accepted?'candidate_unvalidated':'budget_blocked',text:accepted?output:null,required_characters:length(output),required_tokens:units,budget_characters:budgetChars,budget_tokens:budgetTokens,included_domains:wanted,omitted_domains:order.filter(d=>!wanted.includes(d)),source_unmodeled_spans:artifact.extraction.unmodeled.length,historical_reconstruction_supported:false,source_semantic_fidelity_verified:false,model_quality_measured:false,delivery_format:'concise',interpretation:'Exact concise current-policy grammar tested only on D-0028 consumed synthetic policies. Source interpretation, real-person and cross-provider fidelity remain unverified. Whole prompt only; no truncation, subset selection or retry.'};
+ }
+ return {spans,makeRequest,bind,validate,effective,resolve,render,renderConcise};
 }

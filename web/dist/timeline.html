@@ -35,6 +35,8 @@
 </section>
 <section class="panel" id="delivery-panel" hidden><div class="eyebrow">3 · 带走判断</div><h2 id="result-title">当前判断的初稿</h2>
 <p class="small">这里只导出当前状态；过去的记录仍留在私有档案里。来源中的解释和关系需要你核对。</p>
+<label for="format">带走的样子</label><select id="format"><option value="readable">易读版 · 方便逐句核对</option><option value="concise">紧凑版 · 把完整规则装小一点</option></select>
+<p class="small">紧凑版保留全部所选方面、条件和未知边界。可随时切换；是否更短取决于内容。<a href="https://github.com/xu2333/RunAWay/blob/main/TEMPORAL-CONCISE-RESULTS.md" target="_blank" rel="noopener noreferrer">合成验证与边界 ↗</a></p>
 <label for="budget">完整 prompt 的字符上限</label><input id="budget" type="number" min="1" max="16000" step="1" value="768">
 <p class="small">字符不是 tokens。本页不估算 token 数；需要严格 token 上限时，用 CLI 和实际分词器检查。</p>
 <details><summary>只保留选中的完整方面</summary><div id="domains"></div><p id="omissions" class="small"></p></details>

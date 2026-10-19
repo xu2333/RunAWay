@@ -7,7 +7,7 @@ const protocol=JSON.parse(await readFile(new URL('../web/dist/temporal-protocol.
 const demo=JSON.parse(await readFile(new URL('../web/dist/temporal-demo.json',import.meta.url)));
 const engine=createTemporal(protocol);
 const PY=`import json,sys
-from runaway import temporal as t
+from runaway import temporal as t, temporal_concise as concise
 v=json.load(sys.stdin)
 try:
  a=v.get('artifact');op=v['op']
@@ -16,6 +16,11 @@ try:
  elif op=='bind':r=t.bind(v['answer'],v['sources'])
  elif op=='resolve':r=t.resolve(a,v['domain'],v['context'],v.get('through'))
  elif op=='render':r=t.render(a,v['budget'],v.get('domains'))
+ elif op=='concise':r=concise.render(a,v['budget'],v.get('domains'))
+ elif op=='d28':
+  import zipfile
+  with zipfile.ZipFile('examples/temporal-concise-evidence.synthetic.zip') as z:
+   r={'artifacts':json.loads(z.read('d0028/artifacts.synthetic.json')),'memories':json.loads(z.read('d0028/deliveries.synthetic.json'))['memories']}
  elif op=='fixture':
   import runpy
   s,answer=runpy.run_path('tests/test_temporal.py',run_name='fixture_only')['fixture']()
@@ -71,6 +76,28 @@ test('numeric and prototype-like domain labels keep source order and cannot alte
  assert.deepEqual(partial,python({op:'render',artifact:a,budget:1000,domains:['2']}).value);
  assert.deepEqual(partial.omitted_domains,['10','__proto__']);
  assert.equal((await engine.resolve(a,'__proto__',{'安全':true})).action,'选三');assert.equal({}.action,undefined);
+ assert.deepEqual(await engine.renderConcise(a,1000),python({op:'concise',artifact:a,budget:1000}).value);
+ assert.deepEqual(await engine.renderConcise(a,1000,['2','10']),python({op:'concise',artifact:a,budget:1000,domains:['2','10']}).value);
+});
+
+test('concise browser output exactly matches all four actual D28 service memories and CLI exports',async()=>{
+ const d=python({op:'d28'}).value;
+ for(const [pid,a] of Object.entries(d.artifacts)){
+  const full=await engine.renderConcise(a,768);
+  assert.equal(full.text,d.memories[pid].text);
+  assert.deepEqual(full,python({op:'concise',artifact:a,budget:768}).value);
+  assert.deepEqual(await engine.renderConcise(a,1),python({op:'concise',artifact:a,budget:1}).value);
+  assert.equal((await engine.renderConcise(a,10000,null,()=>289,288)).text,null);
+  await assert.rejects(engine.renderConcise(a,10000,null,null,288));
+  await assert.rejects(engine.renderConcise(a,10000,['invented']));
+ }
+});
+
+test('concise quoted syntax, emoji, unmodeled scope and negative conjunction match CLI',async()=>{
+ const domain='10;硬["🐈"]',action='快试;例外["&!"',s=sources(`${domain}：${action}。\n${domain}：先设计。\n${domain}：若未验证且不可撤销，先设计。`),spans=await engine.spans(s);
+ const e=(i,action,kind='regular',when_all=[])=>({id:'e'+i,kind,domain,action,strength:0,when_all,target:'',span_ids:[spans[i].id]});
+ const a=await engine.bind({scope:'引号"与行分隔\u2028🐈',events:[e(0,action),e(1,'先设计'),e(2,'先设计','constraint',[{predicate:'未验证',equals:true},{predicate:'不可撤销',equals:false}])],unmodeled:[]},s);
+ assert.deepEqual(await engine.renderConcise(a,10000),python({op:'concise',artifact:a,budget:10000}).value);
 });
 
 test('budget failure withholds text and neither truncates nor chooses domains automatically',async()=>{

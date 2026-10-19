@@ -12,6 +12,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [D-0027](TEMPORAL-CONFLICT-TRANSFER-RESULTS.md) then tested that remaining pair with unchanged instructions/rendering: memories309/308tokens, current112/112, historical0/38. Its histories had already been source-read; this is a separate consumed-data batch, not a fresh holdout or a completed rerun of D-0025.
 
+[D-0028](TEMPORAL-CONCISE-RESULTS.md) tested a shorter encoding on the same four consumed policies: 264/265/261/260 actual tokens (15.32% fewer memory tokens in the frozen vocabulary), current224/224, contrasts6/6, historical0/76. It is now an optional output in the browser and CLI; readable output remains the default. This is not total service-cost savings, full-trajectory losslessness or new-person validation.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:
@@ -55,6 +57,16 @@ python3 -m runaway timeline export my-timeline/timeline.private.json \
 ```
 
 Without a tokenizer, the token count is explicitly unmeasured. An explicit `--domain '产品验证'` selects a whole observed domain group; omitted domains are reported and the prompt says unlisted areas are unknown. This is a partial export, not full coverage. Scope and conditional groups are never cut mid-rule.
+
+For the optional concise grammar, choose **紧凑版** in the browser or add `--format concise` to either CLI import or export:
+
+```sh
+python3 -m runaway timeline export my-timeline/timeline.private.json \
+  --format concise --budget-chars 768 --budget-tokens 288 \
+  --tokenizer /path/to/model.gguf --out concise-timeline
+```
+
+The complete grammar explanation is inside `prompt.md`; take the whole prompt. The same `portable.json` transport works with existing harness adapters, and the private graph is retained unchanged. Domain selection stays explicit; a budget failure withholds the entire text. The format is not guaranteed shorter for every input. D-0028 validates only the four consumed synthetic policies, with no new cross-provider or real-person claim.
 
 Inspect the private graph at an earlier event or under explicit conditions:
 

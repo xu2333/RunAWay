@@ -32,7 +32,8 @@ async function updateDelivery(initial=false){
  try{
   const build=initial||$('domains').dataset.artifactId!==artifact.id;
   const selected=build?null:[...$('domains').querySelectorAll('input:checked')].map(el=>el.value);
-  const result=await engine.render(artifact,Number($('budget').value),selected);if(revision!==state.revision)return;
+  const renderer=$('format').value==='concise'?engine.renderConcise:engine.render;
+  const result=await renderer(artifact,Number($('budget').value),selected);if(revision!==state.revision)return;
   state.delivery=result;$('delivery-panel').hidden=false;$('download-private').disabled=false;
   if(build){$('domains').replaceChildren();$('domains').dataset.artifactId=artifact.id;for(const domain of result.included_domains){const label=node('label',''),box=document.createElement('input');box.type='checkbox';box.value=domain;box.checked=true;box.addEventListener('change',()=>updateDelivery());label.append(box,document.createTextNode(domain));$('domains').append(label);}}
   $('omissions').textContent=result.omitted_domains.length?'你明确略过：'+result.omitted_domains.join('、')+'。未列方面保持未知。':'当前包含所有已建模方面，没有自动删选。';
@@ -59,7 +60,8 @@ function download(name,value,type='application/json'){
 }
 async function exportPortable(){
  const delivery=state.delivery,artifact=state.artifact;if(!delivery?.text||!artifact)return;
- const revision=state.revision,body={schema_version:1,artifact_type:'portable_expression',status:'candidate_unvalidated',text:delivery.text,profile_id:artifact.id,method:'program_rendered_temporal_candidate_v1'};
+ const method=delivery.delivery_format==='concise'?'program_rendered_temporal_concise_candidate_v1':'program_rendered_temporal_candidate_v1';
+ const revision=state.revision,body={schema_version:1,artifact_type:'portable_expression',status:'candidate_unvalidated',text:delivery.text,profile_id:artifact.id,method};
  const expression={...body,id:await hash(canonical(body))};if(revision!==state.revision)return;download('runaway-temporal.portable.json',expression);
 }
 async function restore(file){
@@ -76,6 +78,7 @@ try{
  $('prepare').disabled=false;$('demo-a').disabled=false;$('demo-b').disabled=false;
  $('source').addEventListener('input',sourceChanged);$('kind').addEventListener('change',sourceChanged);$('answer').addEventListener('input',answerChanged);
  $('prepare').addEventListener('click',prepare);$('import').addEventListener('click',importAnswer);$('budget').addEventListener('input',()=>updateDelivery());
+ $('format').addEventListener('change',()=>updateDelivery());
  $('demo-a').addEventListener('click',()=>loadDemo(0));$('demo-b').addEventListener('click',()=>loadDemo(1));
  $('copy-request').addEventListener('click',()=>copy(state.prepared?.request));$('copy-prompt').addEventListener('click',()=>copy(state.delivery?.text));
  $('download-prompt').addEventListener('click',()=>{if(state.delivery?.text)download('runaway-temporal-prompt.txt',state.delivery.text,'text/plain;charset=utf-8');});

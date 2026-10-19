@@ -20,7 +20,7 @@ from .evaluation import freeze, validate_dataset
 from .trajectory_import import import_pages
 from .decision_memory import compress as decision_compress, make_request as decision_request
 from .bound_memory import make_request as bound_request, import_candidate as bound_import
-from . import temporal
+from . import temporal, temporal_concise
 
 
 def read(path):
@@ -83,14 +83,16 @@ def temporal_command(args):
         tokenizer = llama_cpp.Llama(model_path=args.tokenizer, vocab_only=True, n_gpu_layers=0, verbose=False)
     try:
         counter = (lambda text: len(tokenizer.tokenize(text.encode(), add_bos=False, special=False))) if tokenizer else None
-        result = temporal.render(artifact, args.budget_chars, args.domain, counter, args.budget_tokens)
+        renderer = temporal_concise.render if args.format == 'concise' else temporal.render
+        result = renderer(artifact, args.budget_chars, args.domain, counter, args.budget_tokens)
     finally:
         if tokenizer is not None:
             tokenizer.close()
     files = {'timeline.private.json': artifact, 'delivery.private.json': result}
     if result['text'] is not None:
         files['prompt.md'] = result['text']
-        files['portable.json'] = make_expression(result['text'], artifact['id'], 'program_rendered_temporal_candidate_v1')
+        method = 'program_rendered_temporal_concise_candidate_v1' if args.format == 'concise' else 'program_rendered_temporal_candidate_v1'
+        files['portable.json'] = make_expression(result['text'], artifact['id'], method)
     directory = save_private_bundle(args.out, files)
     output({k: v for k, v in result.items() if k != 'text'} | {'directory': directory, 'model_calls': 0})
 
@@ -195,6 +197,7 @@ def parser():
         cmd.add_argument('--budget-chars', type=int, default=768, help='Whole prompt; over-budget output is withheld, never truncated')
         cmd.add_argument('--budget-tokens', type=int)
         cmd.add_argument('--tokenizer', help='GGUF vocabulary; required for actual token-budget checks')
+        cmd.add_argument('--format', choices=('readable', 'concise'), default='readable', help='Optional concise grammar; readable remains default, neither exports history')
         cmd.add_argument('--domain', action='append', help='Explicitly select whole domain groups; omitted domains are reported')
     resolver = timeline_actions.add_parser('resolve', help='Inspect an event graph with explicit boolean context')
     resolver.add_argument('artifact')
