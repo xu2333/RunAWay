@@ -14,6 +14,8 @@ D-0018 lost a restored constraint in the **extracted profile**, before the extra
 
 [D-0028](TEMPORAL-CONCISE-RESULTS.md) tested a shorter encoding on the same four consumed policies: 264/265/261/260 actual tokens (15.32% fewer memory tokens in the frozen vocabulary), current224/224, contrasts6/6, historical0/76. It is now an optional output in the browser and CLI; readable output remains the default. This is not total service-cost savings, full-trajectory losslessness or new-person validation.
 
+[D-0031](PARTIAL-READER-RESULTS.md) then tested absent conditions on one already public authored pair: current34/36, complete-context16/16, partial-context18/20. The strict unknown contract did not fully transfer. Both deviations share one scenario where every completion permits the same action; this post-hoc fact does not change the original failure or reveal whether the model assumed a missing condition false. Historical and state fidelity were not measured; defaults remain unchanged.
+
 ## Use it
 
 Prepare a request from your experience text or existing role-labelled source JSON:
