@@ -7,16 +7,27 @@ const contract=JSON.parse(readFileSync(new URL('../web/dist/choice-contract.json
 const queries=[{id:'q1',scenario:'同一处岔路 🌱',options:{A:'先试一小步',B:'先理清结构',C:'先问两个人'}}, {id:'q2',scenario:'同一处岔路 🌱',options:{A:'先问两个人',B:'先试一小步',C:'先理清结构'}}];
 
 test('browser requests match the Python reader byte for byte in both modes',()=>{
-  for (const mode of ['label','text']) {
-    const input={material:'未知时请停下。\n“新条件”需要重新判断。',queries,mode};
-    const py=spawnSync('python3',['-B','-c','import json,sys;from runaway.choice_reader import make_request;x=json.load(sys.stdin);print(json.dumps(make_request(x["material"],x["queries"],answer_format=x["mode"]),ensure_ascii=False))'],{input:JSON.stringify(input),encoding:'utf8'});
+  for (const mode of ['label','text']) for (const readerMode of ['standard','coverage']) {
+    const input={material:'未知时请停下。\n“新条件”需要重新判断。',queries,mode,readerMode};
+    const py=spawnSync('python3',['-B','-c','import json,sys;from runaway.choice_reader import make_request;x=json.load(sys.stdin);print(json.dumps(make_request(x["material"],x["queries"],answer_format=x["mode"],reader_mode=x["readerMode"]),ensure_ascii=False))'],{input:JSON.stringify(input),encoding:'utf8'});
     assert.equal(py.status,0,py.stderr);
-    const actual=makeChoiceRequest(contract,input.material,queries,mode), expected=JSON.parse(py.stdout);
+    const actual=makeChoiceRequest(contract,input.material,queries,mode,readerMode), expected=JSON.parse(py.stdout);
     assert.equal(actual.prompt,expected.prompt);
     assert.deepEqual(JSON.parse(JSON.stringify(actual.schema)),expected.schema);
   }
   const checked=spawnSync('python3',['-B','scripts/build_choice_contract.py','--check'],{encoding:'utf8'});
   assert.equal(checked.status,0,checked.stderr);
+});
+
+test('coverage mode leaves facts, options, schema and the standard default unchanged',()=>{
+  const standard=makeChoiceRequest(contract,'记忆',queries);
+  const explicit=makeChoiceRequest(contract,'记忆',queries,'text','standard');
+  const coverage=makeChoiceRequest(contract,'记忆',queries,'text','coverage');
+  assert.deepEqual(standard,explicit);
+  assert.deepEqual(coverage.schema,standard.schema);
+  assert.equal(coverage.prompt.split('\nREADER_INPUT_JSON:\n')[1],standard.prompt.split('\nREADER_INPUT_JSON:\n')[1]);
+  assert.equal(contract.default_reader_mode,'standard');
+  assert.throws(()=>makeChoiceRequest(contract,'记忆',queries,'text','guess'));
 });
 
 test('exact action text follows its public position; U stays unknown',()=>{

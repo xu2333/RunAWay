@@ -338,6 +338,7 @@ def parser():
         if name == 'prepare':
             choice.add_argument('--card', required=True, help='Existing portable.json; never scanned automatically')
             choice.add_argument('--as-of', help='Optional YYYY-MM-DD bound for historical choices')
+            choice.add_argument('--reader-mode', choices=['standard', 'coverage'], default='standard', help='coverage adds an experimental applicability check; same memory and answer schema')
         else:
             choice.add_argument('--answer', required=True, help='Raw JSON from your chosen LLM')
     exp = commands.add_parser("export")
@@ -416,8 +417,8 @@ def main(argv=None):
             questions = read_choice_json(args.questions)
             if args.choices_command == 'prepare':
                 memory = render_expression(validate_expression(json.loads(read(args.card))))
-                prepared = choice_reader.make_request(memory, questions, as_of=args.as_of, answer_format=args.answer_format)
-                output(dict(prepared, model_calls=0, answer_format=args.answer_format))
+                prepared = choice_reader.make_request(memory, questions, as_of=args.as_of, answer_format=args.answer_format, reader_mode=args.reader_mode)
+                output(dict(prepared, model_calls=0, answer_format=args.answer_format, reader_mode=args.reader_mode))
             else:
                 raw = read_choice_json(args.answer)
                 labels = choice_reader.decode_response(questions, raw, answer_format=args.answer_format)

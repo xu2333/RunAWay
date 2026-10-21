@@ -14,6 +14,7 @@
 <label class="file-button">读入 prompt.md / 文本<input id="memory-file" type="file" accept=".md,.txt"></label>
 <label for="scenario">这次遇到了什么？</label><textarea id="scenario" rows="4" maxlength="12000" placeholder="写下当时已知的条件、代价与限制，先不要透露真实选择。"></textarea>
 <label for="options">当时存在的选项（每行一个，2–8 个）</label><textarea id="options" rows="4" maxlength="12000" placeholder="例如：先做一个可以撤回的小样&#10;先把完整结构与依赖想清楚"></textarea>
+<label for="reader-mode">读取方式</label><select id="reader-mode"><option value="standard">原读法</option><option value="coverage">先核对适用条件（实验）</option></select><p class="small">实验读法先检查条件是否被记录覆盖，再给选择。它仍可能猜错或误答未知，并不增加你的记忆内容。</p>
 <button id="prepare" class="primary wide" disabled>装好这一题，借个脑袋 →</button><p class="small">这是一次日常试用。若要检验保真度，请用未参与提炼的真实经历，并在看预测前记录自己的答案。</p>
 </section><section class="panel">
 <div class="eyebrow">02 · 借个脑袋</div><h2>去你常用的 AI 那里</h2>

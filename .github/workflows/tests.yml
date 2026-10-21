@@ -31,6 +31,8 @@ jobs:
         run: node --test tests/*.test.mjs
       - name: Reproduce source-support synthetic benchmark (no model calls)
         run: python benchmarks/support-extraction-v1/run.py check-observed
+      - name: Reproduce coverage-reader study and failed-call accounting
+        run: python benchmarks/support-extraction-v1/check_coverage.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
@@ -50,3 +52,4 @@ jobs:
           python -m runaway distill --input "${{ github.workspace }}/examples/support-sources.synthetic.json" --answer "${{ github.workspace }}/examples/support-answer.synthetic.json" --out tiny-demo
           runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text
           runaway choices import --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer "${{ github.workspace }}/examples/choice-answer.synthetic.json" --answer-format text
+          runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text --reader-mode coverage

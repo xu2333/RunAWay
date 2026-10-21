@@ -7,6 +7,17 @@ import unittest
 from runaway.portable import make_expression
 
 class ChoicesCLITests(unittest.TestCase):
+ def test_explicit_coverage_mode_preserves_schema_and_material(self):
+  with tempfile.TemporaryDirectory() as name:
+   folder=Path(name);card=folder/'card.json';qs=folder/'questions.json'
+   card.write_text(json.dumps(make_expression('Only the observed conditions support a choice.','fixture','test')))
+   qs.write_text(json.dumps([{'id':'q1','scenario':'A new condition','options':{'A':'Try','B':'Ask'}}]))
+   run=lambda *extra:subprocess.run([sys.executable,'-B','-m','runaway','choices','prepare','--card',str(card),'--questions',str(qs),'--answer-format','text',*extra],capture_output=True,text=True)
+   standard=run();coverage=run('--reader-mode','coverage');self.assertEqual(standard.returncode,0,standard.stderr);self.assertEqual(coverage.returncode,0,coverage.stderr)
+   left=json.loads(standard.stdout);right=json.loads(coverage.stdout)
+   self.assertEqual(left['reader_mode'],'standard');self.assertEqual(right['reader_mode'],'coverage');self.assertEqual(right['model_calls'],0)
+   self.assertEqual(left['schema'],right['schema']);self.assertEqual(left['prompt'].split('\nREADER_INPUT_JSON:\n')[1],right['prompt'].split('\nREADER_INPUT_JSON:\n')[1])
+   self.assertNotEqual(run('--reader-mode','guess').returncode,0)
  def test_prepare_and_import_do_not_call_a_model(self):
   with tempfile.TemporaryDirectory() as name:
    folder=Path(name);card=folder/'card.json';qs=folder/'questions.json';answer=folder/'answer.json'

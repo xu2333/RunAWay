@@ -17,11 +17,14 @@ function schemaFor(queries, format) {
   return {type:'object', additionalProperties:false, required:[...seen], properties};
 }
 
-export function makeChoiceRequest(contract, material, queries, format = 'text') {
+export function makeChoiceRequest(contract, material, queries, format = 'text', readerMode = 'standard') {
+  if (!['standard','coverage'].includes(readerMode)) throw Error('读取方式无效。');
+  const prefix = readerMode === 'standard' ? contract?.prefixes?.[format] : contract?.reader_modes?.coverage?.[format];
   if (typeof material !== 'string' || contract?.schema_version !== 1 || typeof contract.prefixes?.[format] !== 'string') throw Error('材料或读取协议无效。');
   requireIntact(material, '随身 prompt');
+  if (typeof prefix !== 'string') throw Error('所选读取协议未载入。');
   const schema = schemaFor(queries, format);
-  return {schema, prompt:contract.prefixes[format] + '\nANSWER_SCHEMA_JSON:\n' + canonical(schema) + '\nREADER_INPUT_JSON:\n' + canonical({material, queries})};
+  return {schema, prompt:prefix + '\nANSWER_SCHEMA_JSON:\n' + canonical(schema) + '\nREADER_INPUT_JSON:\n' + canonical({material, queries})};
 }
 
 // Only a flat string-valued object is accepted. Detect duplicate decoded keys

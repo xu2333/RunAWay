@@ -8,7 +8,9 @@ function invalidate() {
   for (const id of ['answer','request','correction']) $(id).value = '';
   $('rating').value = 'unrated'; notice('');
 }
-for (const id of ['memory','scenario','options']) $(id).addEventListener('input', () => {synthetic = false; invalidate();});
+// Editing the fictional demo must not relabel its derivatives as real user data.
+for (const id of ['memory','scenario','options']) $(id).addEventListener('input', invalidate);
+$('reader-mode').addEventListener('change', invalidate);
 $('answer').addEventListener('input', () => {prediction = null; $('result').hidden = true; $('rating').value = 'unrated'; $('correction').value = '';});
 $('memory-file').addEventListener('change', async event => {
   const file = event.target.files[0]; if (!file) return;
@@ -26,10 +28,11 @@ $('prepare').addEventListener('click', () => {
     if (!material.trim()) throw Error('请先带上你的完整随身 prompt。');
     const texts = $('options').value.split(/\r?\n/).map(t => t.trim()).filter(Boolean);
     const queries = [{id:'q1', scenario:$('scenario').value, options:Object.fromEntries(texts.map((t,i) => ['ABCDEFGH'[i],t]))}];
-    const request = makeChoiceRequest(contract, material, queries);
-    snapshot = {schema_version:1, created_at:new Date().toISOString(), synthetic, material, queries, answer_format:'text', request};
+    const readerMode = $('reader-mode').value;
+    const request = makeChoiceRequest(contract, material, queries, 'text', readerMode);
+    snapshot = {schema_version:1, created_at:new Date().toISOString(), synthetic, source_origin:synthetic ? 'demo_or_edited_demo' : 'user_supplied_unverified', material, queries, answer_format:'text', reader_mode:readerMode, request};
     $('request').value = request.prompt; $('request-panel').hidden = false; $('waiting').hidden = true;
-    notice(synthetic ? '已载入虚构演示；没有调用模型，也不代表你的偏好。' : '请求已准备。请发送到一个全新对话，再把回答带回来。');
+    notice(synthetic ? '这是虚构示例或其修改版；没有调用模型，也不代表你的偏好。' : '请求已准备。请发送到一个全新对话，再把回答带回来。');
   } catch (error) {notice(error.message);}
 });
 $('copy').addEventListener('click', async () => {
@@ -63,7 +66,7 @@ $('demo').addEventListener('click', async () => {
     notice('这是合成人物的演示材料。点击装好这一题，可到你常用的 AI 试试。');
   } catch (error) {notice(error.message);}
 });
-$('clear').addEventListener('click', () => {for (const id of ['memory','scenario','options']) $(id).value = ''; synthetic = false; invalidate();});
+$('clear').addEventListener('click', () => {for (const id of ['memory','scenario','options']) $(id).value = ''; $('reader-mode').value = 'standard'; synthetic = false; invalidate();});
 try {
   const response = await fetch('./choice-contract.json'); if (!response.ok) throw Error('读取协议未载入，请刷新重试。');
   contract = await response.json(); $('prepare').disabled = false; $('demo').disabled = false;
