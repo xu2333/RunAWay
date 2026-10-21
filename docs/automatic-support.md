@@ -45,6 +45,21 @@ The public surface is `prompt.md` / `portable.json`. `profile.private.json` reta
 
 The compiler first renders complete prose. If it exceeds the budget, repeated phrases can be replaced by a self-contained literal glossary; the complete glossary is counted, and expansion must reproduce the prose exactly. `expanded.private.md` keeps the plain version and `encoding.private.json` records the round-trip proof. If lossless packing still cannot fit, or an anchor is invalid, export fails explicitly; no truncated card is exported. Generation preserves the request, raw response and failure locally, makes no automatic retry, and never overwrites an existing directory. Offline import uses the same validator and renderer as generation. When possible branches all choose the same action, missing detail need not force `U`; this does not extend the action outside the union of observed conditions.
 
+## Local layouts without another model call
+
+The experimental `rows` layout puts each existing condition/action pair on its own line: `「condition」→chosen action`. The original `paragraph` layout stays the default. Both preserve the same extracted branches, priority order, name, tagline, guidance and unknown statements. Embedded delimiters, arrows, backslashes and line breaks are escaped reversibly. Literal round-trip checks do not prove semantic support or behavioral fidelity.
+
+For an existing private `distill` profile, re-export offline:
+
+```sh
+runaway relayout my-taste/profile.private.json --layout rows --out my-taste-rows
+runaway relayout my-taste-rows/profile.private.json --layout paragraph --out my-taste-prose
+```
+
+Both commands make zero model calls. They check the private record/source checksums and revalidate its source quotes, roles, references and whole character budget. Checksums detect damage; they do not authenticate the author or prove the inferences true. Every output directory must be new. Over-budget output fails without truncation. Private records retain selected original sources; inspect public text before sharing it. This command accepts the source-support profile from `distill`, not the older claim-profile format.
+
+You can also add `--layout rows` when importing a saved extractor answer or explicitly generating a new `distill` result. The extraction prompt/schema stay unchanged; layout is applied locally afterward. Keep `--layout rows` on the import command when using `--prepare` with another LLM. A paragraph/rows change can also alter literal dictionary packing and token count; neither character length nor an exact round trip establishes how a different LLM will read it. [Frozen same-reader layout comparison](../benchmarks/support-extraction-v1/LAYOUT.md).
+
 ## Replay a choice with any LLM
 
 Prefer a browser? Open **`/choices.html`** on the static app, paste `prompt.md`, add a scenario and 2–8 options, and copy the request to your chosen LLM. Paste its JSON back to inspect the choice and optionally download a private trial record with your rating/correction. Nothing is automatically submitted or saved; editing the memory/question invalidates the current prediction. This is an informal trial, not an independent fidelity measurement.
