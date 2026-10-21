@@ -1,5 +1,12 @@
 # Long-history / whole-card budget pressure test
 
+[Recorded results](RESULTS.md) · [All actual decision errors](LOSSES.md) ·
+[Complete cards](CARDS.md) · [Offline checker](check.py)
+
+**Recorded run stopped at call 29 after a timeout: 28 completed, one usage-unknown
+failure, 17 unstarted. All 12 cards were generated; only one person was read at
+384 and 512. Neither a full budget curve nor the repeated 384 gate passed.**
+
 This study preserves the four consumed final policies from
 [fresh-boundary-v1](../fresh-boundary-v1/README.md), using alternative, explicitly
 edited synthetic histories. It is a controlled stress test, not four new users,
@@ -77,3 +84,8 @@ makes proposals single use. Mocks validate plumbing, not model quality. This is
 neither a likelihood-based information gain measurement nor evidence of real
 person fidelity, cross-vendor portability, runtime harness loading, population
 accuracy or an invoice. The ceiling is executions, not a token/money cap.
+
+The interrupted proposal is permanently closed. A later study needs a new frozen
+plan and contemporaneous controls; unused slots are not a carried-over balance.
+No semantic loss is inferred from reads that never ran. The next complete budget
+test should balance people before repeats and retain its own fixed denominator.

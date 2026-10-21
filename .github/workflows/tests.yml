@@ -37,6 +37,8 @@ jobs:
         run: python benchmarks/support-extraction-v1/check_layout.py
       - name: Reproduce fresh synthetic end-to-end scope study
         run: python benchmarks/fresh-boundary-v1/check.py
+      - name: Reproduce long-history whole-card budget stress study
+        run: python benchmarks/long-trajectory-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
