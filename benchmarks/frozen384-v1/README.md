@@ -1,5 +1,12 @@
 # Frozen 384-character cards: independent revalidation
 
+[Recorded results](RESULTS.md) · [Actual errors and missing reads](LOSSES.md) ·
+[Host sleep evidence](host-sleep-observation.json)
+
+**Recorded run interrupted at call3: two completed, one usage-unknown timeout,
+ten unstarted. No card read or repeat completed. The host entered idle sleep
+during the failed invocation; no compression or stability pass is claimed.**
+
 A new 13-execution proposal, not a resume or completion of the interrupted
 [long-history study](../long-trajectory-v1/README.md). That study stays closed at
 29 attempts, including one timeout with unknown usage. Its unused slots are
@@ -52,3 +59,21 @@ Preparation and preflight are offline. Real service execution additionally needs
 matching offline acceptance, runtime agreement and existing human authorization.
 Durable exclusive intent makes each proposal single-use. Mocks validate plumbing
 and cannot be counted as real-model evidence.
+
+
+## Keep a local macOS run awake
+
+A read-only power-log check confirmed idle sleep during the failed invocation.
+[Minimal timing evidence](host-sleep-observation.json) excludes unrelated apps.
+Use the process-scoped wrapper for a **new** frozen proposal after its offline
+acceptance; do not resume this closed proposal:
+
+```sh
+python scripts/with_awake.py -- python benchmarks/frozen384-v1/study.py run --out NEW_ACCEPTED_PROPOSAL
+```
+
+On macOS this runs `caffeinate -i` for the command lifetime; other platforms run
+the command directly. It leaves display sleep and permanent power settings alone.
+Manual sleep/lid closure remain possible. Failure to find macOS caffeinate stops
+before the command. No deadline extension, API retry, new inference or automatic
+continuation is introduced. The recorded model calls did **not** use this guard.

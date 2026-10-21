@@ -39,6 +39,8 @@ jobs:
         run: python benchmarks/fresh-boundary-v1/check.py
       - name: Reproduce long-history whole-card budget stress study
         run: python benchmarks/long-trajectory-v1/check.py
+      - name: Reproduce independent frozen 384-card revalidation
+        run: python benchmarks/frozen384-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

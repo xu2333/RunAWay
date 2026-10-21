@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "platform": "macOS",
+  "new_assertions_during_command": 1,
+  "released_after_command": true,
+  "child_exit_code_preserved": 7,
+  "display_or_permanent_settings_changed": false,
+  "model_calls": 0,
+  "stderr": "RunAWay: temporary idle-sleep guard for this command; no permanent settings changed.\n",
+  "applied_to_recorded_model_calls": false,
+  "kind": "real_local_environment_test_not_model_evidence",
+  "wrapper_sha256": "ef04a1eec342b771d3cae2579598c172ade0ab97564efc42bc11452550476caa"
+}
