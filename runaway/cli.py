@@ -341,10 +341,10 @@ def parser():
         choice = choice_actions.add_parser(name)
         choice.add_argument('--questions', required=True, help='JSON list of id/scenario/options objects')
         choice.add_argument('--answer-format', choices=['label', 'text'], default='label')
+        choice.add_argument('--reader-mode', choices=['standard', 'coverage', 'scoped'], default='standard', help='experimental coverage checks internally; scoped reports scope and choice separately')
         if name == 'prepare':
             choice.add_argument('--card', required=True, help='Existing portable.json; never scanned automatically')
             choice.add_argument('--as-of', help='Optional YYYY-MM-DD bound for historical choices')
-            choice.add_argument('--reader-mode', choices=['standard', 'coverage'], default='standard', help='coverage adds an experimental applicability check; same memory and answer schema')
         else:
             choice.add_argument('--answer', required=True, help='Raw JSON from your chosen LLM')
     exp = commands.add_parser("export")
@@ -427,11 +427,11 @@ def main(argv=None):
                 output(dict(prepared, model_calls=0, answer_format=args.answer_format, reader_mode=args.reader_mode))
             else:
                 raw = read_choice_json(args.answer)
-                labels = choice_reader.decode_response(questions, raw, answer_format=args.answer_format)
+                labels = choice_reader.decode_response(questions, raw, answer_format=args.answer_format, reader_mode=args.reader_mode)
                 byid = {q['id']: q for q in questions}
                 output({'model_calls': 0, 'answer_format': args.answer_format, 'choices': {
                     qid: {'label': label, 'text': None if label == 'U' else byid[qid]['options'][label],
-                          'unknown': label == 'U', 'raw': raw[qid]} for qid, label in labels.items()}})
+                          'unknown': label == 'U', 'raw': raw[qid], **({'scope': raw[qid]['scope']} if args.reader_mode == 'scoped' else {})} for qid, label in labels.items()}})
         elif args.command == 'relayout':
             from . import support_extract
             private = read_choice_json(args.profile, label='source-support profile')

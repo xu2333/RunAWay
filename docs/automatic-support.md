@@ -83,3 +83,30 @@ Text mode asks for the action's original wording rather than its A/B/C position.
 Add `--reader-mode coverage` to `choices prepare`, or explicitly select “先核对适用条件（实验）” on `/choices.html`. The generic reader prefix checks whether the recorded conditions apply before choosing. It does not turn a decision observed at one number into a rule over a numeric range, or choose among conflicting branches when the question does not distinguish them. Exhaustive recorded branches that all choose the same action still support a known choice.
 
 Only the instruction prefix changes; the same memory, options, answer schema and exact decoder are used. There is no program rule that changes a predicted answer to `U`. `standard` remains the default. In the [expanded comparison and fixed repeats](../benchmarks/support-extraction-v1/COVERAGE.md), coverage improved Luna's full-history results but **did not reliably repair its short-card unknown judgments** and lost some previously correct known cases. Sol passed this synthetic full/card comparison; there was no Sol-standard control on the new scenes, so that is not evidence of a Sol-specific improvement. This is an explicit experimental option, not a fidelity guarantee.
+
+## Inspect scope separately from the choice
+
+The CLI has an explicit experimental `scoped` reader. It uses the same card but
+asks the model to return a `scope` and `choice` for each question:
+
+```sh
+runaway choices prepare --card my-taste/portable.json --questions questions.json --answer-format text --reader-mode scoped
+runaway choices import --questions questions.json --answer answer.json --answer-format text --reader-mode scoped
+```
+
+Use the same mode and answer format when importing. `determinate` means the
+recorded conditions identify one action; `ambiguous` means the explicitly
+exhaustive recorded possibilities select different actions; `uncovered` means
+necessary conditions or the domain are outside the records. If the unique known
+action is absent from the offered options, the scope can be determinate while
+the choice is `U`. The importer retains disagreements between the two fields;
+it does not use scope to override the model's choice. These are model reports,
+not verified diagnoses. The standard reader stays the default. See the
+[fresh synthetic end-to-end protocol](../benchmarks/fresh-boundary-v1/README.md).
+
+For a real decision, the browser's `/choices.html` can already save your rating
+and optional correction in a private trial file. If the material never contained
+that preference, say so in the correction; if a condition or exception was
+missed, describe that condition. The app does not automatically submit the file,
+learn a new preference from a prediction, or treat self-ratings as an independent
+fidelity score. Share only the sources and trial records you choose to disclose.
