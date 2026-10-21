@@ -35,6 +35,8 @@ jobs:
         run: python benchmarks/support-extraction-v1/check_coverage.py
       - name: Reproduce counterbalanced source-layout study
         run: python benchmarks/support-extraction-v1/check_layout.py
+      - name: Reproduce fresh synthetic end-to-end scope study
+        run: python benchmarks/fresh-boundary-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
@@ -55,6 +57,8 @@ jobs:
           runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text
           runaway choices import --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer "${{ github.workspace }}/examples/choice-answer.synthetic.json" --answer-format text
           runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text --reader-mode coverage
+          runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text --reader-mode scoped
+          runaway choices import --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer "${{ github.workspace }}/examples/choice-answer.scoped.synthetic.json" --answer-format text --reader-mode scoped
           runaway relayout tiny-demo/profile.private.json --layout rows --out tiny-rows
           runaway relayout tiny-rows/profile.private.json --layout paragraph --out tiny-restored
           python -c "from pathlib import Path; assert Path('tiny-demo/prompt.md').read_bytes() == Path('tiny-restored/prompt.md').read_bytes()"

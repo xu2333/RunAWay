@@ -67,7 +67,9 @@ matching offline acceptance record, local runtime agreement and existing human
 authorization. The exclusive service intent makes a proposal single use. Mock
 executions in tests exercise plumbing and failure accounting, not model quality.
 
-Results, execution bindings and offline reproduction instructions will be saved
-alongside this protocol. No real-person data is used. These small synthetic
+[Results and all draws](RESULTS.md), [four generated cards](CARDS.md), execution
+bindings and offline reproduction are saved alongside this protocol. Run
+`python benchmarks/fresh-boundary-v1/check.py` to audit the recorded evidence
+without service calls. No real-person data is used. These small synthetic
 samples do not establish real-person fidelity, cross-vendor compatibility,
 population confidence intervals or likelihood-based relative information gain.
