@@ -1,0 +1,149 @@
+{
+  "posthoc_offline_only": true,
+  "model_calls": 0,
+  "behavior_at_smaller_budgets_tested": false,
+  "budgets": [
+    768,
+    512,
+    400,
+    384,
+    320,
+    300
+  ],
+  "profiles": {
+    "t04a": {
+      "768": {
+        "status": "fits",
+        "characters": 442,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "37a6a92c954df69641a4d2f8bce7a4f4554e42d87b1773a9d7b4b84e13e8f143"
+      },
+      "512": {
+        "status": "fits",
+        "characters": 442,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "37a6a92c954df69641a4d2f8bce7a4f4554e42d87b1773a9d7b4b84e13e8f143"
+      },
+      "400": {
+        "status": "fits",
+        "characters": 397,
+        "dictionary_entries": 4,
+        "roundtrip_exact": true,
+        "prompt_sha256": "8ba2584a5a88ed0483d0cc6913130f1df68ba9aa10c98176a7501df84da2a8c7"
+      },
+      "384": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 393 > 384; no truncation"
+      },
+      "320": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 393 > 320; no truncation"
+      },
+      "300": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 393 > 300; no truncation"
+      }
+    },
+    "t11b": {
+      "768": {
+        "status": "fits",
+        "characters": 489,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "e95c3979005f722c3d02bb2ed6d22f9eefc3132bcc58dbf470cc2bed5d1e6267"
+      },
+      "512": {
+        "status": "fits",
+        "characters": 489,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "e95c3979005f722c3d02bb2ed6d22f9eefc3132bcc58dbf470cc2bed5d1e6267"
+      },
+      "400": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 441 > 400; no truncation"
+      },
+      "384": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 441 > 384; no truncation"
+      },
+      "320": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 441 > 320; no truncation"
+      },
+      "300": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 441 > 300; no truncation"
+      }
+    },
+    "t35c": {
+      "768": {
+        "status": "fits",
+        "characters": 458,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "8764bcd13c8e54b88505ec498bb27e80aa0d357a859d3e0f6e8f81150d960188"
+      },
+      "512": {
+        "status": "fits",
+        "characters": 458,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "8764bcd13c8e54b88505ec498bb27e80aa0d357a859d3e0f6e8f81150d960188"
+      },
+      "400": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 416 > 400; no truncation"
+      },
+      "384": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 416 > 384; no truncation"
+      },
+      "320": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 416 > 320; no truncation"
+      },
+      "300": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 416 > 300; no truncation"
+      }
+    },
+    "t92d": {
+      "768": {
+        "status": "fits",
+        "characters": 455,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "1baa64895dd9b85637a66206bdfa72192e335bfcb55ad92b9cf5445ae924be05"
+      },
+      "512": {
+        "status": "fits",
+        "characters": 455,
+        "dictionary_entries": 0,
+        "roundtrip_exact": true,
+        "prompt_sha256": "1baa64895dd9b85637a66206bdfa72192e335bfcb55ad92b9cf5445ae924be05"
+      },
+      "400": {
+        "status": "fits",
+        "characters": 398,
+        "dictionary_entries": 5,
+        "roundtrip_exact": true,
+        "prompt_sha256": "56d48178f917e79ace94c760421ac19e0f415da1aeb6d2595d456339732258da"
+      },
+      "384": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 398 > 384; no truncation"
+      },
+      "320": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 398 > 320; no truncation"
+      },
+      "300": {
+        "status": "rejected",
+        "error": "Complete prompt exceeds budget after lossless packing: 398 > 300; no truncation"
+      }
+    }
+  }
+}
