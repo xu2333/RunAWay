@@ -44,3 +44,21 @@ runaway distill --input selected-sources.json --answer answer.private.json \
 The public surface is `prompt.md` / `portable.json`. `profile.private.json` retains the source-support extraction format, full selected sources, private quotes and provenance. `summary.private.json` reports actual size and the unverified status. Review public prose before sharing: literal quote validation does not automatically remove sensitive details or certify inferred traits. The new source-support private record is distinct from the older claim-profile format used by `runaway profile`.
 
 The compiler first renders complete prose. If it exceeds the budget, repeated phrases can be replaced by a self-contained literal glossary; the complete glossary is counted, and expansion must reproduce the prose exactly. `expanded.private.md` keeps the plain version and `encoding.private.json` records the round-trip proof. If lossless packing still cannot fit, or an anchor is invalid, export fails explicitly; no truncated card is exported. Generation preserves the request, raw response and failure locally, makes no automatic retry, and never overwrites an existing directory. Offline import uses the same validator and renderer as generation. When possible branches all choose the same action, missing detail need not force `U`; this does not extend the action outside the union of observed conditions.
+
+## Replay a choice with any LLM
+
+Prefer a browser? Open **`/choices.html`** on the static app, paste `prompt.md`, add a scenario and 2–8 options, and copy the request to your chosen LLM. Paste its JSON back to inspect the choice and optionally download a private trial record with your rating/correction. Nothing is automatically submitted or saved; editing the memory/question invalidates the current prediction. This is an informal trial, not an independent fidelity measurement.
+
+Create a tool-free reader request from your card and explicitly supplied options:
+
+```sh
+runaway choices prepare --card tiny-demo/portable.json \
+  --questions examples/choice-questions.synthetic.json --answer-format text > choice-request.private.json
+# Give the prompt/schema to your chosen LLM, then save its raw JSON.
+runaway choices import --questions examples/choice-questions.synthetic.json \
+  --answer examples/choice-answer.synthetic.json --answer-format text
+```
+
+The included answer is fictional and pre-generated; it is not a new model call. Both commands run offline. Import returns the offered action text, its current display label and whether the model chose unknown (`U`); it never performs the action or corrects a decision from memory or a reference answer. Text mode requires an exact offered string, including punctuation. Duplicate JSON keys, unexpected/missing answers and near-matches are rejected. The default `label` mode remains available.
+
+Text mode asks for the action's original wording rather than its A/B/C position. It separates selecting a preferred action from tracking letters across reordered options. This can increase schema/answer tokens; it is not a smaller memory or an automatic faithfulness certificate. The [51-call comparison](../benchmarks/support-extraction-v1/READOUT-FORMATS.md) improved Luna's known-case results but lost some unknown cases; Luna still failed the strict reader gate. Scope inference, unknown handling and model limitations still apply.

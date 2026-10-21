@@ -16,18 +16,18 @@ cd RunAWay
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open **http://127.0.0.1:8080**. Visit **/timeline.html** to preserve changes and retractions, or **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts; **/theater.html** pairs them in 8 short scenes. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
+Open **http://127.0.0.1:8080**. Visit **/choices.html** to try your prompt on a concrete choice and download private feedback; **/timeline.html** to preserve changes and retractions, or **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts; **/theater.html** pairs them in 8 short scenes. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
 
 ## Make it yours
 
 Prefer the terminal? Python 3.9+, a logged-in Codex CLI and a model available to your account:
 
 ```sh
-python3 -m runaway build --input experience.txt --backend codex \
-  --model YOUR_MODEL --out my-profile
+python3 -m runaway distill --input experience.txt --backend codex \
+  --model YOUR_MODEL --budget-chars 768 --out my-taste
 ```
 
-Copy the resulting prompt into a chat, or install it as project instructions for Codex, Claude Code, OpenCode and other harnesses. You can revise the profile without regenerating everything.
+Copy the short card into a chat, or attach it to Codex, Claude Code, OpenCode and other harnesses. [One-call cards, no-account example & choice replay](docs/automatic-support.md). Use `build` for the longer editable-profile workflow.
 
 Browser feedback is shared only when you choose to submit it. CLI generation sends selected input to its backend. Fidelity to real personal choices remains unverified.
 

@@ -33,6 +33,8 @@ jobs:
         run: python benchmarks/support-extraction-v1/run.py check-observed
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
+      - name: Verify browser choice contract
+        run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel
         run: |
           python -m pip wheel . --no-deps --wheel-dir dist
@@ -46,3 +48,5 @@ jobs:
           runaway profile export demo/profile.private.json --out exported
           runaway profile compression-plan demo/profile.private.json --budget-chars 600
           python -m runaway distill --input "${{ github.workspace }}/examples/support-sources.synthetic.json" --answer "${{ github.workspace }}/examples/support-answer.synthetic.json" --out tiny-demo
+          runaway choices prepare --card tiny-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text
+          runaway choices import --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer "${{ github.workspace }}/examples/choice-answer.synthetic.json" --answer-format text
