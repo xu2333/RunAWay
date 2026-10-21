@@ -62,6 +62,17 @@ Source chunks default to 16,000 UTF-8 bytes. `--chunk-bytes` accepts 2,000–128
 
 For N chunks, `plan` reports at most 2N + 3 calls (2N + 2 for one chunk). It is a call count, not a price or token estimate. No automatic paid retries. To continue after a failed call, explicitly rerun the identical command with `--resume`; completed calls are reused. The failed call may already have incurred usage. A cached structurally invalid answer fails again rather than silently calling the model again; choose a new run after correcting the input or extraction code. Output/configuration changes are rejected. After a hard process kill, check that it has stopped before removing a stale `.build.lock`. Never edit cached results to hide a failed review.
 
+## Direct tiny-card experiment
+
+For a single selected trajectory, `distill` automatically extracts source-bound condition/action branches and renders a named card in one model call:
+
+```sh
+runaway distill --input examples/multi-episode.synthetic.json --backend codex \
+  --model YOUR_MODEL --budget-chars 768 --out tiny-taste
+```
+
+The whole card must fit; oversize output fails without truncation. For a no-account synthetic example, offline preparation/import, private evidence and harness attachment, see [the distill guide](docs/automatic-support.md). It is an experimental alternative to the reviewed `build` pipeline, not a fidelity certificate.
+
 ## Compress without silently dropping conditions
 
 For tighter compression of an existing profile, check every statement, scope, evidence basis, condition, exception and unknown separately:

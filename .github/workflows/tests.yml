@@ -29,6 +29,8 @@ jobs:
         run: python -m unittest discover -s tests -q
       - name: Browser logic and Python artifact interoperability
         run: node --test tests/*.test.mjs
+      - name: Reproduce source-support synthetic benchmark (no model calls)
+        run: python benchmarks/support-extraction-v1/run.py check-observed
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Build and install wheel
@@ -43,3 +45,4 @@ jobs:
           runaway profile checkout demo/profile.private.json --out editable
           runaway profile export demo/profile.private.json --out exported
           runaway profile compression-plan demo/profile.private.json --budget-chars 600
+          python -m runaway distill --input "${{ github.workspace }}/examples/support-sources.synthetic.json" --answer "${{ github.workspace }}/examples/support-answer.synthetic.json" --out tiny-demo

@@ -1,0 +1,46 @@
+# From selected trajectories to a portable taste card
+
+`distill` is a one-call experimental path that extracts choices **and their observed support** directly from role-labelled trajectories. It preserves private source quotes and renders a compact, named card without a hand-written scope declaration. Exact anchors, roles, chronological supersession references and the complete character budget are checked locally. These checks do not prove semantic completeness or human fidelity.
+
+```sh
+runaway distill --input selected-sources.json --backend codex \
+  --model YOUR_MODEL --budget-chars 768 --out my-taste
+runaway attach my-taste/portable.json --project /path/to/project --target codex,claude,opencode
+runaway doctor --project /path/to/project
+```
+
+The first command explicitly sends only the selected input to your logged-in Codex service and makes one model call. It never scans other chats. Use `runaway targets` for the other documented file adapters, including Antigravity and DeepSeek. File attachment is not proof that every harness/runtime loads the file or reproduces the choices equally well. `prompt.md` can also be pasted into another LLM directly.
+
+Try the complete import/export path without an account, using a real pre-generated answer from the synthetic test:
+
+```sh
+runaway distill --input examples/support-sources.synthetic.json \
+  --answer examples/support-answer.synthetic.json --out tiny-demo
+```
+
+This makes zero model calls and does not infer your preferences. The example was generated from a fictional trajectory by the model, not a hand-written scope declaration.
+
+Prefer role-labelled source JSON, using the existing source format:
+
+```json
+{"schema_version":1,"sources":[
+  {"id":"e1-context","episode_id":"e1","role":"user","text":"Automatic classification is familiar, about4%wrong, local-only and immediately reversible."},
+  {"id":"e1-suggestion","episode_id":"e1","role":"assistant","text":"I suggest checking each item."},
+  {"id":"e1-choice","episode_id":"e1","role":"user","text":"I choose automatic classification and restore mistakes."}
+]}
+```
+
+A plain `.txt`/`.md` is treated as a user-authored narrative. Do not paste mixed-speaker logs into that format: convert them to role-labelled JSON first. A résumé with no observed choices may yield only explicit unknowns. Biography or job prestige must not stand in for a preference.
+
+For another LLM or harness, prepare and import without model service calls:
+
+```sh
+runaway distill --input selected-sources.json --prepare > request.private.json
+# Give only that request's system/prompt/schema to your chosen LLM.
+runaway distill --input selected-sources.json --answer answer.private.json \
+  --budget-chars 768 --out my-taste
+```
+
+The public surface is `prompt.md` / `portable.json`. `profile.private.json` retains the source-support extraction format, full selected sources, private quotes and provenance. `summary.private.json` reports actual size and the unverified status. Review public prose before sharing: literal quote validation does not automatically remove sensitive details or certify inferred traits. The new source-support private record is distinct from the older claim-profile format used by `runaway profile`.
+
+The compiler first renders complete prose. If it exceeds the budget, repeated phrases can be replaced by a self-contained literal glossary; the complete glossary is counted, and expansion must reproduce the prose exactly. `expanded.private.md` keeps the plain version and `encoding.private.json` records the round-trip proof. If lossless packing still cannot fit, or an anchor is invalid, export fails explicitly; no truncated card is exported. Generation preserves the request, raw response and failure locally, makes no automatic retry, and never overwrites an existing directory. Offline import uses the same validator and renderer as generation. When possible branches all choose the same action, missing detail need not force `U`; this does not extend the action outside the union of observed conditions.
