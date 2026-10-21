@@ -1,0 +1,417 @@
+{
+  "synthetic_only": true,
+  "model_requested": "gpt-6-luna",
+  "actual_calls": 9,
+  "posthoc_selected_failures": true,
+  "focuses": {
+    "p69_scene-c6b7a19bf36d": {
+      "target": "p69",
+      "donor": "p38",
+      "case": {
+        "scene": "scene-c6b7a19bf36d",
+        "axis": "planning",
+        "kind": "matched",
+        "rule": "current",
+        "question": "新的科研日志：设计一个尚未验证的入口，三个方案均能完成，没有截止压力。小样当天可免费撤回，改动没有长期代价。",
+        "gold": {
+          "p17": "probe",
+          "p24": "talk",
+          "p38": "map",
+          "p52": "talk",
+          "p69": "probe",
+          "p83": "map"
+        },
+        "orders": [
+          {
+            "public": {
+              "id": "q-91b8be99ee9a",
+              "scenario": "新的科研日志：设计一个尚未验证的入口，三个方案均能完成，没有截止压力。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先做可用小样，再按效果细化",
+                "B": "先理清完整结构与依赖，再实施",
+                "C": "先访谈两位使用者，再动手"
+              }
+            },
+            "semantics": {
+              "A": "probe",
+              "B": "map",
+              "C": "talk"
+            }
+          },
+          {
+            "public": {
+              "id": "q-3ad0eee586da",
+              "scenario": "新的科研日志：设计一个尚未验证的入口，三个方案均能完成，没有截止压力。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先理清完整结构与依赖，再实施",
+                "B": "先访谈两位使用者，再动手",
+                "C": "先做可用小样，再按效果细化"
+              }
+            },
+            "semantics": {
+              "A": "map",
+              "B": "talk",
+              "C": "probe"
+            }
+          },
+          {
+            "public": {
+              "id": "q-27dee7a3fefe",
+              "scenario": "新的科研日志：设计一个尚未验证的入口，三个方案均能完成，没有截止压力。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先访谈两位使用者，再动手",
+                "B": "先做可用小样，再按效果细化",
+                "C": "先理清完整结构与依赖，再实施"
+              }
+            },
+            "semantics": {
+              "A": "talk",
+              "B": "probe",
+              "C": "map"
+            }
+          }
+        ]
+      },
+      "answers": {
+        "full": {
+          "q01": "A",
+          "q02": "C",
+          "q03": "B"
+        },
+        "card": {
+          "q01": "A",
+          "q02": "C",
+          "q03": "B"
+        },
+        "donor": {
+          "q01": "B",
+          "q02": "A",
+          "q03": "C"
+        }
+      },
+      "expected": {
+        "full": {
+          "gold_for_target": "probe",
+          "gold_for_source": "probe",
+          "observed": [
+            "probe",
+            "probe",
+            "probe"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "card": {
+          "gold_for_target": "probe",
+          "gold_for_source": "probe",
+          "observed": [
+            "probe",
+            "probe",
+            "probe"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "donor": {
+          "gold_for_target": "probe",
+          "gold_for_source": "map",
+          "observed": [
+            "map",
+            "map",
+            "map"
+          ],
+          "correct_for_target": false,
+          "correct_for_source": true,
+          "order_consistent": true
+        }
+      }
+    },
+    "p69_scene-cf6588b3a55c": {
+      "target": "p69",
+      "donor": "p17",
+      "case": {
+        "scene": "scene-cf6588b3a55c",
+        "axis": "evidence",
+        "kind": "matched",
+        "rule": "current",
+        "question": "新的模拟结果：只有初步线索，尚未独立复核，且不涉及他人的保密内容。所有人知道是探索性讨论，想法可撤回，不会据此作实际决策。",
+        "gold": {
+          "p17": "share",
+          "p24": "peer",
+          "p38": "check",
+          "p52": "check",
+          "p69": "peer",
+          "p83": "share"
+        },
+        "orders": [
+          {
+            "public": {
+              "id": "q-c1398485dd1b",
+              "scenario": "新的模拟结果：只有初步线索，尚未独立复核，且不涉及他人的保密内容。所有人知道是探索性讨论，想法可撤回，不会据此作实际决策。",
+              "options": {
+                "A": "先私下与一位同行讨论，再决定是否公开",
+                "B": "先取得相关人的明确许可，再考虑分享",
+                "C": "标明暂定先向小组分享，边讨论边验证",
+                "D": "先做独立复核，再向小组分享"
+              }
+            },
+            "semantics": {
+              "A": "peer",
+              "B": "consent",
+              "C": "share",
+              "D": "check"
+            }
+          },
+          {
+            "public": {
+              "id": "q-e336150cb785",
+              "scenario": "新的模拟结果：只有初步线索，尚未独立复核，且不涉及他人的保密内容。所有人知道是探索性讨论，想法可撤回，不会据此作实际决策。",
+              "options": {
+                "A": "先取得相关人的明确许可，再考虑分享",
+                "B": "标明暂定先向小组分享，边讨论边验证",
+                "C": "先做独立复核，再向小组分享",
+                "D": "先私下与一位同行讨论，再决定是否公开"
+              }
+            },
+            "semantics": {
+              "A": "consent",
+              "B": "share",
+              "C": "check",
+              "D": "peer"
+            }
+          },
+          {
+            "public": {
+              "id": "q-cd6eb49d3ac9",
+              "scenario": "新的模拟结果：只有初步线索，尚未独立复核，且不涉及他人的保密内容。所有人知道是探索性讨论，想法可撤回，不会据此作实际决策。",
+              "options": {
+                "A": "标明暂定先向小组分享，边讨论边验证",
+                "B": "先做独立复核，再向小组分享",
+                "C": "先私下与一位同行讨论，再决定是否公开",
+                "D": "先取得相关人的明确许可，再考虑分享"
+              }
+            },
+            "semantics": {
+              "A": "share",
+              "B": "check",
+              "C": "peer",
+              "D": "consent"
+            }
+          },
+          {
+            "public": {
+              "id": "q-04628c89f3e4",
+              "scenario": "新的模拟结果：只有初步线索，尚未独立复核，且不涉及他人的保密内容。所有人知道是探索性讨论，想法可撤回，不会据此作实际决策。",
+              "options": {
+                "A": "先做独立复核，再向小组分享",
+                "B": "先私下与一位同行讨论，再决定是否公开",
+                "C": "先取得相关人的明确许可，再考虑分享",
+                "D": "标明暂定先向小组分享，边讨论边验证"
+              }
+            },
+            "semantics": {
+              "A": "check",
+              "B": "peer",
+              "C": "consent",
+              "D": "share"
+            }
+          }
+        ]
+      },
+      "answers": {
+        "full": {
+          "q01": "A",
+          "q02": "D",
+          "q03": "C",
+          "q04": "B"
+        },
+        "card": {
+          "q01": "A",
+          "q02": "D",
+          "q03": "C",
+          "q04": "B"
+        },
+        "donor": {
+          "q01": "C",
+          "q02": "B",
+          "q03": "A",
+          "q04": "D"
+        }
+      },
+      "expected": {
+        "full": {
+          "gold_for_target": "peer",
+          "gold_for_source": "peer",
+          "observed": [
+            "peer",
+            "peer",
+            "peer",
+            "peer"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "card": {
+          "gold_for_target": "peer",
+          "gold_for_source": "peer",
+          "observed": [
+            "peer",
+            "peer",
+            "peer",
+            "peer"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "donor": {
+          "gold_for_target": "peer",
+          "gold_for_source": "share",
+          "observed": [
+            "share",
+            "share",
+            "share",
+            "share"
+          ],
+          "correct_for_target": false,
+          "correct_for_source": true,
+          "order_consistent": true
+        }
+      }
+    },
+    "p38_scene-c8f82322f374": {
+      "target": "p38",
+      "donor": "p69",
+      "case": {
+        "scene": "scene-c8f82322f374",
+        "axis": "planning",
+        "kind": "changed_condition",
+        "rule": "unknown",
+        "question": "这次的新情境：设计一个尚未验证的入口，三个方案均能完成，必须一小时内交付。小样当天可免费撤回，改动没有长期代价。",
+        "gold": {
+          "p17": "U",
+          "p24": "U",
+          "p38": "U",
+          "p52": "U",
+          "p69": "U",
+          "p83": "U"
+        },
+        "orders": [
+          {
+            "public": {
+              "id": "q-ee7b1aaf48aa",
+              "scenario": "这次的新情境：设计一个尚未验证的入口，三个方案均能完成，必须一小时内交付。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先理清完整结构与依赖，再实施",
+                "B": "先访谈两位使用者，再动手",
+                "C": "先做可用小样，再按效果细化"
+              }
+            },
+            "semantics": {
+              "A": "map",
+              "B": "talk",
+              "C": "probe"
+            }
+          },
+          {
+            "public": {
+              "id": "q-3cbf07b6f813",
+              "scenario": "这次的新情境：设计一个尚未验证的入口，三个方案均能完成，必须一小时内交付。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先访谈两位使用者，再动手",
+                "B": "先做可用小样，再按效果细化",
+                "C": "先理清完整结构与依赖，再实施"
+              }
+            },
+            "semantics": {
+              "A": "talk",
+              "B": "probe",
+              "C": "map"
+            }
+          },
+          {
+            "public": {
+              "id": "q-1439b7536310",
+              "scenario": "这次的新情境：设计一个尚未验证的入口，三个方案均能完成，必须一小时内交付。小样当天可免费撤回，改动没有长期代价。",
+              "options": {
+                "A": "先做可用小样，再按效果细化",
+                "B": "先理清完整结构与依赖，再实施",
+                "C": "先访谈两位使用者，再动手"
+              }
+            },
+            "semantics": {
+              "A": "probe",
+              "B": "map",
+              "C": "talk"
+            }
+          }
+        ]
+      },
+      "answers": {
+        "full": {
+          "q01": "U",
+          "q02": "U",
+          "q03": "U"
+        },
+        "card": {
+          "q01": "U",
+          "q02": "U",
+          "q03": "U"
+        },
+        "donor": {
+          "q01": "C",
+          "q02": "B",
+          "q03": "A"
+        }
+      },
+      "expected": {
+        "full": {
+          "gold_for_target": "U",
+          "gold_for_source": "U",
+          "observed": [
+            "U",
+            "U",
+            "U"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "card": {
+          "gold_for_target": "U",
+          "gold_for_source": "U",
+          "observed": [
+            "U",
+            "U",
+            "U"
+          ],
+          "correct_for_target": true,
+          "correct_for_source": true,
+          "order_consistent": true
+        },
+        "donor": {
+          "gold_for_target": "U",
+          "gold_for_source": "U",
+          "observed": [
+            "probe",
+            "probe",
+            "probe"
+          ],
+          "correct_for_target": false,
+          "correct_for_source": false,
+          "order_consistent": true
+        }
+      }
+    }
+  },
+  "limits": [
+    "Three selected prior failures, posthoc development diagnostic; not a new unbiased evaluation.",
+    "Shorter single-scene protocol plus independent model sample, not an isolated causal estimate.",
+    "Wrong donor on the unknown condition is nondiscriminating because allpolicies are unknown there.",
+    "Allfocused cards have zero dictionaries, so this does not estimate glossary effects.",
+    "Original78query Luna failure remains failed; focused recovery does not qualify overall Luna fidelity."
+  ]
+}

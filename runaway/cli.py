@@ -308,6 +308,14 @@ def parser():
             cmd.add_argument("--model", required=True)
         if name == "import":
             cmd.add_argument("--answer", required=True, help="JSON answer from any LLM, using the prepare prompt")
+    distill = commands.add_parser('distill', help='Extract observed support branches directly from selected trajectories')
+    distill.add_argument('--input', required=True, help='Role-labelled source JSON, or a user-authored narrative text')
+    distill.add_argument('--budget-chars', type=int, default=768)
+    distill.add_argument('--prepare', action='store_true', help='Print portable model request; zero calls')
+    distill.add_argument('--answer', help='Import an answer from any LLM; zero calls')
+    distill.add_argument('--backend', choices=['codex'])
+    distill.add_argument('--model')
+    distill.add_argument('--out', help='New private output directory')
     exp = commands.add_parser("export")
     exp.add_argument("card", help="Path to portable.json, detailed.portable.json or legacy card.json")
     exp.add_argument("--out", help="New UTF-8 prompt file; otherwise stdout")
@@ -379,6 +387,23 @@ def main(argv=None):
             provenance["extraction_prompt_sha256"] = digest(prompt)
             card, private = make_card(parse_answer(answer), source, args.kind, provenance)
             output(save_bundle(args.out, card, private))
+        elif args.command == 'distill':
+            from . import support_extract
+            sources = load_sources(args.input)
+            if args.prepare:
+                if args.answer or args.backend or args.model or args.out:
+                    raise ValueError('--prepare cannot be combined with import/generation/output flags')
+                output(dict(support_extract.make_request(sources, args.budget_chars), system=support_extract.SYSTEM))
+            elif args.answer:
+                if args.backend or args.model or not args.out:
+                    raise ValueError('Import requires --answer and --out, without backend/model')
+                files = support_extract.bind(json.loads(read(args.answer)), sources, args.budget_chars)
+                directory = save_private_bundle(args.out, files)
+                output(dict(files['summary.private.json'], directory=directory, model_calls=0))
+            else:
+                if args.backend != 'codex' or not args.model or not args.out:
+                    raise ValueError('Generation requires --backend codex --model MODEL --out DIR; or use --prepare/--answer')
+                output(support_extract.generate(sources, args.out, args.model, args.budget_chars))
         elif args.command in ("export", "attach"):
             card = validate_expression(json.loads(read(args.card)))
             if args.command == "attach":
