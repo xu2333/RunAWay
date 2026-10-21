@@ -1,5 +1,13 @@
 # Power-guarded 384-card validation
 
+[Results](RESULTS.md) · [All errors and missing cases](LOSSES.md) ·
+[Offline checker](check.py)
+
+**All 13 guarded calls completed. Contemporary full, card and independent repeat
+each passed all 160 planned cases (43 known, 117 unknown); no repeat disagreement.
+This is a finite consumed-synthetic pass, not real-person or population fidelity.
+The earlier 3-attempt sleep-interrupted run remains public and incomplete.**
+
 A separate fixed 13-call unit after local idle sleep interrupted the unguarded
 study at 3 attempts. Both earlier interrupted proposals remain closed. For this
 human continuation the combined cap is 16 physical calls (3 unguarded + 13 new),

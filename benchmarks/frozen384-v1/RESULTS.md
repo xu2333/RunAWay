@@ -20,7 +20,9 @@ means **unmeasured**, not stable. All ten later slots remained unstarted.
 
 `scripts/with_awake.py` now offers temporary macOS idle-sleep prevention for a new
 accepted proposal. It was not applied to any recorded model invocation. This
-proposal stays closed; no retry or automatic new study ran. A zero-model-call
+proposal stays closed; none of its slots was retried. A separately announced
+[guarded validation](../guarded384-v1/RESULTS.md) later ran under the verified
+wrapper, with its own frozen ceiling and all earlier failures retained. A zero-model-call
 [real macOS guard test](awake-guard-audit.json) verified a new idle-sleep assertion
 during a controlled child process, release after exit, and preservation of exit
 code 7. The offline checker binds this audit to the exact wrapper source hash.

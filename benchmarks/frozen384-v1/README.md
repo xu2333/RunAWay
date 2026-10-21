@@ -77,3 +77,7 @@ the command directly. It leaves display sleep and permanent power settings alone
 Manual sleep/lid closure remain possible. Failure to find macOS caffeinate stops
 before the command. No deadline extension, API retry, new inference or automatic
 continuation is introduced. The recorded model calls did **not** use this guard.
+
+A later [separately frozen guarded validation](../guarded384-v1/RESULTS.md)
+completed13calls and passed its finite synthetic gate. It does not complete this
+interrupted proposal or remove its failed call/unknown usage.
