@@ -7,7 +7,7 @@ import sys
 
 from . import __version__
 from .adapters import TARGETS, attach, detach, doctor
-from .card import KINDS, digest, make_card, parse_answer, render, validate_card
+from .card import KINDS, canonical, digest, make_card, parse_answer, render, validate_card
 from .generation import codex_generate, request
 from .profile import PROFILE_SCHEMA, export_profile, make_profile, profile_request, validate_profile
 from .portable import validate_expression, render_expression, make_expression
@@ -27,16 +27,16 @@ def read(path):
     return Path(path).read_text(encoding="utf-8")
 
 
-def read_choice_json(path):
+def read_choice_json(path, *, label='choice input'):
     def pairs(items):
         value = {}
         for key, item in items:
             if key in value:
-                raise ValueError('Duplicate JSON key in choice input: ' + key)
+                raise ValueError('Duplicate JSON key in ' + label + ': ' + key)
             value[key] = item
         return value
     def constant(value):
-        raise ValueError('Non-finite JSON number in choice input')
+        raise ValueError('Non-finite JSON number in ' + label)
     return json.loads(read(path), object_pairs_hook=pairs, parse_constant=constant)
 
 
@@ -324,11 +324,17 @@ def parser():
     distill = commands.add_parser('distill', help='Extract observed support branches directly from selected trajectories')
     distill.add_argument('--input', required=True, help='Role-labelled source JSON, or a user-authored narrative text')
     distill.add_argument('--budget-chars', type=int, default=768)
+    distill.add_argument('--layout', choices=['paragraph','rows'], default='paragraph', help='rows pairs each observed condition with its chosen action; experimental, same facts and budget')
     distill.add_argument('--prepare', action='store_true', help='Print portable model request; zero calls')
     distill.add_argument('--answer', help='Import an answer from any LLM; zero calls')
     distill.add_argument('--backend', choices=['codex'])
     distill.add_argument('--model')
     distill.add_argument('--out', help='New private output directory')
+    relayout = commands.add_parser('relayout', help='Re-export an existing source-support private profile with another layout; zero model calls')
+    relayout.add_argument('profile', help='Explicit profile.private.json from distill')
+    relayout.add_argument('--layout', choices=['paragraph','rows'], required=True)
+    relayout.add_argument('--budget-chars', type=int, default=768)
+    relayout.add_argument('--out', required=True, help='New private directory, never overwritten')
     choices = commands.add_parser('choices', help='Prepare a portable personal-choice request or import exact offered choices; no model calls')
     choice_actions = choices.add_subparsers(dest='choices_command', required=True)
     for name in ('prepare', 'import'):
@@ -426,6 +432,24 @@ def main(argv=None):
                 output({'model_calls': 0, 'answer_format': args.answer_format, 'choices': {
                     qid: {'label': label, 'text': None if label == 'U' else byid[qid]['options'][label],
                           'unknown': label == 'U', 'raw': raw[qid]} for qid, label in labels.items()}})
+        elif args.command == 'relayout':
+            from . import support_extract
+            private = read_choice_json(args.profile, label='source-support profile')
+            required = {'schema_version','artifact_type','status','sources','answer','source_sha256','provenance','validation','id'}
+            if (type(private) is not dict or not required <= set(private) or set(private)-required-{'render_layout'}
+                    or type(private['schema_version']) is not int or private['schema_version'] != 1
+                    or private['artifact_type'] != 'source_support_profile'):
+                raise ValueError('relayout requires a source-support profile.private.json from distill')
+            if 'render_layout' in private:
+                support_extract.layout_check(private['render_layout'])
+            if digest(canonical({key: value for key, value in private.items() if key != 'id'})) != private['id']:
+                raise ValueError('Private profile checksum differs; restore the original before re-exporting')
+            if digest(canonical(private['sources'])) != private['source_sha256']:
+                raise ValueError('Private source checksum differs')
+            files = support_extract.bind(private['answer'], private['sources'], args.budget_chars,
+                {'backend': 'offline_relayout', 'source_profile_id': private['id']}, layout=args.layout)
+            directory = save_private_bundle(args.out, files)
+            output(dict(files['summary.private.json'], directory=directory, model_calls=0, render_layout=args.layout))
         elif args.command == 'distill':
             from . import support_extract
             sources = load_sources(args.input)
@@ -436,13 +460,13 @@ def main(argv=None):
             elif args.answer:
                 if args.backend or args.model or not args.out:
                     raise ValueError('Import requires --answer and --out, without backend/model')
-                files = support_extract.bind(json.loads(read(args.answer)), sources, args.budget_chars)
+                files = support_extract.bind(json.loads(read(args.answer)), sources, args.budget_chars, layout=args.layout)
                 directory = save_private_bundle(args.out, files)
                 output(dict(files['summary.private.json'], directory=directory, model_calls=0))
             else:
                 if args.backend != 'codex' or not args.model or not args.out:
                     raise ValueError('Generation requires --backend codex --model MODEL --out DIR; or use --prepare/--answer')
-                output(support_extract.generate(sources, args.out, args.model, args.budget_chars))
+                output(support_extract.generate(sources, args.out, args.model, args.budget_chars, layout=args.layout))
         elif args.command in ("export", "attach"):
             card = validate_expression(json.loads(read(args.card)))
             if args.command == "attach":
