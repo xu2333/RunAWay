@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RunAWay · 分身试镜</title><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./choices.css">
+<script type="module" src="./choices.mjs"></script></head><body>
+<header><a class="brand" href="./">RunAWay<span>your taste, to go.</span></a><nav><a href="./">制作分身 ↗</a><button id="demo" class="quiet" disabled>试试虚构示例 ↗</button></nav></header>
+<main><section class="trial-intro"><div class="eyebrow">给口袋里的你，一次小小的试镜</div><h1>如果是我，<br>会怎么选？</h1><p>带上你的随身 prompt，给分身一道真实的选择题。<br>看看它认得哪些路况，又在哪里还不了解你。</p><span class="trial-stamp" aria-hidden="true">✿ 一题一张小票</span></section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<section class="trial-grid"><section class="panel">
+<div class="eyebrow">01 · 带上你的判断</div><h2>把路况说清楚</h2>
+<label for="memory">你的随身 prompt</label><textarea id="memory" rows="7" maxlength="100000" placeholder="粘贴制作好的完整 prompt。不要只写分身名字。"></textarea>
+<label class="file-button">读入 prompt.md / 文本<input id="memory-file" type="file" accept=".md,.txt"></label>
+<label for="scenario">这次遇到了什么？</label><textarea id="scenario" rows="4" maxlength="12000" placeholder="写下当时已知的条件、代价与限制，先不要透露真实选择。"></textarea>
+<label for="options">当时存在的选项（每行一个，2–8 个）</label><textarea id="options" rows="4" maxlength="12000" placeholder="例如：先做一个可以撤回的小样&#10;先把完整结构与依赖想清楚"></textarea>
+<button id="prepare" class="primary wide" disabled>装好这一题，借个脑袋 →</button><p class="small">这是一次日常试用。若要检验保真度，请用未参与提炼的真实经历，并在看预测前记录自己的答案。</p>
+</section><section class="panel">
+<div class="eyebrow">02 · 借个脑袋</div><h2>去你常用的 AI 那里</h2>
+<p>准备请求后，复制到一个全新对话。模型只看到随身 prompt 与题目，不会收到下面的评分和纠正。</p>
+<p class="callout">网站不调用模型。只有你粘贴并发送时，请求中的内容才会交给你选择的服务，费用由该服务决定。</p>
+<div id="request-panel" hidden><details><summary>查看完整请求</summary><textarea id="request" rows="7" readonly aria-label="完整选择请求"></textarea></details><button id="copy" class="primary wide">复制选择请求</button>
+<label for="answer">把 AI 的完整 JSON 带回来</label><textarea id="answer" rows="5" placeholder='例如：{"q1":"选项的完整原文"}；信息不够时应为 {"q1":"U"}'></textarea>
+<button id="import" class="primary wide">看看它走了哪条路 →</button></div>
+<p id="waiting" class="small">先在左边装好这一题。</p>
+<section id="result" class="trial-ticket" hidden><div class="eyebrow">这一题的小票</div><h3 id="outcome"></h3><p id="result-note" class="small"></p>
+<label for="rating">以你的判断，这次像你吗？</label><select id="rating"><option value="unrated">暂不评分</option><option value="fits">这次的判断像我</option><option value="misses">这次没理解我</option><option value="uncertain">我也还不确定</option></select>
+<label for="correction">希望它记住什么？（可选）</label><textarea id="correction" rows="3" maxlength="12000"></textarea>
+<button id="download">下载这次的私有记录</button><p class="small">含随身 prompt、题目、回答和你的评分。只下载到本机，不自动提交；分享前请检查私人信息。评分不等于独立验证。</p></section>
+</section></section><footer><span>材料只留在当前标签页，不自动保存或上传。修改题目会清空本次预测。</span><button id="clear" class="quiet">清空本页</button></footer>
+</main></body></html>

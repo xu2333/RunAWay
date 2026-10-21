@@ -27,6 +27,19 @@ def read(path):
     return Path(path).read_text(encoding="utf-8")
 
 
+def read_choice_json(path):
+    def pairs(items):
+        value = {}
+        for key, item in items:
+            if key in value:
+                raise ValueError('Duplicate JSON key in choice input: ' + key)
+            value[key] = item
+        return value
+    def constant(value):
+        raise ValueError('Non-finite JSON number in choice input')
+    return json.loads(read(path), object_pairs_hook=pairs, parse_constant=constant)
+
+
 def output(value):
     print(json.dumps(value, ensure_ascii=False, indent=2))
 
@@ -316,6 +329,17 @@ def parser():
     distill.add_argument('--backend', choices=['codex'])
     distill.add_argument('--model')
     distill.add_argument('--out', help='New private output directory')
+    choices = commands.add_parser('choices', help='Prepare a portable personal-choice request or import exact offered choices; no model calls')
+    choice_actions = choices.add_subparsers(dest='choices_command', required=True)
+    for name in ('prepare', 'import'):
+        choice = choice_actions.add_parser(name)
+        choice.add_argument('--questions', required=True, help='JSON list of id/scenario/options objects')
+        choice.add_argument('--answer-format', choices=['label', 'text'], default='label')
+        if name == 'prepare':
+            choice.add_argument('--card', required=True, help='Existing portable.json; never scanned automatically')
+            choice.add_argument('--as-of', help='Optional YYYY-MM-DD bound for historical choices')
+        else:
+            choice.add_argument('--answer', required=True, help='Raw JSON from your chosen LLM')
     exp = commands.add_parser("export")
     exp.add_argument("card", help="Path to portable.json, detailed.portable.json or legacy card.json")
     exp.add_argument("--out", help="New UTF-8 prompt file; otherwise stdout")
@@ -387,6 +411,20 @@ def main(argv=None):
             provenance["extraction_prompt_sha256"] = digest(prompt)
             card, private = make_card(parse_answer(answer), source, args.kind, provenance)
             output(save_bundle(args.out, card, private))
+        elif args.command == 'choices':
+            from . import choice_reader
+            questions = read_choice_json(args.questions)
+            if args.choices_command == 'prepare':
+                memory = render_expression(validate_expression(json.loads(read(args.card))))
+                prepared = choice_reader.make_request(memory, questions, as_of=args.as_of, answer_format=args.answer_format)
+                output(dict(prepared, model_calls=0, answer_format=args.answer_format))
+            else:
+                raw = read_choice_json(args.answer)
+                labels = choice_reader.decode_response(questions, raw, answer_format=args.answer_format)
+                byid = {q['id']: q for q in questions}
+                output({'model_calls': 0, 'answer_format': args.answer_format, 'choices': {
+                    qid: {'label': label, 'text': None if label == 'U' else byid[qid]['options'][label],
+                          'unknown': label == 'U', 'raw': raw[qid]} for qid, label in labels.items()}})
         elif args.command == 'distill':
             from . import support_extract
             sources = load_sources(args.input)
