@@ -1,0 +1,16 @@
+{
+  "kind": "real_local_environment_observation_not_synthetic_behavior",
+  "source": "Read-only pmset -g log, filtered to sleep/wake events only; unrelated application records excluded",
+  "timezone": "America/Los_Angeles",
+  "failed_call_intent_utc": "2026-10-21T22:45:20.918637+00:00",
+  "idle_sleep_local": "2026-10-21T15:45:28-07:00",
+  "wake_local": "2026-10-21T16:00:21-07:00",
+  "sleep_interval_wall_seconds": 893,
+  "failure_active_elapsed_seconds": 180.011,
+  "failure_wall_elapsed_seconds": 1070.251,
+  "usage": null,
+  "inference": "Host idle sleep overlapped this invocation and accounts for nearly all excess wall time. This does not prove absence of an upstream stall; the interrupted run is not a model-quality measurement.",
+  "mitigation": "scripts/with_awake.py uses caffeinate -i only for the wrapped command lifetime on macOS. No permanent settings, deadline changes or automatic retries. Manual sleep/lid closure are not prevented.",
+  "mitigation_applied_to_recorded_model_calls": false,
+  "additional_model_calls": 0
+}
