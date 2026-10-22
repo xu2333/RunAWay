@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "s1",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "仅玩具灯台。状态只有有人、无人，做法为亮灯或熄灯。没有承诺任何稳定准则。"
+    },
+    {
+      "id": "s2",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "无人时我选熄灯。"
+    }
+  ]
+}

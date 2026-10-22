@@ -29,6 +29,8 @@ python3 -m runaway distill --input experience.txt --backend codex \
 
 Copy the short card into a chat, or attach it to Codex, Claude Code, OpenCode and other harnesses. [One-call cards, no-account example & choice replay](docs/automatic-support.md). Use `build` for the longer editable-profile workflow.
 
+Have explicit finite decision constraints? Try the experimental [`--format constraints-v2`](docs/source-constraints.md).
+
 Browser feedback is shared only when you choose to submit it. CLI generation sends selected input to its backend. Fidelity to real personal choices remains unverified.
 
 [Real-scenario results & limits](REAL-SCENARIO-PILOT.md) · [Temporal memory route](TEMPORAL-MEMORY.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)

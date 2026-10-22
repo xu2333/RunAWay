@@ -1,5 +1,9 @@
 # From selected trajectories to a portable taste card
 
+For explicit finite source constraints, try the opt-in
+[`--format constraints-v2` path](source-constraints.md). The default below
+continues to preserve observed support without requiring a finite rule family.
+
 `distill` is a one-call experimental path that extracts choices **and their observed support** directly from role-labelled trajectories. It preserves private source quotes and renders a compact, named card without a hand-written scope declaration. Exact anchors, roles, chronological supersession references and the complete character budget are checked locally. These checks do not prove semantic completeness or human fidelity.
 
 ```sh
@@ -111,7 +115,7 @@ missed, describe that condition. The app does not automatically submit the file,
 learn a new preference from a prediction, or treat self-ratings as an independent
 fidelity score. Share only the sources and trial records you choose to disclose.
 
-## Current standalone constraint gap
+## Earlier standalone constraint gap
 
 A source can contain explicit constraints that determine choices never directly
 observed. In the latest six-person synthetic ablation, full histories scored
@@ -122,3 +126,8 @@ See the [complete removal results](../benchmarks/standalone-latent-v1/RESULTS.md
 and [next contract design](../benchmarks/standalone-latent-v1/NEXT-CONTRACT.md).
 No extractor/reader default was changed to fit those outcomes, and real-person
 fidelity remains unverified.
+
+The later explicit v2 contract recovered this kind of omission on a new bounded
+synthetic corpus. It is now available as an opt-in CLI format; see the
+[results and limits](../benchmarks/source-constraints-v2/README.md). This does not
+change the v1 results above or establish general real-person fidelity.
