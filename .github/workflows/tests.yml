@@ -49,6 +49,8 @@ jobs:
         run: python benchmarks/guarded384-v1/check.py
       - name: Reproduce new-person latent-rule transfer and uncertainty
         run: python benchmarks/latent-transfer-v1/check.py
+      - name: Reproduce standalone decoder-removal ablation
+        run: python benchmarks/standalone-latent-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

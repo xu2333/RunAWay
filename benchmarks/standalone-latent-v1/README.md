@@ -1,12 +1,19 @@
 # Removing the shared decoder: standalone ablation
 
+[Results](RESULTS.md) · [Every actual error](LOSSES.md) ·
+[Next contract design, not implemented](NEXT-CONTRACT.md)
+
+**All 19 calls completed. Full history remains 102/102, but unchanged standalone
+cards and their independent donor reads are 80/102. All 22 losses are known choices
+answered U; all 47 unknowns remain correct. Standalone fidelity is not solved.**
+
 A new, separately frozen 19-call ablation after the completed
 [31-call shared-decoder study](../latent-transfer-v1/RESULTS.md). The old proposal
 stays closed; no answer, failed slot or unused balance is reused. The combined
 cap explicitly announced for this human continuation is50physical calls.
 
 All six existing 296–387-character cards are kept byte-identical. The new request
-removes exactly the619-character decoder prefix from **every** reader arm. Every
+removes exactly the 619-character decoder prefix from **every** reader arm. Every
 other field, source history, question, option order, gold label, model request,
 active timeout and generic absent-option instruction is unchanged. Full histories
 still contain their original user-stated family definitions; cards receive no
@@ -19,19 +26,19 @@ paths were exercised. The corpus is consumed and this is an exploratory sequenti
 ablation, not a fresh holdout or randomized causal effect. Sampling/service drift
 is not eliminated. No model is asked to re-encode or repair the cards.
 
-The fixed matrix is sharednone1, contemporaryfull6, own6 and wrong-person6.
+The fixed matrix is shared none1, contemporary full6, own6 and wrong-person6.
 Two interleaved full/own waves cover all six people before wrong-person donor
-repeats. Nineteen physical calls yield13unique inputs if all complete; wrong-person
+repeats. Nineteen physical calls yield 13 unique inputs if all complete; wrong-person
 reads are new executions of donor-own requests, not cached answers.
 
-All102person/scene cases remain planned:55known and47unknown, with43personally
-discriminating knowns and12family invariants. The latter12are not free public
-knowledge in this condition. Earlier no-history59/102reference does not apply as
+All 102 person/scene cases remain planned: 55 known and 47 unknown, with 43 personally
+discriminating knowns and 12 family invariants. The latter 12 are not free public
+knowledge in this condition. Earlier no-history 59/102 reference does not apply as
 a decoder/accuracy ceiling after removal. Every option rotation must be correct.
 
-Contemporaryfull qualifies only102/102,missing0 and personal-known(full-none)/43
+Contemporary full qualifies only at 102/102 with no missing outputs and personal-known(full-none)/43
 >=.25. Standalone retention is interpretable only with this control. The strict
-standalone gate also requires own and donor-repeat102/102; identity specificity
+standalone gate also requires own and donor-repeat 102/102; identity specificity
 requires a wrong-target personal-known drop. Missing cases, paired losses and
 independent repeated-answer changes are retained. No cherry-picking old controls.
 

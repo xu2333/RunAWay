@@ -4,8 +4,8 @@
 [Exact shared decoder](CODEBOOK.md) · [Every actual error](LOSSES.md)
 
 **31/31 calls completed. Full history, own cards and independent donor-card
-reads each score102/102. Equal-character raw tails score74/102; wrong-person
-cards score61/102 against the target. All14person-dependent known cases in
+reads each score 102/102. Equal-character raw tails score 74/102; wrong-person
+cards score 61/102 against the target. All 14 person-dependent known cases in
 unseen combinations pass. These results require the shared decoder below.**
 
 This moves beyond recovery of six explicitly recorded latest choices. Six new
@@ -100,11 +100,16 @@ plumbing only. After outcomes this corpus is consumed: it does not establish hum
 fidelity, population generalization, cross-vendor/runtime-harness portability,
 likelihood information gain, open-ended taste induction or net end-to-end savings.
 
-The observed no-memory response scored63/102, above the59/102 contract-conforming
+The observed no-memory response scored 63/102, above the 59/102 contract-conforming
 reference, by guessing one underdetermined case and matching five profiles. That
 reference is not an accuracy ceiling. See the labelled posthoc, zero-call
 protocol diagnostic in RESULTS.md; primary gates use the actual response.
 
-The next unmeasured question is standalone portability without the619-character
+The next unmeasured question is standalone portability without the 619-character
 family decoder. The family is an experimental assumption, not a product trait
 taxonomy or a claim that all people belong to eight types.
+
+**The removal ablation is now complete:** without the shared decoder, the same
+cards score 80/102 against full 102/102, losing 22 known conclusions as abstentions.
+The conditional 102/102must not be presented as standalone fidelity.
+[Standalone results and diagnosis](../standalone-latent-v1/RESULTS.md).

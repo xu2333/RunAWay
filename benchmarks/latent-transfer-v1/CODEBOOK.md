@@ -1,7 +1,7 @@
 # Exact shared decoder for this controlled benchmark
 
 This is public task context shared by all reader arms, not a personal profile.
-Its619Unicode characters are additional to the personal card and other standard
+Its 619 Unicode characters are additional to the personal card and other standard
 request/schema text. It is not a production personality taxonomy, pretrained
 shared knowledge, or evidence of standalone fidelity without this contract.
 

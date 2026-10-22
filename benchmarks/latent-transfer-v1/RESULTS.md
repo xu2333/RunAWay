@@ -4,6 +4,10 @@ Fixed result: **complete**. 31/31 physical executions; 31 responses completed; 0
 
 Frozen implementation `4457e948e9e6fd4e72d81cdbeb88730a9a944b26`; proposal `6e44ba49faef73af58b9e0851ec9e34e0bd62ae4049099f804c97e24b37d7de4`. Six new fictional source histories; after these outcomes this corpus is consumed. No re-extraction, repair, sample removal or additional call was selected.
 
+**Later standalone removal check: the same six cards fall to 80/102 while
+contemporary full remains 102/102. The 102/102below is conditional on the shared
+decoder, not standalone fidelity.** [Removal results](../standalone-latent-v1/RESULTS.md).
+
 ## Qualification before attribution
 
 ```json
@@ -181,13 +185,13 @@ No human trajectories, PRISM data or private user feedback were sent. This contr
 
 ## No-memory protocol diagnostic (posthoc, offline only)
 
-A decoder that obeys the no-history uncertainty rule scores59/102 on this pool;
+A decoder that obeys the no-history uncertainty rule scores 59/102 on this pool;
 this is a **contract-conforming reference, not an accuracy upper bound**. The
 frozen proposal's phrase "expected ceiling" was imprecise; data and gates were
 not changed to repair that wording. Lucky source-free guesses can score higher
 against person-conditioned gold while violating the public uncertainty contract.
 
-Actual none scores63/102 and gets
+Actual none scores 63/102 and gets
 5/43 personal-known cases
 right. An offline diagnostic added after observing the baseline checks that shared
 response against all-eight-rule gold: 16/17 scenes
