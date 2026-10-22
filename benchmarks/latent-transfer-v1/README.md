@@ -1,5 +1,13 @@
 # New people and identifiable rule transfer
 
+[Recorded results](RESULTS.md) · [Complete cards](CARDS.md) ·
+[Exact shared decoder](CODEBOOK.md) · [Every actual error](LOSSES.md)
+
+**31/31 calls completed. Full history, own cards and independent donor-card
+reads each score102/102. Equal-character raw tails score74/102; wrong-person
+cards score61/102 against the target. All14person-dependent known cases in
+unseen combinations pass. These results require the shared decoder below.**
+
 This moves beyond recovery of six explicitly recorded latest choices. Six new
 fictional people each provide three effective decisions, with obsolete user
 choices, unendorsed assistant alternatives and tool records kept distinct. Five
@@ -91,3 +99,12 @@ stalls remain possible. The 31-call cap is not a token/money cap. Mock tests ver
 plumbing only. After outcomes this corpus is consumed: it does not establish human
 fidelity, population generalization, cross-vendor/runtime-harness portability,
 likelihood information gain, open-ended taste induction or net end-to-end savings.
+
+The observed no-memory response scored63/102, above the59/102 contract-conforming
+reference, by guessing one underdetermined case and matching five profiles. That
+reference is not an accuracy ceiling. See the labelled posthoc, zero-call
+protocol diagnostic in RESULTS.md; primary gates use the actual response.
+
+The next unmeasured question is standalone portability without the619-character
+family decoder. The family is an experimental assumption, not a product trait
+taxonomy or a claim that all people belong to eight types.
