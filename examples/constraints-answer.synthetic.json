@@ -1,0 +1,58 @@
+{
+  "version": "source_constraints_v2",
+  "name": "灯团",
+  "tagline": "先记住这一回",
+  "scope": {
+    "id": "lamp",
+    "text": "仅玩具灯台。",
+    "evidence": [
+      {
+        "source_id": "s1",
+        "quote": "仅玩具灯台。"
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "presence",
+      "values": [
+        "有人",
+        "无人"
+      ],
+      "evidence": [
+        {
+          "source_id": "s1",
+          "quote": "状态只有有人、无人"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    "熄灯",
+    "亮灯"
+  ],
+  "family": null,
+  "observations": [
+    {
+      "id": "o1",
+      "values": [
+        {
+          "feature": "presence",
+          "value": "无人"
+        }
+      ],
+      "choice": "熄灯",
+      "decision": {
+        "source_id": "s2",
+        "quote": "无人时我选熄灯。"
+      },
+      "contexts": [
+        {
+          "source_id": "s1",
+          "quote": "仅玩具灯台。"
+        }
+      ],
+      "supersedes": []
+    }
+  ]
+}

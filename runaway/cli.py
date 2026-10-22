@@ -323,6 +323,8 @@ def parser():
             cmd.add_argument("--answer", required=True, help="JSON answer from any LLM, using the prepare prompt")
     distill = commands.add_parser('distill', help='Extract observed support branches directly from selected trajectories')
     distill.add_argument('--input', required=True, help='Role-labelled source JSON, or a user-authored narrative text')
+    distill.add_argument('--format', choices=['support-v1', 'constraints-v2'], default='support-v1',
+                         help='constraints-v2: opt-in finite source constraints; requires explicit feature values and observed choices')
     distill.add_argument('--budget-chars', type=int, default=768)
     distill.add_argument('--layout', choices=['paragraph','rows'], default='paragraph', help='rows pairs each observed condition with its chosen action; experimental, same facts and budget')
     distill.add_argument('--prepare', action='store_true', help='Print portable model request; zero calls')
@@ -452,21 +454,32 @@ def main(argv=None):
             output(dict(files['summary.private.json'], directory=directory, model_calls=0, render_layout=args.layout))
         elif args.command == 'distill':
             from . import support_extract
-            sources = load_sources(args.input)
+            extractor = support_extract
+            options = {'layout': args.layout}
+            if args.format == 'constraints-v2':
+                from . import constraint_extract
+                if args.layout != 'paragraph':
+                    raise ValueError('constraints-v2 uses its fixed renderer; --layout rows is for support-v1')
+                extractor, options = constraint_extract, {}
+            sources = (read_choice_json(args.input, label='constraint sources')
+                       if args.format == 'constraints-v2' and Path(args.input).suffix.lower() == '.json'
+                       else load_sources(args.input))
             if args.prepare:
                 if args.answer or args.backend or args.model or args.out:
                     raise ValueError('--prepare cannot be combined with import/generation/output flags')
-                output(dict(support_extract.make_request(sources, args.budget_chars), system=support_extract.SYSTEM))
+                output(dict(extractor.make_request(sources, args.budget_chars), system=extractor.SYSTEM))
             elif args.answer:
                 if args.backend or args.model or not args.out:
                     raise ValueError('Import requires --answer and --out, without backend/model')
-                files = support_extract.bind(json.loads(read(args.answer)), sources, args.budget_chars, layout=args.layout)
+                answer = (read_choice_json(args.answer, label='constraint answer')
+                          if args.format == 'constraints-v2' else json.loads(read(args.answer)))
+                files = extractor.bind(answer, sources, args.budget_chars, **options)
                 directory = save_private_bundle(args.out, files)
                 output(dict(files['summary.private.json'], directory=directory, model_calls=0))
             else:
                 if args.backend != 'codex' or not args.model or not args.out:
                     raise ValueError('Generation requires --backend codex --model MODEL --out DIR; or use --prepare/--answer')
-                output(support_extract.generate(sources, args.out, args.model, args.budget_chars, layout=args.layout))
+                output(extractor.generate(sources, args.out, args.model, args.budget_chars, **options))
         elif args.command in ("export", "attach"):
             card = validate_expression(json.loads(read(args.card)))
             if args.command == "attach":
