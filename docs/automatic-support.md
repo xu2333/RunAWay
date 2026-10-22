@@ -110,3 +110,15 @@ that preference, say so in the correction; if a condition or exception was
 missed, describe that condition. The app does not automatically submit the file,
 learn a new preference from a prediction, or treat self-ratings as an independent
 fidelity score. Share only the sources and trial records you choose to disclose.
+
+## Current standalone constraint gap
+
+A source can contain explicit constraints that determine choices never directly
+observed. In the latest six-person synthetic ablation, full histories scored
+102/102 without an added decoder, while the same short cards scored 80/102:
+22 known conclusions became unknown. With an extra 619-character shared decoder,
+the cards had scored 102/102. The conditional pass is not standalone portability.
+See the [complete removal results](../benchmarks/standalone-latent-v1/RESULTS.md)
+and [next contract design](../benchmarks/standalone-latent-v1/NEXT-CONTRACT.md).
+No extractor/reader default was changed to fit those outcomes, and real-person
+fidelity remains unverified.
