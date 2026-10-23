@@ -87,3 +87,6 @@ jobs:
           runaway distill --format constraints-v2 --input "${{ github.workspace }}/examples/constraints-sources.synthetic.json" --answer "${{ github.workspace }}/examples/constraints-answer.synthetic.json" --budget-chars 512 --out constraints-demo
           runaway export constraints-demo/portable.json
           runaway choices prepare --card constraints-demo/portable.json --questions "${{ github.workspace }}/examples/constraints-questions.synthetic.json" --answer-format text
+          runaway distill --format grouped-v1 --input "${{ github.workspace }}/examples/grouped-sources.synthetic.json" --answer "${{ github.workspace }}/examples/grouped-answer.synthetic.json" --budget-chars 512 --out grouped-demo
+          runaway export grouped-demo/portable.json
+          runaway choices prepare --card grouped-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text

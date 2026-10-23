@@ -4,6 +4,11 @@ For explicit finite source constraints, try the opt-in
 [`--format constraints-v2` path](source-constraints.md). The default below
 continues to preserve observed support without requiring a finite rule family.
 
+For an experimental shared-scope representation with explicit priorities and
+source anchors, see [`--format grouped-v1`](grouped-support.md). It supports
+zero-call prepare/import/export; model generation yield and fidelity are not
+yet measured. The default below remains `support-v1`.
+
 `distill` is a one-call experimental path that extracts choices **and their observed support** directly from role-labelled trajectories. It preserves private source quotes and renders a compact, named card without a hand-written scope declaration. Exact anchors, roles, chronological supersession references and the complete character budget are checked locally. These checks do not prove semantic completeness or human fidelity.
 
 ```sh

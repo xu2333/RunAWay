@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "s1",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "只讨论会议室的玩具灯，仅本地调节且能完整恢复；电量充足时可以照常工作。"
+    },
+    {
+      "id": "s2",
+      "episode_id": "old",
+      "role": "user",
+      "text": "之前我要求会议室无人时开灯；另一件事：熟悉背景的内部同组草稿，先列问题。"
+    },
+    {
+      "id": "s3",
+      "episode_id": "lamp",
+      "role": "assistant",
+      "text": "我建议关灯。"
+    },
+    {
+      "id": "s4",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "会议室无人且电量充足时，现在改成关灯，旧选择作废；只改玩具灯，草稿安排不变。"
+    },
+    {
+      "id": "s5",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "如果电量低，先移去充电，不继续照明。"
+    },
+    {
+      "id": "s6",
+      "episode_id": "lamp",
+      "role": "user",
+      "text": "如果过热，等降温最优先，先不充电。"
+    },
+    {
+      "id": "s7",
+      "episode_id": "draft",
+      "role": "user",
+      "text": "草稿范围是内部同组、彼此熟悉背景，不是陌生作者的公开评审。"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "抱着小电池的团子",
+  "tagline": "先降温，别把灯规套到稿子上。",
+  "groups": [
+    {
+      "scope": "会议室玩具灯，仅本地调节且可完整恢复",
+      "contexts": [
+        {
+          "source_id": "s1",
+          "quote": "只讨论会议室的玩具灯，仅本地调节且能完整恢复；电量充足时可以照常工作。"
+        }
+      ],
+      "rules": [
+        {
+          "when": "无人且电量充足",
+          "choose": "关灯",
+          "priority": 0,
+          "decisions": [
+            {
+              "source_id": "s4",
+              "quote": "会议室无人且电量充足时，现在改成关灯，旧选择作废；只改玩具灯，草稿安排不变。"
+            }
+          ],
+          "contexts": [
+            {
+              "source_id": "s1",
+              "quote": "只讨论会议室的玩具灯，仅本地调节且能完整恢复；电量充足时可以照常工作。"
+            }
+          ],
+          "supersedes": [
+            "s2"
+          ]
+        },
+        {
+          "when": "电量低",
+          "choose": "移去充电",
+          "priority": 5,
+          "decisions": [
+            {
+              "source_id": "s5",
+              "quote": "如果电量低，先移去充电，不继续照明。"
+            }
+          ],
+          "contexts": [
+            {
+              "source_id": "s1",
+              "quote": "只讨论会议室的玩具灯，仅本地调节且能完整恢复；电量充足时可以照常工作。"
+            }
+          ],
+          "supersedes": []
+        },
+        {
+          "when": "过热",
+          "choose": "等降温",
+          "priority": 9,
+          "decisions": [
+            {
+              "source_id": "s6",
+              "quote": "如果过热，等降温最优先，先不充电。"
+            }
+          ],
+          "contexts": [
+            {
+              "source_id": "s1",
+              "quote": "只讨论会议室的玩具灯，仅本地调节且能完整恢复；电量充足时可以照常工作。"
+            }
+          ],
+          "supersedes": []
+        }
+      ]
+    },
+    {
+      "scope": "熟悉背景的内部同组草稿",
+      "contexts": [
+        {
+          "source_id": "s7",
+          "quote": "草稿范围是内部同组、彼此熟悉背景，不是陌生作者的公开评审。"
+        }
+      ],
+      "rules": [
+        {
+          "when": "反馈文字",
+          "choose": "先列问题",
+          "priority": 0,
+          "decisions": [
+            {
+              "source_id": "s2",
+              "quote": "之前我要求会议室无人时开灯；另一件事：熟悉背景的内部同组草稿，先列问题。"
+            }
+          ],
+          "contexts": [
+            {
+              "source_id": "s7",
+              "quote": "草稿范围是内部同组、彼此熟悉背景，不是陌生作者的公开评审。"
+            }
+          ],
+          "supersedes": []
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "其他灯具、草稿受众与未记录条件未知。"
+  ]
+}
