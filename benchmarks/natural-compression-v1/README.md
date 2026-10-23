@@ -117,3 +117,9 @@ here. Product defaults were not changed from these outcomes.
 [Historical controls](../natural-controls-v1/README.md)
 · [Default extraction workflow](../../docs/automatic-support.md)
 · [Different, finite-schema v2 study](../source-constraints-v2/README.md)
+
+A subsequent [new heterogeneous-bank comparison](../heterogeneous-frontier-v1/README.md)
+found9/12one-shot candidates over budget. Its three valid768cards read60/60
+observed cells correctly, but no budget passed all four profiles. The earlier
+56/56result above remains bounded to its own sources and does not establish
+reliable384/512/768-card generation on longer, denser traces.

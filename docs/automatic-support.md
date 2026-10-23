@@ -146,3 +146,12 @@ for equal-character source tails. Fixed wrong-person cards scored 30/56 against
 the target and 56/56 against their actual donors. These are consumed fictional
 trajectories with historical full/no-memory controls, one requested model and
 no real-person or cross-harness fidelity claim. No product default was changed.
+
+A new [heterogeneous budget-frontier study](../benchmarks/heterogeneous-frontier-v1/README.md)
+exposes the default path's whole-budget reliability limit:384/512-character
+extractions yielded0/4 valid cards each;768yielded3/4. The three valid cards
+read all60observed cells correctly, but20planned cells stayed missing, so no
+budget passed the four-profile gate. All9rejections were over-budget;27dependent
+reader slots were skipped. This does not show zero reader accuracy at small
+budgets or justify dropping the missing fourth profile. See the exact lengths,
+cost and source/scoring limits before choosing a budget.
