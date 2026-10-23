@@ -46,3 +46,7 @@ fidelity remain unverified. No defaults changed based on these results.
 
 See [usage and limitations](../../docs/source-constraints.md) and the
 [earlier decoder-removal ablation](../standalone-latent-v1/RESULTS.md).
+
+A separate [naturalistic source-control study](../natural-controls-v1/README.md)
+qualified full histories on 56/56 cells without a finite-family promise. It has
+not yet tested compact cards and does not extend the v2 result above.

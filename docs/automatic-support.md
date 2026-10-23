@@ -131,3 +131,10 @@ The later explicit v2 contract recovered this kind of omission on a new bounded
 synthetic corpus. It is now available as an opt-in CLI format; see the
 [results and limits](../benchmarks/source-constraints-v2/README.md). This does not
 change the v1 results above or establish general real-person fidelity.
+
+In a separate [four-profile naturalistic synthetic control](../benchmarks/natural-controls-v1/README.md),
+full histories preserved all 56 planned choices/unknowns while no memory scored
+18/56. Those sources use ordinary scoped rules, continuous numeric ranges and
+updates without an exhaustive finite-family promise. No compact card was tested
+in that phase; full-history qualification is a prerequisite for measuring later
+compression loss, not a new fidelity claim for `distill`.
