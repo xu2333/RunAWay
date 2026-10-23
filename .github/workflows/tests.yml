@@ -53,6 +53,8 @@ jobs:
         run: python benchmarks/standalone-latent-v1/check.py
       - name: Preserve measured v2 extraction and portable output (consumed data, no calls)
         run: python benchmarks/source-constraints-v2/check.py
+      - name: Replay naturalistic full-history controls (consumed data, no calls)
+        run: python benchmarks/natural-controls-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
