@@ -1,4 +1,4 @@
-# Naturalistic source controls: full history qualifies, compression untested
+# Naturalistic source controls: full history qualifies
 
 Five explicitly approved `gpt-6.1-sol` CLI inference attempts completed without
 retry or repair. The actual server model identity was unavailable. This study
@@ -46,6 +46,10 @@ savings claim. Five is the count of local inference CLI children; upstream RPC
 attempts are unobservable. No missing usage, retries, extraction, compression,
 sample replacement or automatic next stage occurred. The five-call scope is
 closed. Qualification does not grant another model-call budget.
+
+A separately approved [subsequent compression study](../natural-compression-v1/README.md)
+now measures one-shot default cards on these same sources and queries. Its
+results do not turn this earlier five-call phase into a compact-card test.
 
 ## Replay offline
 

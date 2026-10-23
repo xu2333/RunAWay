@@ -138,3 +138,11 @@ full histories preserved all 56 planned choices/unknowns while no memory scored
 updates without an exhaustive finite-family promise. No compact card was tested
 in that phase; full-history qualification is a prerequisite for measuring later
 compression loss, not a new fidelity claim for `distill`.
+
+The subsequent [one-shot naturalistic compression comparison](../benchmarks/natural-compression-v1/README.md)
+produced four default cards of 624–675 complete Unicode characters. Own cards
+retained 56/56 planned cells (known 38/38, unknown 18/18), compared with 38/56
+for equal-character source tails. Fixed wrong-person cards scored 30/56 against
+the target and 56/56 against their actual donors. These are consumed fictional
+trajectories with historical full/no-memory controls, one requested model and
+no real-person or cross-harness fidelity claim. No product default was changed.
