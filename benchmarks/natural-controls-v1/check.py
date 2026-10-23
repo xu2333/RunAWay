@@ -1,6 +1,5 @@
 """Consumed five-call control replay. Never runs a model or a compact extractor."""
 from collections import Counter
-import copy
 import hashlib
 import json
 from pathlib import Path
@@ -148,4 +147,3 @@ def check():
 
 if __name__ == '__main__':
     print(json.dumps(check(),ensure_ascii=False))
-
