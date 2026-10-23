@@ -7,7 +7,7 @@ conflicts unknown. The complete guide, name, tagline, scopes, conditions,
 actions, priorities, unknown statements and any literal glossary count inside
 the whole Unicode-character budget. There is no external hidden decoder.
 
-This is an **opt-in experimental contract**, not a measured fidelity improvement.
+This remains an **opt-in experimental contract**. A [consumed whole512 paired study](../benchmarks/grouped-comparison-v1/README.md) fit4/4 grouped cards but retained only29/52 known choices (57/80 overall; U28/28). All23 observed errors answered U for known choices. Exact source checks did not detect omitted choice families; this is not a fidelity pass.
 `support-v1` remains the default. The preceding [budget-frontier study](../benchmarks/heterogeneous-frontier-v1/README.md)
 found nine over-budget default candidates, while all60actually read cells from
 valid cards were right. Grouping is a candidate response to that bottleneck;
@@ -100,5 +100,4 @@ the grouped format has its own fixed renderer.
 Exact quotes, backward references, scope/P parsing and complete character counts
 do not certify semantic support, same-condition updates, completeness, privacy,
 readability, real-person fidelity or cross-model portability. Every output stays
-`candidate_unvalidated`. Model-based generation yield and choice fidelity for
-this new format remain to be measured separately.
+`candidate_unvalidated`. The consumed study now measures generation yield and observed choice fidelity separately. It fails the strict gate and does not establish independent, human or cross-model fidelity.
