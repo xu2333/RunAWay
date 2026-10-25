@@ -1,0 +1,221 @@
+{
+  "new_model_calls": 0,
+  "original_answers_only": true,
+  "repair_or_candidate_replacement": false,
+  "semantic_support_independently_verified": false,
+  "inventory_completeness_verified": false,
+  "greedy_packing_is_not_minimum_possible_size": true,
+  "not_a_pure_inventory_or_audit_causal_effect": true,
+  "execution_result_sha256": "431db8fc099a8121c6156bf7226c359a201327170ad61b849bde1215dd463eb3",
+  "rows": [
+    {
+      "slot": 6,
+      "group": "inventory",
+      "person": "h17",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-9f4aecb97e744650a1959d555d82e09e",
+      "valid_local_artifact": true,
+      "answer_sha256": "3f9cde91a02d5e4df7661c22ac7ae944a36e46df6b22d3dc5b3009f20b3e8f45",
+      "generated_units": 42,
+      "generated_kind_counts": {
+        "boundary": 10,
+        "choice": 32
+      },
+      "active_units": 40,
+      "retired_units": 2
+    },
+    {
+      "slot": 7,
+      "group": "inventory",
+      "person": "h42",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-a8bfdeb36a5348909974e74c8575efa2",
+      "valid_local_artifact": true,
+      "answer_sha256": "70f284d50316338a091c98cc64bfa38150390a7d23cd75782b5db8d159680674",
+      "generated_units": 35,
+      "generated_kind_counts": {
+        "boundary": 8,
+        "choice": 27
+      },
+      "active_units": 33,
+      "retired_units": 2
+    },
+    {
+      "slot": 8,
+      "group": "inventory",
+      "person": "h68",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-fc5a3d3350044d57b10938290c3fb6bb",
+      "valid_local_artifact": true,
+      "answer_sha256": "cf99e88d1be1001b58a248bb3ffb9108b5e88817886b2c4e45aff6e45cb6e5ee",
+      "generated_units": 34,
+      "generated_kind_counts": {
+        "boundary": 7,
+        "choice": 27
+      },
+      "active_units": 32,
+      "retired_units": 2
+    },
+    {
+      "slot": 9,
+      "group": "inventory",
+      "person": "h93",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-9939a77036f34266a69445331157becc",
+      "valid_local_artifact": true,
+      "answer_sha256": "d4cc660d99705ef782bf017d6fbb7a20e1573934b7fa2d16b0cd6189104a7f5e",
+      "generated_units": 36,
+      "generated_kind_counts": {
+        "boundary": 7,
+        "choice": 29
+      },
+      "active_units": 34,
+      "retired_units": 2
+    },
+    {
+      "slot": 10,
+      "group": "audit",
+      "person": "h17",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-35d56add3e124f2d9d55068f1d7e8c61",
+      "valid_local_artifact": true,
+      "answer_sha256": "5069e8683fa412f768ff71e84e9566245df3e21c71248eba277f45f313adbc71",
+      "generated_coverage_rows": 48,
+      "generated_findings": 0,
+      "generated_finding_kinds": {},
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": true
+    },
+    {
+      "slot": 11,
+      "group": "audit",
+      "person": "h42",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-cbc80b168afb4ba78a00939afadb1f0d",
+      "valid_local_artifact": false,
+      "answer_sha256": "4755eb2b048fe7da97479e160fcc838b7f869af3c7a39d30f1fabcbe93f3415a",
+      "rejection_reason": "Covered user needs units",
+      "generated_coverage_rows": 48,
+      "generated_findings": 0,
+      "generated_finding_kinds": {},
+      "generated_uncertain_rows": 0
+    },
+    {
+      "slot": 12,
+      "group": "audit",
+      "person": "h68",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-73f6d08c879b457ab8a0a22dcfc30be0",
+      "valid_local_artifact": true,
+      "answer_sha256": "60ee6f22c5bacb16b349f31d11896d9c84b572e2dfca7dd9b2c25580d78d7658",
+      "generated_coverage_rows": 48,
+      "generated_findings": 1,
+      "generated_finding_kinds": {
+        "missing": 1
+      },
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": false
+    },
+    {
+      "slot": 13,
+      "group": "audit",
+      "person": "h93",
+      "variant": "coverage-v1",
+      "budget": null,
+      "execution_id": "attempt-12206d64cdfb4b13ada172666a904543",
+      "valid_local_artifact": true,
+      "answer_sha256": "ec3f8296745eb162adc5f0e85635b0c0a952274cf37b8a580a3fe44e6250a162",
+      "generated_coverage_rows": 48,
+      "generated_findings": 2,
+      "generated_finding_kinds": {
+        "bad_update": 2
+      },
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": false
+    },
+    {
+      "slot": 14,
+      "group": "extract",
+      "person": "h17",
+      "variant": "grouped-v1",
+      "budget": 512,
+      "execution_id": "attempt-17d41befd0214efcba7e8388c8ca8afb",
+      "valid_local_artifact": true,
+      "answer_sha256": "ca6707deb6a160972ba7de71f330891ff673ba995bab1a0a7314fd47b7353d2f",
+      "scope_groups": 5,
+      "rules": 6,
+      "expanded_characters": 476,
+      "counted_prefix_characters": 115,
+      "accepted_characters": 476
+    },
+    {
+      "slot": 16,
+      "group": "extract",
+      "person": "h68",
+      "variant": "grouped-v1",
+      "budget": 512,
+      "execution_id": "attempt-6144cc963a2b4bea8ff2c0f033f62111",
+      "valid_local_artifact": false,
+      "answer_sha256": "d519ff6f34e41d0ac84648a3e67d47ed3ceed135dc1ce58f5ac324d5ab2b3857",
+      "rejection_reason": "Complete prompt exceeds budget after lossless packing: 555 > 512; no truncation",
+      "actual_greedy_packed_characters": 555,
+      "scope_groups": 5,
+      "rules": 8,
+      "expanded_characters": 555,
+      "counted_prefix_characters": 116
+    },
+    {
+      "slot": 18,
+      "group": "extract",
+      "person": "h17",
+      "variant": "coverage-v1",
+      "budget": 512,
+      "execution_id": "attempt-2f72c53d72ba432ba6f9ac7d03f6bb2c",
+      "valid_local_artifact": false,
+      "answer_sha256": "67b2d179a33e23ca532d90f0048df06819ef125a762db93fb625ae4d1d078e2e",
+      "rejection_reason": "Whole public coverage card exceeds512characters; no truncation",
+      "raw_public_characters": 1161,
+      "generated_dispositions": {
+        "represented": 40,
+        "superseded": 2
+      }
+    },
+    {
+      "slot": 19,
+      "group": "extract",
+      "person": "h42",
+      "variant": "grouped-v1",
+      "budget": 512,
+      "execution_id": "attempt-39cb278aac84489384585ff4a2cecf97",
+      "valid_local_artifact": true,
+      "answer_sha256": "ea2dfafbdc27948aedc6a5c70caa990ee6ee87febc76152973bbf696960f1cb6",
+      "scope_groups": 5,
+      "rules": 7,
+      "expanded_characters": 500,
+      "counted_prefix_characters": 116,
+      "accepted_characters": 500
+    },
+    {
+      "slot": 21,
+      "group": "extract",
+      "person": "h93",
+      "variant": "grouped-v1",
+      "budget": 512,
+      "execution_id": "attempt-ffad5d5fe588467ea89058b3a71a4d39",
+      "valid_local_artifact": true,
+      "answer_sha256": "e76c3f7096ef2776138e27477a9484f8a5715ec7d3e1dd91defb4894e45c81b7",
+      "scope_groups": 5,
+      "rules": 7,
+      "expanded_characters": 490,
+      "counted_prefix_characters": 113,
+      "accepted_characters": 490
+    }
+  ]
+}

@@ -3,7 +3,11 @@
 This runnable **zero-call prototype** follows the [whole512 failure](../grouped-comparison-v1/README.md):
 grouped cards fit4/4 but retained29/52 known choices. All23 observed errors returned
 U for an originally known choice. The new path makes omission accountable and
-adds an audit of the inventory itself. It has **no measured model result yet**.
+adds an audit of the inventory itself. The [first consumed comparison](../source-coverage-comparison-v1/README.md)
+generated4valid inventories,but only1audit admitted compression and that card
+exceeded512characters. No inventory-method reader was admitted;fidelity remains
+unmeasured. The [unmeasured review-v2 interface](../source-coverage-review-v2/README.md)
+addresses one decision/context annotation failure without changing these results.
 
 The CLI prepares system/prompt/schema requests and imports saved JSON replies.
 Give each prepared request to any chosen model or harness; the prototype itself
@@ -73,5 +77,5 @@ episode metadata and all six CLI commands:
 python3 -B -m unittest discover -s benchmarks/source-coverage-pipeline-v1 -p 'test_*.py' -v
 ```
 
-The prior37-slot service scope is closed:25 calls were used and12 dependencies
-expired. This prototype authorizes no new model calls or default change.
+The45-slot comparison is closed:27 calls were used and18dependencies expired.
+This prototype authorizes no new model calls or default change.
