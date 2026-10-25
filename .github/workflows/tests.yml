@@ -12,7 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu-latest
+          # Python3.9 has no setup-python build for the new ubuntu-latest26.04 image.
+          - os: ubuntu-24.04
             python: '3.9'
           - os: ubuntu-latest
             python: '3.13'
@@ -69,6 +70,8 @@ jobs:
         run: python benchmarks/source-coverage-comparison-v1/check.py
       - name: Check separate source-review index prototype (no model calls)
         run: python -m unittest discover -s benchmarks/source-coverage-review-v2 -p 'test_*.py' -v
+      - name: Replay whole1536 source-review comparison (no model calls)
+        run: python benchmarks/source-review-comparison-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

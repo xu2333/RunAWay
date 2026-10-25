@@ -1,0 +1,1862 @@
+{
+  "kind": "posthoc_descriptive_paired_observation_strata",
+  "new_model_calls": 0,
+  "consumed_shared_scaffold": true,
+  "as_of_changed": true,
+  "independent_repeated_inferences": true,
+  "no_population_or_pure_budget_causal_claim": true,
+  "grouped512_to_grouped1536": {
+    "all_planned_cells": 80,
+    "both_observed_cells": 60,
+    "earlier_correct_on_both_observed": 43,
+    "later_correct_on_both_observed": 60,
+    "observed_errors_recovered": [
+      {
+        "person": "h17",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t02",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t02",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      }
+    ],
+    "observed_correct_regressed": [],
+    "newly_observed_previously_missing": {
+      "count": 20,
+      "correct": 20
+    },
+    "earlier_missing": 20,
+    "later_missing": 0,
+    "cells": [
+      {
+        "person": "h17",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t02",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t08",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t02",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t08",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t01",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t02",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t03",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t04",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t05",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t06",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t07",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t08",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t09",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t10",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t11",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t12",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t13",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t14",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t15",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t16",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t17",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t18",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t19",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t20",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t02",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t03",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t04",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t08",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t12",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t13",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t15",
+        "known": true,
+        "earlier": "observed_error",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      }
+    ],
+    "causal_effect_verified": false,
+    "statistical_significance_claimed": false
+  },
+  "old_inventory512_to_review1536": {
+    "all_planned_cells": 80,
+    "both_observed_cells": 0,
+    "earlier_correct_on_both_observed": 0,
+    "later_correct_on_both_observed": 0,
+    "observed_errors_recovered": [],
+    "observed_correct_regressed": [],
+    "newly_observed_previously_missing": {
+      "count": 40,
+      "correct": 40
+    },
+    "earlier_missing": 80,
+    "later_missing": 40,
+    "cells": [
+      {
+        "person": "h17",
+        "case": "t01",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t02",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t03",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t04",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t05",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t06",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t07",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t08",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t09",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t10",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t11",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t12",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t13",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t14",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t15",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t16",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t17",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t18",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t19",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t20",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t01",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t02",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t03",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t04",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t05",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t06",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t07",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t08",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t09",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t10",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t11",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t12",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t13",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t14",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t15",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t16",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t17",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t18",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t19",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t20",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h68",
+        "case": "t01",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t02",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t03",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t04",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t05",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t06",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t07",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t08",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t09",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t10",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t11",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t12",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t13",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t14",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t15",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t16",
+        "known": true,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t17",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t18",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t19",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t20",
+        "known": false,
+        "earlier": "missing",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t01",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t02",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t03",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t04",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t05",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t06",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t07",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t08",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t09",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t10",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t11",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t12",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t13",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t14",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t15",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t16",
+        "known": true,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t17",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t18",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t19",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t20",
+        "known": false,
+        "earlier": "missing",
+        "later": "missing"
+      }
+    ],
+    "causal_effect_verified": false,
+    "statistical_significance_claimed": false
+  },
+  "new_grouped1536_to_review1536": {
+    "all_planned_cells": 80,
+    "both_observed_cells": 40,
+    "earlier_correct_on_both_observed": 40,
+    "later_correct_on_both_observed": 40,
+    "observed_errors_recovered": [],
+    "observed_correct_regressed": [],
+    "newly_observed_previously_missing": {
+      "count": 0,
+      "correct": 0
+    },
+    "earlier_missing": 0,
+    "later_missing": 40,
+    "cells": [
+      {
+        "person": "h17",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t02",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t03",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t04",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t08",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t12",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t13",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t15",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h17",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h42",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t02",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t03",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t04",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t08",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t12",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t13",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t15",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h42",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h68",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t02",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t03",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t04",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t08",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t12",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t13",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t15",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h68",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "correct"
+      },
+      {
+        "person": "h93",
+        "case": "t01",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t02",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t03",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t04",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t05",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t06",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t07",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t08",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t09",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t10",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t11",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t12",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t13",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t14",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t15",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t16",
+        "known": true,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t17",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t18",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t19",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      },
+      {
+        "person": "h93",
+        "case": "t20",
+        "known": false,
+        "earlier": "correct",
+        "later": "missing"
+      }
+    ],
+    "causal_effect_verified": false,
+    "statistical_significance_claimed": false
+  }
+}

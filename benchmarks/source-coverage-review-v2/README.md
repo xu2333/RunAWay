@@ -1,6 +1,7 @@
 # Source review v2: separate link bookkeeping from semantic review
 
-**Unmeasured, zero-call follow-up prototype.** The [consumed comparison](../source-coverage-comparison-v1/README.md)
+**Zero-call prepare/import prototype;the first service comparison is now recorded.**
+At[whole1536](../source-review-comparison-v1/README.md),all4reviews imported but2flagged inherited conditions;two admitted cards retained40/40observed cells and40planned cells stayed missing. Direct grouped cards retained80/80. The pipeline does not pass the four-profile gate. The earlier[whole512 comparison](../source-coverage-comparison-v1/README.md)
 rejected one audit because two user reaffirmations had context references but no
 decision references. The model called them `covered` with an empty decision-unit
 list, which v1 correctly rejected under its frozen contract. Those results stay
@@ -55,4 +56,5 @@ python3 -B -m unittest discover -s benchmarks/source-coverage-review-v2 -p 'test
 10 independent toy tests cover context-only user reaffirmations, old/new unit
 links, source/role/quote damage, uncertainty/findings, forged flags/indexes,
 distinct artifact versions, counted partial cards and all six CLI commands.
-No service calls or new cards from the consumed study were made to test v2.
+These10tests themselves make no service calls. The later service study above
+used37actual inferences and retains all failures;the original512results were not repaired.

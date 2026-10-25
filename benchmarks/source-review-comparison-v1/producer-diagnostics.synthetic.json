@@ -1,0 +1,272 @@
+{
+  "new_model_calls": 0,
+  "original_answers_only": true,
+  "repair_or_candidate_replacement": false,
+  "semantic_support_independently_verified": false,
+  "inventory_completeness_verified": false,
+  "greedy_packing_is_not_minimum_possible_size": true,
+  "not_a_pure_inventory_or_audit_causal_effect": true,
+  "execution_result_sha256": "a24e09005775dfdc05ff8050cb7215c24a6d9ce17b1c32a912298acdd757d129",
+  "rows": [
+    {
+      "slot": 6,
+      "group": "inventory",
+      "person": "h17",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-9de11a7097394eaead9d143d601152d0",
+      "valid_local_artifact": true,
+      "answer_sha256": "c5ebc54ce4c1bfecc9c7fe05726a4915e1e3a8f0a38bac9cb5d01ea7466c4a4b",
+      "generated_units": 30,
+      "generated_kind_counts": {
+        "boundary": 4,
+        "choice": 26
+      },
+      "active_units": 28,
+      "retired_units": 2
+    },
+    {
+      "slot": 7,
+      "group": "inventory",
+      "person": "h42",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-18b62d5397234bb5adc5bf30674bed33",
+      "valid_local_artifact": true,
+      "answer_sha256": "fc84dd26b30a0a31fd35353ec51b58ba45950390505ac4fe15e90e7b112c272a",
+      "generated_units": 39,
+      "generated_kind_counts": {
+        "choice": 35,
+        "boundary": 4
+      },
+      "active_units": 37,
+      "retired_units": 2
+    },
+    {
+      "slot": 8,
+      "group": "inventory",
+      "person": "h68",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-30f6ef3279a1432e8e1d4363e78f2119",
+      "valid_local_artifact": true,
+      "answer_sha256": "50b15f01ab947735a4faefee1ad4e823e9c0b0f1cff70a21c3b35b9af832fa33",
+      "generated_units": 39,
+      "generated_kind_counts": {
+        "boundary": 7,
+        "choice": 32
+      },
+      "active_units": 37,
+      "retired_units": 2
+    },
+    {
+      "slot": 9,
+      "group": "inventory",
+      "person": "h93",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-39e7ad3b8d474145bc6f300dd8aa527b",
+      "valid_local_artifact": true,
+      "answer_sha256": "b9674c006c86c602018e41296a199f3dd909211a87661085997c3e0f23f1b571",
+      "generated_units": 35,
+      "generated_kind_counts": {
+        "boundary": 10,
+        "choice": 25
+      },
+      "active_units": 33,
+      "retired_units": 2
+    },
+    {
+      "slot": 10,
+      "group": "audit",
+      "person": "h17",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-5515b8e8bb7c4c5eb577a9eea25b0ea6",
+      "valid_local_artifact": true,
+      "answer_sha256": "13eb49ee3c71783d43aa62ee08a42b6bd9ce617639a6aa2055e65f1b0e35491f",
+      "generated_coverage_rows": 48,
+      "generated_findings": 0,
+      "generated_finding_kinds": {},
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": true
+    },
+    {
+      "slot": 11,
+      "group": "audit",
+      "person": "h42",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-148aae46ffc949f4a4e3fd25d8825be1",
+      "valid_local_artifact": true,
+      "answer_sha256": "c75d77e62af63ce9c9c79d80eababe2d84c08d910e63920293a201df59b59877",
+      "generated_coverage_rows": 48,
+      "generated_findings": 1,
+      "generated_finding_kinds": {
+        "missing": 1
+      },
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": false
+    },
+    {
+      "slot": 12,
+      "group": "audit",
+      "person": "h68",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-9373c581513f4c3c8f95a05220b6cd9b",
+      "valid_local_artifact": true,
+      "answer_sha256": "72bdf89b7bc24db531edc6274eaa8b0967f1ac3f98c639b2f14601d46c855444",
+      "generated_coverage_rows": 48,
+      "generated_findings": 0,
+      "generated_finding_kinds": {},
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": true
+    },
+    {
+      "slot": 13,
+      "group": "audit",
+      "person": "h93",
+      "variant": "review-v2",
+      "budget": null,
+      "execution_id": "attempt-b9ac6229e5cb495289de0e61180d46ba",
+      "valid_local_artifact": true,
+      "answer_sha256": "35c5ad8e166051fe8790ef2d9b999cc3e04537b4e9ab212de3fff25eb76e953e",
+      "generated_coverage_rows": 48,
+      "generated_findings": 1,
+      "generated_finding_kinds": {
+        "missing": 1
+      },
+      "generated_uncertain_rows": 0,
+      "validated_clear_for_compression": false
+    },
+    {
+      "slot": 14,
+      "group": "extract",
+      "person": "h17",
+      "variant": "grouped-v1",
+      "budget": 1536,
+      "execution_id": "attempt-be95995bdc994a47ae72c42984e9ecde",
+      "valid_local_artifact": true,
+      "answer_sha256": "703c8523c3642723057f86a5906f2e53d4a320ff7d07f889a564fd8ce631e561",
+      "scope_groups": 10,
+      "rules": 16,
+      "expanded_characters": 1167,
+      "counted_prefix_characters": 124,
+      "accepted_characters": 1167
+    },
+    {
+      "slot": 16,
+      "group": "extract",
+      "person": "h68",
+      "variant": "grouped-v1",
+      "budget": 1536,
+      "execution_id": "attempt-a5d7696874a24ba9aa4e9516d19e99a2",
+      "valid_local_artifact": true,
+      "answer_sha256": "053af6f4aad806a26f09d4ba4334d9c6bf95370d8f88c908c75f285e7dbfea82",
+      "scope_groups": 10,
+      "rules": 18,
+      "expanded_characters": 1218,
+      "counted_prefix_characters": 122,
+      "accepted_characters": 1218
+    },
+    {
+      "slot": 18,
+      "group": "extract",
+      "person": "h17",
+      "variant": "review-v2",
+      "budget": 1536,
+      "execution_id": "attempt-ec0bdd06064146e48db75a5741dc4a08",
+      "valid_local_artifact": true,
+      "answer_sha256": "780b5d081cb58c3ebc8975843ab3860ab6ceca50ccd5c8d0764b813f8f8bd87d",
+      "raw_public_characters": 1177,
+      "generated_dispositions": {
+        "represented": 28,
+        "superseded": 2
+      },
+      "accepted_characters": 1177,
+      "partial": false,
+      "complete_accounting": true,
+      "accounting": {
+        "status": "accounted_candidate_unvalidated",
+        "whole_public_characters": 1177,
+        "budget_characters": 1536,
+        "inventory_sha256": "5b3961c9bf3efa8906f2e4e3acfba9dfa42776ad78b2a0b382cdd1bfadd2a11e",
+        "prompt_sha256": "3a7cbc90ce7476d81fd5603c035d12c05e13a50ad91f0aca39384a49e2ddd6c8",
+        "active_units": 28,
+        "represented_units": 28,
+        "omissions": [],
+        "source_unit_accounting_complete": true,
+        "no_declared_omissions": true,
+        "inventory_complete_verified": false,
+        "semantic_retention_verified": false,
+        "behavioral_fidelity_verified": false,
+        "no_model_call_or_repair": true
+      }
+    },
+    {
+      "slot": 19,
+      "group": "extract",
+      "person": "h42",
+      "variant": "grouped-v1",
+      "budget": 1536,
+      "execution_id": "attempt-9a2b15c05d3143edb23237d6973af083",
+      "valid_local_artifact": true,
+      "answer_sha256": "a9b07de6a6150e5b8ac8b472c9d924678fc7d9f73d234bfbcc703b9172fa9a46",
+      "scope_groups": 12,
+      "rules": 18,
+      "expanded_characters": 1316,
+      "counted_prefix_characters": 121,
+      "accepted_characters": 1316
+    },
+    {
+      "slot": 20,
+      "group": "extract",
+      "person": "h68",
+      "variant": "review-v2",
+      "budget": 1536,
+      "execution_id": "attempt-620ad64e38ac4f1aa33448bfe730003e",
+      "valid_local_artifact": true,
+      "answer_sha256": "f2362578cc47d575ff788bf06f7c27e73cd65a7586ea9c89e32cdc6cfd72b9d8",
+      "raw_public_characters": 1266,
+      "generated_dispositions": {
+        "represented": 37,
+        "superseded": 2
+      },
+      "accepted_characters": 1266,
+      "partial": false,
+      "complete_accounting": true,
+      "accounting": {
+        "status": "accounted_candidate_unvalidated",
+        "whole_public_characters": 1266,
+        "budget_characters": 1536,
+        "inventory_sha256": "a0305f5b4da9d9eb90cd0cefdb10159badfc183d76bc80bb0ec9892d720781e7",
+        "prompt_sha256": "abcd6aa229d98b63681a9244ff8743719086ec5269d42565a93e3120ddcd532a",
+        "active_units": 37,
+        "represented_units": 37,
+        "omissions": [],
+        "source_unit_accounting_complete": true,
+        "no_declared_omissions": true,
+        "inventory_complete_verified": false,
+        "semantic_retention_verified": false,
+        "behavioral_fidelity_verified": false,
+        "no_model_call_or_repair": true
+      }
+    },
+    {
+      "slot": 21,
+      "group": "extract",
+      "person": "h93",
+      "variant": "grouped-v1",
+      "budget": 1536,
+      "execution_id": "attempt-b8f01712dd834bbabe36603f76b4ad4e",
+      "valid_local_artifact": true,
+      "answer_sha256": "f2fad3b5a5e6e1824c97a270ff69d334887298e06da42076b837a1a178667cb4",
+      "scope_groups": 10,
+      "rules": 17,
+      "expanded_characters": 1200,
+      "counted_prefix_characters": 123,
+      "accepted_characters": 1200
+    }
+  ]
+}
