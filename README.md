@@ -33,4 +33,4 @@ Have explicit finite decision constraints? Try the experimental [`--format const
 
 Browser feedback is shared only when you choose to submit it. CLI generation sends selected input to its backend. Fidelity to real personal choices remains unverified.
 
-[Real-scenario results & limits](REAL-SCENARIO-PILOT.md) · [Temporal memory route](TEMPORAL-MEMORY.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)
+[Latest regression results & losses](REGRESSION-PROGRESS.md) · [Real-scenario results & limits](REAL-SCENARIO-PILOT.md) · [Temporal memory route](TEMPORAL-MEMORY.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)

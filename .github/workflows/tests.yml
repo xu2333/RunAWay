@@ -72,6 +72,8 @@ jobs:
         run: python -m unittest discover -s benchmarks/source-coverage-review-v2 -p 'test_*.py' -v
       - name: Replay whole1536 source-review comparison (no model calls)
         run: python benchmarks/source-review-comparison-v1/check.py
+      - name: Replay post-ceiling losses and unresolved references (no model calls)
+        run: python benchmarks/regression-progress-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
