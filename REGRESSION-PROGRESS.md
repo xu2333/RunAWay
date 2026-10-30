@@ -124,3 +124,11 @@ tests reproduce validity failures, missing denominators and observed losses.
 Four additional offline checks cover an[unmeasured when-field contract candidate](benchmarks/wire-contract-v1/README.md).
 Neither the candidate nor publication grants another service scope. All original
 source-policy and target-v2 records remain unchanged.
+
+The next [unexecuted breadth/frontier plan](benchmarks/remaining-world-frontier-v1/README.md)
+freezes three other existing fictional worlds at1024/1536whole characters,
+two generations and two reads per card. It proposes40new attempts and requires
+a new exact grant. The69previously unflagged author cases form the prospective
+primary denominator;3preflagged w14cases retain original labels and response
+observations without pass/fail or acceptance. Preparation does not fill the
+remaining72inventory cases. Ten offline adapter/mask/failure tests pass.
