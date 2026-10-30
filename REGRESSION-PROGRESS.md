@@ -94,3 +94,9 @@ same-target conflicts and execution limits. The remaining 72 cases, independent
 source/reference custody, real-person fidelity and cross-harness behavior remain
 open. All scopes here are closed; publication grants no new experiment budget
 or production-default change.
+
+An [unmeasured decision-target candidate and local calibration](benchmarks/decision-targets-v1/README.md)
+now implement that next hypothesis without changing the schema or renderer.
+The calibration detects execution-limit erasure even when preference scores
+stay perfect. Its toy logical results are separate from the measured LLM losses
+above and do not establish that the new instructions repair them.
