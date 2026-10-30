@@ -1,13 +1,15 @@
-# Decision-target candidate and offline calibration
+# Decision-target candidate, calibration and measured comparison
 
-The measured regression remains 118/120 strict cases for revised cards versus
-119/120 for fixed old cards. Plan choice and execution permission may have been
-confused in the failed reads. This pack implements an **unmeasured source-only
-instruction candidate** and a finite development check of that hypothesis.
-It does not change the production default or rewrite the measured results.
+The [closed 21-call comparison](MEASURED.md) finds **96/96 for both methods**,
+with v2 adding 99 whole-card characters in aggregate. It shows no observed
+accuracy or compression advantage. The earlier 118/120 versus 119/120 regression
+is retained. This pack contains the source-only instruction candidate, symbolic
+development calibration and actual model evidence, without changing the
+production default.
 
 ```sh
 python benchmarks/decision-targets-v1/check.py
+python benchmarks/decision-targets-v1/measured.py
 python -m unittest discover -s tests -p test_decision_targets.py -v
 ```
 
@@ -76,8 +78,9 @@ questions/options. Private target IDs, predicates, truth, strata and references
 never enter an extraction or reader request. `build.py` recreates the fictional
 packet and hand-authored examples locally, with no service or randomness.
 
-The next substantive test needs new explicitly authorized model calls: compare
-the locked earlier candidate and this one on consumed losses plus explicit
-execution/unknown controls. A [finite21call proposal](EXPERIMENT.md) and pure local
-job preparer cover the consumed losses and these execution controls. Until then, the hypothesis remains unverified,
-the old 93/96 and 118/120 scores remain, and no new experiment budget is implied.
+The [finite21call preparation](EXPERIMENT.md) and pure local job preparer are
+preserved as the pre-execution plan. Its actual [results and limitations](MEASURED.md)
+are appended separately. The plan's historical approval state is not a current
+grant. The scope is closed, old 93/96 and 118/120 scores remain, and no new model
+budget is implied. Both methods now pass the development bank, so promotion
+requires evidence beyond this ceiling-level comparison.

@@ -1,6 +1,11 @@
 # Compression regression progress
 
-The latest consumed synthetic regression still finds fidelity losses. Under the
+The latest [decision-target comparison](benchmarks/decision-targets-v1/MEASURED.md)
+completed 21 calls: both methods score **96/96** on two consumed profiles and
+one new authored development fixture, with the candidate adding 99 characters
+in aggregate. This shows no observed advantage; the default remains unchanged.
+
+The preceding consumed synthetic regression still records fidelity losses. Under the
 strict rule that both reads and both option orders must match the frozen
 reference, revised cards retain **118/120** cases and existing cards **119/120**.
 This does not establish a causal method difference. The production default is
@@ -20,6 +25,7 @@ unmeasured inventory. Original labels and the old 93/96 result are retained.
 | Source-policy revision, j39 |7|24|Old/new card each 24/24 twice; 797→720 characters, no observed accuracy advantage|
 | Revised-method h17 pilot |7|40|Old/new card each 40/40 twice; 1167→1200 characters|
 | Remaining h42/h68/h93 |19|120|Old strict 119/120, revised strict 118/120; no missing cells|
+| Decision-target comparison |21|96|Both strict 96/96; 80 repeated old cases plus 16 authored development cases; no accuracy or compression advantage|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -27,7 +33,7 @@ developer-visible author judgments, not independently accepted accounts of real
 people. New-world text was unseen by the locked producer when authored; this
 does not establish independent author blindness or external holdout status.
 
-The snapshot archives 79 choice/extraction request objects and raw JSON response
+The original regression snapshot archives 79 choice/extraction request objects and raw JSON response
 texts, safe usage counters, sources, references and public cards. Two additional
 neutral-opinion calls are separate. Recorded tokens are 1,381,282 for the five
 choice scopes and 21,210 for those opinions: 1,402,492 in this snapshot. This is not a
@@ -89,14 +95,16 @@ envelopes are excluded. Original envelope hashes are provenance only; public
 checks verify the retained requests, raw text, counters and artifacts, not
 omitted envelope bytes.
 
-Next, test decision-target separation while retaining unknown conditions, real
-same-target conflicts and execution limits. The remaining 72 cases, independent
+Next, distinguish producer variation from reader variation and add harder
+decision-boundary cases. The remaining 72 cases, independent
 source/reference custody, real-person fidelity and cross-harness behavior remain
 open. All scopes here are closed; publication grants no new experiment budget
 or production-default change.
 
-An [unmeasured decision-target candidate and local calibration](benchmarks/decision-targets-v1/README.md)
-now implement that next hypothesis without changing the schema or renderer.
-The calibration detects execution-limit erasure even when preference scores
-stay perfect. Its toy logical results are separate from the measured LLM losses
-above and do not establish that the new instructions repair them.
+The [decision-target candidate and local calibration](benchmarks/decision-targets-v1/README.md)
+implement that hypothesis without changing the schema or renderer. Calibration
+detects execution-limit erasure even when preference scores stay perfect.
+The new [21-call observation](benchmarks/decision-targets-v1/MEASURED.md) adds
+375,216 recorded tokens and a separate portable evidence pack; its 96/96 tie
+does not establish that the instructions repair prior losses. The original
+snapshot remains byte-for-byte unchanged.
