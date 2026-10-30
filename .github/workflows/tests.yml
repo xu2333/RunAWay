@@ -76,6 +76,8 @@ jobs:
         run: python benchmarks/regression-progress-v1/check.py
       - name: Calibrate decision-target and execution boundaries (no model calls)
         run: python benchmarks/decision-targets-v1/check.py
+      - name: Replay measured decision-target comparison (no model calls)
+        run: python benchmarks/decision-targets-v1/measured.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
