@@ -108,3 +108,10 @@ The new [21-call observation](benchmarks/decision-targets-v1/MEASURED.md) adds
 375,216 recorded tokens and a separate portable evidence pack; its 96/96 tie
 does not establish that the instructions repair prior losses. The original
 snapshot remains byte-for-byte unchanged.
+
+An [unexecuted compression/stability plan](benchmarks/compression-stability-v1/README.md)
+now freezes scope-v1 at768/1024whole characters, two new generations per source
+and two reads per card. Its source-only preparation, fixed-denominator scorer
+and controller pass15offline fault tests. It proposes at most41new attempts,
+requires a new explicit grant, adds no measured fidelity result and does not
+reuse the closed21-call scope.
