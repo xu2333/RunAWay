@@ -1,0 +1,547 @@
+{
+  "kind": "authored_decision_target_development_not_holdout",
+  "sources": {
+    "schema_version": 1,
+    "sources": [
+      {
+        "id": "s1",
+        "episode_id": "bag",
+        "role": "user",
+        "text": "只说这次周末帆布包选款，我之前选灰色帆布包。"
+      },
+      {
+        "id": "s2",
+        "episode_id": "bag",
+        "role": "user",
+        "text": "这次周末帆布包改选蓝色帆布包，之前的灰色选择作废；改动只限选款。"
+      },
+      {
+        "id": "s3",
+        "episode_id": "bag",
+        "role": "user",
+        "text": "这笔订单在尺寸尚未核对时，先存草稿，暂不下单。没有说核对后就自动授权下单。"
+      },
+      {
+        "id": "s4",
+        "episode_id": "bag",
+        "role": "assistant",
+        "text": "我建议选灰色帆布包，并直接下单；这两项建议都没获用户认可。"
+      },
+      {
+        "id": "s5",
+        "episode_id": "bag",
+        "role": "tool",
+        "text": "界面默认选款显示灰色帆布包，下单按钮已自动勾选直接下单；不是用户决定。"
+      },
+      {
+        "id": "s6",
+        "episode_id": "lamp",
+        "role": "user",
+        "text": "这盏书桌台灯在晚上读纸书时选暖光，我认可这项安排。"
+      },
+      {
+        "id": "s7",
+        "episode_id": "lamp",
+        "role": "user",
+        "text": "同一盏灯、同样晚上读纸书的条件下，我也认可选冷光；没有撤销暖光安排或排优先级，现在还没定。"
+      },
+      {
+        "id": "s8",
+        "episode_id": "poster",
+        "role": "user",
+        "text": "这次室内海报只有确认墨水耐光时才选海蓝色；检测结果缺失或不耐光时，我没有定选色。"
+      },
+      {
+        "id": "s9",
+        "episode_id": "discussion",
+        "role": "user",
+        "text": "这轮讨论只考虑会议室可用或不可用两种情况。可用时选先发书面意见。"
+      },
+      {
+        "id": "s10",
+        "episode_id": "discussion",
+        "role": "user",
+        "text": "同一轮讨论，会议室不可用时也选先发书面意见。这两个分支都已决定。"
+      },
+      {
+        "id": "s11",
+        "episode_id": "walk",
+        "role": "user",
+        "text": "这次小区散步只考虑下雨或不下雨：下雨时走连廊，不下雨时走园径。没有别的候选情境。"
+      },
+      {
+        "id": "s12",
+        "episode_id": "sample",
+        "role": "user",
+        "text": "这次样书快递的交付地点选楼下服务台。这个选择本身已经定了。"
+      },
+      {
+        "id": "s13",
+        "episode_id": "sample",
+        "role": "user",
+        "text": "这次样书快递，收件地址未确认时先存草稿；没有说明确认后就可以自动寄出。"
+      },
+      {
+        "id": "s14",
+        "episode_id": "wall",
+        "role": "user",
+        "text": "展示墙的蓝底和灰底都允许做样片，选款还没决定；施工安排只做样片，暂不搭建。"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "bag_old",
+      "target": "bag_choice",
+      "source_id": "s1",
+      "quote": "只说这次周末帆布包选款，我之前选灰色帆布包。",
+      "value": "灰色帆布包",
+      "requires": {
+        "this_bag": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "bag_now",
+      "target": "bag_choice",
+      "source_id": "s2",
+      "quote": "这次周末帆布包改选蓝色帆布包，之前的灰色选择作废；改动只限选款。",
+      "value": "蓝色帆布包",
+      "requires": {
+        "this_bag": true
+      },
+      "priority": 0,
+      "supersedes": [
+        "bag_old"
+      ]
+    },
+    {
+      "id": "bag_wait",
+      "target": "bag_execution",
+      "source_id": "s3",
+      "quote": "这笔订单在尺寸尚未核对时，先存草稿，暂不下单。没有说核对后就自动授权下单。",
+      "value": "先存草稿，暂不下单",
+      "requires": {
+        "size_pending": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "assistant_bag",
+      "target": "bag_choice",
+      "source_id": "s4",
+      "quote": "我建议选灰色帆布包，并直接下单；这两项建议都没获用户认可。",
+      "value": "灰色帆布包",
+      "requires": {
+        "this_bag": true
+      },
+      "priority": 9,
+      "supersedes": []
+    },
+    {
+      "id": "assistant_order",
+      "target": "bag_execution",
+      "source_id": "s4",
+      "quote": "我建议选灰色帆布包，并直接下单；这两项建议都没获用户认可。",
+      "value": "直接下单",
+      "requires": {
+        "size_pending": true
+      },
+      "priority": 9,
+      "supersedes": []
+    },
+    {
+      "id": "tool_bag",
+      "target": "bag_choice",
+      "source_id": "s5",
+      "quote": "界面默认选款显示灰色帆布包，下单按钮已自动勾选直接下单；不是用户决定。",
+      "value": "灰色帆布包",
+      "requires": {
+        "this_bag": true
+      },
+      "priority": 8,
+      "supersedes": []
+    },
+    {
+      "id": "tool_order",
+      "target": "bag_execution",
+      "source_id": "s5",
+      "quote": "界面默认选款显示灰色帆布包，下单按钮已自动勾选直接下单；不是用户决定。",
+      "value": "直接下单",
+      "requires": {
+        "size_pending": true
+      },
+      "priority": 8,
+      "supersedes": []
+    },
+    {
+      "id": "lamp_warm",
+      "target": "lamp_choice",
+      "source_id": "s6",
+      "quote": "这盏书桌台灯在晚上读纸书时选暖光，我认可这项安排。",
+      "value": "暖光",
+      "requires": {
+        "paper_reading": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "lamp_cold",
+      "target": "lamp_choice",
+      "source_id": "s7",
+      "quote": "同一盏灯、同样晚上读纸书的条件下，我也认可选冷光；没有撤销暖光安排或排优先级，现在还没定。",
+      "value": "冷光",
+      "requires": {
+        "paper_reading": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "poster",
+      "target": "poster_choice",
+      "source_id": "s8",
+      "quote": "这次室内海报只有确认墨水耐光时才选海蓝色；检测结果缺失或不耐光时，我没有定选色。",
+      "value": "海蓝色",
+      "requires": {
+        "lightfast_confirmed": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "discussion_room",
+      "target": "discussion_choice",
+      "source_id": "s9",
+      "quote": "这轮讨论只考虑会议室可用或不可用两种情况。可用时选先发书面意见。",
+      "value": "先发书面意见",
+      "requires": {
+        "room_available": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "discussion_no_room",
+      "target": "discussion_choice",
+      "source_id": "s10",
+      "quote": "同一轮讨论，会议室不可用时也选先发书面意见。这两个分支都已决定。",
+      "value": "先发书面意见",
+      "requires": {
+        "room_available": false
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "walk_rain",
+      "target": "walk_choice",
+      "source_id": "s11",
+      "quote": "这次小区散步只考虑下雨或不下雨：下雨时走连廊，不下雨时走园径。没有别的候选情境。",
+      "value": "走连廊",
+      "requires": {
+        "raining": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "walk_dry",
+      "target": "walk_choice",
+      "source_id": "s11",
+      "quote": "这次小区散步只考虑下雨或不下雨：下雨时走连廊，不下雨时走园径。没有别的候选情境。",
+      "value": "走园径",
+      "requires": {
+        "raining": false
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "sample_place",
+      "target": "sample_choice",
+      "source_id": "s12",
+      "quote": "这次样书快递的交付地点选楼下服务台。这个选择本身已经定了。",
+      "value": "楼下服务台",
+      "requires": {
+        "this_sample": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "sample_wait",
+      "target": "sample_execution",
+      "source_id": "s13",
+      "quote": "这次样书快递，收件地址未确认时先存草稿；没有说明确认后就可以自动寄出。",
+      "value": "先存草稿",
+      "requires": {
+        "address_pending": true
+      },
+      "priority": 0,
+      "supersedes": []
+    },
+    {
+      "id": "wall_prototype",
+      "target": "wall_execution",
+      "source_id": "s14",
+      "quote": "展示墙的蓝底和灰底都允许做样片，选款还没决定；施工安排只做样片，暂不搭建。",
+      "value": "只做样片，暂不搭建",
+      "requires": {},
+      "priority": 0,
+      "supersedes": []
+    }
+  ],
+  "queries": [
+    {
+      "public": {
+        "id": "q01",
+        "scenario": "这次周末帆布包目前选了哪款？",
+        "options": {
+          "A": "蓝色帆布包",
+          "B": "灰色帆布包"
+        }
+      },
+      "target": "bag_choice",
+      "facts": {
+        "this_bag": true
+      },
+      "expected": "蓝色帆布包",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q02",
+        "scenario": "这笔帆布包订单的尺寸尚未核对，现在怎样处理？",
+        "options": {
+          "A": "先存草稿，暂不下单",
+          "B": "直接下单"
+        }
+      },
+      "target": "bag_execution",
+      "facts": {
+        "size_pending": true
+      },
+      "expected": "先存草稿，暂不下单",
+      "stratum": "execution"
+    },
+    {
+      "public": {
+        "id": "q03",
+        "scenario": "这笔帆布包订单尺寸已经核对，记录是否确定下一步处理？",
+        "options": {
+          "A": "先存草稿，暂不下单",
+          "B": "直接下单"
+        }
+      },
+      "target": "bag_execution",
+      "facts": {
+        "size_pending": false
+      },
+      "expected": "U",
+      "stratum": "execution"
+    },
+    {
+      "public": {
+        "id": "q04",
+        "scenario": "这次室内海报，墨水检测尚未有结果，选什么颜色？",
+        "options": {
+          "A": "海蓝色",
+          "B": "浅米色"
+        }
+      },
+      "target": "poster_choice",
+      "facts": {},
+      "expected": "U",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q05",
+        "scenario": "这次室内海报墨水已确认耐光，选什么颜色？",
+        "options": {
+          "A": "海蓝色",
+          "B": "浅米色"
+        }
+      },
+      "target": "poster_choice",
+      "facts": {
+        "lightfast_confirmed": true
+      },
+      "expected": "海蓝色",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q06",
+        "scenario": "同一盏书桌台灯，晚上读纸书，按现有安排选什么光？",
+        "options": {
+          "A": "暖光",
+          "B": "冷光"
+        }
+      },
+      "target": "lamp_choice",
+      "facts": {
+        "paper_reading": true
+      },
+      "expected": "U",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q07",
+        "scenario": "这轮讨论尚未确认会议室能否使用，采用哪种沟通方式？",
+        "options": {
+          "A": "先发书面意见",
+          "B": "先开语音讨论"
+        }
+      },
+      "target": "discussion_choice",
+      "facts": {},
+      "expected": "先发书面意见",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q08",
+        "scenario": "这轮讨论会议室不可用，采用哪种沟通方式？",
+        "options": {
+          "A": "先发书面意见",
+          "B": "先开语音讨论"
+        }
+      },
+      "target": "discussion_choice",
+      "facts": {
+        "room_available": false
+      },
+      "expected": "先发书面意见",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q09",
+        "scenario": "这次小区散步天气尚未确认，会选哪条路线？",
+        "options": {
+          "A": "走园径",
+          "B": "走连廊"
+        }
+      },
+      "target": "walk_choice",
+      "facts": {},
+      "expected": "U",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q10",
+        "scenario": "这次小区散步已经确定下雨，选哪条路线？",
+        "options": {
+          "A": "走园径",
+          "B": "走连廊"
+        }
+      },
+      "target": "walk_choice",
+      "facts": {
+        "raining": true
+      },
+      "expected": "走连廊",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q11",
+        "scenario": "这次样书快递的交付地点选哪里？",
+        "options": {
+          "A": "楼下服务台",
+          "B": "门口快递柜"
+        }
+      },
+      "target": "sample_choice",
+      "facts": {
+        "this_sample": true
+      },
+      "expected": "楼下服务台",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q12",
+        "scenario": "这次样书快递地址还没确认，订单怎样处理？",
+        "options": {
+          "A": "先存草稿",
+          "B": "直接寄出"
+        }
+      },
+      "target": "sample_execution",
+      "facts": {
+        "address_pending": true
+      },
+      "expected": "先存草稿",
+      "stratum": "execution"
+    },
+    {
+      "public": {
+        "id": "q13",
+        "scenario": "这次样书快递地址已经确认，是否已有明确的寄出安排？",
+        "options": {
+          "A": "先存草稿",
+          "B": "直接寄出"
+        }
+      },
+      "target": "sample_execution",
+      "facts": {
+        "address_pending": false
+      },
+      "expected": "U",
+      "stratum": "execution"
+    },
+    {
+      "public": {
+        "id": "q14",
+        "scenario": "展示墙目前更偏好哪种底色？",
+        "options": {
+          "A": "蓝底",
+          "B": "灰底"
+        }
+      },
+      "target": "wall_choice",
+      "facts": {},
+      "expected": "U",
+      "stratum": "preference"
+    },
+    {
+      "public": {
+        "id": "q15",
+        "scenario": "展示墙当前的制作安排是什么？",
+        "options": {
+          "A": "只做样片，暂不搭建",
+          "B": "直接搭建"
+        }
+      },
+      "target": "wall_execution",
+      "facts": {},
+      "expected": "只做样片，暂不搭建",
+      "stratum": "execution"
+    },
+    {
+      "public": {
+        "id": "q16",
+        "scenario": "新的徒步鞋选款目前选了哪款？",
+        "options": {
+          "A": "低帮鞋",
+          "B": "高帮鞋"
+        }
+      },
+      "target": "shoe_choice",
+      "facts": {},
+      "expected": "U",
+      "stratum": "preference"
+    }
+  ],
+  "facts_and_targets_are_author_annotations_not_NLU": true,
+  "real_model_performance_measured": false,
+  "independent_semantic_acceptance": false
+}
