@@ -1,6 +1,13 @@
 # Compression regression progress
 
-The latest [decision-target comparison](benchmarks/decision-targets-v1/MEASURED.md)
+The latest [lower-budget repeated-extraction study](benchmarks/compression-stability-v1/MEASURED.md)
+uses37of at most41attempts.1024whole characters retains **96/96** across two
+generations, two reads and both option orders;768scores **53/96**, including
+40missing cases from two invalid h68products and3omitted h93decisions. The
+remaining4reader slots expired. This is consumed development, not a new holdout
+or a production-default change.
+
+The preceding [decision-target comparison](benchmarks/decision-targets-v1/MEASURED.md)
 completed 21 calls: both methods score **96/96** on two consumed profiles and
 one new authored development fixture, with the candidate adding 99 characters
 in aggregate. This shows no observed advantage; the default remains unchanged.
@@ -26,6 +33,7 @@ unmeasured inventory. Original labels and the old 93/96 result are retained.
 | Revised-method h17 pilot |7|40|Old/new card each 40/40 twice; 1167→1200 characters|
 | Remaining h42/h68/h93 |19|120|Old strict 119/120, revised strict 118/120; no missing cells|
 | Decision-target comparison |21|96|Both strict 96/96; 80 repeated old cases plus 16 authored development cases; no accuracy or compression advantage|
+| Lower-budget repeated extraction |37|96per ceiling|1024strict96/96;768strict53/96including40missing;2invalid cards,4readers skipped|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -109,9 +117,10 @@ The new [21-call observation](benchmarks/decision-targets-v1/MEASURED.md) adds
 does not establish that the instructions repair prior losses. The original
 snapshot remains byte-for-byte unchanged.
 
-An [unexecuted compression/stability plan](benchmarks/compression-stability-v1/README.md)
-now freezes scope-v1 at768/1024whole characters, two new generations per source
-and two reads per card. Its source-only preparation, fixed-denominator scorer
-and controller pass15offline fault tests. It proposes at most41new attempts,
-requires a new explicit grant, adds no measured fidelity result and does not
-reuse the closed21-call scope.
+The [compression/stability plan](benchmarks/compression-stability-v1/README.md)
+and its15offline fault tests are preserved. Its new41-call scope is now closed
+with37actual children and613,614recorded tokens. A portable archive and9damage
+tests reproduce validity failures, missing denominators and observed losses.
+Four additional offline checks cover an[unmeasured when-field contract candidate](benchmarks/wire-contract-v1/README.md).
+Neither the candidate nor publication grants another service scope. All original
+source-policy and target-v2 records remain unchanged.

@@ -1,10 +1,15 @@
-# Compression and repeated extraction: unexecuted study plan
+# Compression and repeated extraction
+
+The [closed study](MEASURED.md) completed37of at most41attempts, with4dependent
+reads skipped for invalid products.1024whole characters retains strict96/96;
+768scores53/96including40missing cases. No retries or default change. The
+following preparation plan remains a historical record, not a new grant.
 
 The preceding [decision-target comparison](../decision-targets-v1/MEASURED.md)
 tied at96/96 and added99characters. It did not justify promoting target-v2.
 This plan instead keeps the measured **scope-v1 research method** fixed and
 tests lower budgets with repeated extraction. It does not change the production
-default. No actual service run or new fidelity result is included here.
+default. The actual observations are appended separately in[MEASURED.md](MEASURED.md).
 
 | Factor | Frozen choice |
 |---|---|
@@ -72,6 +77,7 @@ identity are not independently observable. All prior scopes remain closed.
 ```sh
 python benchmarks/compression-stability-v1/plan.py --out /path/to/new-proposal
 python -m unittest discover -s tests -p test_compression_stability.py -v
+python scripts/replay_compression_stability.py
 ```
 
 Preparation freezes17exact static requests and24conditional reader rules plus
