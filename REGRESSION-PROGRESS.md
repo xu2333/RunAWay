@@ -1,6 +1,12 @@
 # Compression regression progress
 
-The latest [lower-budget repeated-extraction study](benchmarks/compression-stability-v1/MEASURED.md)
+The latest[three-world source-policy study](benchmarks/remaining-world-frontier-v1/MEASURED.md)
+completes40calls:1024strict**62/69**,1536strict**61/69**, with all products valid
+and no missing cases. Known local exceptions still becomeU; all33personal-known
+and18unknown cases pass. The3preflagged w14cases retain their annotations and
+observations without pass/fail or new acceptance. No default changes.
+
+The preceding [lower-budget repeated-extraction study](benchmarks/compression-stability-v1/MEASURED.md)
 uses37of at most41attempts.1024whole characters retains **96/96** across two
 generations, two reads and both option orders;768scores **53/96**, including
 40missing cases from two invalid h68products and3omitted h93decisions. The
@@ -18,10 +24,10 @@ reference, revised cards retain **118/120** cases and existing cards **119/120**
 This does not establish a causal method difference. The production default is
 unchanged.
 
-The revised-method inventory has **160/232 cases measured**, with 72 j-profile
-cases unmeasured. Coverage means actual source-bound extraction/reading records
-exist, not that the cases passed. Three disputed w14 cells remain in the
-unmeasured inventory. Original labels and the old 93/96 result are retained.
+The revised-method inventory has[**232/232measurements bound**](benchmarks/regression-inventory-v1/README.md),
+with zero unmeasured cells and3disputed w14cells retained. Coverage means actual
+source-bound records exist, not that cases pass. The old160-case snapshot,
+original labels and93/96result remain unchanged; a new ledger appends72cases.
 
 ## Published observations
 
@@ -34,6 +40,7 @@ unmeasured inventory. Original labels and the old 93/96 result are retained.
 | Remaining h42/h68/h93 |19|120|Old strict 119/120, revised strict 118/120; no missing cells|
 | Decision-target comparison |21|96|Both strict 96/96; 80 repeated old cases plus 16 authored development cases; no accuracy or compression advantage|
 | Lower-budget repeated extraction |37|96per ceiling|1024strict96/96;768strict53/96including40missing;2invalid cards,4readers skipped|
+| Other3worlds, balanced budget/stability |40|69primary +3unscored|1024strict62/69;1536strict61/69; all products valid,33personal-known and18unknown retained|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -104,8 +111,8 @@ checks verify the retained requests, raw text, counters and artifacts, not
 omitted envelope bytes.
 
 Next, distinguish producer variation from reader variation and add harder
-decision-boundary cases. The remaining 72 cases, independent
-source/reference custody, real-person fidelity and cross-harness behavior remain
+decision-boundary cases. Independent
+source/reference custody, known local-exception losses, real-person fidelity and cross-harness behavior remain
 open. All scopes here are closed; publication grants no new experiment budget
 or production-default change.
 
@@ -125,10 +132,9 @@ Four additional offline checks cover an[unmeasured when-field contract candidate
 Neither the candidate nor publication grants another service scope. All original
 source-policy and target-v2 records remain unchanged.
 
-The next [unexecuted breadth/frontier plan](benchmarks/remaining-world-frontier-v1/README.md)
-freezes three other existing fictional worlds at1024/1536whole characters,
-two generations and two reads per card. It proposes40new attempts and requires
-a new exact grant. The69previously unflagged author cases form the prospective
-primary denominator;3preflagged w14cases retain original labels and response
-observations without pass/fail or acceptance. Preparation does not fill the
-remaining72inventory cases. Ten offline adapter/mask/failure tests pass.
+The[breadth/frontier plan](benchmarks/remaining-world-frontier-v1/README.md)
+is now closed with40actual children and573,494recorded tokens. Its69/3mask and
+all old references are preserved. Eight archive damage tests reproduce the
+results; six inventory damage tests protect the232bindings and prevent coverage
+from becoming an accuracy or endpoint claim. Source-only condition ownership
+and shared-scope inference need further work. All service scopes here are closed.
