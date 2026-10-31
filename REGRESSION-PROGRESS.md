@@ -138,3 +138,13 @@ all old references are preserved. Eight archive damage tests reproduce the
 results; six inventory damage tests protect the232bindings and prevent coverage
 from becoming an accuracy or endpoint claim. Source-only condition ownership
 and shared-scope inference need further work. All service scopes here are closed.
+
+An [unmeasured owned-condition candidate](benchmarks/owned-conditions-v1/README.md)
+now separates each rule's necessary conditions before factoring shared scope.
+Symbolic damage controls check that ordinary conditions cannot block a promised
+exception and that genuine global restrictions cannot disappear. The invariant
+is relative to the encoder's annotations, whose semantic correctness remains
+unverified. A new42-call,79-primary-case consumed-development comparison is
+prepared with fresh scope-v1 controls, two generations and two reads per card,
+at the same1536-character ceiling. Preparation makes no model calls, changes
+no default and grants no service authority.
