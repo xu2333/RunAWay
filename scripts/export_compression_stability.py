@@ -12,7 +12,7 @@ spec.loader.exec_module(replay)
 p = replay.engine.plan
 
 
-def export(root):
+def export(root, *, replay_fn=replay.replay, kind='actual_scope_v1_compression_stability41', primary_key='rows', extra=None):
     for name in ('manifest.json', 'observation-manifest.json'):
         for rel, expected in p.read(root / name)['files'].items():
             path = root / rel
@@ -57,20 +57,24 @@ def export(root):
     keys = ('status', 'stop', 'invalid_products', 'skipped', 'control_gates', 'attempt_reservations',
             'local_cli_child_intents', 'known_usage', 'missing_usage', 'simulated', 'scope_closed',
             'unused_slots_expire', 'scores')
-    data = {'kind': 'actual_scope_v1_compression_stability41', 'all_sources_fictional': True,
+    data = {'kind': kind, 'all_sources_fictional': True,
             'new_service_authority': False, 'production_default_changed': False,
             'independent_holdout': False, 'real_person_fidelity_verified': False,
             'sources': p.read(root / 'sources.json'), 'queries': p.read(root / 'queries.public.json'),
-            'reference_rows': p.read(root / 'reference.consumed-development.private.json')['rows'],
+            'reference_rows': p.read(root / 'reference.consumed-development.private.json')[primary_key],
             'slots': p.read(root / 'slots.json'), 'implementation_sha256': p.read(root / 'implementation-sha256.json'),
             'source_input_manifest_sha256': p.sha(root / 'manifest.json'),
             'source_observation_manifest_sha256': p.sha(root / 'observation-manifest.json'),
             'records': records, 'status': {k: state[k] for k in keys},
             'provenance_limits': 'Exact requests/raw values, artifacts and safe counters retained. Private approval records, machine paths, error messages and transport envelopes omitted. Envelope hashes are provenance, not reconstructed bytes. Replay reuses the frozen controller and references; it is not independent semantics, a new service invocation or a bill.'}
+    if extra:
+        if set(extra) & set(data):
+            raise ValueError('Extra metadata cannot override base evidence')
+        data.update(extra)
     text = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
     if re.search(r'/Users/|Documents/ChatGPT|Bearer\s+[A-Za-z0-9]|sk-[A-Za-z0-9]{24}|direct-human-', text):
         raise ValueError('Local/private metadata in export')
-    result = replay.replay(data)
+    result = replay_fn(data)
     return text, result
 
 

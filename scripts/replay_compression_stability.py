@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 spec = importlib.util.spec_from_file_location('archive_stability_engine', ROOT / 'benchmarks/compression-stability-v1/engine.py')
 engine = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(engine)
+from runaway.constraint_extract import parse_answer
 INPUT_MANIFEST = '658f1178c144dd8a238fcf50b84854446d1e2d071edd616f1e57ba33de2dcee2'
 DEFAULT = ROOT / 'benchmarks/compression-stability-v1/measured.synthetic.json'
 
@@ -26,8 +27,9 @@ def archived_error(name):
     return type(name, (Exception,), {})('Archived failure category; private error text omitted')
 
 
-def replay(data):
-    require(data['kind'] == 'actual_scope_v1_compression_stability41', 'Wrong scope')
+def replay(data, *, controller=engine, kind='actual_scope_v1_compression_stability41', input_manifest=INPUT_MANIFEST):
+    engine = controller
+    require(data['kind'] == kind, 'Wrong scope')
     for key in ('new_service_authority', 'production_default_changed', 'independent_holdout', 'real_person_fidelity_verified'):
         require(data[key] is False, 'Unsupported claim: ' + key)
     require(data['all_sources_fictional'] is True, 'Fiction boundary differs')
@@ -36,11 +38,11 @@ def replay(data):
             and data['reference_rows'] == inputs['rows'], 'Source/query/reference differs')
     require(data['implementation_sha256'] == engine.plan.implementation(), 'Frozen implementation differs')
     require(data['slots'] == engine.plan.slots(), 'Planned schedule differs')
-    require(data['source_input_manifest_sha256'] == INPUT_MANIFEST, 'Input manifest differs')
+    require(data['source_input_manifest_sha256'] == input_manifest, 'Input manifest differs')
     state, records = data['status'], data['records']
     require(state['scope_closed'] is True and state['simulated'] is False, 'Not a closed actual scope')
-    require(state['attempt_reservations'] == len(records) <= 41, 'Attempt ledger differs')
-    require(state['unused_slots_expire'] == 41-len(records), 'Unused count differs')
+    require(state['attempt_reservations'] == len(records) <= engine.plan.CAP, 'Attempt ledger differs')
+    require(state['unused_slots_expire'] == engine.plan.CAP-len(records), 'Unused count differs')
     require(len({r['execution_id'] for r in records}) == len(records), 'Duplicate execution')
     require(state['local_cli_child_intents'] == sum(r['local_cli_child_intent'] is True for r in records), 'Child ledger differs')
     position = 0
@@ -78,7 +80,7 @@ def replay(data):
     with tempfile.TemporaryDirectory() as temp:
         frozen = Path(temp) / 'inputs'
         engine.plan.prepare(frozen)
-        require(engine.plan.sha(frozen / 'manifest.json') == INPUT_MANIFEST, 'Reconstructed frozen package differs')
+        require(engine.plan.sha(frozen / 'manifest.json') == input_manifest, 'Reconstructed frozen package differs')
         destination = Path(temp) / 'archive-replay'
         # The injected archive has no service capability. Usage is copied evidence,
         # while this replay invocation itself is simulated and incurs no model cost.
@@ -101,7 +103,7 @@ def replay(data):
                 require(original['artifact_sha256'] == engine.plan.sha(artifact), 'Original artifact bytes differ')
             else:
                 require('card' not in original and 'artifact_sha256' not in original, 'Unbound card inserted')
-    decoded = {engine.plan.parent(r)+(r['read_repeat'],): engine.parse_answer(r['raw']) for r in records
+    decoded = {engine.plan.parent(r)+(r['read_repeat'],): parse_answer(r['raw']) for r in records
                if r['kind'] == 'read' and r['state'] == 'completed'}
     losses = []
     for budget in engine.plan.BUDGETS:

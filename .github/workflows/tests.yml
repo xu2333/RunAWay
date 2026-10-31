@@ -80,6 +80,10 @@ jobs:
         run: python benchmarks/decision-targets-v1/measured.py
       - name: Replay lower-budget extraction stability and invalid products (no calls)
         run: python scripts/replay_compression_stability.py
+      - name: Replay remaining-world losses and unscored disputed references (no calls)
+        run: python scripts/replay_remaining_world_frontier.py
+      - name: Verify all232source-bound observations without claiming a pass
+        run: python scripts/replay_regression_inventory.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

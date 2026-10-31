@@ -1,11 +1,18 @@
-# Remaining fictional worlds: unexecuted breadth/frontier plan
+# Remaining fictional worlds: breadth/frontier study
+
+The[closed40-call results](MEASURED.md) retain62/69primary cases at1024and61/69
+at1536, with no missing/invalid products. All33personal-known and18unknown
+cases pass, while known local exceptions still becomeU. The3disputed w14cases
+remain unscored. The original232-case inventory is now fully measured through
+a[separate source-binding audit](../regression-inventory-v1/README.md), not fully
+passing or semantically accepted. The following plan is preserved historically.
 
 The [closed37-call study](../compression-stability-v1/MEASURED.md) retains96/96
 at1024whole characters on two long fictional histories and a short development
 fixture. This next plan tests the same scope-v1 producer on **j16/j62/j85**,
 three existing34-message fictional worlds, at1024and1536characters. Both ceilings
 get two new generations per source and two reads per card. No service has been
-invoked by this preparation, and no production default changes.
+invoked by preparation; actual observations are appended in[MEASURED.md](MEASURED.md).
 
 The cap is **40new local CLI attempts**:4concurrent controls,12source-only
 extractions and24conditional reads. All12extractions precede any card reading.
@@ -76,6 +83,7 @@ cross-model validation, B37activation or default switch in this plan.
 ```sh
 python benchmarks/remaining-world-frontier-v1/plan.py --out /path/to/new-proposal
 python -m unittest discover -s tests -p test_remaining_world_frontier.py -v
+python scripts/replay_remaining_world_frontier.py
 ```
 
 Ten offline tests cover request/source isolation, masks and retained legacy
