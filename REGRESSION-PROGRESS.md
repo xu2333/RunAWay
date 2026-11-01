@@ -211,10 +211,14 @@ not proven unique causes. Eight archive damage tests preserve all samples and
 unchanged w14exclusion. No pilot pooling,baseline arm,independent generalization,
 new original-inventory cells or default switch. All actual budgets are closed.
 
-An [unmeasured source-only guidance variant](benchmarks/action-policy-v2/README.md)
+The [source-only guidance variant](benchmarks/action-policy-v2/README.md)
 addresses action-label wording and complete policy restatement without changing
 the graph compiler or reader. It adds no new semantic proof. Six offline tests
-exercise a [proposed14-call comparison](benchmarks/action-policy-comparison-v1/README.md)
+exercise the [14-call comparison](benchmarks/action-policy-comparison-v1/MEASURED.md)
 on the same j16source:two controls,four fresh extractions and eight reads,with
 23fixed cases and w14unscored. The guidance is development-informed;no old raw
-outputs or scored feedback are sent. It requires a new grant and has0actual calls.
+outputs or scored feedback are sent. It is now closed at14actual calls and
+203,966tokens:22/23candidate versus19/23baseline,three candidate-only cases and
+one shared night-shift known→Uloss. All four new cards fit724–799characters.
+Eight archive damage tests preserve both draws/reads and the unscored w14mask.
+No other-source validation or default switch;all actual budgets remain closed.

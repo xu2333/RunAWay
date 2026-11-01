@@ -1,4 +1,9 @@
-# Proposed14-call encoding-guidance comparison — unapproved and unrun
+# Closed14-call encoding-guidance comparison
+
+The [measured result](MEASURED.md) records14actual calls and203,966tokens.
+Candidate22/23versus baseline19/23,with no missing and all four cards≤1536.
+Three known choices recover in the paired endpoint;w11night-shift remainsU.
+The scope is closed. The design below is preserved as historical protocol.
 
 Compare fresh original graph-v1and [policy-v2guidance](../action-policy-v2/README.md)
 on the same consumed fictional j16source:34messages,48public forms,23primary
