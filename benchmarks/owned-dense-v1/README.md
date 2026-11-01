@@ -1,4 +1,10 @@
-# Lossless dense public layout — offline projection proof, reader untested
+# Lossless dense public layout — literal projection proof
+
+Update2026-11-01: the [closed reader study](../dense-layout-probe-v1/MEASURED.md)
+now observes320/320expanded/dense response agreement and39/40strict fidelity,
+with one shared upstream unknown-boundary loss. This does not establish fresh
+generation stability or universal interpretation. The offline derivation below
+and its sealed fields retain their original meaning.
 
 The [closed budget-aware probe](../budgeted-table-probe-v1/MEASURED.md) produces
 two structurally legal ledgers whose public cards still fail1536characters:
@@ -35,7 +41,7 @@ or dictionary-candidate ablation and not a new neural compression result.
 The first dense view uses3dictionary entries; the second needs none. The first
 fits exactly at the cap. No claim of universally minimal length or performance
 on unseen sources. No old source record,failed output,skip or denominator is
-replaced. **No model has read these dense views yet**. Program equivalence does
+replaced. **At derivation time no model had read these dense views**. Program equivalence does
 not prove LLM interpretation,source entailment,privacy or behavioral fidelity.
 An experimental standard `portable_expression` can carry the resulting text,
 but production defaults and original profile formats remain unchanged.
@@ -50,6 +56,6 @@ unknowns,dictionary decoding without private metadata,symbol collisions,
 malformed syntax,source-role/quote rejection and hard budget failure. Four
 derived-evidence controls reject changed parents,projections,old failures or
 claims that offline formatting proves fidelity/repairs a closed scope. They
-perform0new model calls. The [next14-call read-only plan](../dense-layout-probe-v1/README.md)
-requires a new direct human grant and explicitly labels expanded above-budget
-material as a diagnostic,not a valid compressed candidate.
+perform0new model calls. The [later14-call read-only study](../dense-layout-probe-v1/README.md)
+is now closed and explicitly labels expanded above-budget material as a
+diagnostic,not a valid compressed candidate.

@@ -182,5 +182,21 @@ The [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
 is closed at10actual calls. Its40cases cannot be combined with the prior wire's
 39jointly valid cases into a new79-case result. Eight mutation tests reproduce
 the observed failures. The later budget-aware scope is now closed too;only the
-new fixed-parent dense-layout reading proposal remains unapproved. Literal
-projection equivalence does not establish model interpretation or style fidelity.
+fixed-parent dense-layout scope is now closed at14actual calls. Its
+[portable reader archive](benchmarks/dense-layout-probe-v1/MEASURED.md) records
+331,066tokens,320/320paired expanded/dense answer agreement,and39/40strict
+fidelity for both views versus40/40baseline. One shared permission-unknown loss
+remains. Eight damage tests preserve fixed-view lineage and denominators.
+Literal equivalence alone is not behavioral fidelity; even this observed
+agreement does not verify new generation stability or unseen sources.
+
+The [typed action-revision prototype](benchmarks/action-revision-graph-v1/README.md)
+mechanically inherits conditions on declared action-only edges while retaining
+independent exceptions and past facts. Six symbolic tests and five controller
+fixtures pass; LLM edge semantics and original-condition completeness remain
+unverified. Its [one-card five-call pilot](benchmarks/action-revision-pilot-v1/MEASURED.md)
+is now closed at5calls and108,874tokens: one1078-character card passes40/40
+bothreads/bothorders,including the unchanged permission-unknown n02. Five archive
+damage tests preserve its distinct4-answer/case endpoint. This is not new
+generation stability or causal baseline evidence. All actual
+service scopes are closed; no new default or original-inventory cells.
