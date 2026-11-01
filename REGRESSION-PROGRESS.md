@@ -201,11 +201,20 @@ damage tests preserve its distinct4-answer/case endpoint. This is not new
 generation stability or causal baseline evidence. All actual
 service scopes are closed; no new default or original-inventory cells.
 
-The [three-source graph stability plan](benchmarks/action-revision-stability-v1/README.md)
-holds the pilot's encoder/renderer fixed and prepares24new slots: six controls,
-six source-only extractions and twelve reads. It reuses96fictional messages and
-160public forms,with79primary cases and unchanged j16/w14exclusion. Each case
-needs two fresh cards/bothreads/bothorders correct;invalid generations stay
-missing. Eight offline tests pass,but the study has0actual model calls and
-requires a new direct grant. No pilot pooling,baseline arm or independent
-generalization claim. Preparation/publication does not reopen a closed budget.
+The [three-source graph stability study](benchmarks/action-revision-stability-v1/MEASURED.md)
+is now closed at24actual calls and375,449tokens. All six new cards fit574–1133
+characters. h93passes40/40and development16/16;j16passes18/23,giving74/79strict
+cases with no missing. All29unknowns pass,but five known choices becomeU.
+One j16card scores23then20on identical repeated reads. Action-field qualifiers
+and over-inherited gift background conditions are source-linked hypotheses,
+not proven unique causes. Eight archive damage tests preserve all samples and
+unchanged w14exclusion. No pilot pooling,baseline arm,independent generalization,
+new original-inventory cells or default switch. All actual budgets are closed.
+
+An [unmeasured source-only guidance variant](benchmarks/action-policy-v2/README.md)
+addresses action-label wording and complete policy restatement without changing
+the graph compiler or reader. It adds no new semantic proof. Six offline tests
+exercise a [proposed14-call comparison](benchmarks/action-policy-comparison-v1/README.md)
+on the same j16source:two controls,four fresh extractions and eight reads,with
+23fixed cases and w14unscored. The guidance is development-informed;no old raw
+outputs or scored feedback are sent. It requires a new grant and has0actual calls.
