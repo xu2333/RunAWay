@@ -1,4 +1,10 @@
-# Three-source graph stability study — proposed24calls,not yet run
+# Closed three-source graph stability study
+
+The [measured result](MEASURED.md) records24actual calls and375,449tokens:
+h93 40/40,development16/16,j16 18/23,pooled74/79strict cases. All six cards fit
+574–1133characters;five known choices become unknown,and one j16card changes
+three outcomes between identical reads. No missing cases. The scope is closed.
+The proposed design below is preserved as historical protocol.
 
 The [closed one-card pilot](../action-revision-pilot-v1/MEASURED.md) produces
 one1078-character card with40/40across two reads. One observed generation does
