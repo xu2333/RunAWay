@@ -181,7 +181,7 @@ sealed inputs remain unchanged; this result grants no new service authority.
 The [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
 is closed at10actual calls. Its40cases cannot be combined with the prior wire's
 39jointly valid cases into a new79-case result. Eight mutation tests reproduce
-the observed failures. The later budget-aware scope is now closed too;only the
+the observed failures. The later budget-aware scope is now closed too;the
 fixed-parent dense-layout scope is now closed at14actual calls. Its
 [portable reader archive](benchmarks/dense-layout-probe-v1/MEASURED.md) records
 331,066tokens,320/320paired expanded/dense answer agreement,and39/40strict
@@ -200,3 +200,12 @@ bothreads/bothorders,including the unchanged permission-unknown n02. Five archiv
 damage tests preserve its distinct4-answer/case endpoint. This is not new
 generation stability or causal baseline evidence. All actual
 service scopes are closed; no new default or original-inventory cells.
+
+The [three-source graph stability plan](benchmarks/action-revision-stability-v1/README.md)
+holds the pilot's encoder/renderer fixed and prepares24new slots: six controls,
+six source-only extractions and twelve reads. It reuses96fictional messages and
+160public forms,with79primary cases and unchanged j16/w14exclusion. Each case
+needs two fresh cards/bothreads/bothorders correct;invalid generations stay
+missing. Eight offline tests pass,but the study has0actual model calls and
+requires a new direct grant. No pilot pooling,baseline arm or independent
+generalization claim. Preparation/publication does not reopen a closed budget.
