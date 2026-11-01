@@ -1,4 +1,9 @@
-# Object-table wire candidate — unmeasured
+# Object-table wire candidate — measured capacity and budget failure
+
+The [closed h93probe](../object-table-probe-v1/MEASURED.md) produces two legal
+12-object tables but no valid1536card: packed attempts are1999/2170characters.
+The candidate's40cases remain missing. The original wire and calibration below
+are preserved; object-count alignment does not establish usable compression.
 
 The owned-condition experiment's two h93 extractions each contain **24 rows
 across 14 distinct objects**. The private flat-row schema allows up to30 rows,

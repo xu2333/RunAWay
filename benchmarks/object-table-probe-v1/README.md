@@ -1,4 +1,10 @@
-# Proposed14-attempt object-capacity probe — not authorized or run
+# Object-capacity probe — closed with10actual calls
+
+The [measured result](MEASURED.md) retains the failed14-slot scope: both new
+products meet object count but exceed1536characters (1999/2170after lossless
+packing). Their4readers expire, leaving40missing candidate cases. Baseline
+strict38/40includes a failed identical repeat. The original design below is
+preserved; this scope is closed and grants no remaining calls.
 
 The [closed owned-condition experiment](../owned-conditions-v1/MEASURED.md)
 improves35→38on39jointly valid cases, but both h93 products produce14objects
