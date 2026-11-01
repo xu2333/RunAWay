@@ -1,6 +1,14 @@
 # Compression regression progress
 
-The latest [owned-condition comparison](benchmarks/owned-conditions-v1/MEASURED.md)
+The latest [object-table h93probe](benchmarks/object-table-probe-v1/MEASURED.md)
+closes14slots with10actual calls and201,724recorded tokens. The candidate meets
+the12-object capacity but its packed1999/2170characters exceed1536, leaving
+**40missing cases**. Baseline strict**38/40**retains a failed identical repeat.
+Four reader slots expire. An [unmeasured budget-aware request](benchmarks/budgeted-object-table-v1/README.md)
+and [new14-attempt proposal](benchmarks/budgeted-table-probe-v1/README.md) are
+prepared without changing the wire/compiler or any historical observations.
+
+The preceding [owned-condition comparison](benchmarks/owned-conditions-v1/MEASURED.md)
 closes42slots with38actual children and558,395recorded tokens. Scope-v1scores
 **75/79**; the candidate **38/79,40missing** because both h93products exceed
 the12-group capacity. On39jointly valid cases the candidate improves35→38,
@@ -51,6 +59,7 @@ original labels and93/96result remain unchanged; a new ledger appends72cases.
 | Lower-budget repeated extraction |37|96per ceiling|1024strict96/96;768strict53/96including40missing;2invalid cards,4readers skipped|
 | Other3worlds, balanced budget/stability |40|69primary +3unscored|1024strict62/69;1536strict61/69; all products valid,33personal-known and18unknown retained|
 | Owned-condition source-only comparison |38|79primary +1unscored|Baseline75/79;candidate38/79with40missing from two invalid h93products;3known exceptions recover in jointly valid subset|
+| Object-table capacity probe |10|40|Baseline38/40;candidate0/40with40missing because both packed candidates exceed1536characters;4readers expire|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -159,7 +168,7 @@ with38actual calls at the same1536-character ceiling. Eight archive damage
 tests reproduce scores, failed products and missing denominators. The original
 sealed inputs remain unchanged; this result grants no new service authority.
 
-A new [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
-is prepared but unapproved and unrun. It tests only h93capacity and fidelity,
-with fresh controls and both methods at1536characters. Its40cases cannot be
-combined with the prior wire's39jointly valid cases into a new79-case result.
+The [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
+is closed at10actual calls. Its40cases cannot be combined with the prior wire's
+39jointly valid cases into a new79-case result. Eight mutation tests reproduce
+the new observed failures. The separate budget-aware proposal remains unapproved.
