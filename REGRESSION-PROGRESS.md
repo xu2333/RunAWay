@@ -1,6 +1,15 @@
 # Compression regression progress
 
-The latest [object-table h93probe](benchmarks/object-table-probe-v1/MEASURED.md)
+The latest [budget-aware request probe](benchmarks/budgeted-table-probe-v1/MEASURED.md)
+closes14slots at10actual calls and203,574tokens. Both candidates still overflow
+1536(1889/1687),leaving40missing;fresh baseline is strict40/40. Four slots expire.
+A [separate offline dense codec](benchmarks/owned-dense-v1/README.md) preserves
+the same literal public projections at1536/1413including its guide and public
+JSON dictionary. This is new lossless formatting evidence,not LLM fidelity or
+replacement of the closed failures. Its[new14read-only test](benchmarks/dense-layout-probe-v1/README.md)
+is prepared but unapproved/unrun;expanded above-budget views are diagnostics.
+
+The preceding [object-table h93probe](benchmarks/object-table-probe-v1/MEASURED.md)
 closes14slots with10actual calls and201,724recorded tokens. The candidate meets
 the12-object capacity but its packed1999/2170characters exceed1536, leaving
 **40missing cases**. Baseline strict**38/40**retains a failed identical repeat.
@@ -60,6 +69,7 @@ original labels and93/96result remain unchanged; a new ledger appends72cases.
 | Other3worlds, balanced budget/stability |40|69primary +3unscored|1024strict62/69;1536strict61/69; all products valid,33personal-known and18unknown retained|
 | Owned-condition source-only comparison |38|79primary +1unscored|Baseline75/79;candidate38/79with40missing from two invalid h93products;3known exceptions recover in jointly valid subset|
 | Object-table capacity probe |10|40|Baseline38/40;candidate0/40with40missing because both packed candidates exceed1536characters;4readers expire|
+| Budget-aware request probe |10|40|Baseline40/40;candidate0/40with40missing because packed candidates1889/1687still exceed1536;4readers expire|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -171,4 +181,6 @@ sealed inputs remain unchanged; this result grants no new service authority.
 The [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
 is closed at10actual calls. Its40cases cannot be combined with the prior wire's
 39jointly valid cases into a new79-case result. Eight mutation tests reproduce
-the new observed failures. The separate budget-aware proposal remains unapproved.
+the observed failures. The later budget-aware scope is now closed too;only the
+new fixed-parent dense-layout reading proposal remains unapproved. Literal
+projection equivalence does not establish model interpretation or style fidelity.

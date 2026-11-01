@@ -88,6 +88,10 @@ jobs:
         run: python scripts/replay_owned_conditions.py
       - name: Replay object-table budget failures and identical-reader instability (no calls)
         run: python scripts/replay_object_table_probe.py
+      - name: Replay budget-aware request failures and offline lossless dense layouts (no calls)
+        run: |
+          python scripts/replay_budgeted_table_probe.py
+          python benchmarks/owned-dense-v1/evidence.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
