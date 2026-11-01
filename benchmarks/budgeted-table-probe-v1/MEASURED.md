@@ -47,9 +47,11 @@ these fixed semantic projections, not a new model sample or behavioral result.
 The original1889/1687failures, four skips and0/40with40missing are unchanged.
 No new service calls or reader-fidelity observations are obtained by reformatting.
 
-A separately [proposed14-call read-only comparison](../dense-layout-probe-v1/README.md)
-will compare the fixed baseline cards, uncapped complete projection diagnostics
-and in-budget dense views. It is unapproved and unrun. Two inherited producer
+A separate [closed14-call read-only comparison](../dense-layout-probe-v1/MEASURED.md)
+compares fixed baseline cards,uncapped complete diagnostics and dense views.
+Expanded/dense agree on320/320responses and both score39/40with one shared
+unknown-boundary loss. This later result does not replace this scope's failed
+products or missing cases. Two inherited producer
 outputs do not constitute new generation-stability samples. Expanded diagnostic
 views are not compressed candidates and are explicitly exempt from the1536cap.
 

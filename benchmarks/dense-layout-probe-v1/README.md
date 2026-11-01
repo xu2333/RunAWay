@@ -1,4 +1,10 @@
-# Proposed14read-only layout calls — not authorized or run
+# Closed14read-only layout calls — fixed-parent interpretation
+
+The [measured result](MEASURED.md) records14actual calls and331,066tokens.
+Expanded and dense agree on320/320paired responses;both score39/40with the
+same missing-permission unknown loss. Baseline scores40/40. No new extraction
+or generation-stability evidence. The scope is closed. The design below is
+preserved; it no longer describes a pending service request.
 
 The [dense codec's offline derivation](../owned-dense-v1/README.md) converts both
 unchanged prior h93ledgers to1536/1413characters and reconstructs all literal

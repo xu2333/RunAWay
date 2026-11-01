@@ -92,6 +92,10 @@ jobs:
         run: |
           python scripts/replay_budgeted_table_probe.py
           python benchmarks/owned-dense-v1/evidence.py
+      - name: Replay fixed-parent compact layout interpretation (no calls)
+        run: |
+          python scripts/replay_dense_layout_probe.py
+          python scripts/replay_action_revision_pilot.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
