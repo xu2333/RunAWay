@@ -1,5 +1,11 @@
 # Per-rule conditions before shared scope
 
+**Measured update:** the [closed38-call observation](MEASURED.md) scores75/79
+for scope-v1 and38/79for this candidate, including40missing h93cases from two
+invalid14-group products. On the39jointly valid cases it improves35→38, with
+substantial added length. This is not a replacement-ready method. The original
+preparation and frozen source-only candidate below remain unchanged.
+
 The previous [40-call study](../remaining-world-frontier-v1/MEASURED.md)
 retains **62/69** cases at 1024 characters and **61/69** at 1536. Explicit local
 exceptions sometimes become unknown even though their triggers and actions
@@ -48,7 +54,7 @@ python benchmarks/owned-conditions-v1/plan.py --out /tmp/runaway-owned-review
 Preparation creates frozen inputs only; this public package has no model
 backend, grant issuer or executable service launcher.
 
-## Proposed new 42-call comparison — not authorized or run
+## Original 42-call design — now closed,38actual calls
 
 - **96 existing fictional messages**: h93 (48), j16 (34), authored development
   fixture (14). Three distinct banks contain 160 public question forms.

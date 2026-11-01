@@ -84,6 +84,8 @@ jobs:
         run: python scripts/replay_remaining_world_frontier.py
       - name: Verify all232source-bound observations without claiming a pass
         run: python scripts/replay_regression_inventory.py
+      - name: Replay owned-condition losses, failed capacity and expired readers (no calls)
+        run: python scripts/replay_owned_conditions.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

@@ -1,6 +1,15 @@
 # Compression regression progress
 
-The latest[three-world source-policy study](benchmarks/remaining-world-frontier-v1/MEASURED.md)
+The latest [owned-condition comparison](benchmarks/owned-conditions-v1/MEASURED.md)
+closes42slots with38actual children and558,395recorded tokens. Scope-v1scores
+**75/79**; the candidate **38/79,40missing** because both h93products exceed
+the12-group capacity. On39jointly valid cases the candidate improves35→38,
+recovering3known exceptions at considerable added length; night-shift remainsU.
+Four skipped readers expired. No default changes. A separately
+[unmeasured object-table wire](benchmarks/owned-object-table-v1/README.md)
+aligns object count with the binder without changing these failed observations.
+
+The preceding[three-world source-policy study](benchmarks/remaining-world-frontier-v1/MEASURED.md)
 completes40calls:1024strict**62/69**,1536strict**61/69**, with all products valid
 and no missing cases. Known local exceptions still becomeU; all33personal-known
 and18unknown cases pass. The3preflagged w14cases retain their annotations and
@@ -41,6 +50,7 @@ original labels and93/96result remain unchanged; a new ledger appends72cases.
 | Decision-target comparison |21|96|Both strict 96/96; 80 repeated old cases plus 16 authored development cases; no accuracy or compression advantage|
 | Lower-budget repeated extraction |37|96per ceiling|1024strict96/96;768strict53/96including40missing;2invalid cards,4readers skipped|
 | Other3worlds, balanced budget/stability |40|69primary +3unscored|1024strict62/69;1536strict61/69; all products valid,33personal-known and18unknown retained|
+| Owned-condition source-only comparison |38|79primary +1unscored|Baseline75/79;candidate38/79with40missing from two invalid h93products;3known exceptions recover in jointly valid subset|
 
 Phases overlap: do not sum case denominators or treat option rotations,
 repeated reads or shared templates as independent samples. References are
@@ -139,12 +149,17 @@ results; six inventory damage tests protect the232bindings and prevent coverage
 from becoming an accuracy or endpoint claim. Source-only condition ownership
 and shared-scope inference need further work. All service scopes here are closed.
 
-An [unmeasured owned-condition candidate](benchmarks/owned-conditions-v1/README.md)
-now separates each rule's necessary conditions before factoring shared scope.
+The [owned-condition candidate](benchmarks/owned-conditions-v1/README.md)
+separates each rule's necessary conditions before factoring shared scope.
 Symbolic damage controls check that ordinary conditions cannot block a promised
 exception and that genuine global restrictions cannot disappear. The invariant
 is relative to the encoder's annotations, whose semantic correctness remains
-unverified. A new42-call,79-primary-case consumed-development comparison is
-prepared with fresh scope-v1 controls, two generations and two reads per card,
-at the same1536-character ceiling. Preparation makes no model calls, changes
-no default and grants no service authority.
+unverified. Its42-slot,79-primary-case consumed-development comparison is closed
+with38actual calls at the same1536-character ceiling. Eight archive damage
+tests reproduce scores, failed products and missing denominators. The original
+sealed inputs remain unchanged; this result grants no new service authority.
+
+A new [14-attempt object-table probe](benchmarks/object-table-probe-v1/README.md)
+is prepared but unapproved and unrun. It tests only h93capacity and fidelity,
+with fresh controls and both methods at1536characters. Its40cases cannot be
+combined with the prior wire's39jointly valid cases into a new79-case result.
