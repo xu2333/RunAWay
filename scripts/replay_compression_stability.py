@@ -27,7 +27,8 @@ def archived_error(name):
     return type(name, (Exception,), {})('Archived failure category; private error text omitted')
 
 
-def replay(data, *, controller=engine, kind='actual_scope_v1_compression_stability41', input_manifest=INPUT_MANIFEST):
+def replay(data, *, controller=engine, kind='actual_scope_v1_compression_stability41', input_manifest=INPUT_MANIFEST,
+           axes=None, axis_name='budget', record_fields=()):
     engine = controller
     require(data['kind'] == kind, 'Wrong scope')
     for key in ('new_service_authority', 'production_default_changed', 'independent_holdout', 'real_person_fidelity_verified'):
@@ -92,7 +93,7 @@ def replay(data, *, controller=engine, kind='actual_scope_v1_compression_stabili
             require(result[key] == state[key], 'Controller/scorer ledger differs: ' + key)
         require(len(result['records']) == len(records), 'Replayed attempt count differs')
         keys = ('slot', 'kind', 'profile', 'budget', 'generation', 'read_repeat', 'key', 'execution_id',
-                'state', 'request_sha256', 'usage')
+                'state', 'request_sha256', 'usage') + tuple(record_fields)
         for original, restored in zip(records, result['records']):
             require(all(original[k] == restored[k] for k in keys), 'Restored record differs')
             require(original.get('error_type') == restored.get('error_type'), 'Failure category differs')
@@ -106,14 +107,14 @@ def replay(data, *, controller=engine, kind='actual_scope_v1_compression_stabili
     decoded = {engine.plan.parent(r)+(r['read_repeat'],): parse_answer(r['raw']) for r in records
                if r['kind'] == 'read' and r['state'] == 'completed'}
     losses = []
-    for budget in engine.plan.BUDGETS:
+    for axis in engine.plan.BUDGETS if axes is None else axes:
         for row in inputs['rows']:
             pid = row['person']
-            values = [[[decoded.get((pid, budget, g, repeat), {}).get(q) for q in row['query_ids']]
+            values = [[[decoded.get((pid, axis, g, repeat), {}).get(q) for q in row['query_ids']]
                        for repeat in (0, 1)] for g in (0, 1)]
             flat = [v for generation in values for reading in generation for v in reading]
             if any(v != row['gold'] for v in flat):
-                losses.append({'profile': pid, 'budget': budget, 'case': row['case'], 'gold': row['gold'],
+                losses.append({'profile': pid, axis_name: axis, 'case': row['case'], 'gold': row['gold'],
                                'missing': any(v is None for v in flat), 'generations_reads_orders': values})
     return {'actual_original_attempts': len(records), 'actual_original_children': state['local_cli_child_intents'],
             'original_status': state['status'], 'original_stop': state['stop'], 'known_original_usage': state['known_usage'],

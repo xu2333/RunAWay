@@ -12,7 +12,8 @@ spec.loader.exec_module(replay)
 p = replay.engine.plan
 
 
-def export(root, *, replay_fn=replay.replay, kind='actual_scope_v1_compression_stability41', primary_key='rows', extra=None):
+def export(root, *, replay_fn=replay.replay, kind='actual_scope_v1_compression_stability41', primary_key='rows', extra=None,
+           record_fields=()):
     for name in ('manifest.json', 'observation-manifest.json'):
         for rel, expected in p.read(root / name)['files'].items():
             path = root / rel
@@ -29,7 +30,7 @@ def export(root, *, replay_fn=replay.replay, kind='actual_scope_v1_compression_s
         if p.digest(req) != rec['request_sha256']:
             raise ValueError('Original request differs')
         out = {k: rec[k] for k in ('slot', 'kind', 'profile', 'budget', 'generation', 'read_repeat', 'key',
-                'execution_id', 'state', 'request_sha256', 'usage')}
+                'execution_id', 'state', 'request_sha256', 'usage') + tuple(record_fields)}
         out.update(request=req, local_cli_child_intent=(folder / 'backend-child-intent.json').exists())
         prov, raw = {}, folder / 'raw-response.json'
         out['raw_present'] = raw.exists()
