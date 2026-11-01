@@ -1,4 +1,8 @@
-# Experimental action-label and policy-restatement guidance — unmeasured
+# Experimental action-label and policy-restatement guidance
+
+Update: the [closed comparison](../action-policy-comparison-v1/MEASURED.md)
+observes22/23strict cases versus19/23fresh original-graph baseline. Night-shift
+still fails;there is no new independent semantic proof or other-source validation.
 
 The [closed three-source study](../action-revision-stability-v1/MEASURED.md)
 finds five j16known choices answered unknown. Source-linked hypotheses include
@@ -30,5 +34,5 @@ This guidance is developed after inspecting consumed-study failures. It is not
 independent generalization or isolated-component evidence. No old raw cards,
 responses,scores,question labels or case-specific feedback enter extraction;
 the new generic guidance itself is sent and disclosed. The proposed
-[14-call comparison](../action-policy-comparison-v1/README.md) has0actual calls
-and requires new human authorization. No production default changes.
+[14-call comparison](../action-policy-comparison-v1/README.md) is now closed at
+14actual calls. Its development-informed result changes no production default.
