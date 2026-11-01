@@ -222,3 +222,13 @@ outputs or scored feedback are sent. It is now closed at14actual calls and
 one shared night-shift known→Uloss. All four new cards fit724–799characters.
 Eight archive damage tests preserve both draws/reads and the unscored w14mask.
 No other-source validation or default switch;all actual budgets remain closed.
+
+The [opt-in order-target diagnostic](benchmarks/order-targets-v1/README.md)
+keeps the source-offered core on the choice target and the complete ordered
+wording on a distinct execution target. All original guards remain. An early
+775/772-character draft exposed a guard-placement confound;it remains replayable.
+The current757/754views hold every other original public line fixed. This is
+post-hoc developer annotation with0new calls,not an automatic encoder or semantic
+proof. Six prototype,five lineage/conservation and five controller tests cover
+the [unapproved10-call fixed-view plan](benchmarks/order-target-read-v1/README.md).
+It requires a new grant and does not replace the closed22/23result.

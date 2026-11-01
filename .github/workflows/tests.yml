@@ -98,6 +98,8 @@ jobs:
           python scripts/replay_action_revision_pilot.py
           python scripts/replay_action_revision_stability.py
           python scripts/replay_action_policy_comparison.py
+      - name: Check annotated order-target conservation and recorded preparation confound
+        run: python benchmarks/order-targets-v1/evidence.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
