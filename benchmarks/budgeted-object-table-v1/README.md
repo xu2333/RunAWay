@@ -1,4 +1,10 @@
-# Budget-aware object-table encoder — unmeasured
+# Budget-aware object-table encoder — measured budget failure
+
+The [closed new14-slot study](../budgeted-table-probe-v1/MEASURED.md) completes
+10actual calls. Both candidate generations still overflow1536(1889/1687after
+packing),so all40candidate cases remain missing. Baseline is strict40/40.
+This encoder request alone is not a usable compression repair. Its original
+wire/compiler and calibration below remain unchanged.
 
 The [object-table probe](../object-table-probe-v1/MEASURED.md) reaches the
 12-object capacity but both candidate outputs exceed1536characters after

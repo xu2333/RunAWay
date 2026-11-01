@@ -1,4 +1,10 @@
-# Proposed14-attempt budget-aware probe — not authorized or run
+# Budget-aware probe — closed with10actual calls
+
+The [measured result](MEASURED.md) records baseline40/40and candidate0/40with
+40missing: both packed candidate outputs exceed1536(1889/1687). Four readers
+expire. A separate offline dense renderer reaches1536/1413without dropping
+literal semantic fields; it has no reader-fidelity observations and does not
+replace these failures. The frozen original study design below remains intact.
 
 The [preceding object-table study](../object-table-probe-v1/MEASURED.md) closes
 at10actual calls: candidate1999/2170packed characters exceed1536, yielding
