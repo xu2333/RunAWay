@@ -1,4 +1,9 @@
-# Proposed8-call task-contract diagnostic — unapproved and unrun
+# Task-contract diagnostic — frozen protocol and actual result
+
+The [closed8-call result](MEASURED.md) is original11/12versus explicit12/12
+in both reads,under the same495-character card. Old scores stay unchanged;this
+is not automatic repair or accepted semantic equivalence. The original proposal
+keeps its unapproved preparation state;actual evidence is separate.
 
 The [name-marker probe](../named-target-diagnostic-v1/MEASURED.md) did not
 stably recover c05:all three views remain11/12strictly. Before changing the
@@ -61,6 +66,7 @@ Seven offline fixture checks cover exact two-form changes,unchanged memory/
 source/options/reference,packet isolation,both control stops,fixed12-case
 denominators,repeat equality,fatal/final closure and exclusive freezing. Four
 local grant-refusal checks include rejecting the closed same-cap named8scope.
-Fixtures are not measured fidelity;new model calls0. New execution requires a
-separate direct approval. No independent semantic/human/cross-harness validation
+Fixtures are not measured fidelity. Preparation made0calls;the separately
+approved8-attempt scope is now used and closed. New execution requires a
+new direct approval. No independent semantic/human/cross-harness validation
 or original232inventory coverage follows.
