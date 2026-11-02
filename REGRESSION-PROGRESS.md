@@ -263,4 +263,14 @@ is prepared offline only:unchanged policy-v2/source-order-v3,fresh two-generatio
 comparison on existing h93/dev62messages,112forms and56cases. Six controller
 checks protect own-source/bank isolation and fixed missing denominators. This
 excludes j16and auxiliary ordering questions,no asynchronous79-case pooling.
-No new grant or actual calls;all prior scopes remain closed.
+The preparation package was frozen without service authority.
+
+The [actual28-call collateral result](benchmarks/source-order-regression-v1/MEASURED.md)
+is now closed:both fresh methods score56/56,h93at40/40and devat16/16,
+including33known/23unknown,with no invalid cards,missing,skips or retries.
+All four new-method cards had null order annotations;the compiler did not fill
+them in. Recorded usage454034tokens. Eight archive damage tests preserve the
+56-case endpoint and reject old23/new56pooling claims. Alongside the separate
+j16development result,this supports freezing this candidate for fresh-source
+evaluation;it does not establish independent generalization or change defaults.
+All actual call scopes are closed.
