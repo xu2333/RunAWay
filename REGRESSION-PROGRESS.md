@@ -322,3 +322,20 @@ isolation,unchanged facts/options/reference and12-case denominators. This is
 post-hoc intent clarification,not accepted semantic equivalence or a replacement
 of old scores. Inputs are frozen,unapproved and unrun;all actual scopes remain
 closed and no defaults changed.
+
+The [actual task-contract8 result](benchmarks/question-contract-diagnostic-v1/MEASURED.md)
+is closed:original11/12versus explicit future-choice12/12in both reads,using
+the same495-character card. Both independent full controls pass12/12;both none
+controls4/12. Application requests differ only in the two task descriptors,and
+original read digests match the preceding cohort. This supports fixed-memory
+task sensitivity in one inherited parent,not accepted paraphrase equivalence,
+automatic repair or upgrading prior45/48/11/12scores. Eight archive checks
+preserve packets/controls and12-case denominators. Usage88728tokens,no missing,
+retries or default changes;all actual model scopes are closed.
+
+The [offline task-contract authoring aid](benchmarks/task-contract-v1/README.md)
+renders future tasks from explicit choice/order/past/commitment roles and requires
+user-literal support plus a discriminating in-option contrast witness. Seven
+tests catch structural/answer-space blind spots such as the remote-proposal
+case. These are provenance/instrument checks,not semantic entailment or observed
+model behaviour;they do not change any frozen benchmark or grant new calls.
