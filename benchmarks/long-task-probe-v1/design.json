@@ -1,0 +1,64 @@
+{
+  "kind": "controlled_long_context_derivative",
+  "fictional_profiles": 8,
+  "dependent_template_families": 4,
+  "source_messages": 192,
+  "cases": 40,
+  "known": 28,
+  "unknown": 12,
+  "active_user_message_positions": {
+    "repair0": {
+      "choice": 5,
+      "past": 11,
+      "order": 17,
+      "commitment": 23
+    },
+    "repair1": {
+      "choice": 6,
+      "past": 12,
+      "order": 18,
+      "commitment": 24
+    },
+    "field0": {
+      "choice": 11,
+      "past": 17,
+      "order": 23,
+      "commitment": 5
+    },
+    "field1": {
+      "choice": 12,
+      "past": 18,
+      "order": 24,
+      "commitment": 6
+    },
+    "kitchen0": {
+      "choice": 17,
+      "past": 23,
+      "order": 5,
+      "commitment": 11
+    },
+    "kitchen1": {
+      "choice": 18,
+      "past": 24,
+      "order": 6,
+      "commitment": 12
+    },
+    "music0": {
+      "choice": 23,
+      "past": 5,
+      "order": 11,
+      "commitment": 17
+    },
+    "music1": {
+      "choice": 24,
+      "past": 6,
+      "order": 12,
+      "commitment": 18
+    }
+  },
+  "new_reference_labels_or_question_wording": false,
+  "independent_holdout": false,
+  "naturalistic_human_trajectories": false,
+  "placement_counterbalanced_by_role_not_sampled_from_real_histories": true,
+  "independent_semantic_acceptance": false
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "person": "repair0",
+    "case": "choice",
+    "gold": "先摆工具后诊断",
+    "query_ids": [
+      "repair_choice_ab",
+      "repair_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m05",
+        "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。"
+      }
+    ]
+  },
+  {
+    "person": "repair0",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "repair_uncovered_ab",
+      "repair_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m05",
+        "quote": "场地许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "repair0",
+    "case": "order",
+    "gold": "先验电再铺垫",
+    "query_ids": [
+      "repair_order_ab",
+      "repair_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m17",
+        "quote": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "repair0",
+    "case": "past",
+    "gold": "已归还",
+    "query_ids": [
+      "repair_past_ab",
+      "repair_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m11",
+        "quote": "工具箱借用的上一次实际记录是“已归还”。"
+      }
+    ]
+  },
+  {
+    "person": "repair0",
+    "case": "commitment",
+    "gold": "U",
+    "query_ids": [
+      "repair_commitment_ab",
+      "repair_commitment_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m23",
+        "quote": "关于远程值班，我还没有决定。"
+      }
+    ]
+  },
+  {
+    "person": "repair1",
+    "case": "choice",
+    "gold": "先诊断后摆工具",
+    "query_ids": [
+      "repair_choice_ab",
+      "repair_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m06",
+        "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。"
+      }
+    ]
+  },
+  {
+    "person": "repair1",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "repair_uncovered_ab",
+      "repair_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m06",
+        "quote": "场地许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "repair1",
+    "case": "order",
+    "gold": "先铺垫再验电",
+    "query_ids": [
+      "repair_order_ab",
+      "repair_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m18",
+        "quote": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "repair1",
+    "case": "past",
+    "gold": "尚未归还",
+    "query_ids": [
+      "repair_past_ab",
+      "repair_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m12",
+        "quote": "工具箱借用的上一次实际记录是“尚未归还”。"
+      }
+    ]
+  },
+  {
+    "person": "repair1",
+    "case": "commitment",
+    "gold": "接受安排",
+    "query_ids": [
+      "repair_commitment_ab",
+      "repair_commitment_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m24",
+        "quote": "关于远程值班，我的明确决定是“接受安排”。"
+      }
+    ]
+  },
+  {
+    "person": "field0",
+    "case": "choice",
+    "gold": "先拍照后取样",
+    "query_ids": [
+      "field_choice_ab",
+      "field_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m11",
+        "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。"
+      }
+    ]
+  },
+  {
+    "person": "field0",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "field_uncovered_ab",
+      "field_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m11",
+        "quote": "样地准入未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "field0",
+    "case": "order",
+    "gold": "先校表再编号",
+    "query_ids": [
+      "field_order_ab",
+      "field_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m23",
+        "quote": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "field0",
+    "case": "past",
+    "gold": "已经入库",
+    "query_ids": [
+      "field_past_ab",
+      "field_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m17",
+        "quote": "上次样本的上一次实际记录是“已经入库”。"
+      }
+    ]
+  },
+  {
+    "person": "field0",
+    "case": "commitment",
+    "gold": "U",
+    "query_ids": [
+      "field_commitment_ab",
+      "field_commitment_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m05",
+        "quote": "关于跨组代采，我还没有决定。"
+      }
+    ]
+  },
+  {
+    "person": "field1",
+    "case": "choice",
+    "gold": "先取样后拍照",
+    "query_ids": [
+      "field_choice_ab",
+      "field_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m12",
+        "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。"
+      }
+    ]
+  },
+  {
+    "person": "field1",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "field_uncovered_ab",
+      "field_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m12",
+        "quote": "样地准入未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "field1",
+    "case": "order",
+    "gold": "先编号再校表",
+    "query_ids": [
+      "field_order_ab",
+      "field_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m24",
+        "quote": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "field1",
+    "case": "past",
+    "gold": "尚未入库",
+    "query_ids": [
+      "field_past_ab",
+      "field_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m18",
+        "quote": "上次样本的上一次实际记录是“尚未入库”。"
+      }
+    ]
+  },
+  {
+    "person": "field1",
+    "case": "commitment",
+    "gold": "接受安排",
+    "query_ids": [
+      "field_commitment_ab",
+      "field_commitment_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m06",
+        "quote": "关于跨组代采，我的明确决定是“接受安排”。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen0",
+    "case": "choice",
+    "gold": "先分菜后示范",
+    "query_ids": [
+      "kitchen_choice_ab",
+      "kitchen_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m17",
+        "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen0",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "kitchen_uncovered_ab",
+      "kitchen_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m17",
+        "quote": "厨房许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen0",
+    "case": "order",
+    "gold": "先洗台再称量",
+    "query_ids": [
+      "kitchen_order_ab",
+      "kitchen_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m05",
+        "quote": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen0",
+    "case": "past",
+    "gold": "已经清点",
+    "query_ids": [
+      "kitchen_past_ab",
+      "kitchen_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m23",
+        "quote": "上次餐具的上一次实际记录是“已经清点”。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen0",
+    "case": "commitment",
+    "gold": "U",
+    "query_ids": [
+      "kitchen_commitment_ab",
+      "kitchen_commitment_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m11",
+        "quote": "关于夜间备料，我还没有决定。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen1",
+    "case": "choice",
+    "gold": "先示范后分菜",
+    "query_ids": [
+      "kitchen_choice_ab",
+      "kitchen_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m18",
+        "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen1",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "kitchen_uncovered_ab",
+      "kitchen_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m18",
+        "quote": "厨房许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen1",
+    "case": "order",
+    "gold": "先称量再洗台",
+    "query_ids": [
+      "kitchen_order_ab",
+      "kitchen_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m06",
+        "quote": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen1",
+    "case": "past",
+    "gold": "尚未清点",
+    "query_ids": [
+      "kitchen_past_ab",
+      "kitchen_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m24",
+        "quote": "上次餐具的上一次实际记录是“尚未清点”。"
+      }
+    ]
+  },
+  {
+    "person": "kitchen1",
+    "case": "commitment",
+    "gold": "接受安排",
+    "query_ids": [
+      "kitchen_commitment_ab",
+      "kitchen_commitment_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m12",
+        "quote": "关于夜间备料，我的明确决定是“接受安排”。"
+      }
+    ]
+  },
+  {
+    "person": "music0",
+    "case": "choice",
+    "gold": "先合奏后分声部",
+    "query_ids": [
+      "music_choice_ab",
+      "music_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m23",
+        "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。"
+      }
+    ]
+  },
+  {
+    "person": "music0",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "music_uncovered_ab",
+      "music_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m23",
+        "quote": "排练室许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "music0",
+    "case": "order",
+    "gold": "先调音再摆谱",
+    "query_ids": [
+      "music_order_ab",
+      "music_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m11",
+        "quote": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "music0",
+    "case": "past",
+    "gold": "已经返还",
+    "query_ids": [
+      "music_past_ab",
+      "music_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m05",
+        "quote": "上次谱架的上一次实际记录是“已经返还”。"
+      }
+    ]
+  },
+  {
+    "person": "music0",
+    "case": "commitment",
+    "gold": "U",
+    "query_ids": [
+      "music_commitment_ab",
+      "music_commitment_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m17",
+        "quote": "关于远程领奏，我还没有决定。"
+      }
+    ]
+  },
+  {
+    "person": "music1",
+    "case": "choice",
+    "gold": "先分声部后合奏",
+    "query_ids": [
+      "music_choice_ab",
+      "music_choice_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m24",
+        "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。"
+      }
+    ]
+  },
+  {
+    "person": "music1",
+    "case": "uncovered",
+    "gold": "U",
+    "query_ids": [
+      "music_uncovered_ab",
+      "music_uncovered_ba"
+    ],
+    "personal_known": false,
+    "stratum": "untyped",
+    "task": "preferred_option",
+    "support": [
+      {
+        "source_id": "m24",
+        "quote": "排练室许可未落实时，我还没有决定选哪套方案。"
+      }
+    ]
+  },
+  {
+    "person": "music1",
+    "case": "order",
+    "gold": "先摆谱再调音",
+    "query_ids": [
+      "music_order_ab",
+      "music_order_ba"
+    ],
+    "personal_known": true,
+    "stratum": "execution",
+    "task": "execution_order",
+    "support": [
+      {
+        "source_id": "m12",
+        "quote": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+      }
+    ]
+  },
+  {
+    "person": "music1",
+    "case": "past",
+    "gold": "尚未返还",
+    "query_ids": [
+      "music_past_ab",
+      "music_past_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "past_observation",
+    "support": [
+      {
+        "source_id": "m06",
+        "quote": "上次谱架的上一次实际记录是“尚未返还”。"
+      }
+    ]
+  },
+  {
+    "person": "music1",
+    "case": "commitment",
+    "gold": "接受安排",
+    "query_ids": [
+      "music_commitment_ab",
+      "music_commitment_ba"
+    ],
+    "personal_known": true,
+    "stratum": "untyped",
+    "task": "decision_polarity",
+    "support": [
+      {
+        "source_id": "m18",
+        "quote": "关于远程领奏，我的明确决定是“接受安排”。"
+      }
+    ]
+  }
+]

@@ -364,3 +364,16 @@ macOS ARM job could not acquire a hosted runner and ran zero steps. The
 main-run failure. The macOS job now requests the standard `macos-15-intel` pool;
 all checks remain required. This is macOS x86_64 coverage,not current ARM CI
 coverage. No model calls,benchmark observations or product defaults changed.
+
+The [long-source task protocol](benchmarks/long-task-probe-v1/README.md) prepares
+a controlled extension of the same40cases:8fictional profiles,192messages and
+3587–3615canonical JSON characters/person,including2008–2016message-text
+characters. Both exceed the unchanged1536whole-card cap. Reader full/tail inputs
+use the same role-labelled transcript with JSON/id/episode overhead removed;
+tail length exactly matches the own whole card. Questions/options/reference
+values stay fixed;source chronology adds explicit draft corrections and four
+counterbalanced decisive-record positions. This is a dependent length-stress
+derivative,not a holdout,new-world or real-person result. Eight offline protocol
+checks protect52slots (12controls,8extractions,16card/16tail reads),one producer
+and four-answer40-case endpoints. No new service attempts or authority;the
+proposal is unapproved,has no accepted token/money ceiling and changes no defaults.
