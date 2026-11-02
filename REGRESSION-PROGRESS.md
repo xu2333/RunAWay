@@ -313,3 +313,12 @@ automatic repair. Eight archive damage checks protect one-parent4-answer
 denominators and all three views. Recorded usage88668tokens,no missing/skips/
 retries/repairs. Question-intent matching and the name/process relationship
 remain unresolved;no original labels/observations or defaults changed.
+
+The [proposed8-call task-contract check](benchmarks/question-contract-diagnostic-v1/README.md)
+keeps the same495-character original card and changes only c05'stwo task
+descriptors to an explicit future-choice request. Each24-form packet gets its
+own none/full controls and2separate card reads. Seven fixtures protect packet
+isolation,unchanged facts/options/reference and12-case denominators. This is
+post-hoc intent clarification,not accepted semantic equivalence or a replacement
+of old scores. Inputs are frozen,unapproved and unrun;all actual scopes remain
+closed and no defaults changed.
