@@ -1,4 +1,16 @@
-# Long-source task probe — prepared, not approved or run
+# Long-source task probe
+
+The [actual closed52 result](MEASURED.md) is now available: card40/40 versus
+matched transcript-tail26/40,with no missing/invalid/skipped observations. This
+is a controlled length-stress result,not human or independent holdout validation.
+Reported card-read tokens were slightly higher than equal-character tail-read
+tokens,and extraction adds118612tokens;net product cost savings are unproven.
+
+## Frozen preparation record
+
+The following describes the original pre-execution package. `protocol.json`
+retains its unapproved intake flags; the later private grant did not rewrite it.
+Preparation itself made0service attempts. Actual observations are separate above.
 
 The [short task bank](../task-scenarios-v1/README.md) has about 480 canonical JSON
 characters per person. It can calibrate question roles, but a 1,536-character
