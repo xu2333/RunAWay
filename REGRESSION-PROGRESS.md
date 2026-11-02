@@ -296,3 +296,11 @@ limitation is retained without dropping/relabeling cases. Eight archive damage
 checks preserve48cases,view ownership and dependent pair diagnostics. All46
 calls used511171tokens;no retries,repairs,skips or default switch. New sources
 remain two correlated synthetic template families,not independent human proof.
+
+The [proposed8-call name-marker diagnostic](benchmarks/named-target-diagnostic-v1/README.md)
+is prepared offline on one fixed e0parent:original495characters versus named
+and neutral503-character views. Only one target question label changes;all
+actions/guards/scopes/other rows remain. Seven fixtures protect matched wording
+controls,one-parent4-answer endpoints and failure closure. It is post-hoc
+developer annotation with0new model calls,not an automatic encoder fix or a
+new48-case claim. The actual46scope remains closed.
