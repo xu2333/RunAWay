@@ -304,3 +304,12 @@ actions/guards/scopes/other rows remain. Seven fixtures protect matched wording
 controls,one-parent4-answer endpoints and failure closure. It is post-hoc
 developer annotation with0new model calls,not an automatic encoder fix or a
 new48-case claim. The actual46scope remains closed.
+
+The [actual8-call name-marker result](benchmarks/named-target-diagnostic-v1/MEASURED.md)
+is closed:original495chars,neutral503and named503all score11/12strictly,
+with4/4unknown retained. Named alone reaches12/12on its first read but11/12
+on its identical repeat;c05is the only loss. This is not stable recovery or
+automatic repair. Eight archive damage checks protect one-parent4-answer
+denominators and all three views. Recorded usage88668tokens,no missing/skips/
+retries/repairs. Question-intent matching and the name/process relationship
+remain unresolved;no original labels/observations or defaults changed.
