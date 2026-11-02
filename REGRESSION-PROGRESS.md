@@ -284,3 +284,15 @@ offline checks protect fixed 48-case denominators, source/view isolation and
 failure closure. A separate 46-attempt proposal is frozen but unapproved and
 unrun: 6 controls, 8 extractions and 32 card/tail reads. No new service authority,
 independent semantic acceptance or product-default switch follows.
+
+The [actual new-source46 result](benchmarks/fresh-source-contrast-v1/MEASURED.md)
+is closed:card45/48versus own equal-character tail30/48,known29/32versus14/32,
+unknown16/16both. Paired counts are27both,18card-only,3tail-only,no missing.
+All3card losses are c05formal names (t1/e0/e1),including identical-request
+t1reader disagreement. A post-hoc inspection finds correct name/status/order
+literals in all8cards,so literal retention does not resolve semantic retrieval.
+The c12assistant-origin check is not isolated by its options/readiness;this
+limitation is retained without dropping/relabeling cases. Eight archive damage
+checks preserve48cases,view ownership and dependent pair diagnostics. All46
+calls used511171tokens;no retries,repairs,skips or default switch. New sources
+remain two correlated synthetic template families,not independent human proof.

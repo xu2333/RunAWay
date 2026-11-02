@@ -1,4 +1,9 @@
-# New-source contrast probe — prepared, unapproved and unrun
+# New-source contrast probe — frozen protocol and actual result
+
+The [closed46-call result](MEASURED.md) is card45/48versus equal-character
+raw-tail30/48,with3tail-only named-method losses. Every unknown case passes,
+but correct name literals alone do not prevent falseU. The original preparation
+JSON stays unapproved;actual authorization/execution evidence is separate.
 
 Freeze the unchanged source-order-v3 encoder from merged PR #38 before evaluating
 new sources. `encoder-lock.json` pins its merged code and dependencies; this
@@ -80,8 +85,10 @@ isolation, all 46 slots, own-length tails, repeat-request equality, every contro
 stop, invalid-parent missing denominators, one-order losses isolated by view,
 fatal/final closure and exclusive freezing. Their oracle scores are not model
 observations. Four local grant-refusal checks run separately. There are 14 static
-requests and 32 frozen dynamic read rules; actual calls are **0**.
+requests and 32 frozen dynamic read rules. Preparation made0calls;the subsequent
+separately authorized46-attempt scope is now fully used and closed.
 
 All earlier scopes remain closed. No production default change, real-person,
 cross-model/harness claim, old 232-inventory coverage or asynchronous pooling.
-New model execution requires a separate direct approval of this precise scope.
+Any new model scope requires separate direct approval;unused historical scopes
+cannot be reused.
