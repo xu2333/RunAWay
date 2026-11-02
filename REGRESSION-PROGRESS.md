@@ -357,3 +357,10 @@ Interventions retain the full ten-form baseline packet rather than isolating two
 target forms,so question quantity/context stays fixed. Non-target preservation
 is a separate160-case/intervention diagnostic;800intervention answer slots remain
 planned,including160target slots. These remain dependent instrument fixtures.
+
+The PR45 matrix initially passed both Linux jobs but failed overall because the
+macOS ARM job could not acquire a hosted runner and ran zero steps. The
+[CI incident note](docs/ci.md) preserves that failure and the matching earlier
+main-run failure. The macOS job now requests the standard `macos-15-intel` pool;
+all checks remain required. This is macOS x86_64 coverage,not current ARM CI
+coverage. No model calls,benchmark observations or product defaults changed.

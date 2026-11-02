@@ -17,7 +17,9 @@ jobs:
             python: '3.9'
           - os: ubuntu-latest
             python: '3.13'
-          - os: macos-latest
+          # ARM hosted capacity prevented jobs from starting; keep macOS checks
+          # on the standard Intel pool. See docs/ci.md for evidence and limits.
+          - os: macos-15-intel
             python: '3.13'
     runs-on: ${{ matrix.os }}
     steps:
