@@ -1,4 +1,8 @@
-# Proposed28-call collateral regression — unapproved and unrun
+# Collateral regression — frozen protocol and actual result
+
+The separately approved [actual28-call run](MEASURED.md) is now closed:both
+methods passed56/56with no missing/skipped outcomes. The original proposal JSON
+keeps its unapproved preparation state;actual evidence is archived separately.
 
 The [j16development probe](../source-order-probe-v1/MEASURED.md) passed23/23
 with fresh model-generated order bindings. This protocol checks whether the
@@ -54,5 +58,6 @@ Six controller fixtures check source/bank isolation,all28slots,each control's
 stop,invalid-parent missing denominators for both worlds/methods,wire/usage/final
 failure and exclusive input freezing. Fixtures incur0model calls and are not
 measured fidelity.12static requests plus16dynamic rules are prepared privately;
-there is no direct grant,execution intent or real model process for this scope.
+at preparation there was no direct grant,execution intent or real model process.
+The subsequent actual scope is closed,with no remaining service authority.
 No default switch,independent semantic acceptance or cross-harness claim follows.
