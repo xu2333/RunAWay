@@ -236,3 +236,13 @@ with w11recovered in all8responses and no missing. Eight archive damage tests
 preserve the static views/parents and prevent a manual diagnostic from becoming
 an automatic encoder or semantic-proof claim. Fresh source-only generation and
 execution-order damage controls remain future work. All actual budgets are closed.
+
+The [source-order-v3candidate](benchmarks/source-order-v3/README.md) moves the
+binding into source-only model output;no manual source row is supplied. Eight
+offline checks protect active-node/provenance/guard conservation and narrow
+execution-field erasure. A [proposed22-slot probe](benchmarks/source-order-probe-v1/README.md)
+compares fresh encoders on the original23cases and tests a separate explicit-
+ordering question with intact/erased candidate cards. Eight controller checks
+keep auxiliary facts out of primary packets and detect primary-perfect but
+ordering-ungrounded fixtures. It is development-informed,unapproved and unrun;
+no new service authority or default switch.
