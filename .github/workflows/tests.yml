@@ -108,6 +108,8 @@ jobs:
         run: python scripts/replay_source_order_regression.py
       - name: Replay new-source card and matched-tail losses (no calls)
         run: python scripts/replay_fresh_source_contrast.py
+      - name: Replay fixed-parent name-marker negative result (no calls)
+        run: python scripts/replay_named_target_diagnostic.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

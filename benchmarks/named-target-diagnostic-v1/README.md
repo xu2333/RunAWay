@@ -1,4 +1,9 @@
-# Proposed8-call formal-name diagnostic — unapproved and unrun
+# Formal-name diagnostic — frozen protocol and actual negative result
+
+The [closed8-call result](MEASURED.md) is strict11/12for all three views.
+The named marker reaches12/12in its first read but11/12in the second;
+this is not stable recovery or an automatic encoder fix. The original proposal
+keeps its unapproved preparation state;actual evidence is separate.
 
 The [closed46-call probe](../fresh-source-contrast-v1/MEASURED.md) has three
 formal-name false-Ucases despite retaining the correct literal. This post-hoc
@@ -57,6 +62,7 @@ python benchmarks/named-target-diagnostic-v1/plan.py --out /tmp/runaway-named-ta
 Seven offline fixture checks cover lineage,exact marker widths,single-field
 conservation,all8slots,repeat equality,neutral recovery without accepting a
 unique cause,fatal/final closure and exclusive freezing. Fixtures are not model
-observations. Four local grant-refusal checks are separate. New actual calls0;
-execution requires a new direct approval. No real-person/cross-model/harness
+observations. Four local grant-refusal checks are separate. Preparation made0
+calls;the subsequent directly approved8-attempt scope is now used and closed.
+Any new scope requires new approval. No real-person/cross-model/harness
 fidelity,independent semantic acceptance or original232inventory coverage.
