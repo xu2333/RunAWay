@@ -274,3 +274,13 @@ them in. Recorded usage454034tokens. Eight archive damage tests preserve the
 j16development result,this supports freezing this candidate for fresh-source
 evaluation;it does not establish independent generalization or change defaults.
 All actual call scopes are closed.
+
+The [new-source contrast probe](benchmarks/fresh-source-contrast-v1/README.md)
+pins the unchanged merged encoder and introduces 48 newly authored boundary
+cases on four fictional profiles in two correlated template families. Source-only
+cards are compared with their own equal-character raw-source tails; person-pair
+rescoring reuses answers and is explicitly not independent evidence. Seven
+offline checks protect fixed 48-case denominators, source/view isolation and
+failure closure. A separate 46-attempt proposal is frozen but unapproved and
+unrun: 6 controls, 8 extractions and 32 card/tail reads. No new service authority,
+independent semantic acceptance or product-default switch follows.
