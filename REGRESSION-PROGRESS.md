@@ -377,3 +377,17 @@ derivative,not a holdout,new-world or real-person result. Eight offline protocol
 checks protect52slots (12controls,8extractions,16card/16tail reads),one producer
 and four-answer40-case endpoints. No new service attempts or authority;the
 proposal is unapproved,has no accepted token/money ceiling and changes no defaults.
+
+The [actual long-task52 result](benchmarks/long-task-probe-v1/MEASURED.md) is now
+closed:card40/40versus own equal-character transcript-tail26/40;known28/28versus
+14/28,unknown12/12both. All8new cards are valid(742–1031chars),all8full controls
+qualified,and there are no missing,invalid,skipped,retried or unused observations.
+All14tail losses returnedUon known cases across both reads/orders. Eight archive
+damage checks preserve52records,40-case/four-answer endpoints and derivative
+limits;unrelated shared-helper inventory counters are explicitly omitted.
+Reported usage504117tokens(input460517/output43600),cache14208/reasoning5409
+are subsets. Card reads use slightly more reported tokens than same-character
+tail reads;extraction adds118612tokens,so net product cost savings remain
+unproven. This is one producer/person on four dependent synthetic families,
+not repeated-generation stability,independent semantics or human fidelity.
+All prior and this52call scopes are closed;old scores/defaults remain unchanged.
