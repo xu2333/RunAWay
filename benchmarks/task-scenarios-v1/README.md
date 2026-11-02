@@ -23,6 +23,7 @@ space, so adopting an assistant suggestion can produce a detectable scored error
 | Planned reads × option orders per case | 2 × 2 |
 | Baseline answer slots | 160 |
 | One-span source interventions | 40 |
+| Full-bank answer slots across interventions | 800 |
 
 Each person has five cases: a future choice in a decided condition, an undecided
 condition, recorded execution order, a past fact, and a commitment. There are
@@ -35,7 +36,8 @@ Exact canonical character lengths are in `design.json`; they are not token sizes
 `corpus.py` uses the existing offline authoring validator. Every reference has a
 user-source quote. Every case also has a reversible edit of exactly one user
 span, a declared different reference inside the same options+U, and unchanged
-questions in both orders. For example, undecided commitment can become explicit
+full ten-form question packet, not just the two target forms. This holds question
+context and quantity constant between baseline and intervention. For example, undecided commitment can become explicit
 acceptance while the assistant's recommendation stays fixed. **These are authored
 source changes, not observed compressor damage or independently verified semantic
 transitions.** Reversal and quote checks cannot establish truth or entailment.
@@ -46,6 +48,10 @@ foreign questions/people, extra fields and positional A/B answers. Supply litera
 labels or U. The optional transition score requires both the original reference
 and the changed-source reference over both reads and orders. These 40 transitions
 depend on the baseline cases; they are not another 40 independent observations.
+Non-target preservation is reported separately on 160 dependent case/intervention
+combinations; it requires all four baseline and all four changed-source answers
+to retain that other case's author reference. All 800 intervention answer slots
+remain planned even if records are missing; 160 of those target the edited case.
 The scorer cannot verify response authenticity, a budget or service execution.
 
 Offline fixture calibration produces:
@@ -74,8 +80,8 @@ All files are public because all people are fictional. Public availability does
 not make author references legitimate model inputs. For later extraction use
 `encoder_packet(person)` (own raw sources only); for reading use
 `reader_packet(person, memory)` (supplied memory plus own questions only).
-`intervention_packet(person, case)` returns edited sources and the two unchanged
-forms separately, without the reference/guide. It does not combine them into an
+`intervention_packet(person, case)` returns edited sources and the same complete
+ten-form question packet separately, without the reference/guide. It does not combine them into an
 extraction request. Do not send either author-reference artifact to a model.
 These helpers return values only: no backend, network call or service grant.
 
@@ -90,8 +96,8 @@ python benchmarks/task-scenarios-v1/check.py --score baseline-records.json --tra
 
 Baseline records are a list of `{profile, read_repeat, answers}` objects, where
 `read_repeat` is 0 or 1 and `answers` maps public question IDs to literal labels
-or U. Transition records also require `case`, and contain only that case's two
-question IDs. Missing records are allowed and reported, never removed from the
+or U. Transition records also require `case` (the source edit's target), and use
+the same complete ten-question bank, including non-target questions. Missing records are allowed and reported, never removed from the
 planned denominators. `--write` explicitly regenerates fictional local artifacts;
 the default command verifies byte-for-byte reconstruction without writing.
 

@@ -33,13 +33,12 @@ def reader_packet(profile, memory):
 
 
 def intervention_packet(profile, case):
-    """Source and two unchanged public forms, separately keyed; no author reference."""
+    """Edited source and the entire unchanged baseline bank; no author reference."""
     data = corpus.build()
     for mutation in data['mutations']:
         if (mutation['profile'], mutation['case']) == (profile, case):
-            row = next(r for r in data['rows'] if (r['profile'], r['case']) == (profile, case))
             return {'sources': mutation['sources'],
-                    'questions': [q for q in data['questions'][profile] if q['id'] in row['query_ids']]}
+                    'questions': data['questions'][profile]}
     raise ValueError('Unexpected person/case')
 
 
@@ -112,16 +111,18 @@ def score_transitions(baseline_records, intervention_records):
         if key in indexed:
             raise ValueError('Duplicate intervention read')
         answers = record['answers']
-        row = rows[pid, case]
         if type(answers) is not dict:
             raise ValueError('Intervention answers must be a dictionary')
+        allowed = {q['id']: list(q['options'].values()) + ['U'] for q in data['questions'][pid]}
         for qid, answer in answers.items():
-            if qid not in row['query_ids'] or type(answer) is not str or answer not in row['contract']['options'] + ['U']:
+            if qid not in allowed or type(answer) is not str or answer not in allowed[qid]:
                 raise ValueError('Unexpected intervention question/answer')
         indexed[key] = answers
     original = {(r['profile'], r['read_repeat']): r['answers'] for r in baseline_records}
     result = {'planned_transitions': 40, 'strict_both_correct': 0, 'missing_transitions': 0,
-              'planned_intervention_answers': 160, 'missing_intervention_answers': 0,
+              'planned_intervention_answers': 800, 'missing_intervention_answers': 0,
+              'planned_target_answers': 160, 'missing_target_answers': 0,
+              'non_target_preservation': {'planned_case_interventions': 160, 'strict_both_correct': 0, 'missing': 0},
               'baseline': baseline, 'independent_evidence': False,
               'source_edits_are_compressor_damage': False, 'model_authenticity_verified': False,
               'semantic_transitions_independently_verified': False}
@@ -131,10 +132,21 @@ def score_transitions(baseline_records, intervention_records):
         before = [original.get((pid, repeat), {}).get(q) for repeat in (0, 1) for q in row['query_ids']]
         after = [indexed.get((pid, case, repeat), {}).get(q) for repeat in (0, 1) for q in row['query_ids']]
         missing = sum(v is None for v in after)
+        full_ids = [q['id'] for q in data['questions'][pid]]
+        result['missing_intervention_answers'] += sum(
+            q not in indexed.get((pid, case, repeat), {}) for repeat in (0, 1) for q in full_ids)
         result['strict_both_correct'] += (all(v == row['contract']['reference'] for v in before) and
                                           all(v == mutation['contract']['reference'] for v in after))
         result['missing_transitions'] += any(v is None for v in before + after)
-        result['missing_intervention_answers'] += missing
+        result['missing_target_answers'] += missing
+        for other in data['rows']:
+            if other['profile'] != pid or other['case'] == case:
+                continue
+            old_values = [original.get((pid, repeat), {}).get(q) for repeat in (0, 1) for q in other['query_ids']]
+            new_values = [indexed.get((pid, case, repeat), {}).get(q) for repeat in (0, 1) for q in other['query_ids']]
+            preservation = result['non_target_preservation']
+            preservation['strict_both_correct'] += all(v == other['contract']['reference'] for v in old_values + new_values)
+            preservation['missing'] += any(v is None for v in old_values + new_values)
     return result
 
 
@@ -171,6 +183,7 @@ def artifacts():
         interventions.append({**{k: mutation[k] for k in ('profile', 'case', 'operation', 'source_id', 'before', 'after')},
                               'baseline_source_sha256': digest(baseline), 'modified_source_sha256': digest(changed),
                               'modified_sources': changed, 'author_contract': mutation['contract'],
+                              'unchanged_full_question_packet_sha256': digest(data['questions'][mutation['profile']]),
                               'semantic_transition_independently_verified': False})
     outcomes = {k: score(v, data) for k, v in fixtures(data).items()}
     if {k: v['strict_correct'] for k, v in outcomes.items()} != {
@@ -185,6 +198,8 @@ def artifacts():
               'planned_reads_per_person': 2, 'answers_per_case': 4, 'planned_answers': 160,
               'tasks': dict(collections.Counter(r['contract']['intent'] for r in data['rows'])),
               'source_interventions': len(interventions), 'authored_changed_reference_transitions': 40,
+              'planned_intervention_answer_slots': 800,
+              'intervention_questions_equal_full_baseline_packet': True,
               'source_interventions_are_compressor_damage': False,
               'counterfactual_answer_transitions_semantically_verified': False,
               'model_calls': 0, 'new_service_authority': False, 'real_person_data': False,

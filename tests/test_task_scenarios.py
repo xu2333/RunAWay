@@ -89,7 +89,8 @@ class TaskScenarioTests(unittest.TestCase):
             packet = check.intervention_packet(mutation['profile'], mutation['case'])
             self.assertEqual(set(packet), {'sources', 'questions'})
             self.assertEqual(packet['sources'], mutation['sources'])
-            self.assertEqual(len(packet['questions']), 2)
+            self.assertEqual(packet['questions'], check.reader_packet(mutation['profile'], '')['questions'])
+            self.assertEqual(len(packet['questions']), 10)
         with self.assertRaises(ValueError):
             check.intervention_packet('repair0', 'other')
 
@@ -143,16 +144,28 @@ class TaskScenarioTests(unittest.TestCase):
             pid, case = mutation['profile'], mutation['case']
             row = rows[pid, case]
             for repeat in (0, 1):
+                baseline_answers = {q: other['contract']['reference'] for other in data['rows']
+                                    if other['profile'] == pid for q in other['query_ids']}
+                changed_answers = {**baseline_answers, **{q: mutation['contract']['reference'] for q in row['query_ids']}}
                 record = {'profile': pid, 'case': case, 'read_repeat': repeat,
-                          'answers': {q: mutation['contract']['reference'] for q in row['query_ids']}}
+                          'answers': changed_answers}
                 after.append(record)
-                unchanged.append({**record, 'answers': {q: row['contract']['reference'] for q in row['query_ids']}})
+                unchanged.append({**record, 'answers': baseline_answers})
         result = check.score_transitions(before, after)
         self.assertEqual((result['strict_both_correct'], result['missing_transitions']), (40, 0))
+        self.assertEqual(result['non_target_preservation'], {'planned_case_interventions': 160, 'strict_both_correct': 160, 'missing': 0})
         self.assertEqual(check.score_transitions(before, unchanged)['strict_both_correct'], 0)
         self.assertEqual(check.score_transitions([], after)['strict_both_correct'], 0)
         result = check.score_transitions(before, after[1:])
-        self.assertEqual((result['planned_transitions'], result['strict_both_correct'], result['missing_transitions'], result['missing_intervention_answers']), (40, 39, 1, 2))
+        self.assertEqual((result['planned_transitions'], result['strict_both_correct'], result['missing_transitions'], result['missing_intervention_answers']), (40, 39, 1, 10))
+        self.assertEqual(result['missing_target_answers'], 2)
+        self.assertEqual(result['non_target_preservation'], {'planned_case_interventions': 160, 'strict_both_correct': 156, 'missing': 4})
+        damaged = copy.deepcopy(after)
+        other = rows['repair0', 'past']
+        damaged[0]['answers'][other['query_ids'][0]] = 'U'
+        result = check.score_transitions(before, damaged)
+        self.assertEqual(result['strict_both_correct'], 40)
+        self.assertEqual(result['non_target_preservation']['strict_both_correct'], 159)
         for flag in ('independent_evidence', 'source_edits_are_compressor_damage', 'model_authenticity_verified',
                      'semantic_transitions_independently_verified'):
             self.assertIs(result[flag], False)

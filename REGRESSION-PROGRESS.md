@@ -353,3 +353,7 @@ all-U,faulty and paired-person vectors score40/12/0/8 of40 respectively;these ar
 fixture calibration scores,not model results. Sources are short/explicit and
 template-dependent,not a naturalistic compression frontier or holdout. New model
 calls0;all prior measurements,closed call scopes and production defaults remain.
+Interventions retain the full ten-form baseline packet rather than isolating two
+target forms,so question quantity/context stays fixed. Non-target preservation
+is a separate160-case/intervention diagnostic;800intervention answer slots remain
+planned,including160target slots. These remain dependent instrument fixtures.

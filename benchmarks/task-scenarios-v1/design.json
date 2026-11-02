@@ -20,6 +20,8 @@
   },
   "source_interventions": 40,
   "authored_changed_reference_transitions": 40,
+  "planned_intervention_answer_slots": 800,
+  "intervention_questions_equal_full_baseline_packet": true,
   "source_interventions_are_compressor_damage": false,
   "counterfactual_answer_transitions_semantically_verified": false,
   "model_calls": 0,
