@@ -1,0 +1,120 @@
+{
+  "kind": "offline_order_target_decomposition_v1",
+  "all_sources_fictional": true,
+  "upstream_snapshot_sha256": "634f1cd56213be6e96867d2bd9b67c949e638e6adb71d30398f9163b76d5bcca",
+  "upstream_input_manifest_sha256": "3c267e326608c9c217691768cfd967d2c3a4e53b249dea066c689f9fdd5cee19",
+  "upstream_observation_manifest_sha256": "0ded21da7ddb4d3b7601a3711e5ae7b8795855c01d27db91fda78977ecbdb1c4",
+  "parents": [
+    {
+      "generation": 0,
+      "source_sha256": "480416e62140b276bbb463ae89e9851f11b9a57e26bef32f30ff6204ed0f2e29",
+      "raw_parent_value_sha256": "b49f42d8180bbeb939340acdb547d7949a41172d62248b5dc90b7d91c70ccedc",
+      "parent_answer_sha256": "1bfdcf9d25c99d49eb5790b5301f6a13686fb1d5354c00f4862edfaeea289a81",
+      "original_ledger_sha256": "ebafc9cdaeabdaca4d12e6ac9d45ee0af2e0612ae3786d301ebde36ef45c49b5",
+      "separated_ledger_sha256": "545b559fcfd2470f89027d596da579d7cb3140e6d1e223525ecf0a29037b839d",
+      "original_prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小团子的安排簿\"｜\"平时有章法，例外不挤丢。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n@聚餐；（由我安排的熟人聚餐）\n选餐方式|预算一样且无饮食禁忌→共享一份公共菜单\n1:选餐方式|有人明确要求严格分开备餐→每人分别选餐\n@触感展\n展品呈现|社区小型触感展&两种呈现均获许可、信息足够且成本相同→隔柜看原件\n1:展品呈现|已向出借者承诺的借展纪念章→隔柜看原件\n@客厅练习；（作息相近的长期室友）\n练习协调|大家认可两法可行且无特殊夜班需求→约定固定安静时段\n1:练习协调|室友进入已确认的连续夜班周→先约定固定安静时段\n@桌游\n游戏模式|熟悉规则的成年朋友线下聚会&两模式等时、均不另收费且非教学局→各自计分\n1:游戏模式|成年朋友线下聚会&明确为带初学者熟悉规则的教学局→合作通关\n@盆栽浇水；（室内普通观叶盆栽）\n浇水方式|湿度计可靠、有人读数且两法可执行→按固定日期浇水\n1:浇水方式|已确认湿度计停用的当周→按固定日期浇水\n@生日礼物；（给熟悉朋友准备非紧急生日礼物）\n送礼方式|预算已定、未点名商品且两法都来得及→先给候选让对方挑\n1:送礼方式|朋友明确点名具体商品并请我代买→直接挑选并送出\n?公众食堂、陌生人活动、历史档案展、短租旅行同伴、线上陌生人联赛、室外植物、多肉及不认识的客户礼品未作选择。\n?此前“先记”的安排不证明已经实施；未记录实际实施状态。\n?未覆盖情境无已知选择；这些安排不授权发消息、下单或改变设备设置。\n",
+      "original_characters": 727,
+      "split_prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小团子的安排簿\"｜\"平时有章法，例外不挤丢。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n@聚餐；（由我安排的熟人聚餐）\n选餐方式|预算一样且无饮食禁忌→共享一份公共菜单\n1:选餐方式|有人明确要求严格分开备餐→每人分别选餐\n@触感展\n展品呈现|社区小型触感展&两种呈现均获许可、信息足够且成本相同→隔柜看原件\n1:展品呈现|已向出借者承诺的借展纪念章→隔柜看原件\n@客厅练习\n练习协调|作息相近的长期室友&大家认可两法可行且无特殊夜班需求→约定固定安静时段\n1:练习协调|作息相近的长期室友&室友进入已确认的连续夜班周→约定固定安静时段\n1:执行先后|作息相近的长期室友&室友进入已确认的连续夜班周→先约定固定安静时段\n@桌游\n游戏模式|熟悉规则的成年朋友线下聚会&两模式等时、均不另收费且非教学局→各自计分\n1:游戏模式|成年朋友线下聚会&明确为带初学者熟悉规则的教学局→合作通关\n@盆栽浇水；（室内普通观叶盆栽）\n浇水方式|湿度计可靠、有人读数且两法可执行→按固定日期浇水\n1:浇水方式|已确认湿度计停用的当周→按固定日期浇水\n@生日礼物；（给熟悉朋友准备非紧急生日礼物）\n送礼方式|预算已定、未点名商品且两法都来得及→先给候选让对方挑\n1:送礼方式|朋友明确点名具体商品并请我代买→直接挑选并送出\n?公众食堂、陌生人活动、历史档案展、短租旅行同伴、线上陌生人联赛、室外植物、多肉及不认识的客户礼品未作选择。\n?此前“先记”的安排不证明已经实施；未记录实际实施状态。\n?未覆盖情境无已知选择；这些安排不授权发消息、下单或改变设备设置。\n",
+      "split_characters": 775,
+      "developer_binding": {
+        "row_index": 5,
+        "core_action": "约定固定安静时段",
+        "core_evidence": [
+          {
+            "source_id": "m13",
+            "quote": "几名作息相近的长期室友要安排客厅乐器练习，大家都同意两种协调方法可用；可以约定固定安静时段，也可以临时发消息再协调。"
+          }
+        ],
+        "execution_question": "执行先后"
+      },
+      "conservation": {
+        "bindings": [
+          {
+            "row_index": 5,
+            "core_action": "约定固定安静时段",
+            "core_evidence": [
+              {
+                "source_id": "m13",
+                "quote": "几名作息相近的长期室友要安排客厅乐器练习，大家都同意两种协调方法可用；可以约定固定安静时段，也可以临时发消息再协调。"
+              }
+            ],
+            "execution_question": "执行先后"
+          }
+        ],
+        "trace": [
+          {
+            "row_index": 5,
+            "core_action": "约定固定安静时段",
+            "execution_question": "执行先后",
+            "original_ordered_action_retained_exactly": true,
+            "all_original_conditions_preserved_on_both_targets": true
+          }
+        ],
+        "developer_annotation_not_model_inference": true,
+        "semantic_decomposition_independently_accepted": false,
+        "old_semantic_equivalence_verified": false
+      }
+    },
+    {
+      "generation": 1,
+      "source_sha256": "480416e62140b276bbb463ae89e9851f11b9a57e26bef32f30ff6204ed0f2e29",
+      "raw_parent_value_sha256": "ae2562b0dac2e4b70e50a1b7ae744f0da0c1b9a2d6702ccf78ac3a81e9138952",
+      "parent_answer_sha256": "eb42777511592e917590821eff190be2f54b272c88576199425ee8ff3e2e009d",
+      "original_ledger_sha256": "a07af42e7863e62034fed41d693ec93289a494305a3ee1f61951789fe85437fa",
+      "separated_ledger_sha256": "a748c2bb91da0955d582fc7d0f1b661bb06040fa7e2c483e433bab2f8d0f4d04",
+      "original_prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小团子安排簿\"｜\"通常有章法，例外单独放。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n@聚餐；（我安排的熟人聚餐）\n菜单方式|预算一样、没有饮食禁忌→共享一份公共菜单\n1:菜单方式|有人明确要求严格分开备餐→每人分别选餐\n@触感展\n呈现方式|社区小型触感展&可触摸复制品与隔柜看原件均获许可、信息足够、成本相同→隔柜看原件\n1:呈现方式|借展纪念章，已向出借者承诺隔柜看原件→隔柜看原件\n@室友练习；（作息相近的长期室友）\n协调方式|大家认可两种方法可行、无特殊夜班需求→约定固定安静时段\n1:协调方式|室友进入已确认的连续夜班周→先约定固定安静时段\n@桌游\n游戏模式|熟悉规则的成年朋友线下聚会&两模式时长相同、均不另收费、非教学→各自计分\n1:游戏模式|明确带初学者熟悉规则的教学局→合作通关\n@盆栽浇水；（室内普通观叶盆栽）\n浇水依据|湿度计可靠、有人读数、两种办法均可执行；恢复可靠读数后同→按固定日期浇水\n浇水依据|仅已确认湿度计停用的那一周→按固定日期浇水\n@生日礼物；（给熟悉朋友准备非紧急生日礼物）\n选购方式|预算已定、未点名商品、两种方式均来得及→先给候选让对方挑\n1:选购方式|朋友明确点名具体商品并请我代买→直接挑选并送出\n?公众食堂、陌生人活动、历史档案展、短租旅行同伴、线上陌生人联赛、室外植物、多肉、不认识的客户礼品均未决定。\n?安排不代表已实施；未记录其他情境选择。仅整理，不授权发消息、下单或改设备设置。\n",
+      "original_characters": 724,
+      "split_prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小团子安排簿\"｜\"通常有章法，例外单独放。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n@聚餐；（我安排的熟人聚餐）\n菜单方式|预算一样、没有饮食禁忌→共享一份公共菜单\n1:菜单方式|有人明确要求严格分开备餐→每人分别选餐\n@触感展\n呈现方式|社区小型触感展&可触摸复制品与隔柜看原件均获许可、信息足够、成本相同→隔柜看原件\n1:呈现方式|借展纪念章，已向出借者承诺隔柜看原件→隔柜看原件\n@室友练习\n协调方式|作息相近的长期室友&大家认可两种方法可行、无特殊夜班需求→约定固定安静时段\n1:协调方式|作息相近的长期室友&室友进入已确认的连续夜班周→约定固定安静时段\n1:执行先后|作息相近的长期室友&室友进入已确认的连续夜班周→先约定固定安静时段\n@桌游\n游戏模式|熟悉规则的成年朋友线下聚会&两模式时长相同、均不另收费、非教学→各自计分\n1:游戏模式|明确带初学者熟悉规则的教学局→合作通关\n@盆栽浇水；（室内普通观叶盆栽）\n浇水依据|湿度计可靠、有人读数、两种办法均可执行；恢复可靠读数后同→按固定日期浇水\n浇水依据|仅已确认湿度计停用的那一周→按固定日期浇水\n@生日礼物；（给熟悉朋友准备非紧急生日礼物）\n选购方式|预算已定、未点名商品、两种方式均来得及→先给候选让对方挑\n1:选购方式|朋友明确点名具体商品并请我代买→直接挑选并送出\n?公众食堂、陌生人活动、历史档案展、短租旅行同伴、线上陌生人联赛、室外植物、多肉、不认识的客户礼品均未决定。\n?安排不代表已实施；未记录其他情境选择。仅整理，不授权发消息、下单或改设备设置。\n",
+      "split_characters": 772,
+      "developer_binding": {
+        "row_index": 5,
+        "core_action": "约定固定安静时段",
+        "core_evidence": [
+          {
+            "source_id": "m13",
+            "quote": "几名作息相近的长期室友要安排客厅乐器练习，大家都同意两种协调方法可用；可以约定固定安静时段，也可以临时发消息再协调。"
+          }
+        ],
+        "execution_question": "执行先后"
+      },
+      "conservation": {
+        "bindings": [
+          {
+            "row_index": 5,
+            "core_action": "约定固定安静时段",
+            "core_evidence": [
+              {
+                "source_id": "m13",
+                "quote": "几名作息相近的长期室友要安排客厅乐器练习，大家都同意两种协调方法可用；可以约定固定安静时段，也可以临时发消息再协调。"
+              }
+            ],
+            "execution_question": "执行先后"
+          }
+        ],
+        "trace": [
+          {
+            "row_index": 5,
+            "core_action": "约定固定安静时段",
+            "execution_question": "执行先后",
+            "original_ordered_action_retained_exactly": true,
+            "all_original_conditions_preserved_on_both_targets": true
+          }
+        ],
+        "developer_annotation_not_model_inference": true,
+        "semantic_decomposition_independently_accepted": false,
+        "old_semantic_equivalence_verified": false
+      }
+    }
+  ],
+  "whole_public_character_cap": 1536,
+  "actual_new_model_calls": 0,
+  "post_hoc_case_informed_developer_annotation": true,
+  "automatic_parser_or_new_generation": false,
+  "literal_ordered_action_retained": true,
+  "semantic_decomposition_independently_accepted": false,
+  "old_semantic_equivalence_verified": false,
+  "behavioral_fidelity_verified": false,
+  "replaces_closed_cards_or_scores": false,
+  "new_service_authority": false,
+  "production_default_changed": false
+}
