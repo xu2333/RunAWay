@@ -112,6 +112,8 @@ jobs:
         run: python scripts/replay_named_target_diagnostic.py
       - name: Replay unchanged-memory task-contract comparison (no calls)
         run: python scripts/replay_question_contract_diagnostic.py
+      - name: Verify source-grounded task scenarios and offline fixture calibration (no calls)
+        run: python benchmarks/task-scenarios-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

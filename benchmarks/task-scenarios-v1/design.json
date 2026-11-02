@@ -1,0 +1,61 @@
+{
+  "version": "task_scenarios_v1",
+  "status": "offline_authored_calibration_only",
+  "profiles": 8,
+  "dependent_template_families": 4,
+  "source_messages": 48,
+  "primary_cases": 40,
+  "known": 28,
+  "unknown": 12,
+  "unique_public_forms": 40,
+  "person_form_combinations": 80,
+  "planned_reads_per_person": 2,
+  "answers_per_case": 4,
+  "planned_answers": 160,
+  "tasks": {
+    "preferred_option": 16,
+    "execution_order": 8,
+    "past_observation": 8,
+    "decision_polarity": 8
+  },
+  "source_interventions": 40,
+  "authored_changed_reference_transitions": 40,
+  "source_interventions_are_compressor_damage": false,
+  "counterfactual_answer_transitions_semantically_verified": false,
+  "model_calls": 0,
+  "new_service_authority": false,
+  "real_person_data": false,
+  "semantic_reference_independently_accepted": false,
+  "independent_holdout": false,
+  "existing_benchmarks_or_defaults_changed": false,
+  "source_sha256": {
+    "repair0": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "repair1": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "field0": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "field1": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "kitchen0": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "kitchen1": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "music0": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "music1": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e"
+  },
+  "canonical_source_characters": {
+    "repair0": 474,
+    "repair1": 482,
+    "field0": 471,
+    "field1": 478,
+    "kitchen0": 471,
+    "kitchen1": 478,
+    "music0": 476,
+    "music1": 483
+  },
+  "question_sha256": {
+    "repair0": "a61e9d102e30c2aa740ed61e43fb3b7e2cc10ce231ed59dbd0ad5f9b7771e56b",
+    "repair1": "a61e9d102e30c2aa740ed61e43fb3b7e2cc10ce231ed59dbd0ad5f9b7771e56b",
+    "field0": "af293862d27ba0ece744191763852215c833e1cda67cdeeb4c5c97f5c3a05300",
+    "field1": "af293862d27ba0ece744191763852215c833e1cda67cdeeb4c5c97f5c3a05300",
+    "kitchen0": "261934fc8275dede4270f662ebd1f909648e7af0d0789a3e937d314eea6b6a29",
+    "kitchen1": "261934fc8275dede4270f662ebd1f909648e7af0d0789a3e937d314eea6b6a29",
+    "music0": "cfa29aa38a808fd657faa230d000e91b175cedd3c254e47c445f82a1302e0771",
+    "music1": "cfa29aa38a808fd657faa230d000e91b175cedd3c254e47c445f82a1302e0771"
+  }
+}

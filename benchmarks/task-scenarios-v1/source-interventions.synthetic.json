@@ -1,0 +1,2922 @@
+[
+  {
+    "profile": "repair0",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。",
+    "after": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。",
+    "baseline_source_sha256": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "modified_source_sha256": "08cd69d15d23731cc9d86c5d481d76bd73fa8ea68ee03074bd7216730a68d13d",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“已归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_choice",
+      "target_object": "社区维修活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "场地许可已落实",
+      "options": [
+        "先摆工具后诊断",
+        "先诊断后摆工具"
+      ],
+      "reference": "先诊断后摆工具",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先摆工具后诊断"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair0",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "场地许可未落实时，我还没有决定选哪套方案。",
+    "after": "场地许可未落实时，我明确选择整套方案“先摆工具后诊断”。",
+    "baseline_source_sha256": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "modified_source_sha256": "048f9d33f75aba1e3d5349f2b500474d08ee71c4eb9cb4fd3709d7a1b711f6c1",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。场地许可未落实时，我明确选择整套方案“先摆工具后诊断”。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“已归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_uncovered",
+      "target_object": "社区维修活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "场地许可未落实",
+      "options": [
+        "先摆工具后诊断",
+        "先诊断后摆工具"
+      ],
+      "reference": "先摆工具后诊断",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "场地许可未落实时，我明确选择整套方案“先摆工具后诊断”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair0",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。",
+    "after": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "modified_source_sha256": "dcfcd9ee9e09b414118df5d2f14d7aade8c81bc3cbeba9e340c8b8a1cac43d02",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“已归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_order",
+      "target_object": "上次社区维修活动",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先验电再铺垫",
+        "先铺垫再验电"
+      ],
+      "reference": "先铺垫再验电",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先验电再铺垫"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair0",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "工具箱借用的上一次实际记录是“已归还”。",
+    "after": "工具箱借用的上一次实际记录是“尚未归还”。",
+    "baseline_source_sha256": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "modified_source_sha256": "379a55bd0df0569a63988a0b17fae63678f565f75b4ca5dfa7c7e2c1fca88f53",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“尚未归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_past",
+      "target_object": "工具箱借用",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已归还",
+        "尚未归还"
+      ],
+      "reference": "尚未归还",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "工具箱借用的上一次实际记录是“尚未归还”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "已归还"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair0",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于远程值班，我还没有决定。",
+    "after": "关于远程值班，我的明确决定是“接受安排”。",
+    "baseline_source_sha256": "4857be5475230a21e9f02f88c773d078d2a50c6b9d7da586d38e5ffa43520f73",
+    "modified_source_sha256": "52c5057ae7a85d04af63d3db7f7cd306086cfd49378a5d1da02916d3cf350378",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“已归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_commitment",
+      "target_object": "远程值班",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "接受安排",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于远程值班，我的明确决定是“接受安排”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair1",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。",
+    "after": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。",
+    "baseline_source_sha256": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "modified_source_sha256": "5a9fcd97bcce0d3fd2c63010edbdff6e1241c15e6cba642eee027ecaf569aa7e",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“尚未归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_choice",
+      "target_object": "社区维修活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "场地许可已落实",
+      "options": [
+        "先摆工具后诊断",
+        "先诊断后摆工具"
+      ],
+      "reference": "先摆工具后诊断",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先诊断后摆工具"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair1",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "场地许可未落实时，我还没有决定选哪套方案。",
+    "after": "场地许可未落实时，我明确选择整套方案“先诊断后摆工具”。",
+    "baseline_source_sha256": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "modified_source_sha256": "29e8a48235645d104190c968d6572fadbea42b4db7b6fdfb9a2506880e3cd165",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。场地许可未落实时，我明确选择整套方案“先诊断后摆工具”。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“尚未归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_uncovered",
+      "target_object": "社区维修活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "场地许可未落实",
+      "options": [
+        "先摆工具后诊断",
+        "先诊断后摆工具"
+      ],
+      "reference": "先诊断后摆工具",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "场地许可未落实时，我明确选择整套方案“先诊断后摆工具”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair1",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。",
+    "after": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "modified_source_sha256": "0f2f97e81afb236db6d0d47ba4834603be5265b769c9f364e2b6134b0258da9b",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“尚未归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_order",
+      "target_object": "上次社区维修活动",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先验电再铺垫",
+        "先铺垫再验电"
+      ],
+      "reference": "先验电再铺垫",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先铺垫再验电"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair1",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "工具箱借用的上一次实际记录是“尚未归还”。",
+    "after": "工具箱借用的上一次实际记录是“已归还”。",
+    "baseline_source_sha256": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "modified_source_sha256": "47cf233d9f886990ad45067490ea3534095a0f4e44d7aa8d248e800e452af041",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“已归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_past",
+      "target_object": "工具箱借用",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已归还",
+        "尚未归还"
+      ],
+      "reference": "已归还",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "工具箱借用的上一次实际记录是“已归还”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "尚未归还"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "repair1",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于远程值班，我的明确决定是“接受安排”。",
+    "after": "关于远程值班，我还没有决定。",
+    "baseline_source_sha256": "9547ab8271087ecf1ab6f030cae131a4f4c4841e1cd05bc6fff28e7baa0db089",
+    "modified_source_sha256": "620fd8305ee651de364a03169ca024fbf8c98da587b51d4965240d20f61e4a1c",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。场地许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先摆工具后诊断”和“先诊断后摆工具”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程值班，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "工具箱借用的上一次实际记录是“尚未归还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程值班，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "repair_commitment",
+      "target_object": "远程值班",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "U",
+      "unknown_reason": "not_decided",
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于远程值班，我还没有决定。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "接受安排"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field0",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。",
+    "after": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。",
+    "baseline_source_sha256": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "modified_source_sha256": "dfba58a4213f969ce08c1d25cd13fa529d270d96850bc6209cf568d6a1e3bf31",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“已经入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_choice",
+      "target_object": "虚构田野采样的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "样地准入已落实",
+      "options": [
+        "先拍照后取样",
+        "先取样后拍照"
+      ],
+      "reference": "先取样后拍照",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先拍照后取样"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field0",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "样地准入未落实时，我还没有决定选哪套方案。",
+    "after": "样地准入未落实时，我明确选择整套方案“先拍照后取样”。",
+    "baseline_source_sha256": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "modified_source_sha256": "f8b508b92ea5dbbc2206d7c587f54eaf77fa23f0fd36fac4631bbb897ec53104",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。样地准入未落实时，我明确选择整套方案“先拍照后取样”。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“已经入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_uncovered",
+      "target_object": "虚构田野采样的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "样地准入未落实",
+      "options": [
+        "先拍照后取样",
+        "先取样后拍照"
+      ],
+      "reference": "先拍照后取样",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "样地准入未落实时，我明确选择整套方案“先拍照后取样”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field0",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。",
+    "after": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "modified_source_sha256": "c3c0b2328a1da36bbf934b38df8aa1dd62562432d571d115690cfb771516d591",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“已经入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_order",
+      "target_object": "上次虚构田野采样",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先校表再编号",
+        "先编号再校表"
+      ],
+      "reference": "先编号再校表",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先校表再编号"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field0",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次样本的上一次实际记录是“已经入库”。",
+    "after": "上次样本的上一次实际记录是“尚未入库”。",
+    "baseline_source_sha256": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "modified_source_sha256": "694fa9c71ed2c2b5832ea8347d443e0ff4081dcaed5d3f49d72e6242ba1bf361",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“尚未入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_past",
+      "target_object": "上次样本",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经入库",
+        "尚未入库"
+      ],
+      "reference": "尚未入库",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次样本的上一次实际记录是“尚未入库”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "已经入库"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field0",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于跨组代采，我还没有决定。",
+    "after": "关于跨组代采，我的明确决定是“接受安排”。",
+    "baseline_source_sha256": "8352de84c72f5824c6023ec5baf559dfaf40727c79a6ea1eb0098f4b86ae7724",
+    "modified_source_sha256": "e456da7436a9001a9b361c16ede2879ea90a4b52daef847a22cd5599cfa458a5",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“已经入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_commitment",
+      "target_object": "跨组代采",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "接受安排",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于跨组代采，我的明确决定是“接受安排”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field1",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。",
+    "after": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。",
+    "baseline_source_sha256": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "modified_source_sha256": "8cd7fe24a53a24c513691b192c95c2a4b3dfdb61243da2cd76cfbbe5aa9f9061",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“尚未入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_choice",
+      "target_object": "虚构田野采样的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "样地准入已落实",
+      "options": [
+        "先拍照后取样",
+        "先取样后拍照"
+      ],
+      "reference": "先拍照后取样",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先取样后拍照"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field1",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "样地准入未落实时，我还没有决定选哪套方案。",
+    "after": "样地准入未落实时，我明确选择整套方案“先取样后拍照”。",
+    "baseline_source_sha256": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "modified_source_sha256": "693edf3c6da6c67889d46ea61d6ff14356f1ce7c7fd71f816978de136b95cc28",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。样地准入未落实时，我明确选择整套方案“先取样后拍照”。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“尚未入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_uncovered",
+      "target_object": "虚构田野采样的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "样地准入未落实",
+      "options": [
+        "先拍照后取样",
+        "先取样后拍照"
+      ],
+      "reference": "先取样后拍照",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "样地准入未落实时，我明确选择整套方案“先取样后拍照”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field1",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。",
+    "after": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "modified_source_sha256": "4be5ee44c56a2fdda4075a8f4f78206c181eab9771ac34bb093e1ecd77cb9638",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“尚未入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_order",
+      "target_object": "上次虚构田野采样",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先校表再编号",
+        "先编号再校表"
+      ],
+      "reference": "先校表再编号",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先编号再校表"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field1",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次样本的上一次实际记录是“尚未入库”。",
+    "after": "上次样本的上一次实际记录是“已经入库”。",
+    "baseline_source_sha256": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "modified_source_sha256": "ebed4fb25ae9da80ea12b16158f79a43d8d10349a6fe465a055cf5a50be1547e",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“已经入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_past",
+      "target_object": "上次样本",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经入库",
+        "尚未入库"
+      ],
+      "reference": "已经入库",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次样本的上一次实际记录是“已经入库”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "尚未入库"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "field1",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于跨组代采，我的明确决定是“接受安排”。",
+    "after": "关于跨组代采，我还没有决定。",
+    "baseline_source_sha256": "402b4cb7d0ccb089070d1b5ceab815112926ad210fcac50b6e8547a18eba633b",
+    "modified_source_sha256": "51b06f7b178943ca889738968c3a1848f94b0e946dee251c397c4e760e5391a6",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。样地准入未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先拍照后取样”和“先取样后拍照”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受跨组代采，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次样本的上一次实际记录是“尚未入库”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于跨组代采，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "field_commitment",
+      "target_object": "跨组代采",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "U",
+      "unknown_reason": "not_decided",
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于跨组代采，我还没有决定。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "接受安排"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen0",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。",
+    "after": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。",
+    "baseline_source_sha256": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "modified_source_sha256": "f4d2473acbf0d8630b27f2539b0666cff5ef97bffac76cb3ce19037ecb3927b2",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“已经清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_choice",
+      "target_object": "社区烹饪活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "厨房许可已落实",
+      "options": [
+        "先分菜后示范",
+        "先示范后分菜"
+      ],
+      "reference": "先示范后分菜",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先分菜后示范"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen0",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "厨房许可未落实时，我还没有决定选哪套方案。",
+    "after": "厨房许可未落实时，我明确选择整套方案“先分菜后示范”。",
+    "baseline_source_sha256": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "modified_source_sha256": "9b0eef6abead757b1889db969f849bb82ed186c76bb5d29ba9c0c22b3a68704a",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。厨房许可未落实时，我明确选择整套方案“先分菜后示范”。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“已经清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_uncovered",
+      "target_object": "社区烹饪活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "厨房许可未落实",
+      "options": [
+        "先分菜后示范",
+        "先示范后分菜"
+      ],
+      "reference": "先分菜后示范",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "厨房许可未落实时，我明确选择整套方案“先分菜后示范”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen0",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。",
+    "after": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "modified_source_sha256": "4b744497409a3333bf021e7f21ab6d9ef1b8276e181a8ab2fabf8ca983f38b4d",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“已经清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_order",
+      "target_object": "上次社区烹饪活动",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先洗台再称量",
+        "先称量再洗台"
+      ],
+      "reference": "先称量再洗台",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先洗台再称量"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen0",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次餐具的上一次实际记录是“已经清点”。",
+    "after": "上次餐具的上一次实际记录是“尚未清点”。",
+    "baseline_source_sha256": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "modified_source_sha256": "90d02fdeb8be3cc937b21e9c1695397daf6b70e94a25a4b18c4cf95d7a286b27",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“尚未清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_past",
+      "target_object": "上次餐具",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经清点",
+        "尚未清点"
+      ],
+      "reference": "尚未清点",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次餐具的上一次实际记录是“尚未清点”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "已经清点"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen0",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于夜间备料，我还没有决定。",
+    "after": "关于夜间备料，我的明确决定是“接受安排”。",
+    "baseline_source_sha256": "5594955df9eeb86326b916d2a22da1a74fde514239611aaa31b001209642b874",
+    "modified_source_sha256": "354d8e2d270323a6f8d8ea591ad06aac64c95c2c9cfadda58eee9e2f62cb17d7",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“已经清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_commitment",
+      "target_object": "夜间备料",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "接受安排",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于夜间备料，我的明确决定是“接受安排”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen1",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。",
+    "after": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。",
+    "baseline_source_sha256": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "modified_source_sha256": "22c2d4b2d0e13cde27dc9093da815ba93571b10015a9342c8d65b4fc31743d9f",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“尚未清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_choice",
+      "target_object": "社区烹饪活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "厨房许可已落实",
+      "options": [
+        "先分菜后示范",
+        "先示范后分菜"
+      ],
+      "reference": "先分菜后示范",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先示范后分菜"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen1",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "厨房许可未落实时，我还没有决定选哪套方案。",
+    "after": "厨房许可未落实时，我明确选择整套方案“先示范后分菜”。",
+    "baseline_source_sha256": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "modified_source_sha256": "e09c1e2f326a73b02783292c7e51e5aceb5eac509b1e6e4d045005ee73cf80ee",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。厨房许可未落实时，我明确选择整套方案“先示范后分菜”。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“尚未清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_uncovered",
+      "target_object": "社区烹饪活动的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "厨房许可未落实",
+      "options": [
+        "先分菜后示范",
+        "先示范后分菜"
+      ],
+      "reference": "先示范后分菜",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "厨房许可未落实时，我明确选择整套方案“先示范后分菜”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen1",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。",
+    "after": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "modified_source_sha256": "e6b4a099e882b4927ec6e9b3eeb4d7bcdc1d45fc5c0e774b0474ae38d59c9346",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“尚未清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_order",
+      "target_object": "上次社区烹饪活动",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先洗台再称量",
+        "先称量再洗台"
+      ],
+      "reference": "先洗台再称量",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先称量再洗台"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen1",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次餐具的上一次实际记录是“尚未清点”。",
+    "after": "上次餐具的上一次实际记录是“已经清点”。",
+    "baseline_source_sha256": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "modified_source_sha256": "f66a7af7aebcf6a2b01bf3d5d5166a1ab375bd19096459c0f6e05e2f91d7a58a",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“已经清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_past",
+      "target_object": "上次餐具",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经清点",
+        "尚未清点"
+      ],
+      "reference": "已经清点",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次餐具的上一次实际记录是“已经清点”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "尚未清点"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "kitchen1",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于夜间备料，我的明确决定是“接受安排”。",
+    "after": "关于夜间备料，我还没有决定。",
+    "baseline_source_sha256": "b9d7009f193e79253938bb8b53a466a06eda7028b329ae82448d7142af74f706",
+    "modified_source_sha256": "71135429a3a2a07490b3388fa2ec3e60104de0bf66f6cdc2eff4d62c1e13ad68",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。厨房许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先分菜后示范”和“先示范后分菜”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受夜间备料，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次餐具的上一次实际记录是“尚未清点”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于夜间备料，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "kitchen_commitment",
+      "target_object": "夜间备料",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "U",
+      "unknown_reason": "not_decided",
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于夜间备料，我还没有决定。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "接受安排"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music0",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。",
+    "after": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。",
+    "baseline_source_sha256": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "modified_source_sha256": "a22e4c3bb23d381ab7458fc24103fabb7395cb63d06f7cec5ab06937df09afc5",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“已经返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_choice",
+      "target_object": "虚构合奏排练的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "排练室许可已落实",
+      "options": [
+        "先合奏后分声部",
+        "先分声部后合奏"
+      ],
+      "reference": "先分声部后合奏",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先合奏后分声部"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music0",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "排练室许可未落实时，我还没有决定选哪套方案。",
+    "after": "排练室许可未落实时，我明确选择整套方案“先合奏后分声部”。",
+    "baseline_source_sha256": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "modified_source_sha256": "2557a596f7cbe2331331f931e0eb41921547c5c5ca6472511eccc9f7d0b9c538",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。排练室许可未落实时，我明确选择整套方案“先合奏后分声部”。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“已经返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_uncovered",
+      "target_object": "虚构合奏排练的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "排练室许可未落实",
+      "options": [
+        "先合奏后分声部",
+        "先分声部后合奏"
+      ],
+      "reference": "先合奏后分声部",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "排练室许可未落实时，我明确选择整套方案“先合奏后分声部”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music0",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。",
+    "after": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "modified_source_sha256": "f6b007a5c8ce3c99b7392e158b8eab2cb65025e37f4fc4ad77e409fbe0e76911",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“已经返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_order",
+      "target_object": "上次虚构合奏排练",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先调音再摆谱",
+        "先摆谱再调音"
+      ],
+      "reference": "先摆谱再调音",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先调音再摆谱"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music0",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次谱架的上一次实际记录是“已经返还”。",
+    "after": "上次谱架的上一次实际记录是“尚未返还”。",
+    "baseline_source_sha256": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "modified_source_sha256": "b15605ffa10d75a26621613924628c87452b62a3284251d771f4203650de4cc7",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“尚未返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_past",
+      "target_object": "上次谱架",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经返还",
+        "尚未返还"
+      ],
+      "reference": "尚未返还",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次谱架的上一次实际记录是“尚未返还”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "已经返还"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music0",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于远程领奏，我还没有决定。",
+    "after": "关于远程领奏，我的明确决定是“接受安排”。",
+    "baseline_source_sha256": "7c40df41f1454095673a625de510f503b20c1e0753a2c8bb28a507c97398c84b",
+    "modified_source_sha256": "432af3ee3aec4ce7f70e573738f9c61aca9d89e0bea1e54534dc46ac911cd8a8",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“已经返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_commitment",
+      "target_object": "远程领奏",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "接受安排",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于远程领奏，我的明确决定是“接受安排”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music1",
+    "case": "choice",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。",
+    "after": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。",
+    "baseline_source_sha256": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e",
+    "modified_source_sha256": "ef7b934c7fa58c24a14336dfae441a5f9902b296e8259dd2b1a4dbc462c7650c",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“尚未返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_choice",
+      "target_object": "虚构合奏排练的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "排练室许可已落实",
+      "options": [
+        "先合奏后分声部",
+        "先分声部后合奏"
+      ],
+      "reference": "先合奏后分声部",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先分声部后合奏"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music1",
+    "case": "uncovered",
+    "operation": "replace_exact_user_span",
+    "source_id": "u1",
+    "before": "排练室许可未落实时，我还没有决定选哪套方案。",
+    "after": "排练室许可未落实时，我明确选择整套方案“先分声部后合奏”。",
+    "baseline_source_sha256": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e",
+    "modified_source_sha256": "b1658dfffda3706dbf08d29ae9541c8403ec6b17f05b8cd60406f841fa73b042",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。排练室许可未落实时，我明确选择整套方案“先分声部后合奏”。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“尚未返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_uncovered",
+      "target_object": "虚构合奏排练的下次整套方案",
+      "intent": "preferred_option",
+      "temporal_role": "future_policy",
+      "answer_kind": "existing_option_label",
+      "facts": "排练室许可未落实",
+      "options": [
+        "先合奏后分声部",
+        "先分声部后合奏"
+      ],
+      "reference": "先分声部后合奏",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u1",
+          "quote": "排练室许可未落实时，我明确选择整套方案“先分声部后合奏”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "U"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music1",
+    "case": "order",
+    "operation": "replace_exact_user_span",
+    "source_id": "u3",
+    "before": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。",
+    "after": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。",
+    "baseline_source_sha256": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e",
+    "modified_source_sha256": "68be6cbdc7460250c727ae75671b748dc5aec1e0aa81507986544bf7621e1ac6",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“尚未返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_order",
+      "target_object": "上次虚构合奏排练",
+      "intent": "execution_order",
+      "temporal_role": "explicit_sequence",
+      "answer_kind": "execution_order_label",
+      "facts": "只读取实际执行先后，不问下次整套方案",
+      "options": [
+        "先调音再摆谱",
+        "先摆谱再调音"
+      ],
+      "reference": "先调音再摆谱",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u3",
+          "quote": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "先摆谱再调音"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music1",
+    "case": "past",
+    "operation": "replace_exact_user_span",
+    "source_id": "u2",
+    "before": "上次谱架的上一次实际记录是“尚未返还”。",
+    "after": "上次谱架的上一次实际记录是“已经返还”。",
+    "baseline_source_sha256": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e",
+    "modified_source_sha256": "e851334296a55923972b536825db19270f08d27f2a0e0b664033c948a404cedc",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“已经返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我的明确决定是“接受安排”。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_past",
+      "target_object": "上次谱架",
+      "intent": "past_observation",
+      "temporal_role": "recorded_past",
+      "answer_kind": "observed_status_label",
+      "facts": "只读取上一次记录",
+      "options": [
+        "已经返还",
+        "尚未返还"
+      ],
+      "reference": "已经返还",
+      "unknown_reason": null,
+      "support": [
+        {
+          "source_id": "u2",
+          "quote": "上次谱架的上一次实际记录是“已经返还”。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "尚未返还"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  },
+  {
+    "profile": "music1",
+    "case": "commitment",
+    "operation": "replace_exact_user_span",
+    "source_id": "u4",
+    "before": "关于远程领奏，我的明确决定是“接受安排”。",
+    "after": "关于远程领奏，我还没有决定。",
+    "baseline_source_sha256": "6aed72af6306b99470290b2b809b84e4b947d26e1fe006825f8e7538e114503e",
+    "modified_source_sha256": "afe4e7fea04c4f922a0faf3f8498ac40ec6ea8504c58a7f9fc3a56007fe05d29",
+    "modified_sources": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "u1",
+          "role": "user",
+          "text": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。排练室许可未落实时，我还没有决定选哪套方案。两套候选的登记全名分别是“先合奏后分声部”和“先分声部后合奏”。"
+        },
+        {
+          "id": "a1",
+          "role": "assistant",
+          "text": "我建议你接受远程领奏，也可以把活动改个新名字。"
+        },
+        {
+          "id": "u2",
+          "role": "user",
+          "text": "上次谱架的上一次实际记录是“尚未返还”。"
+        },
+        {
+          "id": "u3",
+          "role": "user",
+          "text": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+        },
+        {
+          "id": "u4",
+          "role": "user",
+          "text": "关于远程领奏，我还没有决定。"
+        },
+        {
+          "id": "u5",
+          "role": "user",
+          "text": "这几条分别记录未来方案、过去事实、实际先后和新安排的决定，请分开保存。"
+        }
+      ]
+    },
+    "author_contract": {
+      "version": "task_contract_v1",
+      "id": "music_commitment",
+      "target_object": "远程领奏",
+      "intent": "decision_polarity",
+      "temporal_role": "recorded_commitment",
+      "answer_kind": "decision_polarity_label",
+      "facts": "只判断本人对该安排的明确决定",
+      "options": [
+        "接受安排",
+        "拒绝安排"
+      ],
+      "reference": "U",
+      "unknown_reason": "not_decided",
+      "support": [
+        {
+          "source_id": "u4",
+          "quote": "关于远程领奏，我还没有决定。"
+        }
+      ],
+      "contrasts": [
+        {
+          "fault": "restore_baseline_source",
+          "predicted_answer": "接受安排"
+        }
+      ]
+    },
+    "semantic_transition_independently_verified": false
+  }
+]
