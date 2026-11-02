@@ -1,0 +1,1414 @@
+{
+  "rows": [
+    {
+      "profile": "repair0",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_choice",
+        "target_object": "社区维修活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "场地许可已落实",
+        "options": [
+          "先摆工具后诊断",
+          "先诊断后摆工具"
+        ],
+        "reference": "先摆工具后诊断",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先摆工具后诊断”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先诊断后摆工具"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_choice_ab",
+        "repair_choice_ba"
+      ]
+    },
+    {
+      "profile": "repair0",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_uncovered",
+        "target_object": "社区维修活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "场地许可未落实",
+        "options": [
+          "先摆工具后诊断",
+          "先诊断后摆工具"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "场地许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先摆工具后诊断"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_uncovered_ab",
+        "repair_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "repair0",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_order",
+        "target_object": "上次社区维修活动",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先验电再铺垫",
+          "先铺垫再验电"
+        ],
+        "reference": "先验电再铺垫",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次社区维修活动明确记录的实际执行先后是“先验电再铺垫”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先铺垫再验电"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_order_ab",
+        "repair_order_ba"
+      ]
+    },
+    {
+      "profile": "repair0",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_past",
+        "target_object": "工具箱借用",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已归还",
+          "尚未归还"
+        ],
+        "reference": "已归还",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "工具箱借用的上一次实际记录是“已归还”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "尚未归还"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_past_ab",
+        "repair_past_ba"
+      ]
+    },
+    {
+      "profile": "repair0",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_commitment",
+        "target_object": "远程值班",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于远程值班，我还没有决定。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_assistant_proposal_adoption",
+            "predicted_answer": "接受安排"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_commitment_ab",
+        "repair_commitment_ba"
+      ]
+    },
+    {
+      "profile": "repair1",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_choice",
+        "target_object": "社区维修活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "场地许可已落实",
+        "options": [
+          "先摆工具后诊断",
+          "先诊断后摆工具"
+        ],
+        "reference": "先诊断后摆工具",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "场地许可已落实时，下次社区维修活动我选择整套方案“先诊断后摆工具”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先摆工具后诊断"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_choice_ab",
+        "repair_choice_ba"
+      ]
+    },
+    {
+      "profile": "repair1",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_uncovered",
+        "target_object": "社区维修活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "场地许可未落实",
+        "options": [
+          "先摆工具后诊断",
+          "先诊断后摆工具"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "场地许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先诊断后摆工具"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_uncovered_ab",
+        "repair_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "repair1",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_order",
+        "target_object": "上次社区维修活动",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先验电再铺垫",
+          "先铺垫再验电"
+        ],
+        "reference": "先铺垫再验电",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次社区维修活动明确记录的实际执行先后是“先铺垫再验电”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先验电再铺垫"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_order_ab",
+        "repair_order_ba"
+      ]
+    },
+    {
+      "profile": "repair1",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_past",
+        "target_object": "工具箱借用",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已归还",
+          "尚未归还"
+        ],
+        "reference": "尚未归还",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "工具箱借用的上一次实际记录是“尚未归还”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "已归还"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_past_ab",
+        "repair_past_ba"
+      ]
+    },
+    {
+      "profile": "repair1",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "repair_commitment",
+        "target_object": "远程值班",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "接受安排",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于远程值班，我的明确决定是“接受安排”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "erase_explicit_commitment",
+            "predicted_answer": "U"
+          }
+        ]
+      },
+      "query_ids": [
+        "repair_commitment_ab",
+        "repair_commitment_ba"
+      ]
+    },
+    {
+      "profile": "field0",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_choice",
+        "target_object": "虚构田野采样的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "样地准入已落实",
+        "options": [
+          "先拍照后取样",
+          "先取样后拍照"
+        ],
+        "reference": "先拍照后取样",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先拍照后取样”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先取样后拍照"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_choice_ab",
+        "field_choice_ba"
+      ]
+    },
+    {
+      "profile": "field0",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_uncovered",
+        "target_object": "虚构田野采样的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "样地准入未落实",
+        "options": [
+          "先拍照后取样",
+          "先取样后拍照"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "样地准入未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先拍照后取样"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_uncovered_ab",
+        "field_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "field0",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_order",
+        "target_object": "上次虚构田野采样",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先校表再编号",
+          "先编号再校表"
+        ],
+        "reference": "先校表再编号",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次虚构田野采样明确记录的实际执行先后是“先校表再编号”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先编号再校表"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_order_ab",
+        "field_order_ba"
+      ]
+    },
+    {
+      "profile": "field0",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_past",
+        "target_object": "上次样本",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经入库",
+          "尚未入库"
+        ],
+        "reference": "已经入库",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次样本的上一次实际记录是“已经入库”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "尚未入库"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_past_ab",
+        "field_past_ba"
+      ]
+    },
+    {
+      "profile": "field0",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_commitment",
+        "target_object": "跨组代采",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于跨组代采，我还没有决定。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_assistant_proposal_adoption",
+            "predicted_answer": "接受安排"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_commitment_ab",
+        "field_commitment_ba"
+      ]
+    },
+    {
+      "profile": "field1",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_choice",
+        "target_object": "虚构田野采样的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "样地准入已落实",
+        "options": [
+          "先拍照后取样",
+          "先取样后拍照"
+        ],
+        "reference": "先取样后拍照",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "样地准入已落实时，下次虚构田野采样我选择整套方案“先取样后拍照”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先拍照后取样"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_choice_ab",
+        "field_choice_ba"
+      ]
+    },
+    {
+      "profile": "field1",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_uncovered",
+        "target_object": "虚构田野采样的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "样地准入未落实",
+        "options": [
+          "先拍照后取样",
+          "先取样后拍照"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "样地准入未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先取样后拍照"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_uncovered_ab",
+        "field_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "field1",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_order",
+        "target_object": "上次虚构田野采样",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先校表再编号",
+          "先编号再校表"
+        ],
+        "reference": "先编号再校表",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次虚构田野采样明确记录的实际执行先后是“先编号再校表”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先校表再编号"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_order_ab",
+        "field_order_ba"
+      ]
+    },
+    {
+      "profile": "field1",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_past",
+        "target_object": "上次样本",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经入库",
+          "尚未入库"
+        ],
+        "reference": "尚未入库",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次样本的上一次实际记录是“尚未入库”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "已经入库"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_past_ab",
+        "field_past_ba"
+      ]
+    },
+    {
+      "profile": "field1",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "field_commitment",
+        "target_object": "跨组代采",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "接受安排",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于跨组代采，我的明确决定是“接受安排”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "erase_explicit_commitment",
+            "predicted_answer": "U"
+          }
+        ]
+      },
+      "query_ids": [
+        "field_commitment_ab",
+        "field_commitment_ba"
+      ]
+    },
+    {
+      "profile": "kitchen0",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_choice",
+        "target_object": "社区烹饪活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "厨房许可已落实",
+        "options": [
+          "先分菜后示范",
+          "先示范后分菜"
+        ],
+        "reference": "先分菜后示范",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先分菜后示范”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先示范后分菜"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_choice_ab",
+        "kitchen_choice_ba"
+      ]
+    },
+    {
+      "profile": "kitchen0",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_uncovered",
+        "target_object": "社区烹饪活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "厨房许可未落实",
+        "options": [
+          "先分菜后示范",
+          "先示范后分菜"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "厨房许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先分菜后示范"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_uncovered_ab",
+        "kitchen_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "kitchen0",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_order",
+        "target_object": "上次社区烹饪活动",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先洗台再称量",
+          "先称量再洗台"
+        ],
+        "reference": "先洗台再称量",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次社区烹饪活动明确记录的实际执行先后是“先洗台再称量”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先称量再洗台"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_order_ab",
+        "kitchen_order_ba"
+      ]
+    },
+    {
+      "profile": "kitchen0",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_past",
+        "target_object": "上次餐具",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经清点",
+          "尚未清点"
+        ],
+        "reference": "已经清点",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次餐具的上一次实际记录是“已经清点”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "尚未清点"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_past_ab",
+        "kitchen_past_ba"
+      ]
+    },
+    {
+      "profile": "kitchen0",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_commitment",
+        "target_object": "夜间备料",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于夜间备料，我还没有决定。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_assistant_proposal_adoption",
+            "predicted_answer": "接受安排"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_commitment_ab",
+        "kitchen_commitment_ba"
+      ]
+    },
+    {
+      "profile": "kitchen1",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_choice",
+        "target_object": "社区烹饪活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "厨房许可已落实",
+        "options": [
+          "先分菜后示范",
+          "先示范后分菜"
+        ],
+        "reference": "先示范后分菜",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "厨房许可已落实时，下次社区烹饪活动我选择整套方案“先示范后分菜”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先分菜后示范"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_choice_ab",
+        "kitchen_choice_ba"
+      ]
+    },
+    {
+      "profile": "kitchen1",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_uncovered",
+        "target_object": "社区烹饪活动的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "厨房许可未落实",
+        "options": [
+          "先分菜后示范",
+          "先示范后分菜"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "厨房许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先示范后分菜"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_uncovered_ab",
+        "kitchen_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "kitchen1",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_order",
+        "target_object": "上次社区烹饪活动",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先洗台再称量",
+          "先称量再洗台"
+        ],
+        "reference": "先称量再洗台",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次社区烹饪活动明确记录的实际执行先后是“先称量再洗台”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先洗台再称量"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_order_ab",
+        "kitchen_order_ba"
+      ]
+    },
+    {
+      "profile": "kitchen1",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_past",
+        "target_object": "上次餐具",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经清点",
+          "尚未清点"
+        ],
+        "reference": "尚未清点",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次餐具的上一次实际记录是“尚未清点”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "已经清点"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_past_ab",
+        "kitchen_past_ba"
+      ]
+    },
+    {
+      "profile": "kitchen1",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "kitchen_commitment",
+        "target_object": "夜间备料",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "接受安排",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于夜间备料，我的明确决定是“接受安排”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "erase_explicit_commitment",
+            "predicted_answer": "U"
+          }
+        ]
+      },
+      "query_ids": [
+        "kitchen_commitment_ab",
+        "kitchen_commitment_ba"
+      ]
+    },
+    {
+      "profile": "music0",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_choice",
+        "target_object": "虚构合奏排练的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "排练室许可已落实",
+        "options": [
+          "先合奏后分声部",
+          "先分声部后合奏"
+        ],
+        "reference": "先合奏后分声部",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先合奏后分声部”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先分声部后合奏"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_choice_ab",
+        "music_choice_ba"
+      ]
+    },
+    {
+      "profile": "music0",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_uncovered",
+        "target_object": "虚构合奏排练的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "排练室许可未落实",
+        "options": [
+          "先合奏后分声部",
+          "先分声部后合奏"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "排练室许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先合奏后分声部"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_uncovered_ab",
+        "music_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "music0",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_order",
+        "target_object": "上次虚构合奏排练",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先调音再摆谱",
+          "先摆谱再调音"
+        ],
+        "reference": "先调音再摆谱",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次虚构合奏排练明确记录的实际执行先后是“先调音再摆谱”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先摆谱再调音"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_order_ab",
+        "music_order_ba"
+      ]
+    },
+    {
+      "profile": "music0",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_past",
+        "target_object": "上次谱架",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经返还",
+          "尚未返还"
+        ],
+        "reference": "已经返还",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次谱架的上一次实际记录是“已经返还”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "尚未返还"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_past_ab",
+        "music_past_ba"
+      ]
+    },
+    {
+      "profile": "music0",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_commitment",
+        "target_object": "远程领奏",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于远程领奏，我还没有决定。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_assistant_proposal_adoption",
+            "predicted_answer": "接受安排"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_commitment_ab",
+        "music_commitment_ba"
+      ]
+    },
+    {
+      "profile": "music1",
+      "case": "choice",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_choice",
+        "target_object": "虚构合奏排练的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "排练室许可已落实",
+        "options": [
+          "先合奏后分声部",
+          "先分声部后合奏"
+        ],
+        "reference": "先分声部后合奏",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "排练室许可已落实时，下次虚构合奏排练我选择整套方案“先分声部后合奏”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_personal_choice",
+            "predicted_answer": "先合奏后分声部"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_choice_ab",
+        "music_choice_ba"
+      ]
+    },
+    {
+      "profile": "music1",
+      "case": "uncovered",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_uncovered",
+        "target_object": "虚构合奏排练的下次整套方案",
+        "intent": "preferred_option",
+        "temporal_role": "future_policy",
+        "answer_kind": "existing_option_label",
+        "facts": "排练室许可未落实",
+        "options": [
+          "先合奏后分声部",
+          "先分声部后合奏"
+        ],
+        "reference": "U",
+        "unknown_reason": "not_decided",
+        "support": [
+          {
+            "source_id": "u1",
+            "quote": "排练室许可未落实时，我还没有决定选哪套方案。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "invent_policy_for_undecided_condition",
+            "predicted_answer": "先分声部后合奏"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_uncovered_ab",
+        "music_uncovered_ba"
+      ]
+    },
+    {
+      "profile": "music1",
+      "case": "order",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_order",
+        "target_object": "上次虚构合奏排练",
+        "intent": "execution_order",
+        "temporal_role": "explicit_sequence",
+        "answer_kind": "execution_order_label",
+        "facts": "只读取实际执行先后，不问下次整套方案",
+        "options": [
+          "先调音再摆谱",
+          "先摆谱再调音"
+        ],
+        "reference": "先摆谱再调音",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u3",
+            "quote": "上次虚构合奏排练明确记录的实际执行先后是“先摆谱再调音”。这不是下次整套方案的名称。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_recorded_execution",
+            "predicted_answer": "先调音再摆谱"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_order_ab",
+        "music_order_ba"
+      ]
+    },
+    {
+      "profile": "music1",
+      "case": "past",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_past",
+        "target_object": "上次谱架",
+        "intent": "past_observation",
+        "temporal_role": "recorded_past",
+        "answer_kind": "observed_status_label",
+        "facts": "只读取上一次记录",
+        "options": [
+          "已经返还",
+          "尚未返还"
+        ],
+        "reference": "尚未返还",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u2",
+            "quote": "上次谱架的上一次实际记录是“尚未返还”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "reverse_past_status",
+            "predicted_answer": "已经返还"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_past_ab",
+        "music_past_ba"
+      ]
+    },
+    {
+      "profile": "music1",
+      "case": "commitment",
+      "contract": {
+        "version": "task_contract_v1",
+        "id": "music_commitment",
+        "target_object": "远程领奏",
+        "intent": "decision_polarity",
+        "temporal_role": "recorded_commitment",
+        "answer_kind": "decision_polarity_label",
+        "facts": "只判断本人对该安排的明确决定",
+        "options": [
+          "接受安排",
+          "拒绝安排"
+        ],
+        "reference": "接受安排",
+        "unknown_reason": null,
+        "support": [
+          {
+            "source_id": "u4",
+            "quote": "关于远程领奏，我的明确决定是“接受安排”。"
+          }
+        ],
+        "contrasts": [
+          {
+            "fault": "erase_explicit_commitment",
+            "predicted_answer": "U"
+          }
+        ]
+      },
+      "query_ids": [
+        "music_commitment_ab",
+        "music_commitment_ba"
+      ]
+    }
+  ],
+  "pairs": {
+    "repair0": "repair1",
+    "repair1": "repair0",
+    "field0": "field1",
+    "field1": "field0",
+    "kitchen0": "kitchen1",
+    "kitchen1": "kitchen0",
+    "music0": "music1",
+    "music1": "music0"
+  }
+}

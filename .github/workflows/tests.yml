@@ -17,7 +17,9 @@ jobs:
             python: '3.9'
           - os: ubuntu-latest
             python: '3.13'
-          - os: macos-latest
+          # ARM hosted capacity prevented jobs from starting; keep macOS checks
+          # on the standard Intel pool. See docs/ci.md for evidence and limits.
+          - os: macos-15-intel
             python: '3.13'
     runs-on: ${{ matrix.os }}
     steps:
@@ -112,6 +114,8 @@ jobs:
         run: python scripts/replay_named_target_diagnostic.py
       - name: Replay unchanged-memory task-contract comparison (no calls)
         run: python scripts/replay_question_contract_diagnostic.py
+      - name: Verify source-grounded task scenarios and offline fixture calibration (no calls)
+        run: python benchmarks/task-scenarios-v1/check.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

@@ -339,3 +339,28 @@ user-literal support plus a discriminating in-option contrast witness. Seven
 tests catch structural/answer-space blind spots such as the remote-proposal
 case. These are provenance/instrument checks,not semantic entailment or observed
 model behaviour;they do not change any frozen benchmark or grant new calls.
+
+The [source-grounded task scenario bank](benchmarks/task-scenarios-v1/README.md)
+adds four fictional settings/eight paired profiles,48 short messages and40 fixed
+person/case endpoints (28known,12unknown),with explicit future-choice,execution,
+past-fact and commitment roles. Assistant-proposal acceptance is in the actual
+decision options. Forty single-user-span source interventions declare changed
+answers with unchanged questions;these are authored contrasts,not independently
+verified semantics or observed compressor damage. Nine offline instrument tests
+protect source/question/reference separation,two-read/two-order denominators,
+wrong-person contrasts and baseline-plus-change scoring. Constructed reference,
+all-U,faulty and paired-person vectors score40/12/0/8 of40 respectively;these are
+fixture calibration scores,not model results. Sources are short/explicit and
+template-dependent,not a naturalistic compression frontier or holdout. New model
+calls0;all prior measurements,closed call scopes and production defaults remain.
+Interventions retain the full ten-form baseline packet rather than isolating two
+target forms,so question quantity/context stays fixed. Non-target preservation
+is a separate160-case/intervention diagnostic;800intervention answer slots remain
+planned,including160target slots. These remain dependent instrument fixtures.
+
+The PR45 matrix initially passed both Linux jobs but failed overall because the
+macOS ARM job could not acquire a hosted runner and ran zero steps. The
+[CI incident note](docs/ci.md) preserves that failure and the matching earlier
+main-run failure. The macOS job now requests the standard `macos-15-intel` pool;
+all checks remain required. This is macOS x86_64 coverage,not current ARM CI
+coverage. No model calls,benchmark observations or product defaults changed.
