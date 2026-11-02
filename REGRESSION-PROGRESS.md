@@ -257,3 +257,10 @@ pass,no missing/skips/retries. Recorded usage266514tokens. Eight archive damage
 checks preserve auxiliary labels/keys,denominators and negative controls. This
 remains consumed j16development,not independent semantics,semantic-erasure proof,
 real-person or cross-harness validation. No default switch or remaining call budget.
+
+The [next28-call collateral protocol](benchmarks/source-order-regression-v1/README.md)
+is prepared offline only:unchanged policy-v2/source-order-v3,fresh two-generation
+comparison on existing h93/dev62messages,112forms and56cases. Six controller
+checks protect own-source/bank isolation and fixed missing denominators. This
+excludes j16and auxiliary ordering questions,no asynchronous79-case pooling.
+No new grant or actual calls;all prior scopes remain closed.
