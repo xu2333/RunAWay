@@ -230,5 +230,9 @@ wording on a distinct execution target. All original guards remain. An early
 The current757/754views hold every other original public line fixed. This is
 post-hoc developer annotation with0new calls,not an automatic encoder or semantic
 proof. Six prototype,five lineage/conservation and five controller tests cover
-the [unapproved10-call fixed-view plan](benchmarks/order-target-read-v1/README.md).
-It requires a new grant and does not replace the closed22/23result.
+the [10-call fixed-view study](benchmarks/order-target-read-v1/MEASURED.md).
+It is now closed at10actual calls and151,105tokens:split23/23versus original22/23,
+with w11recovered in all8responses and no missing. Eight archive damage tests
+preserve the static views/parents and prevent a manual diagnostic from becoming
+an automatic encoder or semantic-proof claim. Fresh source-only generation and
+execution-order damage controls remain future work. All actual budgets are closed.

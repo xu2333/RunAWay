@@ -1,4 +1,10 @@
-# Proposed10read-only order-target calls — unapproved and unrun
+# Closed10read-only order-target calls
+
+The [measured result](MEASURED.md) records10actual calls and151,105tokens:
+split23/23versus original22/23,with the night-shift case recovered in all8
+responses. No missing or new extractions. Both inherited parents and all ordering
+wording are retained. This validates fixed developer-annotated views,not automatic
+encoding or independent semantic equivalence. The protocol below is historical.
 
 The [offline diagnostic](../order-targets-v1/README.md) keeps both chronological
 policy-v2parents and annotates a source-offered core action separately from its

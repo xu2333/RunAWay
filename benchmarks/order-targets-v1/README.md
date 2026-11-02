@@ -1,5 +1,9 @@
 # Opt-in order/choice target diagnostic — no new model calls
 
+Update: the separate [closed reading study](../order-target-read-v1/MEASURED.md)
+now observes23/23split versus22/23original on these fixed parents. This offline
+derivation itself still makes0calls;automatic source-only encoding remains untested.
+
 The [closed guidance comparison](../action-policy-comparison-v1/MEASURED.md)
 recovers three cases but both policy-v2parents still fail night-shift w11.
 This source-linked,post-hoc developer annotation separates one ordered action
@@ -36,7 +40,8 @@ Both chronological policy-v2parents are retained,not selected best outputs.
 Original727/724-character prompts remain sealed. New views are **757/754**,
 30characters longer each,including the unchanged guide and all text. Complete
 ordered wording and literal guards survive;that does not prove the intended
-semantic decomposition or LLM fidelity. No model has read these views yet.
+semantic decomposition or LLM fidelity. At derivation time no model had read them;
+the later reading result is reported separately.
 No old card/score/reference,source record or production default is replaced.
 
 ```sh
@@ -49,5 +54,5 @@ Six prototype tests cover source-bound mapping,all permission/event worlds,
 negation,unbound ordered choices,fact/target collisions,source roles and budgets.
 Five evidence tests protect both parents,the recorded layout confound,public
 line conservation and the absence of semantic/new-generation claims. All are
-offline. The [proposed ten-call reading study](../order-target-read-v1/README.md)
-requires a new direct grant;all previous service budgets are closed.
+offline. The [ten-call reading study](../order-target-read-v1/README.md)
+is now closed;its result grants no new service scope.
