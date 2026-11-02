@@ -244,5 +244,16 @@ execution-field erasure. A [proposed22-slot probe](benchmarks/source-order-probe
 compares fresh encoders on the original23cases and tests a separate explicit-
 ordering question with intact/erased candidate cards. Eight controller checks
 keep auxiliary facts out of primary packets and detect primary-perfect but
-ordering-ungrounded fixtures. It is development-informed,unapproved and unrun;
-no new service authority or default switch.
+ordering-ungrounded fixtures. The protocol was frozen before new authorization;
+its original preparation records remain unchanged.
+
+The [actual22-call result](benchmarks/source-order-probe-v1/MEASURED.md) is now
+closed:source-order-v3produced two valid763/836-character cards,each with a
+model-generated source-order binding. Strict primary fidelity is23/23versus
+fresh policy-v2's22/23;w11is the sole paired gain,with6/6unknown preserved.
+The separate intact-order endpoint passedall8answers;designated-field deletion
+also passedall8predeclaredUexpectations. All planned development components
+pass,no missing/skips/retries. Recorded usage266514tokens. Eight archive damage
+checks preserve auxiliary labels/keys,denominators and negative controls. This
+remains consumed j16development,not independent semantics,semantic-erasure proof,
+real-person or cross-harness validation. No default switch or remaining call budget.

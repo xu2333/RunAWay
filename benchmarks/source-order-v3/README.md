@@ -1,4 +1,9 @@
-# Source-only model-generated order annotations — unmeasured candidate
+# Source-only model-generated order annotations — development candidate
+
+The [first closed source-only probe](../source-order-probe-v1/MEASURED.md) used
+22new calls:both generated cards passed23/23,the intact ordering reads retained
+the original sequence,and erased-field reads returnedU. This is consumed j16
+development evidence,not independent semantic or cross-harness validation.
 
 The [fixed-view diagnostic](../order-target-read-v1/MEASURED.md) reaches23/23
 after a developer supplies the method/execution binding. This candidate makes
@@ -32,6 +37,6 @@ that limitation and do not change any source-preference gold label.
 Eight offline tests cover source-only payloads,no manual row input,binding/guard
 conservation,user roles,status rejection,backward revision/past facts,null without
 auto-fill,narrow erasure,contamination and inactive-annotation quotes. These are code invariants,not model
-observations. The [proposed22-call probe](../source-order-probe-v1/README.md)
-requires new authorization. No production-default change or independent
+observations. The [22-call protocol](../source-order-probe-v1/README.md) and
+its closed measured result remain separate from these invariants. No production-default change or independent
 semantic acceptance follows from this implementation.

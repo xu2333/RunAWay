@@ -1,4 +1,9 @@
-# Proposed22-call source-only order/choice probe — unapproved and unrun
+# Source-only order/choice probe — frozen protocol
+
+This protocol was prepared before new authorization. Its [actual22-call result](MEASURED.md)
+is now closed:source-order-v3passed23/23versus baseline22/23,and both intact
+ordering and erased-field controls passed. The frozen proposal JSON preserves
+its original unapproved preparation state;the actual archive is separate.
 
 Compare fresh policy-v2with the [source-order-v3encoder](../source-order-v3/README.md)
 on the34existing fictional j16messages. Primary23cases and old disputed w14
@@ -66,7 +71,8 @@ cancellation remain unobservable.
 No h93/development revalidation,independent holdout/reference acceptance,new
 original232inventory coverage,real-person/cross-model/harness claim or product-
 default switch. Source-only annotation ability and auxiliary discrimination are
-both **unmeasured** until a new direct grant and actual run.
+were unmeasured at preparation;the linked report records the actual limited
+development result after a separate direct grant. This scope is now closed.
 
 ```sh
 python -m unittest discover -s tests -p test_source_order_probe.py -v
