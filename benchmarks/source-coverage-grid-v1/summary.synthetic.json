@@ -1,0 +1,819 @@
+{
+  "kind": "consumed_source_coverage_grid_v1",
+  "fictional_source_worlds": 8,
+  "primary_cases_per_method": 120,
+  "answers_per_primary_case": 8,
+  "methods": {
+    "source-order-v3": {
+      "joint": {
+        "planned": 120,
+        "correct": 117,
+        "missing": 0
+      },
+      "known": {
+        "planned": 58,
+        "correct": 55,
+        "missing": 0
+      },
+      "unknown": {
+        "planned": 62,
+        "correct": 62,
+        "missing": 0
+      },
+      "personal_known": {
+        "planned": 48,
+        "correct": 46,
+        "missing": 0
+      },
+      "preference": {
+        "planned": 120,
+        "correct": 117,
+        "missing": 0
+      },
+      "execution": {
+        "planned": 0,
+        "correct": 0,
+        "missing": 0
+      },
+      "untyped": {
+        "planned": 0,
+        "correct": 0,
+        "missing": 0
+      }
+    },
+    "object-coverage-guidance-v1": {
+      "joint": {
+        "planned": 120,
+        "correct": 116,
+        "missing": 0
+      },
+      "known": {
+        "planned": 58,
+        "correct": 54,
+        "missing": 0
+      },
+      "unknown": {
+        "planned": 62,
+        "correct": 62,
+        "missing": 0
+      },
+      "personal_known": {
+        "planned": 48,
+        "correct": 44,
+        "missing": 0
+      },
+      "preference": {
+        "planned": 120,
+        "correct": 116,
+        "missing": 0
+      },
+      "execution": {
+        "planned": 0,
+        "correct": 0,
+        "missing": 0
+      },
+      "untyped": {
+        "planned": 0,
+        "correct": 0,
+        "missing": 0
+      }
+    }
+  },
+  "profiles": [
+    {
+      "profile": "a8r",
+      "fixed_study": "a8r_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 12,
+            "correct": 12,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 3,
+            "correct": 3,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 10,
+            "correct": 10,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 12,
+            "correct": 12,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 3,
+            "correct": 3,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 10,
+            "correct": 10,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "c2v",
+      "fixed_study": "ambiguous_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 12,
+            "missing": 0
+          },
+          "known": {
+            "planned": 6,
+            "correct": 3,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 3,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 12,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 5,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "d9n",
+      "fixed_study": "ambiguous_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 4,
+            "correct": 4,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 11,
+            "correct": 11,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 4,
+            "correct": 4,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 4,
+            "correct": 4,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 11,
+            "correct": 11,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 4,
+            "correct": 4,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "b6t",
+      "fixed_study": "remaining_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "e4q",
+      "fixed_study": "remaining_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 5,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 5,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "f7s",
+      "fixed_study": "remaining_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 11,
+            "missing": 0
+          },
+          "known": {
+            "planned": 7,
+            "correct": 3,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 8,
+            "correct": 8,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 6,
+            "correct": 2,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 11,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "g1w",
+      "fixed_study": "remaining_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 5,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 5,
+            "correct": 5,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    },
+    {
+      "profile": "h3k",
+      "fixed_study": "remaining_repeat",
+      "methods": {
+        "source-order-v3": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        },
+        "object-coverage-guidance-v1": {
+          "joint": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "known": {
+            "planned": 9,
+            "correct": 9,
+            "missing": 0
+          },
+          "unknown": {
+            "planned": 6,
+            "correct": 6,
+            "missing": 0
+          },
+          "personal_known": {
+            "planned": 7,
+            "correct": 7,
+            "missing": 0
+          },
+          "preference": {
+            "planned": 15,
+            "correct": 15,
+            "missing": 0
+          },
+          "execution": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          },
+          "untyped": {
+            "planned": 0,
+            "correct": 0,
+            "missing": 0
+          }
+        }
+      }
+    }
+  ],
+  "controls": {
+    "full_control_strict": {
+      "joint": {
+        "planned": 120,
+        "correct": 120,
+        "missing": 0
+      },
+      "known": {
+        "planned": 58,
+        "correct": 58,
+        "missing": 0
+      },
+      "unknown": {
+        "planned": 62,
+        "correct": 62,
+        "missing": 0
+      },
+      "personal_known": {
+        "planned": 48,
+        "correct": 48,
+        "missing": 0
+      },
+      "derived_known": {
+        "planned": 31,
+        "correct": 31,
+        "missing": 0
+      }
+    },
+    "no_memory_strict_reused": {
+      "joint": {
+        "planned": 120,
+        "correct": 62,
+        "missing": 0
+      },
+      "known": {
+        "planned": 58,
+        "correct": 0,
+        "missing": 0
+      },
+      "unknown": {
+        "planned": 62,
+        "correct": 62,
+        "missing": 0
+      },
+      "personal_known": {
+        "planned": 48,
+        "correct": 0,
+        "missing": 0
+      },
+      "derived_known": {
+        "planned": 31,
+        "correct": 0,
+        "missing": 0
+      }
+    }
+  },
+  "actual_original_attempts": 107,
+  "known_original_usage": {
+    "input_tokens": 1211756,
+    "output_tokens": 84253,
+    "cached_input_tokens": 124928,
+    "cache_write_input_tokens": 0,
+    "reasoning_output_tokens": 15099,
+    "total_tokens": 1296009
+  },
+  "missing_original_usage": 0,
+  "study_call_caps": {
+    "a8r_repeat": 14,
+    "ambiguous_repeat": 27,
+    "remaining_repeat": 66
+  },
+  "new_model_calls": 0,
+  "new_service_authority": false,
+  "old49_missing_cases_filled": false,
+  "old_observations_replaced": false,
+  "production_default_changed": false,
+  "independent_holdout": false,
+  "independent_semantic_acceptance": false,
+  "population_stability_estimated": false,
+  "real_person_fidelity_verified": false,
+  "new_choice_personalization_gain_verified": false,
+  "documented_synthetic_source_retention_only": true,
+  "no_memory_reuse_is_independent": false,
+  "methods_cases_are_independent": false,
+  "selection": "One fixed repeated-generation study per world: a8r14,c2v/d9n27,remaining five66. No best-of across older studies. This descriptive mapping is not a new independent validation.",
+  "input_manifest_sha256": {
+    "a8r_repeat": "6c4f02cbf69ecd88a494d5f89036a3cfe55caa8a137cc2e9a2ff366b243ac582",
+    "ambiguous_repeat": "2d7cdd05e84e6601d152a427f71f552eb2b94450f2c41ce1a25a6a76d8874557",
+    "remaining_repeat": "965bf7345866b672502d1d500c92df5eb7887f0eedcbec8bb432599869664d66"
+  },
+  "source_snapshot_value_sha256": {
+    "a8r_repeat": "6386a8b1cfa8497bfcb627a8b5532cdb58a35b1cc371792e7d981406dd8ad50f",
+    "ambiguous_repeat": "9797e2669667363b4a9a9afe385a57f9f6213f9c660156b74df8290198d45aa4",
+    "remaining_repeat": "2ab96656bd792e1886dbfda298d3a708993dd9669bb15879b8e64c929c13a466"
+  }
+}
