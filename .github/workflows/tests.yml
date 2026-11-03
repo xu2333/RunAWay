@@ -143,6 +143,12 @@ jobs:
         run: python scripts/replay_source_coverage_repeat.py
       - name: Replay ambiguous-source repeat and known-to-unknown loss (no calls)
         run: python scripts/replay_ambiguous_source_repeat.py
+      - name: Replay remaining source worlds and complete fixed grid (no calls)
+        run: |
+          python scripts/replay_remaining_source_repeat.py
+          python scripts/replay_source_coverage_grid.py --check
+      - name: Exercise explicit-method memory bridge without a model
+        run: python scripts/memory.py demo --out memory-bridge-demo
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel

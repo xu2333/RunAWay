@@ -1,5 +1,22 @@
 # Compression regression progress
 
+The [completed120-case grid](benchmarks/source-coverage-grid-v1/README.md) retains
+baseline117/120,guidance116/120. Both keep62/62unknowns;known retention is55/58
+and54/58. The [remaining-five repeat](benchmarks/remaining-source-repeat-v1/README.md)
+completes66calls/804663tokens:baseline75/75,guided71/75. One240-character guided
+card admits incomplete encoding and loses three explicit choices plus one
+entailed choice;its other same-request434-character generation passes. Source
+uncertainty and encoder incompletion are different. Prefix guidance is not a
+consistent fix,and no default is promoted. The grid reuses three fixed studies,
+107calls/1296009reported tokens;it does not replace the original49-scope missing
+cases,prove real-user fidelity or supersede the real zero-gain pilot.
+
+The [explicit-method offline bridge](docs/experimental-memory.md) now prepares
+requests,imports replies and exports existing portable artifacts for harness
+attachment. It makes no model calls. All36published v3cards round-trip byte for
+byte,including losing cards;structural import remains candidate-unvalidated.
+The root README stays short and the installed default flow is unchanged.
+
 The [ambiguous/withdrawn-source repeat](benchmarks/ambiguous-source-repeat-v1/README.md)
 completes27calls with325095reported tokens and no missing receipts. Baseline
 retains27/30,guidance30/30 across two new extractions/person,two reads and both

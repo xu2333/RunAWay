@@ -48,3 +48,10 @@ repeat drops two explicit registration choices and one entailed notes choice.
 The guided cards retain all10knowns,versus7for baseline,with greater average
 realized length. This is finite consumed development evidence,not a causal
 population effect,independent holdout or default-adoption decision.
+
+The [remaining-five test](../remaining-source-repeat-v1/README.md) completes66calls:
+baseline75/75,guided71/75. A240-character guided card explicitly admits incomplete
+encoding and drops four known choices;all39unknowns survive. The completed
+[120-case grid](../source-coverage-grid-v1/README.md) is baseline117,guided116.
+There is no consistent improvement and no default promotion. The experimental
+bridge requires explicit method selection and preserves unverified status.
