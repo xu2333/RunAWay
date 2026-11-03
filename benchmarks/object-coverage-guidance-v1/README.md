@@ -1,4 +1,4 @@
-# Source coverage guidance: fixed-card evidence, generation unresolved
+# Source coverage guidance: finite-repeat evidence, generalization unresolved
 
 The [fixed-card read study](../fixed-card-fidelity-v1/README.md) finds six known
 registration-grouping choices answered `U` in both reads/orders. The baseline
@@ -41,3 +41,10 @@ extracts two new a8r cards per method and reads each twice:both methods retain
 advantage is observed. New guided lengths292/318 versus baseline320/323 are
 sample observations; one consumed source cannot establish general size benefit,
 population stability or performance on more ambiguous/withdrawn-rule sources.
+
+The [c2v/d9n repetition](../ambiguous-source-repeat-v1/README.md) completes27calls:
+baseline strict27/30,guided30/30;both retain20unknown cases. A c2v baseline
+repeat drops two explicit registration choices and one entailed notes choice.
+The guided cards retain all10knowns,versus7for baseline,with greater average
+realized length. This is finite consumed development evidence,not a causal
+population effect,independent holdout or default-adoption decision.
