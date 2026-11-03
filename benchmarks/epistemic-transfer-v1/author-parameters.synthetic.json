@@ -1,0 +1,634 @@
+{
+  "a8r": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "b6t": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "c2v": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "d9n": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "e4q": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "f7s": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "g1w": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": false,
+        "observations": [
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "h3k": {
+    "hidden_generating_tables_not_reference_truth": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "public_evidence": [
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "guarantee": true,
+        "observations": [
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "compatible_tables": [
+      [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    ]
+  }
+}
