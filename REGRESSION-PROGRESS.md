@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [two-method repeated-source probe](benchmarks/source-coverage-repeat-v1/README.md)
+completes14calls with166251reported tokens and no invalid cards or missing
+receipts. Original and guided methods both retain15/15across two fresh
+extractions,two reads and both orders. Baseline cards are320/323characters;
+guided292/318. No omission recurs in this finite repeat, but no fidelity
+advantage or population generation-stability claim follows. It covers only a8r;
+withdrawn-rule and ambiguous-rule sources still need repeated extraction tests.
+All old outcomes and production defaults remain intact.
+
 The [three-fixed-card diagnostic](benchmarks/coverage-fixed-views-v1/README.md)
 completes9calls with110877reported tokens and no missing receipts. All three
 cards pass15/15across two reads and both option orders:the two guided cards
