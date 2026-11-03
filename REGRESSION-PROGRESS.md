@@ -1,5 +1,16 @@
 # Compression regression progress
 
+The [ambiguous/withdrawn-source repeat](benchmarks/ambiguous-source-repeat-v1/README.md)
+completes27calls with325095reported tokens and no missing receipts. Baseline
+retains27/30,guidance30/30 across two new extractions/person,two reads and both
+orders. Both retain20/20unknowns;known retention is7/10versus10/10. One c2v
+baseline card drops two explicit registration actions and one entailed notes
+action,all answeredU in its four read/order answers. Same-request baseline
+cards vary585→312characters;object incidence cannot certify the missing
+within-object inference. Guided cards are longer on average in this sample;
+no causal population advantage,independent holdout or default change is claimed.
+The five remaining source worlds still lack this compression comparison.
+
 The [two-method repeated-source probe](benchmarks/source-coverage-repeat-v1/README.md)
 completes14calls with166251reported tokens and no invalid cards or missing
 receipts. Original and guided methods both retain15/15across two fresh
