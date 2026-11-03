@@ -1,0 +1,20 @@
+{
+  "kind": "finite_source_licensed_transfer_stress",
+  "fictional_profiles": 8,
+  "domains": 2,
+  "source_messages": 176,
+  "primary_cases": 120,
+  "known": 58,
+  "unknown": 62,
+  "personal_known": 48,
+  "structural_known": 10,
+  "derived_known": 31,
+  "withdrawal_sensitive": 20,
+  "unique_public_forms": 30,
+  "person_form_combinations": 240,
+  "external_reader_decoder": false,
+  "hidden_policy_used_for_reference": false,
+  "independent_semantic_acceptance": false,
+  "independent_holdout": false,
+  "naturalistic_human_fidelity": false
+}

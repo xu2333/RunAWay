@@ -1,0 +1,1802 @@
+[
+  {
+    "person": "a8r",
+    "case": "notes_complete_0",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_complete_1",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_complete_2",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_complete_3",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_partial_local",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_partial_undo",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "a8r",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_complete_0",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_complete_1",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_complete_2",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_complete_3",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_partial_local",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_partial_undo",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "a8r",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "a8r",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_complete_1",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_complete_2",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "b6t",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_complete_0",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_complete_1",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_complete_2",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_complete_3",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_partial_undo",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "b6t",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "b6t",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_complete_0",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_complete_1",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_complete_2",
+    "gold": "U",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "undecided_training_condition"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_complete_3",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_partial_undo",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "c2v",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_complete_1",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_complete_2",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "c2v",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "c2v",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_complete_1",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_complete_2",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "d9n",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_complete_1",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_complete_2",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "d9n",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "d9n",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_complete_1",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_complete_2",
+    "gold": "U",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "undecided_training_condition"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_complete_3",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_partial_local",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "e4q",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_complete_0",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_complete_1",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_complete_2",
+    "gold": "U",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "undecided_training_condition"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_complete_3",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_partial_undo",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "e4q",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "e4q",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_complete_0",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_complete_1",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_complete_2",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_complete_3",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_partial_local",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "f7s",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_complete_1",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_complete_2",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "f7s",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "f7s",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_complete_0",
+    "gold": "U",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_complete_1",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_complete_2",
+    "gold": "U",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "undecided_training_condition"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_complete_3",
+    "gold": "U",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": true,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "g1w",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_complete_0",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_complete_1",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_complete_2",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_complete_3",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_partial_local",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_partial_undo",
+    "gold": "U",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "g1w",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "g1w",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_complete_0",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e01_ab",
+      "e01_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_complete_1",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e02_ab",
+      "e02_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_complete_2",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e03_ab",
+      "e03_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_complete_3",
+    "gold": "启用自动整理",
+    "query_ids": [
+      "e04_ab",
+      "e04_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e05_ab",
+      "e05_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_partial_undo",
+    "gold": "保持手动整理",
+    "query_ids": [
+      "e06_ab",
+      "e06_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "h3k",
+    "case": "notes_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e07_ab",
+      "e07_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_complete_0",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e08_ab",
+      "e08_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_complete_1",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e09_ab",
+      "e09_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "observed_decision"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_complete_2",
+    "gold": "U",
+    "query_ids": [
+      "e10_ab",
+      "e10_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "undecided_training_condition"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_complete_3",
+    "gold": "启用自动分组",
+    "query_ids": [
+      "e11_ab",
+      "e11_ba"
+    ],
+    "personal_known": false,
+    "structural_known": true,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "unseen_combination"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_partial_local",
+    "gold": "U",
+    "query_ids": [
+      "e12_ab",
+      "e12_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_partial_undo",
+    "gold": "保持手动分组",
+    "query_ids": [
+      "e13_ab",
+      "e13_ba"
+    ],
+    "personal_known": true,
+    "structural_known": false,
+    "derived_known": true,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "h3k",
+    "case": "signup_outside_feature",
+    "gold": "U",
+    "query_ids": [
+      "e14_ab",
+      "e14_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_feature"
+  },
+  {
+    "person": "h3k",
+    "case": "outside_domain",
+    "gold": "U",
+    "query_ids": [
+      "e15_ab",
+      "e15_ba"
+    ],
+    "personal_known": false,
+    "structural_known": false,
+    "derived_known": false,
+    "guarantee_withdrawal_sensitive": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  }
+]

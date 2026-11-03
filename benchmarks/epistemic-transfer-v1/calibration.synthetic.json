@@ -1,0 +1,27 @@
+{
+  "kind": "constructed_instrument_calibration_not_model_fidelity",
+  "new_model_calls": 0,
+  "planned_cases_per_vector": 120,
+  "vectors": {
+    "reference_vector": {
+      "correct": 120,
+      "known_correct": 58,
+      "unknown_correct": 62
+    },
+    "always_unknown": {
+      "correct": 62,
+      "known_correct": 0,
+      "unknown_correct": 62
+    },
+    "direct_observations_only": {
+      "correct": 89,
+      "known_correct": 27,
+      "unknown_correct": 62
+    },
+    "ignore_guarantee_withdrawal": {
+      "correct": 100,
+      "known_correct": 58,
+      "unknown_correct": 42
+    }
+  }
+}

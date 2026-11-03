@@ -1,5 +1,16 @@
 # Compression regression progress
 
+The new [source-licensed transfer protocol](benchmarks/epistemic-transfer-v1/README.md)
+is prepared offline, unapproved and unrun:8 fictional profiles,176 messages,
+120 fixed cases/view including31 source-entailed decisions not directly observed
+and20 cases that require abstention after a rule-family guarantee is withdrawn.
+No external reader decoder is supplied. Constructed scorer fixtures distinguish
+always-unknown62/120, direct-only89/120 and stale-guarantee100/120; these are
+instrument checks, not model fidelity. The proposed49-attempt scope has no grant.
+The preceding closed52 length test retains card40/40 versus equal-character
+tail26/40, with504117 reported tokens; it is retention evidence, not unseen-rule
+inference or demonstrated cost savings. All earlier observations remain intact.
+
 The latest [budget-aware request probe](benchmarks/budgeted-table-probe-v1/MEASURED.md)
 closes14slots at10actual calls and203,574tokens. Both candidates still overflow
 1536(1889/1687),leaving40missing;fresh baseline is strict40/40. Four slots expire.
