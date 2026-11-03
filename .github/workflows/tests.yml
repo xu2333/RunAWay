@@ -129,6 +129,10 @@ jobs:
           python scripts/replay_extraction_readiness.py
           python scripts/audit_graph_object_coverage.py benchmarks/extraction-readiness-v1/measured.synthetic.json
           python scripts/check_graph_object_inventory.py
+      - name: Replay fixed-card known-domain losses and proxy invariance (no calls)
+        run: |
+          python scripts/replay_fixed_card_fidelity.py
+          python scripts/check_object_incidence_invariance.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract
