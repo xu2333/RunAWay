@@ -124,6 +124,11 @@ jobs:
         run: python benchmarks/epistemic-transfer-v1/check.py
       - name: Replay source-licensed full controls and extraction timeout (no calls)
         run: python scripts/replay_epistemic_transfer.py
+      - name: Replay one-extraction readiness and unused object incidence (no calls)
+        run: |
+          python scripts/replay_extraction_readiness.py
+          python scripts/audit_graph_object_coverage.py benchmarks/extraction-readiness-v1/measured.synthetic.json
+          python scripts/check_graph_object_inventory.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Verify browser choice contract

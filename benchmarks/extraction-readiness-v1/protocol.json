@@ -1,0 +1,23 @@
+{
+  "kind": "unapproved_epistemic_extraction_readiness1",
+  "max_new_local_cli_attempts": 1,
+  "model": "gpt-6.1-sol",
+  "data": "Same a8r22fictional messages and frozen source-order-v3 extraction request only; no questions,reference,hidden parameters,prior outputs/scores or real-person data.",
+  "purpose": "Independent post-failure extraction feasibility observation; not old-scope retry,resumption,replacement or compressed-fidelity comparison. Old39slots remain expired.",
+  "request_matches_closed_slot_sha256": "c850abe00ea49dd98e75f378cb7a6090d185a110c781cfbbdc3bc59ff06dd899",
+  "whole_public_character_cap": 1536,
+  "local_child_timeout_seconds": 180,
+  "aggregate_token_cap": null,
+  "money_cap": null,
+  "retry": false,
+  "repair": false,
+  "resume": false,
+  "replenishment": false,
+  "reader_calls": 0,
+  "follow_on_automatic_calls": 0,
+  "stop": "Any attempt closes scope; unknown usage remains unknown; record timeout/invalid product unchanged.",
+  "execution_condition": "Fresh direct human approval and all three CI jobs on public results head192cf345d6b0091f187734ab349c2d4b8eccb595 succeeded. Verify original source49 implementation/helper/runtime hashes.",
+  "approved": false,
+  "new_service_authority": false,
+  "independent_fidelity_or_stability_verified": false
+}
