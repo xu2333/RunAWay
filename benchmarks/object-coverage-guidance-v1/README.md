@@ -21,8 +21,9 @@ instructions. Behavioral source-backed endpoints remain necessary: the
 [metadata-only counterexample](../fixed-card-fidelity-v1/incidence-invariance.synthetic.json)
 clears the incidence warning while preserving every public memory byte.
 
-No model call has tested this candidate. Fresh baseline/candidate generation,
-repeated reads, unknown-preservation controls, invalid-product denominators and
-explicit new service authorization are needed before drawing a performance
-conclusion. Development on a known failure does not create an independent
+The [separately approved comparison](../object-coverage-comparison-v1/README.md)
+returned two guided cards and one baseline card before its seventh call failed.
+No reader was invoked, so this remains behaviorally unmeasured. Fresh paired
+generation and reading need a new finite grant; the closed scope cannot resume.
+Development on a known failure does not create an independent
 holdout or establish generation stability.
