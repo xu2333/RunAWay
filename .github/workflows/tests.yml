@@ -137,6 +137,8 @@ jobs:
         run: python scripts/build_catalog.py --check
       - name: Replay stopped generic source-coverage comparison (no calls)
         run: python scripts/replay_object_coverage_comparison.py
+      - name: Replay completed three-card fidelity diagnostic (no calls)
+        run: python scripts/replay_coverage_fixed_views.py
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel

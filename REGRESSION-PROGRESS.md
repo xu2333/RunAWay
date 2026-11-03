@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [three-fixed-card diagnostic](benchmarks/coverage-fixed-views-v1/README.md)
+completes9calls with110877reported tokens and no missing receipts. All three
+cards pass15/15across two reads and both option orders:the two guided cards
+retain18known and12unknown cases jointly. Fresh baseline also passes15/15,
+so no guidance advantage is established. That353-character baseline and the
+older252-character,9/15card came from the exact same extraction request in
+separate scopes. This makes repeated generation reliability the next unresolved
+question; it is not an estimate of stability or a randomized causal comparison.
+Old scopes, missing cases and defaults remain unchanged.
+
 The [generic source-coverage comparison](benchmarks/object-coverage-comparison-v1/README.md)
 closed after7of43attempts:both full controls pass30/30jointly;three valid cards
 return before c2v baseline extraction fails.36slots expire,zero readers run,

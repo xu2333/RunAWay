@@ -1,0 +1,37 @@
+{
+  "kind": "unapproved_coverage_fixed_views_readonly9",
+  "model": "gpt-6.1-sol",
+  "as_of": "2026-11-02",
+  "max_new_local_cli_attempts": 9,
+  "source_messages": 44,
+  "unique_public_forms": 30,
+  "fixed_public_card_characters": [
+    353,
+    324,
+    506
+  ],
+  "stages": {
+    "shared_none": 1,
+    "own_full": 2,
+    "fixed_card_reads": 6
+  },
+  "primary_cases_per_fixed_view": 15,
+  "answers_per_case": 4,
+  "paired_method_comparison": "a8r only;one existing card/method;not generation stability or causal evidence",
+  "guided_coverage_endpoint": "a8r+c2v,30fixed cases:18known12unknown;do not compare with15baseline cases",
+  "fatal": "Any control,transport,wire,schema,decode,unknownusage,model,runtime,guard or input failure stops all remainder.No retry/repair/resume/replenishment.",
+  "capture": "Separate serial-only safe completion observer around unchanged pinned once helper;preserve existing timeout provenance;no raw streams or thread IDs in new completion metadata.",
+  "new_extractions": 0,
+  "tail_reads": 0,
+  "whole_card_cap": 1536,
+  "independent_holdout": false,
+  "production_default_changed": false,
+  "old43_scope_reopened": false,
+  "old43_scores_replaced": false,
+  "approved": false,
+  "new_service_authority": false,
+  "aggregate_token_cap": null,
+  "money_cap": null,
+  "local_child_timeout_seconds": 180,
+  "execution_condition": "Fresh direct human grant and all three PR52 CI checks at3b05ddc397ebae8f85709da8611ca990647c6160 succeed."
+}
