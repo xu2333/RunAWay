@@ -1,4 +1,4 @@
-# Source coverage guidance: unmeasured candidate
+# Source coverage guidance: fixed-card evidence, generation unresolved
 
 The [fixed-card read study](../fixed-card-fidelity-v1/README.md) finds six known
 registration-grouping choices answered `U` in both reads/orders. The baseline
@@ -27,3 +27,10 @@ No reader was invoked, so this remains behaviorally unmeasured. Fresh paired
 generation and reading need a new finite grant; the closed scope cannot resume.
 Development on a known failure does not create an independent
 holdout or establish generation stability.
+
+The [subsequent fixed-view diagnostic](../coverage-fixed-views-v1/README.md)
+reads those three cards twice without new extraction:baseline a8r15/15,guided
+a8r15/15,guided c2v15/15. All18known and12unknown guided cases survive, but a8r
+baseline also recovers. Only one card/person/method was read; this does not
+establish a causal guidance effect or repeated-generation stability. The
+preceding no-reader scope remains closed with all its original missing cases.
