@@ -34,3 +34,10 @@ a8r15/15,guided c2v15/15. All18known and12unknown guided cases survive, but a8r
 baseline also recovers. Only one card/person/method was read; this does not
 establish a causal guidance effect or repeated-generation stability. The
 preceding no-reader scope remains closed with all its original missing cases.
+
+The [next finite repeat](../source-coverage-repeat-v1/README.md) independently
+extracts two new a8r cards per method and reads each twice:both methods retain
+15/15 across all eight answers per case. No omission recurs here, and no fidelity
+advantage is observed. New guided lengths292/318 versus baseline320/323 are
+sample observations; one consumed source cannot establish general size benefit,
+population stability or performance on more ambiguous/withdrawn-rule sources.
