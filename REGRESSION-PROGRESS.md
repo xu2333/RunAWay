@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [fixed252-card read study](benchmarks/fixed-card-fidelity-v1/README.md)
+completes6attempts/72745reported tokens:full15/15,card9/15,matched tail3/15.
+All six card losses are known registration choices answeredU in all four
+read/order responses; notes7/7 and all3true unknowns pass. No missing cases,
+repair or new extraction. A metadata-only counterexample clears the incidence
+warning while leaving every public prompt byte unchanged, so that warning is
+not a fidelity endpoint. A separate generic source-coverage guidance candidate
+is implemented but unmeasured; the default and all old observations remain intact.
+
 The [independent one-extraction diagnostic](benchmarks/extraction-readiness-v1/README.md)
 completes the same request once:252whole characters,10552reported tokens,zero
 reader calls. The raw graph names both source domains but has one node for

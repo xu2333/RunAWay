@@ -1,0 +1,31 @@
+{
+  "kind": "metadata_only_incidence_counterexample_not_model_repair",
+  "source_snapshot": "benchmarks/extraction-readiness-v1/measured.synthetic.json",
+  "source_snapshot_sha256": "e518f479f7c601bee6f36307ea76903015f46bfb31161b34af362f61c5700f6c",
+  "original": {
+    "objects": 2,
+    "nodes": 1,
+    "unreferenced_object_indices": [
+      1
+    ],
+    "public_characters": 252,
+    "public_prompt_utf8_sha256": "5f384582013a17f3060bbb9146eb11b1216cb518465db5c648fcbebcc14b04ce"
+  },
+  "counterfactual": {
+    "objects": 1,
+    "nodes": 1,
+    "unreferenced_object_indices": [],
+    "public_characters": 252,
+    "public_prompt_utf8_sha256": "5f384582013a17f3060bbb9146eb11b1216cb518465db5c648fcbebcc14b04ce"
+  },
+  "public_memory_identical": true,
+  "incidence_flag_cleared": true,
+  "counterfactual_passes_existing_structural_binding": true,
+  "original_observation_changed": false,
+  "fixed_reader_requests_changed": false,
+  "semantic_fidelity_gain_established": false,
+  "new_model_calls": 0,
+  "new_behavioral_samples": 0,
+  "automatic_pipeline_repair": false,
+  "interpretation": "An incidence flag is an advisory diagnostic, not a source-completeness or behavioral-fidelity endpoint. Removing unused object metadata can clear it while leaving every public memory byte unchanged."
+}
