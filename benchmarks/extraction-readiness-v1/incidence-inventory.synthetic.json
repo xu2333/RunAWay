@@ -1,0 +1,116 @@
+{
+  "kind": "offline_incidence_inventory_of_consumed_graphs",
+  "archives": [
+    {
+      "path": "benchmarks/long-task-probe-v1/measured.synthetic.json",
+      "sha256": "ac31398cf711aee617674be40485383b06fc22f927e21c9ec0ced2d10fca0a45",
+      "graphs": [
+        {
+          "slot": 13,
+          "profile": "repair0",
+          "objects": 9,
+          "nodes": 15,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 14,
+          "profile": "repair1",
+          "objects": 12,
+          "nodes": 28,
+          "revision_nodes": 0,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 15,
+          "profile": "field0",
+          "objects": 11,
+          "nodes": 20,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 16,
+          "profile": "field1",
+          "objects": 12,
+          "nodes": 29,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 17,
+          "profile": "kitchen0",
+          "objects": 10,
+          "nodes": 18,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 18,
+          "profile": "kitchen1",
+          "objects": 12,
+          "nodes": 31,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 19,
+          "profile": "music0",
+          "objects": 11,
+          "nodes": 18,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        },
+        {
+          "slot": 20,
+          "profile": "music1",
+          "objects": 12,
+          "nodes": 30,
+          "revision_nodes": 1,
+          "unreferenced_indices": [],
+          "unreferenced_labels": []
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/extraction-readiness-v1/measured.synthetic.json",
+      "sha256": "e518f479f7c601bee6f36307ea76903015f46bfb31161b34af362f61c5700f6c",
+      "graphs": [
+        {
+          "slot": 1,
+          "profile": "a8r",
+          "objects": 2,
+          "nodes": 1,
+          "revision_nodes": 0,
+          "unreferenced_indices": [
+            1
+          ],
+          "unreferenced_labels": [
+            "个人活动报名记录的自动分组"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "graphs": 9,
+    "objects": 91,
+    "nodes": 190,
+    "unreferenced_objects": 1
+  },
+  "new_model_calls": 0,
+  "new_behavioral_reads": 0,
+  "old_scores_changed": false,
+  "independent_evidence": false,
+  "semantic_coverage_verified": false,
+  "source_support_verified": false,
+  "automatic_repair": false,
+  "production_default_changed": false
+}

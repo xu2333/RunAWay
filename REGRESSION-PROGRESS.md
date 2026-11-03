@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [independent one-extraction diagnostic](benchmarks/extraction-readiness-v1/README.md)
+completes the same request once:252whole characters,10552reported tokens,zero
+reader calls. The raw graph names both source domains but has one node for
+notes and no node for registration grouping; the public card omits that domain.
+A reusable offline incidence report flags the unreferenced object without
+repair, export blocking or a semantic-coverage claim. Behavioral fidelity remains
+unmeasured. This separately approved scope is closed and does not replace the
+preceding timeout, reclaim39expired slots or fill old missing cases.
+
 The [source-licensed transfer scope](benchmarks/epistemic-transfer-v1/MEASURED.md)
 closed49slots after10actual attempts:all eight full controls pass120/120, then
 the first extraction hits its180-second local timeout.39slots expire without
