@@ -1,12 +1,13 @@
 # Compression regression progress
 
-The new [source-licensed transfer protocol](benchmarks/epistemic-transfer-v1/README.md)
-is prepared offline, unapproved and unrun:8 fictional profiles,176 messages,
-120 fixed cases/view including31 source-entailed decisions not directly observed
-and20 cases that require abstention after a rule-family guarantee is withdrawn.
-No external reader decoder is supplied. Constructed scorer fixtures distinguish
-always-unknown62/120, direct-only89/120 and stale-guarantee100/120; these are
-instrument checks, not model fidelity. The proposed49-attempt scope has no grant.
+The [source-licensed transfer scope](benchmarks/epistemic-transfer-v1/MEASURED.md)
+closed49slots after10actual attempts:all eight full controls pass120/120, then
+the first extraction hits its180-second local timeout.39slots expire without
+retry. Card/tail fidelity is unmeasured; both120-case denominators have120missing.
+Nine receipts total118579tokens; the timed-out attempt's usage is unknown, so
+that is not a complete cost total. No external reader decoder was supplied.
+All31 source-entailed but not directly observed known choices pass with full
+source; this does not establish compression fidelity or independent semantics.
 The preceding closed52 length test retains card40/40 versus equal-character
 tail26/40, with504117 reported tokens; it is retention evidence, not unseen-rule
 inference or demonstrated cost savings. All earlier observations remain intact.

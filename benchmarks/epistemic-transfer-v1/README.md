@@ -1,5 +1,16 @@
 # Source-licensed inference and uncertainty
 
+The [closed actual result](MEASURED.md) is available:10 attempts, full-source
+controls120/120, then the first extraction timed out with unknown usage.39slots
+expired. No card or tail was read; both120-case denominators remain missing.
+Known receipts sum118579tokens but do not include the timeout's unknown cost.
+
+## Original preparation record
+
+The following unapproved/unrun flags describe the frozen intake package. Later
+authorization and actual observations are separate; the original inputs were
+not rewritten after execution.
+
 **Prepared offline; unapproved and unrun.** No new model calls or production
 changes. The previous [long-source result](../long-task-probe-v1/MEASURED.md)
 retained40/40 existing questions; it did not establish inference on new feature
