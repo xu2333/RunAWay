@@ -149,6 +149,8 @@ jobs:
           python scripts/replay_source_coverage_grid.py --check
       - name: Exercise explicit-method memory bridge without a model
         run: python scripts/memory.py demo --out memory-bridge-demo
+      - name: Replay rejected source review and preserved missing cases (no calls)
+        run: python scripts/replay_source_review_diagnostic.py
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel

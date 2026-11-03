@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [fixed-draft source review](benchmarks/source-review-diagnostic-v1/README.md)
+closed after5actual calls/61268reported tokens. The new graph fails literal
+source binding:one of20anchor occurrences appends text absent from its source.
+No reviewed card is compiled;its two readers are skipped and all15cases remain
+missing. The unchanged original card repeats11/15,including four known choices
+answeredU in both reads/orders. Full control passes15/15. No quote correction,
+retry or manual repair occurs;the two unused slots expire. The review has not
+demonstrated recovery,and neither old scores nor production defaults change.
+
 The [completed120-case grid](benchmarks/source-coverage-grid-v1/README.md) retains
 baseline117/120,guidance116/120. Both keep62/62unknowns;known retention is55/58
 and54/58. The [remaining-five repeat](benchmarks/remaining-source-repeat-v1/README.md)
