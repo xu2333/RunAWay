@@ -1,12 +1,29 @@
 # Compression regression progress
 
+The [paired source-ID review repeat](benchmarks/source-id-review-repeat-v1/README.md)
+closes31actual calls/379663reported tokens. c2v's incomplete parent recovers12/15
+→15/15 in both reviews;both historically complete parents retain30/30. f7s's
+incomplete parent fails both reviews with undefined source IDs,so four readers
+are skipped and15joint cases stay missing. Primary joint45/60 versus original
+53/60 does not meet the target;conditional90/90 on six valid cards must not hide
+those failures. There are zero observed wrong-choice regressions among valid
+reviews,not a guarantee of safe review. Four unused slots expire;old observations
+and defaults stay intact.
+
+An [actual-ID enum candidate](benchmarks/source-id-enum-v1/README.md) expresses
+existing table-membership constraints in the request schema;43valid archived/
+converted graphs retain acceptance and both invalid outputs remain rejected.
+Generation/retention effects are unmeasured. A [59-slot paired schema comparison](benchmarks/source-id-enum-repeat-v1/README.md)
+is prepared offline with two matched review methods and shared reference failure
+classification. Zero new candidate calls;fresh grant and implementation CI required.
+
 The [paired fixed-draft review repeat](benchmarks/source-id-review-repeat-v1/README.md)
 is prepared offline:two consumed fictional people,four historically complete/
 incomplete cards,two source-ID reviews each. The35-slot plan tests repeated
 recovery and harm to complete cards with60parent/case cells but only30unique
-person/cases. Seven oracle/damage fixtures pass;there are zero new service calls
-or measured repeat results. Method,reader,1536ceiling and older observations are
-unchanged. A new finite grant and implementation-commit CI are required.
+person/cases. Its preparation used seven oracle/damage fixtures;the separately authorized
+measured outcome is above. Method,reader,1536ceiling and older observations are
+unchanged.
 
 The [measured source-ID review](benchmarks/source-id-review-v1/README.md) completes
 7calls/84961reported tokens:no invalid products,missing receipts or retries.
