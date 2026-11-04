@@ -1,5 +1,13 @@
 # Compression regression progress
 
+The separate [source-ID evidence prototype](benchmarks/source-id-review-v1/README.md)
+removes generated quotation text from the output schema and resolves IDs to
+whole original messages before the unchanged compiler. Its13offline tests
+include36valid archived cards with identical public bytes and an explicit
+wrong-action counterexample:valid references still do not certify semantics.
+No live result or fidelity benefit is claimed yet;old rejected outputs are not
+corrected or recompiled. The next finite scope requires its own grant and CI.
+
 The [fixed-draft source review](benchmarks/source-review-diagnostic-v1/README.md)
 closed after5actual calls/61268reported tokens. The new graph fails literal
 source binding:one of20anchor occurrences appends text absent from its source.
