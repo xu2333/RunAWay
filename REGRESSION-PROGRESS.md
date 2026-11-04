@@ -1,5 +1,13 @@
 # Compression regression progress
 
+The [paired fixed-draft review repeat](benchmarks/source-id-review-repeat-v1/README.md)
+is prepared offline:two consumed fictional people,four historically complete/
+incomplete cards,two source-ID reviews each. The35-slot plan tests repeated
+recovery and harm to complete cards with60parent/case cells but only30unique
+person/cases. Seven oracle/damage fixtures pass;there are zero new service calls
+or measured repeat results. Method,reader,1536ceiling and older observations are
+unchanged. A new finite grant and implementation-commit CI are required.
+
 The [measured source-ID review](benchmarks/source-id-review-v1/README.md) completes
 7calls/84961reported tokens:no invalid products,missing receipts or retries.
 The original240-character card repeats11/15;one reviewed381-character card
