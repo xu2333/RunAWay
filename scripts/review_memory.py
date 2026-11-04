@@ -30,6 +30,9 @@ def prepare(original_prepared,draft,destination):
  req=request(sources,draft,budget)
  files={'sources.private.json':sources,'draft.private.json':draft,'request.private.json':req,
   'request.private.md':m.manual_request(req),'manifest.private.json':manifest(sources,draft,req,budget)}
+ for value in files.values():
+  encoded=value.encode()if type(value)is str else(json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode()
+  if len(encoded)>256000:raise ValueError('Review packet exceeds the local import byte limit')
  directory=m.save_private_bundle(destination,files)
  return {'status':'review_request_prepared','directory':directory,'model_calls':0,
   'contains_private_source_and_old_graph':True,'request_file':'request.private.json','manual_request_file':'request.private.md'}
@@ -39,7 +42,7 @@ def prepared(directory):
  if directory.is_symlink():raise ValueError('Symlink review refused')
  for name in('sources.private.json','draft.private.json','request.private.json','request.private.md','manifest.private.json'):
   if(directory/name).is_symlink():raise ValueError('Symlink review file refused')
- sources=m.read_json(directory/'sources.private.json',64000);draft=m.read_json(directory/'draft.private.json')
+ sources=m.read_json(directory/'sources.private.json');draft=m.read_json(directory/'draft.private.json')
  req=m.read_json(directory/'request.private.json');value=m.read_json(directory/'manifest.private.json')
  expected=request(sources,draft,value['budget_characters'])
  if m.digest(req)!=m.digest(expected) or m.digest(value)!=m.digest(manifest(sources,draft,expected,value['budget_characters'])):

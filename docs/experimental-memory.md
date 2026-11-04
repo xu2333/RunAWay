@@ -110,6 +110,9 @@ this review entrypoint. Long messages are rejected before preparation rather
 than split or truncated. Source IDs and correct quotes do not prove semantic
 support or complete coverage. Review is optional, has no automatic backend or
 retry, and leaves the original candidate untouched.
+Prepared files are checked against the256KB local import limit before writing;
+the canonical selected-source limit remains64KB even when readable JSON adds
+formatting bytes. Oversized packets fail before an unusable bundle is created.
 
 To replay the measured fictional example without sending anything:
 

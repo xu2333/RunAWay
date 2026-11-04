@@ -72,4 +72,19 @@ class ReviewMemoryTests(unittest.TestCase):
    with contextlib.redirect_stdout(stdout),contextlib.redirect_stderr(stderr):
     code=v.main(['import','--prepared',str(root/'missing'),'--answer',str(file),'--out',str(root/'new')])
    self.assertEqual(code,2);self.assertNotIn('PRIVATE_SOURCE_SECRET',stdout.getvalue()+stderr.getvalue())
+ def test_pretty_source_serialization_can_exceed64kb_without_changing_canonical_input_limit(self):
+  sources=copy.deepcopy(self.data['sources']['f7s']);index=0
+  while len(v.m.baseline.b.canonical(sources).encode())<62000:
+   sources['sources'].append({'id':'filler'+str(index),'episode_id':'padding','role':'user','text':'x'*900});index+=1
+  self.assertLessEqual(len(v.m.baseline.b.canonical(sources).encode()),64000)
+  self.assertGreater(len((json.dumps(sources,ensure_ascii=False,indent=2)+'\n').encode()),64000)
+  with tempfile.TemporaryDirectory()as tmp:
+   root=Path(tmp);prepared=self.prepare(root,sources)
+   self.assertEqual(v.prepared(prepared)[0],sources)
+ def test_oversized_review_packet_is_rejected_before_creating_an_unreadable_bundle(self):
+  with tempfile.TemporaryDirectory()as tmp:
+   root=Path(tmp);v.m.prepare(self.data['sources']['f7s'],'coverage',1536,root/'original')
+   with patch.object(v,'request',return_value={'system':'S','prompt':'x'*256001,'schema':{}}):
+    with self.assertRaisesRegex(ValueError,'packet'):v.prepare(root/'original',self.data['draft'],root/'review')
+   self.assertFalse((root/'review').exists())
 if __name__=='__main__':unittest.main()
