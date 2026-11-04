@@ -151,6 +151,11 @@ jobs:
         run: python scripts/memory.py demo --out memory-bridge-demo
       - name: Replay rejected source review and preserved missing cases (no calls)
         run: python scripts/replay_source_review_diagnostic.py
+      - name: Replay source-ID recovery and citation-subset limitation (no calls)
+        run: |
+          python scripts/replay_source_id_review.py
+          python scripts/check_source_reference_witness.py
+          python scripts/review_memory.py demo --out source-id-review-demo
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel

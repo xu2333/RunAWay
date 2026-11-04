@@ -82,3 +82,46 @@ They are private, with restrictive file permissions. Existing destinations are
 never overwritten. Invalid responses are rejected without repair, truncation or
 an automatic model retry. Preparation/import does not read harness histories or
 change harness files; attachment is a separate explicit command.
+
+## Optional source-ID review
+
+An additional experimental pass can review a structurally valid initial v3
+graph against the same selected source. Keep the original files and save the
+reviewed candidate in a new directory:
+
+```sh
+python3 scripts/review_memory.py prepare --original-prepared my-memory-request \
+  --draft-answer answer.json --out my-review-request
+```
+
+Use `my-review-request/request.private.json` with a model you choose, or its
+Markdown counterpart for a manual chat. Both contain the original selected
+source and draft graph. Save the new graph JSON as `review-answer.json`:
+
+```sh
+python3 scripts/review_memory.py import --prepared my-review-request \
+  --answer review-answer.json --out my-reviewed-memory
+python3 -m runaway export my-reviewed-memory/portable.json
+```
+
+The response references source IDs; the program supplies whole-message quotes
+to the existing compiler. Every selected message must fit2,000characters for
+this review entrypoint. Long messages are rejected before preparation rather
+than split or truncated. Source IDs and correct quotes do not prove semantic
+support or complete coverage. Review is optional, has no automatic backend or
+retry, and leaves the original candidate untouched.
+
+To replay the measured fictional example without sending anything:
+
+```sh
+python3 scripts/review_memory.py demo --out reviewed-demo
+python3 -m runaway export reviewed-demo/portable.json
+```
+
+The [fixed-case study](../benchmarks/source-id-review-v1/README.md) improves one
+selected failed card from11/15 at240characters to15/15 at381characters, while
+an observed citation-sufficiency gap remains. This does not establish reliable
+new generation, general benefit, real-user fidelity or other-provider performance.
+All new imports remain `candidate_unvalidated`; demo scores are not inherited
+by another user's card. Share only the inspected prompt/portable files, not
+the source, draft or request files named `.private.*`.
