@@ -55,3 +55,10 @@ encoding and drops four known choices;all39unknowns survive. The completed
 [120-case grid](../source-coverage-grid-v1/README.md) is baseline117,guided116.
 There is no consistent improvement and no default promotion. The experimental
 bridge requires explicit method selection and preserves unverified status.
+
+The [single source-review diagnostic](../source-review-diagnostic-v1/README.md)
+uses that same fixed240-character failed draft. Its new four-node graph is
+rejected because one source quotation contains extra text. The original still
+retains11/15;all15reviewed cases are missing after its two readers are skipped.
+No corrected graph is compiled or read. This records a separate import failure,
+not evidence of behavioral recovery or a new initial-generation comparison.
