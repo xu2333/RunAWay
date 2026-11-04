@@ -1,6 +1,69 @@
 # Repeated review of paired complete/incomplete drafts
 
-**Offline preparation only: zero new model calls and no new service authority.**
+**Measured scope closed:31 actual attempts,4 skipped/expired reader slots.**
+
+## Measured outcome
+
+Full controls pass30/30 unique person/cases;shared no-memory17/30. All four
+originals are reread twice. Both new reviews per parent are read twice when
+valid;all four answers per card/case and all eight joint answers are required.
+
+| Parent | Original chars / score | Review0 chars / score | Review1 chars / score | Joint reviews |
+| --- | --- | --- | --- | --- |
+| p0,c2v historically complete |585 /15/15|510 /15/15|503 /15/15|15/15 |
+| p1,c2v historically incomplete |312 /12/15|505 /15/15|503 /15/15|15/15 |
+| p2,f7s historically complete |434 /15/15|442 /15/15|434 /15/15|15/15 |
+| p3,f7s historically incomplete |240 /11/15|invalid /15missing|invalid /15missing|15missing |
+
+The strict joint endpoint is **45/60correct,15missing**, versus original53/60
+with no missing. Each individual review round is also45/60 with15missing.
+Known cells are19/26 with7missing;unknown26/34 with8missing. These are60parent/
+case cells over only30unique person/cases and two fictional people. Both draws
+of p3 share the same15cases;their two invalid products do not create30unique
+joint missing cases.
+
+Three c2v known choices recover in both reviews/all orders:two explicit grouping
+choices and one source-entailed notes choice whose branch is determinate despite
+an unresolved complete rule. Both historically complete parents retain30/30
+jointly. No observed wrong-choice regression occurs in a successfully read
+reviewed card. This does not erase p3's availability failure. Six valid reviewed
+cards pass90/90 conditional card/cases;discarding the two invalid products would
+hide the primary endpoint failure. The prespecified60/60 target is not met.
+
+## Why p3 remains unavailable
+
+Both reviews return strings outside the source table,whose IDs are exactly
+`m01` through `m22`:
+
+- Slot9:`nodes[0].decisions[1]` is `m05 handicapped`.
+- Slot28:`nodes[0].contexts[1]` is `m02 tailored`;`nodes[1].contexts[1]` is `m03 gl`.
+
+The binder rejects both with `Undefined source reference`;no reviewed public
+artifact is compiled and each loses only its two planned readers. The first
+raw graph contains one node,the second four;node counts are not fidelity scores.
+No ID suffix is removed,no source guessed,and no hypothetical repaired card is
+compiled/read. The raw outputs and all old observations remain unchanged.
+
+The earlier single p3 review that passed15/15 at381characters remains a separate
+selected-case witness. It does not establish reliable review generation:these
+two fresh reviews of the same fixed draft both fail admission. Citation semantic
+sufficiency also remains unverified. Defaults are not promoted.
+
+A separate [source-ID enum candidate](../source-id-enum-v1/README.md) now expresses
+actual allowed IDs in the request schema. Its offline rejection/compatibility
+checks make no new generation or fidelity claim;it was not used in this run.
+
+## Cost and scope closure
+
+All31receipts report364414input +15249output = **379663tokens**. Cached16384 is
+inside input;reasoning1863 inside output. Stage totals: no-memory11701,full26682,
+reviews99445,original reads96346,reviewed reads145489. Counters are not a bill or
+project-wide total. All35planned slots are accounted for;four skipped readers
+expire and cannot be reused. There are no model retries,manual patches or
+missing usage records. The owned guard exits and ten older observation seals
+remain unchanged.
+
+## Frozen design
 The [preceding selected-card study](../source-id-review-v1/README.md) recovers
 f7s11/15→15/15 at240→381characters, but one review is insufficient to establish
 repeatability or harmlessness on a complete card. Its citation-subset gap also
@@ -89,7 +152,16 @@ copies, so cache reuse cannot hide changed files or caller mutations.
 The unchanged two-file implementation reconstructs input manifest
 `87e51a7306fd35c3b0dd05f0fc3a9c5ea679e9e3fc96786060fd984c24a3ae69`.
 It freezes19static requests and16own-review reader rules. `protocol.json` retains
-the unapproved intake and grants no service authority. A live run needs a new
-explicit local35-call grant and all three CI checks passed at the recorded
-published implementation commit. Token/money caps are not provided by this
-proposal;35 is the attempt cap. Old scopes and observations remain closed.
+the unapproved intake;actual execution used a separate local35-call grant after
+all three CI checks passed at the published implementation commit. The scope is
+now closed. Replay reconstructs exact requests,own-parent/repeat routing,raw
+values,invalid products,skips,usage,artifacts and fixed denominators offline:
+
+```sh
+python scripts/replay_source_id_review_repeat.py
+python -m unittest discover -s tests -p 'test_source_id_review_repeat*.py' -q
+```
+
+Private grants,host/process/runtime records and transport envelopes stay outside
+the portable archive. Replay is not independent semantic acceptance,new model
+inference or a bill. Old scopes and observations remain closed.
