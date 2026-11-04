@@ -1,12 +1,23 @@
 # Compression regression progress
 
+The [measured source-ID review](benchmarks/source-id-review-v1/README.md) completes
+7calls/84961reported tokens:no invalid products,missing receipts or retries.
+The original240-character card repeats11/15;one reviewed381-character card
+retains15/15,including all7knowns and8unknowns in both reads/orders. Four lost
+choices recover. This is one posthoc fixed case,not stability or a causal
+advantage over a fresh draw. An offline citation-subset witness still finds a
+manual-rule node without its decisive source:correct public answers do not
+certify sufficient grounding. Old scores and defaults stay intact. A separate
+[offline review bridge](docs/experimental-memory.md#optional-source-id-review)
+prepares/imports explicit files and replays the measured demo without model calls.
+
 The separate [source-ID evidence prototype](benchmarks/source-id-review-v1/README.md)
 removes generated quotation text from the output schema and resolves IDs to
 whole original messages before the unchanged compiler. Its13offline tests
 include36valid archived cards with identical public bytes and an explicit
 wrong-action counterexample:valid references still do not certify semantics.
-No live result or fidelity benefit is claimed yet;old rejected outputs are not
-corrected or recompiled. The next finite scope requires its own grant and CI.
+The live result above is a separately authorized fixed-case diagnostic;old
+rejected outputs are not corrected or recompiled.
 
 The [fixed-draft source review](benchmarks/source-review-diagnostic-v1/README.md)
 closed after5actual calls/61268reported tokens. The new graph fails literal
