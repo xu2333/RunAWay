@@ -8,7 +8,7 @@ is required; the installed CLI's default generation flow is unchanged.
 ## Try a complete example without a model call
 
 ```sh
-python3 scripts/memory.py demo --out my-memory-demo
+python3 scripts/frozen_history.py run scripts/memory.py demo --out my-memory-demo
 python3 -m runaway export my-memory-demo/candidate/portable.json
 ```
 
@@ -19,7 +19,7 @@ profile. The source, request and raw answer remain in files named `.private.*`.
 ## Use your own experience or trajectory
 
 ```sh
-python3 scripts/memory.py prepare --input experience.txt --method coverage \
+python3 scripts/frozen_history.py run scripts/memory.py prepare --input experience.txt --method coverage \
   --budget-chars 1536 --out my-memory-request
 ```
 
@@ -38,7 +38,7 @@ Manual Markdown packaging and other providers have not been fidelity-validated.
 Save the model's graph JSON as `answer.json` without Markdown fences:
 
 ```sh
-python3 scripts/memory.py import --prepared my-memory-request \
+python3 scripts/frozen_history.py run scripts/memory.py import --prepared my-memory-request \
   --answer answer.json --out my-memory
 python3 -m runaway export my-memory/portable.json
 python3 -m runaway attach my-memory/portable.json --project /path/to/project \
@@ -90,7 +90,7 @@ graph against the same selected source. Keep the original files and save the
 reviewed candidate in a new directory:
 
 ```sh
-python3 scripts/review_memory.py prepare --original-prepared my-memory-request \
+python3 scripts/frozen_history.py run scripts/review_memory.py prepare --original-prepared my-memory-request \
   --draft-answer answer.json --out my-review-request
 ```
 
@@ -106,7 +106,7 @@ Markdown counterpart for a manual chat. Both contain the original selected
 source and draft graph. Save the new graph JSON as `review-answer.json`:
 
 ```sh
-python3 scripts/review_memory.py import --prepared my-review-request \
+python3 scripts/frozen_history.py run scripts/review_memory.py import --prepared my-review-request \
   --answer review-answer.json --out my-reviewed-memory
 python3 -m runaway export my-reviewed-memory/portable.json
 ```
@@ -124,14 +124,14 @@ formatting bytes. Oversized packets fail before an unusable bundle is created.
 To replay the measured fictional example without sending anything:
 
 ```sh
-python3 scripts/review_memory.py demo --out reviewed-demo
+python3 scripts/frozen_history.py run scripts/review_memory.py demo --out reviewed-demo
 python3 -m runaway export reviewed-demo/portable.json
 ```
 
 The enum example replays a separate395-character reviewed card:
 
 ```sh
-python3 scripts/review_memory.py demo --request-schema enumerated --out enum-demo
+python3 scripts/frozen_history.py run scripts/review_memory.py demo --request-schema enumerated --out enum-demo
 python3 -m runaway export enum-demo/portable.json
 ```
 

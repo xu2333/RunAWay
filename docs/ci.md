@@ -5,6 +5,14 @@ Ubuntu latest / Python 3.13, and macOS 15 Intel / Python 3.13. It retains unit/C
 tests, browser tests, sealed-evidence replays, synthetic artifact reconstruction,
 wheel installation and the installed demo. These checks make no model calls.
 
+The Python entry point is `python3 scripts/frozen_history.py tests`. It runs every
+test module once, separating current implementation tests from historical tests
+whose full-source hashes bind the original executor. Historical replays use
+`python3 scripts/frozen_history.py run <script> ...` in a disposable source copy;
+their recorded hashes and integrity assertions remain unchanged. See the
+[snapshot contract](../benchmarks/frozen-history-v1/README.md). The current
+executor regressions and installed-wheel smoke tests always use current code.
+
 On 2026-11-02 the [PR45 run](https://github.com/xu2333/RunAWay/actions/runs/41514367598)
 passed both Linux jobs, but its macOS job had zero steps and was cancelled with
 the annotation “The job was not acquired by Runner of type hosted even after
