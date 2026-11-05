@@ -279,13 +279,15 @@ def execute(root,out,backend=None,approval=None,count=None,publish=None,require_
             raise ValueError('No separate verified human approval for this proposal')
         preflight(root,require_evidence=True,check_runtime=True)
         backend=generation.codex_generate
-        claim_execution(root,proposal,approval,out)
         if publish is None:
             def publish(state):
                 path=ROOT/'runs/real-adapters-offline-v1/readiness.json'
                 if path.exists():
                     ready=json.loads(path.read_text());ready['pending_comparison_execution']=state;atomic(path,ready)
     out.mkdir(parents=True,exist_ok=False)
+    # Local output setup must succeed before consuming the proposal. Keep the
+    # exclusive claim before any backend entry, and retain it after failures.
+    if real_execution:claim_execution(root,proposal,approval,out)
     world=json.loads((root/'future-fixtures.private.json').read_text());people=[p for p in world['people'] if p['split']=='eval']
     files=load_old_evidence(ROOT/'examples/pilot-evidence.synthetic.zip')
     old_people=[p for p in json.loads(files['metric/world.private.json'])['people'] if p['split']=='eval']
