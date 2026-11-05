@@ -22,7 +22,12 @@ source tree containing the verified original executor. Every other module,
 including `test_taste_executor` and the snapshot integrity tests, runs against the
 current tree. New modules default to current code. Both groups run even if one
 fails, and any failure makes the command fail; the final JSON reports each
-group's exit code and test counts. This replaces full plain unittest discovery,
+group's actual exit code, report validity and test counts. A zero process exit
+does not pass without a complete report. Missing/malformed reports, unexpected
+fields, invalid counters and empty results for nonempty partitions fail closed;
+reported failures/errors also fail even if the process exits zero. A report
+cannot replace the observed subprocess exit code. Both partitions are still
+collected when one has a bad report. This replaces full plain unittest discovery,
 which mixes two incompatible source versions. Individual current-code tests can
 still use ordinary unittest discovery.
 

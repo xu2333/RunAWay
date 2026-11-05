@@ -1,6 +1,8 @@
 """Historical checks retain their bytes and cannot hide live executor regressions."""
 import copy
+import contextlib
 import importlib.util
+import io
 import json
 from pathlib import Path
 import tempfile
@@ -14,6 +16,60 @@ spec.loader.exec_module(history)
 
 
 class FrozenHistoryTests(unittest.TestCase):
+    def run_report_fixture(self, current, historical, current_code=0):
+        calls = []
+        output = io.StringIO()
+        def fake_child(root, mode, payload):
+            calls.append(mode)
+            report = current if mode == 'current-tests' else historical
+            if report is not None:
+                text = report if isinstance(report, str) else json.dumps(report)
+                Path(payload['result']).write_text(text)
+            return current_code if mode == 'current-tests' else 0
+        with patch.object(history, 'partition', return_value=(['current_fixture'], ['historical_fixture'])), \
+                patch.object(history, 'snapshot', return_value=contextlib.nullcontext(history.ROOT)), \
+                patch.object(history, 'child', side_effect=fake_child), contextlib.redirect_stdout(output):
+            code = history.check_tests()
+        summary = json.loads(output.getvalue().splitlines()[-1])['offline_test_suites']
+        self.assertEqual(calls, ['current-tests', 'historical-tests'])
+        return code, summary
+
+    def test_zero_exit_without_result_cannot_pass_and_other_partition_still_runs(self):
+        valid = {'tests': 1, 'failures': 0, 'errors': 0, 'skipped': 0}
+        for current, historical in ((None, valid), (valid, None), (None, None)):
+            with self.subTest(current=current, historical=historical):
+                code, rows = self.run_report_fixture(current, historical)
+                self.assertEqual(code, 1)
+                self.assertTrue(any(not row['report_valid'] for row in rows.values()))
+                self.assertTrue(all(row['exit_code'] == 0 for row in rows.values()))
+
+    def test_complete_success_reports_keep_counts_for_both_partitions(self):
+        valid = {'tests': 3, 'failures': 0, 'errors': 0, 'skipped': 0}
+        code, rows = self.run_report_fixture(valid, valid)
+        self.assertEqual(code, 0)
+        self.assertEqual(sum(row['tests'] for row in rows.values()), 6)
+        self.assertTrue(all(row['report_valid'] for row in rows.values()))
+
+    def test_malformed_empty_and_forged_results_cannot_hide_missing_tests(self):
+        valid = {'tests': 1, 'failures': 0, 'errors': 0, 'skipped': 0}
+        for bad in ('{', [], {**valid, 'tests': 0}, {**valid, 'tests': True},
+                    {**valid, 'failures': -1}, {**valid, 'exit_code': 0},
+                    {'tests': 1, 'failures': 0, 'errors': 0}):
+            with self.subTest(report=bad):
+                code, rows = self.run_report_fixture(bad, valid)
+                self.assertEqual(code, 1)
+                self.assertFalse(rows['current-tests']['report_valid'])
+                self.assertTrue(rows['historical-tests']['report_valid'])
+
+    def test_process_failure_or_reported_failures_cannot_be_overridden(self):
+        valid = {'tests': 1, 'failures': 0, 'errors': 0, 'skipped': 0}
+        for report, exit_code in ((valid, 1), ({**valid, 'failures': 1}, 0),
+                                  ({**valid, 'errors': 1}, 0), ({**valid, 'exit_code': 0}, 1)):
+            with self.subTest(report=report, exit_code=exit_code):
+                code, rows = self.run_report_fixture(report, valid, exit_code)
+                self.assertEqual(code, 1)
+                self.assertEqual(rows['current-tests']['exit_code'], exit_code)
+
     def test_partition_assigns_every_module_once_and_keeps_regressions_current(self):
         current, historical = history.partition()
         expected = {p.stem for p in (ROOT / 'tests').glob('test*.py')}

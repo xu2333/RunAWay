@@ -45,3 +45,12 @@ summary and rechecked the successful exact-head CI before merging;no successful
 suite or model experiment was rerun to repair that observer failure. Future
 local delivery checks also record the test subprocess exit code explicitly,
 rather than deriving success from the last line of a mixed-output log.
+
+The initial historical-test compatibility helper had another false-success
+case: a child exiting zero without writing its result was logged as an error,
+but the wrapper still returned zero. A zero-backend regression reproduces this
+on `b158d37`. The wrapper now requires both the observed exit code and a valid
+structured result for each partition. Missing, malformed or empty reports,
+invalid fields/counters and reported failures cannot produce a successful
+overall result. Both partitions still run and retain their real exit codes.
+Historical source bytes and all existing evidence/hash checks stay unchanged.

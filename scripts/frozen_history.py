@@ -129,6 +129,22 @@ def child(root, mode, payload):
                            json.dumps(payload)], cwd=root, env=env).returncode
 
 
+def suite_result(code, path, *, require_tests):
+    """An exit code cannot substitute for a complete interpreter report."""
+    try:
+        value = json.loads(path.read_text())
+    except (OSError, ValueError):
+        return {'exit_code': code, 'report_valid': False,
+                'error': 'Test interpreter report is missing or unreadable'}
+    fields = {'tests', 'failures', 'errors', 'skipped'}
+    if (type(value) is not dict or set(value) != fields
+            or any(type(v) is not int or v < 0 for v in value.values())
+            or (require_tests and value['tests'] == 0)):
+        return {'exit_code': code, 'report_valid': False,
+                'error': 'Test interpreter report has invalid or empty counts'}
+    return {**value, 'exit_code': code, 'report_valid': True}
+
+
 def check_tests(root=ROOT):
     root = Path(root).resolve()
     current, historical = partition(root)
@@ -145,10 +161,11 @@ def check_tests(root=ROOT):
                     code = child(source, mode, payload)
             else:
                 code = child(root, mode, payload)
-            summary[mode] = {'exit_code': code, **(json.loads(result.read_text()) if result.exists()
-                                                   else {'error': 'Test interpreter did not report'})}
+            summary[mode] = suite_result(code, result, require_tests=bool(modules))
     print(json.dumps({'offline_test_suites': summary}, sort_keys=True), flush=True)
-    return 0 if all(row['exit_code'] == 0 for row in summary.values()) else 1
+    return 0 if all(row['report_valid'] and row['exit_code'] == 0
+                    and row['failures'] == 0 and row['errors'] == 0
+                    for row in summary.values()) else 1
 
 
 def replay(script, args, root=ROOT):
