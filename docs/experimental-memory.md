@@ -94,6 +94,13 @@ python3 scripts/review_memory.py prepare --original-prepared my-memory-request \
   --draft-answer answer.json --out my-review-request
 ```
 
+To explicitly use the tested source-ID enum request, add
+`--request-schema enumerated` to that command. It lists all selected source IDs
+in the request schema; the prompt and binder/compiler stay the same. The
+default is `existing`, preserving the earlier measured request. The prepared
+manifest pins the selected mode and, for enum requests, its implementation.
+Import reads that mode from the prepared bundle rather than choosing a new one.
+
 Use `my-review-request/request.private.json` with a model you choose, or its
 Markdown counterpart for a manual chat. Both contain the original selected
 source and draft graph. Save the new graph JSON as `review-answer.json`:
@@ -121,10 +128,26 @@ python3 scripts/review_memory.py demo --out reviewed-demo
 python3 -m runaway export reviewed-demo/portable.json
 ```
 
+The enum example replays a separate395-character reviewed card:
+
+```sh
+python3 scripts/review_memory.py demo --request-schema enumerated --out enum-demo
+python3 -m runaway export enum-demo/portable.json
+```
+
 The [fixed-case study](../benchmarks/source-id-review-v1/README.md) improves one
 selected failed card from11/15 at240characters to15/15 at381characters, while
-an observed citation-sufficiency gap remains. This does not establish reliable
-new generation, general benefit, real-user fidelity or other-provider performance.
+an observed citation-sufficiency gap remains. The subsequent
+[unconstrained repeat](../benchmarks/source-id-review-repeat-v1/README.md) leaves
+15joint cases missing after two invalid-ID products. In a separately authorized
+[matched comparison](../benchmarks/source-id-enum-repeat-v1/README.md), enum
+requests produce8/8valid cards and60/60joint parent/case cells; existing
+requests produce4/8valid cards and15/60, with45missing. This represents only
+two consumed fictional people,30unique person/cases and four posthoc drafts.
+The enum card lengths and schema/input costs are not matched to the originals.
+These results do not establish sufficient citations, initial-generation
+stability, new-scene/general benefit, real-user fidelity or other-provider
+performance. An enum lists valid IDs; it cannot certify a valid interpretation.
 All new imports remain `candidate_unvalidated`; demo scores are not inherited
 by another user's card. Share only the inspected prompt/portable files, not
 the source, draft or request files named `.private.*`.

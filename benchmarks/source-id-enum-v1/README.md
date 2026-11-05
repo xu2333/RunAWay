@@ -1,4 +1,4 @@
-# Enumerate actual source IDs: offline candidate only
+# Enumerate actual source IDs: experimental request schema
 
 The [paired review repeat](../source-id-review-repeat-v1/README.md) rejects two
 new reviews with three out-of-table ID strings. The existing output schema
@@ -28,11 +28,17 @@ support, complete coverage or preserved behavior.
 python -m unittest discover -s tests -p 'test_source_id_enum.py' -q
 ```
 
-There have been **zero model calls with this candidate**. Request-schema
-constraints do not themselves prove that a provider will generate conforming
-or faithful output. Schema size/input tokens increase;no cost-saving claim is
-made. The original31-call result and its missing cases remain unchanged. The
-user bridge's measured/default request is not silently replaced.
+A separately authorized [same-batch comparison](../source-id-enum-repeat-v1/README.md)
+now closes51actual calls across both methods and their controls/readers. Enum
+review yields8/8valid cards and60/60joint parent/case cells;the existing request
+has4/8valid cards,15/60joint cells and45missing. Both use the same original
+sources/drafts,prompt,binder/compiler/reader and matched review repetitions.
+The original31-call result remains unchanged.
 
-A separately prepared [paired schema comparison](../source-id-enum-repeat-v1/README.md)
-requires a fresh finite grant and implementation-commit CI before live execution.
+This is two consumed fictional people/four posthoc drafts,not new-scene,
+population,real-user,semantic-citation or initial-generation verification.
+Request constraints do not certify fidelity. Schema bytes/input tokens increase;
+no cost-saving claim is made. The [offline review bridge](../../docs/experimental-memory.md#optional-source-id-review)
+exposes this as explicit`--request-schema enumerated`;the default existing
+request and installed generation flow remain unchanged. Import status stays
+candidate-unvalidated even when an archived demo has measured passing scores.

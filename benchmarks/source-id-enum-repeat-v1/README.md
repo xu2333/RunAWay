@@ -1,10 +1,97 @@
-# Source-ID enum comparison: unapproved59-slot preparation
+# Source-ID enum comparison: measured fixed-draft repeat
 
-**Zero new model calls.** This compares the unchanged source-ID reviewer request
-with the [actual-ID enum request schema](../source-id-enum-v1/README.md). The
-[preceding repeat](../source-id-review-repeat-v1/README.md) closed after31calls:
-six valid reviews pass their reader cases,but two undefined-ID products leave
-15joint cases missing. Its45/60 endpoint is not replaced by this proposal.
+The separately authorized scope closes after **51actual CLI attempts**,with four
+invalid existing-method products and eight skipped readers. All eight unused
+slots expire. There are no transport stops,retries,manual ID repairs,missing
+usage receipts or new initial extractions. Older observations remain unchanged.
+
+| Endpoint | Original cards | Existing request | Enumerated request |
+| --- | ---: | ---: | ---: |
+| Joint correct / planned parent-case cells | 53/60 | 15/60 | **60/60** |
+| Joint missing cells | 0 | 45 | **0** |
+| Valid reviewed cards / planned reviews | — | 4/8 | **8/8** |
+| Known joint correct / planned | 19/26 | 6/26 | **26/26** |
+| Unknown joint correct / planned | 34/34 | 9/34 | **34/34** |
+
+Each review round is60/60 for the enum method,30/60 with30missing for the
+existing method. Their joint endpoint is stricter:each cell must pass both
+independent reviews ×two reads ×two option orders. The existing method's two
+rounds lose different parents,so45cells are missing jointly. Missing means an
+unavailable candidate,not an observed wrong answer. All four valid existing
+cards and eight valid enum cards answer their reader cases correctly;that
+conditional result does not replace the planned denominator.
+
+| Original parent | Original characters / joint correct | Existing joint | Enum characters, two reviews / joint |
+| --- | --- | --- | --- |
+| p0 c2v, historically complete | 585 / 15/15 | 0/15,15missing | 549,573 / 15/15 |
+| p1 c2v, historically incomplete | 312 / 12/15 | 15/15 | 491,486 / 15/15 |
+| p2 f7s, historically complete | 434 / 15/15 | 0/15,15missing | 434,434 / 15/15 |
+| p3 f7s, historically incomplete | 240 / 11/15 | 0/15,15missing | 395,381 / 15/15 |
+
+The enum method recovers seven previously wrong known cells in both reviews
+(five explicit choices,two source-entailed choices) and keeps both complete
+parents30/30. It retains the12/12derived-known cells overall. There are zero
+observed wrong-choice regressions in this sample;this is not a population safety
+rate. Across methods,the paired joint table is15correct→correct and45missing→
+correct,with no other transitions. These are60parent/case cells but only30unique
+person/cases and **two fictional people**,not60independent users.
+
+## Preserve invalid products
+
+Existing reviews at slots5,15,42,56 contain five undefined-reference occurrences:
+`m05萦`,twice`m05冒`,`m02ما`,and`m05ミ`. All four graphs pass the existing
+unconstrained request schema but fail the unchanged table-membership binder.
+No public candidate is compiled from them. Slots6,7,16,17,43,44,57,58 skip and
+remain missing. Nothing is trimmed,translated,normalized or reread after repair.
+Both methods report zero violations of their respective request schemas;that
+does not make the existing method's IDs valid. Enum cards are381–573characters,
+well within the1536whole-public-character ceiling.
+
+## Reported usage
+
+All51receipts total **630372tokens**:600992input +29380output. Cached input
+116992and reasoning output3610are already subsets,not extra tokens. This is
+reported model usage,not a dollar bill or whole-project cost.
+
+| Stage | Actual attempts | Reported total tokens |
+| --- | ---: | ---: |
+| Shared none | 1 | 11699 |
+| Own full controls | 2 | 26779 |
+| Original card readers | 8 | 96345 |
+| Existing reviews | 8 | 100227 |
+| Enumerated reviews | 8 | 104766 |
+| Existing reviewed-card readers | 8 | 96817 |
+| Enumerated reviewed-card readers | 16 | 193739 |
+
+The enum request schema is5171compact UTF-8 bytes versus4043for the existing
+schema;prompts/system/model are equal. Review token counts and realized card
+lengths are not matched. Extra enum readers run because their cards are valid;
+the total cost is not evidence of cheaper compression or token-normalized gain.
+
+## Limits and reproduction
+
+This is a matched request-schema comparison on posthoc selected consumed
+fictional development sources,not new people/scenes,an independent holdout,
+real-user fidelity,initial-generation stability or cross-provider validation.
+Valid source IDs still do not prove that cited evidence is sufficient or that
+all source-supported behavior is encoded. No production default is promoted.
+An [opt-in offline bridge](../../docs/experimental-memory.md#optional-source-id-review)
+can prepare/import the enum request and replay its395-character example without
+calling a model. New imports remain `candidate_unvalidated`.
+
+```sh
+python scripts/replay_source_id_enum_comparison.py
+python -m unittest discover -s tests -p 'test_source_id_enum_comparison_evidence.py' -q
+```
+
+The portable snapshot retains exact fictional material,requests/raw values,
+references and safe usage counters. Replay reconstructs frozen input,59-slot
+routing,request conformance,reference rejection,skips,all scores and costs.
+Private grants,activation/runtime details,process IDs,machine paths and transport
+envelopes are excluded. The [preceding31-call result](../source-id-review-repeat-v1/README.md)
+remains45/60with15missing;this new study does not rewrite it.
+
+## Frozen experimental design
 
 Use the same posthoc selected four original drafts from c2v/f7s (585/312 and
 434/240characters),own44fictional messages and original30public forms. No old
@@ -56,7 +143,6 @@ python -m unittest discover -s tests -p 'test_source_id_enum_repeat_protocol.py'
 
 Frozen input manifest:
 `e2d286558b07fb34c7c70c0cd7f7a4f753d8b5bd4cb633b93499a79ceeedd94e`.
-`protocol.json` preserves the unapproved intake. No backend or live authority
-is included;execution needs a new59-call grant and three successful CI checks
-at its recorded published implementation commit. The59attempt cap is not a
-token/money cap. No production default or old score changes.
+`protocol.json` preserves the original unapproved intake;the actual measured
+snapshot separately records closed observations. Neither is a reusable service
+grant. The59attempt cap had no token/money ceiling. Unused slots are closed.

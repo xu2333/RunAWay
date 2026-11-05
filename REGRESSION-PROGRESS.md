@@ -1,5 +1,21 @@
 # Compression regression progress
 
+The [matched source-ID enum comparison](benchmarks/source-id-enum-repeat-v1/README.md)
+closes51actual calls/630372reported tokens with no missing receipts. Enumerating
+all actual source IDs yields8/8valid review cards and60/60joint parent/case
+cells;the existing request yields4/8valid cards,15/60joint and45missing after
+four undefined-ID products skip eight readers. Both enum reviews recover all
+seven lost known choices from the two incomplete originals and preserve the two
+complete parents30/30. Known26/26,unknown34/34,derived12/12;zero observed wrong
+choice regressions in valid cards. Schema constraints,not prompt/source or
+binder/compiler/reader,are the only paired request change. This is still two
+consumed fictional people/30unique person-cases/four posthoc parents,not a
+holdout,population stability or sufficient citations. The old35scope remains
+closed with its own failures;new59scope expires eight unused slots. No default
+promotion. The [offline bridge](docs/experimental-memory.md#optional-source-id-review)
+adds an explicit enum option and395-character archived demo;new imports retain
+unverified flags and make no model calls.
+
 The [paired source-ID review repeat](benchmarks/source-id-review-repeat-v1/README.md)
 closes31actual calls/379663reported tokens. c2v's incomplete parent recovers12/15
 →15/15 in both reviews;both historically complete parents retain30/30. f7s's
@@ -13,9 +29,9 @@ and defaults stay intact.
 An [actual-ID enum candidate](benchmarks/source-id-enum-v1/README.md) expresses
 existing table-membership constraints in the request schema;43valid archived/
 converted graphs retain acceptance and both invalid outputs remain rejected.
-Generation/retention effects are unmeasured. A [59-slot paired schema comparison](benchmarks/source-id-enum-repeat-v1/README.md)
-is prepared offline with two matched review methods and shared reference failure
-classification. Zero new candidate calls;fresh grant and implementation CI required.
+The separately authorized [59-slot paired schema comparison](benchmarks/source-id-enum-repeat-v1/README.md)
+is now measured above;the original offline compatibility checks are not extra
+model evidence. Reference failure classification is shared between methods.
 
 The [paired fixed-draft review repeat](benchmarks/source-id-review-repeat-v1/README.md)
 is prepared offline:two consumed fictional people,four historically complete/
