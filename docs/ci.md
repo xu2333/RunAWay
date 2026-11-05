@@ -27,3 +27,13 @@ claims. Product defaults and sealed experiment records are unchanged.
 When diagnosing a red run, inspect job annotations and steps first. A job with
 no acquired runner has no test log to repair. A failing test step with logs needs
 its actual test failure investigated; do not treat it as a capacity incident.
+
+A local publication observer for [PR62](https://github.com/xu2333/RunAWay/pull/62)
+reported a deadline even though all1,086local Python tests and the three CI jobs
+passed. The observer incorrectly required the combined log to end with `OK`;
+a CLI demo printed buffered JSON after the unittest summary. The original stop
+record is retained privately. A separate delivery check recognized the actual
+summary and rechecked the successful exact-head CI before merging;no successful
+suite or model experiment was rerun to repair that observer failure. Future
+local delivery checks also record the test subprocess exit code explicitly,
+rather than deriving success from the last line of a mixed-output log.

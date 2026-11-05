@@ -1,0 +1,834 @@
+[
+  {
+    "person": "pavo",
+    "case": "podcast_0",
+    "query_ids": [
+      "n01_ab",
+      "n01_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_1",
+    "query_ids": [
+      "n02_ab",
+      "n02_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_2",
+    "query_ids": [
+      "n03_ab",
+      "n03_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_3",
+    "query_ids": [
+      "n04_ab",
+      "n04_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_partial_x",
+    "query_ids": [
+      "n05_ab",
+      "n05_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_partial_y",
+    "query_ids": [
+      "n06_ab",
+      "n06_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "pavo",
+    "case": "podcast_outside",
+    "query_ids": [
+      "n07_ab",
+      "n07_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "podcast_outside"
+  },
+  {
+    "person": "pavo",
+    "case": "game_0",
+    "query_ids": [
+      "n08_ab",
+      "n08_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "pavo",
+    "case": "game_1",
+    "query_ids": [
+      "n09_ab",
+      "n09_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "pavo",
+    "case": "game_2",
+    "query_ids": [
+      "n10_ab",
+      "n10_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "pavo",
+    "case": "game_3",
+    "query_ids": [
+      "n11_ab",
+      "n11_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "pavo",
+    "case": "game_partial_x",
+    "query_ids": [
+      "n12_ab",
+      "n12_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "pavo",
+    "case": "game_partial_y",
+    "query_ids": [
+      "n13_ab",
+      "n13_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "pavo",
+    "case": "game_outside",
+    "query_ids": [
+      "n14_ab",
+      "n14_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "game_outside"
+  },
+  {
+    "person": "pavo",
+    "case": "outside_domain",
+    "query_ids": [
+      "n15_ab",
+      "n15_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "pavo",
+    "case": "execution_status",
+    "query_ids": [
+      "n16_ab",
+      "n16_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "execution",
+    "cohort": "execution_status"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_0",
+    "query_ids": [
+      "n01_ab",
+      "n01_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_1",
+    "query_ids": [
+      "n02_ab",
+      "n02_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_2",
+    "query_ids": [
+      "n03_ab",
+      "n03_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_3",
+    "query_ids": [
+      "n04_ab",
+      "n04_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_partial_x",
+    "query_ids": [
+      "n05_ab",
+      "n05_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_partial_y",
+    "query_ids": [
+      "n06_ab",
+      "n06_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "rill",
+    "case": "podcast_outside",
+    "query_ids": [
+      "n07_ab",
+      "n07_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "podcast_outside"
+  },
+  {
+    "person": "rill",
+    "case": "game_0",
+    "query_ids": [
+      "n08_ab",
+      "n08_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "rill",
+    "case": "game_1",
+    "query_ids": [
+      "n09_ab",
+      "n09_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "rill",
+    "case": "game_2",
+    "query_ids": [
+      "n10_ab",
+      "n10_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "rill",
+    "case": "game_3",
+    "query_ids": [
+      "n11_ab",
+      "n11_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "rill",
+    "case": "game_partial_x",
+    "query_ids": [
+      "n12_ab",
+      "n12_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "rill",
+    "case": "game_partial_y",
+    "query_ids": [
+      "n13_ab",
+      "n13_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "rill",
+    "case": "game_outside",
+    "query_ids": [
+      "n14_ab",
+      "n14_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "game_outside"
+  },
+  {
+    "person": "rill",
+    "case": "outside_domain",
+    "query_ids": [
+      "n15_ab",
+      "n15_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "rill",
+    "case": "execution_status",
+    "query_ids": [
+      "n16_ab",
+      "n16_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "execution",
+    "cohort": "execution_status"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_0",
+    "query_ids": [
+      "n01_ab",
+      "n01_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_1",
+    "query_ids": [
+      "n02_ab",
+      "n02_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_2",
+    "query_ids": [
+      "n03_ab",
+      "n03_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_3",
+    "query_ids": [
+      "n04_ab",
+      "n04_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_partial_x",
+    "query_ids": [
+      "n05_ab",
+      "n05_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_partial_y",
+    "query_ids": [
+      "n06_ab",
+      "n06_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "tavi",
+    "case": "podcast_outside",
+    "query_ids": [
+      "n07_ab",
+      "n07_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "podcast_outside"
+  },
+  {
+    "person": "tavi",
+    "case": "game_0",
+    "query_ids": [
+      "n08_ab",
+      "n08_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "tavi",
+    "case": "game_1",
+    "query_ids": [
+      "n09_ab",
+      "n09_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "tavi",
+    "case": "game_2",
+    "query_ids": [
+      "n10_ab",
+      "n10_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "tavi",
+    "case": "game_3",
+    "query_ids": [
+      "n11_ab",
+      "n11_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "tavi",
+    "case": "game_partial_x",
+    "query_ids": [
+      "n12_ab",
+      "n12_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "tavi",
+    "case": "game_partial_y",
+    "query_ids": [
+      "n13_ab",
+      "n13_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "tavi",
+    "case": "game_outside",
+    "query_ids": [
+      "n14_ab",
+      "n14_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "game_outside"
+  },
+  {
+    "person": "tavi",
+    "case": "outside_domain",
+    "query_ids": [
+      "n15_ab",
+      "n15_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "tavi",
+    "case": "execution_status",
+    "query_ids": [
+      "n16_ab",
+      "n16_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "execution",
+    "cohort": "execution_status"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_0",
+    "query_ids": [
+      "n01_ab",
+      "n01_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_1",
+    "query_ids": [
+      "n02_ab",
+      "n02_ba"
+    ],
+    "gold": "重新录制",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_2",
+    "query_ids": [
+      "n03_ab",
+      "n03_ba"
+    ],
+    "gold": "保留原声",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_3",
+    "query_ids": [
+      "n04_ab",
+      "n04_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "withdrawal_unseen"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_partial_x",
+    "query_ids": [
+      "n05_ab",
+      "n05_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_partial_y",
+    "query_ids": [
+      "n06_ab",
+      "n06_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "wren",
+    "case": "podcast_outside",
+    "query_ids": [
+      "n07_ab",
+      "n07_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "podcast_outside"
+  },
+  {
+    "person": "wren",
+    "case": "game_0",
+    "query_ids": [
+      "n08_ab",
+      "n08_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "wren",
+    "case": "game_1",
+    "query_ids": [
+      "n09_ab",
+      "n09_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "wren",
+    "case": "game_2",
+    "query_ids": [
+      "n10_ab",
+      "n10_ba"
+    ],
+    "gold": "照常开局",
+    "personal_known": true,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "observed_revision"
+  },
+  {
+    "person": "wren",
+    "case": "game_3",
+    "query_ids": [
+      "n11_ab",
+      "n11_ba"
+    ],
+    "gold": "延期改约",
+    "personal_known": true,
+    "derived_known": true,
+    "stratum": "preference",
+    "cohort": "derived"
+  },
+  {
+    "person": "wren",
+    "case": "game_partial_x",
+    "query_ids": [
+      "n12_ab",
+      "n12_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "wren",
+    "case": "game_partial_y",
+    "query_ids": [
+      "n13_ab",
+      "n13_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "partial_features"
+  },
+  {
+    "person": "wren",
+    "case": "game_outside",
+    "query_ids": [
+      "n14_ab",
+      "n14_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "game_outside"
+  },
+  {
+    "person": "wren",
+    "case": "outside_domain",
+    "query_ids": [
+      "n15_ab",
+      "n15_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "preference",
+    "cohort": "outside_domain"
+  },
+  {
+    "person": "wren",
+    "case": "execution_status",
+    "query_ids": [
+      "n16_ab",
+      "n16_ba"
+    ],
+    "gold": "U",
+    "personal_known": false,
+    "derived_known": false,
+    "stratum": "execution",
+    "cohort": "execution_status"
+  }
+]
