@@ -1,5 +1,17 @@
 # Compression regression progress
 
+A [fresh-source full-pipeline probe](benchmarks/fresh-enum-pipeline-v1/README.md)
+is frozen with zero model calls:four new fictional people/88messages in podcast
+editing and board-game scheduling,64person/cases (24known,40unknown). It uses
+current XOR/XNOR rules,rule withdrawal,explicit old-choice revisions,missing
+features and unrecorded execution status. One fresh initial card/person is
+compared with its source+draft enum review and each card's exact-character own
+transcript tail. The45-slot plan contains5controls,4extractions,4reviews and
+32readers. Eleven offline reference/accounting/damage checks pass;oracle output
+is not model evidence. It does not establish initial-generation stability,
+real-user fidelity or an independent holdout. Fresh scope approval and exact-head
+implementation CI are required;the closed59scope's eight unused slots stay expired.
+
 The [matched source-ID enum comparison](benchmarks/source-id-enum-repeat-v1/README.md)
 closes51actual calls/630372reported tokens with no missing receipts. Enumerating
 all actual source IDs yields8/8valid review cards and60/60joint parent/case
