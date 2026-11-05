@@ -5,6 +5,14 @@ Ubuntu latest / Python 3.13, and macOS 15 Intel / Python 3.13. It retains unit/C
 tests, browser tests, sealed-evidence replays, synthetic artifact reconstruction,
 wheel installation and the installed demo. These checks make no model calls.
 
+The Python entry point is `python3 scripts/frozen_history.py tests`. It runs every
+test module once, separating current implementation tests from historical tests
+whose full-source hashes bind the original executor. Historical replays use
+`python3 scripts/frozen_history.py run <script> ...` in a disposable source copy;
+their recorded hashes and integrity assertions remain unchanged. See the
+[snapshot contract](../benchmarks/frozen-history-v1/README.md). The current
+executor regressions and installed-wheel smoke tests always use current code.
+
 On 2026-11-02 the [PR45 run](https://github.com/xu2333/RunAWay/actions/runs/41514367598)
 passed both Linux jobs, but its macOS job had zero steps and was cancelled with
 the annotation “The job was not acquired by Runner of type hosted even after
@@ -37,3 +45,12 @@ summary and rechecked the successful exact-head CI before merging;no successful
 suite or model experiment was rerun to repair that observer failure. Future
 local delivery checks also record the test subprocess exit code explicitly,
 rather than deriving success from the last line of a mixed-output log.
+
+The initial historical-test compatibility helper had another false-success
+case: a child exiting zero without writing its result was logged as an error,
+but the wrapper still returned zero. A zero-backend regression reproduces this
+on `b158d37`. The wrapper now requires both the observed exit code and a valid
+structured result for each partition. Missing, malformed or empty reports,
+invalid fields/counters and reported failures cannot produce a successful
+overall result. Both partitions still run and retain their real exit codes.
+Historical source bytes and all existing evidence/hash checks stay unchanged.

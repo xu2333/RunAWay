@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [Issue64 fix](https://github.com/xu2333/RunAWay/pull/65) creates the output
+directory before consuming the single-use execution intent, while retaining
+the exclusive claim before backend entry. Historical checks use the original,
+hash-verified executor in an isolated offline tree; current executor regressions
+use current code. Existing evidence, hashes and denominators are not rewritten.
+A missing-result regression additionally prevents a zero-exit test interpreter
+from hiding an unreported partition. These are implementation/CI integrity
+changes, with zero new model calls or compression-fidelity measurements.
+
 A [fresh-source full-pipeline probe](benchmarks/fresh-enum-pipeline-v1/README.md)
 is frozen with zero model calls:four new fictional people/88messages in podcast
 editing and board-game scheduling,64person/cases (24known,40unknown). It uses

@@ -258,7 +258,7 @@ There is no background server, remote codebook, or extra model call for exportin
 ## Development
 
 ```sh
-python3 -m unittest discover -s tests -q
+python3 scripts/frozen_history.py tests
 ```
 
 `examples/synthetic-experience.txt` and `examples/profile-sources.synthetic.json` are fictional smoke-test inputs, not evidence that personalization works. Broader research on real held-out choices remains separate from transport and schema tests.

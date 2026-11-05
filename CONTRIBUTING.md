@@ -2,7 +2,7 @@
 
 The core objective is evidence-grounded, portable personal preferences. Preserve conditions, uncertainty, contradictions and source roles before improving entertainment or brevity.
 
-Use Python 3.9 or newer. There are no runtime dependencies. Run the offline suite with `python3 -m unittest discover -s tests -q`. Try the packaged fictional example with `python3 -m runaway demo --out my-run`.
+Use Python 3.9 or newer. There are no runtime dependencies. Run every offline test with `python3 scripts/frozen_history.py tests`. This explicitly partitions current implementation tests and historical protocol/replay tests; all modules run once, in separate interpreters. Historical tests use a verified original executor snapshot, so immutable experimental hashes are not rewritten when the current runner changes. See [frozen history](benchmarks/frozen-history-v1/README.md). Try the packaged fictional example with `python3 -m runaway demo --out my-run`.
 
 Tests and public examples must use fictional or explicitly public, licensed material. Do not submit private trajectories, resumes, model logs, credentials or screenshots of personal profiles in issues or pull requests. Prefer a small fictional reproduction of the failure. The local research workspace is not the public release tree.
 

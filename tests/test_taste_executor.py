@@ -166,6 +166,55 @@ class TasteExecutorTests(unittest.TestCase):
         shutil.copytree(self.plan,self.root/'copy')
         with self.assertRaises(ValueError):ex.preflight(self.root/'copy',False)
 
+    def test_output_creation_failure_does_not_consume_real_execution_intent(self):
+        # Bypass only evidence/runtime checks; exercise the real execution path
+        # with a mocked backend so these regressions never use a model service.
+        prepared=ex.preflight(self.plan,False);proposal=prepared[0]
+        approval={'proposal_id':proposal['id'],'status':'approved',
+            'human_source':'isolated-test-receipt-not-authorization'}
+        existing=self.root/'existing';existing.mkdir()
+        marker=existing/'keep.txt';marker.write_text('unchanged')
+        file=self.root/'file';file.write_text('unchanged')
+        with patch.object(ex,'preflight',return_value=prepared),patch.object(generation,'codex_generate') as backend:
+            for out in (existing,file,file/'child'):
+                with self.subTest(out=out):
+                    with self.assertRaises(OSError):ex.execute(self.plan,out,approval=approval,publish=lambda state:None)
+                    self.assertFalse((self.plan/'execution-intent.json').exists())
+                    backend.assert_not_called()
+            with patch.object(Path,'mkdir',side_effect=PermissionError('denied')):
+                with self.assertRaises(PermissionError):
+                    ex.execute(self.plan,self.root/'denied',approval=approval,publish=lambda state:None)
+            self.assertFalse((self.plan/'execution-intent.json').exists())
+            backend.assert_not_called()
+            self.assertEqual(marker.read_text(),'unchanged');self.assertEqual(file.read_text(),'unchanged')
+
+            # Correcting the output path can still claim this same proposal.
+            fake=FakeModel(self.plan,fail_gate='full_history');out=self.root/'ready'
+            def checked_backend(*args,**kwargs):
+                self.assertTrue(out.is_dir())
+                intent=json.loads((self.plan/'execution-intent.json').read_text())
+                self.assertEqual(intent['output'],str(out.resolve()))
+                return fake(*args,**kwargs)
+            backend.side_effect=checked_backend
+            report=ex.execute(self.plan,out,approval=approval,publish=lambda state:None)
+            self.assertEqual(report['stop_reason']['gate'],'full_history')
+            self.assertEqual(len(fake.calls),2)
+
+    def test_real_execution_failure_keeps_intent_and_blocks_other_output(self):
+        prepared=ex.preflight(self.plan,False);proposal=prepared[0]
+        approval={'proposal_id':proposal['id'],'status':'approved',
+            'human_source':'isolated-test-receipt-not-authorization'}
+        with patch.object(ex,'preflight',return_value=prepared),patch.object(generation,'codex_generate',side_effect=ValueError('mock transport failure')) as backend:
+            report=ex.execute(self.plan,self.root/'first',approval=approval,publish=lambda state:None)
+            self.assertEqual(report['stop_reason']['kind'],'model_call_failure')
+            backend.assert_called_once()
+            intent=(self.plan/'execution-intent.json').read_bytes()
+            with self.assertRaises(FileExistsError):
+                ex.execute(self.plan,self.root/'second',approval=approval,publish=lambda state:None)
+            backend.assert_called_once()
+            self.assertEqual((self.plan/'execution-intent.json').read_bytes(),intent)
+            self.assertFalse((self.root/'second'/'calls').exists())
+
     def test_only_one_backend_entry_and_subprocess_rejects240_before_start(self):
         tree=ast.parse(Path(ex.__file__).read_text());entries=[]
         for node in ast.walk(tree):

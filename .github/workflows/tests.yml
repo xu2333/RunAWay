@@ -33,133 +33,133 @@ jobs:
         with:
           node-version: '22'
       - name: Unit and CLI checks (no model service)
-        run: python -m unittest discover -s tests -q
+        run: python scripts/frozen_history.py tests
       - name: Browser logic and Python artifact interoperability
         run: node --test tests/*.test.mjs
       - name: Reproduce source-support synthetic benchmark (no model calls)
-        run: python benchmarks/support-extraction-v1/run.py check-observed
+        run: python scripts/frozen_history.py run benchmarks/support-extraction-v1/run.py check-observed
       - name: Reproduce coverage-reader study and failed-call accounting
-        run: python benchmarks/support-extraction-v1/check_coverage.py
+        run: python scripts/frozen_history.py run benchmarks/support-extraction-v1/check_coverage.py
       - name: Reproduce counterbalanced source-layout study
-        run: python benchmarks/support-extraction-v1/check_layout.py
+        run: python scripts/frozen_history.py run benchmarks/support-extraction-v1/check_layout.py
       - name: Reproduce fresh synthetic end-to-end scope study
-        run: python benchmarks/fresh-boundary-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/fresh-boundary-v1/check.py
       - name: Reproduce long-history whole-card budget stress study
-        run: python benchmarks/long-trajectory-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/long-trajectory-v1/check.py
       - name: Reproduce independent frozen 384-card revalidation
-        run: python benchmarks/frozen384-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/frozen384-v1/check.py
       - name: Reproduce power-guarded 384-card validation
-        run: python benchmarks/guarded384-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/guarded384-v1/check.py
       - name: Reproduce new-person latent-rule transfer and uncertainty
-        run: python benchmarks/latent-transfer-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/latent-transfer-v1/check.py
       - name: Reproduce standalone decoder-removal ablation
-        run: python benchmarks/standalone-latent-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/standalone-latent-v1/check.py
       - name: Preserve measured v2 extraction and portable output (consumed data, no calls)
-        run: python benchmarks/source-constraints-v2/check.py
+        run: python scripts/frozen_history.py run benchmarks/source-constraints-v2/check.py
       - name: Replay naturalistic full-history controls (consumed data, no calls)
-        run: python benchmarks/natural-controls-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/natural-controls-v1/check.py
       - name: Replay naturalistic short-card compression (consumed data, no calls)
-        run: python benchmarks/natural-compression-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/natural-compression-v1/check.py
       - name: Replay heterogeneous budget frontier and skipped slots (no calls)
-        run: python benchmarks/heterogeneous-frontier-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/heterogeneous-frontier-v1/check.py
       - name: Replay paired grouped/default whole512 comparison (no calls)
         run: |
-          python benchmarks/grouped-comparison-v1/check.py
+          python scripts/frozen_history.py run benchmarks/grouped-comparison-v1/check.py
           python -m unittest discover -s benchmarks/grouped-comparison-v1/prototype -p 'test_*.py' -v
       - name: Check source-only coverage pipeline prototype (no model calls)
         run: python -m unittest discover -s benchmarks/source-coverage-pipeline-v1 -p 'test_*.py' -v
       - name: Replay source inventory audit and compression comparison (no model calls)
-        run: python benchmarks/source-coverage-comparison-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/source-coverage-comparison-v1/check.py
       - name: Check separate source-review index prototype (no model calls)
         run: python -m unittest discover -s benchmarks/source-coverage-review-v2 -p 'test_*.py' -v
       - name: Replay whole1536 source-review comparison (no model calls)
-        run: python benchmarks/source-review-comparison-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/source-review-comparison-v1/check.py
       - name: Replay post-ceiling losses and unresolved references (no model calls)
-        run: python benchmarks/regression-progress-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/regression-progress-v1/check.py
       - name: Calibrate decision-target and execution boundaries (no model calls)
-        run: python benchmarks/decision-targets-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/decision-targets-v1/check.py
       - name: Replay measured decision-target comparison (no model calls)
-        run: python benchmarks/decision-targets-v1/measured.py
+        run: python scripts/frozen_history.py run benchmarks/decision-targets-v1/measured.py
       - name: Replay lower-budget extraction stability and invalid products (no calls)
-        run: python scripts/replay_compression_stability.py
+        run: python scripts/frozen_history.py run scripts/replay_compression_stability.py
       - name: Replay remaining-world losses and unscored disputed references (no calls)
-        run: python scripts/replay_remaining_world_frontier.py
+        run: python scripts/frozen_history.py run scripts/replay_remaining_world_frontier.py
       - name: Verify all232source-bound observations without claiming a pass
-        run: python scripts/replay_regression_inventory.py
+        run: python scripts/frozen_history.py run scripts/replay_regression_inventory.py
       - name: Replay owned-condition losses, failed capacity and expired readers (no calls)
-        run: python scripts/replay_owned_conditions.py
+        run: python scripts/frozen_history.py run scripts/replay_owned_conditions.py
       - name: Replay object-table budget failures and identical-reader instability (no calls)
-        run: python scripts/replay_object_table_probe.py
+        run: python scripts/frozen_history.py run scripts/replay_object_table_probe.py
       - name: Replay budget-aware request failures and offline lossless dense layouts (no calls)
         run: |
-          python scripts/replay_budgeted_table_probe.py
-          python benchmarks/owned-dense-v1/evidence.py
+          python scripts/frozen_history.py run scripts/replay_budgeted_table_probe.py
+          python scripts/frozen_history.py run benchmarks/owned-dense-v1/evidence.py
       - name: Replay fixed-parent compact layout interpretation (no calls)
         run: |
-          python scripts/replay_dense_layout_probe.py
-          python scripts/replay_action_revision_pilot.py
-          python scripts/replay_action_revision_stability.py
-          python scripts/replay_action_policy_comparison.py
+          python scripts/frozen_history.py run scripts/replay_dense_layout_probe.py
+          python scripts/frozen_history.py run scripts/replay_action_revision_pilot.py
+          python scripts/frozen_history.py run scripts/replay_action_revision_stability.py
+          python scripts/frozen_history.py run scripts/replay_action_policy_comparison.py
       - name: Check annotated order-target conservation and recorded preparation confound
-        run: python benchmarks/order-targets-v1/evidence.py
+        run: python scripts/frozen_history.py run benchmarks/order-targets-v1/evidence.py
       - name: Replay fixed-view order-target reading (no calls)
-        run: python scripts/replay_order_target_reads.py
+        run: python scripts/frozen_history.py run scripts/replay_order_target_reads.py
       - name: Replay source-only order generation and separate erasure controls (no calls)
-        run: python scripts/replay_source_order_probe.py
+        run: python scripts/frozen_history.py run scripts/replay_source_order_probe.py
       - name: Replay two-source order-annotation collateral regression (no calls)
-        run: python scripts/replay_source_order_regression.py
+        run: python scripts/frozen_history.py run scripts/replay_source_order_regression.py
       - name: Replay new-source card and matched-tail losses (no calls)
-        run: python scripts/replay_fresh_source_contrast.py
+        run: python scripts/frozen_history.py run scripts/replay_fresh_source_contrast.py
       - name: Replay fixed-parent name-marker negative result (no calls)
-        run: python scripts/replay_named_target_diagnostic.py
+        run: python scripts/frozen_history.py run scripts/replay_named_target_diagnostic.py
       - name: Replay unchanged-memory task-contract comparison (no calls)
-        run: python scripts/replay_question_contract_diagnostic.py
+        run: python scripts/frozen_history.py run scripts/replay_question_contract_diagnostic.py
       - name: Verify source-grounded task scenarios and offline fixture calibration (no calls)
-        run: python benchmarks/task-scenarios-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/task-scenarios-v1/check.py
       - name: Verify controlled long-source task protocol inputs (no calls)
-        run: python benchmarks/long-task-probe-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/long-task-probe-v1/check.py
       - name: Replay closed long-source task compression result (no calls)
-        run: python scripts/replay_long_task_probe.py
+        run: python scripts/frozen_history.py run scripts/replay_long_task_probe.py
       - name: Verify source-licensed inference and uncertainty protocol (no calls)
-        run: python benchmarks/epistemic-transfer-v1/check.py
+        run: python scripts/frozen_history.py run benchmarks/epistemic-transfer-v1/check.py
       - name: Replay source-licensed full controls and extraction timeout (no calls)
-        run: python scripts/replay_epistemic_transfer.py
+        run: python scripts/frozen_history.py run scripts/replay_epistemic_transfer.py
       - name: Replay one-extraction readiness and unused object incidence (no calls)
         run: |
-          python scripts/replay_extraction_readiness.py
-          python scripts/audit_graph_object_coverage.py benchmarks/extraction-readiness-v1/measured.synthetic.json
-          python scripts/check_graph_object_inventory.py
+          python scripts/frozen_history.py run scripts/replay_extraction_readiness.py
+          python scripts/frozen_history.py run scripts/audit_graph_object_coverage.py benchmarks/extraction-readiness-v1/measured.synthetic.json
+          python scripts/frozen_history.py run scripts/check_graph_object_inventory.py
       - name: Replay fixed-card known-domain losses and proxy invariance (no calls)
         run: |
-          python scripts/replay_fixed_card_fidelity.py
-          python scripts/check_object_incidence_invariance.py
+          python scripts/frozen_history.py run scripts/replay_fixed_card_fidelity.py
+          python scripts/frozen_history.py run scripts/check_object_incidence_invariance.py
       - name: Verify synthetic catalogue source
         run: python scripts/build_catalog.py --check
       - name: Replay stopped generic source-coverage comparison (no calls)
-        run: python scripts/replay_object_coverage_comparison.py
+        run: python scripts/frozen_history.py run scripts/replay_object_coverage_comparison.py
       - name: Replay completed three-card fidelity diagnostic (no calls)
-        run: python scripts/replay_coverage_fixed_views.py
+        run: python scripts/frozen_history.py run scripts/replay_coverage_fixed_views.py
       - name: Replay finite source-coverage extraction repeat (no calls)
-        run: python scripts/replay_source_coverage_repeat.py
+        run: python scripts/frozen_history.py run scripts/replay_source_coverage_repeat.py
       - name: Replay ambiguous-source repeat and known-to-unknown loss (no calls)
-        run: python scripts/replay_ambiguous_source_repeat.py
+        run: python scripts/frozen_history.py run scripts/replay_ambiguous_source_repeat.py
       - name: Replay remaining source worlds and complete fixed grid (no calls)
         run: |
-          python scripts/replay_remaining_source_repeat.py
-          python scripts/replay_source_coverage_grid.py --check
+          python scripts/frozen_history.py run scripts/replay_remaining_source_repeat.py
+          python scripts/frozen_history.py run scripts/replay_source_coverage_grid.py --check
       - name: Exercise explicit-method memory bridge without a model
-        run: python scripts/memory.py demo --out memory-bridge-demo
+        run: python scripts/frozen_history.py run scripts/memory.py demo --out memory-bridge-demo
       - name: Replay rejected source review and preserved missing cases (no calls)
-        run: python scripts/replay_source_review_diagnostic.py
+        run: python scripts/frozen_history.py run scripts/replay_source_review_diagnostic.py
       - name: Replay source-ID recovery and citation-subset limitation (no calls)
         run: |
-          python scripts/replay_source_id_review.py
-          python scripts/check_source_reference_witness.py
-          python scripts/review_memory.py demo --out source-id-review-demo
+          python scripts/frozen_history.py run scripts/replay_source_id_review.py
+          python scripts/frozen_history.py run scripts/check_source_reference_witness.py
+          python scripts/frozen_history.py run scripts/review_memory.py demo --out source-id-review-demo
       - name: Replay paired review availability failures and recovery (no calls)
-        run: python scripts/replay_source_id_review_repeat.py
+        run: python scripts/frozen_history.py run scripts/replay_source_id_review_repeat.py
       - name: Replay matched source-ID enum fidelity and availability (no calls)
-        run: python scripts/replay_source_id_enum_comparison.py
+        run: python scripts/frozen_history.py run scripts/replay_source_id_enum_comparison.py
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel
