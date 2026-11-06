@@ -1,14 +1,16 @@
 # Compression regression progress
 
-The [single-pass repeat protocol](benchmarks/single-pass-repeat-v1/README.md)
-is prepared offline to test the remaining generation gap:two independent
-initial cards per each of the same four consumed synthetic people,without
-review or encoder changes. Its proposed45slots include fresh controls and
-separate card/matched-tail reads. Each view retains64unique person/cases and
-requires all eight generation/read/order answers;invalid cards stay missing.
-No model call has run or been authorized for this scope. Oracle/damage fixtures
-test bookkeeping only,not measured fidelity or population stability. The prior
-fresh45scope is closed and its successful results remain unchanged.
+The [single-pass generation repeat](benchmarks/single-pass-repeat-v1/README.md)
+completes 45 actual attempts and 538,110 reported tokens, with no invalid cards,
+skips or missing usage. Two new generations per each of four consumed synthetic
+people retain **64/64** across all eight generation/read/order answers per case;
+own equal-character tails retain 48/64. Known retention is 24/24 versus 8/24,
+unknown retention 40/40 for both, and derived-known retention 8/8 versus 4/8.
+Both generations separately reproduce those endpoints with no answer-vector
+differences. Eight cards span 439–542 characters (mean 480); the sixteen tail
+losses are known choices answered U throughout. This finite repeat does not
+establish population stability, real-user fidelity or a new default. The
+original preparation, previous observations and closed scopes remain intact.
 
 The [fresh-source pipeline](benchmarks/fresh-enum-pipeline-v1/README.md) now
 completes45actual calls/543815reported tokens with no invalid products,skipped
