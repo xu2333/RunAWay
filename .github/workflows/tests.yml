@@ -160,6 +160,10 @@ jobs:
         run: python scripts/frozen_history.py run scripts/replay_source_id_review_repeat.py
       - name: Replay matched source-ID enum fidelity and availability (no calls)
         run: python scripts/frozen_history.py run scripts/replay_source_id_enum_comparison.py
+      - name: Replay fresh-source pipeline and measured user demo (no calls)
+        run: |
+          python scripts/frozen_history.py run scripts/replay_fresh_enum_pipeline.py
+          python scripts/frozen_history.py run scripts/demo_fresh_memory.py --person pavo --out fresh-pipeline-demo
       - name: Verify browser choice contract
         run: python scripts/build_choice_contract.py --check
       - name: Build and install wheel

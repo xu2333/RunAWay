@@ -177,7 +177,7 @@ def replay(script, args, root=ROOT):
     # Inputs and outputs belong to the caller, not the disposable source copy.
     converted = list(args)
     path_flags = {'--out', '--input', '--prepared', '--original-prepared',
-                  '--draft-answer', '--answer', '--card', '--questions'}
+                  '--draft-answer', '--answer', '--card', '--questions', '--observations'}
     for index, value in enumerate(args[:-1]):
         if value in path_flags:
             converted[index + 1] = str(Path(args[index + 1]).resolve())

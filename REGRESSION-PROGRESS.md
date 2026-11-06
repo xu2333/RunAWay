@@ -1,5 +1,21 @@
 # Compression regression progress
 
+The [fresh-source pipeline](benchmarks/fresh-enum-pipeline-v1/README.md) now
+completes45actual calls/543815reported tokens with no invalid products,skipped
+readers or missing receipts. Four initial cards(434–460characters)and four enum-
+reviewed cards(474–496)retain64/64cases each,including24/24knowns and40/40unknowns.
+Their independently character-matched raw tails retain48/64,including8/24knowns.
+All16tail losses are known decisions answeredU;12are explicit revisions and4
+source-entailed. Initial/reviewed cards keep8/8derived-knowns;tails keep4/8.
+Review adds4calls/55780tokens and39.75average characters with no accuracy gain
+from already-correct initial cards. This supports keeping review optional,
+not declaring it universally useless or promoting a new default. The source is
+four synthetic people/two explicit-rule domains,one generation/person:neither
+stability,real-user/cross-provider fidelity nor independent holdout is established.
+The original intake,source fingerprints and12prior observation sets remain
+unchanged. An [offline demo](docs/experimental-memory.md#fresh-source-examples)
+round-trips all8measured cards;new imports keep unverified flags.
+
 The [Issue64 fix](https://github.com/xu2333/RunAWay/pull/65) creates the output
 directory before consuming the single-use execution intent, while retaining
 the exclusive claim before backend entry. Historical checks use the original,
@@ -9,17 +25,11 @@ A missing-result regression additionally prevents a zero-exit test interpreter
 from hiding an unreported partition. These are implementation/CI integrity
 changes, with zero new model calls or compression-fidelity measurements.
 
-A [fresh-source full-pipeline probe](benchmarks/fresh-enum-pipeline-v1/README.md)
-is frozen with zero model calls:four new fictional people/88messages in podcast
-editing and board-game scheduling,64person/cases (24known,40unknown). It uses
-current XOR/XNOR rules,rule withdrawal,explicit old-choice revisions,missing
-features and unrecorded execution status. One fresh initial card/person is
-compared with its source+draft enum review and each card's exact-character own
-transcript tail. The45-slot plan contains5controls,4extractions,4reviews and
-32readers. Eleven offline reference/accounting/damage checks pass;oracle output
-is not model evidence. It does not establish initial-generation stability,
-real-user fidelity or an independent holdout. Fresh scope approval and exact-head
-implementation CI are required;the closed59scope's eight unused slots stay expired.
+The [fresh45preparation](benchmarks/fresh-enum-pipeline-v1/README.md#frozen-design-and-material)
+originally froze88new fictional messages/32public forms and64person-cases with
+11offline oracle/damage checks. Its separately authorized measured result is
+above;the original unapproved protocol is retained. The45scope is now closed
+with all45slots used. It does not reopen the earlier59scope's eight expired slots.
 
 The [matched source-ID enum comparison](benchmarks/source-id-enum-repeat-v1/README.md)
 closes51actual calls/630372reported tokens with no missing receipts. Enumerating
