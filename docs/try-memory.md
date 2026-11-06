@@ -60,6 +60,8 @@ prediction. It stays out of the model request. A later edit is marked as
 post-prediction within that page session. Download the complete private trial,
 or review a separate text-free summary before choosing to share it. The summary
 is voluntary self-report and carries no verified personal-fidelity claim.
+Use the [offline feedback collector](feedback-intake.md) to validate selected
+downloads and locate disagreements, unknowns or conflicting versions locally.
 
 ## Other LLMs: prepare, then import
 
