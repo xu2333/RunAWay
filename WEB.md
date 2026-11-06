@@ -43,6 +43,11 @@ The private download still contains the full material and needs separate review
 before sharing. Counts of downloads or reports are not unique users or measured
 personal-fidelity cases.
 
+Downloaded choice trials and text-free summaries can be checked together with
+the [offline feedback collector](docs/feedback-intake.md). It preserves file
+denominators, duplicate versions and conflicts, separates reference timing, and
+queues source review without uploading data or treating reports as unique users.
+
 The optional **[temporal memory entry](web/dist/timeline.html)** is available at `/timeline.html` after starting the same static server below. It retains event changes and retractions before program rendering, rather than asking a model to shorten a free-form profile. Prepare a request for your own LLM, paste its JSON back, inspect the conditions and download the prompt or portable Harness file. Private event archives can be reopened locally. Source edits invalidate old outputs; over-budget memories are withheld, not truncated. Browser length checks are characters, never token estimates. The two supplied examples are explicitly labelled synthetic actual D-0021 outputs; [the diagnostic covers only one consumed development pair](TEMPORAL-RESULTS.md).
 
 RunAWay's browser entry is a static app with no dependencies or build step:
