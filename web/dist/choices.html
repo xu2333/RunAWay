@@ -14,6 +14,7 @@
 <label class="file-button">读入 prompt.md / 文本<input id="memory-file" type="file" accept=".md,.txt"></label>
 <label for="scenario">这次遇到了什么？</label><textarea id="scenario" rows="4" maxlength="12000" placeholder="写下当时已知的条件、代价与限制，先不要透露真实选择。"></textarea>
 <label for="options">当时存在的选项（每行一个，2–8 个）</label><textarea id="options" rows="4" maxlength="12000" placeholder="例如：先做一个可以撤回的小样&#10;先把完整结构与依赖想清楚"></textarea>
+<label for="reference-choice">你本人会选哪项？（可选，只留在本页）</label><select id="reference-choice"><option value="">还没决定／暂不提供</option></select><p class="small">这项不会进入模型请求。若想做一次对照，请在带回预测前记录；看到预测后补记或修改，会保留这个时点标记。</p>
 <label for="reader-mode">读取方式</label><select id="reader-mode"><option value="standard">原读法</option><option value="coverage">先核对适用条件（实验）</option></select><p class="small">实验读法先检查条件是否被记录覆盖，再给选择。它仍可能猜错或误答未知，并不增加你的记忆内容。</p>
 <button id="prepare" class="primary wide" disabled>装好这一题，借个脑袋 →</button><p class="small">这是一次日常试用。若要检验保真度，请用未参与提炼的真实经历，并在看预测前记录自己的答案。</p>
 </section><section class="panel">
@@ -25,8 +26,14 @@
 <button id="import" class="primary wide">看看它走了哪条路 →</button></div>
 <p id="waiting" class="small">先在左边装好这一题。</p>
 <section id="result" class="trial-ticket" hidden><div class="eyebrow">这一题的小票</div><h3 id="outcome"></h3><p id="result-note" class="small"></p>
+<p id="reference-note" class="small"></p>
 <label for="rating">以你的判断，这次像你吗？</label><select id="rating"><option value="unrated">暂不评分</option><option value="fits">这次的判断像我</option><option value="misses">这次没理解我</option><option value="uncertain">我也还不确定</option></select>
 <label for="correction">希望它记住什么？（可选）</label><textarea id="correction" rows="3" maxlength="12000"></textarea>
-<button id="download">下载这次的私有记录</button><p class="small">含随身 prompt、题目、回答和你的评分。只下载到本机，不自动提交；分享前请检查私人信息。评分不等于独立验证。</p></section>
+<button id="download">下载这次的私有记录</button><p class="small">含随身 prompt、题目、本人选择、预测和评分。只下载到本机，不自动提交；分享前请检查私人信息。评分不等于独立验证。</p>
+<button id="preview-summary" class="quiet">预览不含题目文字的反馈摘要</button>
+<section id="public-feedback-panel" class="summary-preview" hidden><h3>只带走这些统计</h3><p class="small">不包含记忆、题面、选项、本人答案、模型原文或纠正文字。摘要会保留虚构来源和记录时点；它是自愿自述，未验证模型身份或保真度。</p>
+<p id="public-summary-note" class="small"></p><details><summary>查看将分享的完整统计</summary><textarea id="public-feedback-preview" rows="9" readonly aria-label="公开反馈摘要"></textarea></details>
+<label class="review-choice"><input id="public-reviewed" type="checkbox">我已检查摘要；若打开 GitHub 草稿，这些统计将用于公开提交。</label>
+<div class="summary-actions"><button id="download-summary" disabled>下载这份摘要</button><button id="github-summary" class="quiet" disabled>打开 GitHub 公开草稿 ↗</button></div><p class="small">只会打开待检查的草稿，仍需你在 GitHub 手动提交。</p></section></section>
 </section></section><footer><span>材料只留在当前标签页，不自动保存或上传。修改题目会清空本次预测。</span><button id="clear" class="quiet">清空本页</button></footer>
 </main></body></html>

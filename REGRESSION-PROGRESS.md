@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [choice-feedback route](WEB.md#record-a-choice-before-checking-the-prediction)
+now records an optional declared choice outside the model request and preserves
+whether it was entered before or after a prediction in that page session.
+Private version-2 records keep the full case; an explicitly reviewed public
+summary omits all prompt/task/answer/correction text and identifiers. Nine new
+Node checks and a synthetic browser walkthrough validate routing, timing,
+derived-match consistency and public-field rejection. These are implementation
+checks with zero model calls or new real-user fidelity measurements. The reading
+contract, model requests and previously measured evidence remain unchanged.
+
 The [condition-memory trial](docs/try-memory.md) now exposes the measured
 single-pass encoder through one explicit Codex call, or offline prepare/import
 and a zero-call archived demo. Its requests and compiled prompts round-trip all
