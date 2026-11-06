@@ -172,6 +172,8 @@ jobs:
         run: python -B benchmarks/single-pass-repeat-v1/check.py
       - name: Replay measured single-pass generation repeat (no calls)
         run: python -B scripts/replay_single_pass_repeat.py
+      - name: Exercise condition-memory trial without a model
+        run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
         run: |
           python -m pip wheel . --no-deps --wheel-dir dist

@@ -64,6 +64,20 @@ For N chunks, `plan` reports at most 2N + 3 calls (2N + 2 for one chunk). It is 
 
 ## Direct tiny-card experiment
 
+The measured condition-aware encoder has an explicit repository-only trial:
+
+```sh
+python3 -B scripts/try_memory.py demo --out my-condition-demo
+python3 -B scripts/try_memory.py generate --input experience.txt --backend codex \
+  --model YOUR_MODEL --out my-condition-memory
+```
+
+The demo is offline; `generate` explicitly sends your selected source in at most
+one local model child. Inspect `my-condition-memory/candidate/prompt.md` before
+sharing or attaching its sibling `portable.json`. The default whole-card budget
+is 1,536 characters. [Trial guide, manual import and failure behavior](docs/try-memory.md).
+All outputs remain candidate-unvalidated; the installed defaults below stay intact.
+
 For a single selected trajectory, `distill` automatically extracts source-bound condition/action branches and renders a named card in one model call:
 
 ```sh
