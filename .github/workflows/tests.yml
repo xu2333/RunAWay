@@ -165,7 +165,11 @@ jobs:
           python scripts/frozen_history.py run scripts/replay_fresh_enum_pipeline.py
           python scripts/frozen_history.py run scripts/demo_fresh_memory.py --person pavo --out fresh-pipeline-demo
       - name: Verify browser choice contract
+        # This new protocol uses current source and excludes the unused legacy
+        # executor. Existing historical replay steps retain their frozen tree.
         run: python scripts/build_choice_contract.py --check
+      - name: Verify single-pass repeat preparation (no model calls)
+        run: python -B benchmarks/single-pass-repeat-v1/check.py
       - name: Build and install wheel
         run: |
           python -m pip wheel . --no-deps --wheel-dir dist
