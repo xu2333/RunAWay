@@ -170,6 +170,8 @@ jobs:
         run: python scripts/build_choice_contract.py --check
       - name: Verify single-pass repeat preparation (no model calls)
         run: python -B benchmarks/single-pass-repeat-v1/check.py
+      - name: Replay measured single-pass generation repeat (no calls)
+        run: python -B scripts/replay_single_pass_repeat.py
       - name: Build and install wheel
         run: |
           python -m pip wheel . --no-deps --wheel-dir dist
