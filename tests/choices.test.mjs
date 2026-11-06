@@ -54,14 +54,17 @@ test('ambiguous choices and damaged historical characters are rejected',()=>{
   assert.throws(()=>decodeChoiceResponse(queries,'{"q1":"\\ud800","q2":"U"}'));
 });
 
-test('trial page has local assets, no persistent storage or outgoing submission',()=>{
+test('trial page has local assets, no persistent storage or automatic upload',()=>{
   const page=readFileSync(new URL('../web/dist/choices.html',import.meta.url),'utf8');
   const app=readFileSync(new URL('../web/dist/choices.mjs',import.meta.url),'utf8');
   assert.match(page,/connect-src 'self'/);
   assert.doesNotMatch(page,/(?:src|href)="https?:/);
   assert.doesNotMatch(app,/localStorage|sessionStorage|indexedDB|innerHTML|sendBeacon|https?:\/\//);
-  assert.match(app,/independent_fidelity_verified:false/);
-  assert.match(app,/model_calls_by_app:0/);
+  const feedback=readFileSync(new URL('../web/dist/choice-feedback.mjs',import.meta.url),'utf8');
+  assert.match(feedback,/independent_fidelity_verified:false/);
+  assert.match(feedback,/model_calls_by_app:0/);
+  assert.doesNotMatch(feedback,/localStorage|sessionStorage|indexedDB|sendBeacon|fetch\(/);
+  assert.match(app,/publicTrialIssueUrl\(reviewedSummary\(\)\)/);
   const demo=JSON.parse(readFileSync(new URL('../web/dist/choice-demo.json',import.meta.url),'utf8'));
   assert.equal(demo.synthetic,true);
   makeChoiceRequest(contract,demo.material,demo.queries);

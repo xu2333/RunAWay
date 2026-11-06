@@ -55,6 +55,12 @@ the prompt directly into another LLM, or paste it into `/choices.html` in the
 [browser app](../WEB.md) to try a concrete choice and keep feedback locally.
 Other models and providers have not been fidelity-validated by this wrapper.
 
+On the choice page, you can record your own choice before bringing back a
+prediction. It stays out of the model request. A later edit is marked as
+post-prediction within that page session. Download the complete private trial,
+or review a separate text-free summary before choosing to share it. The summary
+is voluntary self-report and carries no verified personal-fidelity claim.
+
 ## Other LLMs: prepare, then import
 
 Both commands below are offline. Choose your own service for the middle step:

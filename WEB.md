@@ -4,6 +4,45 @@ The choice-trial page offers an explicit experimental “先核对适用条件�
 
 **[分身试镜](web/dist/choices.html)** is available at `/choices.html` on the same static server. Paste a complete portable prompt, write one scenario and 2–8 choices, copy the request into a fresh LLM conversation, then import the exact action text or `U`. The reader request is generated from the Python contract, with no model call or API key in the browser. Missing, duplicate-key or near-match answers fail explicitly. Optionally download a private record containing the memory, question, request, answer and self-reported rating/correction. It is not uploaded; the app records neither a verified model identity nor independently verified fidelity. Editing the inputs clears the active trial. The synthetic demo and manual import are demonstrations, not new model runs. [Batch measurements and limits](benchmarks/support-extraction-v1/READOUT-FORMATS.md).
 
+### Record a choice before checking the prediction
+
+The optional “你本人会选哪项” field stays local and never enters the model
+request. Its value is frozen beside that request. The result reports whether
+the prediction matches this declared choice, rather than treating a subjective
+rating as a reference answer. `U` is retained as an unknown response; a mismatch
+with a declared choice does not establish whether the source supported a choice.
+
+The page remembers whether prediction text has already been pasted or imported
+in the current session. A reference added or changed afterward is marked
+`after_prediction_in_session`; clearing the answer or preparing another request
+does not remove that marker. Editing the memory, scenario or options clears the
+selected reference. A previously recorded reference survives a reader-mode
+change with its original timing. Private choice downloads use schema version 2
+and retain the reference, timing, raw prediction and correction.
+
+This is local bookkeeping, not proof of blinding or truth: the page cannot know
+what the user saw elsewhere. Clearing or reloading starts a new local session,
+not an independent participant. Older version-1 records do not gain a pre-recorded
+reference retroactively. All feedback remains voluntary, unverified self-report.
+Recording a correction does not edit the original prompt or train a model.
+
+### Optionally share a text-free choice summary
+
+After a result, preview the summary, inspect its fields and explicitly confirm
+before downloading it or opening a GitHub Issue draft. It contains only reader
+mode, demo/unverified origin, reference presence and timing, a declared-match
+flag, the unknown flag, a rating and whether a correction was provided.
+Prompt, question, options, reference text, model response, correction text,
+timestamps and profile identifiers are omitted. The issue builder rejects extra
+fields or claims of verified identity/fidelity. Ratings or correction changes
+clear the preview and its confirmation; editing inputs also clears the trial.
+
+Opening the draft is a user action and does not submit an issue. The user must
+inspect and submit it manually on GitHub. Nothing is uploaded automatically.
+The private download still contains the full material and needs separate review
+before sharing. Counts of downloads or reports are not unique users or measured
+personal-fidelity cases.
+
 The optional **[temporal memory entry](web/dist/timeline.html)** is available at `/timeline.html` after starting the same static server below. It retains event changes and retractions before program rendering, rather than asking a model to shorten a free-form profile. Prepare a request for your own LLM, paste its JSON back, inspect the conditions and download the prompt or portable Harness file. Private event archives can be reopened locally. Source edits invalidate old outputs; over-budget memories are withheld, not truncated. Browser length checks are characters, never token estimates. The two supplied examples are explicitly labelled synthetic actual D-0021 outputs; [the diagnostic covers only one consumed development pair](TEMPORAL-RESULTS.md).
 
 RunAWay's browser entry is a static app with no dependencies or build step:
