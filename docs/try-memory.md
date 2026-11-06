@@ -62,6 +62,9 @@ or review a separate text-free summary before choosing to share it. The summary
 is voluntary self-report and carries no verified personal-fidelity claim.
 Use the [offline feedback collector](feedback-intake.md) to validate selected
 downloads and locate disagreements, unknowns or conflicting versions locally.
+For a direct source/card/no-memory comparison on questions you select, use the
+[offline memory check](check-memory.md). It keeps missing answers and source
+control failures visible rather than counting them as successful compression.
 
 ## Other LLMs: prepare, then import
 
