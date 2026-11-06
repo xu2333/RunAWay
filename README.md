@@ -20,14 +20,14 @@ Open **http://127.0.0.1:8080**. Visit **/choices.html** to try your prompt on a 
 
 ## Make it yours
 
-Prefer the terminal? Python 3.9+, a logged-in Codex CLI and a model available to your account:
+Prefer the terminal? Try the experimental single-pass encoder with Python 3.9+, a logged-in Codex CLI and an available model:
 
 ```sh
-python3 -m runaway distill --input experience.txt --backend codex \
-  --model YOUR_MODEL --budget-chars 768 --out my-taste
+python3 -B scripts/try_memory.py generate --input experience.txt --backend codex \
+  --model YOUR_MODEL --out my-taste
 ```
 
-Copy the short card into a chat, or attach it to Codex, Claude Code, OpenCode and other harnesses. [One-call cards, no-account example & choice replay](docs/automatic-support.md). Use `build` for the longer editable-profile workflow.
+Inspect `my-taste/candidate/prompt.md`, then copy it into a chat or attach it to Codex, Claude Code, OpenCode and other harnesses. [One-call trial, offline example & manual import](docs/try-memory.md). Use `build` for the longer editable-profile workflow.
 
 Experimental: [finite constraints](docs/source-constraints.md) · [condition-aware memory preparation/import](docs/experimental-memory.md).
 

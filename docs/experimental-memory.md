@@ -1,5 +1,10 @@
 # Experimental condition-aware memory
 
+For a shorter current-source path, use the [single-call trial](try-memory.md):
+`python3 -B scripts/try_memory.py generate --input experience.txt --backend codex --model YOUR_MODEL --out my-memory`.
+It also offers a zero-call demo and offline prepare/import, without the historical
+snapshot wrapper. The older explicit-method bridge below remains unchanged.
+
 A repository-only, offline bridge to the frozen source-order / source-coverage
 methods. Prepare a request, use a model you choose, import its JSON, then carry
 the resulting prompt into the existing harness adapters. Explicit method choice

@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [condition-memory trial](docs/try-memory.md) now exposes the measured
+single-pass encoder through one explicit Codex call, or offline prepare/import
+and a zero-call archived demo. Its requests and compiled prompts round-trip all
+eight repeat cards exactly. Twelve wiring/failure checks use simulated CLI
+events and archived outputs; this milestone adds **zero real model calls** or
+new personal-fidelity measurements. Existing experiment records and installed
+defaults stay intact. Compiler fingerprints exclude the unrelated legacy
+executor; output and failure records remain private until inspected.
+
 The [single-pass generation repeat](benchmarks/single-pass-repeat-v1/README.md)
 completes 45 actual attempts and 538,110 reported tokens, with no invalid cards,
 skips or missing usage. Two new generations per each of four consumed synthetic
