@@ -15,7 +15,7 @@ Run **all** Python tests with:
 python3 scripts/frozen_history.py tests
 ```
 
-The runner assigns every `test*.py` module exactly once. The 53 modules listed in
+The runner assigns every `test*.py` module exactly once. The 55 modules listed in
 `manifest.json` exercise version-bound historical protocols, evidence, or their
 experimental memory bridges. They run in a separate interpreter and temporary
 source tree containing the verified original executor. Every other module,

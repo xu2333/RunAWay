@@ -151,3 +151,24 @@ performance. An enum lists valid IDs; it cannot certify a valid interpretation.
 All new imports remain `candidate_unvalidated`; demo scores are not inherited
 by another user's card. Share only the inspected prompt/portable files, not
 the source, draft or request files named `.private.*`.
+
+## Fresh-source examples
+
+The [four-person fresh-source experiment](../benchmarks/fresh-enum-pipeline-v1/README.md)
+now has an offline example for each initial/reviewed card. To replay the measured
+440-character“小团分格记”card without sending any source to a service:
+
+```sh
+python3 scripts/frozen_history.py run scripts/demo_fresh_memory.py --person pavo --out fresh-demo
+python3 -m runaway export fresh-demo/candidate/portable.json
+```
+
+Other fictional examples are`rill`,`tavi`and`wren`;add`--stage reviewed`for the
+corresponding reviewed card. The default is the initial card. Both initial and
+reviewed cards retain64/64fixed cases in this sample,while own-character raw
+tails retain48/64;all four sources are synthetic and each has one initial
+model generation. Review increases length/cost without a measured accuracy
+improvement here,so it remains an explicit optional step. These examples do not
+establish real-person fidelity or stability. Every exported candidate retains
+unverified flags;share only the inspected prompt/portable files,not source,
+request or graph files named`.private.*`.

@@ -158,6 +158,12 @@ class Probe(unittest.TestCase):
             self.assertEqual(history.replay('scripts/review_memory.py', ['demo', '--out', 'review-output']), 0)
         payload = child.call_args.args[2]
         self.assertEqual(payload['args'], ['demo', '--out', str(Path('review-output').resolve())])
+        with patch.object(history, 'child', return_value=0) as child:
+            self.assertEqual(history.replay('scripts/export_fresh_enum_pipeline.py',
+                ['--observations', 'observed-run', '--out=portable.json']), 0)
+        self.assertEqual(child.call_args.args[2]['args'],
+            ['--observations', str(Path('observed-run').resolve()),
+             '--out=' + str(Path('portable.json').resolve())])
 
 
 if __name__ == '__main__':
