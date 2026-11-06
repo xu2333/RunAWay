@@ -1,0 +1,14 @@
+{
+  "files": {
+    "author-evidence.private.json": "610c89b896a496bd485420c7c2e461ab8a42826953a1f2a18b625465716a5554",
+    "dynamic-rules.json": "2c4ea9584683fbf632216b549926058eb79cc5c012c317cc3eb9a936d3ed0fcf",
+    "implementation-sha256.json": "fe78b44e0f101d86037401a6e8a72268c9df584db3e5a8b59283f73d873859bf",
+    "proposal.json": "d825fa1e4f148b2081418cf65e5a9114db25116c6f5f63bd3282b40ec706ed69",
+    "queries.public.json": "89b85fe9429a1154560b29e6188d55891b55848c1fb61181b4042963ed2b2a5c",
+    "reference.private.json": "24b51113811f9daa101fca9dff0fce94e58f2a0ed9db16c57a73ea8d373baff6",
+    "slots.json": "792ad8ec1a9acd4a81e53c980f87c46c38f60e599dc52b366da7f590a33680ec",
+    "sources.json": "a94eaa10e8d700bf9a8e9a0d0f240f36506371116a2d1080c57a3682a5efa287",
+    "static-requests.json": "cd24c1ec9c4a17619f18e920a5edbbe8a6a5f39af295fc52e1c31dcbaeb88914"
+  },
+  "new_model_calls": 0
+}
