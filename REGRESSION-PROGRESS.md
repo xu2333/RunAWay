@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [source-accounted encoder candidate](benchmarks/source-accounted-encoding-v1/README.md)
+targets the old f7s240/c2v312 omissions: five explicit choices and two
+source-entailed choices were lost across those two cards. The new request requires
+per-user-message dispositions, separate observed/derived nodes and direct-action
+quotation witnesses; the existing compiler/reader and whole1536budget remain.
+Fourteen offline checks preserve real guards and expose the remaining semantic
+classification loophole. A frozen27-attempt two-method comparison is prepared,
+not measured or authorized. No old card/reference/score is repaired, no source-
+accounting incidence becomes a fidelity score, and no installed default changes.
+
 The [person-specificity audit](docs/memory-specificity.md) reuses sealed card
 responses under verified identical question contracts, with zero new calls.
 Other-person responses still score112/144 on the partial primary pair/cases:
