@@ -25,6 +25,7 @@ def load(name, path):
 
 producer = load('trial_coverage_encoder', ROOT / 'benchmarks/object-coverage-guidance-v1/candidate.py')
 capture = load('trial_safe_completion', ROOT / 'scripts/capture_codex_failure.py')
+source_input = load('trial_source_input', ROOT / 'scripts/source_input.py')
 PROTOCOL = 'condition-memory-trial-v1'
 COMPILER_FILES = (
     'benchmarks/object-coverage-guidance-v1/candidate.py',
@@ -64,12 +65,9 @@ def read_json(path, limit=256000):
         raise ValueError('JSON nesting exceeds supported depth') from None
 
 
-def sources_file(path):
-    if Path(path).suffix.lower() == '.json':
-        return validate_sources(read_json(path, 64000))
-    return validate_sources({'schema_version': 1, 'sources': [
-        {'id': 'narrative', 'episode_id': 'provided_narrative', 'role': 'user',
-         'text': read_text(path, 64000)}]})
+def sources_file(path, input_format='auto'):
+    return source_input.normalize(read_text(path, 64000), input_format,
+                                  json_filename=Path(path).suffix.lower() == '.json')
 
 
 def compiler_hashes():
@@ -95,6 +93,7 @@ def write_new(path, value):
 
 
 def prepare(sources, budget, out):
+    sources = source_input.selected_sources(sources)
     req = request(sources, budget)
     markdown = manual_request(req)
     manifest = {'protocol': PROTOCOL, 'budget_characters': budget,
@@ -110,6 +109,7 @@ def prepare(sources, budget, out):
     directory = save_private_bundle(out, files)
     return {'status': 'request_prepared', 'directory': directory,
             'backend_calls_attempted': 0, 'contains_selected_source': True,
+            'source_role_counts': source_input.role_counts(sources), 'speaker_labels_verified': False,
             'request_file': 'request.private.json', 'manual_request_file': 'request.private.md'}
 
 
@@ -118,7 +118,7 @@ def prepared(directory):
     names = ('sources.private.json', 'request.private.json', 'request.private.md', 'manifest.private.json')
     if directory.is_symlink() or any((directory / n).is_symlink() for n in names):
         raise ValueError('Prepared symlinks refused')
-    sources = validate_sources(read_json(directory / names[0], 256000))
+    sources = source_input.selected_sources(read_json(directory / names[0], 256000))
     req, manifest = read_json(directory / names[1]), read_json(directory / names[3])
     keys = {'protocol', 'budget_characters', 'source_sha256', 'request_sha256',
             'manual_request_sha256', 'compiler_sha256', 'experimental'}
@@ -239,6 +239,7 @@ def main(argv=None):
     for name in ('prepare', 'generate'):
         action = actions.add_parser(name)
         action.add_argument('--input', type=Path, required=True)
+        action.add_argument('--input-format', choices=source_input.FORMATS, default='auto')
         action.add_argument('--budget-chars', type=int, default=1536)
         action.add_argument('--out', type=Path, required=True)
         if name == 'generate':
@@ -253,15 +254,19 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.command == 'generate':
-            result = generate(sources_file(args.input), args.budget_chars, args.model, args.out)
+            result = generate(sources_file(args.input, args.input_format), args.budget_chars, args.model, args.out)
         elif args.command == 'prepare':
-            result = prepare(sources_file(args.input), args.budget_chars, args.out)
+            result = prepare(sources_file(args.input, args.input_format), args.budget_chars, args.out)
         elif args.command == 'import':
             result = import_answer(args.prepared, read_json(args.answer), args.out)
         else:
             result = demo(args.out)
     except TrialFailure as exc:
         print(json.dumps(exc.summary, ensure_ascii=False, indent=2), file=sys.stderr)
+        return 2
+    except source_input.SourceInputError as exc:
+        print(json.dumps({'status': 'input_rejected', 'error_code': exc.code,
+                          'message': str(exc), 'backend_calls_attempted': 0}), file=sys.stderr)
         return 2
     except (ValueError, TypeError, KeyError, OSError, StopIteration) as exc:
         print(json.dumps({'status': 'input_rejected', 'error_type': type(exc).__name__,
