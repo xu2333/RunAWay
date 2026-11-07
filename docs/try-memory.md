@@ -87,7 +87,43 @@ preparation; imported results remain `candidate_unvalidated`.
 
 ## Input and failure behavior
 
-Plain text is your self-report. For mixed-speaker conversations, preserve roles:
+Unlabelled plain text is treated as your self-report. The default `auto` format
+rejects obvious role-labelled text instead of attributing the entire conversation
+to you. For an explicitly selected, annotated conversation, use `role-text`:
+
+```text
+用户：需求未验证时，我愿意先上线小版本，再决定是否扩展。
+助手：助手候选仅是上下文，不是用户背书。
+工具：执行结果也不代表用户偏好。
+上下文：这段讨论发生在项目启动时。
+```
+
+```sh
+python3 -B scripts/try_memory.py prepare --input episode.txt \
+  --input-format role-text --out my-request
+```
+
+Inspect `sources.private.json` and `request.private.md` before sending the request
+to your chosen service. Preparation reports role counts and
+`speaker_labels_verified: false`. Labels are annotations you supply; they do not
+authenticate the author. `user` / `我` / `用户`, `assistant` / `助手`, `tool` /
+`工具`, and `context` / `上下文` are supported, with English case ignored.
+`system`, `developer` and `系统` become context, never request instructions.
+
+Labels start at column zero followed by `:` or `：`. Message text preserves its
+Unicode, line endings and whitespace after removing the label and at most one
+following space or tab. A single initial file BOM is removed in role-text / JSON
+parsing. Empty messages, unlabelled preambles and unclosed Markdown fences fail
+the whole input. Inside a fenced code block, apparent role labels remain part
+of that message. For quoted labels outside fences, indent them or use explicit
+source JSON; an unfenced column-zero label cannot be distinguished from a new
+speaker. Sources beginning with recognized runtime/control tags are rejected as
+user evidence; review them and annotate context when appropriate. This guard
+does not detect every automation message or authenticate selected text.
+
+This annotated-text format is not a parser for native Codex, Claude Code,
+OpenCode or other harness logs. Select and review a complete episode, then
+provide these annotations or RunAWay source JSON with explicit IDs and roles:
 
 ```json
 {"schema_version":1,"sources":[
@@ -97,6 +133,12 @@ Plain text is your self-report. For mixed-speaker conversations, preserve roles:
    "text":"助手候选仅是上下文，不是用户背书。"}
 ]}
 ```
+
+`--input-format sources-json` selects that schema explicitly. In `auto`, a `.json`
+filename or JSON-looking input must conform to it; unknown chat-export schemas
+are rejected. `--input-format narrative` explicitly treats your own prose as a
+single user source, including any quoted role labels. It does not verify origin.
+The same format flag is available on `generate`; it does not add a model call.
 
 Source files and the canonical selected source must fit 64 KB; packets and
 answers must fit 256 KB. Oversize inputs fail explicitly. The default whole-card

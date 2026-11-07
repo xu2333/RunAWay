@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [selected-source entry](docs/try-memory.md#input-and-failure-behavior) now
+requires an explicit role-text choice for labelled conversations rather than
+silently treating assistant/tool output as user testimony. Source JSON remains
+strict; code-fenced role lines retain their enclosing speaker, sources starting
+with recognized runtime tags are rejected as user evidence, and preparation exposes unverified role
+counts. Thirteen new attribution/dispatch checks and the twelve existing trial
+checks use only local fixtures and archived responses. This is an input handling
+fix with zero new model calls or personal-fidelity measurements; sealed experiment
+requests and observed results are unchanged.
+
 The [fixed-card partial-information measurement](benchmarks/partial-information-v1/RESULTS.md)
 closes 37 actual attempts / 636,715 reported tokens with zero new extractions or
 missing usage. On 48 primary cases, cards retain 48/48 (16/16 unique supported
