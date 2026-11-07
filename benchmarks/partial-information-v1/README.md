@@ -1,6 +1,10 @@
 # Partial information: when to answer and when to stop
 
-**Unapproved protocol; no new model results.** This is a fixed-card mechanism
+The [separately authorized, closed results](RESULTS.md) retain 48/48 primary
+cases with cards and 36/48 with tails. The preparation below keeps its original
+unapproved metadata and grants no calls.
+
+This is a fixed-card mechanism
 diagnostic after the [fresh everyday-decision result](../fresh-decision-v1/RESULTS.md).
 It keeps all eight existing cards verbatim and changes only the questions.
 No extraction, repair, prompt change or new default is proposed.
