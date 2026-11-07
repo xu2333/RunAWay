@@ -1,14 +1,14 @@
 # Compression regression progress
 
-The [partial-information proposal](benchmarks/partial-information-v1/README.md)
-now freezes a read-only diagnostic on all eight existing cards: 48 primary
-partial-information person/cases (16 supported common choices, 32 conflicting
-branches that require U) and 16 separately counted complete anchors. Gold joins
-only previously licensed complete cases; no unknown branch is filled in. All
-37 proposed requests are static, with zero new extractions or model calls.
-Twelve offline checks distinguish always-U from justified abstention, retain
-missing denominators and block anchor-only control gains. It remains unapproved,
-post-hoc consumed-source testing, not independent gold or real-user validation.
+The [fixed-card partial-information measurement](benchmarks/partial-information-v1/RESULTS.md)
+closes 37 actual attempts / 636,715 reported tokens with zero new extractions or
+missing usage. On 48 primary cases, cards retain 48/48 (16/16 unique supported
+choices, 32/32 conflicting-branch unknowns), tails 36/48 (4/16 and 32/32).
+Sixteen complete anchors stay separate: cards 16/16, tails 4/16. The 12 primary
+tail losses are U throughout all eight answers. Three additional tail anchor
+differences involve different parent-length suffixes; no within-parent repeat
+difference is observed. These are old cards/consumed fictional sources, not new
+generation stability, independent semantic gold, real-user evidence or a default.
 
 The [fresh everyday-decision measurement](benchmarks/fresh-decision-v1/RESULTS.md)
 closes 45 actual attempts / 602,140 reported tokens with no invalid products,skips or
