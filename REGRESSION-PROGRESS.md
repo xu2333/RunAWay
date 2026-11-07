@@ -1,5 +1,24 @@
 # Compression regression progress
 
+The [source-only alias comparison](benchmarks/scope-alias-comparison-v1/RESULTS.md)
+closes27actual attempts /511,908reported tokens,with8valid cards and no missing,
+invalid,skipped or expired observations. Original48/64→alias64/64:16old-name
+choices recover,48other cases stay correct,and no new loss appears in either
+independent generation. All40known and24unknown cases survive eight answers each.
+Every new card actually emits four source-bound aliases from m37–m40;the public
+scopes retain the two people's different name mappings. This is consumed fiction,
+not a holdout,human-fidelity result or single-component causal ablation.
+
+Users can now add `--encoder scope-alias` to `scripts/try_memory.py prepare` or
+explicit one-call `generate`;`import` recognizes the pinned packet.
+Default coverage and legacy packets keep their protocol.19new offline checks
+protect portable evidence,source-only routing,encoder/compiler pinning,one-child
+failure behavior,private storage,actual-card roundtrips and five harness dry-runs.
+The existing12trial and13source-input checks also pass. Cards stay personally
+unvalidated. Alias extraction costs86,278versus81,458reported tokens;card means
+780versus764characters. No cost-saving,768-budget or default-promotion claim.
+18prior observation seals stay intact;this27scope is closed.
+
 The [measured scope-binding stress](benchmarks/scope-binding-stress-v1/RESULTS.md)
 closes47actual attempts /848,966reported tokens,with2invalid graphs and4expired
 readers. At1536 both unchanged methods retain48/64;all16old-name cases fail the
@@ -15,8 +34,9 @@ objects. A developer-annotated fixed-card diagnostic grows768→793characters wi
 all non-object row fields unchanged;it has zero reader calls and proves no
 automatic recovery.27new offline checks protect evidence,per-generation losses,
 alias conservation and a [new frozen27 proposal](benchmarks/scope-alias-comparison-v1/README.md).
-That proposal is unapproved,uses consumed development sources at1536only,and
-cannot reuse the closed51scope. Defaults and17prior observation seals remain.
+The original proposal metadata remain frozen;its separately approved measurement
+is reported above. It uses consumed development sources at1536only and did not
+reuse the closed51scope. The earlier17observation seals remain.
 
 The [source-accounted comparison](benchmarks/source-accounted-encoding-v1/RESULTS.md)
 closes27actual calls /338,516reported tokens with no invalid cards,missing usage,

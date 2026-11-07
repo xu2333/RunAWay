@@ -1,6 +1,10 @@
 # Source-only alias-repair comparison
 
-**Frozen preparation only; no authorization or model measurement.** This tests
+**The separately approved measurement is closed:**27actual attempts,8valid cards,
+0missing or skipped slots. Original48/64→alias64/64,including16old-name recoveries
+and no new observed loss on the48other cases. See [measured evidence and limits](RESULTS.md).
+The original preparation below remains frozen and grants no service authority.
+It tests
 the [typed alias candidate](../scope-alias-encoding-v1/README.md) against its
 source-accounted parent using the two consumed fictional binding-stress sources.
 It changes the encoder contract and binder, keeping the original source,64public

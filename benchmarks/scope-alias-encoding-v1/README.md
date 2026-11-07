@@ -1,7 +1,11 @@
 # Preserve scope aliases across compression
 
-**Unmeasured repair candidate; installed defaults and the measured encoders are
-unchanged.** The [binding-stress measurement](../scope-binding-stress-v1/RESULTS.md)
+**Measured on two consumed fictional development sources:**the separately
+approved [source-only comparison](../scope-alias-comparison-v1/RESULTS.md) improves
+48/64→64/64,restores16old-name choices and preserves48other cases across both
+generations/reads/orders. No missing or invalid cards. This is an explicit
+experimental CLI option (`--encoder scope-alias`);defaults remain unchanged and
+user cards remain unvalidated. The [binding-stress measurement](../scope-binding-stress-v1/RESULTS.md)
 found a concrete omission in a source-accounted card: its four objects use only
 their current names. Eight old-name cases return U in both reads/orders. The
 original rename messages and private `source_accounting.reason` preserve the
@@ -62,7 +66,7 @@ still pass, and a quotation denying a same-scope relation can satisfy literal
 checks. Neither structural accounting nor name presence proves semantic truth,
 complete alias extraction, automatic generation stability or behavioral fidelity.
 
-New model validation needs its own finite, frozen approval. The binding-stress51
-scope tests the two unchanged methods only; no unused/skipped/closed slot can be
-reassigned to this repair. Old sources, cards, answers, references and scores
+The separate source-only27scope is now closed after all27attempts. It never used
+these developer annotations or the old51scope's unused readers. Further model
+validation needs another finite,frozen approval. Old sources,cards,answers,references and scores
 remain intact. No product default, real-user fidelity or cross-provider claim.

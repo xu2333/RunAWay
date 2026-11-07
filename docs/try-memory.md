@@ -66,6 +66,32 @@ For a direct source/card/no-memory comparison on questions you select, use the
 [offline memory check](check-memory.md). It keeps missing answers and source
 control failures visible rather than counting them as successful compression.
 
+## Keep old and current project names
+
+For a history with explicit project renames, choose the experimental alias encoder:
+
+```sh
+python3 -B scripts/try_memory.py generate --input experience.txt --backend codex \
+  --model YOUR_MODEL --encoder scope-alias --out my-alias-memory
+```
+
+It records source-bound name relations separately from action choices and adds
+the declared aliases to the public objects. This addresses a measured failure
+where the rules survived but readers could no longer identify the project by
+its old name. See the [encoding contract](../benchmarks/scope-alias-encoding-v1/README.md)
+and [source-only comparison](../benchmarks/scope-alias-comparison-v1/RESULTS.md).
+Check the names and their ownership alongside the choices: literal quotations
+do not prove that two names really refer to the same thing or that all relevant
+names were extracted. Your card remains `candidate_unvalidated`.
+Both old and current names become part of the sharing candidates; inspect them
+before sharing.
+
+The same selector works with offline `prepare`; `import` reads the encoder from
+its prepared packet automatically. Alias packets bind both the encoder and its
+compiler fingerprints. Existing packets and the default `coverage` path keep
+their original protocol. Both paths use the same one-child limit, private output
+handling and portable format; the five harness attachment targets above apply.
+
 ## Other LLMs: prepare, then import
 
 Both commands below are offline. Choose your own service for the middle step:
