@@ -6,6 +6,10 @@ invalid graphs;their slots expired. No retries,repairs,replacements or missing
 usage. Both own full controls retained32/32;none retained12/32,all unknowns.
 The17earlier observation seals and the entire scientific source remain intact.
 
+A subsequent,separately approved [source-only alias comparison](../scope-alias-comparison-v1/RESULTS.md)
+now retains64/64 versus48/64,restoring the16old-name cases without observed
+collateral loss. It leaves every observation and score in this report unchanged.
+
 ## Fixed endpoints
 
 Each cell retains64person/cases (40known,24unknown). A case needs both independent

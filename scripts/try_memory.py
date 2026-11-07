@@ -27,6 +27,8 @@ producer = load('trial_coverage_encoder', ROOT / 'benchmarks/object-coverage-gui
 capture = load('trial_safe_completion', ROOT / 'scripts/capture_codex_failure.py')
 source_input = load('trial_source_input', ROOT / 'scripts/source_input.py')
 PROTOCOL = 'condition-memory-trial-v1'
+ALIAS_PROTOCOL = 'condition-memory-scope-alias-trial-v1'
+ENCODERS = ('coverage', 'scope-alias')
 COMPILER_FILES = (
     'benchmarks/object-coverage-guidance-v1/candidate.py',
     'benchmarks/source-order-v3/candidate.py',
@@ -70,13 +72,26 @@ def sources_file(path, input_format='auto'):
                                   json_filename=Path(path).suffix.lower() == '.json')
 
 
-def compiler_hashes():
-    return {name: sha(ROOT / name) for name in COMPILER_FILES}
+def selected_producer(encoder_id):
+    if encoder_id == 'coverage':
+        return producer
+    if encoder_id == 'scope-alias':
+        return load('trial_scope_alias_encoder', ROOT / 'benchmarks/scope-alias-encoding-v1/candidate.py')
+    raise ValueError('Unsupported encoder')
 
 
-def request(sources, budget=1536):
-    return {'system': producer.base.b.grouped.SYSTEM,
-            **producer.make_request(sources, budget)}
+def compiler_hashes(encoder_id='coverage'):
+    if encoder_id not in ENCODERS:
+        raise ValueError('Unsupported encoder')
+    extra = ('benchmarks/source-accounted-encoding-v1/candidate.py',
+             'benchmarks/scope-alias-encoding-v1/candidate.py') if encoder_id == 'scope-alias' else ()
+    return {name: sha(ROOT / name) for name in COMPILER_FILES + extra}
+
+
+def request(sources, budget=1536, encoder_id='coverage'):
+    selected = selected_producer(encoder_id)
+    return {'system': selected.base.b.grouped.SYSTEM,
+            **selected.make_request(sources, budget)}
 
 
 def manual_request(req):
@@ -92,14 +107,16 @@ def write_new(path, value):
         file.write(text)
 
 
-def prepare(sources, budget, out):
+def prepare(sources, budget, out, encoder_id='coverage'):
     sources = source_input.selected_sources(sources)
-    req = request(sources, budget)
+    req = request(sources, budget, encoder_id)
     markdown = manual_request(req)
-    manifest = {'protocol': PROTOCOL, 'budget_characters': budget,
+    manifest = {'protocol': PROTOCOL if encoder_id == 'coverage' else ALIAS_PROTOCOL, 'budget_characters': budget,
                 'source_sha256': digest(sources), 'request_sha256': digest(req),
                 'manual_request_sha256': hashlib.sha256(markdown.encode()).hexdigest(),
-                'compiler_sha256': compiler_hashes(), 'experimental': True}
+                'compiler_sha256': compiler_hashes(encoder_id), 'experimental': True}
+    if encoder_id != 'coverage':
+        manifest['encoder_id'] = encoder_id
     files = {'sources.private.json': sources, 'request.private.json': req,
              'request.private.md': markdown, 'manifest.private.json': manifest}
     for value in files.values():
@@ -120,13 +137,19 @@ def prepared(directory):
         raise ValueError('Prepared symlinks refused')
     sources = source_input.selected_sources(read_json(directory / names[0], 256000))
     req, manifest = read_json(directory / names[1]), read_json(directory / names[3])
+    if type(manifest) is not dict:
+        raise ValueError('Unsupported prepared packet')
     keys = {'protocol', 'budget_characters', 'source_sha256', 'request_sha256',
             'manual_request_sha256', 'compiler_sha256', 'experimental'}
-    if set(manifest) != keys or manifest['protocol'] != PROTOCOL or manifest['experimental'] is not True:
+    encoder_id = manifest.get('encoder_id', 'coverage')
+    if encoder_id == 'scope-alias':
+        keys.add('encoder_id')
+    expected_protocol = PROTOCOL if encoder_id == 'coverage' else ALIAS_PROTOCOL
+    if encoder_id not in ENCODERS or set(manifest) != keys or manifest['protocol'] != expected_protocol or manifest['experimental'] is not True:
         raise ValueError('Unsupported prepared packet')
-    if manifest['compiler_sha256'] != compiler_hashes() or digest(sources) != manifest['source_sha256']:
+    if manifest['compiler_sha256'] != compiler_hashes(encoder_id) or digest(sources) != manifest['source_sha256']:
         raise ValueError('Source or compiler changed')
-    if req != request(sources, manifest['budget_characters']) or digest(req) != manifest['request_sha256']:
+    if req != request(sources, manifest['budget_characters'], encoder_id) or digest(req) != manifest['request_sha256']:
         raise ValueError('Prepared request changed')
     text = read_text(directory / names[2])
     if text != manual_request(req) or hashlib.sha256(text.encode()).hexdigest() != manifest['manual_request_sha256']:
@@ -136,12 +159,15 @@ def prepared(directory):
 
 def import_answer(directory, answer, out):
     sources, req, manifest = prepared(directory)
-    files = producer.bind(answer, sources, manifest['budget_characters'])
-    summary = {'status': 'candidate_unvalidated', 'protocol': PROTOCOL,
+    encoder_id = manifest.get('encoder_id', 'coverage')
+    files = selected_producer(encoder_id).bind(answer, sources, manifest['budget_characters'])
+    summary = {'status': 'candidate_unvalidated', 'protocol': manifest['protocol'],
                'characters': len(files['prompt.md']), 'budget_characters': manifest['budget_characters'],
                'source_sha256': digest(sources), 'request_sha256': digest(req),
                'behavioral_fidelity_verified': False, 'semantic_support_verified': False,
                'backend_calls_attempted': 0, 'shareable_files': ['prompt.md', 'portable.json']}
+    if encoder_id != 'coverage':
+        summary['encoder_id'] = encoder_id
     files['import.private.json'] = summary
     return {**summary, 'directory': save_private_bundle(out, files)}
 
@@ -152,10 +178,10 @@ class TrialFailure(ValueError):
         self.summary = summary
 
 
-def generate(sources, budget, model, out):
+def generate(sources, budget, model, out, encoder_id='coverage'):
     if not isinstance(model, str) or not model.strip():
         raise ValueError('An explicit available model is required')
-    prepare(sources, budget, out)
+    prepare(sources, budget, out, encoder_id)
     out = Path(out)
     _, req, _ = prepared(out)
     if generation.shutil.which('codex') is None:
@@ -241,6 +267,7 @@ def main(argv=None):
         action.add_argument('--input', type=Path, required=True)
         action.add_argument('--input-format', choices=source_input.FORMATS, default='auto')
         action.add_argument('--budget-chars', type=int, default=1536)
+        action.add_argument('--encoder', choices=ENCODERS, default='coverage')
         action.add_argument('--out', type=Path, required=True)
         if name == 'generate':
             action.add_argument('--backend', choices=['codex'], required=True)
@@ -254,9 +281,11 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.command == 'generate':
-            result = generate(sources_file(args.input, args.input_format), args.budget_chars, args.model, args.out)
+            extra = {'encoder_id': args.encoder} if args.encoder != 'coverage' else {}
+            result = generate(sources_file(args.input, args.input_format), args.budget_chars, args.model, args.out, **extra)
         elif args.command == 'prepare':
-            result = prepare(sources_file(args.input, args.input_format), args.budget_chars, args.out)
+            extra = {'encoder_id': args.encoder} if args.encoder != 'coverage' else {}
+            result = prepare(sources_file(args.input, args.input_format), args.budget_chars, args.out, **extra)
         elif args.command == 'import':
             result = import_answer(args.prepared, read_json(args.answer), args.out)
         else:
