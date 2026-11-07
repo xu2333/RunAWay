@@ -1,14 +1,13 @@
 # Compression regression progress
 
-The [prospective everyday-decision check](benchmarks/fresh-decision-v1/README.md)
-freezes four new fictional people,64messages and64person/cases(48known,16unknown),
-with the existing encoder/compiler/reader and45-attempt repeat schedule.
-It adds ordinary,exception,compositional-override and unrecorded-target slices;
-opposite pairs share questions while disagreeing on known choices. Eleven
-damage/accounting tests use oracle mocks only. **No new model result exists.**
-The sources are procedurally authored with knowledge of old failures,not an
-independently authored holdout or real-user validation. A new finite grant and
-successful exact-head CI are required;previous scopes remain closed.
+The [fresh everyday-decision measurement](benchmarks/fresh-decision-v1/RESULTS.md)
+closes 45 actual attempts / 602,140 reported tokens with no invalid products,skips or
+missing usage. Eight 657–750 character cards retain 64/64 across 2 generations × 2 reads
+× 2 orders, including 48/48 known and 16/16 unknown; equal-character own-source tails
+retain 28/64 (12/48 known, 16/16 unknown). All 36 tail losses are known-to-U: 34 throughout,
+2 only in the shorter second-generation suffixes. These are changed inputs,not
+identical-reader instability. Four new procedural fictional people / two opposite
+pairs add coverage, not independent gold, real-user validation or a new default.
 
 The [choice-feedback route](WEB.md#record-a-choice-before-checking-the-prediction)
 now records an optional declared choice outside the model request and preserves
