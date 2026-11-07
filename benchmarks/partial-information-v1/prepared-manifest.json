@@ -1,0 +1,14 @@
+{
+  "files": {
+    "implementation-sha256.json": "3a022842d0c56b23d63755c121d3baa810231867297616dfc7270729d86a412c",
+    "parents.public.json": "8711aa591ef053e3b8019174ec1125bf64d56b9c18fca9e5bb81032b30874feb",
+    "proposal.json": "96a2b6656d338578af704415580ed36f0118b53745626fecd63f6bb3ff3e81b7",
+    "queries.public.json": "8318b675f1407e85204c55c772d75726287c761bbf50b8d3d7b85c176755f69a",
+    "reference-derivation.private.json": "6d7cd046a55e2bcc77120db93d5dca05171b7d0bf04c339c67d8754390304581",
+    "reference.private.json": "e38b998d739ee4d38a033c57df678e47c28dcd189f47618e499b115ab33b64ca",
+    "slots.json": "c5f92e82b73ceabe7c2998c9c4be3ee79193aa44c3e8a59d835314ed51543d96",
+    "sources.json": "66dba56a8821e498934ce531497fe02dd0b5306c672aa54f3f523eb458c941db",
+    "static-requests.json": "13df74017866ccd6883a52ce199248a01209e8fa9ad88e408d3c52624f59902d"
+  },
+  "new_model_calls": 0
+}
