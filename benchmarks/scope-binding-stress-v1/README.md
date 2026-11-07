@@ -1,6 +1,10 @@
 # Interleaved scope binding and late-revision stress
 
-**Prepared and checked offline; no model measurement or service authority.**
+**The separately approved measurement is closed:**47actual attempts,14valid cards,
+two invalid graphs and4skipped/expired readers. Both methods retain48/64 at1536;
+old/current scope-name bindings are lost. At768 each retains24/64 with32missing.
+See [exact losses,per-generation new losses and targeted repair](RESULTS.md).
+The original preparation below remains frozen and grants no service authority.
 The [preceding comparison](../source-accounted-encoding-v1/RESULTS.md) retained
 30/30 in both methods. Its seven old losses did not recur, so it did not establish
 an extra accuracy benefit. This protocol keeps both encoders unchanged and
@@ -78,7 +82,7 @@ failures. They do not show that either actual model will fail, validate a semant
 classifier, or supply a new measured compression score. Passing either budget
 still cannot establish population fidelity or resolve old missing evidence.
 
-## Prospective finite51 scope, not authorized here
+## Original prospective finite51 scope, not authorized by this file
 
 | Stage | Maximum new local inference attempts |
 | --- | ---: |
