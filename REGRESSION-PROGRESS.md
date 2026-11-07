@@ -1,13 +1,22 @@
 # Compression regression progress
 
-The [scope-binding stress protocol](benchmarks/scope-binding-stress-v1/README.md)
-adds two new fictional48-message sources with four interleaved projects,late local
-revisions,source-defined action nicknames and changed project labels. It freezes
-64person/cases (40known,24unknown) separately for each unchanged encoder at768/
-1536characters. Six damaged author calculators expose alias,revision,scope and
-fact errors; these are not model measurements. Twelve offline checks pass. A new
-51-attempt scope is prepared,not authorized or executed; old full-score results
-do not validate these new scenes or justify a default promotion.
+The [measured scope-binding stress](benchmarks/scope-binding-stress-v1/RESULTS.md)
+closes47actual attempts /848,966reported tokens,with2invalid graphs and4expired
+readers. At1536 both unchanged methods retain48/64;all16old-name cases fail the
+joint endpoint. Equal scores hide8recoveries and8new losses in generation0.
+At768 each retains24/64 with32missing for opposite people;one valid card also
+loses all current labels and12additional known choices. Source rename relations
+survive private reasons but disappear from public objects. Chronology-invalid
+graphs remain failures;no guard or original record is weakened or rewritten.
+
+The [typed alias candidate](benchmarks/scope-alias-encoding-v1/README.md) explicitly
+accounts for non-choice scope relations and projects declared aliases into public
+objects. A developer-annotated fixed-card diagnostic grows768→793characters with
+all non-object row fields unchanged;it has zero reader calls and proves no
+automatic recovery.27new offline checks protect evidence,per-generation losses,
+alias conservation and a [new frozen27 proposal](benchmarks/scope-alias-comparison-v1/README.md).
+That proposal is unapproved,uses consumed development sources at1536only,and
+cannot reuse the closed51scope. Defaults and17prior observation seals remain.
 
 The [source-accounted comparison](benchmarks/source-accounted-encoding-v1/RESULTS.md)
 closes27actual calls /338,516reported tokens with no invalid cards,missing usage,
