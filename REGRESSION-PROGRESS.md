@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [scope-binding stress protocol](benchmarks/scope-binding-stress-v1/README.md)
+adds two new fictional48-message sources with four interleaved projects,late local
+revisions,source-defined action nicknames and changed project labels. It freezes
+64person/cases (40known,24unknown) separately for each unchanged encoder at768/
+1536characters. Six damaged author calculators expose alias,revision,scope and
+fact errors; these are not model measurements. Twelve offline checks pass. A new
+51-attempt scope is prepared,not authorized or executed; old full-score results
+do not validate these new scenes or justify a default promotion.
+
 The [source-accounted comparison](benchmarks/source-accounted-encoding-v1/RESULTS.md)
 closes27actual calls /338,516reported tokens with no invalid cards,missing usage,
 skips or expired slots. Current and candidate both retain30/30 (13known,17unknown),
