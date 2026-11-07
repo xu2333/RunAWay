@@ -1,6 +1,11 @@
 # Prospective everyday-decision compression check
 
-**Unapproved; no model results.** Reproduce the frozen preparation offline:
+The original preparation below is preserved. See the separately authorized
+[closed 45-attempt results](RESULTS.md): cards 64/64, tails 28/64 on this finite design.
+
+**Preparation snapshot, not a service grant.** The frozen proposal retains its
+original unapproved metadata; actual observations are in the separate results
+above. Reproduce the preparation offline:
 
 ```sh
 python3 -B benchmarks/fresh-decision-v1/check.py
