@@ -1,6 +1,10 @@
 # Source-accounted encoding: targeted omission repair candidate
 
-**Implemented and tested offline; no new model measurement or service authority.**
+**The separately approved comparison is now closed:** both methods retain30/30,
+including all seven historical-loss targets, with no observed new loss. Candidate
+cards are slightly shorter on average but extraction reports more tokens; there
+is no observed accuracy advantage. See [measured results](RESULTS.md). The
+originally unapproved preparation below remains frozen and grants no authority.
 This changes the encoder request/schema and checks its output, rather than adding
 another accuracy score. The existing graph compiler, public wire, reader and
 1,536-character whole-card cap are unchanged. Installed defaults are unchanged.

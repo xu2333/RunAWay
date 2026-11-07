@@ -1,5 +1,14 @@
 # Compression regression progress
 
+The [source-accounted comparison](benchmarks/source-accounted-encoding-v1/RESULTS.md)
+closes27actual calls /338,516reported tokens with no invalid cards,missing usage,
+skips or expired slots. Current and candidate both retain30/30 (13known,17unknown),
+including all7historically lost choices across both generations/reads/orders.
+Paired transitions are30kept,0candidate-only recoveries,0new losses. This is a tie,
+not proof the new contract caused recovery. Candidate cards average441.25versus
+474.25characters,but extraction uses57,895versus48,668reported tokens. All16prior
+observation seals and original bad cards stay unchanged; defaults do not change.
+
 The [source-accounted encoder candidate](benchmarks/source-accounted-encoding-v1/README.md)
 targets the old f7s240/c2v312 omissions: five explicit choices and two
 source-entailed choices were lost across those two cards. The new request requires
