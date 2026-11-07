@@ -1,5 +1,17 @@
 # Compression regression progress
 
+The [person-specificity audit](docs/memory-specificity.md) reuses sealed card
+responses under verified identical question contracts, with zero new calls.
+Other-person responses still score112/144 on the partial primary pair/cases:
+96shared unknowns and16shared known choices. On differing known choices, own
+cards retain48/48unique fresh cases and16/16unique partial primary cases;
+other-card rescoring retains0/96 and0/32 directed pair/cases respectively.
+These are correlated,post-hoc reuses of four fictional people/eight cards,not new
+wrong-card trials or identity routing. Eight new checks preserve the separate
+known/unknown/contrast denominators and reject incomparable requests. Original
+scores and frozen observations are unchanged; no real-person fidelity or default
+promotion follows.
+
 The [selected-source entry](docs/try-memory.md#input-and-failure-behavior) now
 requires an explicit role-text choice for labelled conversations rather than
 silently treating assistant/tool output as user testimony. Source JSON remains
