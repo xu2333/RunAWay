@@ -172,6 +172,8 @@ jobs:
         run: python -B benchmarks/single-pass-repeat-v1/check.py
       - name: Replay measured single-pass generation repeat (no calls)
         run: python -B scripts/replay_single_pass_repeat.py
+      - name: Verify unapproved fresh everyday-decision protocol (no calls)
+        run: python -B benchmarks/fresh-decision-v1/check.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
