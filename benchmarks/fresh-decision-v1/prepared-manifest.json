@@ -1,0 +1,14 @@
+{
+  "files": {
+    "author-evidence.private.json": "acae691926cb35947369a7b5ac699a514eb7ae2df25b11ef3c6e3e90e97211fb",
+    "dynamic-rules.json": "12ea4ad91a43df1b299cf7f0b7f4ea750452b033ef37df97437e1cc6b0a371ca",
+    "implementation-sha256.json": "6219cc38e29ac8e202e54df70eb606cb003974f46b65bd155a18184d997775e9",
+    "proposal.json": "34ff3f20f980a71bb5c78eb8e0513b51d58ad2bb1b96830595f068bc52a6b960",
+    "queries.public.json": "dc123815981ba57f0451cfbc2e98b1826d95859001fe6ab63ed7e08d51a40dfa",
+    "reference.private.json": "f353ab96eb9e7ca87680c3a7c301b9b638082f21a63c4a76a24429c7ad1869b8",
+    "slots.json": "1d7ea9380f47c55c3802534cf1defc8c5d2e01d507d2bcd5566fe137e7602b65",
+    "sources.json": "66dba56a8821e498934ce531497fe02dd0b5306c672aa54f3f523eb458c941db",
+    "static-requests.json": "625105925330ef3759468ad5b495383eb56d779e66c0bd5907493a12af8d8c7a"
+  },
+  "new_model_calls": 0
+}

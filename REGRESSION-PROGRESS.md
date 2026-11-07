@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [prospective everyday-decision check](benchmarks/fresh-decision-v1/README.md)
+freezes four new fictional people,64messages and64person/cases(48known,16unknown),
+with the existing encoder/compiler/reader and45-attempt repeat schedule.
+It adds ordinary,exception,compositional-override and unrecorded-target slices;
+opposite pairs share questions while disagreeing on known choices. Eleven
+damage/accounting tests use oracle mocks only. **No new model result exists.**
+The sources are procedurally authored with knowledge of old failures,not an
+independently authored holdout or real-user validation. A new finite grant and
+successful exact-head CI are required;previous scopes remain closed.
+
 The [choice-feedback route](WEB.md#record-a-choice-before-checking-the-prediction)
 now records an optional declared choice outside the model request and preserves
 whether it was entered before or after a prediction in that page session.
