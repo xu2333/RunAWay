@@ -192,6 +192,8 @@ jobs:
         run: python -B benchmarks/fresh-alias-generalization-v1/plan.py --out fresh-alias-preparation
       - name: Replay closed fresh-person alias measurement (no calls)
         run: python -B scripts/replay_fresh_alias.py
+      - name: Prepare unapproved source-ID initial extraction comparison (no calls)
+        run: python -B benchmarks/source-id-initial-encoding-v1/plan.py --out source-id-initial-preparation
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
