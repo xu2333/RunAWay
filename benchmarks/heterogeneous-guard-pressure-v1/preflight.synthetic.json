@@ -1,0 +1,114 @@
+{
+  "new_model_calls": 0,
+  "approved": false,
+  "model_results_available": false,
+  "person_cases_per_budget": 164,
+  "known": 72,
+  "unknown": 92,
+  "source_messages": 96,
+  "author_fixture_capacity": [
+    {
+      "person": "rivet",
+      "expanded_characters": 974,
+      "caps": [
+        {
+          "budget": 512,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 768,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 832,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 896,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 960,
+          "fits": true,
+          "characters": 954,
+          "scheme": "dense"
+        },
+        {
+          "budget": 1024,
+          "fits": true,
+          "characters": 974,
+          "scheme": "dense"
+        },
+        {
+          "budget": 1536,
+          "fits": true,
+          "characters": 974,
+          "scheme": "dense"
+        }
+      ],
+      "author_fixture_not_model_output": true,
+      "not_an_information_theoretic_lower_bound": true
+    },
+    {
+      "person": "quince",
+      "expanded_characters": 977,
+      "caps": [
+        {
+          "budget": 512,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 768,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 832,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 896,
+          "fits": false,
+          "error": "Neither complete reversible layout fits whole budget; no truncation"
+        },
+        {
+          "budget": 960,
+          "fits": true,
+          "characters": 957,
+          "scheme": "dense"
+        },
+        {
+          "budget": 1024,
+          "fits": true,
+          "characters": 977,
+          "scheme": "dense"
+        },
+        {
+          "budget": 1536,
+          "fits": true,
+          "characters": 977,
+          "scheme": "dense"
+        }
+      ],
+      "author_fixture_not_model_output": true,
+      "not_an_information_theoretic_lower_bound": true
+    }
+  ],
+  "public_projection_damage_case_counts": {
+    "stale_threshold": 12,
+    "old_guard": 4,
+    "reinstate_guard": 8,
+    "drop_gate": 12,
+    "drop_guard": 44
+  },
+  "damage_is_constructed_not_observed_model_loss": true,
+  "independent_semantic_gold": false,
+  "arbitrary_model_prose_evaluator": false,
+  "production_defaults_changed": false
+}
