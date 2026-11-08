@@ -8,7 +8,7 @@ Take the valid831-character otter alias graph from parent10of the closed fresh
 run. Remove only the material requirement from twelve ordinary/exception/narrow
 condition strings, retaining all source quotations, actions, priorities, scopes,
 rename relations and unknown text. The existing binder accepts the755-character
-corrupted graph. Its public card is shorter but its decision region is broader.
+corrupted graph. Its public card is shorter; the explicit rule predicates accept a broader region.
 
 The existing questions vary time and materials together: ordinary cases have
 ample time and complete materials; tight-time cases have incomplete materials.
@@ -24,7 +24,11 @@ These probes expose a particular omission that the original44cases cannot.
 
 The interpreter handles only this fixture's exact condition strings and
 base/action-revision graph. It is not a general natural-language decoder or an
-independent source/reference adjudicator. Role/evidence/budget checks do not
+independent source/reference adjudicator. It does not interpret the retained free-text
+unknown notes. Those notes may allow an LLM reader to recover the intended boundary
+even when a rule condition is damaged, so the sixteen symbolic errors do not predict
+sixteen model errors. That interaction requires an explicit real-reader diagnostic.
+Role/evidence/budget checks do not
 certify semantic condition completeness. A future model-reader study must retain
 known-choice anchors, full-history controls and fixed denominators; an all-unknown
 probe set alone would reward blanket abstention. The active28-call comparison
