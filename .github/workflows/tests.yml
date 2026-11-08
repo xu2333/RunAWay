@@ -210,6 +210,8 @@ jobs:
         run: python -B scripts/replay_common_condition.py
       - name: Verify fresh source-only768contract and damage calibration (no calls)
         run: python -B benchmarks/fresh-direct-768-v1/check.py
+      - name: Replay closed fresh source-only768observations and losses (no calls)
+        run: python -B scripts/replay_fresh_direct768.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel

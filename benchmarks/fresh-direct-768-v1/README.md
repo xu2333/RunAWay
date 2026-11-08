@@ -1,3 +1,5 @@
+The separately authorized closed observations are in [RESULTS.md](RESULTS.md) and [LOSS-ANALYSIS.md](LOSS-ANALYSIS.md). Original preparation below is preserved.
+
 # Fresh trajectories → whole768-character cards
 
 **Prepared, unapproved, zero new model calls.** This is a source-only experiment
