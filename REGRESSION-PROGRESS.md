@@ -1,5 +1,18 @@
 # Compression regression progress
 
+The [fresh-person alias generalization protocol](benchmarks/fresh-alias-generalization-v1/README.md)
+adds four newly authored fictional people and192messages,not renamed versions of
+the consumed comparison. Two-hop renames,qualified homonyms,explicitly denied
+identity,inherited narrow revisions and same-choice uncertain contexts challenge
+both unchanged methods at1536whole-card characters. Its fixed176case endpoint
+(112known,64unknown) requires eight correct answers per case; invalid parents
+retain their44missing cases. Fourteen new offline tests expose ten deterministic
+damage patterns and protect both control banks,isolation and stop rules. These
+are protocol checks,not model measurements. The54-attempt proposal has zero new
+service calls and requires a fresh finite grant plus exact-head three-platform
+CI;old scopes stay closed. The literal same-message alias witness has a known
+transitive-chain limitation,which the unmodified methods must confront.
+
 The [source-only alias comparison](benchmarks/scope-alias-comparison-v1/RESULTS.md)
 closes27actual attempts /511,908reported tokens,with8valid cards and no missing,
 invalid,skipped or expired observations. Original48/64→alias64/64:16old-name
