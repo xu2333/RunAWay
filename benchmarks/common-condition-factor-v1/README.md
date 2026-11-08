@@ -1,3 +1,5 @@
+The separately authorized closed measurement is in [RESULTS.md](RESULTS.md). The original preparation below is preserved; its unapproved metadata are not rewritten.
+
 # Shared-condition factor: a smaller reversible public card
 
 **Offline prototype only. Model-reader fidelity is unmeasured. No default or

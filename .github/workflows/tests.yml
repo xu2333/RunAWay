@@ -206,6 +206,8 @@ jobs:
         run: python -B benchmarks/common-condition-factor-v1/check.py
       - name: Freeze unapproved common-condition reader proposal (no calls)
         run: python -B benchmarks/common-condition-factor-v1/plan.py --out /tmp/common-condition-review
+      - name: Replay closed common-condition public-view reader measurement (no calls)
+        run: python -B scripts/replay_common_condition.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
