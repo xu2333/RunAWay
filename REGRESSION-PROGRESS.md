@@ -1,5 +1,7 @@
 # Compression regression progress
 
+The [source-ID initial measurement](benchmarks/source-id-initial-encoding-v1/RESULTS.md) closes28of28attempts /614604reported tokens. Both full-history controls qualified:True. Current alias88/88→source-ID88/88,with0observed recoveries,0new observed losses;availability remains separate. All88cases and original missing denominators are preserved. If controls did not qualify,this is a control failure,not compression evidence. Portable reconstruction and case traces require no service calls. Historical observations and production defaults remain unchanged.
+
 The [source-ID initial extractor](benchmarks/source-id-initial-encoding-v1/README.md)
 is an unmeasured response to the fresh run's non-verbatim quotation failure.
 Models emit only actual source IDs;programs reconstruct exact full messages and
