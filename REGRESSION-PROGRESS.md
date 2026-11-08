@@ -1,5 +1,15 @@
 # Compression regression progress
 
+The [source-ID initial extractor](benchmarks/source-id-initial-encoding-v1/README.md)
+is an unmeasured response to the fresh run's non-verbatim quotation failure.
+Models emit only actual source IDs;programs reconstruct exact full messages and
+retain the old alias/accounting/compiler guards. Existing graph roundtrips keep
+public text unchanged,but automatic-generation fidelity remains untested. Full
+messages do not certify semantic choice classification,which remains an explicit
+negative fixture. A separate28-attempt two-person comparison is prepared,not
+authorized;the closed54scope cannot be resumed or its40expired slots reused.
+The180s timeout's completion event does not establish a usable card or its cause.
+
 The [fresh-person alias measurement](benchmarks/fresh-alias-generalization-v1/RESULTS.md)
 closes14of54attempts /313,791reported tokens,with no missing usage. All four
 full controls pass. Two first-generation alias cards (831/805characters) retain
