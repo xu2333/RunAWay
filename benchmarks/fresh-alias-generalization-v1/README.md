@@ -1,3 +1,5 @@
+The separately authorized closed measurement is reported in [RESULTS.md](RESULTS.md). The preparation specification below is preserved; its original unapproved metadata are not rewritten.
+
 # Fresh-person alias generalization
 
 Prepared protocol; **no model measurements or service authorization**. This tests

@@ -1,5 +1,7 @@
 # Compression regression progress
 
+The [fresh-person alias measurement](benchmarks/fresh-alias-generalization-v1/RESULTS.md) closes14of54attempts /313791reported tokens. Four full-history controls qualified:True. Original0/176→alias0/176,with0observed recoveries,0new observed losses;availability remains separate. All176cases and original missing denominators are preserved. If controls did not qualify,this is a control failure,not compression evidence. Portable reconstruction and case traces require no service calls. Historical observations and production defaults remain unchanged.
+
 The [fresh-person alias generalization protocol](benchmarks/fresh-alias-generalization-v1/README.md)
 adds four newly authored fictional people and192messages,not renamed versions of
 the consumed comparison. Two-hop renames,qualified homonyms,explicitly denied
