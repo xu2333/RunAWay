@@ -1,5 +1,16 @@
 # Compression regression progress
 
+The [fresh-person alias measurement](benchmarks/fresh-alias-generalization-v1/RESULTS.md)
+closes14of54attempts /313,791reported tokens,with no missing usage. All four
+full controls pass. Two first-generation alias cards (831/805characters) retain
+88/88observed chain-family cases across two reads/orders,including24positive-name
+cases. Stable generation and qualified-name card behavior remain untested.
+Original parent7 has a non-source quote suffix;parent16 times out at180s despite
+a recorded completion event. Both methods have176missing at the planned
+8-answer joint endpoint;this is not176observed wrong answers. Forty unused slots
+expire;no model retry,partial-card acceptance or old-record repair. The19earlier
+observation seals,original scientific source and intake remain unchanged.
+
 The [fresh-person alias generalization protocol](benchmarks/fresh-alias-generalization-v1/README.md)
 adds four newly authored fictional people and192messages,not renamed versions of
 the consumed comparison. Two-hop renames,qualified homonyms,explicitly denied
