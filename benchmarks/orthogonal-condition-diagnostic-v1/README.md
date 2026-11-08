@@ -1,3 +1,5 @@
+The separately authorized closed measurement is in [RESULTS.md](RESULTS.md). The original preparation below is preserved; its unapproved metadata are not rewritten.
+
 # Cross time and material conditions on fixed cards
 
 **Preparation only: zero new model calls, no service authority.** This follows

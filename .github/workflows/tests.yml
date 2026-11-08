@@ -200,6 +200,8 @@ jobs:
         run: python -B benchmarks/material-condition-blindspot-v1/check.py
       - name: Freeze orthogonal condition diagnostic (no calls)
         run: python -B benchmarks/orthogonal-condition-diagnostic-v1/plan.py --out /tmp/orthogonal-condition-review
+      - name: Replay closed orthogonal-condition boundary and constructed diagnostic (no calls)
+        run: python -B scripts/replay_orthogonal_condition.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
