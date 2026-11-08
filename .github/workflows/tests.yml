@@ -194,6 +194,10 @@ jobs:
         run: python -B scripts/replay_fresh_alias.py
       - name: Prepare unapproved source-ID initial extraction comparison (no calls)
         run: python -B benchmarks/source-id-initial-encoding-v1/plan.py --out source-id-initial-preparation
+      - name: Replay closed source-ID initial measurement (no calls)
+        run: python -B scripts/replay_source_id_initial.py
+      - name: Check symbolic condition-damage coverage counterexample (no calls)
+        run: python -B benchmarks/material-condition-blindspot-v1/check.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel

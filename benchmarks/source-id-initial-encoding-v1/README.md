@@ -1,3 +1,5 @@
+The separately authorized closed measurement is reported in [RESULTS.md](RESULTS.md). The preparation specification below is preserved; its original unapproved metadata are not rewritten.
+
 # Source-ID initial extraction: unmeasured candidate
 
 The fresh-person run stopped after14of54attempts: one original-method graph had a
