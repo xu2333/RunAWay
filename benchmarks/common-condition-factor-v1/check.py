@@ -2,10 +2,12 @@
 import hashlib
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
+sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location('common_factor_offline_codec',HERE/'codec.py')
 codec=importlib.util.module_from_spec(spec);spec.loader.exec_module(codec)
 SOURCE=ROOT/'benchmarks/source-id-initial-encoding-v1/measured.synthetic.json'

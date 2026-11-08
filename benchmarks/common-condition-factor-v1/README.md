@@ -38,6 +38,20 @@ successes. Programmatic reversibility does not establish that an LLM reads the
 new instruction faithfully. The inverse program is not an extra memory or hidden
 decoder supplied to a future model reader.
 
+## Standalone CLI regression
+
+The initial7a7ae67CI failed in the standalone size-reproduction step with
+`ModuleNotFoundError: No module named 'runaway'`. Unit-test imports had
+masked the missing checkout-root bootstrap. The check and preparation
+entrypoints now establish their own repository import path; an isolated
+`python -I` subprocess test runs both from outside the checkout with no
+`PYTHONPATH`. No workflow check is skipped and the codec/derived cards are
+unchanged. The conditional20-call execution stopped before creating any
+output directory, once-only claim or backend child: zero inference attempts.
+The revised prepared packet changes only implementation fingerprints; all
+twenty request payloads remain byte-identical. An updated exact-head consent
+and complete CI are still required before execution.
+
 ## Frozen, unapproved20-slot reader proposal
 
 Use only the four inherited source-ID parents (two people × two generations),

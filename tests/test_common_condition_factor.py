@@ -2,8 +2,11 @@
 import copy
 import importlib.util
 import json
+import os
 from pathlib import Path
+import subprocess
 import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -20,6 +23,23 @@ def fixture():
 
 
 class CommonConditionFactorTests(unittest.TestCase):
+    def test_direct_entrypoints_work_outside_checkout_without_pythonpath(self):
+        env={k:v for k,v in os.environ.items()if k not in('PYTHONPATH','PYTHONHOME')}
+        bench=ROOT/'benchmarks/common-condition-factor-v1'
+        with tempfile.TemporaryDirectory()as tmp:
+            directory=Path(tmp)
+            for script,args in(('check.py',[]),('plan.py',['--out',str(directory/'packet')])):
+                proc=subprocess.run([sys.executable,'-I','-B',str(bench/script),*args],
+                                    cwd=directory,env=env,capture_output=True,text=True,timeout=90)
+                self.assertEqual(proc.returncode,0,proc.stderr)
+                result=json.loads(proc.stdout)
+                self.assertEqual(result['new_model_calls'],0)
+                self.assertFalse(result['model_reader_fidelity_verified'])
+            proposal=json.loads((directory/'packet/proposal.json').read_text())
+            self.assertFalse(proposal['approved'])
+            self.assertEqual(proposal['max_new_local_cli_attempts'],20)
+            self.assertEqual(len(json.loads((directory/'packet/static-requests.json').read_text())),20)
+
     def test_all_eight_inherited_cards_fit768_and_restore_every_original_field(self):
         path=ROOT/'benchmarks/source-id-initial-encoding-v1/measured.synthetic.json'
         data=json.loads(path.read_text());cards=[r for r in data['records']if r['kind']=='extract'];self.assertEqual(len(cards),8)
