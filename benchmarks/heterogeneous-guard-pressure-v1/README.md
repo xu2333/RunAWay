@@ -1,3 +1,5 @@
+Later separately authorized closed observations: [RESULTS.md](RESULTS.md) and [LOSS-ANALYSIS.md](LOSS-ANALYSIS.md). Historical preparation below is preserved.
+
 # Heterogeneous guard-amendment pressure: preparation, not model results
 
 The preceding [direct768 study](../fresh-direct-768-v1/RESULTS.md) retained every
