@@ -188,6 +188,8 @@ jobs:
         run: python -B scripts/replay_scope_alias.py
       - name: Verify source-bound alias projection without model inference
         run: python -B benchmarks/scope-alias-encoding-v1/diagnostic.py
+      - name: Prepare fresh-person alias generalization protocol (no calls)
+        run: python -B benchmarks/fresh-alias-generalization-v1/plan.py --out fresh-alias-preparation
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
