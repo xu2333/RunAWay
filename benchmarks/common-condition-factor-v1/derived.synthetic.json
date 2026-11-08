@@ -1,0 +1,168 @@
+{
+  "kind": "offline_common_condition_factor_not_model_measurement",
+  "source_evidence_sha256": "fdf8fefcd6339e4ec679eec4b5817d41477eb9e5aa2875683b43bc250198a35a",
+  "cards": [
+    {
+      "person": "otter",
+      "method": "scope-alias-encoding-v1",
+      "generation": 0,
+      "parent_slot": 5,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四枚小书签\"｜\"名字会换，分支不串门。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已明确允许可撤销模拟\"]\n@论文复现计划·晨桅（风井）（又名雾舟／风井）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@读书讨论准备·夜汀（晴柜）（又名霜线／晴柜）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@社区互助安排·午岬（雨棚）（又名野穗／雨棚）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@短途行程设计·暮桥（云栈）（又名苇岸／云栈）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n?四项均仅记录准备策略，不构成实际启动或行动授权；实际是否启动未确认。\n?四项未确认模拟许可时不建立选择；上述分支外的组合未定。\n?晨桅副本、夜汀副本、午岬副本、暮桥副本均为独立项，策略未选，不继承原项条件或选择。\n",
+      "original_characters": 794,
+      "characters": 692,
+      "saved_characters": 102,
+      "common_conditions": [
+        "已明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "otter",
+      "method": "source-id-initial-encoding-v1",
+      "generation": 0,
+      "parent_slot": 8,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四叶小记\"｜\"名字换衣裳，条件不搬家。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已经明确允许可撤销模拟\"]\n@晨桅·风井·论文复现计划（又名雾舟／风井）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先做小样\n@夜汀·晴柜·读书讨论准备（又名霜线／晴柜）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先做小样\n@午岬·雨棚·社区互助安排（又名野穗／雨棚）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先列边界\n@暮桥·云栈·短途行程设计（又名苇岸／云栈）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先列边界\n?四项均只记录准备策略，不构成实际启动或行动授权；实际启动与否均未确认。\n?四项未确认可撤销模拟许可时不建立选择；其余未覆盖的时间与材料组合未定。\n?晨桅副本、夜汀副本、午岬副本、暮桥副本各与对应本项不同，均未选策略，不继承本项条件或选择。\n",
+      "original_characters": 815,
+      "characters": 702,
+      "saved_characters": 113,
+      "common_conditions": [
+        "已经明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "tansy",
+      "method": "source-id-initial-encoding-v1",
+      "generation": 0,
+      "parent_slot": 11,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四格小签\"｜\"档号不串门，策略各归各。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已经明确允许可撤销模拟\"]\n@甲档/星图（又名乙档/岚页）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先做小样\n@丙档/木桥（又名丁档/雪签）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先列边界\n@乙档/星图（又名甲档/岚页）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先列边界\n@丁档/木桥（又名丙档/雪签）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先做小样\n?四项均仅记录准备策略，不是实际启动或行动授权；实际已启动或未启动均未确认。\n?未确认可撤销模拟许可时不建立选择；时间与材料的其余组合未定。\n?仅给“星图”“木桥”或省略档号的旧简称时，项目不明，不代选。\n?外档/星图、外档/木桥、异档/星图、异档/木桥没有本人的策略选择记录，不继承四项选择。\n",
+      "original_characters": 814,
+      "characters": 701,
+      "saved_characters": 113,
+      "common_conditions": [
+        "已经明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "tansy",
+      "method": "scope-alias-encoding-v1",
+      "generation": 0,
+      "parent_slot": 14,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小签不串门\"｜\"档号认清，策略各走各的。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已经明确允许可撤销模拟\"]\n@甲档/星图（又名乙档/岚页）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先做小样\n@丙档/木桥（又名丁档/雪签）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先列边界\n@乙档/星图（又名甲档/岚页）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先列边界\n@丁档/木桥（又名丙档/雪签）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧&材料尚未齐全&负责人愿意先给反馈→先做小样\n?四项均仅记准备策略，不是启动或行动授权；实际启动与否未确认。\n?四项均在模拟许可未明确时不建立选择；其余未覆盖的时间与材料组合未定。\n?星图、木桥及旧标识均须完整档号；仅简称而未指定档号时，项目归属未定，不代选。\n?外档/星图、外档/木桥、异档/星图、异档/木桥均无本人策略记录，不继承上述选择。\n",
+      "original_characters": 817,
+      "characters": 704,
+      "saved_characters": 113,
+      "common_conditions": [
+        "已经明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "otter",
+      "method": "source-id-initial-encoding-v1",
+      "generation": 1,
+      "parent_slot": 17,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"小舟记策\"｜\"名字换衣，条件不搬家。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已经明确允许可撤销模拟\"]\n@论文复现计划·晨桅·风井（又名雾舟／风井）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先做小样\n@读书讨论准备·夜汀·晴柜（又名霜线／晴柜）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先做小样\n@社区互助安排·午岬·雨棚（又名野穗／雨棚）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先列边界\n@短途行程设计·暮桥·云栈（又名苇岸／云栈）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧、材料尚未齐全&负责人愿意先给反馈→先列边界\n?四项均只记录准备策略，不构成启动或行动授权；实际启动与否未确认。未确认可撤销模拟许可时不建立选择，其他未覆盖条件组合未知。\n?晨桅副本、夜汀副本、午岬副本、暮桥副本各是独立文件，均未选策略，不继承对应本项的条件或选择。\n",
+      "original_characters": 804,
+      "characters": 691,
+      "saved_characters": 113,
+      "common_conditions": [
+        "已经明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "otter",
+      "method": "scope-alias-encoding-v1",
+      "generation": 1,
+      "parent_slot": 20,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四叶准备簿\"｜\"名字换衣，选择不串门。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已明确允许可撤销模拟\"]\n@晨桅（风井；论文复现计划）（又名雾舟／风井）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@夜汀（晴柜；读书讨论准备）（又名霜线／晴柜）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@午岬（雨棚；社区互助安排）（又名野穗／雨棚）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@暮桥（云栈；短途行程设计）（又名苇岸／云栈）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n?四项均只记录会选的准备策略，不是启动或行动授权；实际已启动与尚未启动均未确认。\n?四项未确认模拟许可时不建立选择；时间、材料的其它组合未定。\n?晨桅副本、夜汀副本、午岬副本、暮桥副本各为独立项，未选策略，不继承对应本项条件或选择。\n",
+      "original_characters": 803,
+      "characters": 701,
+      "saved_characters": 102,
+      "common_conditions": [
+        "已明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "tansy",
+      "method": "scope-alias-encoding-v1",
+      "generation": 1,
+      "parent_slot": 23,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四页小绒签\"｜\"档号不串门，改口只换那一格。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已明确允许可撤销模拟\"]\n@甲档/星图（又名乙档/岚页）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@丙档/木桥（又名丁档/雪签）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@乙档/星图（又名甲档/岚页）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@丁档/木桥（又名丙档/雪签）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n?四项仅记录准备策略，不是启动或行动授权；实际已启动或尚未启动均未确认。未确认模拟许可不建立选择；其它时间与材料组合未定。\n?新旧标识均须完整档号；仅称星图、木桥或旧名词尾时不替用户选项目。外档/星图、外档/木桥、异档/星图、异档/木桥无用户策略记录，不继承四项选择。\n",
+      "original_characters": 792,
+      "characters": 690,
+      "saved_characters": 102,
+      "common_conditions": [
+        "已明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    },
+    {
+      "person": "tansy",
+      "method": "source-id-initial-encoding-v1",
+      "generation": 1,
+      "parent_slot": 26,
+      "prompt": "偏好仅供暂定参考；当前任务和用户明确指令优先，不代表身份事实或行动授权。\n\n\"四枚小书签\"｜\"档号不串门，改口只换指定分支。\"\n@范围；[n:]问题|条件&条件→动作，n默认0。匹配问题、范围及全部条件后，高n优先；同n冲突/未覆盖未知，缺细节仅各已知分支同选才选。?未知；\\转义符号或n/r/t。\n每条规则另须本题所问项目满足=[\"已明确允许可撤销模拟\"]\n@甲档/星图（又名乙档/岚页）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n@丙档/木桥（又名丁档/雪签）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@乙档/星图（又名甲档/岚页）\n准备策略|准备时间充裕且材料齐备→先列边界\n准备策略|时间很紧且材料尚未齐全→先做小样\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先列边界\n@丁档/木桥（又名丙档/雪签）\n准备策略|准备时间充裕且材料齐备→先做小样\n准备策略|时间很紧且材料尚未齐全→先列边界\n1:准备策略|时间很紧且材料尚未齐全&负责人愿意先给反馈→先做小样\n?四项均只记录会选的准备策略，不是实际启动或行动授权；实际已启动与尚未启动均未确认。\n?四项未明确允许可撤销模拟时不建立选择；其余未覆盖的时间与材料组合未知。\n?仅写星图、木桥或旧标识词尾而未指定完整档号，不替用户选项目；四项独立。\n?外档/星图、外档/木桥、异档/星图、异档/木桥无本人策略记录，不继承这些选择。\n",
+      "original_characters": 816,
+      "characters": 714,
+      "saved_characters": 102,
+      "common_conditions": [
+        "已明确允许可撤销模拟"
+      ],
+      "rule_count": 12,
+      "ordered_projection_roundtrip_exact": true,
+      "all_scopes_questions_conditions_actions_priorities_unknowns_preserved": true,
+      "model_reader_fidelity_verified": false,
+      "new_model_calls": 0,
+      "production_default_changed": false
+    }
+  ],
+  "all_fit_whole768": true,
+  "original_min_characters": 792,
+  "original_max_characters": 817,
+  "factored_min_characters": 690,
+  "factored_max_characters": 714,
+  "all_ordered_projections_roundtrip_exact": true,
+  "model_reader_fidelity_verified": false,
+  "original_sources_cards_scores_modified": false,
+  "new_model_calls": 0,
+  "production_default_changed": false
+}

@@ -202,6 +202,10 @@ jobs:
         run: python -B benchmarks/orthogonal-condition-diagnostic-v1/plan.py --out /tmp/orthogonal-condition-review
       - name: Replay closed orthogonal-condition boundary and constructed diagnostic (no calls)
         run: python -B scripts/replay_orthogonal_condition.py
+      - name: Reproduce common-condition factor sizes and ordered projection (no calls)
+        run: python -B benchmarks/common-condition-factor-v1/check.py
+      - name: Freeze unapproved common-condition reader proposal (no calls)
+        run: python -B benchmarks/common-condition-factor-v1/plan.py --out /tmp/common-condition-review
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel
