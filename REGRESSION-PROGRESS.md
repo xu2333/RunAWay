@@ -1,5 +1,7 @@
 # Compression regression progress
 
+The [six-read template proposal](benchmarks/guard-template-readonly-v1/README.md) freezes a997/768view comparison of the same actual failed-budget graph. All declared fields restore exactly;LLM reading remains untested. Seven new zero-service protocol tests pass. The source,82fixed cases and reader are unchanged;one chosen development graph is not generation stability or independent semantic gold. This proposal remains unapproved and adds no model authority.
+
 The [condition-only revision candidate](benchmarks/condition-revision-graph-v1/README.md) addresses the measured history/current-rule collision without raising the30active-row cap. Thirteen authored local tests pass:explicit predicate replacement/removal retires only its named parent and preserves untouched fields,other choices and past status. It has zero new model calls,does not claim recovered fidelity,and is not a production default. The independently developed template layout in the preceding measurement is a separate intervention.
 
 The [heterogeneous guard-amendment measurement](benchmarks/heterogeneous-guard-pressure-v1/RESULTS.md) closes 12/16 attempts with 558639 reported tokens. Controls qualified=True;768 retains 0/164 (164 missing),1536 retains 164/164 (0 missing). Source/card/answer diagnosis distinguishes actual choice errors from invalid products;one generation per budget does not test stability. Old records and defaults are unchanged.
