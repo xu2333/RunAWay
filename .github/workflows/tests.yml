@@ -214,6 +214,8 @@ jobs:
         run: python -B scripts/replay_fresh_direct768.py
       - name: Check heterogeneous guard-amendment pressure (no model calls)
         run: python -B benchmarks/heterogeneous-guard-pressure-v1/check.py
+      - name: Replay heterogeneous guard-amendment observations (no calls)
+        run: python -B scripts/replay_guard_pressure.py
       - name: Exercise condition-memory trial without a model
         run: python -B scripts/try_memory.py demo --out condition-memory-trial-demo
       - name: Build and install wheel

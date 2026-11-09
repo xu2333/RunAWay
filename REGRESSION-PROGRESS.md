@@ -1,5 +1,7 @@
 # Compression regression progress
 
+The [heterogeneous guard-amendment measurement](benchmarks/heterogeneous-guard-pressure-v1/RESULTS.md) closes 12/16 attempts with 558639 reported tokens. Controls qualified=True;768 retains 0/164 (164 missing),1536 retains 164/164 (0 missing). Source/card/answer diagnosis distinguishes actual choice errors from invalid products;one generation per budget does not test stability. Old records and defaults are unchanged.
+
 The [heterogeneous guard-amendment preparation](benchmarks/heterogeneous-guard-pressure-v1/README.md) adds96new fictional messages and164fixed cases per proposed budget. The unchanged renderer rejects both complete author fixtures at768while accepting them at1536; this is offline capacity evidence,not model loss or a lower bound. A new16attempt diagnostic remains unapproved and unexecuted;closed54evidence and defaults are unchanged.
 
 The [fresh direct768measurement](benchmarks/fresh-direct-768-v1/RESULTS.md) closes 54/54 attempts, with 1884730 reported tokens and 0 missing usage records. Full controls qualified=True;same-budget flat 384/384 versus factor-aware 384/384, 0 observed recoveries and 0 new observed losses;missing is separate. The source/card/answer review preserves all omissions,invalid parents,cohorts and generation differences. Four new fictional people are not independent semantic gold;production defaults and old records remain unchanged.
