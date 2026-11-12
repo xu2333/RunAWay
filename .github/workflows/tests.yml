@@ -249,3 +249,5 @@ jobs:
         run: |
           python -B scripts/replay_guard_template.py
           python -B scripts/inspect_guard_template.py 0_new_boundary
+      - name: Verify source-domain revision protocol preparation (no model calls)
+        run: python -B benchmarks/domain-revision-probe-v1/plan.py --out "${{ runner.temp }}/domain-revision-requests"
