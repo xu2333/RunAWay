@@ -1,0 +1,113 @@
+{
+  "kind": "literal_source_domain_coverage_audit",
+  "entries": [
+    {
+      "episode": "project4",
+      "source_id": "s01",
+      "complete_user_message": "为“岚/细雨脚本试排”建记录。余量按非负整数元计，方案名必须完整保留为“先生成完整预览再统一提交的批处理”或“逐条校验并保留回滚点的串行脚本”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "元",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5元",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    },
+    {
+      "episode": "project0",
+      "source_id": "s02",
+      "complete_user_message": "为“岚/霜瓦放映试作”建记录。余量按非负整数分钟计，方案名必须完整保留为“去旁白并按冲突重排的静态提纲册”或“逐镜手绘并保留原声的长版分镜稿”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "分钟",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5分钟",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    },
+    {
+      "episode": "project3",
+      "source_id": "s03",
+      "complete_user_message": "为“岚/荧石录音试作”建记录。余量按非负整数人计，方案名必须完整保留为“保留长停顿并按发言人分轨的录音稿”或“删去长停顿并按事件重排的摘要稿”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "人",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5人",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    },
+    {
+      "episode": "project1",
+      "source_id": "s04",
+      "complete_user_message": "为“岚/竹桥展览草案”建记录。余量按非负整数页计，方案名必须完整保留为“按年代标色并附完整出处的折页展册”或“按主题留白并隐藏出处的单页展签”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "页",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5页",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    },
+    {
+      "episode": "project5",
+      "source_id": "s05",
+      "complete_user_message": "为“岚/风铃信件试写”建记录。余量按非负整数条计，方案名必须完整保留为“保留原句并逐段解释分歧的长篇回信”或“重写原句并集中列出请求的短篇回信”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "条",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5条",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    },
+    {
+      "episode": "project2",
+      "source_id": "s06",
+      "complete_user_message": "为“岚/松塔线路试排”建记录。余量按非负整数站计，方案名必须完整保留为“避开渡轮换乘并直达终点的山侧路线”或“保留渡轮换乘并逐站停留的沿河路线”；这是方法选择，不是执行顺序。",
+      "stated_domain": "nonnegative integers",
+      "unit": "站",
+      "exact_domain_phrase_present": {
+        "flat997": false,
+        "template768": false
+      },
+      "additional_unmeasured_probe": {
+        "scenario": "Declared quantity observed as0.5站",
+        "expected_contract": "Outside the explicitly declared integer domain;requires separately frozen adjudication and full-source control before scoring.",
+        "model_response": null,
+        "semantic_loss_measured": false
+      }
+    }
+  ],
+  "source_constraints": 6,
+  "new_model_calls": 0,
+  "original_reference_changed": false,
+  "all82existing_cases_cover_outside_integer_domain": false,
+  "missing_literal_phrase_is_not_by_itself_a_measured_semantic_error": true,
+  "same_graph_roundtrip_does_not_certify_source_completeness": true
+}

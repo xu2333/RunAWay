@@ -245,3 +245,7 @@ jobs:
           runaway distill --format grouped-v1 --input "${{ github.workspace }}/examples/grouped-sources.synthetic.json" --answer "${{ github.workspace }}/examples/grouped-answer.synthetic.json" --budget-chars 512 --out grouped-demo
           runaway export grouped-demo/portable.json
           runaway choices prepare --card grouped-demo/portable.json --questions "${{ github.workspace }}/examples/choice-questions.synthetic.json" --answer-format text
+      - name: Replay fixed guard-template reading and complete case traces (no calls)
+        run: |
+          python -B scripts/replay_guard_template.py
+          python -B scripts/inspect_guard_template.py 0_new_boundary

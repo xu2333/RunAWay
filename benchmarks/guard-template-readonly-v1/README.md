@@ -1,5 +1,8 @@
 # Six fixed-view reads: preparation only
 
+**Measured later under a separate six-attempt grant:** both fixed views retained82/82cases across two reads and both option orders. See [results](RESULTS.md), [loss analysis](LOSS-ANALYSIS.md) and the source-domain audit. This historical preparation text below remains the frozen protocol;it is not reusable service authority.
+
+
 The [closed observation](../heterogeneous-guard-pressure-v1/LOSS-ANALYSIS.md)
 produced a valid current graph at original slot14 but no card within768characters.
 Its ordinary diagnostic view is997characters. The development template now fits
