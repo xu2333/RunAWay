@@ -1,0 +1,67 @@
+{
+  "new_model_calls": 0,
+  "reader_verified": false,
+  "parents": [
+    {
+      "slot": 3,
+      "method": "current",
+      "generation": 0,
+      "characters": 1061,
+      "diagnostic": {
+        "original_slot": 3,
+        "original_characters": 1061,
+        "characters": 767,
+        "budget": 768,
+        "ordered_fields_roundtrip_exact": true,
+        "mandatory_numeric_domain_preserved": true,
+        "model_reader_fidelity_verified": false,
+        "source_only_generation_tested": false,
+        "used_by_authorized14": false,
+        "new_model_calls": 0,
+        "original_observation_replaced": false,
+        "posthoc_fixed_graph_diagnostic": true,
+        "source_completeness_not_established_by_roundtrip": true,
+        "fits768": true
+      }
+    },
+    {
+      "slot": 6,
+      "method": "condition_revision",
+      "generation": 0,
+      "characters": 1169,
+      "diagnostic": {
+        "fits768": false,
+        "error_type": "ValueError",
+        "detail": "Every group must explicitly start its scope conditions with the matching domain",
+        "model_reader_fidelity_verified": false,
+        "new_model_calls": 0
+      }
+    },
+    {
+      "slot": 9,
+      "method": "condition_revision",
+      "generation": 1,
+      "characters": 1178,
+      "diagnostic": {
+        "fits768": false,
+        "error_type": "ValueError",
+        "detail": "Every group must explicitly start its scope conditions with the matching domain",
+        "model_reader_fidelity_verified": false,
+        "new_model_calls": 0
+      }
+    },
+    {
+      "slot": 12,
+      "method": "current",
+      "generation": 1,
+      "characters": 1055,
+      "diagnostic": {
+        "fits768": false,
+        "error_type": "ValueError",
+        "detail": "Every group must explicitly start its scope conditions with the matching domain",
+        "model_reader_fidelity_verified": false,
+        "new_model_calls": 0
+      }
+    }
+  ]
+}

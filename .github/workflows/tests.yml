@@ -251,3 +251,10 @@ jobs:
           python -B scripts/inspect_guard_template.py 0_new_boundary
       - name: Verify source-domain revision protocol preparation (no model calls)
         run: python -B benchmarks/domain-revision-probe-v1/plan.py --out "${{ runner.temp }}/domain-revision-requests"
+      - name: Replay source-domain and condition-revision measurement (no calls)
+        run: |
+          python -B scripts/replay_domain_revision.py
+          python -B scripts/inspect_domain_revision.py 0_old_boundary --method condition_revision --generation 0
+          python -B scripts/inspect_domain_revision.py --domain-layout-slot 3
+      - name: Verify domain-template and erasure diagnostic preparation (no calls)
+        run: python -B benchmarks/domain-template-readonly-v1/plan.py --out "${{ runner.temp }}/domain-template-requests"

@@ -1,5 +1,8 @@
 # Condition-only revision edges: unmeasured repair candidate
 
+A later[source-only development comparison](../domain-revision-probe-v1/RESULTS.md)observed two valid generations with14parent retirements each and94/94cases retained. The current encoder also retained94/94,so there is no observed comparative recovery or default promotion. The original unmeasured design notes below remain historical;semantic certification and broader generalization are still unestablished.
+
+
 The [guard-amendment observations](../heterogeneous-guard-pressure-v1/LOSS-ANALYSIS.md)
 found two different failures. Rivet's original768extraction retained18current and
 14superseded rules as32active base nodes; the unchanged30active-row guard rejected
