@@ -1,10 +1,10 @@
 name: Local mobile app
 on:
   pull_request:
-    paths: ['apps/mobile/**', 'packages/harnesses/**', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
   push:
     branches: [main]
-    paths: ['apps/mobile/**', 'packages/harnesses/**', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,6 +26,7 @@ jobs:
         working-directory: apps/mobile
   android:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
         with: {persist-credentials: false}
@@ -42,8 +43,19 @@ jobs:
         working-directory: apps/mobile/android
       - name: Check packaged permissions
         run: |
-          permissions=$(apkanalyzer manifest permissions apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk)
-          test -z "$permissions" || { echo "$permissions"; exit 1; }
+          apkanalyzer manifest print apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk | python3 -B scripts/check_mobile_apk.py
+      - name: Enable emulator acceleration
+        run: |
+          test -e /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - name: Validate bundled app in Android WebView
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: cd apps/mobile/android && ./gradlew connectedDebugAndroidTest --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: runaway-android-debug

@@ -16,9 +16,7 @@
   "dependencies": {
     "@capacitor/android": "8.6.2",
     "@capacitor/core": "8.6.2",
-    "@capacitor/filesystem": "8.1.5",
-    "@capacitor/ios": "8.6.2",
-    "@capacitor/share": "8.0.3"
+    "@capacitor/ios": "8.6.2"
   },
   "devDependencies": {
     "@capacitor/cli": "8.6.2",

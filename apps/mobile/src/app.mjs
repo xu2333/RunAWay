@@ -33,7 +33,7 @@ function render(){
   updateSize();show('result');
 }
 async function checkedBundle(){if(!$('reviewed').checked)throw Error('请先检查随身 prompt 并勾选确认。');if(!session.portable)session.body=$('prompt').value;return session.bundle();}
-async function save(name,value,mime='application/json'){await saveFile(name,typeof value==='string'||value instanceof Uint8Array?value:JSON.stringify(value,null,2)+'\n',mime);notify('已请求本地保存 / 分享。是否保存成功，请以系统文件界面为准。');}
+async function save(name,value,mime='application/json'){const saved=await saveFile(name,typeof value==='string'||value instanceof Uint8Array?value:JSON.stringify(value,null,2)+'\n',mime);notify(saved.status==='saved'?'系统已完成文件保存。':'已请求下载，请以浏览器文件界面为准。');}
 async function readFile(input,max=512000){const file=input.files?.[0];if(!file)return null;if(file.size>max)throw Error(`文件超过 ${max/1000} KB，请选择相关片段。`);try{return new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('文件编码无法识别。请选择 UTF-8 文本文件；原有材料未改变。');}}
 function confirmReplace(){return !($('source').value||session.portable||session.answer)||window.confirm('替换当前材料？请先保存想保留的私有档案。');}
 for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('click',()=>show(b.dataset.step));

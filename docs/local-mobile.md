@@ -13,9 +13,9 @@ There is no RunAWay account, backend, telemetry, automatic upload or API key.
    model's policies. This prototype does **not** include an on-device LLM.
 3. Inspect the supporting quotations, conditions and exceptions. Edit the
    portable prompt and confirm before exporting it.
-4. Tap Codex, Claude Code or Antigravity to export a private ZIP. Use the OS
-   chooser to save to Files or send to your own computer. Opening a share sheet
-   is not proof that the destination saved the file.
+4. Tap Codex, Claude Code or Antigravity to export a private ZIP. Use the system
+   document picker to save on your phone, then transfer the ZIP to your computer.
+   If you select a cloud file provider, its policies and network behavior apply.
 5. Save the **private archive** if you want to continue later. It includes original
    material and detailed evidence. The smaller harness ZIP contains only the
    portable prompt and public installation code, without the source archive.
@@ -24,16 +24,19 @@ Existing browser `runaway.private.json` sessions and `portable.json` can be open
 locally. Only a private archive restores evidence; a portable prompt alone cannot
 recover details that compression omitted. Imported prompts remain candidates.
 
-Nothing is automatically persisted between app launches. Explicit exports are
-staged in the app's local **cache** so the OS can hand them to a destination;
-they are cleared on the next cold launch or with **Clear**. Cache is not encrypted
+Nothing is automatically persisted between app launches. On Android, explicit exports stay in memory until the system-selected document
+is written. On iOS, exports are staged in local **cache** for the system document
+picker, then cleared on completion/cancellation or the next cold launch. Cache is not encrypted
 by RunAWay. Exported files, clipboard contents, device backups and destinations
-selected in the OS chooser remain under the owner's/device's control.
+selected in the system picker remain under the owner's/device's control.
 
-Android requests no permissions, including Internet or broad storage access,
-and disables application backups. Both platforms bundle all assets; the page's
+Android requests no Internet or broad storage permissions and disables application
+backups. AndroidX adds one app-scoped signature permission for internal receivers;
+CI allows only that exact permission and verifies its signature protection. Both platforms bundle all assets; the page's
 CSP disallows network connections. No automatic HTTP/cookie bridge is enabled.
-The only native plugins are local filesystem staging and the OS share sheet.
+The only app plugin is a small local document-saving bridge: Android uses
+`ACTION_CREATE_DOCUMENT`; iOS uses `UIDocumentPickerViewController`. It has no
+HTTP, account, analytics, model or arbitrary-path write method.
 
 ## Three independent harness modules
 

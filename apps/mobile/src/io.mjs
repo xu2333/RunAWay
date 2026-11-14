@@ -1,12 +1,9 @@
-import {Capacitor} from '@capacitor/core';
-import {Filesystem,Directory} from '@capacitor/filesystem';
-import {Share} from '@capacitor/share';
+import {Capacitor,registerPlugin} from '@capacitor/core';
 
-const EXPORTS='runaway-exports';
+const SaveDocument=registerPlugin('SaveDocument');
 export async function cleanExports() {
   if(!Capacitor.isNativePlatform()) return;
-  try { await Filesystem.rmdir({path:EXPORTS,directory:Directory.Cache,recursive:true}); }
-  catch(e) { if(e?.code!=='OS-PLUG-FILE-0008' && !/not exist|not found|doesn't exist/i.test(e?.message||'')) throw e; }
+  await SaveDocument.clear();
 }
 export async function saveFile(name,data,mime) {
   if(!/^[A-Za-z0-9_.-]+$/.test(name)) throw Error('Invalid export name.');
@@ -17,21 +14,9 @@ export async function saveFile(name,data,mime) {
     setTimeout(()=>URL.revokeObjectURL(url),1000);
     return {status:'download_requested'};
   }
-  // Cache is outside device backups; no private history is stored automatically.
-  // The OS chooser lets the owner save to Files or explicitly share elsewhere.
+  // The native system picker writes only to the owner's selected document.
   let binary=''; for(const byte of bytes) binary+=String.fromCharCode(byte);
-  const folder=EXPORTS+'/'+crypto.randomUUID(),file=folder+'/'+name;
-  await Filesystem.mkdir({path:folder,directory:Directory.Cache,recursive:true});
-  try {
-    const result=await Filesystem.writeFile({path:file,directory:Directory.Cache,data:btoa(binary)});
-    await Share.share({title:'RunAWay · 带走你的判断',files:[result.uri],dialogTitle:'保存到文件或发送到你的设备'});
-    return {status:'share_sheet_closed'};
-  } catch(e) {
-    await Filesystem.rmdir({path:folder,directory:Directory.Cache,recursive:true}).catch(()=>{});
-    throw e;
-  }
-  // Keep a successful hand-off readable by its recipient. Clean this cache on
-  // the next cold launch or explicit clear, rather than racing another app.
+  return SaveDocument.save({name,data:btoa(binary),mime});
 }
 export async function copyText(text) {
   try { await navigator.clipboard.writeText(text); }
