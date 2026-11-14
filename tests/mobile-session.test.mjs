@@ -14,10 +14,19 @@ test('mobile imports the actual website profile with exact quotes and the same p
   assert.equal((await s.bundle()).portable.id,bundle.portable.id);
 });
 test('private archive roundtrip preserves source, detailed evidence, edits and export identity',async()=>{
-  const s=ready();s.body+=' 条件不足时先确认。';const first=await s.bundle();const next=new Session();
+  const s=ready();s.origin='fictional_demo';s.body+=' 条件不足时先确认。';const first=await s.bundle();const next=new Session();
   await next.restore(JSON.stringify(s.archive()));const second=await next.bundle();
   assert.deepEqual(second,first);assert.deepEqual(next.answer.claims,s.answer.claims);assert.deepEqual(next.prepared.sources,s.prepared.sources);
   assert.ok(next.request().includes('SOURCE_JSON:'));assert.equal(next.request(),s.request());
+  assert.equal(next.origin,'fictional_demo');assert.equal(next.archive().origin,'fictional_demo');
+});
+test('valid near-limit source and result can reopen after JSON escaping makes the archive larger',async()=>{
+  const s=new Session();s.prepare('"'.repeat(60000),'experience',1536);
+  const claims=Array.from({length:40},(_,i)=>({id:'c'+i,statement:'机械往返测试，非语义评估',basis:'inference',scope:'仅此构造材料',conditions:[],exceptions:[],related_claim_ids:[],evidence:[{source_id:'story',quote:'"'.repeat(6000),relation:'supports'}]}));
+  const answer={name:'构造档案',tagline:'只测文件往返，不是人格推断',claims,unknowns:['偏好未知'],prompt:'没有足够可靠的偏好，新的判断先问。',covered_claim_ids:claims.map(c=>c.id)};
+  const result=JSON.stringify(answer);assert.ok(Buffer.byteLength(result)<512000);s.importAnswer(result);
+  const archive=JSON.stringify(s.archive());assert.ok(Buffer.byteLength(archive)>512000);
+  const next=new Session();await next.restore(archive);assert.deepEqual(await next.bundle(),await s.bundle());
 });
 test('existing 1600-character browser session restores without losing original material',async()=>{
   const s=ready();s.prepared.budget=1600;

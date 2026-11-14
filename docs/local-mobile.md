@@ -21,7 +21,8 @@ There is no RunAWay account, backend, telemetry, automatic upload or API key.
    portable prompt and public installation code, without the source archive.
 
 Existing browser `runaway.private.json` sessions and `portable.json` can be opened
-locally. Only a private archive restores evidence; a portable prompt alone cannot
+locally. Private archives accept up to 2 MB; source intake remains 64 KB and model
+results remain 512 KB. Fictional demo provenance survives archive restoration. Only a private archive restores evidence; a portable prompt alone cannot
 recover details that compression omitted. Imported prompts remain candidates.
 
 Nothing is automatically persisted between app launches. On Android, explicit exports stay in memory until the system-selected document
@@ -103,7 +104,9 @@ integrity, no spontaneous external requests, and real CSP rejection of an
 external fetch. It is **not** a physical-phone or native-picker test.
 
 `Local mobile app` CI compiles an Android debug APK, checks its packaged
-permissions, compiles an unsigned iOS simulator app, and runs the UI smoke test.
+permissions, runs the bundled app in a real Android emulator WebView (including
+WebCrypto, evidence validation and native bridge availability), compiles an unsigned
+iOS simulator app, and runs the browser UI smoke test.
 The APK and simulator archive are workflow artifacts, not store releases.
 iPhone device distribution/TestFlight requires signing; simulator output cannot
 be installed on an iPhone. Physical-device file pick/save and real harness

@@ -55,7 +55,7 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
-          script: cd apps/mobile/android && ./gradlew connectedDebugAndroidTest --no-daemon
+          script: cd apps/mobile/android && ./gradlew :app:connectedDebugAndroidTest --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: runaway-android-debug
