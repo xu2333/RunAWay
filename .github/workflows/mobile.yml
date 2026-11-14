@@ -1,0 +1,69 @@
+name: Local mobile app
+on:
+  pull_request:
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+  push:
+    branches: [main]
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22', cache: npm, cache-dependency-path: apps/mobile/package-lock.json}
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: apps/mobile
+      - run: npm run build
+        working-directory: apps/mobile
+      - run: node node_modules/playwright-core/cli.js install --with-deps chromium
+        working-directory: apps/mobile
+      - run: npm test
+        working-directory: apps/mobile
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22', cache: npm, cache-dependency-path: apps/mobile/package-lock.json}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: '21'}
+      - uses: android-actions/setup-android@v3
+      - run: npm ci --ignore-scripts --no-audit --no-fund && npm run build && npx --no-install cap sync android
+        working-directory: apps/mobile
+      - run: chmod +x gradlew && ./gradlew assembleDebug lintDebug --no-daemon
+        working-directory: apps/mobile/android
+      - name: Check packaged permissions
+        run: |
+          permissions=$("$ANDROID_HOME/cmdline-tools/latest/bin/apkanalyzer" manifest permissions apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk)
+          test -z "$permissions" || { echo "$permissions"; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: runaway-android-debug
+          path: apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+  ios:
+    runs-on: macos-15-intel
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22', cache: npm, cache-dependency-path: apps/mobile/package-lock.json}
+      - run: npm ci --ignore-scripts --no-audit --no-fund && npm run build && npx --no-install cap sync ios
+        working-directory: apps/mobile
+      - run: xcodebuild -version
+      - name: Compile iOS simulator app (no signing credentials)
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -derivedDataPath build/ios CODE_SIGNING_ALLOWED=NO build
+        working-directory: apps/mobile
+      - run: ditto -c -k --sequesterRsrc --keepParent build/ios/Build/Products/Debug-iphonesimulator/App.app build/RunAWay-simulator.zip
+        working-directory: apps/mobile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: runaway-ios-simulator
+          path: apps/mobile/build/RunAWay-simulator.zip
+          if-no-files-found: error

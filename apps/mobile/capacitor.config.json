@@ -1,0 +1,10 @@
+{
+  "appId": "io.runaway.taste",
+  "appName": "RunAWay",
+  "webDir": "dist",
+  "backgroundColor": "#f6f5ed",
+  "server": {"hostname": "localhost", "androidScheme": "https", "cleartext": false},
+  "android": {"allowMixedContent": false, "webContentsDebuggingEnabled": false},
+  "ios": {"contentInset": "automatic", "webContentsDebuggingEnabled": false},
+  "plugins": {"CapacitorHttp": {"enabled": false}, "CapacitorCookies": {"enabled": false}}
+}
