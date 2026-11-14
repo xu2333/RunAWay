@@ -12,7 +12,7 @@ function show(step){
   if(step==='model'&&!session.prepared)return notify('请先放入经历并整理请求。',true);
   if(step==='result'&&!session.answer&&!session.portable)return notify('请先导入提炼结果或已有的 portable.json。',true);
   for(const name of ['source','model','result'])$(name+'-panel').hidden=name!==step;
-  document.querySelectorAll('[data-step]').forEach(b=>b.toggleAttribute('aria-current',b.dataset.step===step));
+  document.querySelectorAll('[data-step]').forEach(b=>{if(b.dataset.step===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
 }
 function guard(fn){return async event=>{
   if(active)return;active=true;const button=event.currentTarget;button.disabled=true;

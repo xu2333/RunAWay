@@ -1,6 +1,6 @@
 # RunAWay on your phone
 
-The native iOS/Android prototype bundles its interface and validation code in
+The native iOS 15.4+ / Android 7+ prototype bundles its interface and validation code in
 the app. It reads only files you select and writes only exports you request.
 There is no RunAWay account, backend, telemetry, automatic upload or API key.
 
