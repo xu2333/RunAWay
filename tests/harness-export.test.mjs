@@ -9,6 +9,7 @@ import {adapters,makeExport,BOUNDARY,BEGIN,END,sha256} from '../packages/harness
 import {makeBundle,SOURCE_FILES} from '../packages/harnesses/bundle.mjs';
 import {zipFiles} from '../packages/harnesses/zip.mjs';
 import {install} from '../packages/harnesses/install.mjs';
+import {canonical} from '../web/dist/core.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const prompt=BOUNDARY+'在可撤销时自动执行；不可撤销或条件不明时先问。\n';
@@ -68,4 +69,12 @@ test('exported standalone installer runs outside repository with no installed Ru
   const unzip=spawnSync('python3',['-c','import zipfile,sys; zipfile.ZipFile(sys.argv[1]).extractall(sys.argv[2])',zip,unpacked],{encoding:'utf8'});assert.equal(unzip.status,0,unzip.stderr);
   const run=spawnSync(process.execPath,[path.join(unpacked,'install.mjs'),'--project',project],{cwd:dir,encoding:'utf8'});assert.equal(run.status,0,run.stderr);assert.equal(JSON.parse(run.stdout).status,'installed');
   const missing=spawnSync(process.execPath,[path.join(unpacked,'install.mjs')],{cwd:dir,encoding:'utf8'});assert.equal(missing.status,1);
+});
+test('offline CLI exports an existing portable prompt once and refuses output replacement',async t=>{
+  const dir=await temp(t),input=path.join(dir,'portable.json'),out=path.join(dir,'claude.zip');
+  const base={schema_version:1,artifact_type:'portable_expression',text:prompt,status:'candidate_unvalidated'};
+  await writeFile(input,JSON.stringify({...base,id:await sha256(canonical(base))}));
+  const args=[path.join(root,'scripts/export_harness.mjs'),'--portable',input,'--target','claude-code','--out',out];
+  const first=spawnSync(process.execPath,args,{cwd:dir,encoding:'utf8'});assert.equal(first.status,0,first.stderr);assert.equal(JSON.parse(first.stdout).status,'exported');
+  const bytes=await readFile(out);const again=spawnSync(process.execPath,args,{cwd:dir,encoding:'utf8'});assert.equal(again.status,1);assert.deepEqual(await readFile(out),bytes);
 });

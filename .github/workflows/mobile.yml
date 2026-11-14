@@ -34,13 +34,15 @@ jobs:
       - uses: actions/setup-java@v4
         with: {distribution: temurin, java-version: '21'}
       - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
       - run: npm ci --ignore-scripts --no-audit --no-fund && npm run build && npx --no-install cap sync android
         working-directory: apps/mobile
       - run: chmod +x gradlew && ./gradlew assembleDebug lintDebug --no-daemon
         working-directory: apps/mobile/android
       - name: Check packaged permissions
         run: |
-          permissions=$("$ANDROID_HOME/cmdline-tools/latest/bin/apkanalyzer" manifest permissions apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk)
+          permissions=$(apkanalyzer manifest permissions apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk)
           test -z "$permissions" || { echo "$permissions"; exit 1; }
       - uses: actions/upload-artifact@v4
         with:
