@@ -78,3 +78,10 @@ test('offline CLI exports an existing portable prompt once and refuses output re
   const first=spawnSync(process.execPath,args,{cwd:dir,encoding:'utf8'});assert.equal(first.status,0,first.stderr);assert.equal(JSON.parse(first.stdout).status,'exported');
   const bytes=await readFile(out);const again=spawnSync(process.execPath,args,{cwd:dir,encoding:'utf8'});assert.equal(again.status,1);assert.deepEqual(await readFile(out),bytes);
 });
+test('combined-file budget refuses silent truncation and removal preserves unrelated rule activation',async t=>{
+  const f=await fixture(t);const file=path.join(f.project,'AGENTS.md');const before='x'.repeat(31900);await writeFile(file,before);
+  await assert.rejects(install(f),/combined instruction file/);assert.equal(await readFile(file,'utf8'),before);
+  const g=await fixture(t,'antigravity');await install(g);const rule=path.join(g.project,'.agents/rules/runaway.md');
+  await writeFile(rule,(await readFile(rule,'utf8'))+'\nOwner rule: keep the existing test command.\n');
+  await install({...g,remove:true});const remaining=await readFile(rule,'utf8');assert.ok(remaining.startsWith(adapters.find(a=>a.id==='antigravity').preamble));assert.ok(remaining.includes('Owner rule:'));assert.ok(!remaining.includes(BEGIN));
+});

@@ -70,8 +70,12 @@ export async function install({bundleDir,project,dryRun=false,remove=false}) {
     throw Error('Rule frontmatter changed. Nothing was written.');
   const segment = old ? old.segment.slice(0,old.segment.indexOf(BEGIN)) + file.content.slice(adapter.preamble.length)
     : (adapter.preamble || (before ? '\n\n' : '')) + file.content.slice(adapter.preamble.length);
-  let after = remove ? before.replace(old.segment,'') : old ? before.replace(old.segment,segment) : (before || '')+segment;
-  if (remove && old.created && after === '') after = null;
+  // A dedicated rule's activation preamble must also survive when the owner
+  // has added unrelated instructions outside our block.
+  let after = remove ? before.replace(old.segment,adapter.preamble) : old ? before.replace(old.segment,segment) : (before || '')+segment;
+  if (remove && old.created && after === adapter.preamble) after = null;
+  if (!remove && Buffer.byteLength(after,'utf8') > adapter.maxBytes)
+    throw Error('The combined instruction file exceeds the harness export limit. Nothing was truncated.');
   const next = remove ? null : JSON.stringify({version:1,target:adapter.id,created:old?.created ?? before===null,
     segment,sha256:await sha256(segment)},null,2)+'\n';
   const report = {status:dryRun?'planned':remove?'removed':'installed',target:adapter.id,

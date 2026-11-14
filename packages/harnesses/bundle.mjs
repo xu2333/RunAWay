@@ -1,7 +1,7 @@
-import {getAdapter, makeExport} from './index.mjs';
+import {adapters, getAdapter, makeExport} from './index.mjs';
 import {zipFiles} from './zip.mjs';
 
-export const SOURCE_FILES = ['index.mjs','codex.mjs','claude-code.mjs','antigravity.mjs','install.mjs'];
+export const SOURCE_FILES = ['index.mjs','install.mjs',...adapters.map(adapter=>adapter.id+'.mjs')];
 export async function makeBundle(target, text, sourceFiles) {
   if (!sourceFiles || SOURCE_FILES.some(name => typeof sourceFiles[name] !== 'string' || !sourceFiles[name].trim()))
     throw Error('Local installer source is missing.');
