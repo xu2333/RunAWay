@@ -23,5 +23,5 @@ try{
     await render('android/app/src/main/res/mipmap-'+density+'/ic_launcher_foreground.png',size*2.25);
   }
   for(const dir of await readdir(path.join(root,'android/app/src/main/res')))if(/^drawable-(land|port)-/.test(dir))await rm(path.join(root,'android/app/src/main/res',dir),{recursive:true});
-  await rm(path.join(root,'android/app/src/main/res/drawable/splash.png'));
+  await rm(path.join(root,'android/app/src/main/res/drawable/splash.png'),{force:true});
 }finally{await browser.close();}
