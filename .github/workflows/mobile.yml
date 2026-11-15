@@ -126,5 +126,6 @@ jobs:
         with:
           name: runaway-ios-native-test-results
           path: |
+            apps/mobile/build/simulator-before-test.png
             apps/mobile/build/NativeFiles.xcresult
             apps/mobile/build/ios-native-roundtrip.json

@@ -30,7 +30,13 @@ runtime, device = max(candidates, key=lambda item: (item[1]['state'] == 'Booted'
 print(json.dumps({'selected_device': device['name'], 'runtime': runtime, 'udid': device['udid'], 'host_arch': platform.machine(), 'physical_device': False}), flush=True)
 if device['state'] != 'Booted':
     call('boot', device['udid'])
+# bootstatus alone did not establish a usable UI session: the first hosted
+# run failed before any test with an AX-loaded notification timeout. Start
+# the Simulator host explicitly; the unchanged XCTest still decides success.
+subprocess.run(['open', '-a', 'Simulator', '--args', '-CurrentDeviceUDID', device['udid']], check=True, timeout=30)
 subprocess.run(['xcrun', 'simctl', 'bootstatus', device['udid'], '-b'], check=True, timeout=420)
+Path('build').mkdir(exist_ok=True)
+subprocess.run(['xcrun', 'simctl', 'io', device['udid'], 'screenshot', 'build/simulator-before-test.png'], check=True, timeout=60)
 with Path(os.environ['GITHUB_ENV']).open('a') as stream:
     stream.write('RUNAWAY_SIMULATOR=' + device['udid'] + '\n')
 print(json.dumps({'device': device['name'], 'runtime': runtime, 'udid': device['udid'], 'physical_device': False}))
