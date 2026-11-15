@@ -1,14 +1,12 @@
 # RunAWay
 
-**Your taste, to go.** 把你的经历，变成带得走的 taste。
+**Your taste, to go.** 把真实对话中的选择、条件和例外，变成带得走的 prompt。
 
-Turn resumes, experiences and agent conversations into a portable prompt for how you choose and judge. Keep the evidence, conditions and uncertainty—then inspect and correct what the model infers.
+**Paste a conversation → review your prompt → use it in Codex or Claude Code.**
 
-**Your history → an editable profile → a prompt for any LLM.**
+Experimental: **real-person fidelity is unverified**. A prompt is a revisable hypothesis about your preferences, not an identity or permission to act.
 
-## Try it
-
-**Browser app:** paste an experience, bring back a result from an LLM you already use, then take away your prompt and a shareable “my operating manual.” Optionally hold out a real choice to compare ordinary AI with your personalized prompt. No API key or build step.
+## Try it locally
 
 ```sh
 git clone https://github.com/xu2333/RunAWay.git
@@ -16,23 +14,12 @@ cd RunAWay
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open **http://127.0.0.1:8080**. Visit **/choices.html** to try your prompt on a concrete choice and download private feedback; **/timeline.html** to preserve changes and retractions, or **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts; **/theater.html** pairs them in 8 short scenes. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
+Open **http://127.0.0.1:8080**:
 
-**Local mobile prototype:** iOS/Android app with local file import, private archives and one-tap Codex / Claude Code / Antigravity export packages. [Build, privacy & harness setup](docs/local-mobile.md).
+1. Paste a real conversation, including your corrections and who said what.
+2. Copy the extraction request to an LLM you already use, then bring back its JSON.
+3. Review the evidence, conditions and unknowns. Copy the resulting prompt into a new Codex or Claude Code session, or use the [project-file setup](QUICKSTART.md#attach-to-a-project).
 
-## Make it yours
+The browser does not automatically scan or upload your history. Sending the request to your chosen model is your own explicit step. Keep private archives private.
 
-Prefer the terminal? Try the experimental single-pass encoder with Python 3.9+, a logged-in Codex CLI and an available model:
-
-```sh
-python3 -B scripts/try_memory.py generate --input experience.txt --backend codex \
-  --model YOUR_MODEL --out my-taste
-```
-
-Inspect `my-taste/candidate/prompt.md`, then copy it into a chat or attach it to Codex, Claude Code, OpenCode and other harnesses. [One-call trial, offline example & manual import](docs/try-memory.md). Use `build` for the longer editable-profile workflow.
-
-Experimental: [finite constraints](docs/source-constraints.md) · [condition-aware memory preparation/import](docs/experimental-memory.md).
-
-Browser feedback is shared only when you choose to submit it. CLI generation sends selected input to its backend. Fidelity to real personal choices remains unverified.
-
-[Latest regression results & losses](REGRESSION-PROGRESS.md) · [Real-scenario results & limits](REAL-SCENARIO-PILOT.md) · [Temporal memory route](TEMPORAL-MEMORY.md) · [Automatic compression metric](SYNTHETIC-METRIC.md) · [Bound-memory prototype](BOUND-MEMORY.md) · [Full guide & harness setup](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)
+[What has actually been shown](RESULTS.md) · [Full guide](QUICKSTART.md) · [Contributing](CONTRIBUTING.md) · [MIT License](LICENSE)
