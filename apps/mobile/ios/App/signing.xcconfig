@@ -1,0 +1,3 @@
+// Public defaults. Owner-specific signing settings are optional and gitignored.
+RUNAWAY_BUNDLE_IDENTIFIER = io.runaway.taste
+#include? "../../../../.runaway/ios-personal-signing.xcconfig"

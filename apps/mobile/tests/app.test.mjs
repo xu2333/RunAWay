@@ -8,7 +8,7 @@ import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {chromium} from 'playwright-core';
 
-test('mobile viewport: local import, evidence review, three ZIP exports and archive restore without egress',async t=>{
+test('mobile viewport: local import, evidence review, three ZIP exports and archive restore without egress',{timeout:90000},async t=>{
   const root=fileURLToPath(new URL('../dist/',import.meta.url)),temp=await mkdtemp(path.join(os.tmpdir(),'runaway-mobile-ui-'));
   const server=createServer(async(req,res)=>{
     try{const url=new URL(req.url,'http://localhost'),name=url.pathname==='/'?'index.html':url.pathname.slice(1);
@@ -17,9 +17,9 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
     }catch{res.writeHead(500);res.end();}
   });
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  t.after(async()=>{await new Promise(resolve=>server.close(resolve));await rm(temp,{recursive:true,force:true});});
-  const browser=await chromium.launch({headless:true,...(process.env.RUNAWAY_CHROME?{executablePath:process.env.RUNAWAY_CHROME}:{})});
-  t.after(()=>browser.close());
+  let browser=null;
+  t.after(async()=>{server.closeAllConnections();if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));await rm(temp,{recursive:true,force:true});});
+  browser=await chromium.launch({headless:true,...(process.env.RUNAWAY_CHROME?{executablePath:process.env.RUNAWAY_CHROME}:{})});
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,acceptDownloads:true});
   const page=await context.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
   const origin='http://127.0.0.1:'+server.address().port;

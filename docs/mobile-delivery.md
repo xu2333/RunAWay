@@ -28,8 +28,26 @@ explicit owner choice and use their own policies.
 Apple signing identity and provisioning before it can be installed or used for
 TestFlight. An unsigned IPA is not a working TestFlight invitation.
 
-For local development, open `apps/mobile/ios/App/App.xcodeproj` with full Xcode,
-select your signing team for the App target, and run on your paired iPhone.
+For a normal Apple ID, install full Xcode from Apple and complete its first-launch
+setup, then run:
+
+```sh
+cd apps/mobile
+npm ci
+npm run ios:personal
+```
+
+This builds and syncs the app, prepares a stable unique local bundle identifier
+and opens the Xcode project. Sign in yourself under Xcode > Settings > Accounts,
+select your Personal Team under App > Signing & Capabilities, connect and pair
+your iPhone, choose it as the run destination and press Run. Complete any device
+trust or Developer Mode steps yourself. The helper neither creates credentials
+nor signs or installs the app.
+
+The bundle identifier and optional Team ID live only in the ignored
+`.runaway/ios-personal-signing.xcconfig`; keep this file to preserve the same app
+identity. An optional `node prepare-personal-signing.mjs --team-id TEAMID` records
+the team identifier shown in Xcode. Never provide a password, key or certificate.
 TestFlight distribution requires the corresponding Apple Developer/App Store
 Connect setup. Credentials and signing material stay outside the public repo.
 

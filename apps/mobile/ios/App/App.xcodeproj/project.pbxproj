@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0000000000000000000001 /* signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = signing.xcconfig; sourceTree = SOURCE_ROOT; };
 		AA0000000000000000000006 /* RunAWayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunAWayViewController.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* SaveDocumentPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDocumentPlugin.swift; sourceTree = "<group>"; };
 		AA0000000000000000000002 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				958DCC722DB07C7200EA8C5F /* debug.xcconfig */,
+				CC0000000000000000000001 /* signing.xcconfig */,
 				504EC3061FED79650016851F /* App */,
 				BB0000000000000000000004 /* AppUITests */,
 				504EC3051FED79650016851F /* Products */,
@@ -340,7 +342,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RUNAWAY_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -350,6 +352,7 @@
 		};
 		504EC3181FED79650016851F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0000000000000000000001 /* signing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RUNAWAY_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
