@@ -49,7 +49,14 @@ final class LocalFilesUITests: XCTestCase {
         let cancel = app.descendants(matching: .any)
             .matching(NSPredicate(format: "label == %@", "Cancel")).firstMatch
         XCTAssertTrue(cancel.waitForExistence(timeout: 30), "System document picker did not open")
-        cancel.tap()
+        // iOS 18's picker exposes this visible control as an Other whose AX
+        // scroll action fails. Tap the observed frame, without asking AX to
+        // scroll it; dismissal and a subsequent successful save are required.
+        let cancelFrame = cancel.frame
+        XCTAssertFalse(cancelFrame.isEmpty, "Native Cancel has no visible frame")
+        XCTAssertTrue(app.frame.contains(cancelFrame), "Native Cancel is outside the app window")
+        app.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: cancelFrame.midX, dy: cancelFrame.midY)).tap()
         let cancelled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: cancel)
         wait(for: [cancelled], timeout: 30)
 
