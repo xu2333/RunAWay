@@ -43,16 +43,21 @@ final class LocalFilesUITests: XCTestCase {
         let saveArchive = app.buttons["保存私有档案"]
         reveal(saveArchive)
         saveArchive.tap()
-        let cancel = app.buttons["Cancel"].firstMatch
-        XCTAssertTrue(cancel.waitForExistence(timeout: 15), "System document picker did not open")
+        // The system export picker exposes Cancel as an Other on iOS 18.6,
+        // rather than a Button. Match its exact native accessibility label.
+        let cancel = app.descendants(matching: .any)
+            .matching(NSPredicate(format: "label == %@", "Cancel")).firstMatch
+        XCTAssertTrue(cancel.waitForExistence(timeout: 30), "System document picker did not open")
         cancel.tap()
+        let cancelled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: cancel)
+        wait(for: [cancelled], timeout: 30)
 
         // A cancelled save must release the pending call so the next save works.
         reveal(saveArchive)
         saveArchive.tap()
         let save = app.buttons["Save"].firstMatch
-        XCTAssertTrue(save.waitForExistence(timeout: 15))
-        XCTAssertTrue(save.isEnabled)
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND enabled == true"), object: save)
+        wait(for: [ready], timeout: 30)
         save.tap()
         let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: save)
         wait(for: [dismissed], timeout: 15)
