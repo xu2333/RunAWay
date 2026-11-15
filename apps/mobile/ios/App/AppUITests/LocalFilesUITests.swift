@@ -36,7 +36,8 @@ final class LocalFilesUITests: XCTestCase {
 
     func testNativeSaveCancelSaveAndReopenPrivateArchive() throws {
         let demo = app.buttons["试试虚构示例"]
-        XCTAssertTrue(demo.waitForExistence(timeout: 20))
+        let started = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND enabled == true"), object: demo)
+        wait(for: [started], timeout: 30)
         demo.tap()
         XCTAssertTrue(app.staticTexts["纸上谈兵行动派"].waitForExistence(timeout: 20))
 

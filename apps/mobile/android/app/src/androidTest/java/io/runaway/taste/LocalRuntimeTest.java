@@ -55,7 +55,7 @@ public class LocalRuntimeTest {
     @Test
     public void bundledAppCanValidateFictionalProfileAndReachNativeSaveBridge() throws Exception {
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
-            await(scenario, "document.querySelectorAll('[data-harness]').length === 3");
+            await(scenario, "document.querySelectorAll('[data-harness]').length === 3 && !document.getElementById('demo').disabled");
             assertEquals("true", js(scenario, "Boolean(window.isSecureContext && crypto.subtle && crypto.randomUUID)"));
             assertEquals("true", js(scenario, "Boolean(window.Capacitor.isNativePlatform() && typeof window.Capacitor.Plugins.SaveDocument.save === 'function')"));
             js(scenario, "document.getElementById('demo').click()");
@@ -69,7 +69,7 @@ public class LocalRuntimeTest {
         UiDevice device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
             try {
-                await(scenario, "document.querySelectorAll('[data-harness]').length === 3");
+                await(scenario, "document.querySelectorAll('[data-harness]').length === 3 && !document.getElementById('demo').disabled");
                 js(scenario, "document.getElementById('demo').click()");
                 await(scenario, "!document.getElementById('result-panel').hidden");
                 String expected = js(scenario, "document.getElementById('prompt').value");

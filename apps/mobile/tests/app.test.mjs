@@ -23,7 +23,16 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,acceptDownloads:true});
   const page=await context.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
   const origin='http://127.0.0.1:'+server.address().port;
-  await page.goto(origin);await page.locator('#demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
+  let releaseStartup;
+  const startupGate=new Promise(resolve=>{releaseStartup=resolve;});
+  await page.route(origin+'/app.js',async route=>{await startupGate;await route.continue();});
+  await page.goto(origin,{waitUntil:'commit'});
+  try {
+    await page.locator('#demo').waitFor({state:'visible'});
+    for(const id of ['demo','prepare','source-file','archive-file'])assert.equal(await page.locator('#'+id).isDisabled(),true,'First-paint input must wait for its handler: '+id);
+  } finally { releaseStartup(); }
+  await page.waitForLoadState('domcontentloaded');
+  await page.locator('#demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
   assert.equal(await page.locator('[data-harness]').count(),3);
   assert.match(await page.locator('#result-status').textContent(),/虚构/);
   await page.locator('[data-harness="codex"]').click();assert.match(await page.locator('#notice').textContent(),/勾选确认/);
