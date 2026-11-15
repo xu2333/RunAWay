@@ -18,6 +18,8 @@ python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
 
 Open **http://127.0.0.1:8080**. Visit **/choices.html** to try your prompt on a concrete choice and download private feedback; **/timeline.html** to preserve changes and retractions, or **/gallery.html** for 700 original synthetic characters, share cards and fictional role prompts; **/theater.html** pairs them in 8 short scenes. [Browser guide & data handling](WEB.md) · [700-character catalogue](OUTPUTS.md).
 
+**Local mobile prototype:** iOS/Android app with local file import, private archives and one-tap Codex / Claude Code / Antigravity export packages. [Build, privacy & harness setup](docs/local-mobile.md).
+
 ## Make it yours
 
 Prefer the terminal? Try the experimental single-pass encoder with Python 3.9+, a logged-in Codex CLI and an available model:

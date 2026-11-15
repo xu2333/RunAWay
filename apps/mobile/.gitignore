@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.log
+android/.gradle/
+android/local.properties
+android/captures/
+android/**/build/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/Pods/
+ios/App/build/
+ios/App/DerivedData/
+ios/App/**/xcuserdata/
+ios/App/**/.build/
+ios/App/**/.swiftpm/
