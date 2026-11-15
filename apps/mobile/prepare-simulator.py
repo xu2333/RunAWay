@@ -36,7 +36,13 @@ if device['state'] != 'Booted':
 subprocess.run(['open', '-a', 'Simulator', '--args', '-CurrentDeviceUDID', device['udid']], check=True, timeout=30)
 subprocess.run(['xcrun', 'simctl', 'bootstatus', device['udid'], '-b'], check=True, timeout=420)
 Path('build').mkdir(exist_ok=True)
-subprocess.run(['xcrun', 'simctl', 'io', device['udid'], 'screenshot', 'build/simulator-before-test.png'], check=True, timeout=60)
+# A screenshot is a diagnostic, not the UI readiness test. Hosted simctl can
+# stall while capturing it even after boot. Keep that failure visible without
+# preventing the mandatory XCTest and independent saved-file check from running.
+try:
+    subprocess.run(['xcrun', 'simctl', 'io', device['udid'], 'screenshot', 'build/simulator-before-test.png'], check=True, timeout=60)
+except (subprocess.TimeoutExpired, subprocess.CalledProcessError) as error:
+    print('::warning::Pre-test screenshot unavailable: ' + str(error), flush=True)
 with Path(os.environ['GITHUB_ENV']).open('a') as stream:
     stream.write('RUNAWAY_SIMULATOR=' + device['udid'] + '\n')
 print(json.dumps({'device': device['name'], 'runtime': runtime, 'udid': device['udid'], 'physical_device': False}))
