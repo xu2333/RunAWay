@@ -39,6 +39,7 @@ public class SaveDocumentPlugin: CAPPlugin, CAPBridgedPlugin, UIDocumentPickerDe
                 try data.write(to: file, options: .atomic)
                 let picker = UIDocumentPickerViewController(forExporting: [file], asCopy: true)
                 picker.delegate = self
+                picker.directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 picker.modalPresentationStyle = .formSheet
                 controller.present(picker, animated: true)
             } catch {

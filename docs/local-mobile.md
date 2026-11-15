@@ -111,3 +111,5 @@ The APK and simulator archive are workflow artifacts, not store releases.
 iPhone device distribution/TestFlight requires signing; simulator output cannot
 be installed on an iPhone. Physical-device file pick/save and real harness
 loading remain release checks. No new model calls are part of this work.
+
+[Native file roundtrip checks, device builds and signing](mobile-delivery.md).

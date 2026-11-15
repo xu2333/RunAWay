@@ -2,6 +2,14 @@ package io.runaway.taste;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.uiautomator.By;
+import androidx.test.uiautomator.UiDevice;
+import androidx.test.uiautomator.UiObject2;
+import androidx.test.uiautomator.Until;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+import java.util.regex.Pattern;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
@@ -29,6 +37,14 @@ public class LocalRuntimeTest {
         }
         fail("Bundled app did not reach the expected state");
     }
+    private void tapFileInput(ActivityScenario<MainActivity> scenario, UiDevice device) throws Exception {
+        String encoded = js(scenario, "(() => { const e=document.getElementById('archive-file'); e.scrollIntoView({block:'center'}); const r=e.getBoundingClientRect(); return JSON.stringify({x:r.x+r.width/2,y:r.y+r.height/2,scale:devicePixelRatio}); })()");
+        JSONObject point = new JSONObject((String) new JSONTokener(encoded).nextValue());
+        int[] offset = new int[2];
+        scenario.onActivity(activity -> activity.getBridge().getWebView().getLocationOnScreen(offset));
+        device.click(offset[0] + (int) (point.getDouble("x") * point.getDouble("scale")),
+                     offset[1] + (int) (point.getDouble("y") * point.getDouble("scale")));
+    }
     @Test
     public void bundledAppCanValidateFictionalProfileAndReachNativeSaveBridge() throws Exception {
         try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
@@ -39,6 +55,51 @@ public class LocalRuntimeTest {
             await(scenario, "!document.getElementById('result-panel').hidden");
             assertEquals("true", js(scenario, "document.getElementById('prompt').value.length > 100 && document.querySelectorAll('#evidence .claim').length > 0"));
             assertEquals("true", js(scenario, "document.getElementById('result-status').textContent.includes('虚构')"));
+        }
+    }
+    @Test
+    public void systemPickerCanCancelSaveAndReopenPrivateArchive() throws Exception {
+        UiDevice device = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            await(scenario, "document.querySelectorAll('[data-harness]').length === 3");
+            js(scenario, "document.getElementById('demo').click()");
+            await(scenario, "!document.getElementById('result-panel').hidden");
+            String expected = js(scenario, "document.getElementById('prompt').value");
+            js(scenario, "document.getElementById('save-private').click()");
+            UiObject2 save = device.wait(Until.findObject(By.text(Pattern.compile("(?i)^save$"))), 15000);
+            assertNotNull("System save picker did not appear", save);
+            device.pressBack();
+            await(scenario, "document.getElementById('notice').textContent.includes('已取消保存')");
+
+            js(scenario, "document.getElementById('save-private').click()");
+            save = device.wait(Until.findObject(By.text(Pattern.compile("(?i)^save$"))), 15000);
+            assertNotNull("Save after cancellation did not open", save);
+            save.click();
+            await(scenario, "document.getElementById('notice').textContent.includes('系统已完成文件保存')");
+
+            js(scenario, "document.getElementById('clear').click()");
+            UiObject2 confirm = device.wait(Until.findObject(By.res("android", "button1")), 5000);
+            assertNotNull("Clear confirmation did not open", confirm);
+            confirm.click();
+            await(scenario, "!document.getElementById('source-panel').hidden && document.getElementById('source').value === ''");
+            tapFileInput(scenario, device);
+            UiObject2 archive = device.wait(Until.findObject(By.text("runaway.private.json")), 8000);
+            if (archive == null) {
+                UiObject2 roots = device.findObject(By.desc("Show roots"));
+                if (roots != null) roots.click();
+                UiObject2 downloads = device.wait(Until.findObject(By.text("Downloads")), 5000);
+                if (downloads != null) downloads.click();
+                archive = device.wait(Until.findObject(By.text("runaway.private.json")), 8000);
+            }
+            assertNotNull("Saved archive was not visible to the system open picker", archive);
+            archive.click();
+            await(scenario, "!document.getElementById('result-panel').hidden");
+            assertEquals(expected, js(scenario, "document.getElementById('prompt').value"));
+            assertEquals("true", js(scenario, "document.getElementById('result-status').textContent.includes('虚构')"));
+        } finally {
+            // Only fictional demo content exists on this fresh CI emulator.
+            device.dumpWindowHierarchy(new java.io.File(InstrumentationRegistry.getInstrumentation()
+                .getTargetContext().getExternalFilesDir(null), "native-picker-window.xml"));
         }
     }
 }
