@@ -14,7 +14,7 @@ Only after this gate should a frozen candidate be compared with full history. Me
 
 ## One local preference ledger
 
-The current choice downloader records whole-prompt feedback. The timeline records preference events and retractions. They do not yet provide per-preference usage statistics. Connecting them requires an explicit attribution record, rather than spreading one outcome across every rule.
+The current choice downloader records whole-prompt feedback. The timeline records preference events and retractions. The local ledger at `web/dist/ledger.html` now joins a validated timeline artifact and portable prompt to a validated private choice trial. Owners select an active preference and explicitly attribute an adopted/corrected/unresolved outcome. It supports file save/restore, deduplication, conflicting feedback, per-version counts and context inspection. It does not yet support ordinary profile claims or automatic prompt revision.
 
 The minimal append-only record binds:
 
