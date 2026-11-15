@@ -33,7 +33,7 @@ if device['state'] != 'Booted':
 # bootstatus alone did not establish a usable UI session: the first hosted
 # run failed before any test with an AX-loaded notification timeout. Start
 # the Simulator host explicitly; the unchanged XCTest still decides success.
-subprocess.run(['open', '-a', 'Simulator', '--args', '-CurrentDeviceUDID', device['udid']], check=True, timeout=30)
+subprocess.run(['open', '-a', 'Simulator', '--args', '-CurrentDeviceUDID', device['udid']], check=True, timeout=120)
 subprocess.run(['xcrun', 'simctl', 'bootstatus', device['udid'], '-b'], check=True, timeout=420)
 Path('build').mkdir(exist_ok=True)
 # A screenshot is a diagnostic, not the UI readiness test. Hosted simctl can
