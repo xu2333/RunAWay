@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "study": "real-correction-signal-v1",
+  "scope": "one retrospectively selected previously consumed real writing episode",
+  "attempt_cap": 3,
+  "attempted": 3,
+  "completed": 3,
+  "status": "closed_completed",
+  "model_requested": "gpt-6.1-sol",
+  "resolved_model": null,
+  "independent_cases": 1,
+  "conditions": [
+    {
+      "condition": "no_history",
+      "strict_hit": false,
+      "input_tokens": 13389,
+      "output_tokens": 370,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 20.927
+    },
+    {
+      "condition": "available_session_history",
+      "strict_hit": false,
+      "input_tokens": 33703,
+      "output_tokens": 212,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 10.599
+    },
+    {
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "input_tokens": 13431,
+      "output_tokens": 274,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 14.264
+    }
+  ],
+  "reported_total_tokens": 61379,
+  "grading": "manual application of pre-frozen conjunctive rubric; not blind or independently graded",
+  "conclusion": "no demonstrated available-session-history advantage; no compression comparison",
+  "limitations": [
+    "incomplete prior article context",
+    "single consumed episode selected after seeing its correction",
+    "generic advice written by a designer aware of the target",
+    "each condition sampled only once",
+    "public aggregates do not permit independent rescoring of private source text"
+  ]
+}
