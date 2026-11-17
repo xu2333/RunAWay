@@ -15,6 +15,8 @@ RunAWay can turn selected experiences into an editable, evidence-linked prompt. 
 
 A post-hoc length-only audit agrees with PRISM ratings on 32/40 prepared questions and 3/4 pilot questions. This is a confound warning, not a preregistered model baseline. Repeated reads and option orders do not create more people or independent episodes.
 
+An [offline history audit](docs/results/real-correction-history-audit-v3.md) found incomplete evidence citations but no corresponding omission from the four actual history inputs. It separates competing priorities and newly clarified boundaries from demonstrated forgetting, and records why several additional candidates fail the stricter no-current-cue screen. One stronger candidate remains untested; no new model calls were made.
+
 ## The next evidence must come from real use
 
 1. Freeze real agent episodes with actual user corrections, preserving their original conditions and chronology. Keep later decisions outside the historical input.
