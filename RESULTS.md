@@ -8,6 +8,7 @@ RunAWay can turn selected experiences into an editable, evidence-linked prompt. 
 | --- | --- | --- |
 | Published PRISM pilot: 2 actual people, 4 later questions | Full history, no history, own card and wrong-person card all chose the same answers: 3/4 distinct questions correct, or 6/8 with two option orders | No demonstrated personalization gain; equal scores do not establish compression fidelity |
 | Real writing-correction diagnostic: 1 consumed episode | Current task, available history and generic advice each score 0/1 under the frozen strict rubric; 61,379 reported tokens | No demonstrated history advantage; incomplete prior article context and target-aware study design limit interpretation |
+| Four additional real creative-work corrections | History: 0 confirmed + 1 ambiguous / 4; current task and generic advice: 0/4 each; 129,250 reported tokens | One unresolved contextual-use signal; no confirmed strict history gain, no compression comparison |
 | Finite synthetic worlds | Several compression/reader pipelines preserve authored choices; others lose aliases, conditions or known choices | Useful regression and failure-localization tests; not real-person validation |
 | Latest source-domain study | Both methods retain 94/94 authored cases, with no observed recovery or new loss; 749,984 reported service tokens | A measured null comparison on consumed development material, not evidence of user benefit |
 | File and harness tooling | Local checks cover artifact integrity and managed project-file exports | Mechanical integrity; not proof that every harness loads a prompt or that models make the same decisions |
@@ -23,6 +24,6 @@ A post-hoc length-only audit agrees with PRISM ratings on 32/40 prepared questio
 
 The initial real-use study can be a clearly labeled single-person pilot. Generalization and a prospective holdout remain separate requirements. No new model experiment is authorized by this plan.
 
-[Real correction diagnostic](docs/results/real-correction-signal-v1.md) · [Real pilot and limits](REAL-SCENARIO-PILOT.md) · [Synthetic failures and costs](REGRESSION-PROGRESS.md) · [Real-use protocol and feedback-ledger contract](docs/real-user-plan.md)
+[Four-case follow-up](docs/results/real-correction-music-v2.md) · [Real correction diagnostic](docs/results/real-correction-signal-v1.md) · [Real pilot and limits](REAL-SCENARIO-PILOT.md) · [Synthetic failures and costs](REGRESSION-PROGRESS.md) · [Real-use protocol and feedback-ledger contract](docs/real-user-plan.md)
 
 Historical reports and frozen evidence remain intact; their current locations are retained while references are audited. They are supporting records, not alternative first-time-user routes.

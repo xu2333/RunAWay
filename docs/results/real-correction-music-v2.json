@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "study": "real-correction-music-v2",
+  "status": "closed_completed",
+  "attempt_cap": 12,
+  "attempted": 12,
+  "completed": 12,
+  "unused": 0,
+  "independent_people": 1,
+  "projects": 1,
+  "cases": 4,
+  "primary_cases": 2,
+  "exploratory_cases": 2,
+  "model_requested": "gpt-6.1-sol",
+  "resolved_model": null,
+  "rows": [
+    {
+      "case_id": "R2",
+      "group": "primary",
+      "condition": "no_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6719,
+      "output_tokens": 303,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 13.147
+    },
+    {
+      "case_id": "R2",
+      "group": "primary",
+      "condition": "available_text_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 12078,
+      "output_tokens": 230,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 11.071
+    },
+    {
+      "case_id": "R2",
+      "group": "primary",
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "required_facet_results": [
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6754,
+      "output_tokens": 260,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 13.389
+    },
+    {
+      "case_id": "R3",
+      "group": "exploratory",
+      "condition": "no_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6526,
+      "output_tokens": 286,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 15.005
+    },
+    {
+      "case_id": "R3",
+      "group": "exploratory",
+      "condition": "available_text_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 14441,
+      "output_tokens": 222,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 12.903
+    },
+    {
+      "case_id": "R3",
+      "group": "exploratory",
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6561,
+      "output_tokens": 324,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 17.372
+    },
+    {
+      "case_id": "R4",
+      "group": "exploratory",
+      "condition": "no_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": true,
+      "input_tokens": 6534,
+      "output_tokens": 135,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 8.656
+    },
+    {
+      "case_id": "R4",
+      "group": "exploratory",
+      "condition": "available_text_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 23178,
+      "output_tokens": 260,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 14.492
+    },
+    {
+      "case_id": "R4",
+      "group": "exploratory",
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "required_facet_results": [
+        false,
+        false
+      ],
+      "returned_unknown": true,
+      "input_tokens": 6565,
+      "output_tokens": 201,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 10.717
+    },
+    {
+      "case_id": "R5",
+      "group": "primary",
+      "condition": "no_history",
+      "strict_hit": false,
+      "required_facet_results": [
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6598,
+      "output_tokens": 205,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 14.247
+    },
+    {
+      "case_id": "R5",
+      "group": "primary",
+      "condition": "available_text_history",
+      "strict_hit": null,
+      "required_facet_results": [
+        "ambiguous"
+      ],
+      "returned_unknown": false,
+      "input_tokens": 23808,
+      "output_tokens": 217,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 11.028
+    },
+    {
+      "case_id": "R5",
+      "group": "primary",
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "required_facet_results": [
+        false
+      ],
+      "returned_unknown": false,
+      "input_tokens": 6633,
+      "output_tokens": 212,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 10.11
+    }
+  ],
+  "reported_total_tokens": 129250,
+  "score_by_condition": {
+    "no_history": {
+      "confirmed_hits": 0,
+      "ambiguous_hits": 0,
+      "denominator": 4
+    },
+    "available_text_history": {
+      "confirmed_hits": 0,
+      "ambiguous_hits": 1,
+      "denominator": 4
+    },
+    "generic_quality": {
+      "confirmed_hits": 0,
+      "ambiguous_hits": 0,
+      "denominator": 4
+    }
+  },
+  "grading": "Manual descriptive application of frozen facets; not blind or independent. R5 history is unresolved and retained in denominator.",
+  "conclusion": "No confirmed strict history gain; one unresolved qualitative history signal. No compression study started.",
+  "limits": [
+    "retrospective selection with targets known to designer",
+    "one response per condition",
+    "one project; R4 correction is earlier history for R5",
+    "unavailable audio/images not reconstructed",
+    "public aggregates cannot independently establish semantic scores"
+  ]
+}
