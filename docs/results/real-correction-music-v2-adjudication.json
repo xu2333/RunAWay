@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "post_run_owner_clarification_adjudication",
+  "study": "real-correction-music-v2",
+  "original_score_file": "real-correction-music-v2.json",
+  "original_score_sha256": "7f4577d4d437a5a28499dffadc8e3d821d334713c5bf342eac1999e0bd92ff08",
+  "case_id": "R5",
+  "condition": "available_text_history",
+  "original_strict_hit": null,
+  "adjudicated_hit": false,
+  "basis": "Owner clarified the intended objection after seeing the candidate prediction; the assistant determined that the prediction did not match that clarification.",
+  "grading": "Post-hoc, owner-informed assistant adjudication; not an independent blind result.",
+  "adjudicated_totals": {
+    "no_history": {
+      "hits": 0,
+      "ambiguous": 0,
+      "denominator": 4
+    },
+    "available_text_history": {
+      "hits": 0,
+      "ambiguous": 0,
+      "denominator": 4
+    },
+    "generic_quality": {
+      "hits": 0,
+      "ambiguous": 0,
+      "denominator": 4
+    }
+  },
+  "original_frozen_scores_preserved": true,
+  "new_model_calls": 0,
+  "limitation": "Clarification is not evidence that the intended objection was inferable from the original history. It must not be inserted into original inputs or used to relabel a later retry as held out."
+}
