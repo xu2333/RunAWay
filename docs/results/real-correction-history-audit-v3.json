@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study": "real-correction-history-audit-v3",
+  "status": "offline_audit_only",
+  "new_model_calls": 0,
+  "new_model_tokens": 0,
+  "original_study": "real-correction-music-v2",
+  "original_requests_sha256": "8ddd4f662cda4d8c7d0117074c0f3200b4d8d048b5824f0f992734ae25b1618c",
+  "original_scores_modified": false,
+  "input_audit": [
+    {"case_id": "R2", "anchor_turn_user_messages": 2, "reference_cited_messages": 2, "present_in_sent_history": 2, "saved_payload_matches_exact_request": true},
+    {"case_id": "R3", "anchor_turn_user_messages": 8, "reference_cited_messages": 2, "present_in_sent_history": 8, "saved_payload_matches_exact_request": true},
+    {"case_id": "R4", "anchor_turn_user_messages": 7, "reference_cited_messages": 3, "present_in_sent_history": 7, "saved_payload_matches_exact_request": true},
+    {"case_id": "R5", "anchor_turn_user_messages": 2, "reference_cited_messages": 2, "present_in_sent_history": 2, "saved_payload_matches_exact_request": true}
+  ],
+  "message_counts_are_independent_preferences": false,
+  "new_candidate_count": 1,
+  "new_candidate_validated_history_benefit": null,
+  "new_candidate_executed": false,
+  "screening_exhaustive": false,
+  "screening_acceptance_rate": null,
+  "private_source_semantics_publicly_reproducible": false,
+  "limits": [
+    "Public counts support consistency checks, not independent semantic regrading of private conversations.",
+    "Observed context use does not establish why a different priority was selected.",
+    "New candidate is a target-aware retrospective development episode, not a holdout.",
+    "Selected prior evidence is a manual diagnostic and cannot count as full-history benefit.",
+    "No new model calls or compression comparison."
+  ]
+}
