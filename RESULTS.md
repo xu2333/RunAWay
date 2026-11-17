@@ -20,7 +20,7 @@ An [offline history audit](docs/results/real-correction-history-audit-v3.md) fou
 
 ## The next evidence must come from real use
 
-1. Freeze real agent episodes with actual user corrections, preserving their original conditions and chronology. Keep later decisions outside the historical input.
+1. Freeze real tasks with explicit earlier owner constraints, preserving their original conditions and chronology. Check actual deliverables, not forecasts of later criticism. The [task-delivery gate](docs/real-task-history.md) is implemented offline; no new service results yet.
 2. First test whether full history improves on no personal history. If that comparison has no useful signal, stop before running compression comparisons.
 3. On qualifying episodes, compare the portable prompt with full history, count both recovered choices and new losses, and report cost. A 768-character target is not an acceptance requirement.
 4. Keep a local ledger of which preference/version was accepted or corrected in which situation. Do not infer per-rule credit from whole-prompt feedback, or treat adoption as factual correctness.
