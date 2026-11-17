@@ -77,6 +77,8 @@ class FrozenHistoryTests(unittest.TestCase):
         self.assertFalse(set(current) & set(historical))
         self.assertIn('test_taste_executor', current)
         self.assertIn('test_frozen_history', current)
+        self.assertIn('test_real_task_history', current)
+        self.assertNotIn('test_real_task_history', historical)
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             (root / 'tests').mkdir()
@@ -96,6 +98,8 @@ class FrozenHistoryTests(unittest.TestCase):
 
     def test_snapshot_keeps_original_bytes_and_leaves_live_source_and_evidence_unchanged(self):
         live = (ROOT / history.EXECUTOR).read_bytes()
+        current_only = ROOT / 'runaway/real_task_history.py'
+        task_bytes = current_only.read_bytes()
         evidence = Path('benchmarks/source-id-enum-repeat-v1/measured.synthetic.json')
         with history.snapshot() as root:
             self.assertEqual(history.sha(root / history.EXECUTOR), history.ORIGINAL_SHA256)
@@ -103,9 +107,11 @@ class FrozenHistoryTests(unittest.TestCase):
             self.assertEqual((root / evidence).read_bytes(), (ROOT / evidence).read_bytes())
             self.assertEqual((root / 'runaway/card.py').read_bytes(), (ROOT / 'runaway/card.py').read_bytes())
             self.assertFalse((root / '.git').exists())
+            self.assertFalse((root / 'runaway/real_task_history.py').exists())
             (root / history.EXECUTOR).write_text('discarded temporary change')
         self.assertFalse(root.exists())
         self.assertEqual((ROOT / history.EXECUTOR).read_bytes(), live)
+        self.assertEqual(current_only.read_bytes(), task_bytes)
 
     def test_changed_snapshot_or_override_is_rejected(self):
         with tempfile.TemporaryDirectory() as temp:

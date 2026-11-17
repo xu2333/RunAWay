@@ -4,7 +4,7 @@ This is an offline development plan, not a completed study or a model-call grant
 
 ## First establish useful personal signal
 
-Use actual conversations in which a user corrected an agent's proposed action or judgment. Preserve the earlier situation, available options and the user's later decision. A correction can be a task requirement or a preference change; it is not automatically a stable personal trait.
+Use actual conversations in which a user stated or corrected a requirement. The next [implemented task-delivery gate](real-task-history.md) checks whether a real deliverable respects an earlier applicable constraint, rather than asking a model to guess the next criticism. Preserve the original situation and distinguish task requirements from stable personal traits. Earlier correction-prediction diagnostics remain separate evidence.
 
 Before execution, freeze the selection criteria, source hashes, chronological cutoff, target decision, ambiguity annotations and generic-quality controls. Put original private text and consent records outside the public repository. Neither the extractor nor reader receives the target correction, reference labels or feedback from a previous evaluation attempt on that target. Referenced artifacts needed to understand a decision must be explicitly selected, not silently fetched by an agent.
 
