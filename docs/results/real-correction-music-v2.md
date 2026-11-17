@@ -1,5 +1,9 @@
 # Four real corrections: one unresolved history signal
 
+> Subsequent owner clarification resolved R5 as a miss. The original frozen
+> scoring below remains intact; the owner-informed post-hoc totals are 0/4 for
+> all three conditions. See the [separate adjudication](real-correction-music-v2-adjudication.md).
+
 Twelve calls completed on four additional real creative-work episodes. Available
 text history produced **0 confirmed strict hits and 1 ambiguous case out of 4**;
 current-task-only and generic advice each produced **0/4**. The ambiguous case
