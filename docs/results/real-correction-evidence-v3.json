@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "study": "real-correction-evidence-v3",
+  "status": "closed_completed",
+  "attempt_cap": 4,
+  "attempted": 4,
+  "completed": 4,
+  "remaining": 0,
+  "independent_people": 1,
+  "projects": 1,
+  "cases": 1,
+  "model_requested": "gpt-6.1-sol",
+  "resolved_model": null,
+  "primary_conditions": [
+    "no_history",
+    "available_text_history",
+    "generic_quality"
+  ],
+  "diagnostic_only": [
+    "selected_prior_evidence"
+  ],
+  "rows": [
+    {
+      "case_id": "R7",
+      "condition": "no_history",
+      "strict_hit": false,
+      "facet_results": [
+        false,
+        false
+      ],
+      "ambiguous_facet": false,
+      "input_tokens": 8388,
+      "output_tokens": 255,
+      "elapsed_seconds": 13.72,
+      "resolved_model": null
+    },
+    {
+      "case_id": "R7",
+      "condition": "available_text_history",
+      "strict_hit": false,
+      "facet_results": [
+        false,
+        false
+      ],
+      "ambiguous_facet": false,
+      "input_tokens": 128876,
+      "output_tokens": 268,
+      "elapsed_seconds": 21.22,
+      "resolved_model": null
+    },
+    {
+      "case_id": "R7",
+      "condition": "generic_quality",
+      "strict_hit": false,
+      "facet_results": [
+        false,
+        false
+      ],
+      "ambiguous_facet": false,
+      "input_tokens": 8421,
+      "output_tokens": 312,
+      "elapsed_seconds": 18.109,
+      "resolved_model": null
+    },
+    {
+      "case_id": "R7",
+      "condition": "selected_prior_evidence",
+      "strict_hit": false,
+      "facet_results": [
+        true,
+        null
+      ],
+      "ambiguous_facet": true,
+      "input_tokens": 8461,
+      "output_tokens": 160,
+      "elapsed_seconds": 10.642,
+      "resolved_model": null
+    }
+  ],
+  "totals": {
+    "no_history": {
+      "confirmed_strict_hits": 0,
+      "denominator": 1,
+      "matched_facets": 0,
+      "unresolved_facets": 0
+    },
+    "available_text_history": {
+      "confirmed_strict_hits": 0,
+      "denominator": 1,
+      "matched_facets": 0,
+      "unresolved_facets": 0
+    },
+    "generic_quality": {
+      "confirmed_strict_hits": 0,
+      "denominator": 1,
+      "matched_facets": 0,
+      "unresolved_facets": 0
+    },
+    "selected_prior_evidence": {
+      "confirmed_strict_hits": 0,
+      "denominator": 1,
+      "matched_facets": 1,
+      "unresolved_facets": 1
+    }
+  },
+  "reported_input_tokens": 154146,
+  "reported_output_tokens": 995,
+  "reported_total_tokens": 155141,
+  "history_messages": 1144,
+  "shared_current_messages": 34,
+  "diagnostic_prior_messages": 2,
+  "full_history_gain_established": false,
+  "compression_comparison_started": false,
+  "grading": "target-aware non-blind manual scoring; partial and unresolved facets are not strict hits",
+  "public_semantic_regrading_possible": false
+}

@@ -1,5 +1,10 @@
 # Why the available history did not help
 
+> This preserves the offline intake snapshot. The retained candidate was
+> subsequently tested under a separate four-call authorization; see the
+> [completed diagnostic](real-correction-evidence-v3.md). The three primary
+> conditions each scored 0/1, and selected prior evidence was partial.
+
 **Real-person fidelity remains unverified.** This is an offline audit of the
 four completed creative-work cases, followed by stricter screening of additional
 real episodes. It adds **zero model calls** and does not alter sealed inputs,
