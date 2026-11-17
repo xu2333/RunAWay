@@ -74,6 +74,14 @@ Ten tests cover leakage, chronology, multi-message context, quality failures,
 unclear/missing outputs, fabricated excerpts, rewritten deliveries and dropped
 schedule slots. They make no service calls and establish no personal benefit.
 
+The first full local run passed 1,149 current-source tests, then exposed a
+historical replay incompatibility: old studies hash the entire Python package
+inventory, so merely adding this module changes their implementation map. The
+historical adapter now omits only this explicitly named, later-added module from
+its disposable old-source tree. The new evaluator and its tests stay in the
+current-source partition. No recorded hash or observation is rewritten; all
+original replay checks still run. Future added modules are not silently excluded.
+
 The proposed private execution is separately manifest-bound: eight maximum
 Codex attempts requesting `gpt-6.1-sol`, 180 seconds per attempt, no token or
 money cap. Transport, output-schema or unknown-usage failure closes the scope;

@@ -1,8 +1,9 @@
 """Run explicitly selected offline historical checks in their original source tree.
 
 Recorded hashes are never translated or regenerated. A temporary source copy
-contains the original, hash-verified executor bytes; every other source and all
-evidence come from the working tree and remain subject to the existing checks.
+contains the original, hash-verified executor bytes. The explicitly named new
+task evaluator is absent from historical package inventories and is tested only
+against current code. All remaining source and evidence retain existing checks.
 This is not an execution/resume path for approved model experiments.
 """
 import argparse
@@ -20,6 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = Path('benchmarks/frozen-history-v1')
 EXECUTOR = 'runaway/taste_executor.py'
 ORIGINAL_SHA256 = '57b7165a596cc731547a804b7b81f2a2c22feaa14b44182f478f222acdebb041'
+# Old studies hash every Python file in runaway/, including the inventory itself.
+# Do not silently exclude future files: each addition needs an explicit review.
+CURRENT_ONLY_MODULES = ('runaway/real_task_history.py',)
 SOURCE_DIRS = ('runaway', 'benchmarks', 'scripts', 'tests', 'examples', 'web',
                'catalog', 'data', 'dashboard', 'docs', '.github')
 
@@ -86,6 +90,10 @@ def snapshot(root=ROOT):
         target.write_bytes((root / ARCHIVE / 'taste_executor.py.txt').read_bytes())
         if sha(target) != ORIGINAL_SHA256:
             raise ValueError('Historical source copy differs')
+        for name in CURRENT_ONLY_MODULES:
+            current_only = destination / name
+            if current_only.exists() or current_only.is_symlink():
+                current_only.unlink()
         yield destination
 
 
