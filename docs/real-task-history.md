@@ -1,6 +1,8 @@
 # Does history change the actual work?
 
-**No new model results yet. Real-person fidelity remains unverified.**
+**Real-person fidelity remains unverified.** The [first completed pilot](results/real-task-history-v1.md)
+found one bounded history benefit in an actual task; its exploratory setting
+constraint showed no advantage.
 
 The previous diagnostics asked a model to predict a later user correction. That
 measures which complaint it selects, not whether it can do useful work while
@@ -18,7 +20,7 @@ to manufacture an advantage, or replace an unavailable media/device task with a
 text proxy. History means all recoverable qualifying visible text before the
 frozen cutoff, not an assertion of complete lifetime or multimodal history.
 
-The first prepared pilot has two tasks from one owner's previously inspected
+The first pilot has two tasks from one owner's previously inspected
 projects. One engineering-plan task is primary. One creative-writing task is
 exploratory because its current subject matter may already suggest the target
 boundary. They are reused retrospective sources, not unseen people or a holdout.
@@ -82,12 +84,13 @@ its disposable old-source tree. The new evaluator and its tests stay in the
 current-source partition. No recorded hash or observation is rewritten; all
 original replay checks still run. Future added modules are not silently excluded.
 
-The proposed private execution is separately manifest-bound: eight maximum
+The completed private pilot was separately manifest-bound: eight maximum
 Codex attempts requesting `gpt-6.1-sol`, 180 seconds per attempt, no token or
 money cap. Transport, output-schema or unknown-usage failure closes the scope;
 there are no retries, resumed runs or replacement slots. The exact private
 requests and execution implementation need owner authorization, and the public
-implementation must pass all required CI checks before execution. Local
+implementation must pass all required CI checks before execution. These gates
+were satisfied before the eight calls; that scope is now closed. Local
 authorization, source text, outputs and machine identifiers stay outside GitHub.
 
 Only an observed history benefit warrants a subsequent, separately authorized

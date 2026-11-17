@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "study": "real-task-history-v1",
+  "status": "closed_completed",
+  "implementation_commit": "d213878488466802dc331ec01504cba672bc3226",
+  "implementation_ci_run": 44149233726,
+  "max_attempts": 8,
+  "attempted": 8,
+  "completed": 8,
+  "remaining": 0,
+  "retries": 0,
+  "model_requested": "gpt-6.1-sol",
+  "resolved_model": null,
+  "independent_people": 1,
+  "projects": 2,
+  "primary_cases": 1,
+  "exploratory_cases": 1,
+  "repeats_per_case_condition": 2,
+  "endpoint": "Both actual deliveries complete the task and satisfy the earlier applicable constraint; missing, unclear and quality-unclear outputs remain in the denominator.",
+  "grading": "Assistant analyst, not independent or blind; frozen earlier-owner references, no later criticism as gold. Exact private output excerpts checked against sealed observations.",
+  "rows": [
+    {
+      "slot": 1,
+      "case_id": "T1",
+      "condition": "no_history",
+      "repeat": 1,
+      "quality_status": "unclear",
+      "quality_pass": false,
+      "target_constraint": "met",
+      "retained": false,
+      "output_characters": 816,
+      "output_sha256": "5e770c19639ef074df31ffd18b59b154b72c7ee8d236f3bbbd5fdfc0089bc302",
+      "input_tokens": 6656,
+      "output_tokens": 975,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 39.806
+    },
+    {
+      "slot": 2,
+      "case_id": "T1",
+      "condition": "available_text_history",
+      "repeat": 1,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "met",
+      "retained": true,
+      "output_characters": 736,
+      "output_sha256": "308a617c43c1a2c4e24f4a08f26304e1424dc2d317f8fbc7c3253f27ff11c251",
+      "input_tokens": 15934,
+      "output_tokens": 835,
+      "cached_input_tokens": 4224,
+      "elapsed_seconds": 40.618
+    },
+    {
+      "slot": 3,
+      "case_id": "T2",
+      "condition": "available_text_history",
+      "repeat": 1,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "met",
+      "retained": true,
+      "output_characters": 978,
+      "output_sha256": "923e2402a82c5ecc14d25b594ccb4baca0b06b1ff8ddc282d3a2c5affeb842f2",
+      "input_tokens": 32453,
+      "output_tokens": 794,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 26.041
+    },
+    {
+      "slot": 4,
+      "case_id": "T2",
+      "condition": "no_history",
+      "repeat": 1,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "unclear",
+      "retained": false,
+      "output_characters": 732,
+      "output_sha256": "8a4ea5503aee4973313244fc87b7b46e8a1b31fc5a5e2baa980fffc02efcfa32",
+      "input_tokens": 6438,
+      "output_tokens": 664,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 28.633
+    },
+    {
+      "slot": 5,
+      "case_id": "T1",
+      "condition": "available_text_history",
+      "repeat": 2,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "met",
+      "retained": true,
+      "output_characters": 723,
+      "output_sha256": "06ac03996f0a0f45c9b965df945a5ef409df13deaa8fd5cc75ef003bbe169f8f",
+      "input_tokens": 15934,
+      "output_tokens": 1027,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 49.719
+    },
+    {
+      "slot": 6,
+      "case_id": "T1",
+      "condition": "no_history",
+      "repeat": 2,
+      "quality_status": "unclear",
+      "quality_pass": false,
+      "target_constraint": "met",
+      "retained": false,
+      "output_characters": 864,
+      "output_sha256": "b6334459b97d139cf93c08879c906f9231ace39b6824a31a6169cfdab880ab12",
+      "input_tokens": 6658,
+      "output_tokens": 1010,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 34.09
+    },
+    {
+      "slot": 7,
+      "case_id": "T2",
+      "condition": "no_history",
+      "repeat": 2,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "unclear",
+      "retained": false,
+      "output_characters": 742,
+      "output_sha256": "5c2515cc5ed7b26ec171afd9c6cfb413427aa7756712fa77736784a40b1d03b7",
+      "input_tokens": 6438,
+      "output_tokens": 655,
+      "cached_input_tokens": 0,
+      "elapsed_seconds": 27.432
+    },
+    {
+      "slot": 8,
+      "case_id": "T2",
+      "condition": "available_text_history",
+      "repeat": 2,
+      "quality_status": "met",
+      "quality_pass": true,
+      "target_constraint": "met",
+      "retained": true,
+      "output_characters": 970,
+      "output_sha256": "22e960111a4eb31ae981f8820b7e27be809badefd3249dcd9abc4dbe5a0dc6e8",
+      "input_tokens": 32453,
+      "output_tokens": 835,
+      "cached_input_tokens": 4224,
+      "elapsed_seconds": 27.354
+    }
+  ],
+  "totals": {
+    "no_history": {
+      "cases": 2,
+      "retained": 0,
+      "units": [
+        {
+          "case_id": "T1",
+          "analysis_role": "exploratory",
+          "retained_all_repeats": false
+        },
+        {
+          "case_id": "T2",
+          "analysis_role": "primary",
+          "retained_all_repeats": false
+        }
+      ],
+      "by_role": {
+        "primary": {
+          "cases": 1,
+          "retained": 0
+        },
+        "exploratory": {
+          "cases": 1,
+          "retained": 0
+        }
+      }
+    },
+    "available_text_history": {
+      "cases": 2,
+      "retained": 2,
+      "units": [
+        {
+          "case_id": "T1",
+          "analysis_role": "exploratory",
+          "retained_all_repeats": true
+        },
+        {
+          "case_id": "T2",
+          "analysis_role": "primary",
+          "retained_all_repeats": true
+        }
+      ],
+      "by_role": {
+        "primary": {
+          "cases": 1,
+          "retained": 1
+        },
+        "exploratory": {
+          "cases": 1,
+          "retained": 1
+        }
+      }
+    }
+  },
+  "target_constraint_only": {
+    "T1": {
+      "no_history": {
+        "met": 2,
+        "deliveries": 2
+      },
+      "available_text_history": {
+        "met": 2,
+        "deliveries": 2
+      }
+    },
+    "T2": {
+      "no_history": {
+        "met": 0,
+        "deliveries": 2
+      },
+      "available_text_history": {
+        "met": 2,
+        "deliveries": 2
+      }
+    }
+  },
+  "reported_tokens": {
+    "input": 122964,
+    "output": 6795,
+    "cached_input": 8448,
+    "total": 129759
+  },
+  "monetary_cost": null,
+  "compression_comparison": false,
+  "device_execution": false,
+  "limits": [
+    "One primary real task from one owner, two repetitions per condition; not two independent people or cases.",
+    "Previously inspected retrospective sources, not a holdout. Available qualifying visible text is not full lifetime or multimodal history.",
+    "Added history includes other task context and prior assistant proposals; no claim that a unique personal trait or one sentence caused the difference.",
+    "Creative world-boundary adherence is equal in both conditions. Baseline creative-tone uncertainty concerns current-material requirements and is not hidden-constraint recovery.",
+    "Plans and lyrics only; no application implementation, recording fidelity, user adoption or prospective benefit was measured.",
+    "Private source and output semantics cannot be independently reassessed from the public aggregate alone."
+  ]
+}
