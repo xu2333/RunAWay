@@ -1,0 +1,669 @@
+{
+  "scope": "real-control-switch-v1",
+  "model_requested": "gpt-6.1-sol",
+  "subjects": 1,
+  "tasks": 1,
+  "implementation": "7280092dd046da8f5d09c74de8051d63a20e3f73",
+  "ci_before_execution": 44401537174,
+  "card_cap": 768,
+  "card_lengths": {
+    "baseline1": 545,
+    "candidate1": 575,
+    "candidate2": 572,
+    "baseline2": 557
+  },
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 16,
+    "completed": 16,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "baseline1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11080,
+        "output_tokens": 2358,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11227,
+        "output_tokens": 2760,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11229,
+        "output_tokens": 2783,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11078,
+        "output_tokens": 2656,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "none",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6441,
+        "output_tokens": 928,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "full",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 10187,
+        "output_tokens": 1255,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "baseline1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6793,
+        "output_tokens": 1012,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "candidate1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6815,
+        "output_tokens": 1093,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "candidate2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6816,
+        "output_tokens": 1131,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6795,
+        "output_tokens": 1086,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6793,
+        "output_tokens": 1225,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 12,
+      "arm": "candidate2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6820,
+        "output_tokens": 955,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 13,
+      "arm": "candidate1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6813,
+        "output_tokens": 1113,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 14,
+      "arm": "baseline1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6793,
+        "output_tokens": 751,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 15,
+      "arm": "full",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 10185,
+        "output_tokens": 1508,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 16,
+      "arm": "none",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6443,
+        "output_tokens": 788,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 132308,
+    "output_tokens": 23402,
+    "cached_input_tokens": 4224
+  },
+  "unknown_usage_attempts": 0,
+  "deliveries": {
+    "rows": [
+      {
+        "slot": 5,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 6,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "met",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 7,
+        "arm": "baseline1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 8,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 9,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 10,
+        "arm": "baseline2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 11,
+        "arm": "baseline2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 12,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 13,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 14,
+        "arm": "baseline1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 15,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "met",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 16,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      }
+    ],
+    "arms": {
+      "none": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "full": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "baseline1": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "candidate1": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "candidate2": {
+        "joint": 2,
+        "denominator": 2,
+        "retained": true
+      },
+      "baseline2": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      }
+    },
+    "methods": {
+      "baseline": false,
+      "candidate": false
+    }
+  },
+  "summary": {
+    "current": {
+      "joint": 0,
+      "planned": 2,
+      "assessed": 2,
+      "by_criterion": {
+        "quality": {
+          "met": 2
+        },
+        "transfer": {
+          "unclear": 2
+        },
+        "control_boundary": {
+          "absent": 2
+        },
+        "multitouch": {
+          "absent": 2
+        },
+        "attribution_error": {
+          "absent": 2
+        },
+        "explicit_provenance": {
+          "unspecified": 2
+        }
+      }
+    },
+    "history": {
+      "joint": 0,
+      "planned": 2,
+      "assessed": 2,
+      "by_criterion": {
+        "quality": {
+          "met": 2
+        },
+        "transfer": {
+          "unclear": 2
+        },
+        "control_boundary": {
+          "met": 2
+        },
+        "multitouch": {
+          "absent": 2
+        },
+        "attribution_error": {
+          "absent": 2
+        },
+        "explicit_provenance": {
+          "unspecified": 2
+        }
+      }
+    },
+    "baseline": {
+      "joint": 0,
+      "planned": 4,
+      "assessed": 4,
+      "by_criterion": {
+        "quality": {
+          "met": 4
+        },
+        "transfer": {
+          "met": 3,
+          "unclear": 1
+        },
+        "control_boundary": {
+          "absent": 4
+        },
+        "multitouch": {
+          "absent": 4
+        },
+        "attribution_error": {
+          "absent": 4
+        },
+        "explicit_provenance": {
+          "unspecified": 4
+        }
+      }
+    },
+    "candidate": {
+      "joint": 2,
+      "planned": 4,
+      "assessed": 4,
+      "by_criterion": {
+        "quality": {
+          "met": 4
+        },
+        "transfer": {
+          "unclear": 2,
+          "met": 2
+        },
+        "control_boundary": {
+          "met": 4
+        },
+        "multitouch": {
+          "met": 4
+        },
+        "attribution_error": {
+          "absent": 4
+        },
+        "explicit_provenance": {
+          "unspecified": 4
+        }
+      }
+    }
+  },
+  "baseline_method": "prior boundary guidance",
+  "candidate_method": "explicit switch and source guidance",
+  "attributed_card_results": {
+    "cards": {
+      "baseline1": {
+        "components": {
+          "owner_transfer": "met",
+          "reuse_situation_and_method": "absent",
+          "trigger": "absent",
+          "replacement": "absent",
+          "proposer_and_status": "partial"
+        },
+        "complete_card": false,
+        "end_to_end": false
+      },
+      "candidate1": {
+        "components": {
+          "owner_transfer": "met",
+          "reuse_situation_and_method": "met",
+          "trigger": "met",
+          "replacement": "met",
+          "proposer_and_status": "met"
+        },
+        "complete_card": true,
+        "end_to_end": false
+      },
+      "candidate2": {
+        "components": {
+          "owner_transfer": "met",
+          "reuse_situation_and_method": "met",
+          "trigger": "met",
+          "replacement": "met",
+          "proposer_and_status": "met"
+        },
+        "complete_card": true,
+        "end_to_end": true
+      },
+      "baseline2": {
+        "components": {
+          "owner_transfer": "met",
+          "reuse_situation_and_method": "absent",
+          "trigger": "partial",
+          "replacement": "partial",
+          "proposer_and_status": "partial"
+        },
+        "complete_card": false,
+        "end_to_end": false
+      }
+    },
+    "methods": {
+      "baseline": false,
+      "candidate": false
+    }
+  },
+  "card_group_results": {
+    "baseline": {
+      "complete": 0,
+      "end_to_end": 0,
+      "denominator": 2,
+      "components": {
+        "owner_transfer": {
+          "met": 2
+        },
+        "reuse_situation_and_method": {
+          "absent": 2
+        },
+        "trigger": {
+          "absent": 1,
+          "partial": 1
+        },
+        "replacement": {
+          "absent": 1,
+          "partial": 1
+        },
+        "proposer_and_status": {
+          "partial": 2
+        }
+      }
+    },
+    "candidate": {
+      "complete": 2,
+      "end_to_end": 1,
+      "denominator": 2,
+      "components": {
+        "owner_transfer": {
+          "met": 2
+        },
+        "reuse_situation_and_method": {
+          "met": 2
+        },
+        "trigger": {
+          "met": 2
+        },
+        "replacement": {
+          "met": 2
+        },
+        "proposer_and_status": {
+          "met": 2
+        }
+      }
+    }
+  },
+  "collateral_audit": {
+    "baseline1": {
+      "phone_preferred_tablet_alternative": "retained",
+      "demos_then_takeover": "retained",
+      "readiness_uncertain": "retained",
+      "one_game_start": "retained",
+      "progress_without_device": "retained",
+      "guided_one_or_two_buttons": "retained",
+      "appearance_complaint": "button crowding retained; explicit dislike of appearance omitted",
+      "limits_on_visual_inference": "retained",
+      "local_inference_unknown": "retained",
+      "computer_or_cloud_assistance": "placement open; alternatives unnamed"
+    },
+    "baseline2": {
+      "phone_preferred_tablet_alternative": "retained",
+      "demos_then_takeover": "retained",
+      "readiness_uncertain": "retained",
+      "one_game_start": "retained",
+      "progress_without_device": "retained",
+      "guided_one_or_two_buttons": "retained",
+      "appearance_complaint": "button crowding retained; explicit dislike of appearance omitted",
+      "limits_on_visual_inference": "retained",
+      "local_inference_unknown": "retained",
+      "computer_or_cloud_assistance": "explicitly open"
+    },
+    "candidate1": {
+      "phone_preferred_tablet_alternative": "retained",
+      "demos_then_takeover": "retained",
+      "readiness_uncertain": "retained",
+      "one_game_start": "retained",
+      "progress_without_device": "retained",
+      "guided_one_or_two_buttons": "retained",
+      "appearance_complaint": "button crowding retained; explicit dislike of appearance omitted",
+      "limits_on_visual_inference": "retained",
+      "local_inference_unknown": "retained",
+      "computer_or_cloud_assistance": "placement open; alternatives unnamed"
+    },
+    "candidate2": {
+      "phone_preferred_tablet_alternative": "retained",
+      "demos_then_takeover": "retained",
+      "readiness_uncertain": "retained",
+      "one_game_start": "retained",
+      "progress_without_device": "retained",
+      "guided_one_or_two_buttons": "retained",
+      "appearance_complaint": "button crowding retained; explicit dislike of appearance omitted",
+      "limits_on_visual_inference": "retained",
+      "local_inference_unknown": "retained",
+      "computer_or_cloud_assistance": "placement open; alternatives unnamed"
+    }
+  }
+}
