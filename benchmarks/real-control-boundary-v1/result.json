@@ -1,0 +1,446 @@
+{
+  "scope": "real-control-boundary-v1",
+  "model_requested": "gpt-6.1-sol",
+  "subjects": 1,
+  "tasks": 1,
+  "implementation": "321e981b6ce3e001ae33054cf605ff3e798296e3",
+  "ci_before_execution": 44272275905,
+  "card_cap": 768,
+  "card_lengths": {
+    "baseline1": 510,
+    "candidate1": 507,
+    "candidate2": 495,
+    "baseline2": 526
+  },
+  "closure": {
+    "status": "closed_failed",
+    "attempted": 11,
+    "completed": 10,
+    "remaining_expired": 5
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "baseline1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 10935,
+        "output_tokens": 2192,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11078,
+        "output_tokens": 2440,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 11078,
+        "output_tokens": 2470,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 10935,
+        "output_tokens": 2364,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "none",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6445,
+        "output_tokens": 957,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "full",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 10189,
+        "output_tokens": 1345,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "baseline1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6780,
+        "output_tokens": 1231,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "candidate1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6765,
+        "output_tokens": 1088,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "candidate2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6756,
+        "output_tokens": 1128,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6788,
+        "output_tokens": 1042,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "baseline2",
+      "attempted": true,
+      "completed": false,
+      "usage": null
+    },
+    {
+      "slot": 12,
+      "arm": "candidate2",
+      "attempted": false,
+      "completed": false,
+      "usage": null
+    },
+    {
+      "slot": 13,
+      "arm": "candidate1",
+      "attempted": false,
+      "completed": false,
+      "usage": null
+    },
+    {
+      "slot": 14,
+      "arm": "baseline1",
+      "attempted": false,
+      "completed": false,
+      "usage": null
+    },
+    {
+      "slot": 15,
+      "arm": "full",
+      "attempted": false,
+      "completed": false,
+      "usage": null
+    },
+    {
+      "slot": 16,
+      "arm": "none",
+      "attempted": false,
+      "completed": false,
+      "usage": null
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 87749,
+    "output_tokens": 16257,
+    "cached_input_tokens": 4224
+  },
+  "unknown_usage_attempts": 1,
+  "deliveries": {
+    "rows": [
+      {
+        "slot": 5,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 6,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": true
+      },
+      {
+        "slot": 7,
+        "arm": "baseline1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 8,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 9,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 10,
+        "arm": "baseline2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "absent",
+          "multitouch": "absent",
+          "attribution_error": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 11,
+        "arm": "baseline2",
+        "status": "missing",
+        "joint": false
+      },
+      {
+        "slot": 12,
+        "arm": "candidate2",
+        "status": "missing",
+        "joint": false
+      },
+      {
+        "slot": 13,
+        "arm": "candidate1",
+        "status": "missing",
+        "joint": false
+      },
+      {
+        "slot": 14,
+        "arm": "baseline1",
+        "status": "missing",
+        "joint": false
+      },
+      {
+        "slot": 15,
+        "arm": "full",
+        "status": "missing",
+        "joint": false
+      },
+      {
+        "slot": 16,
+        "arm": "none",
+        "status": "missing",
+        "joint": false
+      }
+    ],
+    "arms": {
+      "none": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "full": {
+        "joint": 1,
+        "denominator": 2,
+        "retained": false
+      },
+      "baseline1": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "candidate1": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "candidate2": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "baseline2": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      }
+    },
+    "methods": {
+      "baseline": false,
+      "candidate": false
+    }
+  },
+  "summary": {
+    "current": {
+      "joint": 0,
+      "planned": 2,
+      "assessed": 1,
+      "by_criterion": {
+        "quality": {
+          "met": 1,
+          "missing": 1
+        },
+        "transfer": {
+          "unclear": 1,
+          "missing": 1
+        },
+        "control_boundary": {
+          "absent": 1,
+          "missing": 1
+        },
+        "multitouch": {
+          "absent": 1,
+          "missing": 1
+        },
+        "attribution_error": {
+          "absent": 1,
+          "missing": 1
+        }
+      }
+    },
+    "history": {
+      "joint": 1,
+      "planned": 2,
+      "assessed": 1,
+      "by_criterion": {
+        "quality": {
+          "met": 1,
+          "missing": 1
+        },
+        "transfer": {
+          "met": 1,
+          "missing": 1
+        },
+        "control_boundary": {
+          "met": 1,
+          "missing": 1
+        },
+        "multitouch": {
+          "absent": 1,
+          "missing": 1
+        },
+        "attribution_error": {
+          "absent": 1,
+          "missing": 1
+        }
+      }
+    },
+    "baseline": {
+      "joint": 0,
+      "planned": 4,
+      "assessed": 2,
+      "by_criterion": {
+        "quality": {
+          "met": 2,
+          "missing": 2
+        },
+        "transfer": {
+          "met": 1,
+          "unclear": 1,
+          "missing": 2
+        },
+        "control_boundary": {
+          "absent": 2,
+          "missing": 2
+        },
+        "multitouch": {
+          "absent": 2,
+          "missing": 2
+        },
+        "attribution_error": {
+          "absent": 2,
+          "missing": 2
+        }
+      }
+    },
+    "candidate": {
+      "joint": 0,
+      "planned": 4,
+      "assessed": 2,
+      "by_criterion": {
+        "quality": {
+          "met": 2,
+          "missing": 2
+        },
+        "transfer": {
+          "met": 2,
+          "missing": 2
+        },
+        "control_boundary": {
+          "absent": 2,
+          "missing": 2
+        },
+        "multitouch": {
+          "absent": 2,
+          "missing": 2
+        },
+        "attribution_error": {
+          "absent": 2,
+          "missing": 2
+        }
+      }
+    }
+  }
+}
