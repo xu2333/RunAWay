@@ -14,3 +14,5 @@ Use the [recording study's frozen builders](../real-recording-card-v1/protocol.p
 - Count one task per arm and retain it only when both plans meet the owner constraint and the task-quality gate. Report each of the six plans. If current-only also succeeds, record that outcome. When full history fails to establish the requirement, report that limitation before attributing a gap to compression. After scoring, inspect the source, detailed profile, card and plans to tell which detail was omitted and which was present but unused. One generation measures one card.
 
 Raw inputs, responses and authorizations remain local. This protocol records the design before any new model observation.
+
+All seven attempts are now complete. The [result and loss analysis](../../docs/results/real-demo-learning-card-v1.md) includes both the partial full-history result and the omitted control detail.
