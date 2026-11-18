@@ -1,0 +1,115 @@
+{
+  "scope": "real-recording-card-v1",
+  "implementation": "c815ea62c004e736f4f621fc08ef3de413ce0dbd",
+  "ci": 44203943567,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 7,
+    "completed": 7,
+    "remaining_expired": 0
+  },
+  "people": 1,
+  "tasks": 1,
+  "generated_cards": 1,
+  "card_characters": 674,
+  "character_budget": 768,
+  "source_text_characters": 34258,
+  "rows": [
+    {
+      "slot": 1,
+      "arm": "extract",
+      "input_tokens": 34556,
+      "output_tokens": 4994,
+      "cached_input_tokens": 0
+    },
+    {
+      "slot": 2,
+      "arm": "none",
+      "input_tokens": 6438,
+      "output_tokens": 747,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "input_sequence": "unclear",
+      "event_timing": "unclear",
+      "screen_association": "unclear",
+      "timing_evidence": "unspecified",
+      "original_constraint": "unclear"
+    },
+    {
+      "slot": 3,
+      "arm": "full",
+      "input_tokens": 32455,
+      "output_tokens": 775,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "input_sequence": "met",
+      "event_timing": "met",
+      "screen_association": "met",
+      "timing_evidence": "per-event timestamps",
+      "original_constraint": "met"
+    },
+    {
+      "slot": 4,
+      "arm": "card",
+      "input_tokens": 6904,
+      "output_tokens": 637,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "input_sequence": "met",
+      "event_timing": "met",
+      "screen_association": "met",
+      "timing_evidence": "event intervals",
+      "original_constraint": "met"
+    },
+    {
+      "slot": 5,
+      "arm": "card",
+      "input_tokens": 6906,
+      "output_tokens": 617,
+      "cached_input_tokens": 4224,
+      "quality": "met",
+      "input_sequence": "met",
+      "event_timing": "met",
+      "screen_association": "met",
+      "timing_evidence": "order and time of actions",
+      "original_constraint": "met"
+    },
+    {
+      "slot": 6,
+      "arm": "full",
+      "input_tokens": 32451,
+      "output_tokens": 682,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "input_sequence": "met",
+      "event_timing": "met",
+      "screen_association": "met",
+      "timing_evidence": "touch record on session timeline",
+      "original_constraint": "met"
+    },
+    {
+      "slot": 7,
+      "arm": "none",
+      "input_tokens": 6434,
+      "output_tokens": 637,
+      "cached_input_tokens": 4224,
+      "quality": "met",
+      "input_sequence": "unclear",
+      "event_timing": "unclear",
+      "screen_association": "unclear",
+      "timing_evidence": "unspecified",
+      "original_constraint": "unclear"
+    }
+  ],
+  "usage": {
+    "input_tokens": 126144,
+    "output_tokens": 9089,
+    "cached_input_tokens": 8448
+  },
+  "total_tokens": 135233,
+  "strict_case_endpoint": {
+    "none": 0,
+    "full": 1,
+    "card": 1
+  }
+}

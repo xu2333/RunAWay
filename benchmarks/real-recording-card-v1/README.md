@@ -11,3 +11,5 @@ Keep the earlier task-quality and constraint criteria. For each plan record whet
 One generation tests one card. Two reads do not measure generation stability. The endpoint concerns written plans. Hardware recording and user adoption are unmeasured. The analyst knows the earlier result. Keep source text, generated outputs and authorization local.
 
 Scope is one extraction and six deliveries. Any transport, usage, schema or card-validation failure closes the run. Keep missing deliveries in the denominator of two per arm. No retries, regeneration, repair or replacement. Results require a separate owner grant and successful CI.
+
+All seven separately authorized attempts completed. Read the [measured result and timing analysis](../../docs/results/real-recording-card-v1.md) or inspect the [per-slot accounting](result.json).
