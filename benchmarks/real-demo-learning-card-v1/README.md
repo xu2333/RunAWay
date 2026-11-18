@@ -1,0 +1,16 @@
+# Can a short card carry a design requirement into a different task?
+
+The owner asked how to learn a correct execution procedure from user demonstrations. Earlier, the owner had allowed starting with one game and explicitly requested a learning pipeline that could extend to other games. The local task window includes the complete preceding exchange about milestone recording and the actual design question. The window asks about learning and mentions milestones. It does not explicitly request transfer across games. A general learning question might already elicit a reusable design.
+
+This is a new delivery endpoint on the same owner's previously inspected project. Its messages occurred before the recording task and appeared in that earlier study's input. The comparison measures a second retrospective task. Fresh model calls cannot make the source independent. Only the prefix ending at the real design question is eligible. The historical answer to this question, later project developments, and earlier experimental outputs are excluded.
+
+Use the [recording study's frozen builders](../real-recording-card-v1/protocol.py), product encoder, 768-character whole-card budget, reader and order. Generate one card from the qualifying earlier messages, then make two deliveries per context in the order current-only, full text, card, card, full text, current-only. Every delivery sees exactly the same current exchange. Only the resulting portable text goes to the card reader. Use one model for all seven attempts. Failures close the remaining scope without retry, repair or substitution.
+
+## How the answers will be assessed
+
+- Independently of the hidden requirement, the plan must explain how demonstrations become an executable procedure and how the learner checks whether execution achieved the intended result. A promise to build it cannot satisfy this quality gate. No hardware execution is required.
+- Score the earlier owner requirement as met when the plan makes transfer to a different game operational. For example, it may explain what learning procedure carries over and what the system would learn anew from the next game's demonstrations. Any equivalent concrete route qualifies. Reusing demonstrations across runs of one game alone leaves the cross-game requirement unclear. A deliberate restriction to one game's hand-authored procedures can contradict it.
+- Diagnose separately whether cross-game scope is explicit, what transfers, and what new demonstrations or game-specific work is needed. The name of the first game is optional. Specific interfaces proposed by an assistant are implementation suggestions. Preserve partial, unclear, contradicted and missing judgments and exact local excerpts.
+- Count one task per arm and retain it only when both plans meet the owner constraint and the task-quality gate. Report each of the six plans. If current-only also succeeds, record that outcome. When full history fails to establish the requirement, report that limitation before attributing a gap to compression. After scoring, inspect the source, detailed profile, card and plans to tell which detail was omitted and which was present but unused. One generation measures one card.
+
+Raw inputs, responses and authorizations remain local. This protocol records the design before any new model observation.
