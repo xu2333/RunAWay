@@ -1,0 +1,108 @@
+{
+  "scope": "real-demo-learning-card-v1",
+  "people": 1,
+  "tasks": 1,
+  "cards": 1,
+  "separate_generations": 1,
+  "earlier_messages": 27,
+  "current_messages": 7,
+  "earlier_text_characters": 5096,
+  "whole_card_characters": 507,
+  "card_budget": 768,
+  "implementation": "0bddceacd4b121b85e12829790e7caec90d35949",
+  "implementation_ci": 44235680786,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 7,
+    "completed": 7,
+    "remaining_expired": 0
+  },
+  "rows": [
+    {
+      "slot": 1,
+      "arm": "extract",
+      "input_tokens": 10939,
+      "output_tokens": 2397,
+      "cached_input_tokens": 0
+    },
+    {
+      "slot": 2,
+      "arm": "none",
+      "input_tokens": 6443,
+      "output_tokens": 980,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "unclear"
+    },
+    {
+      "slot": 3,
+      "arm": "full",
+      "input_tokens": 10187,
+      "output_tokens": 1392,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "unclear"
+    },
+    {
+      "slot": 4,
+      "arm": "card",
+      "input_tokens": 6783,
+      "output_tokens": 1188,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "met"
+    },
+    {
+      "slot": 5,
+      "arm": "card",
+      "input_tokens": 6775,
+      "output_tokens": 1163,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "met"
+    },
+    {
+      "slot": 6,
+      "arm": "full",
+      "input_tokens": 10185,
+      "output_tokens": 1507,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "met"
+    },
+    {
+      "slot": 7,
+      "arm": "none",
+      "input_tokens": 6443,
+      "output_tokens": 818,
+      "cached_input_tokens": 0,
+      "quality": "met",
+      "cross_game_transfer": "unclear"
+    }
+  ],
+  "endpoints": {
+    "none": {
+      "met": 0,
+      "deliveries": 2,
+      "case_retained": false
+    },
+    "full": {
+      "met": 1,
+      "deliveries": 2,
+      "case_retained": false
+    },
+    "card": {
+      "met": 2,
+      "deliveries": 2,
+      "case_retained": true
+    }
+  },
+  "usage": {
+    "input_tokens": 57755,
+    "output_tokens": 9445,
+    "cached_input_tokens": 0
+  },
+  "total_tokens": 67200,
+  "money_cost": null,
+  "requested_model": "gpt-6.1-sol"
+}
