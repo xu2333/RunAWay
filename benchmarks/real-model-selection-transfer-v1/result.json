@@ -1,0 +1,577 @@
+{
+  "scope": "real-model-selection-transfer-v1",
+  "people": 1,
+  "tasks": 1,
+  "history_messages": 44,
+  "current_messages": 5,
+  "card_lengths": {
+    "card1": 664,
+    "card2": 631
+  },
+  "requested_model": "gpt-6.1-sol",
+  "implementation": "8beba23f6e68378aa7493cb4f41c8760a7c2234d",
+  "ci_before_execution": 44475973505,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 14,
+    "completed": 14,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "card1",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 13837,
+        "output_tokens": 4139,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "card2",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 13839,
+        "output_tokens": 3647,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "none",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6270,
+        "output_tokens": 358,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "full",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 12521,
+        "output_tokens": 564,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "card1_old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6739,
+        "output_tokens": 584,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "card2_new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6799,
+        "output_tokens": 696,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "card1_new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6848,
+        "output_tokens": 610,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "card2_old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6696,
+        "output_tokens": 544,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "card2_old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6694,
+        "output_tokens": 646,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "card1_new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6846,
+        "output_tokens": 628,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "card2_new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6799,
+        "output_tokens": 592,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 12,
+      "arm": "card1_old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6737,
+        "output_tokens": 350,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 13,
+      "arm": "full",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 12521,
+        "output_tokens": 579,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 14,
+      "arm": "none",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6270,
+        "output_tokens": 321,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 119416,
+    "output_tokens": 14258,
+    "cached_input_tokens": 4224
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "assessments": {
+    "rows": [
+      {
+        "slot": 3,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "absent",
+          "population": "absent",
+          "timing": "absent",
+          "independence": "absent",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 4,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "absent",
+          "resource_priority": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": true
+      },
+      {
+        "slot": 5,
+        "arm": "card1_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 6,
+        "arm": "card2_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 7,
+        "arm": "card1_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 8,
+        "arm": "card2_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "partial",
+          "resource_priority": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 9,
+        "arm": "card2_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "partial",
+          "resource_priority": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 10,
+        "arm": "card1_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 11,
+        "arm": "card2_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 12,
+        "arm": "card1_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 13,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "partial",
+          "population": "met",
+          "timing": "partial",
+          "independence": "met",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 14,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "absent",
+          "population": "absent",
+          "timing": "absent",
+          "independence": "absent",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      }
+    ],
+    "arms": {
+      "none": {
+        "joint": 0,
+        "returned": 2,
+        "planned": 2
+      },
+      "full": {
+        "joint": 1,
+        "returned": 2,
+        "planned": 2
+      },
+      "card1_old": {
+        "joint": 0,
+        "returned": 2,
+        "planned": 2
+      },
+      "card2_new": {
+        "joint": 0,
+        "returned": 2,
+        "planned": 2
+      },
+      "card1_new": {
+        "joint": 0,
+        "returned": 2,
+        "planned": 2
+      },
+      "card2_old": {
+        "joint": 0,
+        "returned": 2,
+        "planned": 2
+      }
+    },
+    "history_signal": false,
+    "replicated_reader_advantage": false
+  },
+  "by_criterion": {
+    "none": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "absent": 2
+      },
+      "population": {
+        "absent": 2
+      },
+      "timing": {
+        "absent": 2
+      },
+      "independence": {
+        "absent": 2
+      },
+      "ranking": {
+        "absent": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "full": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 1,
+        "partial": 1
+      },
+      "population": {
+        "met": 2
+      },
+      "timing": {
+        "met": 1,
+        "partial": 1
+      },
+      "independence": {
+        "met": 2
+      },
+      "ranking": {
+        "absent": 2
+      },
+      "resource_priority": {
+        "absent": 1,
+        "met": 1
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card1_old": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "partial": 1,
+        "absent": 1
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "absent": 1,
+        "met": 1
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card2_new": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "partial": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "partial": 1,
+        "met": 1
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card1_new": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "absent": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card2_old": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "partial": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "partial": 2
+      },
+      "resource_priority": {
+        "absent": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    }
+  }
+}
