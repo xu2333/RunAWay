@@ -1,0 +1,348 @@
+{
+  "scope": "real-fixed-card-reader-v1",
+  "people": 1,
+  "tasks": 1,
+  "cards": 2,
+  "card_generations": 0,
+  "requested_model": "gpt-6.1-sol",
+  "implementation": "12d5db38bccf2ae2f360c693efa024cf1f190cbe",
+  "ci_before_execution": 44434695781,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 8,
+    "completed": 8,
+    "remaining_expired": 0
+  },
+  "assessments": {
+    "rows": [
+      {
+        "slot": 1,
+        "arm": "575_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "partial",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 2,
+        "arm": "572_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 3,
+        "arm": "575_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 4,
+        "arm": "572_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "unclear",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      },
+      {
+        "slot": 5,
+        "arm": "572_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "absent",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 6,
+        "arm": "575_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 7,
+        "arm": "572_new",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "met",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": true
+      },
+      {
+        "slot": 8,
+        "arm": "575_old",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "transfer": "partial",
+          "control_boundary": "met",
+          "multitouch": "met",
+          "attribution_error": "absent",
+          "explicit_provenance": "unspecified"
+        },
+        "joint": false
+      }
+    ],
+    "arms": {
+      "575_old": {
+        "joint": 0,
+        "denominator": 2,
+        "retained": false
+      },
+      "572_new": {
+        "joint": 2,
+        "denominator": 2,
+        "retained": true
+      },
+      "575_new": {
+        "joint": 2,
+        "denominator": 2,
+        "retained": true
+      },
+      "572_old": {
+        "joint": 1,
+        "denominator": 2,
+        "retained": false
+      }
+    },
+    "complete_concurrent_575": true,
+    "complete_concurrent_572": true,
+    "repair_target_575": true,
+    "observed_gain_575": true,
+    "guard_572": true
+  },
+  "criteria": {
+    "575_old": {
+      "quality": {
+        "met": 2
+      },
+      "transfer": {
+        "partial": 2
+      },
+      "control_boundary": {
+        "met": 2
+      },
+      "multitouch": {
+        "met": 2
+      },
+      "attribution_error": {
+        "absent": 2
+      },
+      "explicit_provenance": {
+        "unspecified": 2
+      }
+    },
+    "572_new": {
+      "quality": {
+        "met": 2
+      },
+      "transfer": {
+        "met": 2
+      },
+      "control_boundary": {
+        "met": 2
+      },
+      "multitouch": {
+        "met": 2
+      },
+      "attribution_error": {
+        "absent": 2
+      },
+      "explicit_provenance": {
+        "unspecified": 2
+      }
+    },
+    "575_new": {
+      "quality": {
+        "met": 2
+      },
+      "transfer": {
+        "met": 2
+      },
+      "control_boundary": {
+        "met": 2
+      },
+      "multitouch": {
+        "met": 2
+      },
+      "attribution_error": {
+        "absent": 2
+      },
+      "explicit_provenance": {
+        "unspecified": 2
+      }
+    },
+    "572_old": {
+      "quality": {
+        "met": 2
+      },
+      "transfer": {
+        "unclear": 1,
+        "met": 1
+      },
+      "control_boundary": {
+        "met": 2
+      },
+      "multitouch": {
+        "met": 1,
+        "absent": 1
+      },
+      "attribution_error": {
+        "absent": 2
+      },
+      "explicit_provenance": {
+        "unspecified": 2
+      }
+    }
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "card_length": 575,
+      "reader": "old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6811,
+        "output_tokens": 1131,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "card_length": 572,
+      "reader": "new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6925,
+        "output_tokens": 1062,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "card_length": 575,
+      "reader": "new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6922,
+        "output_tokens": 1296,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 4,
+      "card_length": 572,
+      "reader": "old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6814,
+        "output_tokens": 1058,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "card_length": 572,
+      "reader": "old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6816,
+        "output_tokens": 1083,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "card_length": 575,
+      "reader": "new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6922,
+        "output_tokens": 1326,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "card_length": 572,
+      "reader": "new",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6925,
+        "output_tokens": 1409,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "card_length": 575,
+      "reader": "old",
+      "attempted": true,
+      "completed": true,
+      "usage": {
+        "input_tokens": 6815,
+        "output_tokens": 1201,
+        "cached_input_tokens": 4224
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 54950,
+    "output_tokens": 9566,
+    "cached_input_tokens": 8448
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null
+}
