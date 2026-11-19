@@ -17,3 +17,5 @@ One owner, one retrospective task, two selected cards. A successful name inserti
 ## Execution boundary
 
 Request gpt-6.1-sol through Codex with the same five current messages and exactly one card per call. All eight requests are frozen locally before approval. Exclude the earlier trajectory, detailed extraction, previous deliveries, reference labels, and later answers. Each attempt has a 180-second local limit. No token or monetary cap. A failed call, invalid response or unknown usage closes all remaining slots. No retries, repairs or replacements. Private source material remains local.
+
+[Measured results and partial judgments](../../docs/results/real-index-name-v1.md) · [Scores and usage](result.json)

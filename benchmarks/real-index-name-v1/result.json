@@ -1,0 +1,392 @@
+{
+  "scope": "real-index-name-v1",
+  "people": 1,
+  "tasks": 1,
+  "whole_card_lengths": {
+    "card1_original": 664,
+    "card1_named": 674,
+    "card2_original": 631,
+    "card2_named": 641
+  },
+  "requested_model": "gpt-6.1-sol",
+  "implementation": "ba451a00c0eaa811ea07d02944d07d73cbb66178",
+  "ci_before_execution": 44589565120,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 8,
+    "completed": 8,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "card1_original",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6844,
+        "output_tokens": 601,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "card2_named",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6803,
+        "output_tokens": 630,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "card1_named",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6850,
+        "output_tokens": 733,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "card2_original",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6799,
+        "output_tokens": 686,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "card2_original",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6803,
+        "output_tokens": 579,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "card1_named",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6850,
+        "output_tokens": 687,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "card2_named",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6803,
+        "output_tokens": 752,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "card1_original",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6844,
+        "output_tokens": 631,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 54596,
+    "output_tokens": 5299,
+    "cached_input_tokens": 0
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "assessments": {
+    "rows": [
+      {
+        "slot": 1,
+        "arm": "card1_original",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": false,
+        "plan_and_independence": false
+      },
+      {
+        "slot": 2,
+        "arm": "card2_named",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": true,
+        "plan_and_independence": true
+      },
+      {
+        "slot": 3,
+        "arm": "card1_named",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": true,
+        "plan_and_independence": false
+      },
+      {
+        "slot": 4,
+        "arm": "card2_original",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": false,
+        "plan_and_independence": false
+      },
+      {
+        "slot": 5,
+        "arm": "card2_original",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": false,
+        "plan_and_independence": false
+      },
+      {
+        "slot": 6,
+        "arm": "card1_named",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": false,
+        "plan_and_independence": false
+      },
+      {
+        "slot": 7,
+        "arm": "card2_named",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": true,
+        "plan_and_independence": true
+      },
+      {
+        "slot": 8,
+        "arm": "card1_original",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "plan": false,
+        "plan_and_independence": false
+      }
+    ],
+    "arms": {
+      "card1_original": {
+        "planned": 2,
+        "returned": 2,
+        "population": 0,
+        "plan": 0,
+        "strict": 0
+      },
+      "card2_named": {
+        "planned": 2,
+        "returned": 2,
+        "population": 2,
+        "plan": 2,
+        "strict": 2
+      },
+      "card1_named": {
+        "planned": 2,
+        "returned": 2,
+        "population": 1,
+        "plan": 1,
+        "strict": 0
+      },
+      "card2_original": {
+        "planned": 2,
+        "returned": 2,
+        "population": 0,
+        "plan": 0,
+        "strict": 0
+      }
+    },
+    "repeated_population_recovery": {
+      "card1": false,
+      "card2": true
+    }
+  },
+  "by_criterion": {
+    "card1_original": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "partial": 1,
+        "absent": 1
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card2_named": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "met": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "met": 2
+      },
+      "ranking": {
+        "partial": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card1_named": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "met": 1,
+        "absent": 1
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "met": 1,
+        "partial": 1
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "card2_original": {
+      "quality": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "population": {
+        "partial": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 2
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    }
+  }
+}
