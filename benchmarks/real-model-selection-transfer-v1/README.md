@@ -21,3 +21,5 @@ Assess each shuffled plan against these same predeclared questions with excerpts
 - **Other tradeoffs.** Track order versus using ranking agreement to tune, related-model independence, hardware priority, and local availability/storage constraints. Distinguish earlier preferences, assistant-proposed details and limitations the current exchange already gives away. Flag unsupported access, current rankings, machine state or new owner commitments. Absence of an unrelated detail from a plan alone does not imply compression loss.
 
 Lock the local analyst's judgments before revealing assignments or inspecting either card. Afterwards trace each target and collateral detail through the prior text, detailed extraction, card and both deliveries. Distinguish a missing qualification in extraction from one the reader did not apply. Record whole-card lengths, usage, per-read results and missingness. One owner, one previously unevaluated task, two generated cards; no independent human acceptance or live GPU experiment.
+
+[Measured results and loss trace](../../docs/results/real-model-selection-transfer-v1.md) · [Portable scores](result.json)
