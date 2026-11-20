@@ -1,0 +1,473 @@
+{
+  "scope": "real-selection-name-extraction-v1",
+  "people": 1,
+  "tasks": 1,
+  "implementation": "ef3c5b1edce0f010057529737192d6c189b6f8f2",
+  "ci": 44639501048,
+  "requested_model": "gpt-6.1-sol",
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 12,
+    "completed": 12,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 13837,
+        "output_tokens": 3643,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 13914,
+        "output_tokens": 3402,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 13916,
+        "output_tokens": 3814,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 13839,
+        "output_tokens": 3835,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6809,
+        "output_tokens": 741,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6837,
+        "output_tokens": 697,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6819,
+        "output_tokens": 650,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6802,
+        "output_tokens": 699,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6804,
+        "output_tokens": 647,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6819,
+        "output_tokens": 664,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6839,
+        "output_tokens": 848,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 12,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6811,
+        "output_tokens": 587,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 110046,
+    "output_tokens": 20227,
+    "cached_input_tokens": 0
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "card_lengths": {
+    "original1": 665,
+    "candidate1": 661,
+    "candidate2": 662,
+    "original2": 655
+  },
+  "assessment": {
+    "rows": [
+      {
+        "slot": 5,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 6,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "absent",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 7,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "absent",
+          "resource_priority": "absent",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 8,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "partial",
+          "population": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 9,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 10,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "absent",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 11,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "partial",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 12,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": true
+      }
+    ],
+    "arms": {
+      "original1": {
+        "planned": 2,
+        "returned": 2,
+        "core": 0,
+        "core_and_ranking": 0
+      },
+      "candidate1": {
+        "planned": 2,
+        "returned": 2,
+        "core": 1,
+        "core_and_ranking": 0
+      },
+      "candidate2": {
+        "planned": 2,
+        "returned": 2,
+        "core": 2,
+        "core_and_ranking": 1
+      },
+      "original2": {
+        "planned": 2,
+        "returned": 2,
+        "core": 0,
+        "core_and_ranking": 0
+      }
+    }
+  },
+  "methods": {
+    "original": {
+      "planned": 4,
+      "returned": 4,
+      "core": 0,
+      "core_and_ranking": 0,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "population": {
+          "absent": 1,
+          "partial": 3
+        },
+        "calibration": {
+          "met": 4
+        },
+        "timing": {
+          "met": 4
+        },
+        "independence": {
+          "met": 4
+        },
+        "ranking": {
+          "met": 2,
+          "absent": 2
+        },
+        "resource_priority": {
+          "met": 3,
+          "absent": 1
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    },
+    "candidate": {
+      "planned": 4,
+      "returned": 4,
+      "core": 3,
+      "core_and_ranking": 1,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "population": {
+          "met": 4
+        },
+        "calibration": {
+          "met": 3,
+          "partial": 1
+        },
+        "timing": {
+          "met": 4
+        },
+        "independence": {
+          "met": 3,
+          "partial": 1
+        },
+        "ranking": {
+          "partial": 1,
+          "absent": 2,
+          "met": 1
+        },
+        "resource_priority": {
+          "met": 4
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    }
+  },
+  "stage_audit": {
+    "source": {
+      "population": "Owner specified index leaders as final evaluation population.",
+      "calibration": "Owner proposed non-target development, then the popular targets.",
+      "timing": "Assistant proposed locking evaluation before final results. Owner agreed to proceed.",
+      "independence": "Assistant proposed checking related families and training provenance when selecting independent development models.",
+      "ranking": "Owner suggested checking the expected order. Assistant limited it to a prior hypothesis and explicitly excluded tuning to it. Owner accepted the overall direction."
+    },
+    "cards": {
+      "original1": {
+        "claims": {
+          "population": "partial",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "names_eligibility_index": false
+        },
+        "portable": {
+          "population": "partial",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "names_eligibility_index": false
+        }
+      },
+      "candidate1": {
+        "claims": {
+          "population": "met",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "names_eligibility_index": true
+        },
+        "portable": {
+          "population": "met",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "names_eligibility_index": true
+        }
+      },
+      "candidate2": {
+        "claims": {
+          "population": "met",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "names_eligibility_index": true
+        },
+        "portable": {
+          "population": "met",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "names_eligibility_index": true
+        }
+      },
+      "original2": {
+        "claims": {
+          "population": "partial",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "names_eligibility_index": false
+        },
+        "portable": {
+          "population": "partial",
+          "calibration": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "names_eligibility_index": false
+        }
+      }
+    },
+    "interpretation": "Name flags concern the extracted decision and its eligible population, excluding raw evidence quotations. Independence full credit at extraction requires a concrete provenance check or operational separation of related models. Cross-family language alone receives partial credit.",
+    "attribution": "All cards preserved project scope, model-choice uncertainty, and the advisory status of technical safeguards. No new owner commitment or confirmed live inventory was identified."
+  }
+}
