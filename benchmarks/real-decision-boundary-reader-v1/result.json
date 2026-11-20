@@ -1,0 +1,388 @@
+{
+  "scope": "real-decision-boundary-reader-v1",
+  "implementation": "1e83518bfbc37fe57d61929211f5ab60ec14c991",
+  "protocol_ci": 44679259285,
+  "people": 1,
+  "tasks": 1,
+  "model": "gpt-6.1-sol",
+  "parent_lengths": {
+    "candidate1": 661,
+    "candidate2": 662
+  },
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 8,
+    "completed": 8,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "candidate1_prior",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6800,
+        "output_tokens": 644,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate2_revised",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6884,
+        "output_tokens": 608,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate1_revised",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6879,
+        "output_tokens": 628,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "candidate2_prior",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6807,
+        "output_tokens": 613,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "candidate2_prior",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6811,
+        "output_tokens": 710,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "candidate1_revised",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6879,
+        "output_tokens": 664,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "candidate2_revised",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6882,
+        "output_tokens": 569,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "candidate1_prior",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6802,
+        "output_tokens": 729,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 54744,
+    "output_tokens": 5165,
+    "cached_input_tokens": 0
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "assessment": {
+    "rows": [
+      {
+        "slot": 1,
+        "arm": "candidate1_prior",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "partial",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 2,
+        "arm": "candidate2_revised",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": true
+      },
+      {
+        "slot": 3,
+        "arm": "candidate1_revised",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "partial",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 4,
+        "arm": "candidate2_prior",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 5,
+        "arm": "candidate2_prior",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": true
+      },
+      {
+        "slot": 6,
+        "arm": "candidate1_revised",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "partial",
+          "population": "met",
+          "timing": "partial",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 7,
+        "arm": "candidate2_revised",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "partial",
+          "population": "met",
+          "timing": "met",
+          "independence": "partial",
+          "ranking": "met",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": false,
+        "core_and_ranking": false
+      },
+      {
+        "slot": 8,
+        "arm": "candidate1_prior",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "calibration": "met",
+          "population": "met",
+          "timing": "met",
+          "independence": "met",
+          "ranking": "partial",
+          "resource_priority": "met",
+          "unsupported_claim": "absent"
+        },
+        "core": true,
+        "core_and_ranking": false
+      }
+    ],
+    "arms": {
+      "candidate1_prior": {
+        "planned": 2,
+        "returned": 2,
+        "core": 1,
+        "core_and_ranking": 0
+      },
+      "candidate2_revised": {
+        "planned": 2,
+        "returned": 2,
+        "core": 1,
+        "core_and_ranking": 1
+      },
+      "candidate1_revised": {
+        "planned": 2,
+        "returned": 2,
+        "core": 0,
+        "core_and_ranking": 0
+      },
+      "candidate2_prior": {
+        "planned": 2,
+        "returned": 2,
+        "core": 1,
+        "core_and_ranking": 1
+      }
+    }
+  },
+  "by_cell": {
+    "candidate1_prior": {
+      "quality": {
+        "met": 2
+      },
+      "population": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "timing": {
+        "partial": 1,
+        "met": 1
+      },
+      "independence": {
+        "met": 2
+      },
+      "ranking": {
+        "partial": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "candidate2_revised": {
+      "quality": {
+        "met": 2
+      },
+      "population": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 1,
+        "partial": 1
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "met": 1,
+        "partial": 1
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "candidate1_revised": {
+      "quality": {
+        "met": 2
+      },
+      "population": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 1,
+        "partial": 1
+      },
+      "timing": {
+        "partial": 2
+      },
+      "independence": {
+        "met": 1,
+        "partial": 1
+      },
+      "ranking": {
+        "partial": 1,
+        "met": 1
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    },
+    "candidate2_prior": {
+      "quality": {
+        "met": 2
+      },
+      "population": {
+        "met": 2
+      },
+      "calibration": {
+        "met": 2
+      },
+      "timing": {
+        "met": 2
+      },
+      "independence": {
+        "partial": 1,
+        "met": 1
+      },
+      "ranking": {
+        "met": 2
+      },
+      "resource_priority": {
+        "met": 2
+      },
+      "unsupported_claim": {
+        "absent": 2
+      }
+    }
+  },
+  "repeatable_on_selected_cards": false,
+  "reader_advantage": false
+}
