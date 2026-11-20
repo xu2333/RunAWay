@@ -13,3 +13,5 @@ Report results for each card and reader, two reads per cell. Report actionable t
 ## Scope
 
 Eight serial Codex CLI attempts using gpt-6.1-sol, limited to 180 seconds each, without a token or monetary cap. Each request contains one exact card and the original current exchange. No earlier trajectory, source graph, prior delivery, score, reference or later answer is sent. No GPU operation. A transport, response-validation or usage failure closes remaining slots. No retry, recovery, card edits or replacements. Publish portable derived results only.
+
+[Measured results and tradeoffs](../../docs/results/real-decision-boundary-reader-v1.md) · [Per-read scores](result.json)
