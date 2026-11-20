@@ -26,3 +26,5 @@ The broad task is deliberately underspecified in isolation. A gain may reflect r
 ## Execution boundary
 
 At most sixteen serial local Codex attempts on gpt-6.1-sol: four extractions and twelve deliveries. Up to 180 seconds per attempt, no token or monetary cap. A transport or validation failure or unknown usage closes remaining slots; no retries, repairs, replacements or resumption. No browsing, purchasing or retailer contact. Only anonymized derived evidence is exported.
+
+[Measured results and loss trace](../../docs/results/real-shopping-scope-v1.md) · [Per-read scores](result.json)
