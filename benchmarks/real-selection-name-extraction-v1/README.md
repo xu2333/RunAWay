@@ -17,3 +17,5 @@ Report each card out of two deliveries, each method out of four and name retenti
 ## Execution
 
 Request gpt-6.1-sol via the logged-in Codex service. Four extractions plus eight deliveries, twelve serial local attempts maximum. Each attempt has a 180-second limit; token and monetary costs are uncapped. Any transport, validation or usage failure closes the remaining scope. Keep every planned slot in the denominator. No retries, edits, resumes, replacements or GPU operation. Publish only derived evidence and costs. The real messages, cards, responses and local approval stay private.
+
+[Measured results and loss trace](../../docs/results/real-selection-name-extraction-v1.md) · [Per-delivery scores](result.json)
