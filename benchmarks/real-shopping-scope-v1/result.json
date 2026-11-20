@@ -1,0 +1,657 @@
+{
+  "scope": "real-shopping-scope-v1",
+  "head": "5dba0863793ca2b45434b9b59f18f1c963a6565b",
+  "ci": 44787333643,
+  "requested_model": "gpt-6.1-sol",
+  "people": 1,
+  "tasks": 1,
+  "prior_messages": 16,
+  "current_messages": 1,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 16,
+    "completed": 16,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9328,
+        "output_tokens": 3559,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9407,
+        "output_tokens": 3276,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9405,
+        "output_tokens": 3018,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9326,
+        "output_tokens": 2894,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "none",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6100,
+        "output_tokens": 972,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6531,
+        "output_tokens": 1487,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6497,
+        "output_tokens": 1262,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "full",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 8011,
+        "output_tokens": 1158,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6514,
+        "output_tokens": 1254,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6479,
+        "output_tokens": 1277,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6479,
+        "output_tokens": 1256,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 12,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6516,
+        "output_tokens": 1440,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 13,
+      "arm": "full",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 8007,
+        "output_tokens": 1572,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 14,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6495,
+        "output_tokens": 1099,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 15,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6531,
+        "output_tokens": 1281,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 16,
+      "arm": "none",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6104,
+        "output_tokens": 799,
+        "cached_input_tokens": 4224
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 117730,
+    "output_tokens": 27604,
+    "cached_input_tokens": 4224
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "card_lengths": {
+    "original1": 615,
+    "candidate1": 698,
+    "candidate2": 670,
+    "original2": 589
+  },
+  "assessments": {
+    "rows": [
+      {
+        "slot": 5,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "partial",
+          "television": "absent",
+          "bundle": "absent",
+          "membership": "absent",
+          "discount_eligibility": "partial",
+          "cashback": "absent",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 6,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 7,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "partial",
+          "bundle": "partial",
+          "membership": "partial",
+          "discount_eligibility": "partial",
+          "cashback": "partial",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 8,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "partial",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "met",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 9,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "partial",
+          "bundle": "partial",
+          "membership": "partial",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 10,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 11,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 12,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "partial",
+          "bundle": "partial",
+          "membership": "partial",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 13,
+        "arm": "full",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "met",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": true
+      },
+      {
+        "slot": 14,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "partial",
+          "bundle": "partial",
+          "membership": "partial",
+          "discount_eligibility": "partial",
+          "cashback": "partial",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 15,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "discount_eligibility": "partial",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 16,
+        "arm": "none",
+        "status": "assessed",
+        "criteria": {
+          "quality": "partial",
+          "television": "absent",
+          "bundle": "absent",
+          "membership": "absent",
+          "discount_eligibility": "partial",
+          "cashback": "absent",
+          "tv_name_present": "absent",
+          "club_scope_explicit": "absent",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      }
+    ],
+    "arms": {
+      "none": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "candidate1": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "original2": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "full": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 1
+      },
+      "original1": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "candidate2": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      }
+    }
+  },
+  "groups": {
+    "none": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 0,
+      "criteria": {
+        "quality": {
+          "partial": 2
+        },
+        "television": {
+          "absent": 2
+        },
+        "bundle": {
+          "absent": 2
+        },
+        "membership": {
+          "absent": 2
+        },
+        "discount_eligibility": {
+          "partial": 2
+        },
+        "cashback": {
+          "absent": 2
+        },
+        "tv_name_present": {
+          "absent": 2
+        },
+        "club_scope_explicit": {
+          "absent": 2
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    },
+    "full": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 1,
+      "criteria": {
+        "quality": {
+          "met": 2
+        },
+        "television": {
+          "partial": 1,
+          "met": 1
+        },
+        "bundle": {
+          "met": 2
+        },
+        "membership": {
+          "met": 2
+        },
+        "discount_eligibility": {
+          "met": 2
+        },
+        "cashback": {
+          "met": 2
+        },
+        "tv_name_present": {
+          "met": 2
+        },
+        "club_scope_explicit": {
+          "met": 2
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    },
+    "original": {
+      "planned": 4,
+      "returned": 4,
+      "joint": 0,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "television": {
+          "partial": 4
+        },
+        "bundle": {
+          "partial": 4
+        },
+        "membership": {
+          "partial": 4
+        },
+        "discount_eligibility": {
+          "partial": 4
+        },
+        "cashback": {
+          "partial": 2,
+          "met": 2
+        },
+        "tv_name_present": {
+          "absent": 4
+        },
+        "club_scope_explicit": {
+          "partial": 4
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    },
+    "candidate": {
+      "planned": 4,
+      "returned": 4,
+      "joint": 0,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "television": {
+          "met": 4
+        },
+        "bundle": {
+          "met": 4
+        },
+        "membership": {
+          "met": 4
+        },
+        "discount_eligibility": {
+          "partial": 4
+        },
+        "cashback": {
+          "met": 4
+        },
+        "tv_name_present": {
+          "met": 4
+        },
+        "club_scope_explicit": {
+          "met": 4
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    }
+  },
+  "stages": {
+    "source": "Owner specified branded television series and size, confirmed the retailer and stand bundle, and identified a club membership unavailable for the dryer. Specific other-product discounts and marketplace cashback details came from earlier assistant advice, not verified owner entitlements or live terms.",
+    "cards": {
+      "original1": {
+        "claims": {
+          "television": "partial",
+          "tv_series_present": false,
+          "bound_to_size_and_offer": false,
+          "bundle": "partial",
+          "named_club_restriction": "met",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        },
+        "portable": {
+          "television": "partial",
+          "tv_series_present": false,
+          "bound_to_size_and_offer": false,
+          "bundle": "partial",
+          "named_club_restriction": "partial",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        }
+      },
+      "original2": {
+        "claims": {
+          "television": "partial",
+          "tv_series_present": false,
+          "bound_to_size_and_offer": false,
+          "bundle": "partial",
+          "named_club_restriction": "partial",
+          "optional_other_item_offer": "absent",
+          "cashback": "partial"
+        },
+        "portable": {
+          "television": "partial",
+          "tv_series_present": false,
+          "bound_to_size_and_offer": false,
+          "bundle": "partial",
+          "named_club_restriction": "partial",
+          "optional_other_item_offer": "absent",
+          "cashback": "partial"
+        }
+      },
+      "candidate1": {
+        "claims": {
+          "television": "met",
+          "tv_series_present": true,
+          "bound_to_size_and_offer": true,
+          "bundle": "met",
+          "named_club_restriction": "met",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        },
+        "portable": {
+          "television": "met",
+          "tv_series_present": true,
+          "bound_to_size_and_offer": true,
+          "bundle": "met",
+          "named_club_restriction": "met",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        }
+      },
+      "candidate2": {
+        "claims": {
+          "television": "met",
+          "tv_series_present": true,
+          "bound_to_size_and_offer": true,
+          "bundle": "met",
+          "named_club_restriction": "met",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        },
+        "portable": {
+          "television": "met",
+          "tv_series_present": true,
+          "bound_to_size_and_offer": true,
+          "bundle": "met",
+          "named_club_restriction": "met",
+          "optional_other_item_offer": "absent",
+          "cashback": "met"
+        }
+      }
+    },
+    "notes": "Decision content excludes evidence quotations. All four portable cards retain the stand and price; only the candidate cards identify the selected seller. Source-specific optional television/tablet benefits are absent from every detailed decision and card. Some cards retain only that other eligibility is unknown. Cashback status measures conditional marketplace treatment plus execution checks."
+  }
+}
