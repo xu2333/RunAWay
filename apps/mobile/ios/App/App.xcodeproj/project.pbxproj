@@ -19,9 +19,11 @@
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
 		9582B6832FE993A70072D4E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9582B6822FE993A50072D4E8 /* SceneDelegate.swift */; };
+		BB0000000000000000000001 /* LocalFilesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000002; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0000000000000000000001 /* signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = signing.xcconfig; sourceTree = SOURCE_ROOT; };
 		AA0000000000000000000006 /* RunAWayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunAWayViewController.swift; sourceTree = "<group>"; };
 		AA0000000000000000000004 /* SaveDocumentPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDocumentPlugin.swift; sourceTree = "<group>"; };
 		AA0000000000000000000002 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		50B271D01FEDC1A000F3C39B /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		9582B6822FE993A50072D4E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		958DCC722DB07C7200EA8C5F /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = debug.xcconfig; path = ../debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		BB0000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFilesUITests.swift; sourceTree = "<group>"; };
+		BB0000000000000000000003 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB000000000000000000000A = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				958DCC722DB07C7200EA8C5F /* debug.xcconfig */,
+				CC0000000000000000000001 /* signing.xcconfig */,
 				504EC3061FED79650016851F /* App */,
+				BB0000000000000000000004 /* AppUITests */,
 				504EC3051FED79650016851F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				504EC3041FED79650016851F /* App.app */,
+				BB0000000000000000000003 /* AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +94,7 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		BB0000000000000000000004 = {isa = PBXGroup; children = (BB0000000000000000000002,); path = AppUITests; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,7 +118,15 @@
 			productReference = 504EC3041FED79650016851F /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BB0000000000000000000005 = {isa = PBXNativeTarget; buildConfigurationList = BB0000000000000000000006; buildPhases = (BB0000000000000000000009, BB000000000000000000000A, BB000000000000000000000B,); buildRules = (); dependencies = (BB000000000000000000000D,); name = AppUITests; productName = AppUITests; productReference = BB0000000000000000000003; productType = "com.apple.product-type.bundle.ui-testing"; };
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		BB000000000000000000000C = {isa = PBXContainerItemProxy; containerPortal = 504EC2FC1FED79650016851F; proxyType = 1; remoteGlobalIDString = 504EC3031FED79650016851F; remoteInfo = App; };
+/* End PBXContainerItemProxy section */
+/* Begin PBXTargetDependency section */
+		BB000000000000000000000D = {isa = PBXTargetDependency; target = 504EC3031FED79650016851F; targetProxy = BB000000000000000000000C; };
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		504EC2FC1FED79650016851F /* Project object */ = {
@@ -118,6 +135,7 @@
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
+					BB0000000000000000000005 = {CreatedOnToolsVersion = 26.0; TestTargetID = 504EC3031FED79650016851F; };
 					504EC3031FED79650016851F = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1100;
@@ -141,6 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BB0000000000000000000005 /* AppUITests */,
 				504EC3031FED79650016851F /* App */,
 			);
 		};
@@ -161,6 +180,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB000000000000000000000B = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -175,6 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB0000000000000000000009 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (BB0000000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -321,7 +342,7 @@
 				);
 				MARKETING_VERSION = 0.1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RUNAWAY_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
@@ -331,6 +352,7 @@
 		};
 		504EC3181FED79650016851F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0000000000000000000001 /* signing.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(RUNAWAY_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
@@ -350,6 +372,18 @@
 			};
 			name = Release;
 		};
+		BB0000000000000000000007 = {isa = XCBuildConfiguration; buildSettings = {
+			CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+			PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste.uitests; PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2";
+			TEST_TARGET_NAME = App; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+		}; name = Debug; };
+		BB0000000000000000000008 = {isa = XCBuildConfiguration; buildSettings = {
+			CODE_SIGN_STYLE = Automatic; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+			PRODUCT_BUNDLE_IDENTIFIER = io.runaway.taste.uitests; PRODUCT_NAME = "$(TARGET_NAME)";
+			SDKROOT = iphoneos; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2";
+			TEST_TARGET_NAME = App; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+		}; name = Release; };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,6 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BB0000000000000000000006 = {isa = XCConfigurationList; buildConfigurations = (BB0000000000000000000007, BB0000000000000000000008,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */

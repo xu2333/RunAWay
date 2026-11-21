@@ -11,7 +11,8 @@
     "sync": "npm run build && cap sync",
     "test": "node --test tests/*.test.mjs",
     "android": "npm run sync && cap open android",
-    "ios": "npm run sync && cap open ios"
+    "ios": "npm run sync && cap open ios",
+    "ios:personal": "npm run sync && node prepare-personal-signing.mjs --open"
   },
   "dependencies": {
     "@capacitor/android": "8.6.2",

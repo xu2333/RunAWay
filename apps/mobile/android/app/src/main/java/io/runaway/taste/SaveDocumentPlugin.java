@@ -3,6 +3,8 @@ package io.runaway.taste;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
+import android.provider.DocumentsContract;
 import android.util.Base64;
 import androidx.activity.result.ActivityResult;
 import com.getcapacitor.JSObject;
@@ -30,6 +32,10 @@ public class SaveDocumentPlugin extends Plugin {
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType(mime);
         intent.putExtra(Intent.EXTRA_TITLE, name);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI,
+                Uri.parse("content://com.android.providers.downloads.documents/root/downloads"));
+        }
         startActivityForResult(call, intent, "saveResult");
     }
 

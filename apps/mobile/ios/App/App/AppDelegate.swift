@@ -7,7 +7,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Expose an owner-controlled local folder in Files. This contains only
+        // bundled instructions until the owner explicitly saves an export.
+        do {
+            let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+            let help = folder.appendingPathComponent("Read me.txt")
+            if !FileManager.default.fileExists(atPath: help.path) {
+                try "RunAWay / 本机文件夹\n\n这里没有自动保存的个人材料。只有你主动导出的文件才会放到你选择的位置。\n私有档案含原文和引文；harness ZIP 只含随身 prompt 与安装器。\n可在 App 中重新打开私有档案继续编辑。\n".write(to: help, atomically: true, encoding: .utf8)
+            }
+        } catch {
+            // The document picker still offers other owner-selected locations.
+            NSLog("RunAWay local help folder could not be prepared.")
+        }
         return true
     }
 

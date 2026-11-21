@@ -54,3 +54,6 @@ $('save-private').addEventListener('click',guard(async()=>{if(!session.portable)
 $('demo').addEventListener('click',guard(async()=>{if(!confirmReplace())return;$('kind').value='trajectory';$('budget').value='2400';$('source').value=JSON.stringify(demo.sources,null,2);$('request').value=session.prepare($('source').value,'trajectory',2400);session.importAnswer(JSON.stringify(demo.answer));session.origin='fictional_demo';$('answer').value=JSON.stringify(demo.answer,null,2);fictional=true;render();notify('载入了随 App 打包的虚构示例。没有调用模型。');}));
 $('clear').addEventListener('click',guard(async()=>{if(!window.confirm('清空本次材料？已导出的文件需要你在设备上另行删除。'))return;$('source').value='';invalidate();$('prompt').value='';$('evidence').replaceChildren();$('unknowns').replaceChildren();$('name').textContent='';$('tagline').textContent='';await cleanExports();notify('本次材料已清空。');}));
 storageReady=cleanExports().catch(()=>notify('上次临时导出文件未能清理；可在系统设置清除 App 缓存。',true));
+// First-paint controls must not accept a tap before their handlers and the
+// native startup cleanup are ready. Keep typed source text in place meanwhile.
+storageReady.then(()=>{for(const id of ['demo','prepare','source-file','archive-file'])$(id).disabled=false;});

@@ -1,10 +1,10 @@
 name: Local mobile app
 on:
   pull_request:
-    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'scripts/package_ios_device.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
   push:
     branches: [main]
-    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
+    paths: ['apps/mobile/**', 'packages/harnesses/**', 'scripts/check_mobile_apk.py', 'scripts/package_ios_device.py', 'web/dist/core.mjs', 'web/dist/text-integrity.mjs', 'web/dist/manual-core.mjs', '.github/workflows/mobile.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,11 +39,12 @@ jobs:
           packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
       - run: npm ci --ignore-scripts --no-audit --no-fund && npm run build && npx --no-install cap sync android
         working-directory: apps/mobile
-      - run: chmod +x gradlew && ./gradlew assembleDebug lintDebug --no-daemon
+      - run: chmod +x gradlew && ./gradlew assembleDebug assembleRelease bundleRelease lintDebug --no-daemon
         working-directory: apps/mobile/android
       - name: Check packaged permissions
         run: |
           apkanalyzer manifest print apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk | python3 -B scripts/check_mobile_apk.py
+          apkanalyzer manifest print apps/mobile/android/app/build/outputs/apk/release/app-release-unsigned.apk | python3 -B scripts/check_mobile_apk.py
       - name: Enable emulator acceleration
         run: |
           test -e /dev/kvm
@@ -55,14 +56,31 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
-          script: cd apps/mobile/android && ./gradlew :app:connectedDebugAndroidTest --no-daemon
+          script: cd apps/mobile && bash native-android-check.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runaway-android-native-test-results
+          path: |
+            apps/mobile/android/app/build/outputs/androidTest-results
+            apps/mobile/android/app/build/reports/androidTests
+            apps/mobile/build/android-native-roundtrip.json
+            apps/mobile/build/native-picker-window.xml
       - uses: actions/upload-artifact@v4
         with:
           name: runaway-android-debug
           path: apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: runaway-android-release-unsigned
+          path: |
+            apps/mobile/android/app/build/outputs/apk/release/app-release-unsigned.apk
+            apps/mobile/android/app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
   ios:
     runs-on: macos-15-intel
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v7
         with: {persist-credentials: false}
@@ -81,3 +99,33 @@ jobs:
           name: runaway-ios-simulator
           path: apps/mobile/build/RunAWay-simulator.zip
           if-no-files-found: error
+      - name: Archive arm64 iPhoneOS app (not provisioned for installation)
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -destination 'generic/platform=iOS' -archivePath build/RunAWay.xcarchive -derivedDataPath build/device ARCHS=arm64 CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO archive
+        working-directory: apps/mobile
+      - name: Package and inspect unsigned device app
+        run: python3 -B ../../scripts/package_ios_device.py --archive build/RunAWay.xcarchive --out build/ios-device-unsigned
+        working-directory: apps/mobile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: runaway-ios-device-unsigned
+          path: apps/mobile/build/ios-device-unsigned
+          if-no-files-found: error
+      - name: Prepare disposable iPhone simulator
+        run: python3 -B prepare-simulator.py
+        working-directory: apps/mobile
+      - name: Test iOS system file picker save, cancel and reopen
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug -destination "platform=iOS Simulator,id=$RUNAWAY_SIMULATOR" -derivedDataPath build/ios -resultBundlePath build/NativeFiles.xcresult -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
+        working-directory: apps/mobile
+      - name: Inspect the file saved by iOS
+        run: |
+          runaway_container=$(xcrun simctl get_app_container "$RUNAWAY_SIMULATOR" io.runaway.taste data)
+          node check-native-archive.mjs --archive "$runaway_container/Documents/runaway.private.json" --out build/ios-native-roundtrip.json
+        working-directory: apps/mobile
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runaway-ios-native-test-results
+          path: |
+            apps/mobile/build/simulator-before-test.png
+            apps/mobile/build/NativeFiles.xcresult
+            apps/mobile/build/ios-native-roundtrip.json
