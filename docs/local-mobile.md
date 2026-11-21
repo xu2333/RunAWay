@@ -114,6 +114,14 @@ iPhone device distribution/TestFlight requires signing; simulator output cannot
 be installed on an iPhone. Physical-device file pick/save and real harness
 loading remain release checks. No new model calls are part of this work.
 
+## Thanksgiving preview acceptance
+
+On November 21, 2026 a physical Android phone opened the public preview from a locally rendered copy of the article draft. Its browser prepared a 768-character-budget extraction request from a three-message fictional conversation. A separate trusted clipboard paste on the same phone reproduced the exact request. The owner-authorized model handoff used Codex CLI on the connected computer. The returned JSON passed validation on the phone, and the phone downloaded the Codex ZIP. Its installer was checked against the repository and run in a fresh project. The SHA-256 of the 266-character card matched the export manifest, and the full card appeared in Codex startup input.
+
+The two calls requested gpt-6.1-sol. The fictional speaker wanted archive boxes named “纸鹤” followed by the date, or just “纸鹤” when undated. Already in the detailed claims, the fixed name had become a generic text label. The unedited card retained the ordering and missing-date rule. Asked for an undated box name without seeing the conversation, the new session returned “档案资料”. File transfer and harness loading passed. Exact name retention failed on this example.
+
+One extraction and one fresh-project answer consumed 20,309 reported input tokens and 1,705 output tokens. No retries or human correction were used. This check covers the web preview in an Android browser. Distribution signing and native APK acceptance are separate.
+
 ## Publish the phone preview
 
 Build in `apps/mobile` with the locked dependencies and `npm run build`. Publish only `dist/index.html`, `dist/app.js`, `dist/style.css` and `dist/icon.svg` to the root of the `gh-pages` branch, together with an empty `.nojekyll`. Serve it over HTTPS. Check each public asset against the build before linking a new version.
