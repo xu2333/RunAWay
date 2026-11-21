@@ -15,3 +15,5 @@ Repeated complete recovery requires both branches in all four candidate deliveri
 ## Execution
 
 Use gpt-6.1-sol for up to twelve local CLI attempts, each limited to 180 seconds, without a token or monetary cap. Transport, validation or unknown usage closes the remaining slots. No retries, replacement cards, or live shopping. Only derived evidence is public.
+
+[Measured results and loss trace](../../docs/results/real-shopping-branches-v1.md) · [Per-delivery scores](result.json)
