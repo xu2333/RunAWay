@@ -14,3 +14,5 @@ Blind the eight returned plans before linking them to cards. Use the [preceding 
 - Record the previously measured results as context. Gains require comparison with the fresh baseline. A repair of these two selected drafts cannot establish that the initial extractor, repeated reviews or new tasks would improve.
 
 At most ten serial local Codex attempts requesting gpt-6.1-sol, 180 seconds each, without a token or monetary cap. A failed transport, invalid output or unknown usage closes the scope with no retry, resume or replacement. No live offers are queried. Only derived results may be published.
+
+[Measured results](../../docs/results/real-shopping-source-review-v1.md) · [Scores and stage audit](result.json)

@@ -1,0 +1,574 @@
+{
+  "scope": "real-shopping-source-review-v1",
+  "protocol_head": "3e283e898c448ac39179a09611c24d5cb77a2acc",
+  "model": "gpt-6.1-sol",
+  "protocol_ci": 44862517524,
+  "people": 1,
+  "tasks": 1,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 10,
+    "completed": 10,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 10020,
+        "cached_input_tokens": 0,
+        "output_tokens": 3925
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 10026,
+        "cached_input_tokens": 0,
+        "output_tokens": 4483
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6542,
+        "cached_input_tokens": 4224,
+        "output_tokens": 1477
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6493,
+        "cached_input_tokens": 0,
+        "output_tokens": 1479
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6499,
+        "cached_input_tokens": 0,
+        "output_tokens": 1204
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6517,
+        "cached_input_tokens": 0,
+        "output_tokens": 1260
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6517,
+        "cached_input_tokens": 4224,
+        "output_tokens": 1446
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6501,
+        "cached_input_tokens": 0,
+        "output_tokens": 1244
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6497,
+        "cached_input_tokens": 0,
+        "output_tokens": 1253
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6540,
+        "cached_input_tokens": 0,
+        "output_tokens": 1295
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 72152,
+    "cached_input_tokens": 8448,
+    "output_tokens": 19066
+  },
+  "monetary_cost": null,
+  "unknown_usage_attempts": 0,
+  "card_lengths": {
+    "original1": 690,
+    "original2": 659,
+    "candidate1": 714,
+    "candidate2": 756
+  },
+  "per_delivery": [
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "met",
+        "tablet_benefit": "met",
+        "tv_magnitude": "met",
+        "tablet_magnitude": "met",
+        "tv_fallback_named": "met",
+        "tablet_fallback_named": "met",
+        "tablet_fallback_price": "met",
+        "tablet_details_joint": "met",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": true
+    },
+    {
+      "slot": 4,
+      "arm": "original1",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "partial",
+        "tablet_benefit": "partial",
+        "tv_magnitude": "absent",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "absent",
+        "tablet_fallback_named": "absent",
+        "tablet_fallback_price": "absent",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": false
+    },
+    {
+      "slot": 5,
+      "arm": "original2",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "absent",
+        "tablet_benefit": "absent",
+        "tv_magnitude": "absent",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "absent",
+        "tablet_fallback_named": "absent",
+        "tablet_fallback_price": "absent",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": false
+    },
+    {
+      "slot": 6,
+      "arm": "candidate1",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "met",
+        "tablet_benefit": "met",
+        "tv_magnitude": "met",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "met",
+        "tablet_fallback_named": "met",
+        "tablet_fallback_price": "met",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "met",
+        "unsupported_claim": "absent"
+      },
+      "joint": true
+    },
+    {
+      "slot": 7,
+      "arm": "candidate1",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "met",
+        "tablet_benefit": "met",
+        "tv_magnitude": "met",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "met",
+        "tablet_fallback_named": "met",
+        "tablet_fallback_price": "met",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": true
+    },
+    {
+      "slot": 8,
+      "arm": "original2",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "absent",
+        "tablet_benefit": "absent",
+        "tv_magnitude": "absent",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "absent",
+        "tablet_fallback_named": "absent",
+        "tablet_fallback_price": "absent",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": false
+    },
+    {
+      "slot": 9,
+      "arm": "original1",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "partial",
+        "tablet_benefit": "met",
+        "tv_magnitude": "met",
+        "tablet_magnitude": "absent",
+        "tv_fallback_named": "absent",
+        "tablet_fallback_named": "absent",
+        "tablet_fallback_price": "absent",
+        "tablet_details_joint": "absent",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "partial",
+        "unsupported_claim": "absent"
+      },
+      "joint": false
+    },
+    {
+      "slot": 10,
+      "arm": "candidate2",
+      "status": "assessed",
+      "criteria": {
+        "quality": "met",
+        "television": "met",
+        "bundle": "met",
+        "membership": "met",
+        "tv_benefit": "met",
+        "tablet_benefit": "met",
+        "tv_magnitude": "met",
+        "tablet_magnitude": "met",
+        "tv_fallback_named": "met",
+        "tablet_fallback_named": "met",
+        "tablet_fallback_price": "met",
+        "tablet_details_joint": "met",
+        "cashback": "met",
+        "tv_name_present": "met",
+        "club_scope_explicit": "met",
+        "unsupported_claim": "absent"
+      },
+      "joint": true
+    }
+  ],
+  "per_view": {
+    "candidate2": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 2,
+      "both_branches": 2,
+      "criteria": {
+        "quality": {
+          "met": 2
+        },
+        "television": {
+          "met": 2
+        },
+        "bundle": {
+          "met": 2
+        },
+        "membership": {
+          "met": 2
+        },
+        "cashback": {
+          "met": 2
+        },
+        "tv_benefit": {
+          "met": 2
+        },
+        "tablet_benefit": {
+          "met": 2
+        },
+        "tv_magnitude": {
+          "met": 2
+        },
+        "tablet_magnitude": {
+          "met": 2
+        },
+        "tv_fallback_named": {
+          "met": 2
+        },
+        "tablet_fallback_named": {
+          "met": 2
+        },
+        "tablet_fallback_price": {
+          "met": 2
+        },
+        "tablet_details_joint": {
+          "met": 2
+        },
+        "tv_name_present": {
+          "met": 2
+        },
+        "club_scope_explicit": {
+          "partial": 1,
+          "met": 1
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    },
+    "original1": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 0,
+      "both_branches": 0,
+      "criteria": {
+        "quality": {
+          "met": 2
+        },
+        "television": {
+          "met": 2
+        },
+        "bundle": {
+          "met": 2
+        },
+        "membership": {
+          "met": 2
+        },
+        "cashback": {
+          "met": 2
+        },
+        "tv_benefit": {
+          "partial": 2
+        },
+        "tablet_benefit": {
+          "partial": 1,
+          "met": 1
+        },
+        "tv_magnitude": {
+          "absent": 1,
+          "met": 1
+        },
+        "tablet_magnitude": {
+          "absent": 2
+        },
+        "tv_fallback_named": {
+          "absent": 2
+        },
+        "tablet_fallback_named": {
+          "absent": 2
+        },
+        "tablet_fallback_price": {
+          "absent": 2
+        },
+        "tablet_details_joint": {
+          "absent": 2
+        },
+        "tv_name_present": {
+          "met": 2
+        },
+        "club_scope_explicit": {
+          "partial": 2
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    },
+    "original2": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 0,
+      "both_branches": 0,
+      "criteria": {
+        "quality": {
+          "met": 2
+        },
+        "television": {
+          "met": 2
+        },
+        "bundle": {
+          "met": 2
+        },
+        "membership": {
+          "met": 2
+        },
+        "cashback": {
+          "met": 2
+        },
+        "tv_benefit": {
+          "absent": 2
+        },
+        "tablet_benefit": {
+          "absent": 2
+        },
+        "tv_magnitude": {
+          "absent": 2
+        },
+        "tablet_magnitude": {
+          "absent": 2
+        },
+        "tv_fallback_named": {
+          "absent": 2
+        },
+        "tablet_fallback_named": {
+          "absent": 2
+        },
+        "tablet_fallback_price": {
+          "absent": 2
+        },
+        "tablet_details_joint": {
+          "absent": 2
+        },
+        "tv_name_present": {
+          "met": 2
+        },
+        "club_scope_explicit": {
+          "partial": 2
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    },
+    "candidate1": {
+      "planned": 2,
+      "returned": 2,
+      "joint": 2,
+      "both_branches": 2,
+      "criteria": {
+        "quality": {
+          "met": 2
+        },
+        "television": {
+          "met": 2
+        },
+        "bundle": {
+          "met": 2
+        },
+        "membership": {
+          "met": 2
+        },
+        "cashback": {
+          "met": 2
+        },
+        "tv_benefit": {
+          "met": 2
+        },
+        "tablet_benefit": {
+          "met": 2
+        },
+        "tv_magnitude": {
+          "met": 2
+        },
+        "tablet_magnitude": {
+          "absent": 2
+        },
+        "tv_fallback_named": {
+          "met": 2
+        },
+        "tablet_fallback_named": {
+          "met": 2
+        },
+        "tablet_fallback_price": {
+          "met": 2
+        },
+        "tablet_details_joint": {
+          "absent": 2
+        },
+        "tv_name_present": {
+          "met": 2
+        },
+        "club_scope_explicit": {
+          "met": 1,
+          "partial": 1
+        },
+        "unsupported_claim": {
+          "absent": 2
+        }
+      }
+    }
+  },
+  "stage_audit": {
+    "original1": {
+      "length": 690,
+      "tv": "Term, eligibility and ordinary seller in parent; neither fresh delivery provided a specific ordinary TV route.",
+      "tablet": "Cardholder price and named ordinary seller and price in parent; percentage missing. Neither fresh delivery bound the ordinary seller to its price or gave the percentage."
+    },
+    "candidate1": {
+      "length": 714,
+      "tv": "Reviewed claim and text retain both routes. Both reads applied them.",
+      "tablet": "Detailed claim contains the 5% qualification and named ordinary seller at 499. Portable text retains both prices and seller but omits 5%. Both answers identify ordinary seller and 499; neither gives the discount percentage."
+    },
+    "original2": {
+      "length": 659,
+      "branches": "Both specific benefits and ordinary alternatives absent before review, and neither fresh delivery recovered them."
+    },
+    "candidate2": {
+      "length": 756,
+      "branches": "Both conditionals, term and percentage, named sellers and ordinary prices appear in the reviewed decisions and text. Both deliveries apply both branches, including the tablet percentage (numeric or equivalent words) and the named ordinary price.",
+      "precision": "One delivery uses the ordinary seller price as the card retailer list price in its discount calculation. The source gave a different list price; the percentage, reported discounted price and ordinary alternative match. This diagnostic is additional to the frozen endpoints."
+    }
+  }
+}
