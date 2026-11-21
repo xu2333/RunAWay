@@ -9,18 +9,18 @@
 <link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
 </head>
 <body>
-<header><div class="wordmark">RunAWay<span>your taste, to go.</span></div><span class="local">● 只在本机</span></header>
+<header><div class="wordmark">RunAWay<span>your taste, to go.</span></div><span class="local">● 本机处理</span></header>
 <main>
-<section class="hello"><div class="eyebrow">自己的经历，自己保管。</div><h1>带着「你」，<br>换个地方继续。</h1><p>把选择、条件和小习惯，<br>装进一个能带走的口袋。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
+<section class="hello"><div class="eyebrow">自己的经历，自己保管。</div><h1>带着「你」，<br>换个地方继续。</h1><p>贴一段对话，用自己的模型生成短卡，<br>带进 Codex 或 Claude Code。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
 <nav aria-label="步骤"><button data-step="source" aria-current="step">1 放进经历</button><button data-step="model">2 自选模型</button><button data-step="result">3 带走判断</button></nav>
 <p id="notice" role="status" aria-live="polite" hidden></p>
 <section id="source-panel" class="panel">
 <div class="section-top"><h2>从一段真的经历开始</h2><button id="demo" class="text-button">试试虚构示例</button></div>
 <p class="hint">选你主动愿意放进来的片段。App 不扫描聊天、相册或其他应用。</p>
 <div class="file-actions"><label class="file-button">选择本地材料<input id="source-file" type="file" accept=".txt,.md,.json,text/plain,application/json"></label><label class="file-button secondary">打开档案 / prompt<input id="archive-file" type="file" accept=".json,application/json"></label></div>
-<label for="kind">材料类型</label><select id="kind"><option value="experience">我的经历</option><option value="resume">简历片段</option><option value="trajectory">对话 / agentic trajectory</option></select>
+<label for="kind">材料类型</label><select id="kind"><option value="experience">我的经历</option><option value="resume">简历片段</option><option value="trajectory" selected>对话 / agentic trajectory</option></select>
 <label for="source">你的材料</label><textarea id="source" rows="9" placeholder="写一次你做过的选择，或者导入一段对话。对话请用「用户：」「助手：」分段，保留说话者。"></textarea>
-<div class="form-row"><span id="source-count" class="hint">0 字符 · 最多 64 KB</span><label for="budget">完整 prompt 预算<select id="budget"><option value="768">768 字符</option><option value="1000">1000 字符</option><option value="1536" selected>1536 字符</option><option value="1600">1600 字符</option><option value="2400">2400 字符</option><option value="4000">4000 字符</option></select></label></div>
+<div class="form-row"><span id="source-count" class="hint">0 字符 · 最多 64 KB</span><label for="budget">完整 prompt 预算<select id="budget"><option value="768" selected>768 字符</option><option value="1000">1000 字符</option><option value="1536">1536 字符</option><option value="1600">1600 字符</option><option value="2400">2400 字符</option><option value="4000">4000 字符</option></select></label></div>
 <button id="prepare" class="primary full">整理好，去提炼 →</button>
 </section>
 <section id="model-panel" class="panel" hidden>
@@ -39,9 +39,10 @@
 <label class="review"><input id="reviewed" type="checkbox">我已检查这段 prompt；愿意把它交给所选 harness。</label>
 <h3>一键打包，去新的工作台</h3><p class="hint">包内只有这段 prompt、接入文件和本地安装器。原始经历与引文不随包导出。接收端模型如何处理 prompt，取决于你的选择。</p>
 <div id="harnesses" class="harnesses"></div>
+<details><summary>怎样在电脑上用这个包？</summary><p>把 ZIP 传到电脑并解压。在解压目录运行 <code>node install.mjs --project "/path/to/project"</code>，把路径换成你的项目目录，再到项目中新开所选工作台的对话。需要 Node.js 22 或以上。也可以直接复制下方 prompt，贴到新对话开头。</p></details>
 <div class="file-actions"><button id="save-portable" class="secondary">保存 portable.json</button><button id="save-prompt" class="secondary">保存 prompt</button><button id="copy-prompt" class="secondary">复制 prompt</button></div>
 <hr><h3>把完整经历留给自己</h3><p class="hint">私有档案包含原文、引文和编辑后的 prompt；保存后可在本机重新打开。不要把它当作分享包。</p><button id="save-private" class="secondary full">保存私有档案</button>
 </section>
-<footer><p>没有账号，没有上传，没有后台收集。<br>关闭 App 前，请保存你想保留的档案。</p><button id="clear" class="text-button">清空本次材料</button><span class="build">本地 App 原型 · 0.1</span></footer>
+<footer><p>材料留在当前设备。离开前，请保存想保留的档案。</p><button id="clear" class="text-button">清空本次材料</button></footer>
 </main>
 </body></html>

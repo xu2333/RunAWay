@@ -4,6 +4,8 @@ The native iOS 15.4+ / Android 7+ prototype bundles its interface and validation
 the app. It reads only files you select and writes only exports you request.
 There is no RunAWay account, backend, telemetry, automatic upload or API key.
 
+[Open the mobile web preview](https://xu2333.github.io/RunAWay/). The browser downloads exports to the device. The native apps use the system document picker.
+
 ## Use it
 
 1. Choose a local `.txt`, `.md` or source `.json`, or paste an experience.
@@ -111,3 +113,7 @@ The APK and simulator archive are workflow artifacts, not store releases.
 iPhone device distribution/TestFlight requires signing; simulator output cannot
 be installed on an iPhone. Physical-device file pick/save and real harness
 loading remain release checks. No new model calls are part of this work.
+
+## Publish the phone preview
+
+Build in `apps/mobile` with the locked dependencies and `npm run build`. Publish only `dist/index.html`, `dist/app.js`, `dist/style.css` and `dist/icon.svg` to the root of the `gh-pages` branch, together with an empty `.nojekyll`. Serve it over HTTPS. Check each public asset against the build before linking a new version.

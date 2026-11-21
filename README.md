@@ -2,7 +2,9 @@
 
 **Your taste, to go.** 把真实对话中的选择、条件和例外，变成带得走的 prompt。
 
-**Paste a conversation → review your prompt → use it in Codex or Claude Code.**
+[手机打开 RunAWay · Open the preview](https://xu2333.github.io/RunAWay/)
+
+Paste a conversation, generate a short card with your own model and export it for Codex or Claude Code.
 
 Experimental: **real-person fidelity is unverified**. A prompt is a revisable hypothesis about your preferences, not an identity or permission to act.
 
