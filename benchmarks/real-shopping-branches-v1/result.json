@@ -1,0 +1,485 @@
+{
+  "scope": "real-shopping-branches-v1",
+  "head": "3a9ecb07498649f0ab6ecc144486dc01b19f5f19",
+  "ci": 44833365602,
+  "requested_model": "gpt-6.1-sol",
+  "people": 1,
+  "tasks": 1,
+  "prior_messages": 16,
+  "current_messages": 1,
+  "closure": {
+    "status": "closed_completed",
+    "attempted": 12,
+    "completed": 12,
+    "remaining_expired": 0
+  },
+  "attempts": [
+    {
+      "slot": 1,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9407,
+        "output_tokens": 3300,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 2,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9522,
+        "output_tokens": 4499,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 3,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9520,
+        "output_tokens": 3187,
+        "cached_input_tokens": 4480
+      }
+    },
+    {
+      "slot": 4,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 9403,
+        "output_tokens": 3200,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 5,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6501,
+        "output_tokens": 1214,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 6,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6509,
+        "output_tokens": 1229,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 7,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6501,
+        "output_tokens": 1204,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 8,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6493,
+        "output_tokens": 1521,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 9,
+      "arm": "candidate1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6493,
+        "output_tokens": 1272,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 10,
+      "arm": "original2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6497,
+        "output_tokens": 1244,
+        "cached_input_tokens": 4224
+      }
+    },
+    {
+      "slot": 11,
+      "arm": "original1",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6513,
+        "output_tokens": 1401,
+        "cached_input_tokens": 0
+      }
+    },
+    {
+      "slot": 12,
+      "arm": "candidate2",
+      "attempted": true,
+      "usage": {
+        "input_tokens": 6501,
+        "output_tokens": 1109,
+        "cached_input_tokens": 0
+      }
+    }
+  ],
+  "known_usage": {
+    "input_tokens": 89860,
+    "output_tokens": 24380,
+    "cached_input_tokens": 17152
+  },
+  "unknown_usage_attempts": 0,
+  "monetary_cost": null,
+  "card_lengths": {
+    "original1": 675,
+    "candidate1": 690,
+    "candidate2": 659,
+    "original2": 628
+  },
+  "assessments": {
+    "rows": [
+      {
+        "slot": 5,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 6,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 7,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "partial",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 8,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "met",
+          "tablet_benefit": "met",
+          "tv_magnitude": "met",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "met",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": true
+      },
+      {
+        "slot": 9,
+        "arm": "candidate1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "met",
+          "tablet_benefit": "partial",
+          "tv_magnitude": "met",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "met",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "partial",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 10,
+        "arm": "original2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "partial",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 11,
+        "arm": "original1",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "met",
+          "membership": "met",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      },
+      {
+        "slot": 12,
+        "arm": "candidate2",
+        "status": "assessed",
+        "criteria": {
+          "quality": "met",
+          "television": "met",
+          "bundle": "partial",
+          "membership": "partial",
+          "tv_benefit": "absent",
+          "tablet_benefit": "absent",
+          "tv_magnitude": "absent",
+          "tablet_magnitude": "absent",
+          "tv_fallback_named": "absent",
+          "tablet_fallback_named": "absent",
+          "cashback": "met",
+          "tv_name_present": "met",
+          "club_scope_explicit": "met",
+          "unsupported_claim": "absent"
+        },
+        "joint": false
+      }
+    ],
+    "arms": {
+      "candidate2": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "original1": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "original2": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 0
+      },
+      "candidate1": {
+        "planned": 2,
+        "returned": 2,
+        "joint": 1
+      }
+    }
+  },
+  "groups": {
+    "original": {
+      "planned": 4,
+      "returned": 4,
+      "joint": 0,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "television": {
+          "met": 4
+        },
+        "bundle": {
+          "met": 4
+        },
+        "membership": {
+          "met": 4
+        },
+        "cashback": {
+          "met": 2,
+          "partial": 2
+        },
+        "tv_benefit": {
+          "absent": 4
+        },
+        "tablet_benefit": {
+          "absent": 4
+        },
+        "tv_magnitude": {
+          "absent": 4
+        },
+        "tablet_magnitude": {
+          "absent": 4
+        },
+        "tv_fallback_named": {
+          "absent": 4
+        },
+        "tablet_fallback_named": {
+          "absent": 4
+        },
+        "tv_name_present": {
+          "met": 4
+        },
+        "club_scope_explicit": {
+          "met": 4
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    },
+    "candidate": {
+      "planned": 4,
+      "returned": 4,
+      "joint": 1,
+      "criteria": {
+        "quality": {
+          "met": 4
+        },
+        "television": {
+          "met": 4
+        },
+        "bundle": {
+          "met": 3,
+          "partial": 1
+        },
+        "membership": {
+          "met": 3,
+          "partial": 1
+        },
+        "cashback": {
+          "met": 4
+        },
+        "tv_benefit": {
+          "absent": 2,
+          "met": 2
+        },
+        "tablet_benefit": {
+          "absent": 2,
+          "met": 1,
+          "partial": 1
+        },
+        "tv_magnitude": {
+          "absent": 2,
+          "met": 2
+        },
+        "tablet_magnitude": {
+          "absent": 4
+        },
+        "tv_fallback_named": {
+          "absent": 2,
+          "met": 2
+        },
+        "tablet_fallback_named": {
+          "absent": 4
+        },
+        "tv_name_present": {
+          "met": 4
+        },
+        "club_scope_explicit": {
+          "met": 2,
+          "partial": 2
+        },
+        "unsupported_claim": {
+          "absent": 4
+        }
+      }
+    }
+  },
+  "stages": {
+    "original1": {
+      "claims": 5,
+      "optional_branches": "Neither present in claims or card.",
+      "cashback": "Seller-category rule in claims and card, used in both deliveries."
+    },
+    "original2": {
+      "claims": 5,
+      "optional_branches": "Neither present in claims or card.",
+      "cashback": "Generic follow-up on cashback without the specific seller-category rule from the detailed claim onward. Both plans partial."
+    },
+    "candidate1": {
+      "claims": 8,
+      "television": "Qualified protection term and named ordinary seller preserved in the decision, portable prompt and both plans.",
+      "tablet": "Detailed decision records the percentage, holder-only price and named ordinary seller at the historical price. Portable text retains both routes and prices but drops the percentage. Neither delivery names the ordinary seller or percentage. Only one explicitly uses ordinary payment without the card.",
+      "membership": "The portable text states club membership is unavailable. Both plans use the ordinary dryer route but describe not enrolling rather than state that the owner lacks the membership."
+    },
+    "candidate2": {
+      "claims": 5,
+      "optional_branches": "Neither specific benefit or fallback appears in detailed decisions or portable text. Unspecified eligibility remains unknown. Neither plan recovers them.",
+      "membership_bundle": "The card contains the exact shop, selected priced stand bundle and a route independent of the club. One delivery omits the ordinary shop, leaving only generic nonmember advice and the bundle without a seller."
+    }
+  }
+}
