@@ -24,6 +24,18 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   const page=await context.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
   const origin='http://127.0.0.1:'+server.address().port;
   await page.goto(origin);await page.locator('#demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
+  assert.equal(await page.locator('#name').textContent(),'纸鹤排头员');
+  assert.match(await page.locator('#prompt-size').textContent(),/267 字符/);
+  assert.match(await page.locator('#prompt').inputValue(),/只保留“纸鹤”/);
+  await page.locator('#own-dialogue').click();
+  assert.equal(await page.locator('#source').inputValue(),'');
+  assert.equal(await page.locator('#source').evaluate(el=>el===document.activeElement),true);
+  await page.locator('#source').fill('用户：这是我想保留的原稿。');
+  page.once('dialog',d=>d.dismiss());
+  await page.locator('#demo').click();
+  assert.equal(await page.locator('#source').inputValue(),'用户：这是我想保留的原稿。');
+  page.once('dialog',d=>d.accept());
+  await page.locator('#demo').click();
   assert.equal(await page.locator('[data-harness]').count(),3);
   assert.match(await page.locator('#result-status').textContent(),/虚构/);
   await page.locator('[data-harness="codex"]').click();assert.match(await page.locator('#notice').textContent(),/勾选确认/);
@@ -44,6 +56,7 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   page.once('dialog',d=>d.accept());await page.locator('#clear').click();await page.locator('#archive-file').setInputFiles(portable);await page.locator('#result-panel').waitFor({state:'visible'});
   assert.equal(await page.locator('#prompt').isEditable(),false);assert.equal(await page.locator('#save-private').isDisabled(),true);
   page.once('dialog',d=>d.accept());await page.locator('#clear').click();
+  await page.locator('#source-options summary').click();
   await page.locator('#kind').selectOption('experience');
   const source=path.join(temp,'experience.txt');await writeFile(source,'这次上线我先保留撤销入口，再默认自动选择。');await page.locator('#source-file').setInputFiles(source);await page.locator('#prepare').click();await page.locator('#model-panel').waitFor({state:'visible'});
   assert.match(await page.locator('#request').inputValue(),/保留撤销入口/);
