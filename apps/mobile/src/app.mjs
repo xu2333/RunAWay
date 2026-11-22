@@ -3,7 +3,7 @@ import {adapters,BOUNDARY} from '../../../packages/harnesses/index.mjs';
 import {makeBundle as harnessBundle} from '../../../packages/harnesses/bundle.mjs';
 import {length} from '../../../web/dist/core.mjs';
 import {copyText,saveFile,cleanExports} from './io.mjs';
-import demo from '../../../web/dist/demo.json';
+import demo from './paper-crane.json';
 
 const $=id=>document.getElementById(id),session=new Session();
 let fictional=false,active=false,storageReady=Promise.resolve();
@@ -26,6 +26,7 @@ function render(){
   const a=session.answer;
   $('name').textContent=a?.name??'带回来的判断';$('tagline').textContent=a?.tagline??'已有 prompt 已校验文件完整性；尚未验证其来源与保真度。';
   $('result-status').textContent=fictional?'虚构示例 · 不是对你的判断':'等你核对的候选';
+  $('own-dialogue').hidden=!fictional;
   $('prompt').value=session.body;$('prompt').readOnly=!!session.portable;
   $('evidence-panel').hidden=!a;$('save-private').disabled=!a;
   $('evidence').replaceChildren();$('unknowns').replaceChildren();
@@ -51,6 +52,20 @@ $('save-portable').addEventListener('click',guard(async()=>{const {portable}=awa
 $('save-prompt').addEventListener('click',guard(async()=>{const {portable}=await checkedBundle();await save('runaway-prompt.txt',portable.text,'text/plain');}));
 $('copy-prompt').addEventListener('click',guard(async()=>{const {portable}=await checkedBundle();await copyText(portable.text);notify('完整 prompt 已复制，包含适用边界。');}));
 $('save-private').addEventListener('click',guard(async()=>{if(!session.portable)session.body=$('prompt').value;await session.bundle();await save('runaway.private.json',session.archive());}));
-$('demo').addEventListener('click',guard(async()=>{if(!confirmReplace())return;$('kind').value='trajectory';$('budget').value='2400';$('source').value=JSON.stringify(demo.sources,null,2);$('request').value=session.prepare($('source').value,'trajectory',2400);session.importAnswer(JSON.stringify(demo.answer));session.origin='fictional_demo';$('answer').value=JSON.stringify(demo.answer,null,2);fictional=true;render();notify('载入了随 App 打包的虚构示例。没有调用模型。');}));
+$('demo').addEventListener('click',guard(async()=>{
+  if(!confirmReplace())return;
+  $('kind').value='trajectory';$('budget').value='768';$('source').value=demo.dialogue;
+  invalidate();
+  $('request').value=session.prepare(demo.dialogue,'trajectory',768);
+  session.importAnswer(JSON.stringify(demo.answer));session.origin='fictional_demo';
+  $('answer').value=JSON.stringify(demo.answer,null,2);fictional=true;render();
+  notify('这是用三句虚构对话实际生成的短卡。你可以展开出处，或核对后导出。');
+}));
+$('own-dialogue').addEventListener('click',guard(async()=>{
+  if(!fictional)return;
+  if(session.answer&&session.body!==session.answer.prompt&&!window.confirm('放下编辑过的示例，开始自己的对话？'))return;
+  $('source').value='';$('kind').value='trajectory';$('budget').value='768';
+  invalidate();$('notice').hidden=true;$('source').focus();
+}));
 $('clear').addEventListener('click',guard(async()=>{if(!window.confirm('清空本次材料？已导出的文件需要你在设备上另行删除。'))return;$('source').value='';invalidate();$('prompt').value='';$('evidence').replaceChildren();$('unknowns').replaceChildren();$('name').textContent='';$('tagline').textContent='';await cleanExports();notify('本次材料已清空。');}));
 storageReady=cleanExports().catch(()=>notify('上次临时导出文件未能清理；可在系统设置清除 App 缓存。',true));
