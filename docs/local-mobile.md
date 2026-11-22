@@ -125,3 +125,7 @@ One extraction and one fresh-project answer consumed 20,309 reported input token
 ## Publish the phone preview
 
 Build in `apps/mobile` with the locked dependencies and `npm run build`. Publish only `dist/index.html`, `dist/app.js`, `dist/style.css` and `dist/icon.svg` to the root of the `gh-pages` branch, together with an empty `.nojekyll`. Serve it over HTTPS. Check each public asset against the build before linking a new version.
+
+The [designated-value comparison](../benchmarks/designated-value-v1/README.md) follows the naming loss through extraction, export and two fresh sessions per card. The Thanksgiving launch scope is the article and phone web preview. Native Android acceptance awaits the existing release signing key.
+
+In the 12-call follow-up on the same fictional dialogue, one of two original cards and both revised cards kept the name and undated rule. All four fresh sessions reading revised cards returned exactly “纸鹤”. The two sessions reading the original card that had generalized the name both returned “档案资料”. See the [per-card results and exact replies](../benchmarks/designated-value-v1/README.md#observed-on-the-frozen-commit).
