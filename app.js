@@ -197,6 +197,12 @@ async function makeBundle(answer, sources, body = answer.prompt, previous = null
   return { profile, portable: { ...v, id: await hash(canonical(v)) } };
 }
 
+// src/extraction.mjs
+function pocketRequest(sources, budget) {
+  const instruction = "\u5982\u679C\u7528\u6237\u660E\u786E\u6307\u5B9A\u4E86\u4E00\u4E2A\u4F1A\u6539\u53D8\u6267\u884C\u7ED3\u679C\u7684\u975E\u79C1\u5BC6\u77ED\u503C\uFF0C\u5728\u5BF9\u5E94\u5224\u65AD\u548C\u968F\u8EAB prompt \u6B63\u6587\u4E2D\u539F\u6837\u4FDD\u7559\u5B83\uFF0C\u5E76\u5199\u6E05\u5B83\u9002\u7528\u4E8E\u4EC0\u4E48\u60C5\u5883\u3001\u6761\u4EF6\u53D8\u5316\u65F6\u600E\u6837\u5904\u7406\u3002\u6CDB\u79F0\u4E0D\u80FD\u4EE3\u66FF\u8FD9\u4E2A\u503C\u3002\u53EA\u4FDD\u7559\u6267\u884C\u6240\u9700\u7684\u6700\u5C0F\u7247\u6BB5\uFF1B\u79C1\u4EBA\u8EAB\u4EFD\u4FE1\u606F\u3001\u51ED\u8BC1\u548C\u539F\u53E5\u4ECD\u5E94\u7701\u53BB\u3002\u6750\u6599\u6CA1\u6307\u5B9A\u7684\u503C\u4E0D\u8981\u8865\u3002";
+  return instruction + "\n\n" + makeRequest(sources, budget);
+}
+
 // ../../packages/harnesses/codex.mjs
 var codex_default = Object.freeze({
   id: "codex",
@@ -298,11 +304,11 @@ var Session = class _Session {
     const sources = sourcesFrom(raw, kind);
     this.reset();
     this.prepared = { sources, kind, budget };
-    return makeRequest(sources, budget);
+    return pocketRequest(sources, budget);
   }
   request() {
     if (!this.prepared) throw Error("\u8BF7\u5148\u6574\u7406\u6765\u6E90\u3002");
-    return makeRequest(this.prepared.sources, this.prepared.budget);
+    return pocketRequest(this.prepared.sources, this.prepared.budget);
   }
   importAnswer(raw) {
     if (!this.prepared) throw Error("\u8BF7\u5148\u6574\u7406\u6765\u6E90\u3002");
