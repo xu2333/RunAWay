@@ -1,4 +1,5 @@
-import {sourcesFrom,validateSources,makeRequest,validateAnswer,makeBundle,parseJSON,HEADER,length,hash,canonical} from '../../../web/dist/core.mjs';
+import {pocketRequest} from './extraction.mjs';
+import {sourcesFrom,validateSources,validateAnswer,makeBundle,parseJSON,HEADER,length,hash,canonical} from '../../../web/dist/core.mjs';
 import {validatePrompt} from '../../../packages/harnesses/index.mjs';
 
 const BUDGETS=[768,1000,1536,1600,2400,4000];
@@ -9,9 +10,9 @@ export class Session {
     if(!BUDGETS.includes(budget))throw Error('请选择支持的字符预算。');
     const sources=sourcesFrom(raw,kind);
     this.reset();this.prepared={sources,kind,budget};
-    return makeRequest(sources,budget);
+    return pocketRequest(sources,budget);
   }
-  request(){if(!this.prepared)throw Error('请先整理来源。');return makeRequest(this.prepared.sources,this.prepared.budget);}
+  request(){if(!this.prepared)throw Error('请先整理来源。');return pocketRequest(this.prepared.sources,this.prepared.budget);}
   importAnswer(raw){
     if(!this.prepared)throw Error('请先整理来源。');
     const answer=validateAnswer(parseJSON(raw),this.prepared.sources,this.prepared.budget);
