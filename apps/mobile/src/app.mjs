@@ -11,6 +11,12 @@ function notify(text,error=false){$('notice').hidden=false;$('notice').textConte
 function show(step){
   if(step==='model'&&!session.prepared)return notify('请先放入经历并整理请求。',true);
   if(step==='result'&&!session.answer&&!session.portable)return notify('请先导入提炼结果或已有的 portable.json。',true);
+  if(step==='model'){
+    const roles={user:'你',assistant:'助手',tool:'工具',context:'背景'};
+    const counts=new Map();
+    for(const {role} of session.prepared.sources.sources)counts.set(role,(counts.get(role)??0)+1);
+    $('source-summary').textContent='这份请求含有'+Array.from(counts,([role,n])=>roles[role]+'的 '+n+' 段文字').join('、')+'。';
+  }
   for(const name of ['source','model','result'])$(name+'-panel').hidden=name!==step;
   document.querySelectorAll('[data-step]').forEach(b=>{if(b.dataset.step===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
 }
@@ -19,7 +25,21 @@ function guard(fn){return async event=>{
   try{await storageReady;await fn(event);}catch(e){notify(e.message||'操作没有完成。',true);}
   finally{button.disabled=false;active=false;}
 };}
-function invalidate(){session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
+function clearAnswerError(){
+  $('answer-repair').hidden=true;
+  $('answer').removeAttribute('aria-invalid');
+  $('answer-error').textContent='';
+  $('repair-request').value='';
+  $('repair-status').textContent='';
+}
+function resetHandoff(){
+  clearAnswerError();
+  $('source-error').hidden=true;
+  $('source').removeAttribute('aria-invalid');
+  $('copy-status').hidden=true;
+  $('request-preview').open=false;
+}
+function invalidate(){resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
 function append(parent,tag,text){const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;}
 function updateSize(){const value=session.portable?session.portable.text:BOUNDARY+$('prompt').value+'\n';$('prompt-size').textContent=`完整 prompt ${length(value)} 字符（包含边界，不是 token 数）`;$('reviewed').checked=false;}
 function render(){
@@ -42,12 +62,63 @@ function confirmReplace(){return !($('source').value||session.portable||session.
 for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('click',()=>show(b.dataset.step));
 for(const id of ['source','kind','budget'])$(id).addEventListener(id==='source'?'input':'change',invalidate);
 $('source-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,64000);if(text!==null&&confirmReplace()){$('source').value=text;invalidate();notify('材料已在本机读入。没有上传。');}}finally{e.target.value='';}}));
-$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
-$('prepare').addEventListener('click',guard(async()=>{$('request').value=session.prepare($('source').value,$('kind').value,Number($('budget').value));fictional=false;show('model');notify('请求已备好。复制后，去你选的模型粘贴并发送。');}));
-$('copy-request').addEventListener('click',guard(async()=>{if(!session.prepared)throw Error('请先整理来源。');await copyText($('request').value);notify('请求已复制。接下来由你决定交给哪个模型。');}));
+$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
+$('prepare').addEventListener('click',guard(async()=>{
+  try{
+    // Editing a source field already invalidates its request and answer.
+    if(!session.prepared)$('request').value=session.prepare($('source').value,$('kind').value,Number($('budget').value));
+  }catch(error){
+    $('source-error').textContent=error.message;
+    $('source-error').hidden=false;
+    $('source').setAttribute('aria-invalid','true');
+    $('source-error').scrollIntoView({block:'center'});
+    return;
+  }
+  $('notice').hidden=true;
+  show('model');
+  $('model-panel').scrollIntoView({block:'start'});
+}));
+async function copyField(field,status,success,preview){
+  try{
+    await copyText(field.value);
+    status.textContent=success;
+  }catch{
+    if(preview)preview.open=true;
+    field.focus();
+    field.select();
+    status.textContent='文字已选中。请用系统的「复制」，再去模型里粘贴。';
+  }
+  status.hidden=false;
+}
+$('copy-request').addEventListener('click',guard(async()=>{
+  await copyField($('request'),$('copy-status'),'已复制。去模型里粘贴并发送，拿到回复再回到这里。',$('request-preview'));
+}));
+$('copy-repair').addEventListener('click',guard(async()=>{
+  await copyField($('repair-request'),$('repair-status'),'已复制，发回刚才的模型对话即可。');
+}));
 $('save-request').addEventListener('click',guard(async()=>{if(!session.prepared)throw Error('请先整理来源。');await save('runaway-request.private.txt',$('request').value,'text/plain');}));
-$('answer-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target);if(text!==null)$('answer').value=text;}finally{e.target.value='';}}));
-$('import-answer').addEventListener('click',guard(async()=>{session.importAnswer($('answer').value);render();notify('引文、说话者、字段和长度检查通过。仍需你检查解释是否符合自己。');}));
+$('answer-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target);if(text!==null){clearAnswerError();$('answer').value=text;}}finally{e.target.value='';}}));
+$('answer').addEventListener('input',clearAnswerError);
+$('import-answer').addEventListener('click',guard(async()=>{
+  const raw=$('answer').value;
+  if(!raw.trim()){
+    $('answer').focus();
+    return;
+  }
+  try{session.importAnswer(raw);}
+  catch(error){
+    $('answer-error').textContent=error.message;
+    $('repair-request').value='网页核对结果时提示「'+error.message+'」。请按本对话最初的提炼请求修正，并重新给出完整 JSON。';
+    $('answer').setAttribute('aria-invalid','true');
+    $('answer-repair').hidden=false;
+    $('answer-error').scrollIntoView({block:'center'});
+    return;
+  }
+  clearAnswerError();
+  render();
+  notify('引文、说话者、字段和长度检查通过。仍需你检查解释是否符合自己。');
+  $('result-panel').scrollIntoView({block:'start'});
+}));
 $('prompt').addEventListener('input',()=>{if(!session.portable)session.body=$('prompt').value;updateSize();});
 for(const adapter of adapters){
   const button=document.createElement('button');

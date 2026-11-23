@@ -8,7 +8,7 @@ import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {chromium} from 'playwright-core';
 
-test('mobile viewport: local import, evidence review, three ZIP exports and archive restore without egress',async t=>{
+async function mobilePage(t){
   const root=fileURLToPath(new URL('../dist/',import.meta.url)),temp=await mkdtemp(path.join(os.tmpdir(),'runaway-mobile-ui-'));
   const server=createServer(async(req,res)=>{
     try{const url=new URL(req.url,'http://localhost'),name=url.pathname==='/'?'index.html':url.pathname.slice(1);
@@ -23,7 +23,13 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,acceptDownloads:true});
   const page=await context.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
   const origin='http://127.0.0.1:'+server.address().port;
-  await page.goto(origin);await page.locator('#demo').click();await page.locator('#load-demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
+  await page.goto(origin);
+  return {page,context,origin,temp,requests,errors};
+}
+
+test('mobile viewport: local import, evidence review, three ZIP exports and archive restore without egress',async t=>{
+  const {page,origin,temp,requests,errors}=await mobilePage(t);
+  await page.locator('#demo').click();await page.locator('#load-demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
   assert.equal(await page.locator('#name').textContent(),'纸鹤排头员');
   assert.match(await page.locator('#prompt-size').textContent(),/267 字符/);
   assert.match(await page.locator('#prompt').inputValue(),/只保留“纸鹤”/);
@@ -68,7 +74,7 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   await page.locator('#kind').selectOption('experience');
   const source=path.join(temp,'experience.txt');await writeFile(source,'这次上线我先保留撤销入口，再默认自动选择。');await page.locator('#source-file').setInputFiles(source);await page.locator('#prepare').click();await page.locator('#model-panel').waitFor({state:'visible'});
   assert.match(await page.locator('#request').inputValue(),/保留撤销入口/);
-  await page.locator('#answer').fill('{}');await page.locator('#import-answer').click();assert.match(await page.locator('#notice').textContent(),/字段不完整/);
+  await page.locator('#answer').fill('{}');await page.locator('#import-answer').click();assert.match(await page.locator('#answer-error').textContent(),/字段不完整/);
   await page.locator('[data-step="source"]').click();
   const corrupt=path.join(temp,'damaged.txt');await writeFile(corrupt,Buffer.from([0xff,0xfe]));await page.locator('#source-file').setInputFiles(corrupt);await page.waitForFunction(()=>/encoded|encoding|UTF/i.test(document.getElementById('notice').textContent));
   assert.match(await page.locator('#source').inputValue(),/保留撤销入口/);
@@ -78,4 +84,57 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   assert.deepEqual(errors,[]);assert.ok(requests.every(r=>r.method==='GET'&&r.url.startsWith(origin+'/')));
   const egress=await page.evaluate(async()=>{try{await fetch('https://example.com/never-send');return 'allowed';}catch{return 'blocked';}});assert.equal(egress,'blocked');
   if(process.env.RUNAWAY_SCREENSHOTS)await page.screenshot({path:path.join(process.env.RUNAWAY_SCREENSHOTS,'mobile-source.png'),fullPage:true});
+});
+
+test('own dialogue survives the copy, correction and return trip',async t=>{
+  const {page,context,origin,requests,errors}=await mobilePage(t);
+  const quote='试映时先放无配乐版。';
+  const source='You said:\r\n'+quote+'\r\nChatGPT said:\r\n那正式放映呢？';
+  const answer={name:'试映笔记',tagline:'先听现场',prompt:quote,unknowns:['正式放映的做法未知。'],
+    claims:[{id:'screening',basis:'self_report',scope:'试映',statement:quote,conditions:[],exceptions:[],
+      evidence:[{source_id:'message-1',quote,relation:'supports'}],related_claim_ids:[]}],covered_claim_ids:['screening']};
+  await page.locator('#source').fill('未标明说话者的文字');
+  await page.locator('#prepare').click();
+  assert.match(await page.locator('#source-error').innerText(),/用户/);
+  await page.locator('#source').fill(source);
+  await page.locator('#prepare').click();
+  assert.match(await page.locator('#source-summary').innerText(),/你的 1 段文字、助手的 1 段文字/);
+  const request=await page.locator('#request').inputValue();
+  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});
+  await page.locator('#copy-request').click();
+  assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),request);
+  assert.match(request,/那正式放映呢/);
+  const wrong=structuredClone(answer);
+  wrong.claims[0].evidence=[{source_id:'message-2',quote:'那正式放映呢？',relation:'supports'}];
+  await page.locator('#answer').fill(JSON.stringify(wrong));
+  await page.locator('#import-answer').click();
+  assert.match(await page.locator('#answer-error').innerText(),/助手或工具/);
+  await page.locator('#copy-repair').click();
+  assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/助手或工具[\s\S]*完整 JSON/);
+  await page.locator('[data-step="source"]').click();
+  await page.locator('#prepare').click();
+  assert.equal(await page.locator('#answer').inputValue(),JSON.stringify(wrong));
+  await page.locator('#answer').fill('```json\n'+JSON.stringify(answer)+'\n```');
+  await page.locator('#import-answer').click();
+  assert.equal(await page.locator('#name').innerText(),answer.name);
+  await page.locator('#prompt').fill('试映时保留现场声。');
+  await page.locator('[data-step="source"]').click();
+  await page.locator('#prepare').click();
+  await page.locator('[data-step="result"]').click();
+  assert.equal(await page.locator('#prompt').inputValue(),'试映时保留现场声。');
+  await page.locator('[data-step="source"]').click();
+  await page.locator('#source').fill('你说：\n'+quote+'\nChatGPT 说：\n收到。');
+  await page.locator('#prepare').click();
+  assert.equal(await page.locator('#answer').inputValue(),'');
+  assert.equal(await page.locator('#answer-repair').isVisible(),false);
+  await page.evaluate(()=>{
+    Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(Error())}});
+    document.execCommand=()=>false;
+  });
+  await page.locator('#copy-request').click();
+  assert.equal(await page.locator('#request').isVisible(),true);
+  assert.match(await page.locator('#copy-status').innerText(),/已选中/);
+  assert.ok(await page.locator('#request').evaluate(el=>el.selectionStart===0&&el.selectionEnd===el.value.length));
+  assert.deepEqual(errors,[]);
+  assert.ok(requests.every(r=>r.method==='GET'&&r.url.startsWith(origin+'/')));
 });
