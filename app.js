@@ -1162,6 +1162,8 @@ function updateSize() {
 }
 function render() {
   const a = session.answer;
+  $("zip-status").hidden = true;
+  $("install-guide").open = false;
   $("name").textContent = a?.name ?? "\u5E26\u56DE\u6765\u7684\u5224\u65AD";
   $("tagline").textContent = a?.tagline ?? "\u5DF2\u6709 prompt \u5DF2\u6821\u9A8C\u6587\u4EF6\u5B8C\u6574\u6027\uFF1B\u5C1A\u672A\u9A8C\u8BC1\u5176\u6765\u6E90\u4E0E\u4FDD\u771F\u5EA6\u3002";
   $("result-status").textContent = fictional ? "\u865A\u6784\u793A\u4F8B \xB7 \u4E0D\u662F\u5BF9\u4F60\u7684\u5224\u65AD" : "\u7B49\u4F60\u6838\u5BF9\u7684\u5019\u9009";
@@ -1195,6 +1197,7 @@ async function checkedBundle() {
 async function save(name, value, mime = "application/json") {
   const saved = await saveFile(name, typeof value === "string" || value instanceof Uint8Array ? value : JSON.stringify(value, null, 2) + "\n", mime);
   notify(saved.status === "saved" ? "\u7CFB\u7EDF\u5DF2\u5B8C\u6210\u6587\u4EF6\u4FDD\u5B58\u3002" : "\u5DF2\u8BF7\u6C42\u4E0B\u8F7D\uFF0C\u8BF7\u4EE5\u6D4F\u89C8\u5668\u6587\u4EF6\u754C\u9762\u4E3A\u51C6\u3002");
+  return saved.status;
 }
 async function readFile(input, max = 512e3) {
   const file = input.files?.[0];
@@ -1251,7 +1254,7 @@ $("prepare").addEventListener("click", guard(async () => {
   $("request").value = session.prepare($("source").value, $("kind").value, Number($("budget").value));
   fictional = false;
   show("model");
-  notify("\u8BF7\u6C42\u5DF2\u51C6\u5907\u3002\u53EA\u6709\u4F60\u4E3B\u52A8\u590D\u5236\u6216\u4FDD\u5B58\u540E\uFF0C\u624D\u4F1A\u628A\u5185\u5BB9\u4EA4\u7ED9\u6240\u9009\u6A21\u578B\u3002");
+  notify("\u8BF7\u6C42\u5DF2\u5907\u597D\u3002\u590D\u5236\u540E\uFF0C\u53BB\u4F60\u9009\u7684\u6A21\u578B\u7C98\u8D34\u5E76\u53D1\u9001\u3002");
 }));
 $("copy-request").addEventListener("click", guard(async () => {
   if (!session.prepared) throw Error("\u8BF7\u5148\u6574\u7406\u6765\u6E90\u3002");
@@ -1280,18 +1283,23 @@ $("prompt").addEventListener("input", () => {
   updateSize();
 });
 for (const adapter of adapters) {
-  const b = document.createElement("button");
-  b.type = "button";
-  b.dataset.harness = adapter.id;
-  const label = append(b, "span", adapter.label);
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.harness = adapter.id;
+  const label = append(button, "span", adapter.label);
   append(label, "small", adapter.path);
-  append(b, "b", "\u2197");
-  b.addEventListener("click", guard(async () => {
+  append(button, "b", "\u2197");
+  button.addEventListener("click", guard(async () => {
     const { portable } = await checkedBundle();
     const result = await makeBundle2(adapter.id, portable.text, define_RUNAWAY_HARNESS_SOURCES_default);
-    await save("runaway-" + adapter.id + ".zip", result.bytes, "application/zip");
+    const filename = "runaway-" + adapter.id + ".zip";
+    const status = await save(filename, result.bytes, "application/zip");
+    $("zip-status").textContent = status === "saved" ? "\u5DF2\u4FDD\u5B58 " + filename : "\u5DF2\u8BF7\u6C42\u4E0B\u8F7D " + filename + "\u3002\u5982\u679C\u6D4F\u89C8\u5668\u5F39\u51FA\u4FDD\u5B58\u7A97\u53E3\uFF0C\u8BF7\u786E\u8BA4\u4E0B\u8F7D\u3002";
+    $("zip-status").hidden = false;
+    $("install-guide").open = true;
+    $("zip-status").scrollIntoView({ block: "nearest" });
   }));
-  $("harnesses").append(b);
+  $("harnesses").append(button);
 }
 $("save-portable").addEventListener("click", guard(async () => {
   const { portable } = await checkedBundle();
@@ -1311,8 +1319,14 @@ $("save-private").addEventListener("click", guard(async () => {
   await session.bundle();
   await save("runaway.private.json", session.archive());
 }));
-$("demo").addEventListener("click", guard(async () => {
+$("demo-source").textContent = paper_crane_default.dialogue;
+$("demo-body").textContent = paper_crane_default.answer.prompt;
+$("demo").addEventListener("click", () => {
+  $("demo-preview").showModal();
+});
+$("load-demo").addEventListener("click", guard(async () => {
   if (!confirmReplace()) return;
+  $("demo-preview").close();
   $("kind").value = "trajectory";
   $("budget").value = "768";
   $("source").value = paper_crane_default.dialogue;
