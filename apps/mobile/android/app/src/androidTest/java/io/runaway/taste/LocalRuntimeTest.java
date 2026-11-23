@@ -36,6 +36,8 @@ public class LocalRuntimeTest {
             assertEquals("true", js(scenario, "Boolean(window.isSecureContext && crypto.subtle && crypto.randomUUID)"));
             assertEquals("true", js(scenario, "Boolean(window.Capacitor.isNativePlatform() && typeof window.Capacitor.Plugins.SaveDocument.save === 'function')"));
             js(scenario, "document.getElementById('demo').click()");
+            await(scenario, "document.getElementById('demo-preview').open");
+            js(scenario, "document.getElementById('load-demo').click()");
             await(scenario, "!document.getElementById('result-panel').hidden");
             assertEquals("true", js(scenario, "document.getElementById('prompt').value.length > 100 && document.querySelectorAll('#evidence .claim').length > 0"));
             assertEquals("true", js(scenario, "document.getElementById('result-status').textContent.includes('虚构')"));

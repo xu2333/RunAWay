@@ -23,7 +23,7 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,acceptDownloads:true});
   const page=await context.newPage(),errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
   const origin='http://127.0.0.1:'+server.address().port;
-  await page.goto(origin);await page.locator('#demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
+  await page.goto(origin);await page.locator('#demo').click();await page.locator('#load-demo').click();await page.locator('#result-panel').waitFor({state:'visible'});
   assert.equal(await page.locator('#name').textContent(),'纸鹤排头员');
   assert.match(await page.locator('#prompt-size').textContent(),/267 字符/);
   assert.match(await page.locator('#prompt').inputValue(),/只保留“纸鹤”/);
@@ -31,11 +31,17 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   assert.equal(await page.locator('#source').inputValue(),'');
   assert.equal(await page.locator('#source').evaluate(el=>el===document.activeElement),true);
   await page.locator('#source').fill('用户：这是我想保留的原稿。');
-  page.once('dialog',d=>d.dismiss());
   await page.locator('#demo').click();
+  assert.match(await page.locator('#demo-source').textContent(),/用户：只写纸鹤/);
+  assert.match(await page.locator('#demo-body').textContent(),/只保留“纸鹤”/);
+  await page.getByRole('button',{name:'回去写我的对话'}).click();
+  assert.equal(await page.locator('#source').inputValue(),'用户：这是我想保留的原稿。');
+  await page.locator('#demo').click();
+  page.once('dialog',d=>d.dismiss());
+  await page.locator('#load-demo').click();
   assert.equal(await page.locator('#source').inputValue(),'用户：这是我想保留的原稿。');
   page.once('dialog',d=>d.accept());
-  await page.locator('#demo').click();
+  await page.locator('#load-demo').click();
   assert.equal(await page.locator('[data-harness]').count(),3);
   assert.match(await page.locator('#result-status').textContent(),/虚构/);
   await page.locator('[data-harness="codex"]').click();assert.match(await page.locator('#notice').textContent(),/勾选确认/);
@@ -48,6 +54,8 @@ test('mobile viewport: local import, evidence review, three ZIP exports and arch
   assert.equal(await page.locator('#reviewed').isChecked(),false);await page.locator('#reviewed').check();
   for(const target of ['codex','claude-code','antigravity']){
     const zip=await download('[data-harness="'+target+'"]');
+    assert.equal(await page.locator('#install-guide').evaluate(el=>el.open),true);
+    assert.ok((await page.locator('#zip-status').textContent()).includes('已请求下载 runaway-'+target+'.zip'));
     const out=spawnSync('python3',['-c','import zipfile,json,sys\nz=zipfile.ZipFile(sys.argv[1]); assert z.testzip() is None\nm=json.loads(z.read("runaway-export.json")); assert m["target"]==sys.argv[2]\nassert "条件不明时先核对。" in m["files"][0]["content"]\nassert not any("private" in p or "sources" in p for p in z.namelist())',zip,target],{encoding:'utf8'});
     assert.equal(out.status,0,out.stderr);
   }
