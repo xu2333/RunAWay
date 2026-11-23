@@ -50,9 +50,17 @@ export function sourcesFrom(raw,kind) {
   if(raw.trim().startsWith('{')) return validateSources(parseJSON(raw));
   const roles={'用户':'user','我':'user','user':'user','助手':'assistant','assistant':'assistant','工具':'tool','tool':'tool'};
   const messages=[]; let current=null;
-  for(const line of raw.split('\n')) {
+  // Chat transcript copy buttons may place each speaker in a standalone heading.
+  const headings = new Map([
+    ['you said', 'user'], ['你说', 'user'], ['chatgpt said', 'assistant'], ['chatgpt 说', 'assistant'],
+  ]);
+  for(const line of raw.split(/\r?\n/)) {
     const match=line.match(/^(用户|我|user|助手|assistant|工具|tool)\s*[:：]\s?(.*)$/i);
-    if(match) { if(current) messages.push(current); current={role:roles[match[1].toLowerCase()],text:match[2]}; }
+    const heading = headings.get(line.trim().toLowerCase().replace(/[:：]$/, ''));
+    if(match || heading) {
+      if(current) messages.push(current);
+      current = match ? {role:roles[match[1].toLowerCase()], text:match[2]} : {role:heading, text:''};
+    }
     else if(current) current.text+='\n'+line;
     else if(line.trim()) throw Error('对话请用「用户：」「助手：」「工具：」分段，或导入带角色的来源 JSON。');
   }

@@ -16,7 +16,8 @@
 <p id="notice" role="status" aria-live="polite" hidden></p>
 <section id="source-panel" class="panel">
 <div class="section-top"><h2>贴一段你的对话</h2><button id="demo" class="text-button" aria-haspopup="dialog">先看「纸鹤」示例</button></div>
-<label for="source">保留谁说了哪句话</label><textarea id="source" rows="5" placeholder="用户：……&#10;助手：……&#10;用户：下次遇到这种情况，我希望……"></textarea>
+<label for="source">把你和助手的发言一起贴进来</label><textarea id="source" aria-describedby="source-error source-count" rows="5" placeholder="用户：……&#10;助手：……&#10;用户：下次遇到这种情况，我希望……"></textarea>
+<p id="source-error" class="error" role="alert" hidden></p>
 <p id="source-count" class="hint">0 字符 · 最多 64 KB</p>
 <button id="prepare" class="primary full">生成提炼请求 →</button>
 <details id="source-options"><summary>从文件导入、换材料类型或调整字数</summary>
@@ -32,13 +33,24 @@
 <div class="demo-actions"><form method="dialog"><button class="primary">回去写我的对话</button></form><button id="load-demo" class="secondary">查看示例出处与导出</button></div>
 </dialog>
 <section id="model-panel" class="panel" hidden>
-<h2>交给你平时用的模型</h2><p>复制请求，到模型里新开一个对话，粘贴并发送。保留本页，等模型答完，把整段 JSON 复制回来。</p>
-<p class="hint">请求包含刚才的原文。网页只在本机整理，由你决定把哪些内容发给所选模型。</p>
-<details><summary>先检查要交给模型的全部内容</summary><textarea id="request" rows="10" readonly aria-label="完整提炼请求"></textarea></details>
+<h2>复制请求，发给你常用的模型</h2>
+<p id="source-summary"></p>
+<details id="request-preview"><summary>核对要发给模型的原文和要求</summary><textarea id="request" rows="10" readonly aria-label="完整提炼请求"></textarea></details>
+<p class="hint">请求里有你刚贴的原文。保留本页，在模型里另开一个对话，粘贴并发送。</p>
 <div class="file-actions"><button id="copy-request" class="primary">复制提炼请求</button><button id="save-request" class="secondary">保存请求文件</button></div>
-<label for="answer">完整 JSON 结果</label><textarea id="answer" rows="9" placeholder="粘贴模型返回的整个 JSON 对象。"></textarea>
+<p id="copy-status" role="status" hidden></p>
+<h3><label for="answer">回到这里，贴上模型的回复</label></h3>
+<p class="hint" id="answer-hint">用模型代码块上的复制按钮，取回从 { 到 } 的完整结果。</p>
+<textarea id="answer" rows="5" aria-describedby="answer-hint answer-error" placeholder="在这里粘贴回复"></textarea>
+<div id="answer-repair" hidden>
+<p id="answer-error" class="error" role="alert"></p>
+<label for="repair-request">把下面这句话发回刚才的模型对话，再用新回复替换上面的内容。</label>
+<textarea id="repair-request" rows="3" readonly></textarea>
+<button id="copy-repair" class="secondary">复制修正要求</button>
+<span id="repair-status" role="status"></span>
+</div>
 <label class="file-button secondary">从本地文件读取结果<input id="answer-file" type="file" accept=".json,.txt,application/json,text/plain"></label>
-<button id="import-answer" class="primary full">核对来源，打开分身 →</button>
+<button id="import-answer" class="primary full">核对来源，打开短卡 →</button>
 </section>
 <section id="result-panel" class="panel" hidden>
 <div class="eyebrow" id="result-status">等你核对的候选</div><h2 id="name"></h2><p id="tagline"></p>

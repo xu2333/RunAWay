@@ -22,6 +22,7 @@ export async function copyText(text) {
   try { await navigator.clipboard.writeText(text); }
   catch {
     const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();
-    const ok=document.execCommand('copy');area.remove();if(!ok)throw Error('请长按文本框，手动选择并复制。');
+    try { if(!document.execCommand('copy'))throw Error('请长按文本框，手动选择并复制。'); }
+    finally { area.remove(); }
   }
 }
