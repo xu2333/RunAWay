@@ -11,11 +11,11 @@
 <body>
 <header><div class="wordmark">RunAWay<span>your taste, to go.</span></div><span class="local">● 本机处理</span></header>
 <main>
-<section class="hello"><h1>带着「你」，<br>换个地方继续。</h1><p>把你纠正过助手的一段对话，做成下次开聊就能用的短卡。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
+<section class="hello"><h1>带着「你」，<br>换个地方继续。</h1><p>贴一段你纠正过助手的对话，用自己常用的模型做成短卡，下次开 Codex 或 Claude Code 时带上。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
 <nav aria-label="步骤"><button data-step="source" aria-current="step">1 放进经历</button><button data-step="model">2 自选模型</button><button data-step="result">3 带走判断</button></nav>
 <p id="notice" role="status" aria-live="polite" hidden></p>
 <section id="source-panel" class="panel">
-<div class="section-top"><h2>贴一段你的对话</h2><button id="demo" class="text-button">先看「纸鹤」示例</button></div>
+<div class="section-top"><h2>贴一段你的对话</h2><button id="demo" class="text-button" aria-haspopup="dialog">先看「纸鹤」示例</button></div>
 <label for="source">保留谁说了哪句话</label><textarea id="source" rows="5" placeholder="用户：……&#10;助手：……&#10;用户：下次遇到这种情况，我希望……"></textarea>
 <p id="source-count" class="hint">0 字符 · 最多 64 KB</p>
 <button id="prepare" class="primary full">生成提炼请求 →</button>
@@ -25,6 +25,12 @@
 <label for="budget">整张短卡的字数上限</label><select id="budget"><option value="768" selected>768 字符</option><option value="1000">1000 字符</option><option value="1536">1536 字符</option><option value="1600">1600 字符</option><option value="2400">2400 字符</option><option value="4000">4000 字符</option></select>
 </details>
 </section>
+<dialog id="demo-preview" aria-labelledby="demo-title">
+<form method="dialog" class="demo-heading"><h2 id="demo-title">纸鹤怎么成了一张卡</h2><button class="text-button" autofocus>关闭</button></form>
+<h3>三句虚构对话</h3><p id="demo-source"></p>
+<h3>实际生成的短卡正文</h3><p id="demo-body"></p>
+<div class="demo-actions"><form method="dialog"><button class="primary">回去写我的对话</button></form><button id="load-demo" class="secondary">查看示例出处与导出</button></div>
+</dialog>
 <section id="model-panel" class="panel" hidden>
 <h2>交给你平时用的模型</h2><p>复制请求，到模型里新开一个对话，粘贴并发送。保留本页，等模型答完，把整段 JSON 复制回来。</p>
 <p class="hint">请求包含刚才的原文。网页只在本机整理，由你决定把哪些内容发给所选模型。</p>
@@ -42,7 +48,10 @@
 <button id="copy-prompt" class="primary full">复制整张卡，贴进新对话</button>
 <h3>或导出到电脑上的项目</h3><p class="hint">包内只有这段 prompt、接入文件和本地安装器。原始经历与引文不随包导出。接收端模型如何处理 prompt，取决于你的选择。</p>
 <div id="harnesses" class="harnesses"></div>
-<details><summary>怎样在电脑上用这个包？</summary><p>把 ZIP 传到电脑并解压。在解压目录运行 <code>node install.mjs --project "/path/to/project"</code>，把路径换成你的项目目录，再到项目中新开所选工作台的对话。需要 Node.js 22 或以上。</p></details>
+<details id="install-guide"><summary>怎样在电脑上用这个包？</summary>
+<p id="zip-status" role="status" hidden></p>
+<ol><li>把 ZIP 传到电脑，单独解压，找到 <code>install.mjs</code>。</li><li>在它所在的文件夹打开终端，用 Node.js 22 或更新版本运行下面的命令。把引号里的路径换成你的项目目录。<pre><code>node install.mjs --project "/你的项目目录"</code></pre></li><li>在刚才选的项目里，新开一个会话。</li></ol>
+</details>
 <div class="file-actions"><button id="save-portable" class="secondary">保存 portable.json</button><button id="save-prompt" class="secondary">保存 prompt</button></div>
 <button id="own-dialogue" class="text-button" hidden>换成我自己的对话 →</button>
 <hr><h3>把完整经历留给自己</h3><p class="hint">私有档案包含原文、引文和编辑后的 prompt；保存后可在本机重新打开。不要把它当作分享包。</p><button id="save-private" class="secondary full">保存私有档案</button>
