@@ -31,3 +31,8 @@ nav{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:4px 0 16px;p
 #install-guide li { margin: .5rem 0; }
 #install-guide pre { padding: .7rem; background: #edf0e4; white-space: pre-wrap; overflow-wrap: anywhere; }
 #zip-status { font-weight: 600; overflow-wrap: anywhere; }
+
+#model-panel h3 label { font: inherit; margin: 0; }
+#answer-repair { padding: .8rem; margin: .5rem 0; border: 1px solid #e5c2b2; border-radius: .75rem; }
+#answer-repair p, #answer-repair label { margin: 0 0 .5rem; }
+#repair-status, #copy-status { font-size: .85rem; }

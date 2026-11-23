@@ -107,11 +107,18 @@ function sourcesFrom(raw, kind) {
   const roles = { "\u7528\u6237": "user", "\u6211": "user", "user": "user", "\u52A9\u624B": "assistant", "assistant": "assistant", "\u5DE5\u5177": "tool", "tool": "tool" };
   const messages = [];
   let current = null;
-  for (const line of raw.split("\n")) {
+  const headings = /* @__PURE__ */ new Map([
+    ["you said", "user"],
+    ["\u4F60\u8BF4", "user"],
+    ["chatgpt said", "assistant"],
+    ["chatgpt \u8BF4", "assistant"]
+  ]);
+  for (const line of raw.split(/\r?\n/)) {
     const match = line.match(/^(用户|我|user|助手|assistant|工具|tool)\s*[:：]\s?(.*)$/i);
-    if (match) {
+    const heading = headings.get(line.trim().toLowerCase().replace(/[:：]$/, ""));
+    if (match || heading) {
       if (current) messages.push(current);
-      current = { role: roles[match[1].toLowerCase()], text: match[2] };
+      current = match ? { role: roles[match[1].toLowerCase()], text: match[2] } : { role: heading, text: "" };
     } else if (current) current.text += "\n" + line;
     else if (line.trim()) throw Error("\u5BF9\u8BDD\u8BF7\u7528\u300C\u7528\u6237\uFF1A\u300D\u300C\u52A9\u624B\uFF1A\u300D\u300C\u5DE5\u5177\uFF1A\u300D\u5206\u6BB5\uFF0C\u6216\u5BFC\u5165\u5E26\u89D2\u8272\u7684\u6765\u6E90 JSON\u3002");
   }
@@ -999,9 +1006,11 @@ async function copyText(text2) {
     area.value = text2;
     document.body.append(area);
     area.select();
-    const ok = document.execCommand("copy");
-    area.remove();
-    if (!ok) throw Error("\u8BF7\u957F\u6309\u6587\u672C\u6846\uFF0C\u624B\u52A8\u9009\u62E9\u5E76\u590D\u5236\u3002");
+    try {
+      if (!document.execCommand("copy")) throw Error("\u8BF7\u957F\u6309\u6587\u672C\u6846\uFF0C\u624B\u52A8\u9009\u62E9\u5E76\u590D\u5236\u3002");
+    } finally {
+      area.remove();
+    }
   }
 }
 
@@ -1117,6 +1126,12 @@ function notify(text2, error = false) {
 function show(step) {
   if (step === "model" && !session.prepared) return notify("\u8BF7\u5148\u653E\u5165\u7ECF\u5386\u5E76\u6574\u7406\u8BF7\u6C42\u3002", true);
   if (step === "result" && !session.answer && !session.portable) return notify("\u8BF7\u5148\u5BFC\u5165\u63D0\u70BC\u7ED3\u679C\u6216\u5DF2\u6709\u7684 portable.json\u3002", true);
+  if (step === "model") {
+    const roles = { user: "\u4F60", assistant: "\u52A9\u624B", tool: "\u5DE5\u5177", context: "\u80CC\u666F" };
+    const counts = /* @__PURE__ */ new Map();
+    for (const { role } of session.prepared.sources.sources) counts.set(role, (counts.get(role) ?? 0) + 1);
+    $("source-summary").textContent = "\u8FD9\u4EFD\u8BF7\u6C42\u542B\u6709" + Array.from(counts, ([role, n]) => roles[role] + "\u7684 " + n + " \u6BB5\u6587\u5B57").join("\u3001") + "\u3002";
+  }
   for (const name of ["source", "model", "result"]) $(name + "-panel").hidden = name !== step;
   document.querySelectorAll("[data-step]").forEach((b) => {
     if (b.dataset.step === step) b.setAttribute("aria-current", "step");
@@ -1140,7 +1155,22 @@ function guard(fn) {
     }
   };
 }
+function clearAnswerError() {
+  $("answer-repair").hidden = true;
+  $("answer").removeAttribute("aria-invalid");
+  $("answer-error").textContent = "";
+  $("repair-request").value = "";
+  $("repair-status").textContent = "";
+}
+function resetHandoff() {
+  clearAnswerError();
+  $("source-error").hidden = true;
+  $("source").removeAttribute("aria-invalid");
+  $("copy-status").hidden = true;
+  $("request-preview").open = false;
+}
 function invalidate() {
+  resetHandoff();
   session.reset();
   fictional = false;
   $("reviewed").checked = false;
@@ -1231,6 +1261,7 @@ $("archive-file").addEventListener("change", guard(async (e) => {
     const text2 = await readFile(e.target, 2e6);
     if (text2 === null || !confirmReplace()) return;
     const result = await session.restore(text2);
+    resetHandoff();
     fictional = session.origin === "fictional_demo";
     $("reviewed").checked = false;
     if (result.kind === "archive") {
@@ -1251,15 +1282,36 @@ $("archive-file").addEventListener("change", guard(async (e) => {
   }
 }));
 $("prepare").addEventListener("click", guard(async () => {
-  $("request").value = session.prepare($("source").value, $("kind").value, Number($("budget").value));
-  fictional = false;
+  try {
+    if (!session.prepared) $("request").value = session.prepare($("source").value, $("kind").value, Number($("budget").value));
+  } catch (error) {
+    $("source-error").textContent = error.message;
+    $("source-error").hidden = false;
+    $("source").setAttribute("aria-invalid", "true");
+    $("source-error").scrollIntoView({ block: "center" });
+    return;
+  }
+  $("notice").hidden = true;
   show("model");
-  notify("\u8BF7\u6C42\u5DF2\u5907\u597D\u3002\u590D\u5236\u540E\uFF0C\u53BB\u4F60\u9009\u7684\u6A21\u578B\u7C98\u8D34\u5E76\u53D1\u9001\u3002");
+  $("model-panel").scrollIntoView({ block: "start" });
 }));
+async function copyField(field, status, success, preview) {
+  try {
+    await copyText(field.value);
+    status.textContent = success;
+  } catch {
+    if (preview) preview.open = true;
+    field.focus();
+    field.select();
+    status.textContent = "\u6587\u5B57\u5DF2\u9009\u4E2D\u3002\u8BF7\u7528\u7CFB\u7EDF\u7684\u300C\u590D\u5236\u300D\uFF0C\u518D\u53BB\u6A21\u578B\u91CC\u7C98\u8D34\u3002";
+  }
+  status.hidden = false;
+}
 $("copy-request").addEventListener("click", guard(async () => {
-  if (!session.prepared) throw Error("\u8BF7\u5148\u6574\u7406\u6765\u6E90\u3002");
-  await copyText($("request").value);
-  notify("\u8BF7\u6C42\u5DF2\u590D\u5236\u3002\u63A5\u4E0B\u6765\u7531\u4F60\u51B3\u5B9A\u4EA4\u7ED9\u54EA\u4E2A\u6A21\u578B\u3002");
+  await copyField($("request"), $("copy-status"), "\u5DF2\u590D\u5236\u3002\u53BB\u6A21\u578B\u91CC\u7C98\u8D34\u5E76\u53D1\u9001\uFF0C\u62FF\u5230\u56DE\u590D\u518D\u56DE\u5230\u8FD9\u91CC\u3002", $("request-preview"));
+}));
+$("copy-repair").addEventListener("click", guard(async () => {
+  await copyField($("repair-request"), $("repair-status"), "\u5DF2\u590D\u5236\uFF0C\u53D1\u56DE\u521A\u624D\u7684\u6A21\u578B\u5BF9\u8BDD\u5373\u53EF\u3002");
 }));
 $("save-request").addEventListener("click", guard(async () => {
   if (!session.prepared) throw Error("\u8BF7\u5148\u6574\u7406\u6765\u6E90\u3002");
@@ -1268,15 +1320,35 @@ $("save-request").addEventListener("click", guard(async () => {
 $("answer-file").addEventListener("change", guard(async (e) => {
   try {
     const text2 = await readFile(e.target);
-    if (text2 !== null) $("answer").value = text2;
+    if (text2 !== null) {
+      clearAnswerError();
+      $("answer").value = text2;
+    }
   } finally {
     e.target.value = "";
   }
 }));
+$("answer").addEventListener("input", clearAnswerError);
 $("import-answer").addEventListener("click", guard(async () => {
-  session.importAnswer($("answer").value);
+  const raw = $("answer").value;
+  if (!raw.trim()) {
+    $("answer").focus();
+    return;
+  }
+  try {
+    session.importAnswer(raw);
+  } catch (error) {
+    $("answer-error").textContent = error.message;
+    $("repair-request").value = "\u7F51\u9875\u6838\u5BF9\u7ED3\u679C\u65F6\u63D0\u793A\u300C" + error.message + "\u300D\u3002\u8BF7\u6309\u672C\u5BF9\u8BDD\u6700\u521D\u7684\u63D0\u70BC\u8BF7\u6C42\u4FEE\u6B63\uFF0C\u5E76\u91CD\u65B0\u7ED9\u51FA\u5B8C\u6574 JSON\u3002";
+    $("answer").setAttribute("aria-invalid", "true");
+    $("answer-repair").hidden = false;
+    $("answer-error").scrollIntoView({ block: "center" });
+    return;
+  }
+  clearAnswerError();
   render();
   notify("\u5F15\u6587\u3001\u8BF4\u8BDD\u8005\u3001\u5B57\u6BB5\u548C\u957F\u5EA6\u68C0\u67E5\u901A\u8FC7\u3002\u4ECD\u9700\u4F60\u68C0\u67E5\u89E3\u91CA\u662F\u5426\u7B26\u5408\u81EA\u5DF1\u3002");
+  $("result-panel").scrollIntoView({ block: "start" });
 }));
 $("prompt").addEventListener("input", () => {
   if (!session.portable) session.body = $("prompt").value;
