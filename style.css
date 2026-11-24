@@ -36,3 +36,29 @@ nav{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:4px 0 16px;p
 #answer-repair { padding: .8rem; margin: .5rem 0; border: 1px solid #e5c2b2; border-radius: .75rem; }
 #answer-repair p, #answer-repair label { margin: 0 0 .5rem; }
 #repair-status, #copy-status { font-size: .85rem; }
+
+/* Keep the outgoing request and incoming reply distinct when switching apps. */
+.send-request {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border: 1px solid #cdd9be;
+  border-radius: 14px;
+  background: #eff3e8;
+}
+.send-request > summary {
+  min-height: 44px;
+  padding: .85rem 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 650;
+}
+.send-content { padding-bottom: .5rem; }
+.send-content > p { margin: 0; font-size: .875rem; }
+.send-content .file-actions { margin: .75rem 0 0; align-items: center; }
+.send-content .text-button { padding-inline: .5rem; }
+#request-preview { margin: .25rem 0 0; border: 0; }
+#request-preview summary { min-height: 44px; }
+#source-summary { margin: 0 0 .5rem; }
+#copy-status { color: var(--green); }
+#answer { border-color: #b9c8ad; }
+#answer:focus { border-color: var(--green); }

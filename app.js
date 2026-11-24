@@ -471,7 +471,7 @@ Documentation: ${adapter.documentation}
   ]) };
 }
 
-// node_modules/@capacitor/core/dist/index.js
+// ../../../product/apps/mobile/node_modules/@capacitor/core/dist/index.js
 var ExceptionCode;
 (function(ExceptionCode2) {
   ExceptionCode2["Unimplemented"] = "UNIMPLEMENTED";
@@ -1137,6 +1137,7 @@ function show(step) {
     for (const { role } of session.prepared.sources.sources) counts.set(role, (counts.get(role) ?? 0) + 1);
     $("source-summary").textContent = "\u8FD9\u4EFD\u8BF7\u6C42\u542B\u6709" + Array.from(counts, ([role, n]) => roles[role] + "\u7684 " + n + " \u6BB5\u6587\u5B57").join("\u3001") + "\u3002";
   }
+  $("intro").hidden = step !== "source";
   for (const name of ["source", "model", "result"]) $(name + "-panel").hidden = name !== step;
   document.querySelectorAll("[data-step]").forEach((b) => {
     if (b.dataset.step === step) b.setAttribute("aria-current", "step");
@@ -1173,6 +1174,8 @@ function resetHandoff() {
   $("source").removeAttribute("aria-invalid");
   $("copy-status").hidden = true;
   $("request-preview").open = false;
+  $("send-request").open = true;
+  $("send-label").textContent = "\u628A\u63D0\u70BC\u8BF7\u6C42\u53D1\u7ED9\u6A21\u578B";
 }
 function invalidate() {
   resetHandoff();
@@ -1309,11 +1312,19 @@ async function copyField(field, status, success, preview) {
     field.focus();
     field.select();
     status.textContent = "\u6587\u5B57\u5DF2\u9009\u4E2D\u3002\u8BF7\u7528\u7CFB\u7EDF\u7684\u300C\u590D\u5236\u300D\uFF0C\u518D\u53BB\u6A21\u578B\u91CC\u7C98\u8D34\u3002";
+    status.hidden = false;
+    return false;
   }
   status.hidden = false;
+  return true;
 }
 $("copy-request").addEventListener("click", guard(async () => {
-  await copyField($("request"), $("copy-status"), "\u5DF2\u590D\u5236\u3002\u53BB\u6A21\u578B\u91CC\u7C98\u8D34\u5E76\u53D1\u9001\uFF0C\u62FF\u5230\u56DE\u590D\u518D\u56DE\u5230\u8FD9\u91CC\u3002", $("request-preview"));
+  const copied = await copyField($("request"), $("copy-status"), "\u53BB\u6A21\u578B\u91CC\u7C98\u8D34\u5E76\u53D1\u9001\uFF0C\u62FF\u5230\u56DE\u590D\u540E\u56DE\u5230\u672C\u9875\u3002", $("request-preview"));
+  if (copied) {
+    $("send-label").textContent = "\u8BF7\u6C42\u5DF2\u590D\u5236 \xB7 \u518D\u6B21\u67E5\u770B";
+    $("send-request").open = false;
+    $("send-heading").focus();
+  }
 }));
 $("copy-repair").addEventListener("click", guard(async () => {
   await copyField($("repair-request"), $("repair-status"), "\u5DF2\u590D\u5236\uFF0C\u53D1\u56DE\u521A\u624D\u7684\u6A21\u578B\u5BF9\u8BDD\u5373\u53EF\u3002");

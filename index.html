@@ -11,8 +11,8 @@
 <body>
 <header><div class="wordmark">RunAWay<span>your taste, to go.</span></div><span class="local">● 本机处理</span></header>
 <main>
-<section class="hello"><h1>带着「你」，<br>换个地方继续。</h1><p>贴一段你纠正过助手的对话，用自己常用的模型做成短卡，下次开 Codex 或 Claude Code 时带上。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
-<nav aria-label="步骤"><button data-step="source" aria-current="step">1 放进经历</button><button data-step="model">2 自选模型</button><button data-step="result">3 带走判断</button></nav>
+<section id="intro" class="hello"><h1>带着「你」，<br>换个地方继续。</h1><p>贴一段你纠正过助手的对话，用自己常用的模型做成短卡，下次开 Codex 或 Claude Code 时带上。</p><img class="mascot" src="./icon.svg" alt="" aria-hidden="true"></section>
+<nav aria-label="步骤"><button data-step="source" aria-current="step">1 放入材料</button><button data-step="model">2 去模型提炼</button><button data-step="result">3 带走短卡</button></nav>
 <p id="notice" role="status" aria-live="polite" hidden></p>
 <section id="source-panel" class="panel">
 <div class="section-top"><h2>贴一段你的对话</h2><button id="demo" class="text-button" aria-haspopup="dialog">先看「纸鹤」示例</button></div>
@@ -33,15 +33,20 @@
 <div class="demo-actions"><form method="dialog"><button class="primary">回去写我的对话</button></form><button id="load-demo" class="secondary">查看示例出处与导出</button></div>
 </dialog>
 <section id="model-panel" class="panel" hidden>
-<h2>复制请求，发给你常用的模型</h2>
-<p id="source-summary"></p>
-<details id="request-preview"><summary>核对要发给模型的原文和要求</summary><textarea id="request" rows="10" readonly aria-label="完整提炼请求"></textarea></details>
-<p class="hint">请求里有你刚贴的原文。保留本页，在模型里另开一个对话，粘贴并发送。</p>
-<div class="file-actions"><button id="copy-request" class="primary">复制提炼请求</button><button id="save-request" class="secondary">保存请求文件</button></div>
+<h2>用自己的模型做短卡</h2>
+<details id="send-request" class="send-request" open>
+<summary id="send-heading"><span id="send-label">把提炼请求发给模型</span></summary>
+<div class="send-content">
+<p id="source-summary" class="hint"></p>
+<p class="hint">保留本页。到常用的模型里新开对话，粘贴请求并发送。</p>
+<div class="file-actions"><button id="copy-request" class="primary">复制提炼请求</button><button id="save-request" class="text-button">保存为文件</button></div>
+<details id="request-preview"><summary>查看将随请求发送的原文</summary><textarea id="request" rows="8" readonly aria-label="完整提炼请求"></textarea></details>
+</div>
+</details>
 <p id="copy-status" role="status" hidden></p>
-<h3><label for="answer">回到这里，贴上模型的回复</label></h3>
-<p class="hint" id="answer-hint">用模型代码块上的复制按钮，取回从 { 到 } 的完整结果。</p>
-<textarea id="answer" rows="5" aria-describedby="answer-hint answer-error" placeholder="在这里粘贴回复"></textarea>
+<h3><label for="answer">贴回模型的完整回复</label></h3>
+<p class="hint" id="answer-hint">复制模型给出的整个代码块，从 { 到 } 一起贴进来。</p>
+<textarea id="answer" rows="5" aria-describedby="answer-hint answer-error" placeholder="在这里粘贴模型回复的 JSON"></textarea>
 <div id="answer-repair" hidden>
 <p id="answer-error" class="error" role="alert"></p>
 <label for="repair-request">把下面这句话发回刚才的模型对话，再用新回复替换上面的内容。</label>
