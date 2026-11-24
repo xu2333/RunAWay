@@ -5,8 +5,10 @@ import {makeRequest} from '../../web/dist/core.mjs';
 
 const source = await readFile(new URL('./source.txt', import.meta.url), 'utf8');
 const session = new Session();
-const candidate = session.prepare(source, 'trajectory', 768);
+session.prepare(source, 'trajectory', 768);
 const original = makeRequest(session.prepared.sources, 768);
+// Preserve the single-instruction candidate used in this frozen comparison.
+const candidate = '如果用户明确指定了一个会改变执行结果的非私密短值，在对应判断和随身 prompt 正文中原样保留它，并写清它适用于什么情境、条件变化时怎样处理。泛称不能代替这个值。只保留执行所需的最小片段；私人身份信息、凭证和原句仍应省去。材料没指定的值不要补。\n\n' + original;
 const task = '请给一个尚未标日期的档案盒起名，只回复盒名。不要使用工具。';
 const [command, file] = process.argv.slice(2);
 if (command === 'requests') {
