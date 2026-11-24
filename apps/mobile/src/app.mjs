@@ -17,6 +17,7 @@ function show(step){
     for(const {role} of session.prepared.sources.sources)counts.set(role,(counts.get(role)??0)+1);
     $('source-summary').textContent='这份请求含有'+Array.from(counts,([role,n])=>roles[role]+'的 '+n+' 段文字').join('、')+'。';
   }
+  $('intro').hidden=step!=='source';
   for(const name of ['source','model','result'])$(name+'-panel').hidden=name!==step;
   document.querySelectorAll('[data-step]').forEach(b=>{if(b.dataset.step===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
 }
@@ -38,6 +39,8 @@ function resetHandoff(){
   $('source').removeAttribute('aria-invalid');
   $('copy-status').hidden=true;
   $('request-preview').open=false;
+  $('send-request').open=true;
+  $('send-label').textContent='把提炼请求发给模型';
 }
 function invalidate(){resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
 function append(parent,tag,text){const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;}
@@ -87,11 +90,19 @@ async function copyField(field,status,success,preview){
     field.focus();
     field.select();
     status.textContent='文字已选中。请用系统的「复制」，再去模型里粘贴。';
+    status.hidden=false;
+    return false;
   }
   status.hidden=false;
+  return true;
 }
 $('copy-request').addEventListener('click',guard(async()=>{
-  await copyField($('request'),$('copy-status'),'已复制。去模型里粘贴并发送，拿到回复再回到这里。',$('request-preview'));
+  const copied=await copyField($('request'),$('copy-status'),'去模型里粘贴并发送，拿到回复后回到本页。',$('request-preview'));
+  if(copied){
+    $('send-label').textContent='请求已复制 · 再次查看';
+    $('send-request').open=false;
+    $('send-heading').focus();
+  }
 }));
 $('copy-repair').addEventListener('click',guard(async()=>{
   await copyField($('repair-request'),$('repair-status'),'已复制，发回刚才的模型对话即可。');
