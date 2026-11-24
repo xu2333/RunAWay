@@ -103,6 +103,10 @@ test('own dialogue survives the copy, correction and return trip',async t=>{
   await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});
   await page.locator('#copy-request').click();
   assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),request);
+  assert.equal(await page.locator('#send-request').evaluate(el=>el.open),false);
+  assert.equal(await page.locator('#answer').isVisible(),true);
+  await page.locator('#send-heading').click();
+  assert.equal(await page.locator('#copy-request').isVisible(),true);
   assert.match(request,/那正式放映呢/);
   const wrong=structuredClone(answer);
   wrong.claims[0].evidence=[{source_id:'message-2',quote:'那正式放映呢？',relation:'supports'}];
@@ -134,6 +138,7 @@ test('own dialogue survives the copy, correction and return trip',async t=>{
   await page.locator('#copy-request').click();
   assert.equal(await page.locator('#request').isVisible(),true);
   assert.match(await page.locator('#copy-status').innerText(),/已选中/);
+  assert.equal(await page.locator('#send-request').evaluate(el=>el.open),true);
   assert.ok(await page.locator('#request').evaluate(el=>el.selectionStart===0&&el.selectionEnd===el.value.length));
   assert.deepEqual(errors,[]);
   assert.ok(requests.every(r=>r.method==='GET'&&r.url.startsWith(origin+'/')));
