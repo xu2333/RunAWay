@@ -1,0 +1,434 @@
+[
+  {
+    "slot": "codex-greenhouse-old",
+    "case": "greenhouse",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "12d591b5d236826d26f6014e576422185f6ec10cceb4a5566f2606ee83a979fc"
+  },
+  {
+    "slot": "codex-greenhouse-new",
+    "case": "greenhouse",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "b84858816d407fe53a7f22defbf675aadd4365ef567eb6f5340475966e483818"
+  },
+  {
+    "slot": "claude-code-greenhouse-old",
+    "case": "greenhouse",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "12d591b5d236826d26f6014e576422185f6ec10cceb4a5566f2606ee83a979fc"
+  },
+  {
+    "slot": "claude-code-greenhouse-new",
+    "case": "greenhouse",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "b84858816d407fe53a7f22defbf675aadd4365ef567eb6f5340475966e483818"
+  },
+  {
+    "slot": "antigravity-greenhouse-old",
+    "case": "greenhouse",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "e27d3b55a48e36380dc9b87b52d8de3642e516d66a0b702f50bfa70cc87168f7"
+  },
+  {
+    "slot": "antigravity-greenhouse-new",
+    "case": "greenhouse",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+    "rule_sha256": "74698520a7161ae97618ff9dd98e4ed1099cb23f5e068c8d41a23eb0146609fc"
+  },
+  {
+    "slot": "codex-listening-old",
+    "case": "listening",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "14853492574349213228d8668bbefcb9b416ce7dd7293519c7e0cb945f770f59"
+  },
+  {
+    "slot": "codex-listening-new",
+    "case": "listening",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "d0dcbd29834a8dce374ae97aab85bb7cc057c72646183620402eef2448eebbfb"
+  },
+  {
+    "slot": "claude-code-listening-old",
+    "case": "listening",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "14853492574349213228d8668bbefcb9b416ce7dd7293519c7e0cb945f770f59"
+  },
+  {
+    "slot": "claude-code-listening-new",
+    "case": "listening",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "d0dcbd29834a8dce374ae97aab85bb7cc057c72646183620402eef2448eebbfb"
+  },
+  {
+    "slot": "antigravity-listening-old",
+    "case": "listening",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "9db2565ae7c9417a2478f2746798bafd9b2c7a9a2bfabdb3dab0943445f20db4"
+  },
+  {
+    "slot": "antigravity-listening-new",
+    "case": "listening",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+    "rule_sha256": "5b91eaabab8c224c2814b5523262dae1b7d9b6428020621fd1a8e9ee52d526cd"
+  },
+  {
+    "slot": "codex-puzzle-old",
+    "case": "puzzle",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "e3e2d2a4845eb41777b23c323fa1efc4d14079e555be69eaed941b6d0ab77f41"
+  },
+  {
+    "slot": "codex-puzzle-new",
+    "case": "puzzle",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "044fe6f6aaec9b764fb783c5bf00c8dec8fd6984c2b497c577064723283f730b"
+  },
+  {
+    "slot": "claude-code-puzzle-old",
+    "case": "puzzle",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "e3e2d2a4845eb41777b23c323fa1efc4d14079e555be69eaed941b6d0ab77f41"
+  },
+  {
+    "slot": "claude-code-puzzle-new",
+    "case": "puzzle",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "044fe6f6aaec9b764fb783c5bf00c8dec8fd6984c2b497c577064723283f730b"
+  },
+  {
+    "slot": "antigravity-puzzle-old",
+    "case": "puzzle",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "625adcc5e870d2cb1c78bc41acfdfbd7b9b2506395caa0129ac64289e43a04c0"
+  },
+  {
+    "slot": "antigravity-puzzle-new",
+    "case": "puzzle",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+    "rule_sha256": "876d8e45b01dd6210f8f3c3baae31a874efde27c57aee85829ef304892aa3cc7"
+  },
+  {
+    "slot": "codex-caption-old",
+    "case": "caption",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "eae6718abed0c80ce70ec3fb31615b8d8a81fcaf7c65629fcfc493721ddaaccd"
+  },
+  {
+    "slot": "codex-caption-new",
+    "case": "caption",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "8220dc559fbc261ca066487d6123b3fa93da799626528251577107f5a7dd7133"
+  },
+  {
+    "slot": "claude-code-caption-old",
+    "case": "caption",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "eae6718abed0c80ce70ec3fb31615b8d8a81fcaf7c65629fcfc493721ddaaccd"
+  },
+  {
+    "slot": "claude-code-caption-new",
+    "case": "caption",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "8220dc559fbc261ca066487d6123b3fa93da799626528251577107f5a7dd7133"
+  },
+  {
+    "slot": "antigravity-caption-old",
+    "case": "caption",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "cf79a7fe014f0722cdda041d147c941dc21a24392a28347d592ab246d3b0c7ac"
+  },
+  {
+    "slot": "antigravity-caption-new",
+    "case": "caption",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+    "rule_sha256": "b9bfcf9c2c576dd24c9ac9c78ee709815ba8069f14795cbbb12adc0d45fb0320"
+  },
+  {
+    "slot": "codex-thread-old",
+    "case": "thread",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "c94d8946bb7ade7e8e187546650ed135018ae325ae42011a2f89393b3da45ebe"
+  },
+  {
+    "slot": "codex-thread-new",
+    "case": "thread",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "ed84a73037573e9ab9c0501a0e6bb2083c01243b1153d4a9f8ea31a5427b3ae9"
+  },
+  {
+    "slot": "claude-code-thread-old",
+    "case": "thread",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "c94d8946bb7ade7e8e187546650ed135018ae325ae42011a2f89393b3da45ebe"
+  },
+  {
+    "slot": "claude-code-thread-new",
+    "case": "thread",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "ed84a73037573e9ab9c0501a0e6bb2083c01243b1153d4a9f8ea31a5427b3ae9"
+  },
+  {
+    "slot": "antigravity-thread-old",
+    "case": "thread",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "d55cec742e742c6d3c8794684309c7b72bf7f621a090a6708df016984c266baa"
+  },
+  {
+    "slot": "antigravity-thread-new",
+    "case": "thread",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+    "rule_sha256": "4339aba226b4ff97a4121eaf9f81e4541cfa97120ddc462bc06885572e82bc5b"
+  },
+  {
+    "slot": "codex-type-old",
+    "case": "type",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "0543e2bd604ef239486e0517cd33213fa1e277b932cfedc8be3722b3bf00596c"
+  },
+  {
+    "slot": "codex-type-new",
+    "case": "type",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "339a9c72b088d27c41c081aa549ea8f03c10a56874127bd8474a5275a9a4ae79"
+  },
+  {
+    "slot": "claude-code-type-old",
+    "case": "type",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "0543e2bd604ef239486e0517cd33213fa1e277b932cfedc8be3722b3bf00596c"
+  },
+  {
+    "slot": "claude-code-type-new",
+    "case": "type",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "339a9c72b088d27c41c081aa549ea8f03c10a56874127bd8474a5275a9a4ae79"
+  },
+  {
+    "slot": "antigravity-type-old",
+    "case": "type",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "b7a0682d6e120b09b3fc989b1a0ba78e3b6c191f3eb3e74aa74e95bd3b577090"
+  },
+  {
+    "slot": "antigravity-type-new",
+    "case": "type",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+    "rule_sha256": "fecb35b3200a104094280998f6b09016311ea775ecaff0ebb006ffd1f248debb"
+  },
+  {
+    "slot": "codex-reels-old",
+    "case": "reels",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "0541bbd056451d191032da10947620b51d2a2966b33e6cf6efdadbb5d978d430"
+  },
+  {
+    "slot": "codex-reels-new",
+    "case": "reels",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "c973f55dfbc82e2aed1b10903af2cb2993426bf12090c7325c90ec834a338e9b"
+  },
+  {
+    "slot": "claude-code-reels-old",
+    "case": "reels",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "0541bbd056451d191032da10947620b51d2a2966b33e6cf6efdadbb5d978d430"
+  },
+  {
+    "slot": "claude-code-reels-new",
+    "case": "reels",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "c973f55dfbc82e2aed1b10903af2cb2993426bf12090c7325c90ec834a338e9b"
+  },
+  {
+    "slot": "antigravity-reels-old",
+    "case": "reels",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "cea6343334c776a2ff960d56489efdf08b6a289af7cb08777ac1836db9ba14ba"
+  },
+  {
+    "slot": "antigravity-reels-new",
+    "case": "reels",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+    "rule_sha256": "1a9eaeb4b1cde60aa3cb9635a2e27b02c3b3469a2f543449f8093c27e3f07b7f"
+  },
+  {
+    "slot": "codex-foldout-old",
+    "case": "foldout",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "dd849f4ff42ed0245a89dc47122e62ba99077b42f691a9770ebc2707a5ea9dae"
+  },
+  {
+    "slot": "codex-foldout-new",
+    "case": "foldout",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "cf83295eac66db3b50e01e1be39255a314ecdaaf2c2d63f527d8b3da807acda8"
+  },
+  {
+    "slot": "claude-code-foldout-old",
+    "case": "foldout",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "dd849f4ff42ed0245a89dc47122e62ba99077b42f691a9770ebc2707a5ea9dae"
+  },
+  {
+    "slot": "claude-code-foldout-new",
+    "case": "foldout",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "cf83295eac66db3b50e01e1be39255a314ecdaaf2c2d63f527d8b3da807acda8"
+  },
+  {
+    "slot": "antigravity-foldout-old",
+    "case": "foldout",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "6c0930da2cc92467879c4f607874bdc9dcb396354cb0455e8a9f47e959a73693"
+  },
+  {
+    "slot": "antigravity-foldout-new",
+    "case": "foldout",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+    "rule_sha256": "3d62fec525f4a458989d6f6392855e84ab324ae7107989046ccc0e5c24ada3aa"
+  },
+  {
+    "slot": "codex-swatch-old",
+    "case": "swatch",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "57ae9a78b9f140c1db22c914d9eaf8f14c54c61c0cda2225280a04ac29900624"
+  },
+  {
+    "slot": "codex-swatch-new",
+    "case": "swatch",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "ba2616846ed771089ad3aa47c83ec014ce327670908c806e0511056364aaf436"
+  },
+  {
+    "slot": "claude-code-swatch-old",
+    "case": "swatch",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "57ae9a78b9f140c1db22c914d9eaf8f14c54c61c0cda2225280a04ac29900624"
+  },
+  {
+    "slot": "claude-code-swatch-new",
+    "case": "swatch",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "ba2616846ed771089ad3aa47c83ec014ce327670908c806e0511056364aaf436"
+  },
+  {
+    "slot": "antigravity-swatch-old",
+    "case": "swatch",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "2a4cf33c0ba79b499aaa02c8d46e1e39409ab86f0bddcdf6227260be465309e9"
+  },
+  {
+    "slot": "antigravity-swatch-new",
+    "case": "swatch",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+    "rule_sha256": "cf0e7fd482c59df6f83c027223a567e950e96661f7105f94cbfa2bb8e0e78163"
+  }
+]
