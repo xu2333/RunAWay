@@ -1,0 +1,218 @@
+[
+  {
+    "case": "greenhouse",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "0cf5db252e384ba96a2fff4520c38d280ef2d52b7842a2e45fb74aeef9deb217",
+    "zip_sha256": "6c1542be15b7853712f86aa3c6ff54a8a07cdc01e7285684534bfe045973a38d",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4"
+  },
+  {
+    "case": "greenhouse",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "0cf5db252e384ba96a2fff4520c38d280ef2d52b7842a2e45fb74aeef9deb217",
+    "zip_sha256": "b73808df814104604fb38e6cc57fb1c3d5ad3af65194eed9fb3d12ae66ffc82c",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4"
+  },
+  {
+    "case": "greenhouse",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "4a2cbd03f112821281f5282a0f85161eded4efde6bc67ad8803527c75df4c4f7",
+    "zip_sha256": "5c34423ded21bbb8c6036e2a686e5e29b21cfc2af882e8f337ecced051545c21",
+    "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4"
+  },
+  {
+    "case": "listening",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "3be4f1ac155516b344463c72e8af6319db9666547013e69e622eff3f2da578e5",
+    "zip_sha256": "30c3149b7ec62b6e97ef81c8cef742c56f4dc32505d7b24f426690f898f1ec4c",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841"
+  },
+  {
+    "case": "listening",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "3be4f1ac155516b344463c72e8af6319db9666547013e69e622eff3f2da578e5",
+    "zip_sha256": "d754903344ddd256544d32eda3126f4c8f551e8597170847d03ddbaeebcfd123",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841"
+  },
+  {
+    "case": "listening",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "8c0add461a0c48f8038e16fef9f0a5cdfd0d95a180261822d5b98dea57ab76dd",
+    "zip_sha256": "d04aafee53404872ba21a2b3a5d02c156a9d06ec0e2e35cf7e65265142c58afa",
+    "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841"
+  },
+  {
+    "case": "puzzle",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "ca5f83b6f5cd73ae79be6258b3120e85f8406a2a59f6a958a30aa88c595ac27a",
+    "zip_sha256": "f25d0f0ad0269ad7ec7fa59f42f521737d245e6dd757472d987e029db0ce8266",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293"
+  },
+  {
+    "case": "puzzle",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "ca5f83b6f5cd73ae79be6258b3120e85f8406a2a59f6a958a30aa88c595ac27a",
+    "zip_sha256": "7d993a921ca08be58a8c09f60b72ef2ac60c3129ecc4cfc0d6c01d973fdd5848",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293"
+  },
+  {
+    "case": "puzzle",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "0555a051475627b60f2445547a044ee49b1a71b2a5f2d54f8413222114bbaa4f",
+    "zip_sha256": "83d79fbefbfd9db74ff6127dc1d1619122fcf356c3753035e58e2294dc1f8a8f",
+    "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293"
+  },
+  {
+    "case": "caption",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "62ee3c78dbfc79ce3dcaf444d988c99d59dd3a846840d875d453758e66bfcd70",
+    "zip_sha256": "94d8cbd87a793f3b948eda1c028e1425510e49569a978bc5e56094db2074ed5b",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed"
+  },
+  {
+    "case": "caption",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "62ee3c78dbfc79ce3dcaf444d988c99d59dd3a846840d875d453758e66bfcd70",
+    "zip_sha256": "100634e8ca16142632fd4b37ee104ad44d6da536ae334fb3c3091441eabeaaff",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed"
+  },
+  {
+    "case": "caption",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "75643d723a7fb442eaad198b8ca295cbee4567a2af18967ea7abd4bc9f1c0d43",
+    "zip_sha256": "f2f9d38c3973185c143b318c6b39423d416ea32a11718d0b56dd84d35ad66c63",
+    "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed"
+  },
+  {
+    "case": "thread",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "d1f6ad923096f59ccb7d53aa2cb4e50d08850fc0cf7570cd98641604f0d4c4f8",
+    "zip_sha256": "abb69793abf6efc6e8f5ed41b64dc21732aa8dbd11689f0fe19d7bd4b050730d",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba"
+  },
+  {
+    "case": "thread",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "d1f6ad923096f59ccb7d53aa2cb4e50d08850fc0cf7570cd98641604f0d4c4f8",
+    "zip_sha256": "2d2ff0d26b581170e14c20007097a536fee00ca80f1574530ae7d295488f7508",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba"
+  },
+  {
+    "case": "thread",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "45990d0ae9733cd3e4dc36e4c3015fcc7f3dedb0ac4c8bc84dae4f5c299d37a7",
+    "zip_sha256": "d5b493badb8dafc49e5230a035d0f28bc9bc099d089c08cc80164b0b8c68faae",
+    "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba"
+  },
+  {
+    "case": "type",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "2390e27214de8b3a3c93cdf7e8d0399203cc494501889d9873120cafc678d478",
+    "zip_sha256": "c8a2a111f8f41d55a615479045a959b0d1ed17a7c211a324258392350c98aac2",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb"
+  },
+  {
+    "case": "type",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "2390e27214de8b3a3c93cdf7e8d0399203cc494501889d9873120cafc678d478",
+    "zip_sha256": "757f8a4f0047c8ebe6159816e08c0833c53d99b4c19c89debf1f1d5f22db459a",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb"
+  },
+  {
+    "case": "type",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "96b1143a8e9afe18b2293a2f3bfda429c23c043d078fcdc78f150eed4bf3c835",
+    "zip_sha256": "58526b21c5919e6c0d0afa89db0d53b0de46a93dc0eabfcc3f09635ab86f074e",
+    "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb"
+  },
+  {
+    "case": "reels",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "94abfc4e764db700ce5a0cf867771e075ba40c084bb03d6e18a10ad3f19037dc",
+    "zip_sha256": "15b9dda81d7ba635ac8a833aa5b188d250b521f208ac99f0f419da4f24af8808",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd"
+  },
+  {
+    "case": "reels",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "94abfc4e764db700ce5a0cf867771e075ba40c084bb03d6e18a10ad3f19037dc",
+    "zip_sha256": "e81356de310bec472530f6f258f24f54e84b3868dfeaeeb48f31b7aa68ac1832",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd"
+  },
+  {
+    "case": "reels",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "0c240f8d87ee1ccbaa07eb40f9327ae7d97f4770ad3b9bf9f9b01ecbf583ac67",
+    "zip_sha256": "e0c3caa5ac5906ba5a4f1a30f83b11123c618db943c3f715c331fe69ef62b512",
+    "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd"
+  },
+  {
+    "case": "foldout",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "1d632e521646b0de561a1827a74e881912498ca84ecf32ccdc2324c487af9373",
+    "zip_sha256": "5220b842fe27462c6f8d60c8c699c00634fc9ae4eb997ab9e0fef3c9a1e5568d",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5"
+  },
+  {
+    "case": "foldout",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "1d632e521646b0de561a1827a74e881912498ca84ecf32ccdc2324c487af9373",
+    "zip_sha256": "9f99fa0a67fa2e66601c24063e6868e94a5d7e9591a59a95c380761654aae762",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5"
+  },
+  {
+    "case": "foldout",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "d39633bcd5c5b23a2356ba74b4b421392766b0e7fd90da3f21c03f77f9499e79",
+    "zip_sha256": "772893dbc430680993d5d5c14d542bb7bbf16af15b32e6bd6fc252a13d3561d0",
+    "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5"
+  },
+  {
+    "case": "swatch",
+    "client": "codex",
+    "rule": "AGENTS.md",
+    "rule_sha256": "0fd8dbe782aad7e7e7d3292544d35a59adb3bf4da92a89c9924b1a8671df769b",
+    "zip_sha256": "7fbc88ad7435190d7ba9c058618cc0c1004bf41258b2d1a280cef199e9071576",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462"
+  },
+  {
+    "case": "swatch",
+    "client": "claude-code",
+    "rule": ".claude/rules/runaway.md",
+    "rule_sha256": "0fd8dbe782aad7e7e7d3292544d35a59adb3bf4da92a89c9924b1a8671df769b",
+    "zip_sha256": "a9ea34b1d2547a92765abfb1dffaaef2ac84e40c5f42d3768cf08f93ff553f10",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462"
+  },
+  {
+    "case": "swatch",
+    "client": "antigravity",
+    "rule": ".agents/rules/runaway.md",
+    "rule_sha256": "386bf49500079c5d1d97f53fcea471b56e35ab81d3720ae597241d0263b0f7d0",
+    "zip_sha256": "c74582970174fd26107d578aa63ee70c9e0b1a01c8f8c5dfd7a24723a38e393e",
+    "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462"
+  }
+]
