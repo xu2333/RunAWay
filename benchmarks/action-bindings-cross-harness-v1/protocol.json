@@ -1,0 +1,470 @@
+{
+  "cases": [
+    {
+      "id": "greenhouse",
+      "origin": "greenhouse-codex-reader-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n处理这次温室志愿者导览图时，只把新馆入口改为空心菱形，旧馆入口保留实心圆。图例旁是否添加建议游览时长尚不确定，不要自行补定。这版图等园丁在纸质校样上签字后再发给志愿者；群里说看过了，仍先别发。签字后的具体发送时间未知。这些做法是否适用于其他导览图或任务也未知。\n",
+      "task": "请给温室志愿者写一份可以直接照着做的导览图改图和发图安排。",
+      "card_sha256": "433d95b200b40129c7a505f0e551e6f99c245d52b9bd8a3b52cb4f7a950966d4",
+      "task_sha256": "0477937e9aa938c476b28bb2fcd71812d1e85383d00da5279ac711c3d7fcf02c",
+      "assess_separately": [
+        "新馆空心菱形，旧馆实心圆",
+        "园丁在纸样上签字才可发，群里看过不放行",
+        "时长待定，发图时刻未定且不添门槛或强制立即。"
+      ]
+    },
+    {
+      "id": "listening",
+      "origin": "listening-room-reader-transfer-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n我给石榴巷声音档案馆的阅览室试听机上架录音。试听机只放剪辑版，原始母带留在内库。录音人交回签好的授权页，而且馆员核过剪辑版的片段编号与授权页一致，才可以上架。录音人口头说同意也先不上。展签要不要印波形小图还没定；具备上架条件后，具体哪一班上架也还没排。\n",
+      "task": "请给声音档案馆值班同事写一份可以直接照着做的录音上架交接安排。",
+      "card_sha256": "cc8a80604dc1d5d252233f71cacb09dc6dfc2ebdd92d102094386fa5c1b8d841",
+      "task_sha256": "d2960b4846ce6f63d3c917b7d7a4582b47fc7a6ade0a4069113d0f10f57a8305",
+      "assess_separately": [
+        "剪辑版可上架，母带留内库",
+        "签好授权页且馆员核对编号一致才放行，口头同意无效",
+        "展签波形与班次待定，不添门槛或强制立即。"
+      ]
+    },
+    {
+      "id": "puzzle",
+      "origin": "puzzle-corner-action-transfer-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n我在鹭湾拼图借阅角处理归还件。要把原盒放回借阅柜，片数得和盒底标注相符，拼成的图案也得和本盒参考图一致。雨雀盒已点齐，成图也对过，一致。石桥盒片数齐，成图却和盒里的参考图对不上；这盒先放核查桌，查清并对上图案前不能回借阅柜。柜边分类贴纸用什么颜色还没定，雨雀盒具体哪段时间放回去也还没商量。\n",
+      "task": "请给拼图借阅角的接班志愿者写一份本次归还件的交接单，方便照着办理。",
+      "card_sha256": "874ef89de3c99d9777fd22b13c5ff5c2598fc5d4773fb0ab03195903181af293",
+      "task_sha256": "8ed993cff5d492b031f14436beebfe4ac35efc85aa00e57113224e1baba1a234",
+      "assess_separately": [
+        "片数与成图均须相符",
+        "雨雀两项已过，可回柜",
+        "石桥仅片数过，先放核查桌，图案查清并对上才回柜",
+        "贴纸颜色和回柜时段均待定。"
+      ]
+    },
+    {
+      "id": "caption",
+      "origin": "shadow-caption-two-stage-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n我在雾汀纸影戏交接《听潮幕》字幕。07 版文件已收到，可以先把它载入后台预演窗，观众看不到那里。把同一份字幕切到观众屏，要节目组在演出单上选中该版，还要屏务在该版的回执上记下末行完整显示。演出单已经选了 07 版；现有末行通过回执只标了 06 版，07 版那栏仍空着。后台素材列表用哪种标签色还没定，条件齐后几点切屏也还没定。\n",
+      "task": "请给接班同事写一份《听潮幕》字幕的交接单，让他能照着办理。",
+      "card_sha256": "cb0deb7f8a3b4a484ee744eb96be285ad97dcb63c5b3b662749441f04e29d1ed",
+      "task_sha256": "678cb026b5211863912b2980c34e9f7e1bf71a18efa6979be37a2c5bb3e5a500",
+      "assess_separately": [
+        "07可后台预演",
+        "观众屏还须演出单选中且同版末行完整的屏务回执",
+        "演出单已选07，06回执不可替代",
+        "标签色和切屏时刻待定，不阻预演。"
+      ]
+    },
+    {
+      "id": "thread",
+      "origin": "thread-panel-midwork-revision-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n《盐汀》这幅穿线画有十列。我起先让搭档照桌上的定位纸一路打孔，再按线序图往孔里穿白棉线。交班前，头六列的孔已经打好；前四列已经穿完，第五列刚起头。这时我改了主意：“后面几列的孔距我要重画，先把定位纸收起来，等我发确认过的新定位纸再接着打。已经有孔的地方照原线序走，做好的留着。”新定位纸还没发，哪天给也没定。\n",
+      "task": "请给接班搭档写一份《盐汀》的制作交接单，让他能照着办理。",
+      "card_sha256": "a510c30089d07e0cc38735f9c1755fc1bbb9932ffeb0d222db10ab94aaad05ba",
+      "task_sha256": "f2f958679d2df380ff23ab9593b65aabccec3de2b197ca8b9d13291de60c5c4f",
+      "assess_separately": [
+        "1至6已打孔、1至4穿好、第5刚起头",
+        "7至10停打孔直到本人发确认过的新定位纸",
+        "5至6仍可按原线序穿白棉线，不等新纸，不拆已完成部分。"
+      ]
+    },
+    {
+      "id": "type",
+      "origin": "type-specimen-completion-evidence-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n《雾港字盘》铅字样册有四块版，分甲乙两盘，每盘各有横题和竖题。我先让搭档四块都开印，甲横印了两张、乙横印了一张，两块竖题都还没开印。发现字脚可能偏，我让四块一律停印，已印的夹好。校样员后来在回条上按版号签了甲横和乙竖，我看过后说：“这两块照原印数往下做，手上已有的算数。”甲竖和乙横那两格只有收样章；按我们先前的约定，每块得有校样员在自己那格的签名才算过。交班时回条就这一张。\n",
+      "task": "请给接班搭档写一份《雾港字盘》的印制作业交接单，让他能照着办理。",
+      "card_sha256": "85f08f5f059a3b8b9a825d4d3ebcb47a5aac476ebef9558ad23fcb6ba144eceb",
+      "task_sha256": "33f841f05ce261ab86558de1bfc41b9897ce9b3f7a94018a4643c560707e9bcc",
+      "assess_separately": [
+        "只有甲横和乙竖恢复原印数",
+        "甲竖和乙横各等本版校样员签名，收样章不算",
+        "甲横两张、乙横一张、两竖零张，已有计数",
+        "夹样是交代，完成未知。"
+      ]
+    },
+    {
+      "id": "reels",
+      "origin": "two-reels-scoped-steps-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n《双溪听册》有榆涧卷和杉汀卷，两卷各收六段溪声。我交代晚班把每卷的底噪样本各存一份到备份盘。晚班在榆涧卷的交班条上写：“底噪样本已存妥，回读无误。”杉汀卷那张只写：“收到，照办。”剪辑台账上，榆涧的头四段已剪好，杉汀的头两段已剪好。剪辑师说榆涧余下的先别剪，等她发榆涧新版切点表；杉汀按桌上那张切点表接着剪就行。交班时新版还没发。\n",
+      "task": "请给接早班的搭档写一份《双溪听册》的工作交接单，让他能照着办理。",
+      "card_sha256": "195fae86daa3b24c8fec1513cabe7590e903f148cba04308a4eccf4b68faacbd",
+      "task_sha256": "ecee39c27dbddd255081e18b5534dc1708475aff3c89393d12adfdf815486e2d",
+      "assess_separately": [
+        "榆涧已备份且回读成功",
+        "杉汀备份有要求、完成未知，不强加回读或新增记录",
+        "各六段，榆涧前四已剪，余段等本卷新表，杉汀前二已剪，余段按现表可剪。"
+      ]
+    },
+    {
+      "id": "foldout",
+      "origin": "foldout-required-optional-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n《折岸拼景》有篷窗册、砂桥册，各五折。委托方收篷窗册时要一张整册展开照随件；砂桥册是留在工坊的，我对搭档说：“你想留张展开照就拍，嫌麻烦就算了。”晚班交接写着：“篷窗前三折已粘牢，余两折用桌上棉纸接着粘；展开照等整册粘完再拍，现在还没拍。”砂桥前四折已粘牢，最后一折得等装帧师送来配色纸样再粘，交班时还没送到。有人问砂桥拍照了没，搭档只回了一句“知道可以拍”。\n",
+      "task": "请给接班的搭档写一份《折岸拼景》的制作交接单，让他能照着办理。",
+      "card_sha256": "afef7dd1a681381a78abcb22904334ddd0ec199c1b04b394f230e241ab7b6ee5",
+      "task_sha256": "7f6010c1f0eab473a058a5bc167cefc363591b737fa75337273ff6d73acc1547",
+      "assess_separately": [
+        "各五折",
+        "篷窗前三已粘、后两可用桌上棉纸续粘，整册完成后须拍展开照随件，目前未拍",
+        "砂桥前四已粘，末折等装帧师纸样，照可拍可不拍，完成未知。"
+      ]
+    },
+    {
+      "id": "swatch",
+      "origin": "swatch-selective-waiver-v1",
+      "card": "Tentative preferences; follow current user instructions. Not factual identity or permission to act.\n\n《潮窗色谱》的苔阶套、瓦巷套各装六枚色片。开工时我在工单上写：两套封袋前，都得把一条同批次的试色条放进袋里。后来苔阶改作店内自留，我跟晚班说：“苔阶那条想放就放，不放也能封。”桌上还是开工那张工单。晚班便条写着：“瓦巷的试色条已裁好，搁在袋外；苔阶的我知道可以不放。”苔阶已装四枚，余下两枚可从白盘接着装。瓦巷已装五枚，第六枚先别装，等配色师送来替换片；交班时替换片还没到。\n",
+      "task": "请给接班搭档写一份《潮窗色谱》的装袋交接单，让他能照着办理。",
+      "card_sha256": "977f688f3189529a0bf1387cfcf69f8103415a1de31ea77ad0da3d8c48996462",
+      "task_sha256": "6c09dd61f0b3b76f89a432104ca3c47cd5848f0c1915dc6a513aee1ec47535bf",
+      "assess_separately": [
+        "各六枚",
+        "苔阶四枚已装、余二可从白盘续装，试色条可放可不放且是否放入未知",
+        "瓦巷五枚已装，末枚等配色师替换片，封袋前仍须同批试色条，裁好在袋外。"
+      ]
+    }
+  ],
+  "clients": {
+    "codex": "gpt-6.1-sol",
+    "claude-code": "sonnet",
+    "antigravity": "gemini-3.8-flash-medium"
+  },
+  "deadline_seconds": 180,
+  "max_cli_attempts": 54,
+  "stop": "Stop remaining slots of the affected client on runtime failure. No retry, substitution, or replenishment. Semantic failure is scored; missing stays in denominator.",
+  "grading": "For each clause record pass, partial/omitted, contradicted, or missing, quoting the answer; content passes only if all clauses pass without conflicting statements. For each case record any invented hard requirement, any material conflict, and whether the next action is usable, separately. All-three case passes/9 and per-client passes/9. Cases, not 27 independent persons, are the matched unit. No historical outputs pooled. No requirement to output only final labels on these handoff tasks.",
+  "slots": [
+    {
+      "client": "codex",
+      "case": "greenhouse",
+      "arm": "old",
+      "slot": "codex-greenhouse-old"
+    },
+    {
+      "client": "codex",
+      "case": "greenhouse",
+      "arm": "new",
+      "slot": "codex-greenhouse-new"
+    },
+    {
+      "client": "codex",
+      "case": "listening",
+      "arm": "new",
+      "slot": "codex-listening-new"
+    },
+    {
+      "client": "codex",
+      "case": "listening",
+      "arm": "old",
+      "slot": "codex-listening-old"
+    },
+    {
+      "client": "codex",
+      "case": "puzzle",
+      "arm": "old",
+      "slot": "codex-puzzle-old"
+    },
+    {
+      "client": "codex",
+      "case": "puzzle",
+      "arm": "new",
+      "slot": "codex-puzzle-new"
+    },
+    {
+      "client": "codex",
+      "case": "caption",
+      "arm": "new",
+      "slot": "codex-caption-new"
+    },
+    {
+      "client": "codex",
+      "case": "caption",
+      "arm": "old",
+      "slot": "codex-caption-old"
+    },
+    {
+      "client": "codex",
+      "case": "thread",
+      "arm": "old",
+      "slot": "codex-thread-old"
+    },
+    {
+      "client": "codex",
+      "case": "thread",
+      "arm": "new",
+      "slot": "codex-thread-new"
+    },
+    {
+      "client": "codex",
+      "case": "type",
+      "arm": "new",
+      "slot": "codex-type-new"
+    },
+    {
+      "client": "codex",
+      "case": "type",
+      "arm": "old",
+      "slot": "codex-type-old"
+    },
+    {
+      "client": "codex",
+      "case": "reels",
+      "arm": "old",
+      "slot": "codex-reels-old"
+    },
+    {
+      "client": "codex",
+      "case": "reels",
+      "arm": "new",
+      "slot": "codex-reels-new"
+    },
+    {
+      "client": "codex",
+      "case": "foldout",
+      "arm": "new",
+      "slot": "codex-foldout-new"
+    },
+    {
+      "client": "codex",
+      "case": "foldout",
+      "arm": "old",
+      "slot": "codex-foldout-old"
+    },
+    {
+      "client": "codex",
+      "case": "swatch",
+      "arm": "old",
+      "slot": "codex-swatch-old"
+    },
+    {
+      "client": "codex",
+      "case": "swatch",
+      "arm": "new",
+      "slot": "codex-swatch-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "greenhouse",
+      "arm": "new",
+      "slot": "claude-code-greenhouse-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "greenhouse",
+      "arm": "old",
+      "slot": "claude-code-greenhouse-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "listening",
+      "arm": "old",
+      "slot": "claude-code-listening-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "listening",
+      "arm": "new",
+      "slot": "claude-code-listening-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "puzzle",
+      "arm": "new",
+      "slot": "claude-code-puzzle-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "puzzle",
+      "arm": "old",
+      "slot": "claude-code-puzzle-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "caption",
+      "arm": "old",
+      "slot": "claude-code-caption-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "caption",
+      "arm": "new",
+      "slot": "claude-code-caption-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "thread",
+      "arm": "new",
+      "slot": "claude-code-thread-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "thread",
+      "arm": "old",
+      "slot": "claude-code-thread-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "type",
+      "arm": "old",
+      "slot": "claude-code-type-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "type",
+      "arm": "new",
+      "slot": "claude-code-type-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "reels",
+      "arm": "new",
+      "slot": "claude-code-reels-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "reels",
+      "arm": "old",
+      "slot": "claude-code-reels-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "foldout",
+      "arm": "old",
+      "slot": "claude-code-foldout-old"
+    },
+    {
+      "client": "claude-code",
+      "case": "foldout",
+      "arm": "new",
+      "slot": "claude-code-foldout-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "swatch",
+      "arm": "new",
+      "slot": "claude-code-swatch-new"
+    },
+    {
+      "client": "claude-code",
+      "case": "swatch",
+      "arm": "old",
+      "slot": "claude-code-swatch-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "greenhouse",
+      "arm": "old",
+      "slot": "antigravity-greenhouse-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "greenhouse",
+      "arm": "new",
+      "slot": "antigravity-greenhouse-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "listening",
+      "arm": "new",
+      "slot": "antigravity-listening-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "listening",
+      "arm": "old",
+      "slot": "antigravity-listening-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "puzzle",
+      "arm": "old",
+      "slot": "antigravity-puzzle-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "puzzle",
+      "arm": "new",
+      "slot": "antigravity-puzzle-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "caption",
+      "arm": "new",
+      "slot": "antigravity-caption-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "caption",
+      "arm": "old",
+      "slot": "antigravity-caption-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "thread",
+      "arm": "old",
+      "slot": "antigravity-thread-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "thread",
+      "arm": "new",
+      "slot": "antigravity-thread-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "type",
+      "arm": "new",
+      "slot": "antigravity-type-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "type",
+      "arm": "old",
+      "slot": "antigravity-type-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "reels",
+      "arm": "old",
+      "slot": "antigravity-reels-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "reels",
+      "arm": "new",
+      "slot": "antigravity-reels-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "foldout",
+      "arm": "new",
+      "slot": "antigravity-foldout-new"
+    },
+    {
+      "client": "antigravity",
+      "case": "foldout",
+      "arm": "old",
+      "slot": "antigravity-foldout-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "swatch",
+      "arm": "old",
+      "slot": "antigravity-swatch-old"
+    },
+    {
+      "client": "antigravity",
+      "case": "swatch",
+      "arm": "new",
+      "slot": "antigravity-swatch-new"
+    }
+  ],
+  "reader": {
+    "old": "判断每个动作当前能否执行时，只采用材料明确要求的前提，并逐项核对是否已满足。前提齐备就写清现在可以做什么；其他未定细节单列，不把它们变成等待或请示的理由。前提未齐就保留限制，指出还缺什么。可以做也不等于必须立即做。",
+    "new": "判断每个动作当前能否执行时，只采用材料明确要求的前提，并逐项核对是否已满足。前提齐备就写清现在可以做什么；其他未定细节单列，不把它们变成等待或请示的理由。前提未齐就保留限制，指出还缺什么。可以做也不等于必须立即做。\n\n原文指定了由谁确认或传达放行决定，就在对应动作旁写明各自的角色。交代已获准的动作时，一并写明原文指定的用料及规格。只保留有依据的细节，不另加手续。",
+    "delta": "原文指定了由谁确认或传达放行决定，就在对应动作旁写明各自的角色。交代已获准的动作时，一并写明原文指定的用料及规格。只保留有依据的细节，不另加手续。",
+    "placement": "Separate paragraph(s) after the web export end marker."
+  },
+  "scoring": {
+    "primary": "For thread record who must issue the confirmed replacement, and the material on the still-permitted work, separately and together. Check both against the full answer, with quotes. A generic issuer or unspecified material is incomplete. Contradiction in another section prevents a pass. Report each client, both/3 per arm, and the unchanged full thread rubric including progress and old work retained.",
+    "waits": "For greenhouse, listening, puzzle and caption report timing/scheduling waits out of 12 per arm; separately record every invented gate for all 27, genuine gates weakened or removed, and forced immediacy. Distinguish no change, recovered, regressed and missing within a client/task pair.",
+    "regressions": "For all nine cases score the same 30 clauses, strict passes/9 per client and all-three same-task passes/9. Show fresh old-pass/new-fail, fail/pass, persistent losses and historical prior candidate passes separately. Preserve the 27/arm denominator. One output per cell, no new task or independent replication."
+  }
+}
