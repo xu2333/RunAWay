@@ -1,0 +1,2975 @@
+[
+  {
+    "client": "codex",
+    "case": "greenhouse",
+    "arm": "old",
+    "slot": "codex-greenhouse-old",
+    "answer": "请按以下安排处理本次温室志愿者导览图：\n\n1. **现在可以改图**：只将新馆入口改为空心菱形；旧馆入口保留实心圆，其他内容保持原样。\n2. **改好后请园丁在纸质校样上签字确认**：放行条件是园丁在纸质校样上签字。群里说“看过了”不能替代签字。\n3. **目前先不要发给志愿者**：现有材料未表明签字已完成。园丁签字后即可安排发图，但不要求立即发送。\n\n另有两项未定：图例旁是否添加建议游览时长、签字后的具体发送时间。游览时长先不自行添加；这两项未定不影响现在按上述要求改图。",
+    "answer_sha256": "050489670f237761a310c1334bd670a9e9ef6c872110461285a663ad3fc82c70",
+    "original_answer_sha256": "050489670f237761a310c1334bd670a9e9ef6c872110461285a663ad3fc82c70",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **现在可以改图**：只将新馆入口改为空心菱形；旧馆入口保留实心圆，其他内容保持原样。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "2. **改好后请园丁在纸质校样上签字确认**：放行条件是园丁在纸质校样上签字。群里说“看过了”不能替代签字。",
+          "3. **目前先不要发给志愿者**：现有材料未表明签字已完成。园丁签字后即可安排发图，但不要求立即发送。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "3. **目前先不要发给志愿者**：现有材料未表明签字已完成。园丁签字后即可安排发图，但不要求立即发送。",
+          "另有两项未定：图例旁是否添加建议游览时长、签字后的具体发送时间。游览时长先不自行添加；这两项未定不影响现在按上述要求改图。"
+        ]
+      }
+    ],
+    "review": "园丁纸签是放行条件，群里看过不算，签后不另设通知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "greenhouse",
+    "arm": "new",
+    "slot": "codex-greenhouse-new",
+    "answer": "请按以下安排处理本次温室志愿者导览图：\n\n1. **现在可以改图**：仅将新馆入口改为空心菱形；旧馆入口保留实心圆。材料已交代这项要求，但没有证据表明改图已完成，完成情况未知。\n\n2. **游览时长暂不添加**：图例旁是否添加建议游览时长尚未确定，不自行补定；这不影响上述入口符号修改。\n\n3. **发图前核对纸质校样签字**：本版须由园丁在纸质校样上签字后，才可以发给志愿者。目前签字完成情况未知；群里说“看过了”不能代替签字，当前仍先别发。\n\n4. **确认已签字后可以发图**：园丁签字这一前提满足后，本版即可发给志愿者，不必因具体发送时间尚未确定而另等一次放行。可以发送不等于必须立即发送；实际发送时间仍待安排。\n\n以上仅适用于本次导览图。",
+    "answer_sha256": "628fe0478c6cc64a560736b8b416fd126cd6fd192d17d89fb8e4c9c7484ac15f",
+    "original_answer_sha256": "628fe0478c6cc64a560736b8b416fd126cd6fd192d17d89fb8e4c9c7484ac15f",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **现在可以改图**：仅将新馆入口改为空心菱形；旧馆入口保留实心圆。材料已交代这项要求，但没有证据表明改图已完成，完成情况未知。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "3. **发图前核对纸质校样签字**：本版须由园丁在纸质校样上签字后，才可以发给志愿者。目前签字完成情况未知；群里说“看过了”不能代替签字，当前仍先别发。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "2. **游览时长暂不添加**：图例旁是否添加建议游览时长尚未确定，不自行补定；这不影响上述入口符号修改。",
+          "4. **确认已签字后可以发图**：园丁签字这一前提满足后，本版即可发给志愿者，不必因具体发送时间尚未确定而另等一次放行。可以发送不等于必须立即发送；实际发送时间仍待安排。"
+        ]
+      }
+    ],
+    "review": "区分改图交代和完成情况，签后可发，时刻未定不再阻挡。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "listening",
+    "arm": "new",
+    "slot": "codex-listening-new",
+    "answer": "石榴巷声音档案馆试听机上架交接安排\n\n请值班同事按录音逐项核对：\n\n| 核对事项 | 原要求 | 当前完成情况 |\n|---|---|---|\n| 授权页 | 录音人交回签好的授权页 | 未知，材料未提供完成依据 |\n| 片段编号 | 馆员核对剪辑版的片段编号，确认与授权页一致 | 未知，材料未提供完成依据 |\n\n执行安排：\n\n1. 两项均已满足的录音，现在可以将**剪辑版**上架到阅览室试听机；可以上架不等于必须立即上架。\n2. 未交回签好授权页的，暂不上架；录音人口头同意也不能代替签好的授权页。\n3. 馆员尚未核对编号，或尚未确认编号一致的，暂不上架，待馆员核对确认。\n4. 试听机只放剪辑版，原始母带留在内库。现有材料未说明母带留存是否已完成，交接时保留此要求，完成情况记为未知；这项进度未知不另作上架前提。\n5. 已有明确完成依据的步骤照实保留，无需重做。目前材料不足以确认哪一条录音已具备上架条件。\n\n另列待定事项：展签是否印波形小图、具体由哪一班上架。这两项尚未确定，不影响判断录音是否已具备上架条件。",
+    "answer_sha256": "6db1ae57b9026c2404440c7ffb0318fba917251ccdd2c9a12ffd111a16e7acc0",
+    "original_answer_sha256": "6db1ae57b9026c2404440c7ffb0318fba917251ccdd2c9a12ffd111a16e7acc0",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. 两项均已满足的录音，现在可以将**剪辑版**上架到阅览室试听机；可以上架不等于必须立即上架。",
+          "4. 试听机只放剪辑版，原始母带留在内库。现有材料未说明母带留存是否已完成，交接时保留此要求，完成情况记为未知；这项进度未知不另作上架前提。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 授权页 | 录音人交回签好的授权页 | 未知，材料未提供完成依据 |",
+          "| 片段编号 | 馆员核对剪辑版的片段编号，确认与授权页一致 | 未知，材料未提供完成依据 |",
+          "2. 未交回签好授权页的，暂不上架；录音人口头同意也不能代替签好的授权页。",
+          "3. 馆员尚未核对编号，或尚未确认编号一致的，暂不上架，待馆员核对确认。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. 两项均已满足的录音，现在可以将**剪辑版**上架到阅览室试听机；可以上架不等于必须立即上架。",
+          "另列待定事项：展签是否印波形小图、具体由哪一班上架。这两项尚未确定，不影响判断录音是否已具备上架条件。"
+        ]
+      }
+    ],
+    "review": "两项放行条件和两种介质保留，核对实际状态不另加手续。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "listening",
+    "arm": "old",
+    "slot": "codex-listening-old",
+    "answer": "**声音档案馆阅览室试听机｜录音上架交接安排**\n\n试听机只上架**剪辑版**；原始母带留在内库。\n\n值班同事逐条核对录音，按下表处理：\n\n| 当前情况 | 本班可执行的动作 | 责任与尚缺条件 |\n|---|---|---|\n| 录音人已交回签好的授权页，且馆员已核实剪辑版片段编号与授权页一致 | 该剪辑版已具备上架条件，可以安排上架 | 授权页由录音人签好交回；编号一致由馆员核实 |\n| 已交回签好的授权页，但馆员尚未核对编号 | 暂不上架，交由馆员核对 | 尚缺馆员核实编号一致 |\n| 剪辑版片段编号与授权页不一致 | 暂不上架 | 须使编号一致，并经馆员核实 |\n| 尚未交回签好的授权页，包括仅口头同意 | 暂不上架 | 尚缺录音人交回签好的授权页；馆员核对也须满足 |\n\n交班时，逐条说明录音属于哪种情况：**已具备上架条件的，明确交接“可以上架剪辑版”；尚不具备的，说明缺少哪项条件。**目前材料未提供具体录音的授权与核对结果，因此不能直接指定哪些录音已可上架。\n\n另列两项未定事项：展签是否印波形小图、具备条件的录音具体由哪一班上架。这两项不影响上架资格判断；可以上架也不等于必须本班立即上架。",
+    "answer_sha256": "f935ae14fbdcb267c7a377a2baf247023a52e6849db5c6682e800c87d8dc8725",
+    "original_answer_sha256": "f935ae14fbdcb267c7a377a2baf247023a52e6849db5c6682e800c87d8dc8725",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "试听机只上架**剪辑版**；原始母带留在内库。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 录音人已交回签好的授权页，且馆员已核实剪辑版片段编号与授权页一致 | 该剪辑版已具备上架条件，可以安排上架 | 授权页由录音人签好交回；编号一致由馆员核实 |",
+          "| 已交回签好的授权页，但馆员尚未核对编号 | 暂不上架，交由馆员核对 | 尚缺馆员核实编号一致 |",
+          "| 剪辑版片段编号与授权页不一致 | 暂不上架 | 须使编号一致，并经馆员核实 |",
+          "| 尚未交回签好的授权页，包括仅口头同意 | 暂不上架 | 尚缺录音人交回签好的授权页；馆员核对也须满足 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "交班时，逐条说明录音属于哪种情况：**已具备上架条件的，明确交接“可以上架剪辑版”；尚不具备的，说明缺少哪项条件。**目前材料未提供具体录音的授权与核对结果，因此不能直接指定哪些录音已可上架。",
+          "另列两项未定事项：展签是否印波形小图、具备条件的录音具体由哪一班上架。这两项不影响上架资格判断；可以上架也不等于必须本班立即上架。"
+        ]
+      }
+    ],
+    "review": "具备条件即可上架，不要求立即办；排班未定不阻上架。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "puzzle",
+    "arm": "old",
+    "slot": "codex-puzzle-old",
+    "answer": "# 拼图借阅角归还件交接单\n\n| 归还件 | 已核对情况 | 当前可办理事项及限制 |\n|---|---|---|\n| 雨雀盒 | 片数与盒底标注相符；成图与本盒参考图一致。 | 回柜前提已满足，现在可以将原盒放回借阅柜；不要求立即办理。 |\n| 石桥盒 | 片数齐；成图与盒内参考图不一致。 | 先放核查桌，查清并使成图与本盒参考图一致前，不能放回借阅柜。 |\n\n另有两项尚未确定：柜边分类贴纸的颜色、雨雀盒具体回柜时间。这两项不影响雨雀盒目前已具备回柜条件。",
+    "answer_sha256": "8347f04f482e2225f8035abe71fd6b2c76f076954dded3054f08bd01a557c434",
+    "original_answer_sha256": "8347f04f482e2225f8035abe71fd6b2c76f076954dded3054f08bd01a557c434",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 雨雀盒 | 片数与盒底标注相符；成图与本盒参考图一致。 | 回柜前提已满足，现在可以将原盒放回借阅柜；不要求立即办理。 |",
+          "| 石桥盒 | 片数齐；成图与盒内参考图不一致。 | 先放核查桌，查清并使成图与本盒参考图一致前，不能放回借阅柜。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 雨雀盒 | 片数与盒底标注相符；成图与本盒参考图一致。 | 回柜前提已满足，现在可以将原盒放回借阅柜；不要求立即办理。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 石桥盒 | 片数齐；成图与盒内参考图不一致。 | 先放核查桌，查清并使成图与本盒参考图一致前，不能放回借阅柜。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "另有两项尚未确定：柜边分类贴纸的颜色、雨雀盒具体回柜时间。这两项不影响雨雀盒目前已具备回柜条件。"
+        ]
+      }
+    ],
+    "review": "雨雀可回柜；石桥先放核查桌，仍须对图。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "puzzle",
+    "arm": "new",
+    "slot": "codex-puzzle-new",
+    "answer": "拼图借阅角归还件交接单\n\n回柜条件：片数与盒底标注相符，拼成的图案与本盒参考图一致。\n\n| 归还件 | 已有证据的进度 | 接班可办理事项 | 完成情况未知的事项 |\n|---|---|---|---|\n| 雨雀盒 | 已点齐片数；成图已核对，与本盒参考图一致 | 回柜条件已满足，现在可以将原盒放回借阅柜，无需重新点数、核图 | 是否已回柜未知 |\n| 石桥盒 | 片数齐；成图与盒内参考图不一致 | 按要求先放核查桌，查清并对上图案前不能回借阅柜 | 是否已放到核查桌未知；图案问题尚待查清并核对一致 |\n\n其他未定细节：\n\n- 柜边分类贴纸颜色尚未确定。\n- 雨雀盒具体回柜时间尚未商定；这不影响它目前已具备回柜条件，也不表示必须立即回柜。",
+    "answer_sha256": "56641b990bc6facead7cc55e418fffa0ede9f667f670fbc15dcd07687e108c3c",
+    "original_answer_sha256": "56641b990bc6facead7cc55e418fffa0ede9f667f670fbc15dcd07687e108c3c",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "回柜条件：片数与盒底标注相符，拼成的图案与本盒参考图一致。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 雨雀盒 | 已点齐片数；成图已核对，与本盒参考图一致 | 回柜条件已满足，现在可以将原盒放回借阅柜，无需重新点数、核图 | 是否已回柜未知 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 石桥盒 | 片数齐；成图与盒内参考图不一致 | 按要求先放核查桌，查清并对上图案前不能回借阅柜 | 是否已放到核查桌未知；图案问题尚待查清并核对一致 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 柜边分类贴纸颜色尚未确定。",
+          "- 雨雀盒具体回柜时间尚未商定；这不影响它目前已具备回柜条件，也不表示必须立即回柜。"
+        ]
+      }
+    ],
+    "review": "两盒点数／核图的进度和放置要求分别表述，未把放置写成完成。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "caption",
+    "arm": "new",
+    "slot": "codex-caption-new",
+    "answer": "# 《听潮幕》字幕交接单\n\n接班同事请按以下事项办理：\n\n| 事项 | 已知进度 | 当前可办及要求 |\n|---|---|---|\n| 接收字幕 | **07 版文件已收到。** | 使用已收到的这份 07 版字幕。 |\n| 载入后台预演窗 | 已交代可以先载入；**是否已载入未知。**后台预演窗观众不可见。 | 现在可以载入 07 版。先核实完成情况，已载入则无需重做。 |\n| 演出单选版 | **节目组已在演出单上选中 07 版。** | 此项条件已满足，无需重新选版。 |\n| 末行显示回执 | 现有末行通过回执只标了 **06 版**；**07 版栏仍为空。** | 还需由**屏务**在 **07 版回执**上记下“末行完整显示”。06 版回执不能作为 07 版的完成依据。 |\n| 切到观众屏 | **目前尚不具备条件；是否曾切屏未知。** | 须同时满足：**节目组**在演出单上选中 07 版、**屏务**在该版回执上记下末行完整显示。目前只缺后一项。齐备后，可以将同一份 07 版字幕切到观众屏，但不代表必须立即切屏。 |\n\n另有两项未定：后台素材列表的标签色，以及条件齐备后的具体切屏时间。标签色不妨碍现在载入后台预演窗；具体切屏时间待定，不增加上述放行前提。",
+    "answer_sha256": "de1512cbeda5fbcc26ac281bf03207690d86c3f531e3750fcaf33f1d7119259f",
+    "original_answer_sha256": "de1512cbeda5fbcc26ac281bf03207690d86c3f531e3750fcaf33f1d7119259f",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 接收字幕 | **07 版文件已收到。** | 使用已收到的这份 07 版字幕。 |",
+          "| 载入后台预演窗 | 已交代可以先载入；**是否已载入未知。**后台预演窗观众不可见。 | 现在可以载入 07 版。先核实完成情况，已载入则无需重做。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 演出单选版 | **节目组已在演出单上选中 07 版。** | 此项条件已满足，无需重新选版。 |",
+          "| 末行显示回执 | 现有末行通过回执只标了 **06 版**；**07 版栏仍为空。** | 还需由**屏务**在 **07 版回执**上记下“末行完整显示”。06 版回执不能作为 07 版的完成依据。 |",
+          "| 切到观众屏 | **目前尚不具备条件；是否曾切屏未知。** | 须同时满足：**节目组**在演出单上选中 07 版、**屏务**在该版回执上记下末行完整显示。目前只缺后一项。齐备后，可以将同一份 07 版字幕切到观众屏，但不代表必须立即切屏。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 演出单选版 | **节目组已在演出单上选中 07 版。** | 此项条件已满足，无需重新选版。 |",
+          "| 末行显示回执 | 现有末行通过回执只标了 **06 版**；**07 版栏仍为空。** | 还需由**屏务**在 **07 版回执**上记下“末行完整显示”。06 版回执不能作为 07 版的完成依据。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "另有两项未定：后台素材列表的标签色，以及条件齐备后的具体切屏时间。标签色不妨碍现在载入后台预演窗；具体切屏时间待定，不增加上述放行前提。"
+        ]
+      }
+    ],
+    "review": "只核实相同动作是否已办，未要求等第三方放行。07版选中和06回执均清楚。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "caption",
+    "arm": "old",
+    "slot": "codex-caption-old",
+    "answer": "《听潮幕》字幕交接单\n\n1. **后台预演：现在可以办理。**  \n   07 版文件已收到，可将这份字幕载入后台预演窗；观众看不到该窗口。\n\n2. **观众屏：目前不能切入 07 版。**  \n   切屏须满足以下两项：\n   - 节目组在演出单上选中该版：已选中 07 版，条件已满足。\n   - 屏务在该版回执上记下“末行完整显示”：07 版该栏仍空，条件未满足。现有通过回执只对应 06 版，不能用于放行 07 版。\n\n   接班后需由屏务确认 07 版末行完整显示，并在 **07 版回执**上记下。该项补齐后，即可将后台预演所用的同一份 07 版字幕切到观众屏；具备条件不等于必须立即切屏。\n\n3. **另列未定事项。**  \n   后台素材列表的标签色、条件齐备后的具体切屏时间均未定。它们不妨碍现在载入后台预演，也不作为新增的切屏放行前提。",
+    "answer_sha256": "27bcfba5e4319c9af4a7e6466d62206cf0490c201e187ca6aec6e6753c3ca782",
+    "original_answer_sha256": "27bcfba5e4319c9af4a7e6466d62206cf0490c201e187ca6aec6e6753c3ca782",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **后台预演：现在可以办理。**  ",
+          "   07 版文件已收到，可将这份字幕载入后台预演窗；观众看不到该窗口。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "   - 节目组在演出单上选中该版：已选中 07 版，条件已满足。",
+          "   - 屏务在该版回执上记下“末行完整显示”：07 版该栏仍空，条件未满足。现有通过回执只对应 06 版，不能用于放行 07 版。",
+          "   接班后需由屏务确认 07 版末行完整显示，并在 **07 版回执**上记下。该项补齐后，即可将后台预演所用的同一份 07 版字幕切到观众屏；具备条件不等于必须立即切屏。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "   - 节目组在演出单上选中该版：已选中 07 版，条件已满足。",
+          "   - 屏务在该版回执上记下“末行完整显示”：07 版该栏仍空，条件未满足。现有通过回执只对应 06 版，不能用于放行 07 版。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "   后台素材列表的标签色、条件齐备后的具体切屏时间均未定。它们不妨碍现在载入后台预演，也不作为新增的切屏放行前提。"
+        ]
+      }
+    ],
+    "review": "保留07许可、屏务回执和两个未定事项。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "thread",
+    "arm": "old",
+    "slot": "codex-thread-old",
+    "answer": "# 《盐汀》制作交接单\n\n全画共十列。当前前六列已打好孔；前四列已穿完，第五列刚起头。\n\n## 现在可以办理\n\n- **收起桌上的旧定位纸**，暂停后续打孔。\n- **保留前四列已完成的部分**。\n- **第五列可接着穿，第六列也可穿线**：由接班搭档在已有孔中，照原线序图穿**白棉线**。这两列的穿线无需等新定位纸。\n\n## 暂不能办理\n\n- **第七至第十列暂不打孔**，也不要沿用旧定位纸继续打孔。\n- 恢复打孔的前提是：**我确认新定位纸并发给接班搭档**。接班搭档收到后，再照新定位纸继续打孔。\n\n## 尚未确定\n\n后面几列的新孔距及新定位纸发送日期尚未确定；这些未定事项不影响已有孔处按原线序继续穿白棉线。",
+    "answer_sha256": "0651042929ec8e05d5adbc73f550655ffd593b845011e314a991ed4509f62896",
+    "original_answer_sha256": "0651042929ec8e05d5adbc73f550655ffd593b845011e314a991ed4509f62896",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "全画共十列。当前前六列已打好孔；前四列已穿完，第五列刚起头。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **第七至第十列暂不打孔**，也不要沿用旧定位纸继续打孔。",
+          "- 恢复打孔的前提是：**我确认新定位纸并发给接班搭档**。接班搭档收到后，再照新定位纸继续打孔。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **保留前四列已完成的部分**。",
+          "- **第五列可接着穿，第六列也可穿线**：由接班搭档在已有孔中，照原线序图穿**白棉线**。这两列的穿线无需等新定位纸。",
+          "后面几列的新孔距及新定位纸发送日期尚未确定；这些未定事项不影响已有孔处按原线序继续穿白棉线。"
+        ]
+      }
+    ],
+    "review": "本人确认并发新纸，第五、六列依原图穿白棉线。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "thread",
+    "arm": "new",
+    "slot": "codex-thread-new",
+    "answer": "《盐汀》制作交接单\n\n作品共十列，当前按以下要求接续：\n\n| 列位 | 已确认进度 | 当前办理要求 |\n|---|---|---|\n| 第一至第四列 | 孔已打好，穿线已完成 | 保留成品，无需重做。 |\n| 第五列 | 孔已打好，穿线刚起头 | 可按原线序图继续穿白棉线。 |\n| 第六列 | 孔已打好；穿线完成情况未知 | 可按原线序图用白棉线接续制作，已有完成部分保留。 |\n| 第七至第十列 | 打孔、穿线完成情况未知 | 暂停继续打孔。须等我发来经我确认的新定位纸，再按新定位纸接着打孔。已有孔的地方可按原线序图穿白棉线，做好的保留。 |\n\n定位纸收存要求：已交代先将原定位纸收起来；是否已收好，完成情况未知，接班时核实，未收则收起。\n\n待定事项：后面几列的新孔距、新定位纸发送日期均未确定，新定位纸尚未发出。这些不影响已有孔位置按原线序图继续穿线。\n\n以上可执行事项可按工作安排办理，不要求立即全部开展。",
+    "answer_sha256": "fb59d073209e065f1947427edb892f0eb699af5ed71c2b6c5a5b7272856cc864",
+    "original_answer_sha256": "fb59d073209e065f1947427edb892f0eb699af5ed71c2b6c5a5b7272856cc864",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 第一至第四列 | 孔已打好，穿线已完成 | 保留成品，无需重做。 |",
+          "| 第五列 | 孔已打好，穿线刚起头 | 可按原线序图继续穿白棉线。 |",
+          "| 第六列 | 孔已打好；穿线完成情况未知 | 可按原线序图用白棉线接续制作，已有完成部分保留。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 第七至第十列 | 打孔、穿线完成情况未知 | 暂停继续打孔。须等我发来经我确认的新定位纸，再按新定位纸接着打孔。已有孔的地方可按原线序图穿白棉线，做好的保留。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 第一至第四列 | 孔已打好，穿线已完成 | 保留成品，无需重做。 |",
+          "| 第五列 | 孔已打好，穿线刚起头 | 可按原线序图继续穿白棉线。 |",
+          "| 第六列 | 孔已打好；穿线完成情况未知 | 可按原线序图用白棉线接续制作，已有完成部分保留。 |",
+          "待定事项：后面几列的新孔距、新定位纸发送日期均未确定，新定位纸尚未发出。这些不影响已有孔位置按原线序图继续穿线。"
+        ]
+      }
+    ],
+    "review": "本人确认并发新纸、原图及白棉线均保留。第七至十列打孔进度另标未知；仍明确停打，未给后段新许可。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "type",
+    "arm": "new",
+    "slot": "codex-type-new",
+    "answer": "# 《雾港字盘》印制作业交接单\n\n共四块版，分甲、乙两盘，各有横题、竖题。当前逐版办理如下：\n\n| 版号 | 已证实进度 | 签核及放行依据 | 接班可办事项 |\n|---|---|---|---|\n| 甲横 | 已印2张 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续，已有张数算数 | 可以续印，原定总数中计入已印2张，只补余数 |\n| 甲竖 | 尚未开印 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印；尚未满足逐版签名的过版条件 |\n| 乙横 | 已印1张 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印，保留已印1张的进度 |\n| 乙竖 | 尚未开印 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续 | 可以按原定印数开印 |\n\n**停印及收存交代：**此前已要求四块一律停印，并将已印张夹好。材料未说明停印指令是否实际执行、已印张是否已夹好，完成情况均未知。接班仍须将已印张夹好；收存情况未知不构成甲横、乙竖继续印制的新前提。\n\n**数量与规格：**甲横、乙竖均照原印数办理，已有张数计入，不重印补算。原定印数的具体数值、用料及规格在本材料中未载，本单不另定。\n\n**凭据：**交班仅有这一张回条。收样章不能代替校样员在对应版号格内的签名；甲横、乙竖的签名及放行也不适用于另两块。",
+    "answer_sha256": "e0056a8f84ad3ff8af6ea2af4fc5e3902133cb875a404f44336b8bada5b49149",
+    "original_answer_sha256": "e0056a8f84ad3ff8af6ea2af4fc5e3902133cb875a404f44336b8bada5b49149",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲横 | 已印2张 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续，已有张数算数 | 可以续印，原定总数中计入已印2张，只补余数 |",
+          "| 乙竖 | 尚未开印 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续 | 可以按原定印数开印 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲竖 | 尚未开印 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印；尚未满足逐版签名的过版条件 |",
+          "| 乙横 | 已印1张 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印，保留已印1张的进度 |",
+          "**凭据：**交班仅有这一张回条。收样章不能代替校样员在对应版号格内的签名；甲横、乙竖的签名及放行也不适用于另两块。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲横 | 已印2张 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续，已有张数算数 | 可以续印，原定总数中计入已印2张，只补余数 |",
+          "| 甲竖 | 尚未开印 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印；尚未满足逐版签名的过版条件 |",
+          "| 乙横 | 已印1张 | 仅有收样章，缺校样员在本版格内的签名 | 保持停印，保留已印1张的进度 |",
+          "| 乙竖 | 尚未开印 | 校样员已在本版格内签名；交代人看过后已准许照原印数继续 | 可以按原定印数开印 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "**停印及收存交代：**此前已要求四块一律停印，并将已印张夹好。材料未说明停印指令是否实际执行、已印张是否已夹好，完成情况均未知。接班仍须将已印张夹好；收存情况未知不构成甲横、乙竖继续印制的新前提。"
+        ]
+      }
+    ],
+    "review": "明说“已印张是否已夹好，完成情况均未知”；四块的已印数和各自许可均保留，收存未知不阻续印。",
+    "sample_storage": "explicit_unknown",
+    "known_print_progress": true,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "type",
+    "arm": "old",
+    "slot": "codex-type-old",
+    "answer": "# 《雾港字盘》印制作业交接单\n\n交接依据：现有回条一张。此前四块版已全部停印，已印样张夹好。每块版须有校样员在本版对应格内签名，才算校样通过；收样章不算签名放行。\n\n| 版别 | 已印情况 | 校样与放行情况 | 接班可办事项 |\n|---|---|---|---|\n| 甲盘横题 | 已印2张，已夹好 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续，已有的算数 | 可以续印。已印2张计入原定总数，只补足余数 |\n| 甲盘竖题 | 尚未开印 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印。目前不能开印 |\n| 乙盘横题 | 已印1张，已夹好 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印，保管好已印1张。目前不能续印 |\n| 乙盘竖题 | 尚未开印 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续 | 可以开印，按原定总数印制 |\n\n**办理口径**\n\n- 接班搭档可据上述放行范围办理甲横、乙竖；获准可做，不等于必须立即开印。\n- 甲竖、乙横缺各自版格内的校样员签名，不能借用另外两块的签名或放行决定。\n\n**未载明事项**\n\n材料未列出各版原定总印数，也未指定用料及规格。本单不另定数量、用料或规格；甲横、乙竖的放行已经明确，数量仍按原定印数执行。",
+    "answer_sha256": "4ef9374cbf59eb76a3bdf24abea211b960df0dc743577d0cbf488d6a142e18d6",
+    "original_answer_sha256": "4ef9374cbf59eb76a3bdf24abea211b960df0dc743577d0cbf488d6a142e18d6",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲盘横题 | 已印2张，已夹好 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续，已有的算数 | 可以续印。已印2张计入原定总数，只补足余数 |",
+          "| 乙盘竖题 | 尚未开印 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续 | 可以开印，按原定总数印制 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "交接依据：现有回条一张。此前四块版已全部停印，已印样张夹好。每块版须有校样员在本版对应格内签名，才算校样通过；收样章不算签名放行。",
+          "| 甲盘竖题 | 尚未开印 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印。目前不能开印 |",
+          "| 乙盘横题 | 已印1张，已夹好 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印，保管好已印1张。目前不能续印 |",
+          "- 甲竖、乙横缺各自版格内的校样员签名，不能借用另外两块的签名或放行决定。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲盘横题 | 已印2张，已夹好 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续，已有的算数 | 可以续印。已印2张计入原定总数，只补足余数 |",
+          "| 甲盘竖题 | 尚未开印 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印。目前不能开印 |",
+          "| 乙盘横题 | 已印1张，已夹好 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印，保管好已印1张。目前不能续印 |",
+          "| 乙盘竖题 | 尚未开印 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续 | 可以开印，按原定总数印制 |"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "交接依据：现有回条一张。此前四块版已全部停印，已印样张夹好。每块版须有校样员在本版对应格内签名，才算校样通过；收样章不算签名放行。",
+          "| 甲盘横题 | 已印2张，已夹好 | 校样员已在本版格内签名；交班人已看过，并明确准许照原印数继续，已有的算数 | 可以续印。已印2张计入原定总数，只补足余数 |",
+          "| 乙盘横题 | 已印1张，已夹好 | 本版格内只有收样章，缺校样员签名；仍受停印限制 | 继续停印，保管好已印1张。目前不能续印 |"
+        ]
+      }
+    ],
+    "review": "把甲横两张、乙横一张都写成“已夹好”。印数、竖题未开印和本格签名均正确。",
+    "sample_storage": "asserted_done",
+    "known_print_progress": true,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "未证实的夹存变成已完成",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "partial",
+    "strict_pass": false
+  },
+  {
+    "client": "codex",
+    "case": "reels",
+    "arm": "old",
+    "slot": "codex-reels-old",
+    "answer": "# 《双溪听册》早班工作交接单\n\n两卷各六段溪声，当前进度及办理事项如下。\n\n| 卷名 | 底噪样本备份情况 | 剪辑进度 | 早班可办理事项及限制 |\n|---|---|---|---|\n| 榆涧卷 | 晚班已确认：“底噪样本已存妥，回读无误。” | 前四段已剪好，余两段未剪。 | 余下两段暂不剪。须等剪辑师发来**榆涧新版切点表**后，再按新版表继续剪辑；目前新版尚未发来。 |\n| 杉汀卷 | 晚班仅回复“收到，照办”，尚不能据此确认备份已完成。 | 前两段已剪好，余四段未剪。 | **现在可以按桌上那张切点表继续剪余下四段**，这是剪辑师已交代的安排。材料未将备份确认列为继续剪辑的前提。 |\n\n另需核实：杉汀卷底噪样本是否已按交代存一份到备份盘。可向负责存样的晚班核实或查看备份盘；若尚未存妥，按原交代补存一份。此项待核实，不影响上述已获准的杉汀剪辑安排。",
+    "answer_sha256": "cf9a82bc66429f42df713a96002c59791b6e0e590252a9a2908450f5284ed23b",
+    "original_answer_sha256": "cf9a82bc66429f42df713a96002c59791b6e0e590252a9a2908450f5284ed23b",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 榆涧卷 | 晚班已确认：“底噪样本已存妥，回读无误。” | 前四段已剪好，余两段未剪。 | 余下两段暂不剪。须等剪辑师发来**榆涧新版切点表**后，再按新版表继续剪辑；目前新版尚未发来。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 杉汀卷 | 晚班仅回复“收到，照办”，尚不能据此确认备份已完成。 | 前两段已剪好，余四段未剪。 | **现在可以按桌上那张切点表继续剪余下四段**，这是剪辑师已交代的安排。材料未将备份确认列为继续剪辑的前提。 |",
+          "另需核实：杉汀卷底噪样本是否已按交代存一份到备份盘。可向负责存样的晚班核实或查看备份盘；若尚未存妥，按原交代补存一份。此项待核实，不影响上述已获准的杉汀剪辑安排。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "两卷各六段溪声，当前进度及办理事项如下。",
+          "| 榆涧卷 | 晚班已确认：“底噪样本已存妥，回读无误。” | 前四段已剪好，余两段未剪。 | 余下两段暂不剪。须等剪辑师发来**榆涧新版切点表**后，再按新版表继续剪辑；目前新版尚未发来。 |",
+          "| 杉汀卷 | 晚班仅回复“收到，照办”，尚不能据此确认备份已完成。 | 前两段已剪好，余四段未剪。 | **现在可以按桌上那张切点表继续剪余下四段**，这是剪辑师已交代的安排。材料未将备份确认列为继续剪辑的前提。 |"
+        ]
+      }
+    ],
+    "review": "已有回读结果保留，杉汀可查现状，未强加回读或记账。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "reels",
+    "arm": "new",
+    "slot": "codex-reels-new",
+    "answer": "# 《双溪听册》早班工作交接单\n\n两卷各六段溪声，当前安排如下。\n\n| 卷名 | 已确认进度 | 早班可办理事项及限制 |\n|---|---|---|\n| 榆涧卷 | 头四段已剪好，无需重做。 | 第五、六段暂不剪。剪辑师要求等她发榆涧新版切点表；交班时尚未收到，待她发来后按新版表继续剪。 |\n| 杉汀卷 | 头两段已剪好，无需重做。 | 第三至第六段现在可以继续剪，使用桌上现有的杉汀切点表。 |\n\n底噪样本备份交接：\n\n- **原交代：**晚班将榆涧卷、杉汀卷的底噪样本各存一份到备份盘。\n- **榆涧卷：**晚班交班条写明“底噪样本已存妥，回读无误”，备份及回读已有完成依据，无需重做。\n- **杉汀卷：**晚班只回复“收到，照办”，仅能确认已收到要求，备份完成情况未知。仍须落实将该卷底噪样本存一份到备份盘的原要求；这项情况未知不影响按现有切点表继续剪辑。\n\n另记：榆涧新版切点表的发送时间未定。",
+    "answer_sha256": "be37ec828134ca1d21f6dcf4d285f6e71b80235c9c8b16a30bded9efd19097dd",
+    "original_answer_sha256": "be37ec828134ca1d21f6dcf4d285f6e71b80235c9c8b16a30bded9efd19097dd",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **榆涧卷：**晚班交班条写明“底噪样本已存妥，回读无误”，备份及回读已有完成依据，无需重做。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **原交代：**晚班将榆涧卷、杉汀卷的底噪样本各存一份到备份盘。",
+          "- **杉汀卷：**晚班只回复“收到，照办”，仅能确认已收到要求，备份完成情况未知。仍须落实将该卷底噪样本存一份到备份盘的原要求；这项情况未知不影响按现有切点表继续剪辑。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "两卷各六段溪声，当前安排如下。",
+          "| 榆涧卷 | 头四段已剪好，无需重做。 | 第五、六段暂不剪。剪辑师要求等她发榆涧新版切点表；交班时尚未收到，待她发来后按新版表继续剪。 |",
+          "| 杉汀卷 | 头两段已剪好，无需重做。 | 第三至第六段现在可以继续剪，使用桌上现有的杉汀切点表。 |"
+        ]
+      }
+    ],
+    "review": "榆涧完成且无需重做，杉汀收到交代与完成未知分开。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "foldout",
+    "arm": "new",
+    "slot": "codex-foldout-new",
+    "answer": "《折岸拼景》制作交接单\n\n两册各五折，请按以下进度接续办理。\n\n| 项目 | 已确认的情况 | 接班后可办理的事及限制 |\n|---|---|---|\n| 篷窗册粘接 | 前三折已粘牢；已交代余两折继续粘，但没有完成依据，完成情况未知。 | 可用桌上棉纸接着粘余两折。已确认粘牢的前三折无需重做。 |\n| 篷窗册展开照 | 委托方要求随件附一张整册展开照；交班时明确尚未拍摄。 | 须等整册粘完后再拍，交付时随件附上。 |\n| 砂桥册粘接 | 前四折已粘牢；最后一折尚未粘，所需配色纸样交班时尚未送到。 | 最后一折须等装帧师送来配色纸样后再粘；目前尚缺纸样。前四折无需重做。 |\n| 砂桥册展开照 | 此册留在工坊；已告知搭档可自行决定是否拍照。搭档只答“知道可以拍”，不能据此认定已经拍过，拍摄完成情况未知。 | 搭档现在可自行决定是否拍展开照，并非必须拍摄。原文未将整册粘完列为此项拍摄的前提。 |\n\n其他未定细节：砂桥册配色纸样的送达时间未说明。材料未另设确认或放行手续。",
+    "answer_sha256": "071a55a9f85f9313256a463144a13ce1a8ad721210ed193b7afdfc29c6aab475",
+    "original_answer_sha256": "071a55a9f85f9313256a463144a13ce1a8ad721210ed193b7afdfc29c6aab475",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "两册各五折，请按以下进度接续办理。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "| 篷窗册粘接 | 前三折已粘牢；已交代余两折继续粘，但没有完成依据，完成情况未知。 | 可用桌上棉纸接着粘余两折。已确认粘牢的前三折无需重做。 |",
+          "| 篷窗册展开照 | 委托方要求随件附一张整册展开照；交班时明确尚未拍摄。 | 须等整册粘完后再拍，交付时随件附上。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 砂桥册粘接 | 前四折已粘牢；最后一折尚未粘，所需配色纸样交班时尚未送到。 | 最后一折须等装帧师送来配色纸样后再粘；目前尚缺纸样。前四折无需重做。 |",
+          "| 砂桥册展开照 | 此册留在工坊；已告知搭档可自行决定是否拍照。搭档只答“知道可以拍”，不能据此认定已经拍过，拍摄完成情况未知。 | 搭档现在可自行决定是否拍展开照，并非必须拍摄。原文未将整册粘完列为此项拍摄的前提。 |"
+        ]
+      }
+    ],
+    "review": "保住前三折、用料和照片要求，却把交班时“余两折用桌上棉纸接着粘”的待办状态写成完成情况未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "把交班单上的余两折待粘写成未知",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "对剩余两折既写未知又要求续粘",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "codex",
+    "case": "foldout",
+    "arm": "old",
+    "slot": "codex-foldout-old",
+    "answer": "《折岸拼景》制作交接单\n\n两册各五折，请按以下状态接续办理。\n\n| 册别／动作 | 当前状态 | 接班可办理事项 |\n|---|---|---|\n| 篷窗册：续粘 | 前三折已粘牢，余两折待粘；桌上已有棉纸 | 现在可以用桌上棉纸接着粘余下两折。 |\n| 篷窗册：拍展开照 | 明确尚未拍摄；须等整册粘完再拍 | 目前先不拍。五折全部粘完后，拍一张整册展开照，交付委托方时随件附上。 |\n| 砂桥册：续粘 | 前四折已粘牢；最后一折所等的配色纸样，交班时尚未送到 | 最后一折暂不能粘，须等装帧师送来配色纸样后再粘。装帧师负责送来纸样，原文未另设确认或放行手续。 |\n| 砂桥册：拍展开照 | 此册留在工坊；已明确由搭档自行决定是否拍照 | 现在可以自行决定拍展开照，也可以不拍；原文未要求等整册粘完。 |\n\n待核实事项：砂桥册是否已经拍照尚不明确；搭档说“知道可以拍”，只能说明知悉许可，不能据此记为已拍。此项不影响当前可做的动作。",
+    "answer_sha256": "1c74dc080aa33e7f7c49885e3bf94a6b7b1c7e57fc8422de9ffeec4702364136",
+    "original_answer_sha256": "1c74dc080aa33e7f7c49885e3bf94a6b7b1c7e57fc8422de9ffeec4702364136",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "两册各五折，请按以下状态接续办理。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 篷窗册：续粘 | 前三折已粘牢，余两折待粘；桌上已有棉纸 | 现在可以用桌上棉纸接着粘余下两折。 |",
+          "| 篷窗册：拍展开照 | 明确尚未拍摄；须等整册粘完再拍 | 目前先不拍。五折全部粘完后，拍一张整册展开照，交付委托方时随件附上。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 砂桥册：续粘 | 前四折已粘牢；最后一折所等的配色纸样，交班时尚未送到 | 最后一折暂不能粘，须等装帧师送来配色纸样后再粘。装帧师负责送来纸样，原文未另设确认或放行手续。 |",
+          "| 砂桥册：拍展开照 | 此册留在工坊；已明确由搭档自行决定是否拍照 | 现在可以自行决定拍展开照，也可以不拍；原文未要求等整册粘完。 |",
+          "待核实事项：砂桥册是否已经拍照尚不明确；搭档说“知道可以拍”，只能说明知悉许可，不能据此记为已拍。此项不影响当前可做的动作。"
+        ]
+      }
+    ],
+    "review": "两册粘制、照片和已知进度均分清。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "codex",
+    "case": "swatch",
+    "arm": "old",
+    "slot": "codex-swatch-old",
+    "answer": "《潮窗色谱》装袋交接单\n\n**苔阶套｜店内自留，每袋六枚**\n- 已装四枚，现在可以从白盘取余下两枚接着装。\n- 装满六枚后可以封袋。后来已明确改为试色条可放可不放，桌上旧工单的必放要求不再适用于苔阶。\n- 若放试色条，使用同批次试色条。\n\n**瓦巷套｜每袋六枚**\n- 已装五枚，第六枚目前不能装；须等配色师送来替换片，再用替换片补足。交班时替换片尚未到。\n- 试色条已裁好，放在袋外；封袋前必须放入一条同批次试色条。\n- 目前不能封袋。装齐六枚并放入同批次试色条后，可以封袋。\n\n**另记**\n- 苔阶是否放试色条可自行选择，不影响装满后的封袋。\n- 便条未说明瓦巷袋外已裁好的试色条是否同批次；不能仅凭“已裁好”认定已满足同批次要求。",
+    "answer_sha256": "e13a5ee1f266be62d1e218fe5ff3b0331082c011cc0685f6e9f8649db26f83ba",
+    "original_answer_sha256": "e13a5ee1f266be62d1e218fe5ff3b0331082c011cc0685f6e9f8649db26f83ba",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "**苔阶套｜店内自留，每袋六枚**",
+          "**瓦巷套｜每袋六枚**"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "- 已装四枚，现在可以从白盘取余下两枚接着装。",
+          "- 装满六枚后可以封袋。后来已明确改为试色条可放可不放，桌上旧工单的必放要求不再适用于苔阶。",
+          "- 苔阶是否放试色条可自行选择，不影响装满后的封袋。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 已装五枚，第六枚目前不能装；须等配色师送来替换片，再用替换片补足。交班时替换片尚未到。",
+          "- 试色条已裁好，放在袋外；封袋前必须放入一条同批次试色条。",
+          "- 目前不能封袋。装齐六枚并放入同批次试色条后，可以封袋。"
+        ]
+      }
+    ],
+    "review": "苔阶是否已放条没有说明，瓦巷门槛正确。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "codex",
+    "case": "swatch",
+    "arm": "new",
+    "slot": "codex-swatch-new",
+    "answer": "《潮窗色谱》装袋交接单\n\n**苔阶套（店内自留，每套六枚）**\n\n- 已完成：已装四枚。\n- 现在可做：从白盘取余下两枚，继续装入。\n- 封袋要求：装足六枚后可以封袋。负责人后来已明确交代，苔阶试色条可放可不放；桌上旧工单中“两套都须放试色条”的要求，对苔阶已作调整。\n- 完成情况未知：苔阶是否已放试色条没有记录，不影响按上述要求装片、封袋。\n\n**瓦巷套（每套六枚）**\n\n- 已完成：已装五枚；试色条已裁好，仍在袋外。\n- 现在可做：办理放入一条同批次试色条的步骤；这项工作不必等替换片到达。\n- 保留限制：第六枚先别装，须等配色师送来替换片。交班时替换片尚未到，当前不能装第六枚，也不能封袋。\n- 后续办理：替换片到达后，用替换片补足第六枚；装足六枚且同批次试色条已入袋后，方可封袋。\n- 完成情况未知：没有证据表明试色条已入袋，不能把“已裁好”记作“已放入”。便条也未单独说明已裁试色条的批次，办理时仍须符合“同批次”要求。",
+    "answer_sha256": "24758105b954d1af25d735ad8a815ff77056d68340bfc776183935c8b49a1560",
+    "original_answer_sha256": "24758105b954d1af25d735ad8a815ff77056d68340bfc776183935c8b49a1560",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "**苔阶套（店内自留，每套六枚）**",
+          "**瓦巷套（每套六枚）**"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 已完成：已装四枚。",
+          "- 现在可做：从白盘取余下两枚，继续装入。",
+          "- 封袋要求：装足六枚后可以封袋。负责人后来已明确交代，苔阶试色条可放可不放；桌上旧工单中“两套都须放试色条”的要求，对苔阶已作调整。",
+          "- 完成情况未知：苔阶是否已放试色条没有记录，不影响按上述要求装片、封袋。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "- 已完成：已装五枚；试色条已裁好，仍在袋外。",
+          "- 现在可做：办理放入一条同批次试色条的步骤；这项工作不必等替换片到达。",
+          "- 保留限制：第六枚先别装，须等配色师送来替换片。交班时替换片尚未到，当前不能装第六枚，也不能封袋。",
+          "- 后续办理：替换片到达后，用替换片补足第六枚；装足六枚且同批次试色条已入袋后，方可封袋。",
+          "- 完成情况未知：没有证据表明试色条已入袋，不能把“已裁好”记作“已放入”。便条也未单独说明已裁试色条的批次，办理时仍须符合“同批次”要求。"
+        ]
+      }
+    ],
+    "review": "苔阶放条未知写明了；瓦巷先确认试色条仍在袋外，最后却将入袋状态列为未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "已说明搁在袋外，又把是否已入袋列为未知",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "同一张瓦巷试色条的袋外状态前后不一致",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "greenhouse",
+    "arm": "new",
+    "slot": "claude-code-greenhouse-new",
+    "answer": "我先看一下工作目录里的材料。\n\n\n<invoke name=\"Glob\">\n<parameter name=\"pattern\">.runaway/**</parameter>\n</invoke>\n<invoke name=\"Glob\">\n<parameter name=\"pattern\">.claude/**</parameter>\n</invoke>",
+    "answer_sha256": "ae10afbc9e559fed11176382bf4518d7a7534410df50bd1f18f25a9a3cd71ee5",
+    "original_answer_sha256": "ae10afbc9e559fed11176382bf4518d7a7534410df50bd1f18f25a9a3cd71ee5",
+    "local_project_redacted": false,
+    "task_answer": false,
+    "clauses": [
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里的材料。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里的材料。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里的材料。"
+        ]
+      }
+    ],
+    "review": "CLI 成功返回拟调用 Glob 的文本，没有交付真实任务。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "unassessable",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "no",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "greenhouse",
+    "arm": "old",
+    "slot": "claude-code-greenhouse-old",
+    "answer": "我先看一下工作目录里有没有相关材料。\n\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && find . -path ./.git -prune -o -type f -print | head -50</parameter>\n</invoke>\n\n\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && ls -la . .runaway .claude 2>&1 | head -40</parameter>\n</invoke>\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && find .runaway .claude -type f | head -30</parameter>\n</invoke>\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && git log --oneline | head -5; git status --short</parameter>\n</invoke>\n\n\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && cat .claude/rules/runaway.md 2>&1 | head -30</parameter>\n</invoke>\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && ls -R .runaway | head -30</parameter>\n</invoke>\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && wc -c .runaway/* 2>&1 | head</parameter>\n</invoke>\n\n<invoke name=\"bash\">\n<parameter name=\"command\">cd /private<PROJECT> && ls -la</parameter>\n</invoke>",
+    "answer_sha256": "66520aa1ad42a875a1bd43d5b4b96966c20dda1b7e1478b863797b9508284d1a",
+    "original_answer_sha256": "8f27dec446758d30f2b1477c9f5de6f0e028f55e73a954a48aaa637e1e54d29f",
+    "local_project_redacted": true,
+    "task_answer": false,
+    "clauses": [
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里有没有相关材料。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里有没有相关材料。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "我先看一下工作目录里有没有相关材料。"
+        ]
+      }
+    ],
+    "review": "CLI 成功返回一段拟调用工具的文本，未交付改图安排。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "unassessable",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "no",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "listening",
+    "arm": "old",
+    "slot": "claude-code-listening-old",
+    "answer": "# 录音上架交接安排(试听机·阅览室)\n\n## 一、上架的两个前提(只看这两条)\n\n| # | 前提 | 谁来做 | 当前状态 |\n|---|---|---|---|\n| 1 | 签好的授权页已交回 | 录音人交回 | 现有材料未显示已收到,按未满足处理 |\n| 2 | 剪辑版的片段编号与授权页一致,且已核过 | 馆员核对 | 现有材料未显示已核,按未满足处理 |\n\n两条都满足,才可上架。录音人口头说同意不算,先不上。\n\n## 二、各动作现在能不能做\n\n**1. 把录音上架到试听机:现在不能做。**\n- 还缺:①签好的授权页;②馆员核对剪辑版片段编号与授权页一致。\n- 值班时先确认这两项是否已有,没有就保持不上架。\n\n**2. 上架时用什么:只用剪辑版。**\n- 试听机只放剪辑版,核对的也是剪辑版的片段编号。\n- 原始母带不上试听机。\n\n**3. 原始母带:现在就按此执行,继续留在内库。**\n\n**4. 两项前提齐备后:可以上架剪辑版。**\n- 可以上架,不等于必须立刻上架。\n- 上架动作由值班同事执行,依据是上面两项前提均已满足。\n\n## 三、尚未决定的事项(单列)\n\n- **展签是否印波形小图:** 未定。它不是上架前提,也不用因此等待。\n- **具备条件后由哪一班上架:** 未排。它同样不是前提,只在前提齐备后再安排。\n\n## 四、值班同事照做清单\n\n1. 查看授权页是否已由录音人签好交回。\n2. 查看馆员是否已核对剪辑版片段编号与授权页一致。\n3. 任一项没有:不上架,在交接里写明缺的是哪一项。\n4. 两项都有:可以把**剪辑版**上架到试听机。\n5. 全程不动原始母带,它留在内库。",
+    "answer_sha256": "991c141e95611032986705fe2bf5d04d7048d75a10e86373f0fb64fb877aa2ba",
+    "original_answer_sha256": "991c141e95611032986705fe2bf5d04d7048d75a10e86373f0fb64fb877aa2ba",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 试听机只放剪辑版,核对的也是剪辑版的片段编号。",
+          "**3. 原始母带:现在就按此执行,继续留在内库。**",
+          "5. 全程不动原始母带,它留在内库。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 1 | 签好的授权页已交回 | 录音人交回 | 现有材料未显示已收到,按未满足处理 |",
+          "| 2 | 剪辑版的片段编号与授权页一致,且已核过 | 馆员核对 | 现有材料未显示已核,按未满足处理 |",
+          "两条都满足,才可上架。录音人口头说同意不算,先不上。",
+          "- 值班时先确认这两项是否已有,没有就保持不上架。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 可以上架,不等于必须立刻上架。",
+          "- **展签是否印波形小图:** 未定。它不是上架前提,也不用因此等待。",
+          "- **具备条件后由哪一班上架:** 未排。它同样不是前提,只在前提齐备后再安排。",
+          "4. 两项都有:可以把**剪辑版**上架到试听机。"
+        ]
+      }
+    ],
+    "review": "两项齐可上架，排班未定独立记录。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "listening",
+    "arm": "new",
+    "slot": "claude-code-listening-new",
+    "answer": "# 试听机录音上架交接安排\n\n## 一、总原则\n- 试听机只放**剪辑版**,原始母带留在内库,不上架、不放到试听机。\n- 上架只看下面两项前提,没有其他前提。\n\n## 二、上架前提核对(逐项)\n\n| # | 前提 | 材料说明的要求 | 完成情况 |\n|---|------|----------------|----------|\n| 1 | 授权页 | 录音人交回**签好的**授权页 | **未知**,材料没有说明已交回 |\n| 2 | 编号核对 | **馆员**核过剪辑版的片段编号与授权页一致 | **未知**,材料没有说明已核对 |\n\n- 录音人口头说同意**不算**,不能据此上架。\n- 这两项都没有完成依据,所以**现在不能上架**。上架前请先确认这两项各自的实际状态,不要默认已经完成,也不要默认没做。\n- 第 2 项由馆员核对。核对对象是**剪辑版的片段编号**与授权页上的编号。\n- 第 2 项依赖第 1 项的授权页,这是材料本身的顺序,不是新增的手续。\n\n## 三、现在可以做什么\n- 现在可以做的:保持原始母带留在内库,不动它。\n- **不可以**做的:把任何录音(含剪辑版)上架到试听机,直到上面两项都确认完成。\n- 两项都齐备后,就可以上架剪辑版。能上架不等于必须当场上架,按实际情况安排即可。\n\n## 四、尚未决定的事项(与上架条件无关)\n- 展签是否印波形小图:**未定**。\n- 具备条件后由哪一班上架:**未排**。\n\n这两项**不是**上架的前提,也不是暂停或请示的理由。前提齐备后,上架的可行性不受它们影响。它们定下来之前,不要自行假定结果。\n\n## 五、交接状态小结\n- **交代了什么**:授权页交回、馆员核对编号、只上架剪辑版、母带留内库。\n- **有证据表明已做到的**:目前没有任何一项。\n- **完成情况未知**:授权页是否已交回,片段编号是否已核对。\n- **材料未提供**:放行决定由谁确认或传达,以及上架用料和规格。这里不补写,也不另设手续。",
+    "answer_sha256": "24ca1f6477e0a7e717acea06ffadc5ee65495ab4852305a29d1c28ff3ee9bb3f",
+    "original_answer_sha256": "24ca1f6477e0a7e717acea06ffadc5ee65495ab4852305a29d1c28ff3ee9bb3f",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 试听机只放**剪辑版**,原始母带留在内库,不上架、不放到试听机。",
+          "- 两项都齐备后,就可以上架剪辑版。能上架不等于必须当场上架,按实际情况安排即可。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 1 | 授权页 | 录音人交回**签好的**授权页 | **未知**,材料没有说明已交回 |",
+          "| 2 | 编号核对 | **馆员**核过剪辑版的片段编号与授权页一致 | **未知**,材料没有说明已核对 |",
+          "- 录音人口头说同意**不算**,不能据此上架。",
+          "- 第 2 项由馆员核对。核对对象是**剪辑版的片段编号**与授权页上的编号。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 两项都齐备后,就可以上架剪辑版。能上架不等于必须当场上架,按实际情况安排即可。",
+          "- 展签是否印波形小图:**未定**。",
+          "- 具备条件后由哪一班上架:**未排**。",
+          "这两项**不是**上架的前提,也不是暂停或请示的理由。前提齐备后,上架的可行性不受它们影响。它们定下来之前,不要自行假定结果。"
+        ]
+      }
+    ],
+    "review": "核对两项实际状态，两项齐即可上架，未知的班次无须等。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "puzzle",
+    "arm": "new",
+    "slot": "claude-code-puzzle-new",
+    "answer": "# 拼图借阅角 归还件交接单（鹭湾）\n\n## 放回借阅柜的条件（材料明确要求）\n1. 片数与盒底标注相符\n2. 拼成的图案与本盒参考图一致\n\n两条都满足才能放回借阅柜，每盒都放回原盒。\n\n## 雨雀盒：现在可以放回借阅柜\n| 条件 | 状态 |\n|---|---|\n| 片数与盒底标注相符 | 已满足（已点齐） |\n| 成图与盒内参考图一致 | 已满足（已对过，一致） |\n\n- **现在可以做：** 把原盒放回借阅柜。可以做不等于必须马上做，由你按接班后的安排决定时机。\n- **放回是否已经完成：** 未知，材料没有说明。\n- **未定事项（不影响办理，也不必为此等待或请示）：**\n  - 柜边分类贴纸用什么颜色\n  - 具体哪段时间放回去\n\n## 石桥盒：不能放回借阅柜，先放核查桌\n| 条件 | 状态 |\n|---|---|\n| 片数与盒底标注相符 | 已满足（片数齐） |\n| 成图与盒内参考图一致 | **未满足**（成图与盒里的参考图对不上） |\n\n- **现在可以做：** 把原盒放到核查桌。\n- **仍然受限：** 查清原因并对上图案之前，不得放回借阅柜。\n- **还缺：** 查清成图与参考图对不上的原因，并让成图与参考图一致。\n- **完成情况：**\n  - 核查：未完成，成图仍对不上。\n  - 石桥盒是否已经挪到核查桌：未知，材料没有说明。\n- **未定事项：** 柜边分类贴纸颜色，与石桥盒的放行条件无关。\n\n## 已确认完成的进度（无需重做）\n- 雨雀盒：已点齐，成图已核对且一致。\n- 石桥盒：片数已点齐。\n\n## 材料未说明的内容\n- 材料没有指定由谁确认或传达放行决定，所以本单不写角色分工。\n- 材料没有指定用料或规格，本单也没有补充。",
+    "answer_sha256": "9f2242cd278f57f851909bd29cdd26248272f47b40f77f91add4558f067054d6",
+    "original_answer_sha256": "9f2242cd278f57f851909bd29cdd26248272f47b40f77f91add4558f067054d6",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. 片数与盒底标注相符",
+          "2. 拼成的图案与本盒参考图一致"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 片数与盒底标注相符 | 已满足（已点齐） |",
+          "| 成图与盒内参考图一致 | 已满足（已对过，一致） |",
+          "- **现在可以做：** 把原盒放回借阅柜。可以做不等于必须马上做，由你按接班后的安排决定时机。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 片数与盒底标注相符 | 已满足（片数齐） |",
+          "| 成图与盒内参考图一致 | **未满足**（成图与盒里的参考图对不上） |",
+          "- **现在可以做：** 把原盒放到核查桌。",
+          "- **仍然受限：** 查清原因并对上图案之前，不得放回借阅柜。",
+          "  - 石桥盒是否已经挪到核查桌：未知，材料没有说明。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **未定事项（不影响办理，也不必为此等待或请示）：**",
+          "  - 柜边分类贴纸用什么颜色",
+          "  - 具体哪段时间放回去",
+          "- **未定事项：** 柜边分类贴纸颜色，与石桥盒的放行条件无关。"
+        ]
+      }
+    ],
+    "review": "已核的片数和图案无需重查，是否已放桌未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "puzzle",
+    "arm": "old",
+    "slot": "claude-code-puzzle-old",
+    "answer": "# 拼图借阅角 归还件交接单\n\n## 一、放回借阅柜的条件\n原盒放回借阅柜需同时满足两项：\n1. 片数与盒底标注相符。\n2. 拼成的图案与本盒参考图一致。\n\n## 二、各盒处理\n\n| 盒子 | 片数 | 成图 | 当前可做 | 限制 / 还缺什么 |\n|---|---|---|---|---|\n| **雨雀盒** | 已点齐，相符 | 已对过，一致 | 两项条件都已满足，可以把原盒放回借阅柜。可以做不等于必须立刻做。 | 无 |\n| **石桥盒** | 片数齐 | 与盒里参考图对不上 | 先放核查桌。 | 暂不能放回借阅柜。还缺两件事：查清图案对不上的原因，并让成图与盒里参考图一致。这两件事完成前保持限制。 |\n\n## 三、尚未确定的细节\n以下两项目前没有定论，与上面的放行判断无关，不影响雨雀盒现在放回：\n- 柜边分类贴纸用什么颜色。\n- 雨雀盒具体哪段时间放回去。\n\n## 四、说明\n原始交代里没有指定由谁确认或传达放行决定，也没有指定用料和规格，所以本单没有写这些内容。",
+    "answer_sha256": "905a431076bb1adad5fc29aed8ed7693b8d0f5a23f0140fd59d9081564fa0203",
+    "original_answer_sha256": "905a431076bb1adad5fc29aed8ed7693b8d0f5a23f0140fd59d9081564fa0203",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. 片数与盒底标注相符。",
+          "2. 拼成的图案与本盒参考图一致。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **雨雀盒** | 已点齐，相符 | 已对过，一致 | 两项条件都已满足，可以把原盒放回借阅柜。可以做不等于必须立刻做。 | 无 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **石桥盒** | 片数齐 | 与盒里参考图对不上 | 先放核查桌。 | 暂不能放回借阅柜。还缺两件事：查清图案对不上的原因，并让成图与盒里参考图一致。这两件事完成前保持限制。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "以下两项目前没有定论，与上面的放行判断无关，不影响雨雀盒现在放回：",
+          "- 柜边分类贴纸用什么颜色。",
+          "- 雨雀盒具体哪段时间放回去。"
+        ]
+      }
+    ],
+    "review": "两项满足可归柜，石桥仍须查清图案。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "caption",
+    "arm": "old",
+    "slot": "claude-code-caption-old",
+    "answer": "# 《听潮幕》字幕交接单(雾汀纸影戏)\n\n## 一、当前可执行\n\n**把 07 版字幕载入后台预演窗**\n- 状态:可以执行。材料对这一步只要求 07 版文件已收到,这一条已满足。预演窗在后台,观众看不到。\n- 用料:已收到的 07 版《听潮幕》字幕文件,只用这一份。\n- 这一步可以做,但不要求马上做,你按自己的节奏安排。\n\n## 二、暂不可执行\n\n**把同一份字幕切到观众屏**\n- 状态:现在不能切,还缺一项前提。\n\n| 前提 | 由谁负责 | 现状 |\n|---|---|---|\n| 演出单上选中该版(07 版) | 节目组 | 已满足,演出单已选 07 版 |\n| 该版回执上记下\"末行完整显示\" | 屏务 | **未满足**。末行通过目前只标在 06 版回执上,07 版那栏仍是空的 |\n\n- 06 版的末行通过记录不能顶替 07 版。必须由屏务在 07 版回执上记下\"末行完整显示\"。\n- 屏务记完之后,两项前提才齐。前提齐了才可以切屏,在此之前保持限制。\n\n## 三、未定细节(不影响上面两项的判断)\n\n- 后台素材列表用哪种标签色:未定。\n- 条件齐备后几点切屏:未定。\n\n这两项都不是载入预演窗的前提,也不是等待或请示的理由。切屏时间定下来之前,前提齐了就按\"可以做\"处理,具体几点切由定下来的安排为准。\n\n## 四、办理顺序\n\n1. 现在:把 07 版文件载入后台预演窗。\n2. 查看 07 版回执,确认屏务已记下\"末行完整显示\"。\n3. 回执已记且演出单仍选 07 版,才把同一份字幕切到观众屏。回执还空着就不切。",
+    "answer_sha256": "d5738d532f7b59bb192475e4a24872f14cb5596936d5d74dad42fdbe08c4f22d",
+    "original_answer_sha256": "d5738d532f7b59bb192475e4a24872f14cb5596936d5d74dad42fdbe08c4f22d",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "**把 07 版字幕载入后台预演窗**",
+          "- 状态:可以执行。材料对这一步只要求 07 版文件已收到,这一条已满足。预演窗在后台,观众看不到。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 演出单上选中该版(07 版) | 节目组 | 已满足,演出单已选 07 版 |",
+          "| 该版回执上记下\"末行完整显示\" | 屏务 | **未满足**。末行通过目前只标在 06 版回执上,07 版那栏仍是空的 |",
+          "- 06 版的末行通过记录不能顶替 07 版。必须由屏务在 07 版回执上记下\"末行完整显示\"。",
+          "- 屏务记完之后,两项前提才齐。前提齐了才可以切屏,在此之前保持限制。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 演出单上选中该版(07 版) | 节目组 | 已满足,演出单已选 07 版 |",
+          "| 该版回执上记下\"末行完整显示\" | 屏务 | **未满足**。末行通过目前只标在 06 版回执上,07 版那栏仍是空的 |",
+          "- 06 版的末行通过记录不能顶替 07 版。必须由屏务在 07 版回执上记下\"末行完整显示\"。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 后台素材列表用哪种标签色:未定。",
+          "- 条件齐备后几点切屏:未定。",
+          "这两项都不是载入预演窗的前提,也不是等待或请示的理由。切屏时间定下来之前,前提齐了就按\"可以做\"处理,具体几点切由定下来的安排为准。",
+          "3. 回执已记且演出单仍选 07 版,才把同一份字幕切到观众屏。回执还空着就不切。"
+        ]
+      }
+    ],
+    "review": "写明安排未定不要求等待或请示，办事顺序只要求原两条件。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "caption",
+    "arm": "new",
+    "slot": "claude-code-caption-new",
+    "answer": "# 《听潮幕》字幕交接单（07 版）\n\n## 一、动作清单\n\n| 动作 | 现在能否执行 | 依据 |\n|---|---|---|\n| 把 07 版载入后台预演窗 | **可以做** | 07 版文件已收到，观众看不到预演窗，原文未设其他前提。可以先做，不必立刻做。 |\n| 把同一份字幕切到观众屏 | **现在不能做** | 两项前提只满足一项，见下。 |\n\n### 载入后台预演窗\n- 用料：已收到的 07 版字幕文件。\n- 原文没有给出其他规格，不要自行补充。\n- 完成情况：**未知**。材料只说可以先载入，没有说已经载入。接手后先看预演窗里现在是什么版本。这一项未知，不要因此改变切屏的前提。\n\n### 切到观众屏\n原文要求两项前提：\n\n1. **节目组在演出单上选中 07 版**：已满足。演出单已选 07 版，不必重做。\n2. **屏务在 07 版回执上记下“末行完整显示”**：**未满足**。07 版那一栏仍是空的。现有的末行通过记录只标在 06 版回执上，不能代替 07 版。\n\n结论：保留限制，等屏务在 07 版回执上记下末行完整显示。条件齐备前不要切屏。\n\n## 二、各方角色\n- 节目组：在演出单上选中版本。07 版已选。\n- 屏务：在对应版本的回执上记下末行完整显示。07 版尚缺。\n- 接班同事：先视情况载入预演窗；在两项前提都齐备后才执行切屏。\n\n## 三、进度：交代了什么 vs 有证据做到了什么\n\n| 事项 | 状态 |\n|---|---|\n| 收到 07 版文件 | 已完成 |\n| 演出单选中 07 版 | 已完成 |\n| 06 版回执标注末行通过 | 已完成，仅限 06 版 |\n| 07 版回执标注末行完整显示 | 未完成 |\n| 07 版载入预演窗 | 完成情况未知 |\n| 07 版切到观众屏 | 无完成依据，且前提未齐，不能执行 |\n\n## 四、尚未确定的细节\n这些不影响上面的判断，也不是等待或请示的理由：\n- 后台素材列表使用哪种标签色。\n- 前提齐备后几点切屏。",
+    "answer_sha256": "9f9dca4cea5184acf4e52512634c51f28d2eac32655f1349b46a75e13fcae6f2",
+    "original_answer_sha256": "9f9dca4cea5184acf4e52512634c51f28d2eac32655f1349b46a75e13fcae6f2",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 把 07 版载入后台预演窗 | **可以做** | 07 版文件已收到，观众看不到预演窗，原文未设其他前提。可以先做，不必立刻做。 |",
+          "- 完成情况：**未知**。材料只说可以先载入，没有说已经载入。接手后先看预演窗里现在是什么版本。这一项未知，不要因此改变切屏的前提。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **节目组在演出单上选中 07 版**：已满足。演出单已选 07 版，不必重做。",
+          "2. **屏务在 07 版回执上记下“末行完整显示”**：**未满足**。07 版那一栏仍是空的。现有的末行通过记录只标在 06 版回执上，不能代替 07 版。",
+          "结论：保留限制，等屏务在 07 版回执上记下末行完整显示。条件齐备前不要切屏。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "2. **屏务在 07 版回执上记下“末行完整显示”**：**未满足**。07 版那一栏仍是空的。现有的末行通过记录只标在 06 版回执上，不能代替 07 版。",
+          "| 演出单选中 07 版 | 已完成 |",
+          "| 06 版回执标注末行通过 | 已完成，仅限 06 版 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "这些不影响上面的判断，也不是等待或请示的理由：",
+          "- 后台素材列表使用哪种标签色。",
+          "- 前提齐备后几点切屏。"
+        ]
+      }
+    ],
+    "review": "已选07保留；后台载入未知不改变观众屏前提。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "thread",
+    "arm": "new",
+    "slot": "claude-code-thread-new",
+    "answer": "# 《盐汀》制作交接单\n\n**作品**：穿线画，共十列\n**用料**：白棉线（材料只写了白棉线，没给粗细等规格，这里不补）\n\n## 一、已交代的与有证据的进度\n\n| 项目 | 原交代 | 有证据的完成情况 |\n|---|---|---|\n| 第1–6列打孔 | 照定位纸打孔 | 已完成，孔已打好 |\n| 第1–4列穿线 | 按线序图穿白棉线 | 已完成，保留，不重做 |\n| 第5列穿线 | 同上 | 刚起头，已穿到哪一步以现场为准，接着穿 |\n| 第6列穿线 | 同上 | 材料没有已穿的记录，按未开始处理 |\n| 第7–10列打孔 | 原本照旧定位纸打 | 材料没有已打的记录，视为未打 |\n| 收起旧定位纸 | 已交代，要求收起 | **完成情况未知**，要求保留 |\n\n## 二、现在能做的\n\n**第5列、第6列穿线：可以做。**\n- 前提是该列已有孔，材料明确要求按原线序走。第5、6列的孔已打好，前提满足。\n- 用线是白棉线，依据是原线序图。\n- 第5列从现有进度接着穿，第6列从头穿。\n- 可以做不等于必须马上做，开工时机由接班搭档安排。\n\n**第1–4列：** 已做好，原样保留，不拆不重做。\n\n## 三、现在不能做的\n\n**第7–10列打孔：暂不可做，保留限制。**\n- 前提：拿到**确认过的新定位纸**。\n- 现状：新定位纸**尚未发出**，前提未满足。\n- 旧定位纸不得再用于这几列。后面几列的孔距我要重画，旧纸已作废。\n- 第7–10列还没有孔，所以暂时也不能穿线。\n\n## 四、角色分工\n\n- **我（作者）**：确认新定位纸，并负责发给搭档。这就是放行打孔的决定。\n- **接班搭档**：收到我确认并发出的新定位纸后，才打第7–10列的孔。在此之前只做第五节的事。\n\n## 五、收起旧定位纸\n\n- 要求不变：旧定位纸收起来。\n- 是否已收起，材料没有说明，接班时请先看一眼桌面。\n- 这一项不是穿线的前提，别因它耽误第5、6列。\n\n## 六、未定事项\n\n- 新定位纸哪天发：没定。\n- 新孔距具体怎么画：我还在画，不用你猜或先量。\n\n这两项不是穿第5、6列的理由，也不用为此来问我。",
+    "answer_sha256": "7fbb060fe8bdb5072178863ddc48917d3c631bdc6e35c45aa106d0c817f85532",
+    "original_answer_sha256": "7fbb060fe8bdb5072178863ddc48917d3c631bdc6e35c45aa106d0c817f85532",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 第1–6列打孔 | 照定位纸打孔 | 已完成，孔已打好 |",
+          "| 第1–4列穿线 | 按线序图穿白棉线 | 已完成，保留，不重做 |",
+          "| 第5列穿线 | 同上 | 刚起头，已穿到哪一步以现场为准，接着穿 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "**第7–10列打孔：暂不可做，保留限制。**",
+          "- 前提：拿到**确认过的新定位纸**。",
+          "- 现状：新定位纸**尚未发出**，前提未满足。",
+          "- **我（作者）**：确认新定位纸，并负责发给搭档。这就是放行打孔的决定。",
+          "- **接班搭档**：收到我确认并发出的新定位纸后，才打第7–10列的孔。在此之前只做第五节的事。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "**第5列、第6列穿线：可以做。**",
+          "- 用线是白棉线，依据是原线序图。",
+          "- 可以做不等于必须马上做，开工时机由接班搭档安排。",
+          "- **接班搭档**：收到我确认并发出的新定位纸后，才打第7–10列的孔。在此之前只做第五节的事。",
+          "## 五、收起旧定位纸",
+          "- 这一项不是穿线的前提，别因它耽误第5、6列。"
+        ]
+      }
+    ],
+    "review": "放行人与白棉线均在。第38行却说拿到新纸之前“只做第五节的事”，第五节只有收旧纸，与可续穿的正文矛盾。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "交接分工写等新纸前只做收旧纸",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "等新纸时仅可做第五节，与已获准穿线矛盾",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "partial",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "thread",
+    "arm": "old",
+    "slot": "claude-code-thread-old",
+    "answer": "# 《盐汀》制作交接单\n\n**作品**：《盐汀》穿线画，共十列\n**用料**：白棉线（按线序图穿线）。原文只指定了白棉线和线序图，没有给线的粗细或其他规格，这里不另补。\n\n## 当前进度\n\n| 列 | 孔 | 穿线 |\n|---|---|---|\n| 1–4 | 已打好 | 已穿完 |\n| 5 | 已打好 | 刚起头，未完成 |\n| 6 | 已打好 | 未开始 |\n| 7–10 | 未打 | 未开始 |\n\n## 变更说明\n\n作者要重画后几列的孔距，所以旧定位纸停用，收起来。新定位纸由作者确认后发给你。已有孔的地方照原线序走，已做好的部分保留。\n\n## 各动作当前能否执行\n\n| 动作 | 原文要求的前提 | 是否满足 | 结论 |\n|---|---|---|---|\n| 收起旧定位纸 | 无 | — | **现在就做** |\n| 保留第 1–4 列成品 | 无 | — | **不动，不返工** |\n| 接着穿第 5 列 | 孔已打好；按原线序、用白棉线 | 已满足 | **现在可以做** |\n| 穿第 6 列 | 同上 | 已满足 | **现在可以做** |\n| 打第 7–10 列的孔 | 作者确认过并发出的新定位纸 | **未满足** | **不能做** |\n| 穿第 7–10 列 | 孔已打好 | **未满足**，要先打孔 | **不能做** |\n\n- 第 5、6 列可以穿，但不必马上穿，由你按自己的安排决定。\n- 打孔仍受限制，还缺作者确认并发出的新定位纸。没有这张纸，不要用旧定位纸继续打。\n\n## 角色分工\n\n- **作者**：确认新定位纸，并把它发给你。拿到这张纸就等于放行打孔。\n- **接班搭档（你）**：收旧定位纸，穿第 5、6 列，并在拿到新定位纸后打第 7–10 列的孔。\n\n## 尚未确定的事项\n\n这些事不影响上面能做的动作，也不用为它们停工或请示：\n\n- 新定位纸何时发，目前没有日期。\n- 第 7–10 列新的孔距具体数值，要等新定位纸。\n\n## 交接要点\n\n1. 先收旧定位纸。\n2. 第 5、6 列按原线序图、用白棉线穿，已有的第 1–4 列不动。\n3. 第 7–10 列的孔，等作者发来确认过的新定位纸再打。",
+    "answer_sha256": "30b5983034c5f47fe800d8e0978e899bff550a88816a7ac2682c0e2aced963df",
+    "original_answer_sha256": "30b5983034c5f47fe800d8e0978e899bff550a88816a7ac2682c0e2aced963df",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 1–4 | 已打好 | 已穿完 |",
+          "| 5 | 已打好 | 刚起头，未完成 |",
+          "| 6 | 已打好 | 未开始 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "作者要重画后几列的孔距，所以旧定位纸停用，收起来。新定位纸由作者确认后发给你。已有孔的地方照原线序走，已做好的部分保留。",
+          "| 打第 7–10 列的孔 | 作者确认过并发出的新定位纸 | **未满足** | **不能做** |",
+          "- **作者**：确认新定位纸，并把它发给你。拿到这张纸就等于放行打孔。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 接着穿第 5 列 | 孔已打好；按原线序、用白棉线 | 已满足 | **现在可以做** |",
+          "| 穿第 6 列 | 同上 | 已满足 | **现在可以做** |",
+          "- 第 5、6 列可以穿，但不必马上穿，由你按自己的安排决定。",
+          "2. 第 5、6 列按原线序图、用白棉线穿，已有的第 1–4 列不动。"
+        ]
+      }
+    ],
+    "review": "作者发确认过的新纸、白棉线都在。现在就做指原先交代收起旧纸；已许可的穿线可自行安排。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "type",
+    "arm": "old",
+    "slot": "claude-code-type-old",
+    "answer": "# 《雾港字盘》印制作业交接单\n\n## 一、当前状况\n- 铅字样册共四块版：甲盘（甲横、甲竖）、乙盘（乙横、乙竖）。\n- 四块版原先都已开印。已印张数：甲横 2 张，乙横 1 张，甲竖、乙竖均为 0。\n- 因字脚可能偏，我已让四块版一律停印，已印的张子都已夹好。\n- 校样员后来在回条上按版号签了**甲横**和**乙竖**。我看过后决定这两块继续做。\n- **甲竖**和**乙横**两格只有收样章，没有校样员签名。\n- 交班时回条只有这一张。\n\n## 二、逐块核对\n\n| 版 | 校样员在自己那格的签名 | 当前能否印 | 说明 |\n|---|---|---|---|\n| 甲横 | 有 | 可以 | 照原印数往下做，已印的 2 张算数。 |\n| 乙竖 | 有 | 可以 | 照原印数往下做，目前已印 0 张，从头计数。 |\n| 甲竖 | 无（仅收样章） | 不可以 | 保持停印。 |\n| 乙横 | 无（仅收样章） | 不可以 | 保持停印，已印的 1 张继续夹好保留，暂不计入成数。 |\n\n## 三、可以办理的动作\n1. **甲横**：恢复印制，照原印数做完，手上已有的 2 张计入。\n2. **乙竖**：恢复印制，照原印数做完，已印 0 张。\n- 放行决定由我作出，校样员的签名是这两块通过的依据。\n- 原文没有指定用料和规格，按这两块版原有的印制要求办理，不另行更改。\n- 可以印不等于必须马上印，开印时间由你按现场安排。\n\n## 四、仍受限制的动作\n1. **甲竖**、**乙横**不得开印或续印。\n   - 先前约定：每块版必须有校样员在自己那格的签名才算通过，收样章不能代替。\n   - 还缺：校样员在**甲竖**那一格的签名，以及在**乙横**那一格的签名。\n2. 缺的签名补齐前，这两块保持现状。补齐之后，各块才可按放行办理。\n\n## 五、其他未定细节\n- 原印数的具体数字：交班时我没有另行写明，以这两块版原有的印数为准。\n- 这一项不影响上面“可以办理”的两块，不必为此等待或请示。",
+    "answer_sha256": "5a751b0a6fb285117d9cc912a23b0311f501ac7e0eea2ce70209d1b0f327263f",
+    "original_answer_sha256": "5a751b0a6fb285117d9cc912a23b0311f501ac7e0eea2ce70209d1b0f327263f",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "- 校样员后来在回条上按版号签了**甲横**和**乙竖**。我看过后决定这两块继续做。",
+          "| 甲横 | 有 | 可以 | 照原印数往下做，已印的 2 张算数。 |",
+          "| 乙竖 | 有 | 可以 | 照原印数往下做，目前已印 0 张，从头计数。 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **甲竖**和**乙横**两格只有收样章，没有校样员签名。",
+          "| 甲竖 | 无（仅收样章） | 不可以 | 保持停印。 |",
+          "| 乙横 | 无（仅收样章） | 不可以 | 保持停印，已印的 1 张继续夹好保留，暂不计入成数。 |",
+          "   - 先前约定：每块版必须有校样员在自己那格的签名才算通过，收样章不能代替。",
+          "   - 还缺：校样员在**甲竖**那一格的签名，以及在**乙横**那一格的签名。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "- 四块版原先都已开印。已印张数：甲横 2 张，乙横 1 张，甲竖、乙竖均为 0。",
+          "| 甲横 | 有 | 可以 | 照原印数往下做，已印的 2 张算数。 |",
+          "| 乙竖 | 有 | 可以 | 照原印数往下做，目前已印 0 张，从头计数。 |",
+          "| 甲竖 | 无（仅收样章） | 不可以 | 保持停印。 |",
+          "| 乙横 | 无（仅收样章） | 不可以 | 保持停印，已印的 1 张继续夹好保留，暂不计入成数。 |"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "- 因字脚可能偏，我已让四块版一律停印，已印的张子都已夹好。",
+          "| 乙横 | 无（仅收样章） | 不可以 | 保持停印，已印的 1 张继续夹好保留，暂不计入成数。 |"
+        ]
+      }
+    ],
+    "review": "写已印张全部夹好，又称四版都已开印，与两竖题未开印不符。各版许可／签名正确。",
+    "sample_storage": "asserted_done",
+    "known_print_progress": false,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "开印和夹存交代被当成完成记录",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "partial",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "type",
+    "arm": "new",
+    "slot": "claude-code-type-new",
+    "answer": "# 《雾港字盘》印制作业交接单\n\n## 一、各版现状与当前可做的动作\n\n| 版 | 已印 | 校样员本格签名 | 当前处理 |\n|---|---|---|---|\n| 甲横 | 2 张 | 有 | **可以继续**，按原印数往下做，已印的 2 张算数，只补差额 |\n| 乙竖 | 0 张（未开印） | 有 | **可以开印**，按原印数做 |\n| 甲竖 | 0 张（未开印） | 无，只有收样章 | **保持停印** |\n| 乙横 | 1 张 | 无，只有收样章 | **保持停印**，已印的 1 张继续夹好存放，不算放行 |\n\n- 放行依据：回条上校样员按版号签了甲横和乙竖，我看过后口头决定这两块照原印数往下做、手上已有的算数。\n- 校样员的角色：在回条上自己那一格签名，证明该版校样通过。\n- 我的角色：看过回条并作出放行决定。\n- 你的角色：按此单对甲横、乙竖执行，并对甲竖、乙横保持停印。\n- 可以做不等于必须立即做，开工时间由你按班上安排决定。\n\n## 二、尚缺的前提（仅甲竖、乙横）\n\n按先前约定，每块版必须有校样员在自己那一格的签名才算通过。这两格目前只有收样章，收样章不能代替签名。\n\n- 缺的是：**校样员在甲竖格、乙横格各自的签名**。\n- 补齐前这两块不开印、不续印。补齐后，各自按其版号单独放行。\n- 甲横、乙竖的签名不能算到这两块头上。\n\n## 三、交代了什么，与有证据表明做到了什么\n\n| 事项 | 交代 | 完成情况 |\n|---|---|---|\n| 四块都开印 | 我让搭档执行 | 实际只有甲横印了 2 张、乙横印了 1 张，两块竖题未开印，已证实 |\n| 四块一律停印 | 我下达 | **未知**，没有确认记录 |\n| 已印的夹好 | 我下达 | **未知**，没有确认记录 |\n| 校样员签甲横、乙竖 | 回条上有签名 | 已完成，已证实 |\n| 甲竖、乙横校样员签名 | 约定要求有 | 未做，回条上没有 |\n\n- 停印和夹好的完成情况未知，请你接班时到现场看一眼，已印的张数和是否夹好，以实物为准。这只是核对现状，不是甲横、乙竖续做的前提。\n- 已证实的印数（甲横 2、乙横 1）照实保留，不要重印。\n\n## 四、其他未定细节（不阻碍上述动作）\n\n- **原印数**的具体数字、用料和规格：我给你的材料里没有写明，这里不编造，按原有印制单执行。\n- 字脚可能偏的问题，材料里没有进一步说明，这里不另加手续。\n\n## 五、交接时的回条\n\n回条只有一张，是校样员签名的唯一凭据，请妥善保存，并随版一并交给下一班。",
+    "answer_sha256": "85ba9f72de87a55ab38f6109dd731052a61d1145b43f53a4315162d1980004c4",
+    "original_answer_sha256": "85ba9f72de87a55ab38f6109dd731052a61d1145b43f53a4315162d1980004c4",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲横 | 2 张 | 有 | **可以继续**，按原印数往下做，已印的 2 张算数，只补差额 |",
+          "| 乙竖 | 0 张（未开印） | 有 | **可以开印**，按原印数做 |",
+          "- 放行依据：回条上校样员按版号签了甲横和乙竖，我看过后口头决定这两块照原印数往下做、手上已有的算数。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲竖 | 0 张（未开印） | 无，只有收样章 | **保持停印** |",
+          "| 乙横 | 1 张 | 无，只有收样章 | **保持停印**，已印的 1 张继续夹好存放，不算放行 |",
+          "按先前约定，每块版必须有校样员在自己那一格的签名才算通过。这两格目前只有收样章，收样章不能代替签名。",
+          "- 缺的是：**校样员在甲竖格、乙横格各自的签名**。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 甲横 | 2 张 | 有 | **可以继续**，按原印数往下做，已印的 2 张算数，只补差额 |",
+          "| 乙竖 | 0 张（未开印） | 有 | **可以开印**，按原印数做 |",
+          "| 甲竖 | 0 张（未开印） | 无，只有收样章 | **保持停印** |",
+          "| 乙横 | 1 张 | 无，只有收样章 | **保持停印**，已印的 1 张继续夹好存放，不算放行 |",
+          "| 四块都开印 | 我让搭档执行 | 实际只有甲横印了 2 张、乙横印了 1 张，两块竖题未开印，已证实 |",
+          "- 已证实的印数（甲横 2、乙横 1）照实保留，不要重印。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 已印的夹好 | 我下达 | **未知**，没有确认记录 |",
+          "- 停印和夹好的完成情况未知，请你接班时到现场看一眼，已印的张数和是否夹好，以实物为准。这只是核对现状，不是甲横、乙竖续做的前提。"
+        ]
+      }
+    ],
+    "review": "第32行明确夹存未知，四块版印数和两项许可正确。核实现状未作为新前提。",
+    "sample_storage": "explicit_unknown",
+    "known_print_progress": true,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "reels",
+    "arm": "new",
+    "slot": "claude-code-reels-new",
+    "answer": "# 《双溪听册》工作交接单\n\n## 一、底噪样本备份（每卷各存一份到备份盘）\n\n| 卷 | 交代 | 完成依据 | 当前状态 |\n|---|---|---|---|\n| 榆涧卷 | 存一份到备份盘 | 晚班交班条：“底噪样本已存妥，回读无误。” | **已完成**，无需重做 |\n| 杉汀卷 | 存一份到备份盘 | 交班条只写“收到，照办。”，只表示收到，没写已存、也没写回读 | **完成情况未知**，原要求保留：杉汀卷底噪样本存一份到备份盘 |\n\n杉汀卷的备份状态未知，不是杉汀剪辑的前提，也不影响榆涧的任何动作。\n\n## 二、剪辑进度与可执行情况\n\n| 卷 | 已完成（剪辑台账） | 余下 | 现在能否执行 |\n|---|---|---|---|\n| 榆涧卷（共六段） | 头四段已剪好，不必重做 | 第5、6段 | **不能剪。** 剪辑师说余下的先别剪，等她发榆涧新版切点表。交班时新版还没发，前提未满足，还缺这份新版切点表。 |\n| 杉汀卷（共六段） | 头两段已剪好，不必重做 | 第3至6段 | **可以接着剪。** 按桌上那张切点表剪，前提已满足，不用等任何人。 |\n\n- **榆涧放行：** 由剪辑师发出榆涧新版切点表，收到后才可剪第5、6段。在此之前保持暂停。\n- **杉汀用料：** 桌上那张切点表。\n- 可以做不等于必须立刻做，开始的时间由你安排。\n\n## 三、材料没写明的细节\n\n下面这些材料里没有交代，不作为等待或请示的理由，也不另加手续：\n\n- 备份盘的具体位置和样本格式。\n- 桌上那张杉汀切点表的版本编号。\n- 榆涧新版切点表的发送时间。\n\n## 四、待办摘要\n\n1. 杉汀卷底噪样本存备份盘（完成情况未知，按原要求办理）。\n2. 杉汀卷第3至6段，按桌上切点表接着剪。\n3. 榆涧卷第5、6段：等剪辑师发新版切点表，收到前不剪。",
+    "answer_sha256": "31ee3634631f6768c340fa5f1c185dc0f9d4c8052711e8952571481507875068",
+    "original_answer_sha256": "31ee3634631f6768c340fa5f1c185dc0f9d4c8052711e8952571481507875068",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 榆涧卷 | 存一份到备份盘 | 晚班交班条：“底噪样本已存妥，回读无误。” | **已完成**，无需重做 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 杉汀卷 | 存一份到备份盘 | 交班条只写“收到，照办。”，只表示收到，没写已存、也没写回读 | **完成情况未知**，原要求保留：杉汀卷底噪样本存一份到备份盘 |",
+          "杉汀卷的备份状态未知，不是杉汀剪辑的前提，也不影响榆涧的任何动作。",
+          "1. 杉汀卷底噪样本存备份盘（完成情况未知，按原要求办理）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 榆涧卷（共六段） | 头四段已剪好，不必重做 | 第5、6段 | **不能剪。** 剪辑师说余下的先别剪，等她发榆涧新版切点表。交班时新版还没发，前提未满足，还缺这份新版切点表。 |",
+          "| 杉汀卷（共六段） | 头两段已剪好，不必重做 | 第3至6段 | **可以接着剪。** 按桌上那张切点表剪，前提已满足，不用等任何人。 |",
+          "- **榆涧放行：** 由剪辑师发出榆涧新版切点表，收到后才可剪第5、6段。在此之前保持暂停。"
+        ]
+      }
+    ],
+    "review": "榆涧备份回读已完成无需重做；杉汀收到要求，尚无完成证据，剪辑可继续。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "reels",
+    "arm": "old",
+    "slot": "claude-code-reels-old",
+    "answer": "# 《双溪听册》工作交接单\n\n## 当前进度\n| 卷 | 共 | 已剪 | 未剪 |\n|---|---|---|---|\n| 榆涧卷 | 6段 | 头4段（台账） | 第5、6段 |\n| 杉汀卷 | 6段 | 头2段（台账） | 第3至6段 |\n\n## 一、底噪样本备份（每卷各存一份到备份盘）\n- **榆涧卷：已完成。** 晚班交班条写明\"底噪样本已存妥，回读无误\"，这项不用再办。\n- **杉汀卷：完成情况未确认。** 晚班的交班条只写了\"收到，照办\"，那是接受任务的回复，没有说已存好。\n  - **现在可以做：** 这项没有附加前提。先看备份盘里有没有杉汀卷的底噪样本；没有就存一份，已有就不必重存。\n  - **谁确认：** 交班条上没有人确认过，需要你向晚班问明或到备份盘查实。\n\n## 二、剪辑\n- **榆涧卷第5、6段：现在不能剪。**\n  - 前提：剪辑师发来榆涧**新版切点表**。\n  - 现状：交班时新版还没发，前提未满足。\n  - 放行由**剪辑师**通过发表来传达。她发表之前不要动这两段，收到后再按新版表剪。\n- **杉汀卷第3至6段：现在可以剪。**\n  - 前提：剪辑师说明按桌上那张切点表接着剪，这一条已满足。\n  - 用料：**桌上那张杉汀切点表**。\n  - 剪不剪、何时剪由你安排，没有必须立刻动手的要求。\n\n## 三、其他未定细节（不影响上面的办理）\n- 备份盘上样本的具体存放位置和文件名，原文没有交代。\n- 桌上那张杉汀切点表的版本或日期，原文没有注明。\n\n这两项不是等待或请示的理由，按现有材料办理即可。",
+    "answer_sha256": "d9fe9b63cd6c5e3848e1aa8d847f17a03a567e07b46e3c0665345a63f4d9947e",
+    "original_answer_sha256": "d9fe9b63cd6c5e3848e1aa8d847f17a03a567e07b46e3c0665345a63f4d9947e",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **榆涧卷：已完成。** 晚班交班条写明\"底噪样本已存妥，回读无误\"，这项不用再办。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "## 一、底噪样本备份（每卷各存一份到备份盘）",
+          "- **杉汀卷：完成情况未确认。** 晚班的交班条只写了\"收到，照办\"，那是接受任务的回复，没有说已存好。",
+          "  - **现在可以做：** 这项没有附加前提。先看备份盘里有没有杉汀卷的底噪样本；没有就存一份，已有就不必重存。",
+          "  - **谁确认：** 交班条上没有人确认过，需要你向晚班问明或到备份盘查实。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 榆涧卷 | 6段 | 头4段（台账） | 第5、6段 |",
+          "| 杉汀卷 | 6段 | 头2段（台账） | 第3至6段 |",
+          "  - 前提：剪辑师发来榆涧**新版切点表**。",
+          "  - 现状：交班时新版还没发，前提未满足。",
+          "- **杉汀卷第3至6段：现在可以剪。**",
+          "  - 前提：剪辑师说明按桌上那张切点表接着剪，这一条已满足。"
+        ]
+      }
+    ],
+    "review": "榆涧无需重做，杉汀只查备份状态；不影响既有剪辑许可。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "claude-code",
+    "case": "foldout",
+    "arm": "old",
+    "slot": "claude-code-foldout-old",
+    "answer": "# 《折岸拼景》制作交接单\n\n两册各五折：篷窗册交委托方，砂桥册留工坊。\n\n## 一、篷窗册（交委托方，随件需附一张整册展开照）\n\n| 动作 | 前提 | 当前状态 | 现在能否办 |\n|---|---|---|---|\n| 粘第4、5折 | 前三折已粘牢 | 已满足 | **可以办。** 用桌上的棉纸接着粘，材料只指定了棉纸，没有给其他规格 |\n| 拍整册展开照 | 整册粘完 | 未满足，还差第4、5折 | **暂不能拍。** 交班时没拍过，等两折粘完再拍 |\n| 连同展开照交付委托方 | 展开照已拍 | 未满足 | 要等上一步完成 |\n\n办理顺序：粘完后两折，再拍整册展开照，最后随件交付。\n\n## 二、砂桥册（留在工坊）\n\n| 动作 | 前提 | 当前状态 | 现在能否办 |\n|---|---|---|---|\n| 粘第5折（最后一折） | 装帧师送来配色纸样 | 交班时未送到 | **暂不能粘。** 还缺装帧师送来的配色纸样，到了再粘 |\n| 拍展开照 | 无，纯属自愿 | 交班时没有拍照的记录 | **可以拍，也可以不拍。** 我已对你说过：想留就拍，嫌麻烦就算了。不拍不影响其他环节 |\n\n- 前四折已粘牢，不用再动。\n- 有人问砂桥拍了没有，你当时回的是“知道可以拍”。那只是知道许可，不等于已经拍了，按“未拍”记录。\n\n## 三、角色分工\n\n- **装帧师**：送配色纸样。纸样一到，砂桥最后一折才可以粘。\n- **你（接班搭档）**：粘篷窗后两折、拍篷窗整册展开照、随件交付；砂桥最后一折等纸样到了再粘；砂桥是否拍照由你自己定。\n- **我（交班人）**：砂桥拍照的许可已由我口头给你，这一项不用再请示。\n\n## 四、其他未定细节（不影响上面的安排）\n\n- 棉纸的具体规格、篷窗册的交付日期、砂桥纸样的预计送达时间，原始交接里都没有写。这些不是等待或请示的理由；篷窗后两折现在就可以粘，纸样什么时候到，到了再粘最后一折即可。",
+    "answer_sha256": "44e4df96dba4988f072352f5bd768167539135c9c7c6e6c10599a99d74901509",
+    "original_answer_sha256": "44e4df96dba4988f072352f5bd768167539135c9c7c6e6c10599a99d74901509",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "两册各五折：篷窗册交委托方，砂桥册留工坊。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 粘第4、5折 | 前三折已粘牢 | 已满足 | **可以办。** 用桌上的棉纸接着粘，材料只指定了棉纸，没有给其他规格 |",
+          "| 拍整册展开照 | 整册粘完 | 未满足，还差第4、5折 | **暂不能拍。** 交班时没拍过，等两折粘完再拍 |",
+          "| 连同展开照交付委托方 | 展开照已拍 | 未满足 | 要等上一步完成 |",
+          "办理顺序：粘完后两折，再拍整册展开照，最后随件交付。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "| 粘第5折（最后一折） | 装帧师送来配色纸样 | 交班时未送到 | **暂不能粘。** 还缺装帧师送来的配色纸样，到了再粘 |",
+          "| 拍展开照 | 无，纯属自愿 | 交班时没有拍照的记录 | **可以拍，也可以不拍。** 我已对你说过：想留就拍，嫌麻烦就算了。不拍不影响其他环节 |",
+          "- 前四折已粘牢，不用再动。",
+          "- 有人问砂桥拍了没有，你当时回的是“知道可以拍”。那只是知道许可，不等于已经拍了，按“未拍”记录。"
+        ]
+      }
+    ],
+    "review": "保住篷窗进度；把砂桥照有无未知写成按“未拍”记录。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "砂桥照片状态被改成未拍",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "partial",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "foldout",
+    "arm": "new",
+    "slot": "claude-code-foldout-new",
+    "answer": "# 《折岸拼景》制作交接单\n\n全套共两册，每册五折。\n\n## 一、篷窗册（交委托方）\n\n| 项目 | 交代内容 | 已有依据的进度 |\n|---|---|---|\n| 前三折 | 粘牢 | **已完成**，无需重做 |\n| 第四、五折 | 用桌上棉纸接着粘 | 完成情况**未知**，没有完成记录 |\n| 整册展开照 | 一张，整册粘完后再拍，随件交委托方 | **未拍**，交班时已明确 |\n\n**现在可以做：**\n- 用桌上棉纸粘第四、五折。除材料指定的棉纸外，没有其他规格要求。\n\n**暂不能做：**\n- 展开照要等整册粘完才能拍。第四、五折未确认粘完，所以现在不拍。\n- 两折粘完后拍一张整册展开照，随篷窗册交委托方。\n\n## 二、砂桥册（留在工坊）\n\n| 项目 | 交代内容 | 已有依据的进度 |\n|---|---|---|\n| 前四折 | 粘牢 | **已完成**，无需重做 |\n| 最后一折 | 等装帧师送来配色纸样后再粘 | **未做**。交班时纸样还没送到，此后是否送到未知 |\n| 展开照 | 我说过“想留就拍，嫌麻烦就算了”，由你自行决定 | 是否拍过**未知**。搭档只回了“知道可以拍”，不能算已拍 |\n\n**现在可以做：**\n- 先确认装帧师的配色纸样是否已送到。\n- 展开照可拍可不拍，不是必须做，也不必马上做。是否拍、何时拍由你决定。\n\n**暂不能做：**\n- 最后一折要等装帧师送来配色纸样后才能粘。纸样到了就可以粘，不需要别的批准或确认。\n\n## 三、注意\n\n- 两册互不影响，一册的进度不是另一册的前提。\n- 砂桥展开照是否已拍未知，这不影响砂桥最后一折，也不影响篷窗册的任何一步。\n- 除上述内容外，原材料里没有其他要求，也没有指定其他人确认或放行。",
+    "answer_sha256": "3bf61153200184a0b643c7a1b5db3481447ccd6f0502f515d519e6611525edeb",
+    "original_answer_sha256": "3bf61153200184a0b643c7a1b5db3481447ccd6f0502f515d519e6611525edeb",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "全套共两册，每册五折。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "| 前三折 | 粘牢 | **已完成**，无需重做 |",
+          "| 第四、五折 | 用桌上棉纸接着粘 | 完成情况**未知**，没有完成记录 |",
+          "| 整册展开照 | 一张，整册粘完后再拍，随件交委托方 | **未拍**，交班时已明确 |",
+          "- 用桌上棉纸粘第四、五折。除材料指定的棉纸外，没有其他规格要求。",
+          "- 展开照要等整册粘完才能拍。第四、五折未确认粘完，所以现在不拍。",
+          "- 两折粘完后拍一张整册展开照，随篷窗册交委托方。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 前四折 | 粘牢 | **已完成**，无需重做 |",
+          "| 最后一折 | 等装帧师送来配色纸样后再粘 | **未做**。交班时纸样还没送到，此后是否送到未知 |",
+          "| 展开照 | 我说过“想留就拍，嫌麻烦就算了”，由你自行决定 | 是否拍过**未知**。搭档只回了“知道可以拍”，不能算已拍 |",
+          "- 展开照可拍可不拍，不是必须做，也不必马上做。是否拍、何时拍由你决定。",
+          "- 最后一折要等装帧师送来配色纸样后才能粘。纸样到了就可以粘，不需要别的批准或确认。"
+        ]
+      }
+    ],
+    "review": "砂桥照未知保住，却把篷窗的余两折待办标为完成未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "余两折待粘变成完成未知",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "篷窗剩余进度被降为未知",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "swatch",
+    "arm": "new",
+    "slot": "claude-code-swatch-new",
+    "answer": "# 《潮窗色谱》装袋交接单\n\n## 一、苔阶套\n\n| 项目 | 状态 |\n|---|---|\n| 色片 | 共六枚，已装四枚（交班时已知），还差两枚 |\n| 试色条 | 改作店内自留，**放不放都可以** |\n\n**现在可以做：**\n- 从白盘接着装余下两枚，凑齐六枚。\n- 六枚装齐后即可封袋。试色条想放就放（同批次），不放也能封。\n\n**注意：**\n- 桌上的工单仍是开工时的旧版，写着“两套都必须放试色条”。苔阶这一条已被后来的口头交代取代，以“可放可不放”为准，不必等工单改版。\n- 装完、封袋可以现在做，也可以稍后做，没有规定必须马上做。\n\n## 二、瓦巷套\n\n| 项目 | 交代了什么 | 有证据表明做到了什么 |\n|---|---|---|\n| 前五枚 | 装袋 | 已装五枚 |\n| 第六枚 | 先别装，等配色师送来替换片 | **未装**，替换片交班时**还没到** |\n| 试色条 | 封袋前必须把同批次试色条放进袋里 | 晚班便条称已裁好，但**搁在袋外，尚未放入袋内**；便条没写是否同批次，此项**情况未知** |\n| 封袋 | 须在六枚齐全、试色条入袋后进行 | 未封 |\n\n**现在不能做：**\n- **装第六枚**：缺**配色师送来的替换片**。到货前不装，也不要用别的片代替。\n- **封袋**：缺第六枚。\n\n**现在可以做：**\n- 已裁好的试色条可以现在放入袋内，也可以留到封袋前放。\n\n**保留的要求：**\n- 封袋前，试色条必须是同批次的并已放进袋里。便条没说明批次，所以这条按原要求保留，批次情况未知。\n\n## 三、交接要点\n1. 苔阶：从白盘装满六枚后即可封袋，试色条可放可不放。\n2. 瓦巷：等配色师送来替换片，再装第六枚。\n3. 瓦巷封袋前，把同批次试色条放入袋内，再封袋。",
+    "answer_sha256": "ff0f77c7506e4bafd21da25831050077b789b4e11f34398cc9416ed8fe00145d",
+    "original_answer_sha256": "ff0f77c7506e4bafd21da25831050077b789b4e11f34398cc9416ed8fe00145d",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 色片 | 共六枚，已装四枚（交班时已知），还差两枚 |",
+          "- 从白盘接着装余下两枚，凑齐六枚。",
+          "| 前五枚 | 装袋 | 已装五枚 |",
+          "| 第六枚 | 先别装，等配色师送来替换片 | **未装**，替换片交班时**还没到** |"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "| 色片 | 共六枚，已装四枚（交班时已知），还差两枚 |",
+          "| 试色条 | 改作店内自留，**放不放都可以** |",
+          "- 从白盘接着装余下两枚，凑齐六枚。",
+          "- 六枚装齐后即可封袋。试色条想放就放（同批次），不放也能封。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| 第六枚 | 先别装，等配色师送来替换片 | **未装**，替换片交班时**还没到** |",
+          "| 试色条 | 封袋前必须把同批次试色条放进袋里 | 晚班便条称已裁好，但**搁在袋外，尚未放入袋内**；便条没写是否同批次，此项**情况未知** |",
+          "- **装第六枚**：缺**配色师送来的替换片**。到货前不装，也不要用别的片代替。",
+          "- 封袋前，试色条必须是同批次的并已放进袋里。便条没说明批次，所以这条按原要求保留，批次情况未知。"
+        ]
+      }
+    ],
+    "review": "瓦巷袋外未放和未知批次写得清楚；没说苔阶实际放没放未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "claude-code",
+    "case": "swatch",
+    "arm": "old",
+    "slot": "claude-code-swatch-old",
+    "answer": "# 《潮窗色谱》装袋交接单\n\n**以哪个为准：** 桌上那张开工工单仍写着“两套封袋前都要放同批次试色条”，这条对苔阶已作废。苔阶改为店内自留，以后来的口头说明为准：苔阶的试色条想放就放，不放也能封。瓦巷仍按工单办理。\n\n## 一、苔阶套（每套六枚）\n\n- **现状：** 已装四枚，还差两枚。\n- **现在可以做：**\n  1. 从白盘接着装余下两枚，装满六枚。\n  2. 六枚装齐后即可封袋。同批次试色条放不放都行，不放也能封。\n- **不用等、不用请示：** 试色条不是封袋的前提，不必为它等任何人。\n\n## 二、瓦巷套（每套六枚）\n\n- **现状：** 已装五枚。试色条已裁好，但还搁在袋外，没有放进袋里。\n- **现在不能做：**\n  - **第六枚先不要装。** 要等配色师送来替换片，交班时还没到。\n  - **不能封袋。** 还缺两项：替换片未到、第六枚未装，同批次试色条还没放进袋里。\n- **现在可以做：** 把已裁好的同批次试色条放进袋里。这不依赖替换片，但也不必急着放，封袋前放好即可。\n- **放行条件（按顺序）：**\n  1. 配色师送来替换片（由配色师送来）。\n  2. 把替换片装成第六枚。\n  3. 确认同批次试色条已在袋内。\n  4. 封袋。\n\n## 三、未定细节\n\n以下几项原文没有交代，不影响上面的判断，也不是等待或请示的理由。遇到时按现场实际情况处理，或随手记下：\n\n- 替换片具体何时到。\n- 苔阶是否放试色条，由接班人自行决定。",
+    "answer_sha256": "a1174743e6bcacfad9cf687ed0cfde958403e192e98e407aadbacae5ef34f243",
+    "original_answer_sha256": "a1174743e6bcacfad9cf687ed0cfde958403e192e98e407aadbacae5ef34f243",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "## 一、苔阶套（每套六枚）",
+          "## 二、瓦巷套（每套六枚）"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "- **现状：** 已装四枚，还差两枚。",
+          "  1. 从白盘接着装余下两枚，装满六枚。",
+          "  2. 六枚装齐后即可封袋。同批次试色条放不放都行，不放也能封。",
+          "- 苔阶是否放试色条，由接班人自行决定。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **现状：** 已装五枚。试色条已裁好，但还搁在袋外，没有放进袋里。",
+          "  - **第六枚先不要装。** 要等配色师送来替换片，交班时还没到。",
+          "  - **不能封袋。** 还缺两项：替换片未到、第六枚未装，同批次试色条还没放进袋里。",
+          "- **现在可以做：** 把已裁好的同批次试色条放进袋里。这不依赖替换片，但也不必急着放，封袋前放好即可。"
+        ]
+      }
+    ],
+    "review": "苔阶可选择放条，但本册是否已经放入未知未交代。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "greenhouse",
+    "arm": "old",
+    "slot": "antigravity-greenhouse-old",
+    "answer": "这份温室志愿者导览图改图与发图工作安排如下，可直接对照执行：\n\n---\n\n### 一、当前可执行动作：导览图修改\n\n* **执行前提核对**：改图要求已明确，无其他前置条件限制，**当前可以执行**（可以做不等于必须立即做）。\n* **具体修改规格**：\n  * **新馆入口**：改为空心菱形。\n  * **旧馆入口**：保留实心圆。\n\n---\n\n### 二、暂不可执行动作：导览图发送\n\n* **对应动作**：将本版导览图发送给志愿者。\n* **放行角色与确认方式**：由**园丁**在**纸质校样上签字**确认放行。\n* **执行前提核对与限制**：\n  * **当前状态**：**暂不能发送**。目前尚缺园丁在纸质校样上的正式签字。\n  * **明确限制**：群里有人表示看过了不能作为放行依据，未获纸质签字前仍不得发送。\n\n---\n\n### 三、未定细节（单列，不作为等待或请示的理由）\n\n1. **建议游览时长**：图例旁是否添加建议游览时长尚不确定，不要自行补定，也不以此作为等待或请示改图的理由。\n2. **具体发送时间**：园丁签字后的具体发送时间目前未知。\n3. **适用范围**：以上做法仅适用于本次温室志愿者导览图，是否适用于其他导览图或任务未知。\n",
+    "answer_sha256": "a6d814dffbe94298ff4de686dfc8f2f44aebfade8dbb409348e143b98c80adc0",
+    "original_answer_sha256": "a6d814dffbe94298ff4de686dfc8f2f44aebfade8dbb409348e143b98c80adc0",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **新馆入口**：改为空心菱形。",
+          "  * **旧馆入口**：保留实心圆。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **放行角色与确认方式**：由**园丁**在**纸质校样上签字**确认放行。",
+          "  * **当前状态**：**暂不能发送**。目前尚缺园丁在纸质校样上的正式签字。",
+          "  * **明确限制**：群里有人表示看过了不能作为放行依据，未获纸质签字前仍不得发送。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "### 三、未定细节（单列，不作为等待或请示的理由）",
+          "1. **建议游览时长**：图例旁是否添加建议游览时长尚不确定，不要自行补定，也不以此作为等待或请示改图的理由。",
+          "2. **具体发送时间**：园丁签字后的具体发送时间目前未知。"
+        ]
+      }
+    ],
+    "review": "保留纸签、两馆标记，未增时刻门槛。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "greenhouse",
+    "arm": "new",
+    "slot": "antigravity-greenhouse-new",
+    "answer": "一份可以直接照着做的温室志愿者导览图改图与发图安排：\n\n---\n\n### 一、 动作清单与执行状态核对\n\n#### 1. 导览图修改\n* **交代内容与指定规格**：\n  * **新馆入口**：改为空心菱形。\n  * **旧馆入口**：保留实心圆。\n* **前提核对**：材料对改图操作无前置限制前提，前提齐备。\n* **当前能否执行**：**现在可以执行改图**（可以做不等于必须立即做）。\n* **进度与交接说明**：\n  * *交代了什么*：仅修改上述两处入口标记。\n  * *证据表明做到了什么*：材料中尚无证据表明改图已完成，**完成情况未知**，保留原修改要求。\n\n---\n\n#### 2. 向志愿者发图\n* **交代内容**：将该版导览图发送给温室志愿者。\n* **放行决定与确认角色**：由**园丁**在**纸质校样上签字**作为放行依据。\n* **前提核对**：\n  * 必需前提：园丁在纸质校样上完成签字。\n  * 当前状态：材料仅提及“群里说看过了”，但**群内反馈不能替代签字**。目前无园丁在纸质校样上签字的记录，**放行前提尚未齐备**。\n* **当前能否执行**：**当前不能执行发图**。必须保留限制，缺园丁纸质签字前先别发。\n* **进度与交接说明**：\n  * *交代了什么*：等园丁在纸质校样上签字后再发送给志愿者。\n  * *证据表明做到了什么*：园丁签字及发送均无完成证据，**完成情况未知**。此项未知不影响改图动作的前提。\n\n---\n\n### 二、 单列未定细节（不自行补定，不作为等待或请示的理由）\n\n1. **图例游览时长**：图例旁是否添加建议游览时长尚不确定，**不要自行补定**，亦不作为暂停改图的等待理由。\n2. **具体发送时间**：园丁在纸质校样上签字后的具体发送时间未知。\n3. **适用范围**：以上改图规格及发图流程是否适用于其他导览图或任务未知（仅限本次导览图）。\n\n---\n\n### 三、 志愿者直接执行步骤\n\n1. **进行改图**：对照图纸，将新馆入口标记修改为空心菱形，确认旧馆入口保持为实心圆；图例旁暂不添加游览时长。\n2. **等待放行**：即便群内有人告知已看过图，仍先别发。\n3. **查验签字后发图**：待收到**园丁在纸质校样上的签字**确认后，方可向志愿者发放导览图。\n",
+    "answer_sha256": "128b59204f488ea69c6ae71ee9492079e5f01410a7b49b00778efeee90b6777c",
+    "original_answer_sha256": "128b59204f488ea69c6ae71ee9492079e5f01410a7b49b00778efeee90b6777c",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **新馆入口**：改为空心菱形。",
+          "  * **旧馆入口**：保留实心圆。",
+          "1. **进行改图**：对照图纸，将新馆入口标记修改为空心菱形，确认旧馆入口保持为实心圆；图例旁暂不添加游览时长。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **放行决定与确认角色**：由**园丁**在**纸质校样上签字**作为放行依据。",
+          "  * 当前状态：材料仅提及“群里说看过了”，但**群内反馈不能替代签字**。目前无园丁在纸质校样上签字的记录，**放行前提尚未齐备**。",
+          "2. **等待放行**：即便群内有人告知已看过图，仍先别发。",
+          "3. **查验签字后发图**：待收到**园丁在纸质校样上的签字**确认后，方可向志愿者发放导览图。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **图例游览时长**：图例旁是否添加建议游览时长尚不确定，**不要自行补定**，亦不作为暂停改图的等待理由。",
+          "2. **具体发送时间**：园丁在纸质校样上签字后的具体发送时间未知。"
+        ]
+      }
+    ],
+    "review": "最终步骤明确旧馆保持实心圆，签后可发，未另设时刻。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "listening",
+    "arm": "new",
+    "slot": "antigravity-listening-new",
+    "answer": "# 石榴巷声音档案馆 阅览室试听机录音上架交接安排\n\n本交接安排供值班同事直接遵照执行。各项要求、放行角色、用料规格及当前执行状态如下：\n\n---\n\n### 一、交接事项逐项核对（交代要求 vs. 完成证据）\n\n| 项目 | 交代了什么（具体要求） | 有证据表明做到了什么（当前进度） |\n| :--- | :--- | :--- |\n| **1. 授权页签署与交回** | 录音人必须交回签好的授权页；**录音人口头表示同意亦先不上架**。 | 材料中无交回或签署记录，**完成情况未知**（保留原要求）。 |\n| **2. 片段编号核对** | 必须由馆员核对剪辑版的片段编号与授权页一致。 | 材料中无核对完成记录，**完成情况未知**（保留原要求）。 |\n| **3. 介质存放与规格** | 阅览室试听机**只放剪辑版**，原始母带必须**留在内库**。 | 材料中无介质调取或存放就位记录，**完成情况未知**（保留原要求）。 |\n\n---\n\n### 二、动作执行判定、放行角色与用料规格\n\n#### 1. 上架动作判定\n* **材料明确要求的执行前提**：\n  1. 录音人交回签好的授权页；\n  2. 馆员核对剪辑版的片段编号与授权页一致。\n* **当前状态与限制**：\n  * **前提尚未齐备**：目前缺少“录音人已交回签好的授权页”及“馆员已核对剪辑版片段编号与授权页一致”的完成凭据。\n  * **当前限制**：在上述两项前提未同时核验满足前，**暂不上架**；若录音人口头表示同意，亦不得放行上架。\n  * **前提齐备后可做事项**：当上述两项前提逐项核对确认满足后，**现在即可为阅览室试听机上架剪辑版录音**（注：具备上架条件代表可以执行，但不等于必须立即执行）。\n\n#### 2. 确认与放行角色\n* **录音人**：负责签署并交回授权页（口头同意不具备放行效力）。\n* **馆员**：负责核对剪辑版的片段编号与授权页内容是否一致并确认放行。\n* *注：不增设任何材料未提及的审批或确认手续。*\n\n#### 3. 用料及规格\n* **试听机上架介质**：仅限**剪辑版**。\n* **母带存放要求**：**原始母带留在内库**，严禁上架试听机。\n\n---\n\n### 三、单列未定细节（不作为等待或请示的理由）\n\n以下两项细节目前尚未确定，已单独列出，**不得将其作为等待、延期或向上请示的理由**：\n\n1. **展签波形小图**：展签上是否印波形小图尚未确定。\n2. **具体排班**：具备上架条件后，具体安排在哪一班上架尚未排定。\n",
+    "answer_sha256": "d892e676602404c9dd92ef3b19192c6c367666ef0be093e266d56818dfd9dae0",
+    "original_answer_sha256": "d892e676602404c9dd92ef3b19192c6c367666ef0be093e266d56818dfd9dae0",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **3. 介质存放与规格** | 阅览室试听机**只放剪辑版**，原始母带必须**留在内库**。 | 材料中无介质调取或存放就位记录，**完成情况未知**（保留原要求）。 |",
+          "* **试听机上架介质**：仅限**剪辑版**。",
+          "* **母带存放要求**：**原始母带留在内库**，严禁上架试听机。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **1. 授权页签署与交回** | 录音人必须交回签好的授权页；**录音人口头表示同意亦先不上架**。 | 材料中无交回或签署记录，**完成情况未知**（保留原要求）。 |",
+          "| **2. 片段编号核对** | 必须由馆员核对剪辑版的片段编号与授权页一致。 | 材料中无核对完成记录，**完成情况未知**（保留原要求）。 |",
+          "  1. 录音人交回签好的授权页；",
+          "  2. 馆员核对剪辑版的片段编号与授权页一致。",
+          "  * **当前限制**：在上述两项前提未同时核验满足前，**暂不上架**；若录音人口头表示同意，亦不得放行上架。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **前提齐备后可做事项**：当上述两项前提逐项核对确认满足后，**现在即可为阅览室试听机上架剪辑版录音**（注：具备上架条件代表可以执行，但不等于必须立即执行）。",
+          "以下两项细节目前尚未确定，已单独列出，**不得将其作为等待、延期或向上请示的理由**：",
+          "1. **展签波形小图**：展签上是否印波形小图尚未确定。",
+          "2. **具体排班**：具备上架条件后，具体安排在哪一班上架尚未排定。"
+        ]
+      }
+    ],
+    "review": "两项条件写明，未知的是具体录音完成情况，无排班等待。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "listening",
+    "arm": "old",
+    "slot": "antigravity-listening-old",
+    "answer": "这份录音上架交接安排供值班同事直接对照执行：\n\n---\n\n### 石榴巷声音档案馆·阅览室试听机录音上架交接安排\n\n#### 一、上架放行前提核对（逐项核对）\n在执行录音上架动作前，仅依据以下两项明确前提核对是否满足：\n1. **录音人（放行授权）**：必须已交回签好的授权页。\n   * *限制*：若录音人口头表示同意，未交回签好的授权页，一律视为前提未齐，不得上架。\n2. **馆员（核对与放行确认）**：必须由馆员核对剪辑版的片段编号与授权页记载的内容一致。\n\n---\n\n#### 二、动作执行规则与用料规格\n* **前提齐备时**：\n  * **可以做什么**：可以对该录音执行阅览室试听机上架（注：具备上架条件代表可以做，不等于必须立即做）。\n  * **指定用料及规格**：\n    * 试听机**只放剪辑版**。\n    * **原始母带留在内库**，严禁移出或放上试听机。\n* **前提未齐时**：\n  * **限制**：严禁上架。明确指出当前缺失项（缺少录音人签署交回的授权页，或馆员尚未核对片段编号一致性）。\n\n---\n\n#### 三、未定细节单列（不作为等待或请示的理由）\n以下事项目前尚未确定或排定，但**不得**将其作为暂停工作、等待或向上请示的理由：\n1. **展签是否印制波形小图**：目前尚未定案。\n2. **具体执行班次**：录音具备上架条件后，具体由哪一班上架目前尚未排定。\n",
+    "answer_sha256": "9d29690b93597adaa915385e04c6e495c8c2599a68cf217b471d1b2e390de874",
+    "original_answer_sha256": "9d29690b93597adaa915385e04c6e495c8c2599a68cf217b471d1b2e390de874",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "    * 试听机**只放剪辑版**。",
+          "    * **原始母带留在内库**，严禁移出或放上试听机。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **录音人（放行授权）**：必须已交回签好的授权页。",
+          "   * *限制*：若录音人口头表示同意，未交回签好的授权页，一律视为前提未齐，不得上架。",
+          "2. **馆员（核对与放行确认）**：必须由馆员核对剪辑版的片段编号与授权页记载的内容一致。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **可以做什么**：可以对该录音执行阅览室试听机上架（注：具备上架条件代表可以做，不等于必须立即做）。",
+          "#### 三、未定细节单列（不作为等待或请示的理由）",
+          "1. **展签是否印制波形小图**：目前尚未定案。",
+          "2. **具体执行班次**：录音具备上架条件后，具体由哪一班上架目前尚未排定。"
+        ]
+      }
+    ],
+    "review": "保留上架两条件，班次和展签无须等。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "puzzle",
+    "arm": "old",
+    "slot": "antigravity-puzzle-old",
+    "answer": "这份交接单供鹭湾拼图借阅角接班志愿者查对办理：\n\n---\n\n# 鹭湾拼图借阅角·归还件交接单\n\n### 一、原盒放回借阅柜的核对标准（材料明确前提）\n原盒放回借阅柜需同时满足以下两项前提，不另加其他手续：\n1. **片数与盒底标注相符**\n2. **拼成的图案与本盒参考图一致**\n\n---\n\n### 二、本次归还件核对情况与执行动作\n\n#### 1. 雨雀盒\n- **前提逐项核对**：\n  - 片数与盒底标注相符：**已满足**（已点齐）\n  - 拼成图案与本盒参考图一致：**已满足**（成图已核对，完全一致）\n- **当前执行动作**：\n  - **现在可以执行**：前提齐备，现在可以将**原盒**（原文指定用料规格）放回借阅柜。\n  - *说明*：可以做不等于必须立即做，接班志愿者可根据现场情况安排放回。\n  - *放行角色与手续*：原文未指定专门的放行确认或传达人员，前提满足即可执行，不另加请示或审批手续。\n\n#### 2. 石桥盒\n- **前提逐项核对**：\n  - 片数与盒底标注相符：**已满足**（片数齐）\n  - 拼成图案与本盒参考图一致：**未满足**（成图与盒里的参考图对不上）\n- **当前限制与执行动作**：\n  - **保留限制**：前提未齐，还缺“查清并对上图案”；在查清并对上图案前**不能回借阅柜**。\n  - **当前可做动作**：先放**核查桌**。\n\n---\n\n### 三、其他未定细节（单列备忘）\n以下事项目前尚未确定，**均不作为等待放行或对外请示的理由**：\n1. **柜边分类贴纸颜色**：目前用什么颜色还没定。\n2. **雨雀盒放回的具体时间段**：具体哪段时间放回去还没商量。\n",
+    "answer_sha256": "e5cad9af1307a319da7d6bad8a261abdef70c0b58f59386ad761c115f5aa813d",
+    "original_answer_sha256": "e5cad9af1307a319da7d6bad8a261abdef70c0b58f59386ad761c115f5aa813d",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **片数与盒底标注相符**",
+          "2. **拼成的图案与本盒参考图一致**"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  - 片数与盒底标注相符：**已满足**（已点齐）",
+          "  - 拼成图案与本盒参考图一致：**已满足**（成图已核对，完全一致）",
+          "  - **现在可以执行**：前提齐备，现在可以将**原盒**（原文指定用料规格）放回借阅柜。",
+          "  - *说明*：可以做不等于必须立即做，接班志愿者可根据现场情况安排放回。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  - 片数与盒底标注相符：**已满足**（片数齐）",
+          "  - 拼成图案与本盒参考图一致：**未满足**（成图与盒里的参考图对不上）",
+          "  - **保留限制**：前提未齐，还缺“查清并对上图案”；在查清并对上图案前**不能回借阅柜**。",
+          "  - **当前可做动作**：先放**核查桌**。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "以下事项目前尚未确定，**均不作为等待放行或对外请示的理由**：",
+          "1. **柜边分类贴纸颜色**：目前用什么颜色还没定。",
+          "2. **雨雀盒放回的具体时间段**：具体哪段时间放回去还没商量。"
+        ]
+      }
+    ],
+    "review": "雨雀可回柜，石桥仍须先放核查桌并对图。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "puzzle",
+    "arm": "new",
+    "slot": "antigravity-puzzle-new",
+    "answer": "### 鹭湾拼图借阅角归还件交接单\n\n---\n\n#### 一、原盒放回借阅柜的标准前提\n材料明确要求的前提仅以下两项，需逐项核对满足后方可放回借阅柜：\n1. **片数核对**：片数与盒底标注相符。\n2. **成图核对**：拼成的图案与本盒参考图一致。\n\n---\n\n#### 二、归还件逐项交接明细\n\n##### 1. 雨雀盒\n* **交代的要求**：片数须与盒底标注相符，成图须与本盒参考图一致，方可放回借阅柜。\n* **有证据表明做到的（已证实进度，无需重做）**：\n  * 片数：已点齐（满足前提 1）。\n  * 成图：已完成核对，与参考图一致（满足前提 2）。\n* **当前能否执行与待办动作**：\n  * **当前可以放回借阅柜**（放行前提已全部满足；可以做不等于必须立即做）。\n  * **原盒放回借阅柜的实际执行情况**：目前缺少已放回借阅柜的完成依据，完成情况未知，由接班人员照此办理。\n\n---\n\n##### 2. 石桥盒\n* **交代的要求**：\n  * 满足片数相符与成图一致后方可回借阅柜；\n  * 成图对不上前不能放回借阅柜，须先放核查桌，查清并对上图案后方可放回。\n* **有证据表明做到的（已证实进度，无需重做）**：\n  * 片数：已点齐（满足前提 1）。\n  * 成图：已核对，但成图与盒内的参考图对不上（未满足前提 2）。\n* **当前能否执行与待办动作**：\n  * **限制保留**：放回借阅柜的前提未齐备，目前**不能回借阅柜**，还缺“查清并对上盒内参考图”。\n  * **当前可以执行的动作**：放置于核查桌；待后续查清成图并与盒内参考图对上后，方可放回借阅柜。\n  * **放置于核查桌的实际执行情况**：目前缺少已放置到核查桌的明确依据，完成情况未知。\n\n---\n\n#### 三、单列未定细节\n*注：以下事项为独立未定事项，仅作备忘记录，**不作为等待或请示的理由，亦不构成上述动作的新前提**：*\n1. **柜边分类贴纸颜色**：目前尚未确定。\n2. **雨雀盒放回具体时段**：具体哪段时间放回去目前尚未商量。\n",
+    "answer_sha256": "39570234d39167131a8db28663ed15db40fed1bf97619d819a8ca615b88125cd",
+    "original_answer_sha256": "39570234d39167131a8db28663ed15db40fed1bf97619d819a8ca615b88125cd",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **片数核对**：片数与盒底标注相符。",
+          "2. **成图核对**：拼成的图案与本盒参考图一致。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * 片数：已点齐（满足前提 1）。",
+          "  * 成图：已完成核对，与参考图一致（满足前提 2）。",
+          "  * **当前可以放回借阅柜**（放行前提已全部满足；可以做不等于必须立即做）。",
+          "  * **原盒放回借阅柜的实际执行情况**：目前缺少已放回借阅柜的完成依据，完成情况未知，由接班人员照此办理。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * 成图对不上前不能放回借阅柜，须先放核查桌，查清并对上图案后方可放回。",
+          "  * 片数：已点齐（满足前提 1）。",
+          "  * 成图：已核对，但成图与盒内的参考图对不上（未满足前提 2）。",
+          "  * **限制保留**：放回借阅柜的前提未齐备，目前**不能回借阅柜**，还缺“查清并对上盒内参考图”。",
+          "  * **当前可以执行的动作**：放置于核查桌；待后续查清成图并与盒内参考图对上后，方可放回借阅柜。",
+          "  * **放置于核查桌的实际执行情况**：目前缺少已放置到核查桌的明确依据，完成情况未知。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "*注：以下事项为独立未定事项，仅作备忘记录，**不作为等待或请示的理由，亦不构成上述动作的新前提**：*",
+          "1. **柜边分类贴纸颜色**：目前尚未确定。",
+          "2. **雨雀盒放回具体时段**：具体哪段时间放回去目前尚未商量。"
+        ]
+      }
+    ],
+    "review": "已对片数成图，实际是否放桌／回柜仍未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "caption",
+    "arm": "new",
+    "slot": "antigravity-caption-new",
+    "answer": "这份《听潮幕》字幕交接单供接班同事照此办理：\n\n---\n\n### 《听潮幕》字幕交接单\n\n#### 一、已证实进度（照实保留，无需重做）\n1. **文件接收**：已收到 07 版字幕文件。\n2. **节目组确认**：节目组已在演出单上选中 07 版。\n\n---\n\n#### 二、动作前提核对与执行指引\n\n##### 1. 载入后台预演窗\n* **所用规格/用料**：已收到的 07 版字幕文件。\n* **执行前提与影响**：材料明确收到该版即可载入；后台预演窗观众看不到。\n* **完成情况**：材料交代可先载入，但**完成情况未知**（无明确完成证据）。\n* **当前办理指引**：该动作已获准，**现在可以执行**将 07 版文件载入后台预演窗（注：可以做不等于必须立即做）。\n\n##### 2. 切到观众屏\n* **指定角色与放行前提核对**：\n  * **节目组**：须在演出单上选中该版 —— **【已满足】**（已选 07 版）。\n  * **屏务**：须在该版回执上记下末行完整显示 —— **【未满足】**（现有回执仅标了 06 版，07 版栏仍空着）。\n* **当前办理指引**：前提未齐备，**保留限制，当前不可切屏**。后续切屏须等待屏务在 07 版回执上记下末行完整显示。\n\n---\n\n#### 三、其他未定细节（单列参考，不作为等待或请示的理由）\n1. 后台素材列表使用哪种标签色尚未确定。\n2. 前提条件全部齐备后，具体几点切屏尚未确定。\n",
+    "answer_sha256": "dcfca3f5f814c0f17d335a57e3dba48744c2bab18eee8b6dda899f153c48813f",
+    "original_answer_sha256": "dcfca3f5f814c0f17d335a57e3dba48744c2bab18eee8b6dda899f153c48813f",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **所用规格/用料**：已收到的 07 版字幕文件。",
+          "* **执行前提与影响**：材料明确收到该版即可载入；后台预演窗观众看不到。",
+          "* **完成情况**：材料交代可先载入，但**完成情况未知**（无明确完成证据）。",
+          "* **当前办理指引**：该动作已获准，**现在可以执行**将 07 版文件载入后台预演窗（注：可以做不等于必须立即做）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **节目组**：须在演出单上选中该版 —— **【已满足】**（已选 07 版）。",
+          "  * **屏务**：须在该版回执上记下末行完整显示 —— **【未满足】**（现有回执仅标了 06 版，07 版栏仍空着）。",
+          "* **当前办理指引**：前提未齐备，**保留限制，当前不可切屏**。后续切屏须等待屏务在 07 版回执上记下末行完整显示。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "1. **文件接收**：已收到 07 版字幕文件。",
+          "2. **节目组确认**：节目组已在演出单上选中 07 版。",
+          "  * **节目组**：须在演出单上选中该版 —— **【已满足】**（已选 07 版）。",
+          "  * **屏务**：须在该版回执上记下末行完整显示 —— **【未满足】**（现有回执仅标了 06 版，07 版栏仍空着）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "#### 三、其他未定细节（单列参考，不作为等待或请示的理由）",
+          "1. 后台素材列表使用哪种标签色尚未确定。",
+          "2. 前提条件全部齐备后，具体几点切屏尚未确定。"
+        ]
+      }
+    ],
+    "review": "07已收到、选中；后台是否载入未知，切屏仍等同版屏务回执。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "caption",
+    "arm": "old",
+    "slot": "antigravity-caption-old",
+    "answer": "这份交接单整理了《听潮幕》字幕交接事项与核对记录：\n\n---\n\n### 《听潮幕》字幕交接单\n\n#### 一、 当前可执行动作（已获准）\n* **动作**：将字幕载入后台预演窗（观众端不可见）\n* **指定用料及规格**：07 版字幕文件\n* **前提核对**：已收到 07 版文件，前提已齐备，当前可以执行。\n  > *注：可以做不等于必须立即做，可结合现场节奏安排。*\n\n---\n\n#### 二、 受限动作及前提逐项核对（暂不可切屏）\n* **动作**：将 07 版字幕切换到观众屏\n* **放行角色与前提核对**：\n  1. **节目组**：在演出单上选中 07 版 —— **已满足**（演出单已确认选定 07 版）。\n  2. **屏务**：在 07 版回执上记下末行完整显示 —— **未满足**（现有末行通过回执仅标示了 06 版，07 版对应栏位仍为空白）。\n* **当前状态与限制**：前提未齐备，**当前不能切到观众屏**。还缺屏务在 07 版回执上记下末行完整显示。\n\n---\n\n#### 三、 待定细节（单列）\n以下细节目前尚未确定，**不作为等待或请示的理由**：\n1. 后台素材列表使用何种标签色。\n2. 切屏条件齐备后具体于几点切屏。\n",
+    "answer_sha256": "718017788b1bdc9a415bbb3655518cb95590955a24dd3b86bed356fd76e21393",
+    "original_answer_sha256": "718017788b1bdc9a415bbb3655518cb95590955a24dd3b86bed356fd76e21393",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **动作**：将字幕载入后台预演窗（观众端不可见）",
+          "* **指定用料及规格**：07 版字幕文件",
+          "* **前提核对**：已收到 07 版文件，前提已齐备，当前可以执行。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  1. **节目组**：在演出单上选中 07 版 —— **已满足**（演出单已确认选定 07 版）。",
+          "  2. **屏务**：在 07 版回执上记下末行完整显示 —— **未满足**（现有末行通过回执仅标示了 06 版，07 版对应栏位仍为空白）。",
+          "* **当前状态与限制**：前提未齐备，**当前不能切到观众屏**。还缺屏务在 07 版回执上记下末行完整显示。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  1. **节目组**：在演出单上选中 07 版 —— **已满足**（演出单已确认选定 07 版）。",
+          "  2. **屏务**：在 07 版回执上记下末行完整显示 —— **未满足**（现有末行通过回执仅标示了 06 版，07 版对应栏位仍为空白）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "以下细节目前尚未确定，**不作为等待或请示的理由**：",
+          "1. 后台素材列表使用何种标签色。",
+          "2. 切屏条件齐备后具体于几点切屏。"
+        ]
+      }
+    ],
+    "review": "节目组已选07、屏务回执版本区分清楚。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "thread",
+    "arm": "old",
+    "slot": "antigravity-thread-old",
+    "answer": "# 《盐汀》制作交接单\n\n---\n\n### 一、 当前状态与留存事项\n- **已穿线部分**：第 1 至 4 列已完成穿线，依规保留，无需改动。\n- **已打孔部分**：头 6 列（第 1 至 6 列）孔已打好。\n\n---\n\n### 二、 当前动作执行判定（逐项核对前提）\n\n#### 1. 已获准执行的动作（前提已齐备）\n* **收起桌上的定位纸**\n  * **前提要求**：接到收起指令。\n  * **核对情况**：已明确要求“先把定位纸收起来”，前提齐备。\n  * **执行内容**：将桌上的现有定位纸收起。\n\n* **第 5 列及第 6 列穿线**\n  * **前提要求**：孔已打好；按原线序走。\n  * **核对情况**：第 5 列、第 6 列孔已打好，符合“已经有孔的地方照原线序走”的前提，前提已齐备。\n  * **用料及规格**：使用**白棉线**，严格按**线序图**穿入已打好的孔中。\n  * **执行说明**：第 5 列继续完成，第 6 列可依序穿线。当前可以做，但不等于必须立即做，搭档可根据制作节奏安排。\n\n---\n\n#### 2. 当前受限制的动作（前提未齐备）\n* **第 7 至 10 列打孔**\n  * **前提要求**：须获得确认过的新定位纸才可接着打孔。\n  * **放行角色**：由**我**负责重画孔距，并由**我**确认后发出新定位纸。\n  * **核对情况**：新定位纸目前尚未发放，打孔前提未齐备。\n  * **还缺条件**：尚缺由**我**确认并发出的新定位纸。\n  * **执行限制**：在收到该新定位纸前，暂不进行第 7 至 10 列的打孔工作。\n\n---\n\n### 三、 其他未定细节（单列）\n* **新定位纸发放时间**：由我重画并确认的新定位纸具体哪天发出目前未定。\n* **说明**：该未定细节仅关联第 7 至 10 列的打孔启动，不构成暂停或请示第 5、6 列白棉线穿线工作的理由。\n",
+    "answer_sha256": "86ecb82b0534292c00839c050a121976d9ab474a409543af0bc2119262bb1e92",
+    "original_answer_sha256": "86ecb82b0534292c00839c050a121976d9ab474a409543af0bc2119262bb1e92",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "- **已穿线部分**：第 1 至 4 列已完成穿线，依规保留，无需改动。",
+          "- **已打孔部分**：头 6 列（第 1 至 6 列）孔已打好。",
+          "  * **执行说明**：第 5 列继续完成，第 6 列可依序穿线。当前可以做，但不等于必须立即做，搭档可根据制作节奏安排。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **前提要求**：须获得确认过的新定位纸才可接着打孔。",
+          "  * **放行角色**：由**我**负责重画孔距，并由**我**确认后发出新定位纸。",
+          "  * **核对情况**：新定位纸目前尚未发放，打孔前提未齐备。",
+          "  * **还缺条件**：尚缺由**我**确认并发出的新定位纸。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "- **已穿线部分**：第 1 至 4 列已完成穿线，依规保留，无需改动。",
+          "  * **核对情况**：第 5 列、第 6 列孔已打好，符合“已经有孔的地方照原线序走”的前提，前提已齐备。",
+          "  * **用料及规格**：使用**白棉线**，严格按**线序图**穿入已打好的孔中。",
+          "  * **执行说明**：第 5 列继续完成，第 6 列可依序穿线。当前可以做，但不等于必须立即做，搭档可根据制作节奏安排。",
+          "* **说明**：该未定细节仅关联第 7 至 10 列的打孔启动，不构成暂停或请示第 5、6 列白棉线穿线工作的理由。"
+        ]
+      }
+    ],
+    "review": "本人确认发纸和白棉线都对。只写第5列继续完成，没有交代刚起头这一进度。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "thread",
+    "arm": "new",
+    "slot": "antigravity-thread-new",
+    "answer": "# 《盐汀》穿线画制作交接单\n\n---\n\n### 一、 进度核对（交代要求与实证进度区分）\n\n| 制作步骤 | 涉及位置 | 交代的要求 | 有证据表明做到的进度 | 状态认定 |\n| :--- | :--- | :--- | :--- | :--- |\n| **打孔** | 第 1～6 列 | 照桌上的定位纸打孔 | 头六列的孔已经打好 | **已完成**（照实保留，无需重做） |\n| **打孔** | 第 7～10 列 | 照桌上的定位纸打孔；后改由“我”发确认过的新定位纸再打 | 尚未打孔 | **未完成** |\n| **穿线** | 第 1～4 列 | 按线序图往孔里穿白棉线 | 前四列已经穿完 | **已完成**（做好的留着，无需重做） |\n| **穿线** | 第 5 列 | 按原线序图往孔里穿白棉线 | 第五列刚起头 | **进行中（未完成）** |\n| **穿线** | 第 6 列 | 孔已打好，照原线序走，往孔里穿白棉线 | 缺少完成依据 | **完成情况未知**（保留原要求；不作为其他动作的新前提） |\n| **穿线** | 第 7～10 列 | 按线序图往孔里穿白棉线 | 尚未打孔，未开始穿线 | **未开始** |\n\n---\n\n### 二、 当前动作执行判定与前提核对\n\n#### 1. 现在可以执行的动作（前提齐备）\n*可以做不等于必须立即做，搭档可按工序自主安排：*\n\n- **收起原定位纸**\n  - **前提核对**：已明确交代“先把定位纸收起来”，无前置阻碍，前提齐备。\n  - **执行内容**：将桌上的原定位纸收存好。\n- **第 5 列穿线**\n  - **前提核对**：该列孔已打好，符合“已经有孔的地方照原线序走”的前提，前提齐备。\n  - **执行内容及规格**：使用**白棉线**，按**原线序图**继续穿线。\n- **第 6 列穿线**\n  - **前提核对**：该列孔已打好，符合“已经有孔的地方照原线序走”的前提，前提齐备。\n  - **执行内容及规格**：使用**白棉线**，按**原线序图**往孔里穿线（若接班核对时尚未穿完，则照此执行）。\n\n#### 2. 当前限制执行的动作（前提未齐）\n\n- **第 7～10 列打孔**\n  - **放行角色**：由**“我”**负责重画孔距，并由**“我”**确认并发放新定位纸。\n  - **前提核对**：“我”确认过的新定位纸尚未发放，放行前提未满足。\n  - **当前状态**：**保留限制，暂停打孔**。需等待“我”将确认过的新定位纸发放后，方可继续打孔。\n- **第 7～10 列穿线**\n  - **前提核对**：孔尚未打好，不具备穿线前提，当前不能执行。\n\n---\n\n### 三、 单列未定细节（不作为停工或等待请示的理由）\n\n- **新定位纸给定的具体日期目前未定**。\n  - *说明*：该细节仅影响第 7～10 列的打孔放行，**不得**将其作为等待、请示或暂停已有孔列（第 5、6 列穿白棉线）及收起定位纸的理由。\n",
+    "answer_sha256": "1358a95cc904394be30f0afbb7f710ed35cf4ac080448a1c2141e91399f8c22c",
+    "original_answer_sha256": "1358a95cc904394be30f0afbb7f710ed35cf4ac080448a1c2141e91399f8c22c",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **打孔** | 第 1～6 列 | 照桌上的定位纸打孔 | 头六列的孔已经打好 | **已完成**（照实保留，无需重做） |",
+          "| **穿线** | 第 1～4 列 | 按线序图往孔里穿白棉线 | 前四列已经穿完 | **已完成**（做好的留着，无需重做） |",
+          "| **穿线** | 第 5 列 | 按原线序图往孔里穿白棉线 | 第五列刚起头 | **进行中（未完成）** |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  - **放行角色**：由**“我”**负责重画孔距，并由**“我”**确认并发放新定位纸。",
+          "  - **前提核对**：“我”确认过的新定位纸尚未发放，放行前提未满足。",
+          "  - **当前状态**：**保留限制，暂停打孔**。需等待“我”将确认过的新定位纸发放后，方可继续打孔。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  - **执行内容及规格**：使用**白棉线**，按**原线序图**继续穿线。",
+          "  - **前提核对**：该列孔已打好，符合“已经有孔的地方照原线序走”的前提，前提齐备。",
+          "  - **执行内容及规格**：使用**白棉线**，按**原线序图**往孔里穿线（若接班核对时尚未穿完，则照此执行）。",
+          "  - *说明*：该细节仅影响第 7～10 列的打孔放行，**不得**将其作为等待、请示或暂停已有孔列（第 5、6 列穿白棉线）及收起定位纸的理由。"
+        ]
+      }
+    ],
+    "review": "本人发确认过的新纸，现可按原线序用白棉线；第五列刚起头记录正确。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": {
+      "issuer": true,
+      "material": true
+    },
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "type",
+    "arm": "new",
+    "slot": "antigravity-type-new",
+    "answer": "# 《雾港字盘》铅字样册印制作业交接单\n\n---\n\n### 一、 放行依据与前提核对原则\n* **放行约定前提**：按先前约定，每块版必须在回条自己那格有**校样员签名**才算通过放行。交班时回条仅有一张。\n* **回条签章现状**：\n  * **甲横**：校样员已在对应格按版号签名（前提已满足）。\n  * **乙竖**：校样员已在对应格按版号签名（前提已满足）。\n  * **甲竖**：仅有收样章，无校样员签名（前提未满足）。\n  * **乙横**：仅有收样章，无校样员签名（前提未满足）。\n\n---\n\n### 二、 各版当前执行状态与作业指引\n\n#### 1. 甲盘横题（甲横）\n* **放行角色**：\n  * **确认放行者**：校样员（在回条对应格按版号签名确认）。\n  * **传达放行决定者**：我（交班人，查看回条后传达决定）。\n* **前提核对**：回条已有校样员按版号签名，前提齐备。\n* **当前能否执行**：**现在可以照原印数往下做**（注：可以做不等于必须立即做）。\n* **用料及规格**：《雾港字盘》铅字样册规格，照原印数往下印制；手上已有的 2 张算数，计入印数，无需重做。\n* **限制与手续**：只凭现有签名回条放行，不另加手续。\n\n#### 2. 乙盘竖题（乙竖）\n* **放行角色**：\n  * **确认放行者**：校样员（在回条对应格按版号签名确认）。\n  * **传达放行决定者**：我（交班人，查看回条后传达决定）。\n* **前提核对**：回条已有校样员按版号签名，前提齐备。\n* **当前能否执行**：**现在可以照原印数往下做/开印**（注：可以做不等于必须立即做）。\n* **用料及规格**：《雾港字盘》铅字样册规格，照原印数开印；手上已有数量算数（目前为 0 张）。\n* **限制与手续**：只凭现有签名回条放行，不另加手续。\n\n#### 3. 甲盘竖题（甲竖）\n* **前提核对**：回条该格仅盖有收样章，缺少校样员签名，放行前提未齐。\n* **当前能否执行**：**当前不可开印，保留停印限制**。\n* **还缺手续/物料**：还缺校样员在回条甲竖格的签名。\n\n#### 4. 乙盘横题（乙横）\n* **前提核对**：回条该格仅盖有收样章，缺少校样员签名，放行前提未齐。\n* **当前能否执行**：**当前不可继续印制，保留停印限制**。\n* **还缺手续/物料**：还缺校样员在回条乙横格的签名。\n* **已证实进度说明**：手上已印出的 1 张已证实进度照实保留，无需重做，待获准放行后同样算数。\n\n---\n\n### 三、 进度与交代事项逐项核对表（“交代了什么” vs “有证据表明做到了什么”）\n\n| 项目 | 交代了什么 | 有证据表明做到了什么（已证实进度） | 完成状态说明 |\n| :--- | :--- | :--- | :--- |\n| **四块版开印指令** | 最初交代搭档四块版都开印 | 甲横印了 2 张，乙横印了 1 张；两块竖题还没开印 | 进度照实保留，已印张算数，无需重做 |\n| **停印指令** | 因字脚可能偏，交代四块版一律停印 | 四块版均已处于停印状态 | 已落实停印 |\n| **已印张夹好** | 交代将已印的（甲横 2 张、乙横 1 张）夹好 | 材料缺少完成依据 | **完成情况未知**。保留原要求（请确认/按原要求夹好），**不将此项未知作为其他动作的新前提** |\n| **甲横、乙竖放行传达** | 看过回条后交代：“这两块照原印数往下做，手上已有的算数” | 已明确传达至接班作业指引 | 放行决定已传达，前提已齐备 |\n\n---\n\n### 四、 其他未定细节（单列，不作为等待或请示的理由）\n1. **原印数具体数值**：原文未载明具体印刷总数，接班后直接对照原定印数数值执行，不以此为由等待或请示。\n2. **字脚偏的排查细节**：原文未记录具体检修记录，校样员已签认甲横与乙竖，无需额外等待检修报告。\n3. **已获准两块版的开印先后顺序**：两块版均已具备执行条件，具体作业次序由当班自行调度，不作为暂停或请示的理由。\n",
+    "answer_sha256": "079b777c817bf05a5df673b3314180730f4ab8b9d1b58bde441523d04efae356",
+    "original_answer_sha256": "079b777c817bf05a5df673b3314180730f4ab8b9d1b58bde441523d04efae356",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **甲横**：校样员已在对应格按版号签名（前提已满足）。",
+          "  * **乙竖**：校样员已在对应格按版号签名（前提已满足）。",
+          "* **当前能否执行**：**现在可以照原印数往下做**（注：可以做不等于必须立即做）。",
+          "* **当前能否执行**：**现在可以照原印数往下做/开印**（注：可以做不等于必须立即做）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **放行约定前提**：按先前约定，每块版必须在回条自己那格有**校样员签名**才算通过放行。交班时回条仅有一张。",
+          "  * **甲竖**：仅有收样章，无校样员签名（前提未满足）。",
+          "  * **乙横**：仅有收样章，无校样员签名（前提未满足）。",
+          "* **还缺手续/物料**：还缺校样员在回条甲竖格的签名。",
+          "* **还缺手续/物料**：还缺校样员在回条乙横格的签名。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **用料及规格**：《雾港字盘》铅字样册规格，照原印数往下印制；手上已有的 2 张算数，计入印数，无需重做。",
+          "* **用料及规格**：《雾港字盘》铅字样册规格，照原印数开印；手上已有数量算数（目前为 0 张）。",
+          "* **已证实进度说明**：手上已印出的 1 张已证实进度照实保留，无需重做，待获准放行后同样算数。",
+          "| **四块版开印指令** | 最初交代搭档四块版都开印 | 甲横印了 2 张，乙横印了 1 张；两块竖题还没开印 | 进度照实保留，已印张算数，无需重做 |"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "| **已印张夹好** | 交代将已印的（甲横 2 张、乙横 1 张）夹好 | 材料缺少完成依据 | **完成情况未知**。保留原要求（请确认/按原要求夹好），**不将此项未知作为其他动作的新前提** |",
+          "| **停印指令** | 因字脚可能偏，交代四块版一律停印 | 四块版均已处于停印状态 | 已落实停印 |"
+        ]
+      }
+    ],
+    "review": "第54行明确夹存未知，印数、许可正确；但第53行把另一项交代写成“四块版均已处于停印状态／已落实停印”，同一错误转移到停印动作。",
+    "sample_storage": "explicit_unknown",
+    "known_print_progress": true,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "停印指令被当成已经落实的事实",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "partial",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "type",
+    "arm": "old",
+    "slot": "antigravity-type-old",
+    "answer": "# 《雾港字盘》印制作业交接单\n\n**交接说明**：本批《雾港字盘》此前因发现字脚可能偏，四块版均已执行停印，已印样张均已夹好留存。现根据唯一一份交接回条及放行指令，办理本班印制作业交接。\n\n---\n\n### 一、各版当前能否执行判断及作业安排\n\n依据先前约定，**印制放行的唯一明确前提为：校样员在回条对应版号方格内签名**。逐项核对如下：\n\n#### 1. 甲盘横题（甲横）\n* **前提核对**：回条上该格已有校样员按版号签名，前提已满足。\n* **确认与传达角色**：\n  * **确认放行角色**：校样员（已在回条方格内按版号签字确认）。\n  * **传达放行角色**：交班人（“我”，看过回条后传达放行决定）。\n* **用料及规格**：铅字样册。\n* **当前可执行动作**：**现在可以照原印数继续往下印制**。此前已印出的 2 张已夹好，均算数（计入总印数），印足剩余张数即可。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。\n\n#### 2. 乙盘竖题（乙竖）\n* **前提核对**：回条上该格已有校样员按版号签名，前提已满足。\n* **确认与传达角色**：\n  * **确认放行角色**：校样员（已在回条方格内按版号签字确认）。\n  * **传达放行角色**：交班人（“我”，看过回条后传达放行决定）。\n* **用料及规格**：铅字样册。\n* **当前可执行动作**：**现在可以照原印数开印**。此前未开印，直接按原定印数印制。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。\n\n#### 3. 甲盘竖题（甲竖）\n* **前提核对**：回条该格仅有收样章，尚无校样员签名，放行前提未满足。\n* **当前限制**：**保留停印限制，当前不得开印**。\n* **所缺前提**：还缺校样员在回条对应方格内的签字。\n\n#### 4. 乙盘横题（乙横）\n* **前提核对**：回条该格仅有收样章，尚无校样员签名，放行前提未满足。\n* **当前限制**：**保留停印限制，当前不得继续开印**。此前已印出的 1 张已夹好留存。\n* **所缺前提**：还缺校样员在回条对应方格内的签字。\n\n---\n\n### 二、未定细节单列\n\n以下细节原文未作具体记载，**均不作为等待或请示的理由**，接班人按既定常规处理即可：\n1. **具体原印数数值**：原单据未注明具体数字，直接依照任务原定印数执行，无须额外核请。\n2. **两块已放行版（甲横、乙竖）的印制先后次序**：可做并不要求必须立即做，由接班搭档视机台与作业情况自主安排。\n3. **铅字样册之细部纸张/油墨等物料规格**：材料仅明确规格为“铅字样册”，其余未列规格不设额外手续。\n\n---\n\n**附件**：交接回条 1 张（附甲横、乙竖校样员签字及甲竖、乙横收样章），已印样张（甲横 2 张、乙横 1 张，均已夹好）。\n",
+    "answer_sha256": "01104f764dff035074cc75f6753d74d83b7717d13a86dfdee26f675c8b4d2619",
+    "original_answer_sha256": "01104f764dff035074cc75f6753d74d83b7717d13a86dfdee26f675c8b4d2619",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "#### 1. 甲盘横题（甲横）",
+          "* **前提核对**：回条上该格已有校样员按版号签名，前提已满足。",
+          "* **当前可执行动作**：**现在可以照原印数继续往下印制**。此前已印出的 2 张已夹好，均算数（计入总印数），印足剩余张数即可。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。",
+          "#### 2. 乙盘竖题（乙竖）",
+          "* **前提核对**：回条上该格已有校样员按版号签名，前提已满足。",
+          "* **当前可执行动作**：**现在可以照原印数开印**。此前未开印，直接按原定印数印制。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **前提核对**：回条该格仅有收样章，尚无校样员签名，放行前提未满足。",
+          "* **当前限制**：**保留停印限制，当前不得开印**。",
+          "* **所缺前提**：还缺校样员在回条对应方格内的签字。",
+          "* **前提核对**：回条该格仅有收样章，尚无校样员签名，放行前提未满足。",
+          "* **当前限制**：**保留停印限制，当前不得继续开印**。此前已印出的 1 张已夹好留存。",
+          "* **所缺前提**：还缺校样员在回条对应方格内的签字。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "* **当前可执行动作**：**现在可以照原印数继续往下印制**。此前已印出的 2 张已夹好，均算数（计入总印数），印足剩余张数即可。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。",
+          "* **当前可执行动作**：**现在可以照原印数开印**。此前未开印，直接按原定印数印制。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。",
+          "* **当前限制**：**保留停印限制，当前不得开印**。",
+          "* **当前限制**：**保留停印限制，当前不得继续开印**。此前已印出的 1 张已夹好留存。"
+        ]
+      },
+      {
+        "mark": "contradicted",
+        "quotes": [
+          "**交接说明**：本批《雾港字盘》此前因发现字脚可能偏，四块版均已执行停印，已印样张均已夹好留存。现根据唯一一份交接回条及放行指令，办理本班印制作业交接。",
+          "* **当前可执行动作**：**现在可以照原印数继续往下印制**。此前已印出的 2 张已夹好，均算数（计入总印数），印足剩余张数即可。（*注：可以做不等于必须立即做，具体开印节奏可自主安排*）。",
+          "* **当前限制**：**保留停印限制，当前不得继续开印**。此前已印出的 1 张已夹好留存。",
+          "**附件**：交接回条 1 张（附甲横、乙竖校样员签字及甲竖、乙横收样章），已印样张（甲横 2 张、乙横 1 张，均已夹好）。"
+        ]
+      }
+    ],
+    "review": "甲横两张、乙横一张、乙竖未开印；甲竖只写当前不得开印。把夹好直接写为事实和附件状态。",
+    "sample_storage": "asserted_done",
+    "known_print_progress": false,
+    "release_and_signatures": true,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "将夹好要求写成既成事实",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "reels",
+    "arm": "old",
+    "slot": "antigravity-reels-old",
+    "answer": "# 《双溪听册》早班工作交接单\n\n---\n\n### 一、 底噪样本备份情况\n* **规格要求**：两卷（榆涧卷、杉汀卷）底噪样本各存一份到备份盘。\n* **榆涧卷**：晚班交班条确认“底噪样本已存妥，回读无误”。\n* **杉汀卷**：晚班交班条回复“收到，照办”。\n\n---\n\n### 二、 剪辑任务执行状态与前提核对\n\n#### 1. 杉汀卷剪辑\n* **放行角色**：剪辑师（传达放行决定：按桌上那张切点表接着剪）。\n* **用料及规格**：《双溪听册》杉汀卷（全卷收六段溪声，台账记录头两段已剪好，余下第 3、4、5、6 段溪声），剪辑规格依据为**桌上那张切点表**。\n* **前提核对**：\n  * 材料明确要求的前提：依照桌上的切点表。\n  * 核对结果：剪辑师已放行，桌上切点表齐备，前提已满足。\n* **当前可执行动作**：**现在可以依照桌上的切点表，接着剪辑杉汀卷余下的第 3 至 6 段溪声**。（注：当前具备执行条件，但可以做不等于必须立即做）。\n\n#### 2. 榆涧卷剪辑\n* **放行角色**：剪辑师（确认放行条件：余下的先别剪，等其发榆涧新版切点表）。\n* **用料及规格**：《双溪听册》榆涧卷（全卷收六段溪声，台账记录头四段已剪好，余下第 5、6 段溪声）。\n* **前提核对**：\n  * 材料明确要求的前提：需等剪辑师发出榆涧新版切点表。\n  * 核对结果：交班时剪辑师尚未发送新版切点表，前提未齐备。\n* **当前执行状态**：**保留限制，余下两段暂不可剪辑**；目前缺少剪辑师发来的榆涧新版切点表。\n\n---\n\n### 三、 其他未定细节（单列备查）\n* **杉汀卷底噪样本回读状态**：晚班在杉汀卷交班条上仅注明“收到，照办”，未写明回读情况。此项作为未定细节单列记录，不构成等待或请示的理由，不另加手续。\n",
+    "answer_sha256": "cc249c50bce2ff4b8a840b9548def29b3f1a4bd155007833fd05bdb6cd0c5eda",
+    "original_answer_sha256": "cc249c50bce2ff4b8a840b9548def29b3f1a4bd155007833fd05bdb6cd0c5eda",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **榆涧卷**：晚班交班条确认“底噪样本已存妥，回读无误”。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "* **规格要求**：两卷（榆涧卷、杉汀卷）底噪样本各存一份到备份盘。",
+          "* **杉汀卷**：晚班交班条回复“收到，照办”。",
+          "* **杉汀卷底噪样本回读状态**：晚班在杉汀卷交班条上仅注明“收到，照办”，未写明回读情况。此项作为未定细节单列记录，不构成等待或请示的理由，不另加手续。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **用料及规格**：《双溪听册》杉汀卷（全卷收六段溪声，台账记录头两段已剪好，余下第 3、4、5、6 段溪声），剪辑规格依据为**桌上那张切点表**。",
+          "* **当前可执行动作**：**现在可以依照桌上的切点表，接着剪辑杉汀卷余下的第 3 至 6 段溪声**。（注：当前具备执行条件，但可以做不等于必须立即做）。",
+          "* **用料及规格**：《双溪听册》榆涧卷（全卷收六段溪声，台账记录头四段已剪好，余下第 5、6 段溪声）。",
+          "  * 材料明确要求的前提：需等剪辑师发出榆涧新版切点表。",
+          "  * 核对结果：交班时剪辑师尚未发送新版切点表，前提未齐备。",
+          "* **当前执行状态**：**保留限制，余下两段暂不可剪辑**；目前缺少剪辑师发来的榆涧新版切点表。"
+        ]
+      }
+    ],
+    "review": "准确抄出两条备份回复，杉汀只说明回读未明，没有说明备份本身是否完成；剪辑许可和进度正确。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "reels",
+    "arm": "new",
+    "slot": "antigravity-reels-new",
+    "answer": "# 《双溪听册》早班工作交接单\n\n---\n\n### 一、基本信息\n* **项目**：《双溪听册》（含榆涧卷、杉汀卷两卷，各收录六段溪声，每卷共 6 段）。\n\n---\n\n### 二、底噪样本备份情况（交代事项与证实进度）\n* **原交代要求**：每卷底噪样本各存一份到备份盘。\n* **榆涧卷**：\n  * **交代事项**：底噪样本存一份到备份盘。\n  * **证实进度**：**已完成**。晚班交班条明确记录“底噪样本已存妥，回读无误”，具有明确完成证据，无需重做。\n* **杉汀卷**：\n  * **交代事项**：底噪样本存一份到备份盘。\n  * **证实进度**：**完成情况未知**。晚班交班条仅记录“收到，照办”，缺少已完成的凭据。保留原要求（需有一份底噪样本存入备份盘）。\n\n---\n\n### 三、剪辑台账已证实进度（照实保留，无需重做）\n* **榆涧卷**：头四段已剪好（余第 5、6 段）。\n* **杉汀卷**：头两段已剪好（余第 3、4、5、6 段）。\n\n---\n\n### 四、后续动作执行判断与安排\n\n#### 1. 杉汀卷余下溪声剪辑（第 3～6 段）\n* **放行决定与传达角色**：**剪辑师**已传达放行指示，余下内容按指定切点表接着剪。\n* **前提核对**：前提已齐备。\n* **指定用料及规格**：**桌上那张切点表**。\n* **当前执行状态**：**现在可以执行**。早班可依据桌上那张切点表接着剪辑杉汀卷余下段落（注：可以做不等于必须立即做，且底噪备份状态未知不构成剪辑的前提，无需另加手续）。\n\n#### 2. 榆涧卷余下溪声剪辑（第 5、6 段）\n* **放行决定与传达角色**：**剪辑师**明确指示余下的先别剪，等其发送新版切点表。\n* **前提核对**：前提未齐备。\n* **当前缺少条件**：缺少剪辑师发放的**榆涧新版切点表**（交班时剪辑师尚未发放）。\n* **当前执行状态**：**暂不可执行**。保留限制，先不剪辑，等待剪辑师发送榆涧新版切点表。\n\n---\n\n### 五、未定细节单列\n* **杉汀卷底噪样本实际备份结果**：尚未核实备份盘内是否存在无误的样本。该细节单列待查，不作为杉汀卷剪辑工作的等待或请示理由。\n",
+    "answer_sha256": "01a54546efbc733f210b28d355d1c093941c41783628e38395e19747a9075dd7",
+    "original_answer_sha256": "01a54546efbc733f210b28d355d1c093941c41783628e38395e19747a9075dd7",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **原交代要求**：每卷底噪样本各存一份到备份盘。",
+          "  * **交代事项**：底噪样本存一份到备份盘。",
+          "  * **证实进度**：**已完成**。晚班交班条明确记录“底噪样本已存妥，回读无误”，具有明确完成证据，无需重做。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **交代事项**：底噪样本存一份到备份盘。",
+          "  * **证实进度**：**完成情况未知**。晚班交班条仅记录“收到，照办”，缺少已完成的凭据。保留原要求（需有一份底噪样本存入备份盘）。",
+          "* **杉汀卷底噪样本实际备份结果**：尚未核实备份盘内是否存在无误的样本。该细节单列待查，不作为杉汀卷剪辑工作的等待或请示理由。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "* **项目**：《双溪听册》（含榆涧卷、杉汀卷两卷，各收录六段溪声，每卷共 6 段）。",
+          "* **榆涧卷**：头四段已剪好（余第 5、6 段）。",
+          "* **杉汀卷**：头两段已剪好（余第 3、4、5、6 段）。",
+          "* **指定用料及规格**：**桌上那张切点表**。",
+          "* **当前执行状态**：**现在可以执行**。早班可依据桌上那张切点表接着剪辑杉汀卷余下段落（注：可以做不等于必须立即做，且底噪备份状态未知不构成剪辑的前提，无需另加手续）。",
+          "* **放行决定与传达角色**：**剪辑师**明确指示余下的先别剪，等其发送新版切点表。",
+          "* **当前缺少条件**：缺少剪辑师发放的**榆涧新版切点表**（交班时剪辑师尚未发放）。",
+          "* **当前执行状态**：**暂不可执行**。保留限制，先不剪辑，等待剪辑师发送榆涧新版切点表。"
+        ]
+      }
+    ],
+    "review": "榆涧已有完成凭据，杉汀只有收到指令；未知没有阻挡剪辑。两卷已剪进度、切点表和许可吻合。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "foldout",
+    "arm": "new",
+    "slot": "antigravity-foldout-new",
+    "answer": "### 《折岸拼景》制作交接单\n\n本套作品包含**篷窗册**与**砂桥册**，各五折。请依下列核对情况办理交接与后续工序：\n\n---\n\n#### 一、篷窗册（共五折，成品交付委托方）\n\n* **已证实进度（已完成）**：\n  * 前三折已粘牢（已证实，无需重做）。\n* **余两折粘贴**：\n  * **交代内容与用料**：使用原文指定的**桌上棉纸**接着粘贴。\n  * **前提核对**：指定用料（桌上棉纸）在案，无其他前置限制，前提已齐备。\n  * **当前状态**：**现在可以粘贴余两折**（可以做不等于必须立即做；不另加审批手续）。\n* **整册展开照拍摄**：\n  * **相关角色**：**委托方**（要求收件时附一张整册展开照随件）。\n  * **交代内容**：等整册五折全部粘完后再拍。\n  * **证据表明**：已证实**现在还没拍**。\n  * **前提核对**：明确前提为“整册粘完”，目前余两折尚未粘完，前提未齐备；**当前保留限制不可拍照**，待五折全部粘牢后再拍。\n\n---\n\n#### 二、砂桥册（共五折，留在工坊）\n\n* **已证实进度（已完成）**：\n  * 前四折已粘牢（已证实，无需重做）。\n* **最后一折粘贴**：\n  * **相关角色**：**装帧师**（负责提供并送达配色纸样）。\n  * **前提核对**：明确前提为“等装帧师送来配色纸样”，交班时装帧师尚未送达，前提未齐备。\n  * **当前状态**：**保留限制，目前不能粘最后一折**；还缺装帧师送达配色纸样。\n* **整册展开照拍摄**：\n  * **相关角色与决定权**：**我**已向搭档传达放行决定，由**搭档**自行决定（想留就拍，嫌麻烦就算了）。\n  * **进展与证据**：搭档此前回复“知道可以拍”，但**缺少已完成拍摄的依据，完成情况未知**。\n  * **当前处理**：保留原要求，搭档可根据自身意愿自行选择拍或不拍；此项进度未知**不作为**其他工序的新前提。\n\n---\n\n#### 三、未定细节单列\n\n* **砂桥册拍照自定**：砂桥册是否拍摄整册展开照，完全由搭档自主选择，不作为后续工作的等待或请示理由。\n",
+    "answer_sha256": "7526f720c74e0720980ba3ed9503b2333270a3144cf158c44415387f4f495724",
+    "original_answer_sha256": "7526f720c74e0720980ba3ed9503b2333270a3144cf158c44415387f4f495724",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "本套作品包含**篷窗册**与**砂桥册**，各五折。请依下列核对情况办理交接与后续工序："
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * 前三折已粘牢（已证实，无需重做）。",
+          "  * **交代内容与用料**：使用原文指定的**桌上棉纸**接着粘贴。",
+          "  * **当前状态**：**现在可以粘贴余两折**（可以做不等于必须立即做；不另加审批手续）。",
+          "  * **相关角色**：**委托方**（要求收件时附一张整册展开照随件）。",
+          "  * **交代内容**：等整册五折全部粘完后再拍。",
+          "  * **证据表明**：已证实**现在还没拍**。",
+          "  * **前提核对**：明确前提为“整册粘完”，目前余两折尚未粘完，前提未齐备；**当前保留限制不可拍照**，待五折全部粘牢后再拍。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * 前四折已粘牢（已证实，无需重做）。",
+          "  * **相关角色**：**装帧师**（负责提供并送达配色纸样）。",
+          "  * **前提核对**：明确前提为“等装帧师送来配色纸样”，交班时装帧师尚未送达，前提未齐备。",
+          "  * **当前状态**：**保留限制，目前不能粘最后一折**；还缺装帧师送达配色纸样。",
+          "  * **相关角色与决定权**：**我**已向搭档传达放行决定，由**搭档**自行决定（想留就拍，嫌麻烦就算了）。",
+          "  * **进展与证据**：搭档此前回复“知道可以拍”，但**缺少已完成拍摄的依据，完成情况未知**。",
+          "  * **当前处理**：保留原要求，搭档可根据自身意愿自行选择拍或不拍；此项进度未知**不作为**其他工序的新前提。"
+        ]
+      }
+    ],
+    "review": "保住两册待粘的折数和许可，篷窗的照片必交且尚未拍，砂桥拍摄可选、实际状态未知。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  },
+  {
+    "client": "antigravity",
+    "case": "foldout",
+    "arm": "old",
+    "slot": "antigravity-foldout-old",
+    "answer": "### 《折岸拼景》制作交接单\n\n---\n\n#### 一、 篷窗册（共五折，制作完成后随件交付委托方）\n\n1. **余下两折（第四折、第五折）粘贴**\n   - **确认/传达放行角色**：晚班（晚班交接记录传达）\n   - **指定用料及规格**：桌上棉纸\n   - **前提核对**：材料要求“前三折已粘牢，余两折用桌上棉纸接着粘”。前三折已粘牢，用料已在桌上，前提已齐备。\n   - **当前执行判断**：**现在可以执行**。接班后可以使用桌上棉纸继续粘余下两折（可以做不等于必须立即做）。\n\n2. **整册展开照拍摄（随件提供）**\n   - **确认/要求角色**：委托方（收册时要求一张整册展开照随件）\n   - **前提核对**：材料明确要求“展开照等整册粘完再拍”。目前前三折已粘牢，余下两折尚未粘完，整册未粘完，前提未齐备。\n   - **当前执行判断**：**当前不能执行（保留限制）**。尚缺整册全部粘完的前提，需等五折全部粘完后才能拍展开照。\n\n---\n\n#### 二、 砂桥册（共五折，制作完成后留在工坊）\n\n1. **最后一折（第五折）粘贴**\n   - **确认/送达角色**：装帧师（负责送来配色纸样）\n   - **指定用料及规格**：配色纸样\n   - **前提核对**：材料明确要求“最后一折得等装帧师送来配色纸样再粘”。交班时装帧师尚未送达配色纸样，前提未齐备。\n   - **当前执行判断**：**当前不能执行（保留限制）**。尚缺装帧师送来的配色纸样，需等纸样送到后才能粘最后一折。\n\n2. **展开照拍摄（工坊留存）**\n   - **确认/传达放行角色**：“我”（传达放行决定：“你想留张展开照就拍，嫌麻烦就算了”）；搭档（执行人，已确认“知道可以拍”）\n   - **前提核对**：材料未对砂桥册拍摄设定前置等待前提，放行许可已传达并知晓，前提已齐备。\n   - **当前执行判断**：**现在可以执行**（可以做不等于必须立即做）。\n\n---\n\n#### 三、 未定细节单列\n\n- **砂桥册展开照是否拍摄**：该册留在工坊，是否拍摄完全由搭档个人意愿决定（想留就拍，嫌麻烦就算了），此项直接由搭档自行选择，不作为等待或请示的理由。\n",
+    "answer_sha256": "a46de47551ad3c9d2e25edcf10f47ff4407adbfd0e279b53624d5ce397977e36",
+    "original_answer_sha256": "a46de47551ad3c9d2e25edcf10f47ff4407adbfd0e279b53624d5ce397977e36",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "#### 一、 篷窗册（共五折，制作完成后随件交付委托方）",
+          "#### 二、 砂桥册（共五折，制作完成后留在工坊）"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "   - **指定用料及规格**：桌上棉纸",
+          "   - **前提核对**：材料要求“前三折已粘牢，余两折用桌上棉纸接着粘”。前三折已粘牢，用料已在桌上，前提已齐备。",
+          "   - **当前执行判断**：**现在可以执行**。接班后可以使用桌上棉纸继续粘余下两折（可以做不等于必须立即做）。",
+          "   - **确认/要求角色**：委托方（收册时要求一张整册展开照随件）",
+          "   - **前提核对**：材料明确要求“展开照等整册粘完再拍”。目前前三折已粘牢，余下两折尚未粘完，整册未粘完，前提未齐备。",
+          "   - **当前执行判断**：**当前不能执行（保留限制）**。尚缺整册全部粘完的前提，需等五折全部粘完后才能拍展开照。"
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "   - **前提核对**：材料明确要求“最后一折得等装帧师送来配色纸样再粘”。交班时装帧师尚未送达配色纸样，前提未齐备。",
+          "   - **当前执行判断**：**当前不能执行（保留限制）**。尚缺装帧师送来的配色纸样，需等纸样送到后才能粘最后一折。",
+          "   - **确认/传达放行角色**：“我”（传达放行决定：“你想留张展开照就拍，嫌麻烦就算了”）；搭档（执行人，已确认“知道可以拍”）",
+          "   - **前提核对**：材料未对砂桥册拍摄设定前置等待前提，放行许可已传达并知晓，前提已齐备。",
+          "   - **当前执行判断**：**现在可以执行**（可以做不等于必须立即做）。",
+          "- **砂桥册展开照是否拍摄**：该册留在工坊，是否拍摄完全由搭档个人意愿决定（想留就拍，嫌麻烦就算了），此项直接由搭档自行选择，不作为等待或请示的理由。"
+        ]
+      }
+    ],
+    "review": "篷窗续粘用料、照片交付条件保住，只说不能开始拍。砂桥照可选，但未写是否已拍未知，也漏了前四折已粘牢。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "swatch",
+    "arm": "old",
+    "slot": "antigravity-swatch-old",
+    "answer": "# 《潮窗色谱》装袋交接单\n\n本批次包含**苔阶套**与**瓦巷套**两套，规格要求各装入 **6 枚色片**。桌上放置有开工工单与晚班便条，现核对各动作执行前提，交接如下：\n\n---\n\n### 一、苔阶套\n\n* **装片动作：【当前可执行】**\n  * **前提核对**：已装 4 枚，尚缺 2 枚；余下 2 枚指定从白盘取用，用料已就位，前提齐备。\n  * **执行内容与用料规格**：现在可以从**白盘**中取出余下的 **2 枚色片**接着装入，装齐至 6 枚。\n* **封袋动作：【装齐 6 枚后可执行】**\n  * **前提核对与放行角色**：工单原要求封袋前放入试色条；因改作店内自留，由**我**（工单制定/白班交接人）向**晚班**传达放行决定（晚班便条已确认“苔阶的我知道可以不放”），放行决定已生效。装齐 6 枚色片即满足封袋前提。\n  * **执行内容与用料规格**：装齐 6 枚色片即可直接封袋。若选择放入试色条，用料须为**同批次试色条**；不放亦可直接封袋。\n* **单列未定细节（不作为等待或请示理由）**：\n  * 苔阶套试色条是否入袋属于可选细节（想放就放，不放也能封），接班搭档自行决定即可，无需等待请示。\n\n---\n\n### 二、瓦巷套\n\n* **装片动作：【当前保留限制，暂停执行】**\n  * **前提核对**：已装 5 枚；第 6 枚要求使用专用替换片。交班时替换片尚未送达，前提未满足。\n  * **限制说明与缺项**：第 6 枚色片**先别装**。当前缺项：**配色师**送来的**替换片**。\n  * **后续执行用料规格**：待**配色师**送达**替换片**后，方可装入第 6 枚补齐规格。\n* **封袋动作：【当前保留限制，不可封袋】**\n  * **前提核对**：色片未装齐（缺第 6 枚替换片），且试色条尚未入袋，封袋前提未齐备。\n  * **限制说明与用料规格**：暂不可封袋。待第 6 枚替换片装入后，封袋前必须将已裁好搁在袋外的**同批次试色条**放入袋内，方可封袋。\n",
+    "answer_sha256": "6b2107226d66a3331a2ba0d3857935f3bbf8fc89c1c1c81f1e97f1cc3e2ab744",
+    "original_answer_sha256": "6b2107226d66a3331a2ba0d3857935f3bbf8fc89c1c1c81f1e97f1cc3e2ab744",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "本批次包含**苔阶套**与**瓦巷套**两套，规格要求各装入 **6 枚色片**。桌上放置有开工工单与晚班便条，现核对各动作执行前提，交接如下："
+        ]
+      },
+      {
+        "mark": "partial_or_omitted",
+        "quotes": [
+          "  * **前提核对**：已装 4 枚，尚缺 2 枚；余下 2 枚指定从白盘取用，用料已就位，前提齐备。",
+          "  * **执行内容与用料规格**：现在可以从**白盘**中取出余下的 **2 枚色片**接着装入，装齐至 6 枚。",
+          "  * **前提核对与放行角色**：工单原要求封袋前放入试色条；因改作店内自留，由**我**（工单制定/白班交接人）向**晚班**传达放行决定（晚班便条已确认“苔阶的我知道可以不放”），放行决定已生效。装齐 6 枚色片即满足封袋前提。",
+          "  * **执行内容与用料规格**：装齐 6 枚色片即可直接封袋。若选择放入试色条，用料须为**同批次试色条**；不放亦可直接封袋。",
+          "  * 苔阶套试色条是否入袋属于可选细节（想放就放，不放也能封），接班搭档自行决定即可，无需等待请示。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **前提核对**：已装 5 枚；第 6 枚要求使用专用替换片。交班时替换片尚未送达，前提未满足。",
+          "  * **限制说明与缺项**：第 6 枚色片**先别装**。当前缺项：**配色师**送来的**替换片**。",
+          "  * **后续执行用料规格**：待**配色师**送达**替换片**后，方可装入第 6 枚补齐规格。",
+          "  * **前提核对**：色片未装齐（缺第 6 枚替换片），且试色条尚未入袋，封袋前提未齐备。",
+          "  * **限制说明与用料规格**：暂不可封袋。待第 6 枚替换片装入后，封袋前必须将已裁好搁在袋外的**同批次试色条**放入袋内，方可封袋。"
+        ]
+      }
+    ],
+    "review": "苔阶试色条写成可选，未交代是否已经放入未知。瓦巷保住换片、同批条和仍在袋外。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": false
+  },
+  {
+    "client": "antigravity",
+    "case": "swatch",
+    "arm": "new",
+    "slot": "antigravity-swatch-new",
+    "answer": "### 《潮窗色谱》装袋交接单\n\n---\n\n#### 一、交接事项核对（交代要求与证实进度对照）\n\n##### 1. 苔阶套（规格：共装六枚色片；用途：店内自留）\n* **色片装填**\n  * **交代要求**：全套共装六枚色片，余下两枚从白盘接着装。\n  * **证实进度**：**已完成四枚装入**。\n* **试色条与封袋**\n  * **交代要求**：开工工单原要求封袋前放一条同批次试色条；后续因改作店内自留，由**“我”（开工人员）**向晚班传达放行决定——“想放就放，不放也能封”。\n  * **证实进度**：晚班便条已确认知晓“可以不放”，但袋内当前是否已放入同批次试色条**完成情况未知**（不影响后续操作，无需重做或核实）。\n\n##### 2. 瓦巷套（规格：共装六枚色片）\n* **色片装填**\n  * **交代要求**：全套共装六枚色片；第六枚先别装，等**配色师**送来替换片。\n  * **证实进度**：**已完成五枚装入**；交班时**配色师**尚未送达替换片。\n* **试色条放袋**\n  * **交代要求**：封袋前必须把一条同批次的试色条放进袋里。\n  * **证实进度**：同批次试色条**已裁好并搁在袋外**，尚未放进袋内。\n\n---\n\n#### 二、当前各动作执行判断与操作指引\n\n##### 1. 前提齐备，现在可以执行的动作\n> *注：可以做不等于必须立即做，接班后可按节律安排。*\n\n* **装填苔阶套余下两枚色片**\n  * **前提核对**：已装四枚，尚缺两枚；指定用料为白盘中的色片，物料已在盘中，前提已齐备。\n  * **可执行操作**：现在可以从**白盘**接着装入余下两枚色片。\n* **苔阶套封袋**\n  * **前提核对**：**“我”**已向晚班传达放行决定（想放就放，不放也能封）。待白盘中余下两枚色片装满六枚后，即满足封袋前提。\n  * **未定细节单列**：试色条放与不放均已获准，是否放入同批次试色条由搭档自行选择，**不把该细节变成等待或请示的理由**；色片满六枚后即可直接封袋。\n\n##### 2. 前提未齐，当前保留限制的动作\n\n* **装填瓦巷套第六枚色片**\n  * **限制状态**：当前**先别装**。\n  * **所缺前提**：材料明确要求等**配色师**送来替换片；交班时替换片还没到，须等待**配色师**送达替换片后方可装入。\n* **瓦巷套封袋**\n  * **限制状态**：当前**不能封袋**。\n  * **所缺前提**：尚缺**配色师**送达并装入第六枚替换片，以及将袋外已裁好的**同批次试色条**放进袋里；两项前提全部满足后方可封袋。\n",
+    "answer_sha256": "b28e42b82d8c37a3d6316367f4f634c89ce777c79a68ad73ebc78e9a3a820eae",
+    "original_answer_sha256": "b28e42b82d8c37a3d6316367f4f634c89ce777c79a68ad73ebc78e9a3a820eae",
+    "local_project_redacted": false,
+    "task_answer": true,
+    "clauses": [
+      {
+        "mark": "pass",
+        "quotes": [
+          "##### 1. 苔阶套（规格：共装六枚色片；用途：店内自留）",
+          "##### 2. 瓦巷套（规格：共装六枚色片）"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **交代要求**：全套共装六枚色片，余下两枚从白盘接着装。",
+          "  * **证实进度**：**已完成四枚装入**。",
+          "  * **交代要求**：开工工单原要求封袋前放一条同批次试色条；后续因改作店内自留，由**“我”（开工人员）**向晚班传达放行决定——“想放就放，不放也能封”。",
+          "  * **证实进度**：晚班便条已确认知晓“可以不放”，但袋内当前是否已放入同批次试色条**完成情况未知**（不影响后续操作，无需重做或核实）。",
+          "  * **前提核对**：已装四枚，尚缺两枚；指定用料为白盘中的色片，物料已在盘中，前提已齐备。",
+          "  * **可执行操作**：现在可以从**白盘**接着装入余下两枚色片。"
+        ]
+      },
+      {
+        "mark": "pass",
+        "quotes": [
+          "  * **交代要求**：全套共装六枚色片；第六枚先别装，等**配色师**送来替换片。",
+          "  * **证实进度**：**已完成五枚装入**；交班时**配色师**尚未送达替换片。",
+          "  * **交代要求**：封袋前必须把一条同批次的试色条放进袋里。",
+          "  * **证实进度**：同批次试色条**已裁好并搁在袋外**，尚未放进袋内。",
+          "  * **所缺前提**：材料明确要求等**配色师**送来替换片；交班时替换片还没到，须等待**配色师**送达替换片后方可装入。",
+          "  * **限制状态**：当前**不能封袋**。",
+          "  * **所缺前提**：尚缺**配色师**送达并装入第六枚替换片，以及将袋外已裁好的**同批次试色条**放进袋里；两项前提全部满足后方可封袋。"
+        ]
+      }
+    ],
+    "review": "苔阶是否放条未知且可选，瓦巷条仍在袋外，换片和封袋条件齐全。苔阶封袋的小节位置容易误读，但操作行明确装满六枚后才可封。",
+    "sample_storage": null,
+    "known_print_progress": null,
+    "release_and_signatures": null,
+    "unsupported_downgrade": "",
+    "unconditional_redo": "",
+    "extra_gate": "",
+    "scheduling_gate": false,
+    "genuine": "intact",
+    "material_conflict": "",
+    "forced_immediacy": false,
+    "thread_bindings": null,
+    "additional_work": "",
+    "next_action_usable": "yes",
+    "strict_pass": true
+  }
+]
