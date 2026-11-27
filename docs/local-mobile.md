@@ -124,7 +124,7 @@ One extraction and one fresh-project answer consumed 20,309 reported input token
 
 ## Publish the phone preview
 
-Build in `apps/mobile` with the locked dependencies and `npm run build`. Publish only `dist/index.html`, `dist/app.js`, `dist/style.css` and `dist/icon.svg` to the root of the `gh-pages` branch, together with an empty `.nojekyll`. Serve it over HTTPS. Check each public asset against the build before linking a new version.
+Build in `apps/mobile` with the locked dependencies and `npm run build`. Publish only `dist/index.html`, `dist/app.js`, `dist/style.css` and `dist/icon.svg` to the root of the `gh-pages` branch, keeping the existing `.nojekyll` and `CNAME` (zichengxu.com) files in place. Serve it over HTTPS. Check each public asset against the build before linking a new version.
 
 The [designated-value comparison](../benchmarks/designated-value-v1/README.md) follows the naming loss through extraction, export and two fresh sessions per card. The Thanksgiving launch scope is the article and phone web preview. Native Android acceptance awaits the existing release signing key.
 

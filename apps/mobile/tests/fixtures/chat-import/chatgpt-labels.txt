@@ -1,0 +1,6 @@
+You said:
+潮牌只写展柜号。
+ChatGPT said:
+那也写库房号吗？
+You said:
+不写库房号，空着。

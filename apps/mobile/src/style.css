@@ -62,3 +62,16 @@ nav{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:4px 0 16px;p
 #copy-status { color: var(--green); }
 #answer { border-color: #b9c8ad; }
 #answer:focus { border-color: var(--green); }
+
+.import-bar { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; }
+.import-bar label { margin:4px 0; }
+#import-help[open] { flex-basis:100%; }
+#import-help code { overflow-wrap:anywhere; }
+#single-turn { margin:6px 0; }
+#single-turn summary, #import-help summary { padding:6px 0; cursor:pointer; }
+#conversation-picker { width:min(92vw,32rem); max-height:85vh; overflow:auto; }
+#conversation-picker input { width:100%; padding:9px; }
+.turn-range { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#chat-range-preview { white-space:pre-line; overflow-wrap:anywhere; }
+#chat-blocks label { display:block; white-space:pre-wrap; overflow-wrap:anywhere; font-weight:400; }
+#chat-blocks input { width:auto; margin-right:8px; }

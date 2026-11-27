@@ -1,0 +1,13 @@
+ ▐▛███▛█   Claude Code v2.1.322
+▝▜██████▀  synthetic · API Usage Billing
+  [fixture workspace]
+
+
+❯ 潮牌只写展柜号。
+
+⏺ 那也写库房号吗？
+
+❯ 不写库房号，空着。
+
+⏺ Session model synthetic could not be restored (not a model this
+  version of Claude Code recognizes) — using the default model instead.
