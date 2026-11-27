@@ -1,11 +1,14 @@
 import {Session} from './session.mjs';
 import {adapters,BOUNDARY} from '../../../packages/harnesses/index.mjs';
 import {makeBundle as harnessBundle} from '../../../packages/harnesses/bundle.mjs';
-import {length} from '../../../web/dist/core.mjs';
+import {length,sourcesFrom} from '../../../web/dist/core.mjs';
 import {copyText,saveFile,cleanExports} from './io.mjs';
+import {pack,recognize,readConversationFile} from './conversation-import.mjs';
+import {createPicker} from './conversation-picker.mjs';
 import demo from './paper-crane.json';
 
 const $=id=>document.getElementById(id),session=new Session();
+let imported=null;
 let fictional=false,active=false,storageReady=Promise.resolve();
 function notify(text,error=false){$('notice').hidden=false;$('notice').textContent=text;$('notice').classList.toggle('error',error);}
 function show(step){
@@ -42,7 +45,7 @@ function resetHandoff(){
   $('send-request').open=true;
   $('send-label').textContent='把提炼请求发给模型';
 }
-function invalidate(){resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
+function invalidate(){imported=null;resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
 function append(parent,tag,text){const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;}
 function updateSize(){const value=session.portable?session.portable.text:BOUNDARY+$('prompt').value+'\n';$('prompt-size').textContent=`完整 prompt ${length(value)} 字符（包含边界，不是 token 数）`;$('reviewed').checked=false;}
 function render(){
@@ -63,15 +66,63 @@ async function save(name,value,mime='application/json'){const saved=await saveFi
 async function readFile(input,max=512000){const file=input.files?.[0];if(!file)return null;if(file.size>max)throw Error(`文件超过 ${max/1000} KB，请选择相关片段。`);try{return new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('文件编码无法识别。请选择 UTF-8 文本文件；原有材料未改变。');}}
 function confirmReplace(){return !($('source').value||session.portable||session.answer)||window.confirm('替换当前材料？请先保存想保留的私有档案。');}
 for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('click',()=>show(b.dataset.step));
-for(const id of ['source','kind','budget'])$(id).addEventListener(id==='source'?'input':'change',invalidate);
-$('source-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,64000);if(text!==null&&confirmReplace()){$('source').value=text;invalidate();notify('材料已在本机读入。没有上传。');}}finally{e.target.value='';}}));
-$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
+$('source').addEventListener('input',invalidate);
+$('kind').addEventListener('change',invalidate);
+$('budget').addEventListener('change',()=>{const saved=imported;invalidate();imported=saved;});
+function presentTurns(turns,advance) {
+  const structured=pack(turns);
+  if(new TextEncoder().encode(structured).length>64000) throw Error('这段超过 64 KB，请选择较短的对话。');
+  const transcript=turns.map(m=>(m.role==='user'?'用户：':'助手：')+m.text).join('\n');
+  // Validate before replacing a draft. Preserve roles even when a quoted line looks like a speaker.
+  sourcesFrom(structured,'trajectory');
+  $('kind').value='trajectory'; $('source').value=transcript; invalidate(); imported=structured;
+  if(advance){
+    $('request').value=session.prepare(structured,'trajectory',Number($('budget').value));
+    $('notice').hidden=true; show('model'); $('copy-request').focus();
+  }
+}
+const pickConversation=createPicker(turns=>presentTurns(turns,true));
+for (const role of ['user','assistant']) $('append-'+role).addEventListener('click',guard(async()=>{
+  const text=$('turn-text').value;
+  if(!text.trim()) throw Error('请先粘贴一条发言。');
+  const raw=$('source').value;
+  let previous=[];
+  if(raw.trim()){
+    try{previous=sourcesFrom(imported??raw,'trajectory').sources;}
+    catch{throw Error('上方有尚未分清说话人的文字。请先把它剪切到逐条输入框，再选择是谁说的。');}
+  }
+  if(previous.some(m=>!['user','assistant'].includes(m.role))) throw Error('已有工具或背景材料，请在上方直接编辑。');
+  presentTurns([...previous,{role,text}],false);
+  $('turn-text').value=''; $('turn-text').focus();
+  notify('已加入'+(role==='user'?'你的':'助手的')+'发言。');
+}));
+$('source-file').addEventListener('change',guard(async e=>{
+  const file=e.target.files?.[0];
+  $('prepare').disabled=true;
+  try{
+    if(!file)return;
+    const {chats,raw}=await readConversationFile(file);
+    if(chats){if(confirmReplace())pickConversation(chats);return;}
+    if(file.size>64000)throw Error('普通文本超过 64 KB，请复制需要的片段。');
+    if(!confirmReplace())return;
+    $('source').value=raw; invalidate(); notify('材料已在本机读入。没有上传。');
+  }finally{e.target.value='';$('prepare').disabled=false;}
+}));
+$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);imported=null;resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
 $('prepare').addEventListener('click',guard(async()=>{
   try{
     // Editing a source field already invalidates its request and answer.
-    if(!session.prepared)$('request').value=session.prepare($('source').value,$('kind').value,Number($('budget').value));
+    if(!session.prepared){
+      const raw=$('source').value;
+      if(!imported && $('kind').value==='trajectory'){
+        const chats=recognize(raw);
+        if(chats){pickConversation(chats);return;}
+      }
+      $('request').value=session.prepare(imported??raw,$('kind').value,Number($('budget').value));
+    }
   }catch(error){
-    $('source-error').textContent=error.message;
+    $('source-error').textContent=error.message.startsWith('对话请用')?
+      '没有认出说话人。可粘贴带「用户：」「助手：」的对话，或展开「复制出来没有说话人？」逐条加入。':error.message;
     $('source-error').hidden=false;
     $('source').setAttribute('aria-invalid','true');
     $('source-error').scrollIntoView({block:'center'});
@@ -175,5 +226,5 @@ $('own-dialogue').addEventListener('click',guard(async()=>{
   $('source').value='';$('kind').value='trajectory';$('budget').value='768';
   invalidate();$('notice').hidden=true;$('source').focus();
 }));
-$('clear').addEventListener('click',guard(async()=>{if(!window.confirm('清空本次材料？已导出的文件需要你在设备上另行删除。'))return;$('source').value='';invalidate();$('prompt').value='';$('evidence').replaceChildren();$('unknowns').replaceChildren();$('name').textContent='';$('tagline').textContent='';await cleanExports();notify('本次材料已清空。');}));
+$('clear').addEventListener('click',guard(async()=>{if(!window.confirm('清空本次材料？已导出的文件需要你在设备上另行删除。'))return;$('turn-text').value='';$('source').value='';invalidate();$('prompt').value='';$('evidence').replaceChildren();$('unknowns').replaceChildren();$('name').textContent='';$('tagline').textContent='';await cleanExports();notify('本次材料已清空。');}));
 storageReady=cleanExports().catch(()=>notify('上次临时导出文件未能清理；可在系统设置清除 App 缓存。',true));

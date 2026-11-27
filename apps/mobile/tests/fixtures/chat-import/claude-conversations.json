@@ -1,0 +1,1 @@
+[{"uuid": "fictional", "name": "虚构展柜", "chat_messages": [{"sender": "human", "text": "潮牌只写展柜号。", "content": [{"type": "text", "text": "潮牌只写展柜号。"}]}, {"sender": "assistant", "text": "那也写库房号吗？", "content": [{"type": "text", "text": "那也写库房号吗？"}]}, {"sender": "human", "text": "不写库房号，空着。", "content": [{"type": "text", "text": "不写库房号，空着。"}]}]}]

@@ -1,0 +1,3 @@
+{"type": "user", "message": {"role": "user", "content": "潮牌只写展柜号。"}}
+{"type": "assistant", "message": {"role": "assistant", "content": [{"type": "text", "text": "那也写库房号吗？"}]}}
+{"type": "user", "message": {"role": "user", "content": "不写库房号，空着。"}}

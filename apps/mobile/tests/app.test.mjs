@@ -143,3 +143,41 @@ test('own dialogue survives the copy, correction and return trip',async t=>{
   assert.deepEqual(errors,[]);
   assert.ok(requests.every(r=>r.method==='GET'&&r.url.startsWith(origin+'/')));
 });
+
+test('a fresh visitor can open a log, pick one conversation from a ZIP or label individual messages',async t=>{
+  const {page,origin,requests}=await mobilePage(t);
+  const input=page.locator('#source-file');
+  assert.equal(await input.isVisible(),true);
+  await input.setInputFiles(fileURLToPath(new URL('fixtures/chat-import/rollout.jsonl',import.meta.url)));
+  await page.locator('#model-panel').waitFor({state:'visible'});
+  assert.match(await page.locator('#source-summary').textContent(),/你的 2 段文字、助手的 1 段文字/);
+  await page.locator('[data-step="source"]').click();
+  const {zipSync,strToU8}=await import('fflate');
+  const chat=JSON.parse(await readFile(new URL('fixtures/chat-import/claude-conversations.json',import.meta.url),'utf8'))[0];
+  const zip=zipSync({'conversations.json':strToU8(JSON.stringify([{name:'Other',chat_messages:[{sender:'human',text:'OTHER_CHAT'}]},chat]))});
+  page.once('dialog',d=>d.accept());await input.setInputFiles({name:'export.zip',mimeType:'application/zip',buffer:Buffer.from(zip)});
+  await page.locator('#conversation-picker').waitFor({state:'visible'});
+  await page.locator('#chat-filter').fill('虚构展柜');await page.locator('#choose-chat').click();
+  assert.match(await page.locator('#request').inputValue(),/不写库房号/);
+  assert.doesNotMatch(await page.locator('#request').inputValue(),/OTHER_CHAT/);
+  await page.locator('[data-step="source"]').click();
+  await page.locator('#source').fill('');await page.locator('#single-turn summary').click();
+  await page.locator('#turn-text').fill('我只选第一版');await page.locator('#append-user').click();
+  await page.locator('#turn-text').fill('好的。\n用户：这是我引用的文本');await page.locator('#append-assistant').click();
+  await page.locator('#prepare').click();
+  assert.match(await page.locator('#source-summary').textContent(),/你的 1 段文字、助手的 1 段文字/);
+  assert.ok(requests.every(r=>r.method==='GET'&&r.url.startsWith(origin+'/')));
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+});
+
+test('review native Claude Code dots and keep only the chosen turns',async t=>{
+  const {page}=await mobilePage(t);
+  await page.locator('#source-file').setInputFiles(fileURLToPath(new URL('fixtures/chat-import/claude-export.txt',import.meta.url)));
+  const panel=page.locator('#chat-review');
+  await panel.waitFor({state:'visible'});
+  assert.equal(await panel.locator('input:checked').count(),2);
+  await panel.getByText(/那也写库房号吗/).click();
+  await page.locator('#choose-chat').click();
+  assert.match(await page.locator('#source-summary').textContent(),/你的 2 段文字、助手的 1 段文字/);
+  assert.doesNotMatch(await page.locator('#request').inputValue(),/model synthetic could not/);
+});
