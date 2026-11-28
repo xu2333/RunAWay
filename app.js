@@ -1837,6 +1837,24 @@ function clipboardMessages(plain, html) {
   }
   return texts.join("\n\n") === plain ? texts : null;
 }
+function plainParagraphs(raw) {
+  if (raw.length > 64e3 || /^\s*[[{<#❯⏺]/.test(raw)) return null;
+  if (/^\s*(?:用户|我|助手|工具|user|assistant|tool|你说|you said|chatgpt\s*(?:说|said))\s*(?:[:：]|$)/im.test(raw)) return null;
+  const pieces = raw.split(/(\n[ \t]*\n(?:[ \t]*\n)*)/);
+  const paragraphs = pieces.filter((_, index) => index % 2 === 0);
+  if (paragraphs.length < 3 || paragraphs.length > 100 || paragraphs.some((p) => !p.trim())) return null;
+  return paragraphs.map((text2, i) => ({ text: text2, separator: i ? pieces[i * 2 - 1] : "" }));
+}
+function groupParagraphs(paragraphs, selected) {
+  const turns = [];
+  for (const [i, { text: text2, separator }] of paragraphs.entries()) {
+    const role = selected[i] ? "user" : "assistant";
+    const last = turns.at(-1);
+    if (last?.role === role) last.text += separator + text2;
+    else turns.push({ role, text: text2 });
+  }
+  return turns;
+}
 
 // src/conversation-picker.mjs
 var $ = (id) => document.getElementById(id);
@@ -2055,6 +2073,7 @@ var $2 = (id) => document.getElementById(id);
 var session = new Session();
 var imported = null;
 var copiedMessages = null;
+var pastedParagraphs = null;
 var pendingPaste = null;
 var fictional = false;
 var active = false;
@@ -2076,6 +2095,8 @@ function show(step) {
   if (step === "source") {
     const pair = !copiedMessages && unlabelledPair();
     $2("clipboard-review").hidden = !copiedMessages;
+    $2("paragraph-review").hidden = !pastedParagraphs;
+    $2("prepare").textContent = pastedParagraphs ? "\u786E\u8BA4\u8BF4\u8BDD\u4EBA\u548C\u5206\u6BB5\uFF0C\u751F\u6210\u8BF7\u6C42 \u2192" : "\u751F\u6210\u63D0\u70BC\u8BF7\u6C42 \u2192";
     $2("confirm-pair").hidden = !pair;
     $2("prepare").hidden = !!pair || !!copiedMessages;
   }
@@ -2120,10 +2141,7 @@ function resetHandoff() {
   $2("send-label").textContent = "\u628A\u63D0\u70BC\u8BF7\u6C42\u53D1\u7ED9\u6A21\u578B";
 }
 function invalidate({ keepCopied = false } = {}) {
-  if (!keepCopied) {
-    copiedMessages = null;
-    $2("clipboard-rows").replaceChildren();
-  }
+  if (!keepCopied) clearPasteReview();
   imported = null;
   resetHandoff();
   session.reset();
@@ -2198,6 +2216,26 @@ function confirmReplace() {
   return !($2("source").value || session.portable || session.answer) || window.confirm("\u66FF\u6362\u5F53\u524D\u6750\u6599\uFF1F\u8BF7\u5148\u4FDD\u5B58\u60F3\u4FDD\u7559\u7684\u79C1\u6709\u6863\u6848\u3002");
 }
 for (const b of document.querySelectorAll("[data-step]")) b.addEventListener("click", () => show(b.dataset.step));
+function clearPasteReview() {
+  copiedMessages = null;
+  pastedParagraphs = null;
+  $2("clipboard-rows").replaceChildren();
+  $2("paragraph-rows").replaceChildren();
+}
+function offerParagraphReview(raw, scroll) {
+  const paragraphs = plainParagraphs(raw);
+  if (!paragraphs || recognize(raw)) return;
+  pastedParagraphs = paragraphs;
+  for (const { text: text2 } of pastedParagraphs) {
+    const row = document.createElement("label"), check = document.createElement("input");
+    check.type = "checkbox";
+    row.append(check);
+    append(row, "span", text2);
+    $2("paragraph-rows").append(row);
+  }
+  show("source");
+  if (scroll) $2("prepare").scrollIntoView({ block: "nearest" });
+}
 $2("source").addEventListener("paste", (event) => {
   const field = event.currentTarget;
   pendingPaste = null;
@@ -2209,7 +2247,12 @@ $2("source").addEventListener("input", (event) => {
   const messages = pendingPaste;
   pendingPaste = null;
   invalidate();
-  if (!messages || event.inputType !== "insertFromPaste" || unlabelledPair() || messages.join("\n\n") !== event.currentTarget.value) return;
+  const raw = event.currentTarget.value;
+  if ($2("kind").value !== "trajectory" || unlabelledPair()) return;
+  if (!messages || messages.join("\n\n") !== raw) {
+    offerParagraphReview(raw, event.inputType === "insertFromPaste" || event.data?.includes("\n"));
+    return;
+  }
   copiedMessages = messages;
   for (const [i, text2] of messages.entries()) {
     const row = document.createElement("label"), role = document.createElement("select");
@@ -2309,8 +2352,7 @@ $2("archive-file").addEventListener("change", guard(async (e) => {
     const text2 = await readFile(e.target, 2e6);
     if (text2 === null || !confirmReplace()) return;
     const result = await session.restore(text2);
-    copiedMessages = null;
-    $2("clipboard-rows").replaceChildren();
+    clearPasteReview();
     imported = null;
     resetHandoff();
     fictional = session.origin === "fictional_demo";
@@ -2334,6 +2376,12 @@ $2("archive-file").addEventListener("change", guard(async (e) => {
 }));
 $2("prepare").addEventListener("click", guard(async () => {
   try {
+    if (pastedParagraphs) {
+      const choices = Array.from($2("paragraph-rows").querySelectorAll("input"), (el) => el.checked);
+      if (!choices.includes(true) || !choices.includes(false)) throw Error("\u8BF7\u52FE\u9009\u4F60\u5199\u7684\u6BB5\u843D\uFF0C\u52A9\u624B\u7684\u6BB5\u843D\u7559\u7A7A\u3002");
+      presentTurns(groupParagraphs(pastedParagraphs, choices), true);
+      return;
+    }
     if (!session.prepared) {
       const raw = $2("source").value;
       if (!imported && $2("kind").value === "trajectory") {
