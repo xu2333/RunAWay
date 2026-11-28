@@ -1,5 +1,7 @@
 // The desktop selection can contain a clock label between message bodies. Match
 // every paragraph and label against the plain selection before excluding any label.
+const clockLabel = /^(?:(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m|(?:[01]?\d|2[0-3]):[0-5]\d|(?:上午|下午)\s*(?:0?[1-9]|1[0-2]):[0-5]\d)$/i;
+
 function timestampedMessages(plain, fragment) {
   const parts = plainParagraphs(plain);
   if (!parts || fragment.querySelector('br, img, pre, table, ul, ol, hr')) return null;
@@ -24,7 +26,7 @@ function timestampedMessages(plain, fragment) {
       } else return null; // Missing separator between two different message bodies.
     } else {
       if (!body || parent?.tagName !== 'SPAN' || body.contains(parent) ||
-          part.text !== node.textContent || !/^(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m$/i.test(part.text)) return null;
+          part.text !== node.textContent || !clockLabel.test(part.text)) return null;
       body = null;
     }
   }
@@ -66,10 +68,11 @@ export function plainParagraphs(raw) {
   return paragraphs.map((text,i)=>({text, separator:i ? pieces[i*2-1] : ''}));
 }
 
-export function groupParagraphs(paragraphs, selected) {
+export function groupParagraphs(paragraphs, roles) {
   const turns=[];
   for(const [i,{text,separator}] of paragraphs.entries()){
-    const role=selected[i] ? 'user' : 'assistant';
+    const role=roles[i];
+    if(role==='exclude') continue;
     const last=turns.at(-1);
     if(last?.role===role) last.text+=separator+text;
     else turns.push({role,text});

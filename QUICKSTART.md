@@ -4,7 +4,7 @@
 
 RunAWay builds an evidence-linked representation of how a person chooses and judges, then exports a portable prompt. The detailed profile is the core; playful short cards remain a separate prototype interface.
 
-This is a working CLI prototype. Generated profiles are editable hypotheses, not validated personality replicas. It includes a local review page; a hosted service, mini-app and public package release are not shipped yet.
+This is a working CLI prototype. Generated profiles are editable hypotheses, not validated personality replicas. The [web app](https://zichengxu.com/) processes imported conversations on your device.
 
 ## Start locally
 

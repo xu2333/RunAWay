@@ -2,18 +2,20 @@
 
 **Your taste, to go.** 把真实对话中的选择、条件和例外，变成带得走的 prompt。
 
-[手机打开 RunAWay · Open the preview](https://xu2333.github.io/RunAWay/)
+[手机打开 RunAWay · Open the preview](https://zichengxu.com/)
 
-Paste a conversation, generate a short card with your own model and export it for Codex or Claude Code.
+Import a conversation file or paste an exchange, generate a short card with your own model and export it for Codex or Claude Code.
 
 Experimental: **real-person fidelity is unverified**. A prompt is a revisable hypothesis about your preferences, not an identity or permission to act.
 
-## Try it locally
+## Run the web app locally (Node.js 22+)
 
 ```sh
 git clone https://github.com/xu2333/RunAWay.git
-cd RunAWay
-python3 -m http.server 8080 --bind 127.0.0.1 --directory web/dist
+cd RunAWay/apps/mobile
+npm ci
+npm run build
+python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
 ```
 
 Open **http://127.0.0.1:8080**:
