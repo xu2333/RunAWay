@@ -2,7 +2,7 @@ import {pack} from './conversation-import.mjs';
 
 const $=id=>document.getElementById(id);
 const size=value=>new TextEncoder().encode(value).length;
-export function createPicker(apply) {
+export function createPicker(apply, saveExcerpt) {
   const dialog=$('conversation-picker'), choice=$('chat-choice');
   let chats=[], turns=[];
   const error=message=>{ $('chat-error').textContent=message; $('chat-error').hidden=!message; };
@@ -21,11 +21,11 @@ export function createPicker(apply) {
       const first=part[0].text, last=part[part.length-1].text;
       $('chat-range-preview').textContent='开头：'+first.slice(0,90)+'\n结尾：'+last.slice(-90);
       if(size(pack(part))>64000) throw Error('这段超出 64 KB，请缩小起止范围。');
-      error(''); $('choose-chat').disabled=false;
-    } catch(e){ error(e.message); $('choose-chat').disabled=true; }
+      error(''); $('save-excerpt').disabled=$('choose-chat').disabled=false;
+    } catch(e){ error(e.message); $('save-excerpt').disabled=$('choose-chat').disabled=true; }
   }
   function select(){
-    turns=[]; $('chat-review').hidden=true; $('chat-blocks').replaceChildren(); error(''); $('choose-chat').disabled=true;
+    turns=[]; $('chat-review').hidden=true; $('chat-blocks').replaceChildren(); error(''); $('save-excerpt').disabled=$('choose-chat').disabled=true;
     $('chat-range-preview').textContent=''; $('chat-size').textContent='';
     try {
       if(!choice.value) throw Error('没有匹配的对话。');
@@ -64,12 +64,15 @@ export function createPicker(apply) {
   $('choose-chat').addEventListener('click',()=>{
     try{apply(range());dialog.close();}catch(e){error(e.message);}
   });
+  $('save-excerpt').addEventListener('click',async()=>{
+    try{await saveExcerpt(pack(range()));dialog.close();}catch(e){error(e.message);}
+  });
   dialog.addEventListener('close',()=>{
     chats=[]; turns=[]; choice.replaceChildren(); $('chat-blocks').replaceChildren(); $('chat-filter').value='';
     $('chat-range-preview').textContent=''; $('chat-size').textContent=''; error('');
   });
-  return items=>{
-    if(items.length===1 && !items[0].review){
+  return (items,{selectRange=false}={})=>{
+    if(!selectRange && items.length===1 && !items[0].review){
       const only=items[0].read();
       if(size(pack(only))<=64000){apply(only);return;}
     }

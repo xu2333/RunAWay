@@ -19,6 +19,7 @@ function show(step){
     const roles={user:'你',assistant:'助手',tool:'工具',context:'背景'};
     const counts=new Map();
     for(const {role} of session.prepared.sources.sources)counts.set(role,(counts.get(role)??0)+1);
+    $('excerpt').hidden=!imported;
     $('source-summary').textContent='这份请求含有'+Array.from(counts,([role,n])=>roles[role]+'的 '+n+' 段文字').join('、')+'。';
   }
   if(step==='source'){
@@ -159,7 +160,10 @@ function presentTurns(turns,advance) {
     $('notice').hidden=true; show('model'); $('copy-request').focus();
   }
 }
-const pickConversation=createPicker(turns=>presentTurns(turns,true));
+const pickConversation=createPicker(turns=>presentTurns(turns,true),text=>save('runaway-dialogue.json',text));
+$('excerpt').addEventListener('click',()=>{
+  if(imported) pickConversation([{title:'当前对话',read:()=>JSON.parse(imported).sources}],{selectRange:true});
+});
 for (const role of ['user','assistant']) $('append-'+role).addEventListener('click',guard(async()=>{
   const text=$('turn-text').value;
   if(!text.trim()) throw Error('请先粘贴一条发言。');
