@@ -46,7 +46,31 @@ function archiveEntry(c) {
       turn(m.sender==='human'?'user':m.sender, blocks(m.content,['text']) || m.text))};
   throw Error('文件中有无法识别的对话，请选择 ChatGPT 或 Claude 的 conversations JSON。');
 }
+// Antigravity logs include tool output and private model reasoning alongside speech.
+function antigravityTurns(rows) {
+  const turns=[];
+  let previous=-1;
+  for(const row of rows){
+    if(!Number.isSafeInteger(row?.step_index) || row.step_index<=previous || typeof row.source!=='string')
+      throw Error('这份 Antigravity 记录的步骤不完整或顺序异常。请选择单个会话的 transcript.jsonl。');
+    previous=row.step_index;
+    if(row.status!=='DONE') continue;
+    if(row.source==='USER_EXPLICIT' && row.type==='USER_INPUT'){
+      const content=row.content;
+      const end='\n</USER_REQUEST>';
+      if(typeof content!=='string' || !content.startsWith('<USER_REQUEST>\n') ||
+          !content.includes(end) || content.indexOf(end)!==content.lastIndexOf(end))
+        throw Error('无法确定 Antigravity 用户原话的边界，请改选其他会话或手动粘贴。');
+      turns.push(...turn('user',content.slice('<USER_REQUEST>\n'.length,content.indexOf(end))));
+    } else if(row.source==='MODEL' && row.type==='PLANNER_RESPONSE'){
+      turns.push(...turn('assistant',row.content));
+    }
+  }
+  return turns;
+}
 function logTurns(rows) {
+  if(rows.some(r=>r?.type==='USER_INPUT' && r.source==='USER_EXPLICIT' && Number.isSafeInteger(r.step_index)))
+    return antigravityTurns(rows);
   if (rows.some(r=>r?.type==='response_item' || r?.type==='session_meta')) {
     return rows.flatMap(r=>{
       const m=r.payload;
@@ -70,7 +94,7 @@ function logTurns(rows) {
     }
     return turns;
   }
-  throw Error('未识别这些日志。请选择 Codex 或 Claude Code 的单个会话文件。');
+  throw Error('未识别这些日志。请选择 Codex、Claude Code 或 Antigravity 的单个会话文件。');
 }
 function codexMarkdown(raw) {
   const turns=[]; let role=null, lines=[], fence=null;
@@ -111,6 +135,9 @@ export function recognize(raw, name='') {
     let data;
     try { data=JSON.parse(text); } catch { return null; }
     if (Array.isArray(data) && data.some(c=>c?.mapping || c?.chat_messages)) return data.map(archiveEntry);
+    if (data?.schema_version===1 && Array.isArray(data.sources) && data.sources.length &&
+        data.sources.every(m=>['user','assistant'].includes(m?.role) && typeof m.text==='string' && m.text.trim()))
+      return [{title:'RunAWay 对话片段',read:()=>data.sources.map(({role,text})=>({role,text}))}];
     if (data?.mapping || data?.chat_messages) return [archiveEntry(data)];
     if (data?.type && (data.payload || data.message)) return [{title:'会话记录',read:()=>logTurns([data])}];
   }

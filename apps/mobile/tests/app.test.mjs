@@ -310,3 +310,22 @@ test('ChatGPT desktop clocks between messages stay out of the confirmed source',
     await page.locator('[data-step="source"]').click();
   }
 });
+
+test('save a selected conversation range and import just those turns into a fresh page',async t=>{
+  const {page,origin,temp,context}=await mobilePage(t);
+  await page.locator('#source-file').setInputFiles(fileURLToPath(new URL('fixtures/chat-import/rollout.jsonl',import.meta.url)));
+  await page.locator('#excerpt').click();
+  await page.locator('#turn-from').fill('2');
+  const done=page.waitForEvent('download');
+  await page.locator('#save-excerpt').click();
+  const download=await done, target=path.join(temp,download.suggestedFilename());
+  await download.saveAs(target);
+  const expected=[['assistant','那也写库房号吗？'],['user','不写库房号，空着。']];
+  const excerpt=JSON.parse(await readFile(target,'utf8'));
+  assert.deepEqual(excerpt.sources.map(s=>[s.role,s.text]),expected);
+  const fresh=await context.newPage();await fresh.goto(origin);
+  await fresh.locator('#source-file').setInputFiles(target);
+  await fresh.locator('#model-panel').waitFor({state:'visible'});
+  const data=JSON.parse((await fresh.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop());
+  assert.deepEqual(data.sources.map(s=>[s.role,s.text]),expected);
+});

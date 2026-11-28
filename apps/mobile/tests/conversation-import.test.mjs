@@ -48,3 +48,17 @@ test('native Claude Code export requires operator review of dots including statu
   assert.deepEqual(chat.read().map(t=>t.role),['user','assistant','user','assistant']);
   assert.match(chat.read()[3].text,/Session model/);
 });
+
+test('Antigravity transcript preserves the user request and reply but omits model and tool internals',async()=>{
+  const steps=[
+    {step_index:0,source:'USER_EXPLICIT',type:'USER_INPUT',status:'DONE',content:'<USER_REQUEST>\n题目\n\n第二段\n</USER_REQUEST>\n<ADDITIONAL_METADATA>local</ADDITIONAL_METADATA>'},
+    {step_index:1,source:'MODEL',type:'PLANNER_RESPONSE',status:'DONE',thinking:'internal',tool_calls:['lookup']},
+    {step_index:2,source:'MODEL',type:'GENERIC',status:'DONE',content:'tool result'},
+    {step_index:3,source:'SYSTEM',type:'SYSTEM_MESSAGE',status:'DONE',content:'system'},
+    {step_index:4,source:'MODEL',type:'PLANNER_RESPONSE',status:'DONE',thinking:'internal',content:'回复'}
+  ];
+  function read(rows){return recognize(rows.map(r=>JSON.stringify(r)).join('\n'),'transcript.jsonl')[0].read();}
+  assert.deepEqual(read(steps),[{role:'user',text:'题目\n\n第二段'},{role:'assistant',text:'回复'}]);
+  assert.throws(()=>read([steps[0],steps[0]]),/顺序/);
+  assert.throws(()=>read([{...steps[0],content:'ambiguous'}]),/边界/);
+});
