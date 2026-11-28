@@ -1818,11 +1818,41 @@ function pack(turns) {
 }
 
 // src/clipboard-messages.mjs
+function timestampedMessages(plain, fragment) {
+  const parts = plainParagraphs(plain);
+  if (!parts || fragment.querySelector("br, img, pre, table, ul, ol, hr")) return null;
+  const walker = document.createTreeWalker(fragment, NodeFilter.SHOW_TEXT);
+  const messages = [];
+  let index = 0, body = null, previousParagraph = null;
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    if (!node.textContent.trim()) continue;
+    const parent = node.parentElement;
+    const paragraph = parent?.closest("p");
+    if (paragraph && paragraph === previousParagraph) continue;
+    previousParagraph = paragraph;
+    const part = parts[index++];
+    if (!part) return null;
+    if (paragraph) {
+      if (part.text !== paragraph.textContent) return null;
+      if (!body) {
+        body = paragraph.parentElement;
+        messages.push(part.text);
+      } else if (body === paragraph.parentElement) {
+        messages[messages.length - 1] += part.separator + part.text;
+      } else return null;
+    } else {
+      if (!body || parent?.tagName !== "SPAN" || body.contains(parent) || part.text !== node.textContent || !/^(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m$/i.test(part.text)) return null;
+      body = null;
+    }
+  }
+  return index === parts.length && messages.length >= 2 ? messages : null;
+}
 function clipboardMessages(plain, html) {
   if (!plain || plain.length > 64e3 || !html || html.length > 1e6) return null;
   const template = document.createElement("template");
   template.innerHTML = html;
   const articles = [...template.content.querySelectorAll('[role="article"]')];
+  if (!articles.length) return timestampedMessages(plain, template.content);
   if (articles.length < 2 || articles.length > 300) return null;
   const start = Number(articles[0].getAttribute("aria-posinset"));
   const total = Number(articles[0].getAttribute("aria-setsize"));
@@ -2241,20 +2271,21 @@ $2("source").addEventListener("paste", (event) => {
   pendingPaste = null;
   if ($2("kind").value !== "trajectory" || field.selectionStart !== 0 || field.selectionEnd !== field.value.length || !event.clipboardData) return;
   const plain = event.clipboardData.getData("text/plain").replace(/\r\n?/g, "\n");
-  pendingPaste = clipboardMessages(plain, event.clipboardData.getData("text/html"));
+  const messages = clipboardMessages(plain, event.clipboardData.getData("text/html"));
+  if (messages) pendingPaste = { plain, messages };
 });
 $2("source").addEventListener("input", (event) => {
-  const messages = pendingPaste;
+  const paste = pendingPaste;
   pendingPaste = null;
   invalidate();
   const raw = event.currentTarget.value;
   if ($2("kind").value !== "trajectory" || unlabelledPair()) return;
-  if (!messages || messages.join("\n\n") !== raw) {
+  if (!paste || paste.plain !== raw) {
     offerParagraphReview(raw, event.inputType === "insertFromPaste" || event.data?.includes("\n"));
     return;
   }
-  copiedMessages = messages;
-  for (const [i, text2] of messages.entries()) {
+  copiedMessages = paste.messages;
+  for (const [i, text2] of copiedMessages.entries()) {
     const row = document.createElement("label"), role = document.createElement("select");
     role.setAttribute("aria-label", `\u7B2C ${i + 1} \u6761\u7684\u8BF4\u8BDD\u4EBA`);
     role.add(new Option("\u6211", "user"));
