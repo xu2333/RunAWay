@@ -471,7 +471,7 @@ Documentation: ${adapter.documentation}
   ]) };
 }
 
-// node_modules/@capacitor/core/dist/index.js
+// ../../../../../../../../../Users/zichengxu/Documents/ChatGPT/RunAWay/runs/web-import-usability-v1/product/apps/mobile/node_modules/@capacitor/core/dist/index.js
 var ExceptionCode;
 (function(ExceptionCode2) {
   ExceptionCode2["Unimplemented"] = "UNIMPLEMENTED";
@@ -1019,7 +1019,7 @@ async function copyText(text2) {
   }
 }
 
-// node_modules/fflate/esm/browser.js
+// ../../../../../../../../../Users/zichengxu/Documents/ChatGPT/RunAWay/runs/web-import-usability-v1/product/apps/mobile/node_modules/fflate/esm/browser.js
 var u8 = Uint8Array;
 var u16 = Uint16Array;
 var i32 = Int32Array;
@@ -1842,6 +1842,7 @@ function pack(turns) {
 }
 
 // src/clipboard-messages.mjs
+var clockLabel = /^(?:(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m|(?:[01]?\d|2[0-3]):[0-5]\d|(?:上午|下午)\s*(?:0?[1-9]|1[0-2]):[0-5]\d)$/i;
 function timestampedMessages(plain, fragment) {
   const parts = plainParagraphs(plain);
   if (!parts || fragment.querySelector("br, img, pre, table, ul, ol, hr")) return null;
@@ -1865,7 +1866,7 @@ function timestampedMessages(plain, fragment) {
         messages[messages.length - 1] += part.separator + part.text;
       } else return null;
     } else {
-      if (!body || parent?.tagName !== "SPAN" || body.contains(parent) || part.text !== node.textContent || !/^(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m$/i.test(part.text)) return null;
+      if (!body || parent?.tagName !== "SPAN" || body.contains(parent) || part.text !== node.textContent || !clockLabel.test(part.text)) return null;
       body = null;
     }
   }
@@ -1899,10 +1900,11 @@ function plainParagraphs(raw) {
   if (paragraphs.length < 3 || paragraphs.length > 100 || paragraphs.some((p) => !p.trim())) return null;
   return paragraphs.map((text2, i) => ({ text: text2, separator: i ? pieces[i * 2 - 1] : "" }));
 }
-function groupParagraphs(paragraphs, selected) {
+function groupParagraphs(paragraphs, roles) {
   const turns = [];
   for (const [i, { text: text2, separator }] of paragraphs.entries()) {
-    const role = selected[i] ? "user" : "assistant";
+    const role = roles[i];
+    if (role === "exclude") continue;
     const last = turns.at(-1);
     if (last?.role === role) last.text += separator + text2;
     else turns.push({ role, text: text2 });
@@ -2241,16 +2243,25 @@ function render() {
   $2("evidence").replaceChildren();
   $2("unknowns").replaceChildren();
   if (a) {
+    const sources = new Map(session.prepared.sources.sources.map((s) => [s.id, s]));
     for (const c of a.claims) {
       const el = append($2("evidence"), "section", "");
       el.className = "claim";
       append(el, "strong", c.statement);
       append(el, "p", "\u8303\u56F4\uFF1A" + c.scope);
-      for (const s of c.conditions) append(el, "p", "\u6761\u4EF6\uFF1A" + s);
-      for (const s of c.exceptions) append(el, "p", "\u4F8B\u5916\uFF1A" + s);
-      for (const e of c.evidence) append(el, "blockquote", e.quote);
+      for (const condition of c.conditions) append(el, "p", "\u6761\u4EF6\uFF1A" + condition);
+      for (const exception of c.exceptions) append(el, "p", "\u4F8B\u5916\uFF1A" + exception);
+      for (const e of c.evidence) {
+        const source = sources.get(e.source_id);
+        append(el, "blockquote", e.quote);
+        const details = append(el, "details", "");
+        const short = e.relation === "supports" && length(e.quote.trim()) < 8;
+        const speaker = { user: "\u4F60", assistant: "\u52A9\u624B", tool: "\u5DE5\u5177", context: "\u80CC\u666F" }[source.role];
+        append(details, "summary", (short ? "\u77ED\u5F15\u6587 \xB7 " : "") + "\u67E5\u770B\u5B8C\u6574\u539F\u6587\uFF08" + speaker + "\uFF09");
+        append(details, "p", source.text);
+      }
     }
-    for (const u of a.unknowns) append($2("unknowns"), "li", u);
+    for (const unknown of a.unknowns) append($2("unknowns"), "li", unknown);
   }
   updateSize();
   show("result");
@@ -2289,11 +2300,18 @@ function offerParagraphReview(raw, scroll) {
   const paragraphs = plainParagraphs(raw);
   if (!paragraphs || recognize(raw)) return;
   pastedParagraphs = paragraphs;
-  for (const { text: text2 } of pastedParagraphs) {
-    const row = document.createElement("label"), check = document.createElement("input");
-    check.type = "checkbox";
-    row.append(check);
-    append(row, "span", text2);
+  for (const [index, { text: text2 }] of pastedParagraphs.entries()) {
+    const row = document.createElement("fieldset");
+    append(row, "legend", text2);
+    for (const [value, caption] of [["user", "\u6211"], ["assistant", "\u52A9\u624B"], ["exclude", "\u6392\u9664"]]) {
+      const label = document.createElement("label"), radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "paragraph-" + index;
+      radio.value = value;
+      radio.checked = value === "assistant";
+      label.append(radio, caption);
+      row.append(label);
+    }
     $2("paragraph-rows").append(row);
   }
   show("source");
@@ -2444,8 +2462,8 @@ $2("archive-file").addEventListener("change", guard(async (e) => {
 $2("prepare").addEventListener("click", guard(async () => {
   try {
     if (pastedParagraphs) {
-      const choices = Array.from($2("paragraph-rows").querySelectorAll("input"), (el) => el.checked);
-      if (!choices.includes(true) || !choices.includes(false)) throw Error("\u8BF7\u52FE\u9009\u4F60\u5199\u7684\u6BB5\u843D\uFF0C\u52A9\u624B\u7684\u6BB5\u843D\u7559\u7A7A\u3002");
+      const choices = Array.from($2("paragraph-rows").querySelectorAll("input:checked"), (el) => el.value);
+      if (!choices.includes("user") || !choices.includes("assistant")) throw Error("\u8BF7\u5206\u522B\u6807\u51FA\u4F60\u548C\u52A9\u624B\u7684\u53D1\u8A00\u3002");
       presentTurns(groupParagraphs(pastedParagraphs, choices), true);
       return;
     }
@@ -2531,7 +2549,7 @@ $2("import-answer").addEventListener("click", guard(async () => {
   }
   clearAnswerError();
   render();
-  notify("\u5F15\u6587\u3001\u8BF4\u8BDD\u8005\u3001\u5B57\u6BB5\u548C\u957F\u5EA6\u68C0\u67E5\u901A\u8FC7\u3002\u4ECD\u9700\u4F60\u68C0\u67E5\u89E3\u91CA\u662F\u5426\u7B26\u5408\u81EA\u5DF1\u3002");
+  notify("\u5DF2\u627E\u5230\u5F15\u6587\u5728\u539F\u6587\u4E2D\u7684\u4F4D\u7F6E\uFF0C\u5E76\u6838\u5BF9\u4E86\u6765\u6E90\u89D2\u8272\u3001\u5B57\u6BB5\u548C\u957F\u5EA6\u3002\u8BF7\u5BF9\u7167\u539F\u8BDD\u5224\u65AD\u89E3\u91CA\u662F\u5426\u6210\u7ACB\u3002");
   $2("result-panel").scrollIntoView({ block: "start" });
 }));
 $2("prompt").addEventListener("input", () => {
