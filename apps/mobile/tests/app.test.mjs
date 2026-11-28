@@ -271,3 +271,42 @@ test('plain desktop fallback needs explicit speakers and keeps separators within
     ['user','second question'],['assistant','last answer']
   ]);
 });
+
+test('ChatGPT desktop clocks between messages stay out of the confirmed source',async t=>{
+  const {page,context,origin}=await mobilePage(t);
+  const fixture=new URL('fixtures/chat-import/',import.meta.url);
+  const {plain}=JSON.parse(await readFile(new URL('chatgpt-desktop-four.json',fixture),'utf8'));
+  const html=await readFile(new URL('chatgpt-desktop-four.html',fixture),'utf8');
+  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});
+  const source=page.locator('#source');
+  async function paste(text,markup){
+    await source.fill('');
+    await page.evaluate(async({text,markup})=>{
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/plain':new Blob([text],{type:'text/plain'}),
+        'text/html':new Blob([markup],{type:'text/html'})
+      })]);
+    },{text,markup});
+    await source.focus();
+    await source.press('ControlOrMeta+v');
+    assert.equal(await source.inputValue(),text);
+  }
+  for(const changed of [html.replace('11:00 PM','11:01 PM'),html.replace('夜班挂白旗。','夜班挂蓝旗。')]){
+    await paste(plain,changed);
+    assert.equal(await page.locator('#confirm-messages').isVisible(),false);
+  }
+  const expected=[
+    ['user','虚构灯塔的晨班挂青旗，夜班挂白旗。请分成两个自然段复述，每段一句，中间留一个空行。'],
+    ['assistant','这座虚构灯塔的晨班挂青旗。\n\n这座虚构灯塔的夜班挂白旗。'],
+    ['user','现在只改夜班，换成紫旗。请用一句话复述改动。'],
+    ['assistant','这座虚构灯塔的夜班改挂紫旗。']
+  ];
+  for(const reply of [expected[3][1],'11:00 PM']){
+    await paste(plain.replace(expected[3][1],reply),html.replace(expected[3][1],reply));
+    assert.equal(await page.locator('#clipboard-rows select').count(),4);
+    await page.locator('#confirm-messages').click();
+    const rows=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+    assert.deepEqual(rows.map(s=>[s.role,s.text]),[...expected.slice(0,3),['assistant',reply]]);
+    await page.locator('[data-step="source"]').click();
+  }
+});
