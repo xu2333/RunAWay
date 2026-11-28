@@ -2050,6 +2050,11 @@ function show(step) {
     for (const { role } of session.prepared.sources.sources) counts.set(role, (counts.get(role) ?? 0) + 1);
     $2("source-summary").textContent = "\u8FD9\u4EFD\u8BF7\u6C42\u542B\u6709" + Array.from(counts, ([role, n]) => roles[role] + "\u7684 " + n + " \u6BB5\u6587\u5B57").join("\u3001") + "\u3002";
   }
+  if (step === "source") {
+    const pair = unlabelledPair();
+    $2("confirm-pair").hidden = !pair;
+    $2("prepare").hidden = !!pair;
+  }
   $2("intro").hidden = step !== "source";
   for (const name of ["source", "model", "result"]) $2(name + "-panel").hidden = name !== step;
   document.querySelectorAll("[data-step]").forEach((b) => {
@@ -2172,6 +2177,20 @@ $2("budget").addEventListener("change", () => {
   invalidate();
   imported = saved;
 });
+function unlabelledPair() {
+  const raw = $2("source").value;
+  if (imported || $2("kind").value !== "trajectory" || raw.length > 64e3) return null;
+  const parts = raw.trim().split(/\r?\n(?:[^\S\r\n]*\r?\n)+/);
+  if (parts.length !== 2) return null;
+  const markup = /^\s*[\[\{<#❯⏺`]/;
+  const speaker = /^\s*(?:用户|我|助手|工具|user|assistant|tool|你说|you said|chatgpt\s*(?:说|said))\s*(?:[:：]|$)/i;
+  if (parts.some((line) => /[\r\n]/.test(line) || markup.test(line) || speaker.test(line))) return null;
+  return parts;
+}
+$2("confirm-pair").addEventListener("click", guard(async () => {
+  const pair = unlabelledPair();
+  if (pair) presentTurns([{ role: "user", text: pair[0] }, { role: "assistant", text: pair[1] }], true);
+}));
 function presentTurns(turns, advance) {
   const structured = pack(turns);
   if (new TextEncoder().encode(structured).length > 64e3) throw Error("\u8FD9\u6BB5\u8D85\u8FC7 64 KB\uFF0C\u8BF7\u9009\u62E9\u8F83\u77ED\u7684\u5BF9\u8BDD\u3002");
