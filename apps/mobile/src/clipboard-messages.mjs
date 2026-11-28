@@ -1,10 +1,42 @@
-// Compare the inert clipboard markup to the plain text the browser actually pasted.
-// If its numbered message boundaries cannot reproduce that text, keep the normal text path.
+// The desktop selection can contain a clock label between message bodies. Match
+// every paragraph and label against the plain selection before excluding any label.
+function timestampedMessages(plain, fragment) {
+  const parts = plainParagraphs(plain);
+  if (!parts || fragment.querySelector('br, img, pre, table, ul, ol, hr')) return null;
+  const walker = document.createTreeWalker(fragment, NodeFilter.SHOW_TEXT);
+  const messages = [];
+  let index = 0, body = null, previousParagraph = null;
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    if (!node.textContent.trim()) continue;
+    const parent = node.parentElement;
+    const paragraph = parent?.closest('p');
+    if (paragraph && paragraph === previousParagraph) continue; // Inline formatting in one paragraph.
+    previousParagraph = paragraph;
+    const part = parts[index++];
+    if (!part) return null;
+    if (paragraph) {
+      if (part.text !== paragraph.textContent) return null;
+      if (!body) {
+        body = paragraph.parentElement;
+        messages.push(part.text);
+      } else if (body === paragraph.parentElement) {
+        messages[messages.length - 1] += part.separator + part.text;
+      } else return null; // Missing separator between two different message bodies.
+    } else {
+      if (!body || parent?.tagName !== 'SPAN' || body.contains(parent) ||
+          part.text !== node.textContent || !/^(?:0?[1-9]|1[0-2]):[0-5]\d[ \u00a0\u202f][ap]m$/i.test(part.text)) return null;
+      body = null;
+    }
+  }
+  return index === parts.length && messages.length >= 2 ? messages : null;
+}
+
 export function clipboardMessages(plain, html) {
   if (!plain || plain.length > 64000 || !html || html.length > 1000000) return null;
   const template = document.createElement('template');
   template.innerHTML = html;
   const articles = [...template.content.querySelectorAll('[role="article"]')];
+  if (!articles.length) return timestampedMessages(plain, template.content);
   if (articles.length < 2 || articles.length > 300) return null;
   const start = Number(articles[0].getAttribute('aria-posinset'));
   const total = Number(articles[0].getAttribute('aria-setsize'));

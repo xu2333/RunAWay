@@ -99,20 +99,21 @@ $('source').addEventListener('paste',event=>{
   if($('kind').value!=='trajectory' || field.selectionStart!==0 ||
      field.selectionEnd!==field.value.length || !event.clipboardData) return;
   const plain=event.clipboardData.getData('text/plain').replace(/\r\n?/g,'\n');
-  pendingPaste=clipboardMessages(plain,event.clipboardData.getData('text/html'));
+  const messages=clipboardMessages(plain,event.clipboardData.getData('text/html'));
+  if(messages) pendingPaste={plain,messages};
 });
 $('source').addEventListener('input',event=>{
-  const messages=pendingPaste;
+  const paste=pendingPaste;
   pendingPaste=null;
   invalidate();
   const raw=event.currentTarget.value;
   if($('kind').value!=='trajectory' || unlabelledPair()) return;
-  if(!messages || messages.join('\n\n')!==raw){
+  if(!paste || paste.plain!==raw){
     offerParagraphReview(raw,event.inputType==='insertFromPaste' || event.data?.includes('\n'));
     return;
   }
-  copiedMessages=messages;
-  for(const [i,text] of messages.entries()){
+  copiedMessages=paste.messages;
+  for(const [i,text] of copiedMessages.entries()){
     const row=document.createElement('label'), role=document.createElement('select');
     role.setAttribute('aria-label',`第 ${i+1} 条的说话人`);
     role.add(new Option('我','user'));role.add(new Option('助手','assistant'));
