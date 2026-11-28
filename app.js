@@ -1817,6 +1817,27 @@ function pack(turns) {
   return JSON.stringify({ schema_version: 1, sources: turns.map(({ role, text: text2 }, i) => ({ id: "message-" + (i + 1), episode_id: "submitted", role, text: text2 })) });
 }
 
+// src/clipboard-messages.mjs
+function clipboardMessages(plain, html) {
+  if (!plain || plain.length > 64e3 || !html || html.length > 1e6) return null;
+  const template = document.createElement("template");
+  template.innerHTML = html;
+  const articles = [...template.content.querySelectorAll('[role="article"]')];
+  if (articles.length < 2 || articles.length > 300) return null;
+  const start = Number(articles[0].getAttribute("aria-posinset"));
+  const total = Number(articles[0].getAttribute("aria-setsize"));
+  if (!Number.isSafeInteger(start) || !Number.isSafeInteger(total) || start < 1 || start + articles.length - 1 > total) return null;
+  const texts = [];
+  for (const [i, article] of articles.entries()) {
+    if (Number(article.getAttribute("aria-posinset")) !== start + i || Number(article.getAttribute("aria-setsize")) !== total) return null;
+    const paragraphs = [...article.querySelectorAll("p")];
+    const text2 = paragraphs.map((p) => p.textContent).join("\n\n");
+    if (!text2.trim()) return null;
+    texts.push(text2);
+  }
+  return texts.join("\n\n") === plain ? texts : null;
+}
+
 // src/conversation-picker.mjs
 var $ = (id) => document.getElementById(id);
 var size = (value) => new TextEncoder().encode(value).length;
@@ -2033,6 +2054,8 @@ var paper_crane_default = {
 var $2 = (id) => document.getElementById(id);
 var session = new Session();
 var imported = null;
+var copiedMessages = null;
+var pendingPaste = null;
 var fictional = false;
 var active = false;
 var storageReady = Promise.resolve();
@@ -2051,9 +2074,10 @@ function show(step) {
     $2("source-summary").textContent = "\u8FD9\u4EFD\u8BF7\u6C42\u542B\u6709" + Array.from(counts, ([role, n]) => roles[role] + "\u7684 " + n + " \u6BB5\u6587\u5B57").join("\u3001") + "\u3002";
   }
   if (step === "source") {
-    const pair = unlabelledPair();
+    const pair = !copiedMessages && unlabelledPair();
+    $2("clipboard-review").hidden = !copiedMessages;
     $2("confirm-pair").hidden = !pair;
-    $2("prepare").hidden = !!pair;
+    $2("prepare").hidden = !!pair || !!copiedMessages;
   }
   $2("intro").hidden = step !== "source";
   for (const name of ["source", "model", "result"]) $2(name + "-panel").hidden = name !== step;
@@ -2095,7 +2119,11 @@ function resetHandoff() {
   $2("send-request").open = true;
   $2("send-label").textContent = "\u628A\u63D0\u70BC\u8BF7\u6C42\u53D1\u7ED9\u6A21\u578B";
 }
-function invalidate() {
+function invalidate({ keepCopied = false } = {}) {
+  if (!keepCopied) {
+    copiedMessages = null;
+    $2("clipboard-rows").replaceChildren();
+  }
   imported = null;
   resetHandoff();
   session.reset();
@@ -2170,11 +2198,41 @@ function confirmReplace() {
   return !($2("source").value || session.portable || session.answer) || window.confirm("\u66FF\u6362\u5F53\u524D\u6750\u6599\uFF1F\u8BF7\u5148\u4FDD\u5B58\u60F3\u4FDD\u7559\u7684\u79C1\u6709\u6863\u6848\u3002");
 }
 for (const b of document.querySelectorAll("[data-step]")) b.addEventListener("click", () => show(b.dataset.step));
-$2("source").addEventListener("input", invalidate);
+$2("source").addEventListener("paste", (event) => {
+  const field = event.currentTarget;
+  pendingPaste = null;
+  if ($2("kind").value !== "trajectory" || field.selectionStart !== 0 || field.selectionEnd !== field.value.length || !event.clipboardData) return;
+  const plain = event.clipboardData.getData("text/plain").replace(/\r\n?/g, "\n");
+  pendingPaste = clipboardMessages(plain, event.clipboardData.getData("text/html"));
+});
+$2("source").addEventListener("input", (event) => {
+  const messages = pendingPaste;
+  pendingPaste = null;
+  invalidate();
+  if (!messages || event.inputType !== "insertFromPaste" || unlabelledPair() || messages.join("\n\n") !== event.currentTarget.value) return;
+  copiedMessages = messages;
+  for (const [i, text2] of messages.entries()) {
+    const row = document.createElement("label"), role = document.createElement("select");
+    role.setAttribute("aria-label", `\u7B2C ${i + 1} \u6761\u7684\u8BF4\u8BDD\u4EBA`);
+    role.add(new Option("\u6211", "user"));
+    role.add(new Option("\u52A9\u624B", "assistant"));
+    role.value = i % 2 === 0 ? "user" : "assistant";
+    row.append(role);
+    append(row, "span", text2);
+    $2("clipboard-rows").append(row);
+  }
+  show("source");
+  $2("clipboard-review").scrollIntoView({ block: "nearest" });
+});
+$2("confirm-messages").addEventListener("click", guard(async () => {
+  if (!copiedMessages) return;
+  const roles = $2("clipboard-rows").querySelectorAll("select");
+  presentTurns(copiedMessages.map((text2, i) => ({ text: text2, role: roles[i].value })), true);
+}));
 $2("kind").addEventListener("change", invalidate);
 $2("budget").addEventListener("change", () => {
   const saved = imported;
-  invalidate();
+  invalidate({ keepCopied: true });
   imported = saved;
 });
 function unlabelledPair() {
@@ -2251,6 +2309,8 @@ $2("archive-file").addEventListener("change", guard(async (e) => {
     const text2 = await readFile(e.target, 2e6);
     if (text2 === null || !confirmReplace()) return;
     const result = await session.restore(text2);
+    copiedMessages = null;
+    $2("clipboard-rows").replaceChildren();
     imported = null;
     resetHandoff();
     fictional = session.origin === "fictional_demo";

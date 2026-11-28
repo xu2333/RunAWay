@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>RunAWay · 口袋里的你</title>
-<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js?v=3b58c07eec654ec2"></script>
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js?v=7047b8d49f0d3a03"></script>
 </head>
 <body>
 <header><div class="wordmark">RunAWay<span>your taste, to go.</span></div><span class="local">● 本机处理</span></header>
@@ -21,7 +21,7 @@
 <p><strong>Codex</strong>　桌面本机会话可用「Copy conversation path」复制会话文件路径。在这里点「导入对话文件」，Mac 按 ⌘⇧G 粘贴路径并打开。终端也可用 <code>/export</code> 复制整段 Markdown 后粘贴。</p>
 <p><strong>ChatGPT</strong>　复制一段含双方发言的文字，保留「你说」「ChatGPT 说」标题。已有导出 ZIP 可直接选；需要整段历史时，在设置 → 数据控制里导出。</p>
 <p><strong>Claude Code</strong>　输入 <code>/export</code> 复制到剪贴板或存为文本。文字版的圆点也可能是工具提示，导入时勾选实际的助手回复。含工具的长对话可选 <code>~/.claude/projects/</code> 中的会话 JSONL。Mac 选文件时按 ⌘⇧G 可输入目录。</p>
-<p><strong>Claude</strong>　桌面版可拖选一问一答并一起复制。粘贴两段后，确认第一段是你写的、第二段是助手回复。已有导出 ZIP 或 <code>conversations.json</code> 可直接打开。网页版和桌面版的导出入口在「设置 → 隐私」。</p>
+<p><strong>Claude</strong>　桌面版可拖选多轮问答一起复制。直接粘贴后核对每条发言的说话人。已有导出 ZIP 或 <code>conversations.json</code> 可直接打开。网页版和桌面版的导出入口在「设置 → 隐私」。</p>
 </details></div>
 <label for="source">把你和助手的发言一起贴进来</label><textarea id="source" aria-describedby="source-error source-count" rows="5" placeholder="用户：……&#10;助手：……&#10;用户：下次遇到这种情况，我希望……"></textarea>
 <details id="single-turn"><summary>复制出来没有说话人？</summary>
@@ -29,6 +29,9 @@
 <div class="file-actions"><button id="append-user" class="secondary">加入我的发言</button><button id="append-assistant" class="secondary">加入助手发言</button></div></details>
 <p id="source-error" class="error" role="alert" hidden></p>
 <p id="source-count" class="hint">0 字符 · 最多 64 KB</p>
+<fieldset id="clipboard-review" hidden><legend>核对复制过来的发言</legend>
+<p class="hint">已按消息分好段。说话人暂按你和助手轮流填写，点名字可改。</p>
+<div id="clipboard-rows"></div><button id="confirm-messages" class="primary full">确认说话人，生成请求 →</button></fieldset>
 <button id="confirm-pair" class="primary full" hidden>确认第一段是我、第二段是助手，生成请求 →</button>
 <button id="prepare" class="primary full">生成提炼请求 →</button>
 <details id="source-options"><summary>打开已有短卡、换材料类型或调整字数</summary>
