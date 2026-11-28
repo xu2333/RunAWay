@@ -1686,7 +1686,29 @@ function archiveEntry(c) {
     return { title: c.name || "Claude \u5BF9\u8BDD", read: () => c.chat_messages.flatMap((m) => turn(m.sender === "human" ? "user" : m.sender, blocks(m.content, ["text"]) || m.text)) };
   throw Error("\u6587\u4EF6\u4E2D\u6709\u65E0\u6CD5\u8BC6\u522B\u7684\u5BF9\u8BDD\uFF0C\u8BF7\u9009\u62E9 ChatGPT \u6216 Claude \u7684 conversations JSON\u3002");
 }
+function antigravityTurns(rows) {
+  const turns = [];
+  let previous = -1;
+  for (const row of rows) {
+    if (!Number.isSafeInteger(row?.step_index) || row.step_index <= previous || typeof row.source !== "string")
+      throw Error("\u8FD9\u4EFD Antigravity \u8BB0\u5F55\u7684\u6B65\u9AA4\u4E0D\u5B8C\u6574\u6216\u987A\u5E8F\u5F02\u5E38\u3002\u8BF7\u9009\u62E9\u5355\u4E2A\u4F1A\u8BDD\u7684 transcript.jsonl\u3002");
+    previous = row.step_index;
+    if (row.status !== "DONE") continue;
+    if (row.source === "USER_EXPLICIT" && row.type === "USER_INPUT") {
+      const content = row.content;
+      const end = "\n</USER_REQUEST>";
+      if (typeof content !== "string" || !content.startsWith("<USER_REQUEST>\n") || !content.includes(end) || content.indexOf(end) !== content.lastIndexOf(end))
+        throw Error("\u65E0\u6CD5\u786E\u5B9A Antigravity \u7528\u6237\u539F\u8BDD\u7684\u8FB9\u754C\uFF0C\u8BF7\u6539\u9009\u5176\u4ED6\u4F1A\u8BDD\u6216\u624B\u52A8\u7C98\u8D34\u3002");
+      turns.push(...turn("user", content.slice("<USER_REQUEST>\n".length, content.indexOf(end))));
+    } else if (row.source === "MODEL" && row.type === "PLANNER_RESPONSE") {
+      turns.push(...turn("assistant", row.content));
+    }
+  }
+  return turns;
+}
 function logTurns(rows) {
+  if (rows.some((r) => r?.type === "USER_INPUT" && r.source === "USER_EXPLICIT" && Number.isSafeInteger(r.step_index)))
+    return antigravityTurns(rows);
   if (rows.some((r) => r?.type === "response_item" || r?.type === "session_meta")) {
     return rows.flatMap((r) => {
       const m = r.payload;
@@ -1710,7 +1732,7 @@ function logTurns(rows) {
     }
     return turns;
   }
-  throw Error("\u672A\u8BC6\u522B\u8FD9\u4E9B\u65E5\u5FD7\u3002\u8BF7\u9009\u62E9 Codex \u6216 Claude Code \u7684\u5355\u4E2A\u4F1A\u8BDD\u6587\u4EF6\u3002");
+  throw Error("\u672A\u8BC6\u522B\u8FD9\u4E9B\u65E5\u5FD7\u3002\u8BF7\u9009\u62E9 Codex\u3001Claude Code \u6216 Antigravity \u7684\u5355\u4E2A\u4F1A\u8BDD\u6587\u4EF6\u3002");
 }
 function codexMarkdown(raw) {
   const turns = [];
@@ -1761,6 +1783,8 @@ function recognize(raw, name = "") {
       return null;
     }
     if (Array.isArray(data) && data.some((c) => c?.mapping || c?.chat_messages)) return data.map(archiveEntry);
+    if (data?.schema_version === 1 && Array.isArray(data.sources) && data.sources.length && data.sources.every((m) => ["user", "assistant"].includes(m?.role) && typeof m.text === "string" && m.text.trim()))
+      return [{ title: "RunAWay \u5BF9\u8BDD\u7247\u6BB5", read: () => data.sources.map(({ role, text: text3 }) => ({ role, text: text3 })) }];
     if (data?.mapping || data?.chat_messages) return [archiveEntry(data)];
     if (data?.type && (data.payload || data.message)) return [{ title: "\u4F1A\u8BDD\u8BB0\u5F55", read: () => logTurns([data]) }];
   }
@@ -1889,7 +1913,7 @@ function groupParagraphs(paragraphs, selected) {
 // src/conversation-picker.mjs
 var $ = (id) => document.getElementById(id);
 var size = (value) => new TextEncoder().encode(value).length;
-function createPicker(apply) {
+function createPicker(apply, saveExcerpt) {
   const dialog = $("conversation-picker"), choice = $("chat-choice");
   let chats = [], turns = [];
   const error = (message) => {
@@ -1912,10 +1936,10 @@ function createPicker(apply) {
       $("chat-range-preview").textContent = "\u5F00\u5934\uFF1A" + first.slice(0, 90) + "\n\u7ED3\u5C3E\uFF1A" + last.slice(-90);
       if (size(pack(part)) > 64e3) throw Error("\u8FD9\u6BB5\u8D85\u51FA 64 KB\uFF0C\u8BF7\u7F29\u5C0F\u8D77\u6B62\u8303\u56F4\u3002");
       error("");
-      $("choose-chat").disabled = false;
+      $("save-excerpt").disabled = $("choose-chat").disabled = false;
     } catch (e) {
       error(e.message);
-      $("choose-chat").disabled = true;
+      $("save-excerpt").disabled = $("choose-chat").disabled = true;
     }
   }
   function select() {
@@ -1923,7 +1947,7 @@ function createPicker(apply) {
     $("chat-review").hidden = true;
     $("chat-blocks").replaceChildren();
     error("");
-    $("choose-chat").disabled = true;
+    $("save-excerpt").disabled = $("choose-chat").disabled = true;
     $("chat-range-preview").textContent = "";
     $("chat-size").textContent = "";
     try {
@@ -1975,6 +1999,14 @@ function createPicker(apply) {
       error(e.message);
     }
   });
+  $("save-excerpt").addEventListener("click", async () => {
+    try {
+      await saveExcerpt(pack(range()));
+      dialog.close();
+    } catch (e) {
+      error(e.message);
+    }
+  });
   dialog.addEventListener("close", () => {
     chats = [];
     turns = [];
@@ -1985,8 +2017,8 @@ function createPicker(apply) {
     $("chat-size").textContent = "";
     error("");
   });
-  return (items) => {
-    if (items.length === 1 && !items[0].review) {
+  return (items, { selectRange = false } = {}) => {
+    if (!selectRange && items.length === 1 && !items[0].review) {
       const only = items[0].read();
       if (size(pack(only)) <= 64e3) {
         apply(only);
@@ -2120,6 +2152,7 @@ function show(step) {
     const roles = { user: "\u4F60", assistant: "\u52A9\u624B", tool: "\u5DE5\u5177", context: "\u80CC\u666F" };
     const counts = /* @__PURE__ */ new Map();
     for (const { role } of session.prepared.sources.sources) counts.set(role, (counts.get(role) ?? 0) + 1);
+    $2("excerpt").hidden = !imported;
     $2("source-summary").textContent = "\u8FD9\u4EFD\u8BF7\u6C42\u542B\u6709" + Array.from(counts, ([role, n]) => roles[role] + "\u7684 " + n + " \u6BB5\u6587\u5B57").join("\u3001") + "\u3002";
   }
   if (step === "source") {
@@ -2339,7 +2372,10 @@ function presentTurns(turns, advance) {
     $2("copy-request").focus();
   }
 }
-var pickConversation = createPicker((turns) => presentTurns(turns, true));
+var pickConversation = createPicker((turns) => presentTurns(turns, true), (text2) => save("runaway-dialogue.json", text2));
+$2("excerpt").addEventListener("click", () => {
+  if (imported) pickConversation([{ title: "\u5F53\u524D\u5BF9\u8BDD", read: () => JSON.parse(imported).sources }], { selectRange: true });
+});
 for (const role of ["user", "assistant"]) $2("append-" + role).addEventListener("click", guard(async () => {
   const text2 = $2("turn-text").value;
   if (!text2.trim()) throw Error("\u8BF7\u5148\u7C98\u8D34\u4E00\u6761\u53D1\u8A00\u3002");
