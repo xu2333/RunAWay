@@ -173,6 +173,11 @@ test('a fresh visitor can open a log, pick one conversation from a ZIP or label 
 test('review native Claude Code dots and keep only the chosen turns',async t=>{
   const {page}=await mobilePage(t);
   await page.locator('#source-file').setInputFiles(fileURLToPath(new URL('fixtures/chat-import/claude-export.txt',import.meta.url)));
+  await page.locator('#conversation-picker').getByRole('button',{name:'取消'}).click();
+  const native=await readFile(new URL('fixtures/chat-import/claude-export.txt',import.meta.url),'utf8');
+  await page.locator('#source').fill(native);
+  assert.equal(await page.locator('#paragraph-review').isVisible(),false);
+  await page.locator('#prepare').click();
   const panel=page.locator('#chat-review');
   await panel.waitFor({state:'visible'});
   assert.equal(await panel.locator('input:checked').count(),2);
@@ -248,4 +253,21 @@ test('multi-turn desktop paste uses actual message blocks and keeps an internal 
   await paste(html);
   await source.fill('edited');
   assert.equal(await review.isVisible(),false);
+});
+
+test('plain desktop fallback needs explicit speakers and keeps separators within a message',async t=>{
+  const {page}=await mobilePage(t);
+  await page.locator('#source').fill('first question\n\nanswer part 1\n \n\nanswer part 2\n\nsecond question\n\nlast answer');
+  const boxes=page.locator('#paragraph-review').getByRole('checkbox');
+  assert.equal(await boxes.count(),5);
+  await page.locator('#prepare').click();
+  assert.match(await page.locator('#source-error').innerText(),/勾选/);
+  await boxes.nth(0).check();
+  await boxes.nth(3).check();
+  await page.locator('#prepare').click();
+  const rows=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+  assert.deepEqual(rows.map(s=>[s.role,s.text]),[
+    ['user','first question'],['assistant','answer part 1\n \n\nanswer part 2'],
+    ['user','second question'],['assistant','last answer']
+  ]);
 });

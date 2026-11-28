@@ -4,12 +4,12 @@ import {makeBundle as harnessBundle} from '../../../packages/harnesses/bundle.mj
 import {length,sourcesFrom} from '../../../web/dist/core.mjs';
 import {copyText,saveFile,cleanExports} from './io.mjs';
 import {pack,recognize,readConversationFile} from './conversation-import.mjs';
-import {clipboardMessages} from './clipboard-messages.mjs';
+import {clipboardMessages,plainParagraphs,groupParagraphs} from './clipboard-messages.mjs';
 import {createPicker} from './conversation-picker.mjs';
 import demo from './paper-crane.json';
 
 const $=id=>document.getElementById(id),session=new Session();
-let imported=null, copiedMessages=null, pendingPaste=null;
+let imported=null, copiedMessages=null, pastedParagraphs=null, pendingPaste=null;
 let fictional=false,active=false,storageReady=Promise.resolve();
 function notify(text,error=false){$('notice').hidden=false;$('notice').textContent=text;$('notice').classList.toggle('error',error);}
 function show(step){
@@ -24,6 +24,8 @@ function show(step){
   if(step==='source'){
     const pair=!copiedMessages && unlabelledPair();
     $('clipboard-review').hidden=!copiedMessages;
+    $('paragraph-review').hidden=!pastedParagraphs;
+    $('prepare').textContent=pastedParagraphs?'确认说话人和分段，生成请求 →':'生成提炼请求 →';
     $('confirm-pair').hidden=!pair;
     $('prepare').hidden=!!pair || !!copiedMessages;
   }
@@ -53,7 +55,7 @@ function resetHandoff(){
   $('send-label').textContent='把提炼请求发给模型';
 }
 function invalidate({keepCopied=false}={}){
-  if(!keepCopied){copiedMessages=null;$('clipboard-rows').replaceChildren();}
+  if(!keepCopied) clearPasteReview();
   imported=null;resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
 function append(parent,tag,text){const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;}
 function updateSize(){const value=session.portable?session.portable.text:BOUNDARY+$('prompt').value+'\n';$('prompt-size').textContent=`完整 prompt ${length(value)} 字符（包含边界，不是 token 数）`;$('reviewed').checked=false;}
@@ -75,6 +77,22 @@ async function save(name,value,mime='application/json'){const saved=await saveFi
 async function readFile(input,max=512000){const file=input.files?.[0];if(!file)return null;if(file.size>max)throw Error(`文件超过 ${max/1000} KB，请选择相关片段。`);try{return new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('文件编码无法识别。请选择 UTF-8 文本文件；原有材料未改变。');}}
 function confirmReplace(){return !($('source').value||session.portable||session.answer)||window.confirm('替换当前材料？请先保存想保留的私有档案。');}
 for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('click',()=>show(b.dataset.step));
+function clearPasteReview(){
+  copiedMessages=null; pastedParagraphs=null;
+  $('clipboard-rows').replaceChildren(); $('paragraph-rows').replaceChildren();
+}
+function offerParagraphReview(raw,scroll){
+  const paragraphs=plainParagraphs(raw);
+  if(!paragraphs || recognize(raw)) return;
+  pastedParagraphs=paragraphs;
+  for(const {text} of pastedParagraphs){
+    const row=document.createElement('label'), check=document.createElement('input');
+    check.type='checkbox'; row.append(check);
+    append(row,'span',text); $('paragraph-rows').append(row);
+  }
+  show('source');
+  if(scroll) $('prepare').scrollIntoView({block:'nearest'});
+}
 $('source').addEventListener('paste',event=>{
   const field=event.currentTarget;
   pendingPaste=null;
@@ -87,8 +105,12 @@ $('source').addEventListener('input',event=>{
   const messages=pendingPaste;
   pendingPaste=null;
   invalidate();
-  if(!messages || event.inputType!=='insertFromPaste' || unlabelledPair() ||
-     messages.join('\n\n')!==event.currentTarget.value) return;
+  const raw=event.currentTarget.value;
+  if($('kind').value!=='trajectory' || unlabelledPair()) return;
+  if(!messages || messages.join('\n\n')!==raw){
+    offerParagraphReview(raw,event.inputType==='insertFromPaste' || event.data?.includes('\n'));
+    return;
+  }
   copiedMessages=messages;
   for(const [i,text] of messages.entries()){
     const row=document.createElement('label'), role=document.createElement('select');
@@ -163,9 +185,15 @@ $('source-file').addEventListener('change',guard(async e=>{
     $('source').value=raw; invalidate(); notify('材料已在本机读入。没有上传。');
   }finally{e.target.value='';$('prepare').disabled=false;}
 }));
-$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);copiedMessages=null;$('clipboard-rows').replaceChildren();imported=null;resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
+$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);clearPasteReview();imported=null;resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
 $('prepare').addEventListener('click',guard(async()=>{
   try{
+    if(pastedParagraphs){
+      const choices=Array.from($('paragraph-rows').querySelectorAll('input'),el=>el.checked);
+      if(!choices.includes(true) || !choices.includes(false)) throw Error('请勾选你写的段落，助手的段落留空。');
+      presentTurns(groupParagraphs(pastedParagraphs,choices),true);
+      return;
+    }
     // Editing a source field already invalidates its request and answer.
     if(!session.prepared){
       const raw=$('source').value;

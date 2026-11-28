@@ -22,3 +22,25 @@ export function clipboardMessages(plain, html) {
   }
   return texts.join('\n\n') === plain ? texts : null;
 }
+
+// Without numbered messages the visitor supplies the roles. Preserve the literal
+// separators for neighbouring paragraphs they confirm belong to the same speaker.
+export function plainParagraphs(raw) {
+  if (raw.length > 64000 || /^\s*[[{<#❯⏺]/.test(raw)) return null;
+  if (/^\s*(?:用户|我|助手|工具|user|assistant|tool|你说|you said|chatgpt\s*(?:说|said))\s*(?:[:：]|$)/im.test(raw)) return null;
+  const pieces = raw.split(/(\n[ \t]*\n(?:[ \t]*\n)*)/);
+  const paragraphs = pieces.filter((_, index) => index % 2 === 0);
+  if (paragraphs.length < 3 || paragraphs.length > 100 || paragraphs.some(p=>!p.trim())) return null;
+  return paragraphs.map((text,i)=>({text, separator:i ? pieces[i*2-1] : ''}));
+}
+
+export function groupParagraphs(paragraphs, selected) {
+  const turns=[];
+  for(const [i,{text,separator}] of paragraphs.entries()){
+    const role=selected[i] ? 'user' : 'assistant';
+    const last=turns.at(-1);
+    if(last?.role===role) last.text+=separator+text;
+    else turns.push({role,text});
+  }
+  return turns;
+}
