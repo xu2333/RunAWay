@@ -4,11 +4,12 @@ import {makeBundle as harnessBundle} from '../../../packages/harnesses/bundle.mj
 import {length,sourcesFrom} from '../../../web/dist/core.mjs';
 import {copyText,saveFile,cleanExports} from './io.mjs';
 import {pack,recognize,readConversationFile} from './conversation-import.mjs';
+import {clipboardMessages} from './clipboard-messages.mjs';
 import {createPicker} from './conversation-picker.mjs';
 import demo from './paper-crane.json';
 
 const $=id=>document.getElementById(id),session=new Session();
-let imported=null;
+let imported=null, copiedMessages=null, pendingPaste=null;
 let fictional=false,active=false,storageReady=Promise.resolve();
 function notify(text,error=false){$('notice').hidden=false;$('notice').textContent=text;$('notice').classList.toggle('error',error);}
 function show(step){
@@ -21,9 +22,10 @@ function show(step){
     $('source-summary').textContent='这份请求含有'+Array.from(counts,([role,n])=>roles[role]+'的 '+n+' 段文字').join('、')+'。';
   }
   if(step==='source'){
-    const pair=unlabelledPair();
+    const pair=!copiedMessages && unlabelledPair();
+    $('clipboard-review').hidden=!copiedMessages;
     $('confirm-pair').hidden=!pair;
-    $('prepare').hidden=!!pair;
+    $('prepare').hidden=!!pair || !!copiedMessages;
   }
   $('intro').hidden=step!=='source';
   for(const name of ['source','model','result'])$(name+'-panel').hidden=name!==step;
@@ -50,7 +52,9 @@ function resetHandoff(){
   $('send-request').open=true;
   $('send-label').textContent='把提炼请求发给模型';
 }
-function invalidate(){imported=null;resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
+function invalidate({keepCopied=false}={}){
+  if(!keepCopied){copiedMessages=null;$('clipboard-rows').replaceChildren();}
+  imported=null;resetHandoff();session.reset();fictional=false;$('reviewed').checked=false;$('request').value='';$('answer').value='';show('source');$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';}
 function append(parent,tag,text){const n=document.createElement(tag);n.textContent=text;parent.append(n);return n;}
 function updateSize(){const value=session.portable?session.portable.text:BOUNDARY+$('prompt').value+'\n';$('prompt-size').textContent=`完整 prompt ${length(value)} 字符（包含边界，不是 token 数）`;$('reviewed').checked=false;}
 function render(){
@@ -71,9 +75,40 @@ async function save(name,value,mime='application/json'){const saved=await saveFi
 async function readFile(input,max=512000){const file=input.files?.[0];if(!file)return null;if(file.size>max)throw Error(`文件超过 ${max/1000} KB，请选择相关片段。`);try{return new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());}catch{throw Error('文件编码无法识别。请选择 UTF-8 文本文件；原有材料未改变。');}}
 function confirmReplace(){return !($('source').value||session.portable||session.answer)||window.confirm('替换当前材料？请先保存想保留的私有档案。');}
 for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('click',()=>show(b.dataset.step));
-$('source').addEventListener('input',invalidate);
+$('source').addEventListener('paste',event=>{
+  const field=event.currentTarget;
+  pendingPaste=null;
+  if($('kind').value!=='trajectory' || field.selectionStart!==0 ||
+     field.selectionEnd!==field.value.length || !event.clipboardData) return;
+  const plain=event.clipboardData.getData('text/plain').replace(/\r\n?/g,'\n');
+  pendingPaste=clipboardMessages(plain,event.clipboardData.getData('text/html'));
+});
+$('source').addEventListener('input',event=>{
+  const messages=pendingPaste;
+  pendingPaste=null;
+  invalidate();
+  if(!messages || event.inputType!=='insertFromPaste' || unlabelledPair() ||
+     messages.join('\n\n')!==event.currentTarget.value) return;
+  copiedMessages=messages;
+  for(const [i,text] of messages.entries()){
+    const row=document.createElement('label'), role=document.createElement('select');
+    role.setAttribute('aria-label',`第 ${i+1} 条的说话人`);
+    role.add(new Option('我','user'));role.add(new Option('助手','assistant'));
+    role.value=i%2===0?'user':'assistant';
+    row.append(role);
+    append(row,'span',text);
+    $('clipboard-rows').append(row);
+  }
+  show('source');
+  $('clipboard-review').scrollIntoView({block:'nearest'});
+});
+$('confirm-messages').addEventListener('click',guard(async()=>{
+  if(!copiedMessages) return;
+  const roles=$('clipboard-rows').querySelectorAll('select');
+  presentTurns(copiedMessages.map((text,i)=>({text,role:roles[i].value})),true);
+}));
 $('kind').addEventListener('change',invalidate);
-$('budget').addEventListener('change',()=>{const saved=imported;invalidate();imported=saved;});
+$('budget').addEventListener('change',()=>{const saved=imported;invalidate({keepCopied:true});imported=saved;});
 // Offer a shortcut only for two plain, single-line paragraphs. The click supplies the roles.
 function unlabelledPair() {
   const raw=$('source').value;
@@ -128,7 +163,7 @@ $('source-file').addEventListener('change',guard(async e=>{
     $('source').value=raw; invalidate(); notify('材料已在本机读入。没有上传。');
   }finally{e.target.value='';$('prepare').disabled=false;}
 }));
-$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);imported=null;resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
+$('archive-file').addEventListener('change',guard(async e=>{try{const text=await readFile(e.target,2000000);if(text===null||!confirmReplace())return;const result=await session.restore(text);copiedMessages=null;$('clipboard-rows').replaceChildren();imported=null;resetHandoff();fictional=session.origin==='fictional_demo';$('reviewed').checked=false;if(result.kind==='archive'){$('source').value=JSON.stringify(session.prepared.sources,null,2);$('kind').value='trajectory';$('budget').value=String(session.prepared.budget);$('request').value=session.request();}else{$('source').value='';$('request').value='';}$('answer').value='';$('source-count').textContent=length($('source').value)+' 字符 · 最多 64 KB';render();notify('文件已在本机打开。请再次核对后导出。');}finally{e.target.value='';}}));
 $('prepare').addEventListener('click',guard(async()=>{
   try{
     // Editing a source field already invalidates its request and answer.

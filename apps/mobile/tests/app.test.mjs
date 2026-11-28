@@ -201,3 +201,51 @@ test('Claude desktop selection keeps both texts in order after explicit role con
   assert.ok(request.includes(question) && request.indexOf(reply)>request.indexOf(question));
   assert.match(await page.locator('#source-summary').innerText(),/你的 1 段文字、助手的 1 段文字/);
 });
+
+test('multi-turn desktop paste uses actual message blocks and keeps an internal paragraph break',async t=>{
+  const {page,context,origin}=await mobilePage(t);
+  const fixture=new URL('fixtures/chat-import/',import.meta.url);
+  const raw=await readFile(new URL('claude-desktop-four.txt',fixture),'utf8');
+  const html=await readFile(new URL('claude-desktop-four.html',fixture),'utf8');
+  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin});
+  const source=page.locator('#source'), review=page.locator('#clipboard-review');
+  async function paste(markup){
+    await source.fill('');
+    await page.evaluate(async({raw,markup})=>{
+      const formats={'text/plain':new Blob([raw],{type:'text/plain'})};
+      if(markup) formats['text/html']=new Blob([markup],{type:'text/html'});
+      await navigator.clipboard.write([new ClipboardItem(formats)]);
+    },{raw,markup});
+    await source.focus();
+    await source.press('ControlOrMeta+v');
+    assert.equal(await source.inputValue(),raw);
+  }
+  for(const invalid of ['',html.replace('aria-posinset="2"','aria-posinset="3"'),html.replace('青色旗帜','红色旗帜')]){
+    await paste(invalid);
+    assert.equal(await review.isVisible(),false);
+    assert.equal(await page.locator('#confirm-pair').isVisible(),false);
+  }
+  await paste(html);
+  const roles=review.getByRole('combobox');
+  assert.equal(await roles.count(),4);
+  assert.equal(await page.locator('#model-panel').isVisible(),false);
+  await roles.nth(3).selectOption('user');
+  await page.locator('#source-options summary').click();
+  await page.locator('#budget').selectOption('1000');
+  assert.equal(await roles.nth(3).inputValue(),'user');
+  await page.locator('#confirm-messages').click();
+  let sources=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+  assert.deepEqual(sources.map(s=>s.role),['user','assistant','user','user']);
+  await page.locator('[data-step="source"]').click();
+  await paste(html);
+  await page.locator('#confirm-messages').click();
+  sources=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+  const [q1,p1,p2,q2,a2]=raw.split('\n\n');
+  assert.deepEqual(sources.map(s=>[s.role,s.text]),[
+    ['user',q1],['assistant',p1+'\n\n'+p2],['user',q2],['assistant',a2]
+  ]);
+  await page.locator('[data-step="source"]').click();
+  await paste(html);
+  await source.fill('edited');
+  assert.equal(await review.isVisible(),false);
+});
