@@ -17,3 +17,9 @@
 [可复现的输入样本](../../apps/mobile/tests/fixtures/chat-import) · [解析测试](../../apps/mobile/tests/conversation-import.test.mjs) · [浏览器操作测试](../../apps/mobile/tests/app.test.mjs)
 
 [Codex CLI 导出](https://developers.openai.com/codex/cli/slash-commands) · [Codex 官方 Markdown 样本](https://github.com/openai/codex/blob/main/codex-rs/tui/src/app/snapshots/codex_tui__app__transcript_export__tests__markdown_transcript.snap) · [Claude Code 导出](https://code.claude.com/docs/en/commands) · [ChatGPT 数据导出](https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data) · [Claude 数据导出](https://support.claude.com/en/articles/9450526-export-your-claude-data)
+
+### Claude 桌面版的一问一答
+
+操作者在 macOS Claude 桌面版拖选了一段虚构提问和一段实际回复，按 ⌘C，并确认已复制。系统剪贴板的纯文本共有 55 个字符，两段之间有一个空行，未带角色标签。旧线上页粘贴后点生成，提示无法识别说话人。桌面控制工具当时未能读取 Claude 窗口，App 内两步来自操作者确认。
+
+针对由空行隔开的两行普通文字，网页现在提供「确认第一段是我、第二段是助手，生成请求」。确认才赋予角色。超过两段、段内换行及带有角色标签的内容沿用原有入口。[实际虚构样本](../../apps/mobile/tests/fixtures/chat-import/claude-desktop-pair.txt)

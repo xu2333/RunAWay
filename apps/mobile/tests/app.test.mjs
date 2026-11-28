@@ -181,3 +181,23 @@ test('review native Claude Code dots and keep only the chosen turns',async t=>{
   assert.match(await page.locator('#source-summary').textContent(),/你的 2 段文字、助手的 1 段文字/);
   assert.doesNotMatch(await page.locator('#request').inputValue(),/model synthetic could not/);
 });
+
+test('Claude desktop selection keeps both texts in order after explicit role confirmation',async t=>{
+  const {page}=await mobilePage(t);
+  const raw=await readFile(new URL('fixtures/chat-import/claude-desktop-pair.txt',import.meta.url),'utf8');
+  const source=page.locator('#source'),confirm=page.locator('#confirm-pair');
+  for(const other of ['one turn','one\n\ntwo\n\nthree','用户：第一段\n\n第二段','第一段\n\nAssistant: second','one\ncontinued\n\ntwo']){
+    await source.fill(other);
+    assert.equal(await confirm.isVisible(),false);
+    assert.equal(await page.locator('#prepare').isVisible(),true);
+  }
+  await source.fill(raw);
+  assert.equal(await page.locator('#model-panel').isVisible(),false);
+  await confirm.click();
+  const [question,reply]=raw.split('\n\n');
+  const transcript=await source.inputValue();
+  assert.equal(transcript,'用户：'+question+'\n助手：'+reply);
+  const request=await page.locator('#request').inputValue();
+  assert.ok(request.includes(question) && request.indexOf(reply)>request.indexOf(question));
+  assert.match(await page.locator('#source-summary').innerText(),/你的 1 段文字、助手的 1 段文字/);
+});

@@ -20,6 +20,11 @@ function show(step){
     for(const {role} of session.prepared.sources.sources)counts.set(role,(counts.get(role)??0)+1);
     $('source-summary').textContent='这份请求含有'+Array.from(counts,([role,n])=>roles[role]+'的 '+n+' 段文字').join('、')+'。';
   }
+  if(step==='source'){
+    const pair=unlabelledPair();
+    $('confirm-pair').hidden=!pair;
+    $('prepare').hidden=!!pair;
+  }
   $('intro').hidden=step!=='source';
   for(const name of ['source','model','result'])$(name+'-panel').hidden=name!==step;
   document.querySelectorAll('[data-step]').forEach(b=>{if(b.dataset.step===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
@@ -69,6 +74,21 @@ for(const b of document.querySelectorAll('[data-step]'))b.addEventListener('clic
 $('source').addEventListener('input',invalidate);
 $('kind').addEventListener('change',invalidate);
 $('budget').addEventListener('change',()=>{const saved=imported;invalidate();imported=saved;});
+// Offer a shortcut only for two plain, single-line paragraphs. The click supplies the roles.
+function unlabelledPair() {
+  const raw=$('source').value;
+  if(imported || $('kind').value!=='trajectory' || raw.length>64000) return null;
+  const parts=raw.trim().split(/\r?\n(?:[^\S\r\n]*\r?\n)+/);
+  if(parts.length!==2) return null;
+  const markup=/^\s*[\[\{<#❯⏺`]/;
+  const speaker=/^\s*(?:用户|我|助手|工具|user|assistant|tool|你说|you said|chatgpt\s*(?:说|said))\s*(?:[:：]|$)/i;
+  if(parts.some(line=>/[\r\n]/.test(line) || markup.test(line) || speaker.test(line))) return null;
+  return parts;
+}
+$('confirm-pair').addEventListener('click',guard(async()=>{
+  const pair=unlabelledPair();
+  if(pair) presentTurns([{role:'user',text:pair[0]},{role:'assistant',text:pair[1]}],true);
+}));
 function presentTurns(turns,advance) {
   const structured=pack(turns);
   if(new TextEncoder().encode(structured).length>64000) throw Error('这段超过 64 KB，请选择较短的对话。');
