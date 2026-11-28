@@ -80,6 +80,7 @@ nav{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:4px 0 16px;p
 #clipboard-rows select { width:100%; margin:0; }
 #clipboard-rows span { white-space:pre-wrap; overflow-wrap:anywhere; font-weight:400; }
 #paragraph-review { margin:.6rem 0; padding:.85rem; border:1px solid var(--line); border-radius:12px; min-width:0; }
-#paragraph-rows label { display:flex; align-items:baseline; gap:.6rem; margin:.6rem 0; font-weight:400; }
+#paragraph-rows fieldset { min-width:0; border:0; margin:.6rem 0; padding:0; }
+#paragraph-rows legend, #evidence details p { white-space:pre-wrap; overflow-wrap:anywhere; }
+#paragraph-rows label { display:inline-flex; align-items:center; gap:.25rem; margin:.1rem .8rem .2rem 0; font-weight:400; }
 #paragraph-rows input { width:auto; }
-#paragraph-rows span { white-space:pre-wrap; overflow-wrap:anywhere; }

@@ -33,8 +33,8 @@
 <fieldset id="clipboard-review" hidden><legend>核对复制过来的发言</legend>
 <p class="hint">已按消息分好段。说话人暂按你和助手轮流填写，点名字可改。</p>
 <div id="clipboard-rows"></div><button id="confirm-messages" class="primary full">确认说话人，生成请求 →</button></fieldset>
-<fieldset id="paragraph-review" hidden><legend>哪些段落是你写的？</legend>
-<p class="hint">请勾选你的段落，其余归助手。相邻同一人的段落会连成一条发言，保留中间的空行。</p>
+<fieldset id="paragraph-review" hidden><legend>核对每段是谁说的</legend>
+<p class="hint">点「我」标出你的发言，点「排除」移走界面时间等文字。其余暂归助手。同一人的连续段落会合并，保留段间空行。</p>
 <div id="paragraph-rows"></div></fieldset>
 <button id="confirm-pair" class="primary full" hidden>确认第一段是我、第二段是助手，生成请求 →</button>
 <button id="prepare" class="primary full">生成提炼请求 →</button>
@@ -87,7 +87,7 @@
 </section>
 <section id="result-panel" class="panel" hidden>
 <div class="eyebrow" id="result-status">等你核对的候选</div><h2 id="name"></h2><p id="tagline"></p>
-<details id="evidence-panel"><summary>看看它凭什么这么说</summary><div id="evidence"></div><h3>还不知道的事</h3><ul id="unknowns"></ul></details>
+<details id="evidence-panel"><summary>看看它凭什么这么说</summary><p class="hint">网页核对引文是否出现在对应原文中。请读完整原文，判断解释是否符合当时的意思。</p><div id="evidence"></div><h3>还不知道的事</h3><ul id="unknowns"></ul></details>
 <label for="prompt">给下一个助手的短卡</label><textarea id="prompt" rows="10"></textarea><p id="prompt-size" class="hint"></p>
 <label class="review"><input id="reviewed" type="checkbox">我核对过这张短卡，愿意把它带进新对话。</label>
 <button id="copy-prompt" class="primary full">复制整张卡，贴进新对话</button>

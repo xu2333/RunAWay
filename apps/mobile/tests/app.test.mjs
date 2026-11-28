@@ -258,10 +258,10 @@ test('multi-turn desktop paste uses actual message blocks and keeps an internal 
 test('plain desktop fallback needs explicit speakers and keeps separators within a message',async t=>{
   const {page}=await mobilePage(t);
   await page.locator('#source').fill('first question\n\nanswer part 1\n \n\nanswer part 2\n\nsecond question\n\nlast answer');
-  const boxes=page.locator('#paragraph-review').getByRole('checkbox');
+  const boxes=page.locator('#paragraph-review').getByRole('radio',{name:'我',exact:true});
   assert.equal(await boxes.count(),5);
   await page.locator('#prepare').click();
-  assert.match(await page.locator('#source-error').innerText(),/勾选/);
+  assert.match(await page.locator('#source-error').innerText(),/分别标出/);
   await boxes.nth(0).check();
   await boxes.nth(3).check();
   await page.locator('#prepare').click();
@@ -301,6 +301,27 @@ test('ChatGPT desktop clocks between messages stay out of the confirmed source',
     ['user','现在只改夜班，换成紫旗。请用一句话复述改动。'],
     ['assistant','这座虚构灯塔的夜班改挂紫旗。']
   ];
+  for(const clock of ['23:00','下午11:00','上午 9:05']){
+    await paste(plain.replaceAll('11:00 PM',clock),html.replaceAll('11:00 PM',clock));
+    assert.equal(await page.locator('#clipboard-rows select').count(),4);
+    await page.locator('#confirm-messages').click();
+    const rows=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+    assert.deepEqual(rows.map(s=>[s.role,s.text]),expected);
+    await page.locator('[data-step="source"]').click();
+  }
+  for(const markup of ['<ul><li>23:00</li></ul>','<pre><code>23:00</code></pre>']){
+    const text=plain.replaceAll('11:00 PM','23:00').replace(expected[3][1],'23:00');
+    const fragment=html.replaceAll('11:00 PM','23:00').replace('<p><span>'+expected[3][1]+'</span></p>',markup);
+    await paste(text,fragment);
+    const groups=page.locator('#paragraph-rows fieldset');
+    assert.equal(await groups.count(),8);
+    for(const i of [0,5]) await groups.nth(i).getByRole('radio',{name:'我',exact:true}).check();
+    for(const i of [1,4,6]) await groups.nth(i).getByRole('radio',{name:'排除'}).check();
+    await page.locator('#prepare').click();
+    const rows=JSON.parse((await page.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop()).sources;
+    assert.deepEqual(rows.map(s=>[s.role,s.text]),[...expected.slice(0,3),['assistant','23:00']]);
+    await page.locator('[data-step="source"]').click();
+  }
   for(const reply of [expected[3][1],'11:00 PM']){
     await paste(plain.replace(expected[3][1],reply),html.replace(expected[3][1],reply));
     assert.equal(await page.locator('#clipboard-rows select').count(),4);
@@ -328,4 +349,20 @@ test('save a selected conversation range and import just those turns into a fres
   await fresh.locator('#model-panel').waitFor({state:'visible'});
   const data=JSON.parse((await fresh.locator('#request').inputValue()).split('SOURCE_JSON:\n').pop());
   assert.deepEqual(data.sources.map(s=>[s.role,s.text]),expected);
+});
+
+test('a short verbatim quote shows its speaker and the full source for human review',async t=>{
+  const {page}=await mobilePage(t);
+  const original='帮我订周五去上海的高铁，靠窗。';
+  await page.locator('#source').fill('用户：'+original+'\n助手：好的。');
+  await page.locator('#prepare').click();
+  const answer={name:'测试',tagline:'测试',prompt:'用户永远只坐头等舱。',unknowns:[],covered_claim_ids:['c1'],
+    claims:[{id:'c1',statement:'永远只坐头等舱',basis:'self_report',scope:'所有出行',conditions:[],exceptions:[],
+      related_claim_ids:[],evidence:[{source_id:'message-1',quote:'我',relation:'supports'}]}]};
+  await page.locator('#answer').fill(JSON.stringify(answer));
+  await page.locator('#import-answer').click();
+  assert.match(await page.locator('#notice').innerText(),/判断解释是否成立/);
+  await page.locator('#evidence-panel > summary').click();
+  await page.getByText('短引文 · 查看完整原文（你）',{exact:true}).click();
+  assert.equal(await page.locator('#evidence details p').innerText(),original);
 });

@@ -70,7 +70,25 @@ function render(){
   $('prompt').value=session.body;$('prompt').readOnly=!!session.portable;
   $('evidence-panel').hidden=!a;$('save-private').disabled=!a;
   $('evidence').replaceChildren();$('unknowns').replaceChildren();
-  if(a){for(const c of a.claims){const el=append($('evidence'),'section','');el.className='claim';append(el,'strong',c.statement);append(el,'p','范围：'+c.scope);for(const s of c.conditions)append(el,'p','条件：'+s);for(const s of c.exceptions)append(el,'p','例外：'+s);for(const e of c.evidence)append(el,'blockquote',e.quote);}for(const u of a.unknowns)append($('unknowns'),'li',u);}
+  if(a){
+    const sources=new Map(session.prepared.sources.sources.map(s=>[s.id,s]));
+    for(const c of a.claims){
+      const el=append($('evidence'),'section',''); el.className='claim';
+      append(el,'strong',c.statement); append(el,'p','范围：'+c.scope);
+      for(const condition of c.conditions) append(el,'p','条件：'+condition);
+      for(const exception of c.exceptions) append(el,'p','例外：'+exception);
+      for(const e of c.evidence){
+        const source=sources.get(e.source_id);
+        append(el,'blockquote',e.quote);
+        const details=append(el,'details','');
+        const short=e.relation==='supports' && length(e.quote.trim())<8;
+        const speaker={user:'你',assistant:'助手',tool:'工具',context:'背景'}[source.role];
+        append(details,'summary',(short?'短引文 · ':'')+'查看完整原文（'+speaker+'）');
+        append(details,'p',source.text);
+      }
+    }
+    for(const unknown of a.unknowns) append($('unknowns'),'li',unknown);
+  }
   updateSize();show('result');
 }
 async function checkedBundle(){if(!$('reviewed').checked)throw Error('请先检查随身 prompt 并勾选确认。');if(!session.portable)session.body=$('prompt').value;return session.bundle();}
@@ -86,10 +104,16 @@ function offerParagraphReview(raw,scroll){
   const paragraphs=plainParagraphs(raw);
   if(!paragraphs || recognize(raw)) return;
   pastedParagraphs=paragraphs;
-  for(const {text} of pastedParagraphs){
-    const row=document.createElement('label'), check=document.createElement('input');
-    check.type='checkbox'; row.append(check);
-    append(row,'span',text); $('paragraph-rows').append(row);
+  for(const [index,{text}] of pastedParagraphs.entries()){
+    const row=document.createElement('fieldset');
+    append(row,'legend',text);
+    for(const [value,caption] of [['user','我'],['assistant','助手'],['exclude','排除']]){
+      const label=document.createElement('label'), radio=document.createElement('input');
+      radio.type='radio'; radio.name='paragraph-'+index; radio.value=value;
+      radio.checked=value==='assistant';
+      label.append(radio,caption); row.append(label);
+    }
+    $('paragraph-rows').append(row);
   }
   show('source');
   if(scroll) $('prepare').scrollIntoView({block:'nearest'});
@@ -194,8 +218,8 @@ $('archive-file').addEventListener('change',guard(async e=>{try{const text=await
 $('prepare').addEventListener('click',guard(async()=>{
   try{
     if(pastedParagraphs){
-      const choices=Array.from($('paragraph-rows').querySelectorAll('input'),el=>el.checked);
-      if(!choices.includes(true) || !choices.includes(false)) throw Error('请勾选你写的段落，助手的段落留空。');
+      const choices=Array.from($('paragraph-rows').querySelectorAll('input:checked'),el=>el.value);
+      if(!choices.includes('user') || !choices.includes('assistant')) throw Error('请分别标出你和助手的发言。');
       presentTurns(groupParagraphs(pastedParagraphs,choices),true);
       return;
     }
@@ -266,7 +290,7 @@ $('import-answer').addEventListener('click',guard(async()=>{
   }
   clearAnswerError();
   render();
-  notify('引文、说话者、字段和长度检查通过。仍需你检查解释是否符合自己。');
+  notify('已找到引文在原文中的位置，并核对了来源角色、字段和长度。请对照原话判断解释是否成立。');
   $('result-panel').scrollIntoView({block:'start'});
 }));
 $('prompt').addEventListener('input',()=>{if(!session.portable)session.body=$('prompt').value;updateSize();});
